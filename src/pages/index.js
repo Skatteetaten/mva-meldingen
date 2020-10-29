@@ -2,29 +2,27 @@ import React from "react";
 import Grid from "@skatteetaten/frontend-components/Grid";
 import { SingleColumnRow } from "../components/Columns";
 import { graphql } from 'gatsby';
+import { renderAst } from '../components/renderAst';
 
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
-  const FrontPageContent = ({ path }) => {
-    const content = edges.find((edge) => {
-      return edge.node.fields.slug === path;
-    });
-    return (
-      content && <div dangerouslySetInnerHTML={{ __html: content.node.html }} />
-    );
-  };
+  const content = edges
+    .map(({ node }) => (
+      <div key={node.id}>
+        { renderAst(node.htmlAst) }
+      </div>
+    ));
 
   return (
     <div>
       <Grid>
-        <InfoRow>
-          <FrontPageContent path="/frontpage/index/" />
-        </InfoRow>
+        <SingleColumnRow>
+          { content }
+        </SingleColumnRow>
       </Grid>
-
     </div>
   );
 };
@@ -37,7 +35,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          html
+          htmlAst
           fields {
             slug
           }

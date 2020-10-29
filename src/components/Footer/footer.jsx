@@ -19,10 +19,6 @@ const FooterLinks = () => (
   <div className={styles.footerLinks}>
     <div>
       <FooterLink to="https://www.skatteetaten.no" name="skatteetaten.no" />
-      <FooterLink
-        to="https://github.com/Skatteetaten"
-        name="github.com/skatteetaten"
-      />
     </div>
   </div>
 );
