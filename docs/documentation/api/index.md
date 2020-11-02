@@ -4,10 +4,9 @@ title: "API"
 description: "Api-beskrivelser"
 ---
 
-Det tilbys to sett med API-er:
 
-- Skatteetatens-API: har tjenester for hent- og validering av mva-meldinger.
-- Altinn3-API: for: har tjenester for opprettelse og innsending av en mva-melding.
+
+Denne siden vil innehole beskrivelser av de ulike API-ene som er i bruk for løsningen. 
 
 
 
