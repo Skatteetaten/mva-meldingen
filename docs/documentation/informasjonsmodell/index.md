@@ -4,9 +4,9 @@ title: "Informasjonsmodeller og kodeverk"
 description: "Informasjonsmodeller og kodeverk"
 ---
 
-Grafisk fremstilling av xsd og kodelister for mva-meldingen
+Grafisk fremstilling av xsd og kodelister for mva-meldingen:
 
-![SkattemeldingForMerverdiavgift2020.PNG](SkattemeldingForMerverdiavgift2020.PNG)
+![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgift2020.png)
 
 # XSD for mva-meldingen
 
