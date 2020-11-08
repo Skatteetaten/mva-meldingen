@@ -10,7 +10,7 @@ For de tidlige testene hvor et fåtall av systemleverandørene er involvert, vil
 
 Resultatet av de tidlige testene vil dokumenteres og informasjon om dette vil være tilgjengelig for alle som ønsker å følge med underveis.
 
-# Testplan
+## Testplan
 
 Testplanen onder viser når det vi være mulig å teste integrasjonene mot Skatteetaten sine nye løsninger.
 
@@ -26,27 +26,20 @@ Testplanen onder viser når det vi være mulig å teste integrasjonene mot Skatt
     <li>Innsendingstjeneste - "Dummy"  (Ping fra SBS)</li>
   </ul>
   </td></tr>
-  <tr><td>Test 3 - noe rikere valideringstjeneste og en enkel innsendingstjeneste</td><td>mar.21</td><td>Content c3</td></tr>
-  <tr><td>Content a3</td><td>Content b3</td>
-  <td>
+  <tr><td>Test 3 - noe rikere valideringstjeneste og en enkel innsendingstjeneste</td><td>mar.21</td>
+  <td>  
   <ul>
 	<li>Valideringstjeneste - Valideringstjeneste som inneholder mange av de valideringene som skal brukes</li>
 	<li>Innsendingstjeneste - Enkel innsendingstjeneste som skal verifisere innsendingen og gi kvittering tilbake</li>
-	<li></li>
-	<li></li>
-	<li></li>
   </ul>
   </td></tr>
-  <tr><td>Test 4 – hovedtest før pilot</td><td>mai.21</td><td>
+  <tr><td>Test 4 – komplett tjeneste</td><td>mai.21</td><td>
   <ul>
 	<li>Valideringstjeneste - Komplett tjeneste, sånn den skal være til pilot, er på plass</li>
 	<li>Innsendingstjeneste - Komplett tjeneste, sånn den skal være til pilot, er på plass</li>
-	<li></li>
-	<li></li>
-	<li></li>
   </ul>
   </td></tr>
-  <tr><td>Test 5 - hovedtest</td><td>aug. 21</td><td></td></tr>
+  <tr><td>Test 5 - hovedtest før pilot</td><td>aug. 21</td><td></td></tr>
   <tr><td>Pilot</td><td>aug. 21</td><td></td></tr>
   <tr><td>Produksjon</td><td>01.01.2022</td><td></td></tr>  
 </table>
