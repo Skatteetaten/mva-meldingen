@@ -3,7 +3,7 @@ import Grid from "@skatteetaten/frontend-components/Grid";
 import NavigationTile from "@skatteetaten/frontend-components/NavigationTile";
 import SkeBasis from "@skatteetaten/frontend-components/SkeBasis";
 import { SingleColumnRow } from "../components/Columns";
-import { graphql, Link } from 'gatsby';
+import { graphql, Link } from "gatsby";
 
 const DocumentationPage = ({
   data: {
@@ -11,7 +11,7 @@ const DocumentationPage = ({
     site: { pathPrefix },
   },
 }) => {
-  const prefix = process.env.NODE_ENV !== 'production' ? '' : pathPrefix;
+  const prefix = process.env.NODE_ENV !== "production" ? "" : pathPrefix;
   const contents = edges
     .filter(
       ({ node }) =>
@@ -28,7 +28,7 @@ const DocumentationPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <h1>Documentation</h1>
+          <h1>Dokumentasjon</h1>
         </SingleColumnRow>
         <SingleColumnRow>
           <NavigationTile

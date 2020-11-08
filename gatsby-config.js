@@ -8,7 +8,7 @@ const gatsbyConfig = {
       },
       {
         href: "/documentation",
-        name: "Documentation",
+        name: "Dokumentasjon",
       },
     ],
   },
