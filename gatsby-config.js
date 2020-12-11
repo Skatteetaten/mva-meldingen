@@ -10,6 +10,10 @@ const gatsbyConfig = {
         href: "/documentation",
         name: "Dokumentasjon",
       },
+      {
+        href: "/english",
+        name: "Documentation in English",
+      },
     ],
   },
   pathPrefix: "/mva-meldingen",

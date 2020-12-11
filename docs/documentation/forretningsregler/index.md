@@ -1,17 +1,19 @@
 ---
 icon: "cloud"
 title: "Forretningsregler"
-description: ""
+description: "Regler for utfylling av mva-melding "
 ---
 
-## Oversikt over gjeldende forretningsregler
+## Regler for utfylling av mva-melding
+
+Unik identifikasjon
 
 | Entitet                        | Attributt                                                                                                                                                                     |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SkattemeldingForMerverdiavgift | Skattepliktig.organisasjonsnummer + SkatteMeldingForMerverdiAvgift.meldingskategori + SkattegrunnagOgBeregnetSkatt.skattleggingsperiode + Innsending.regnskapssystemreferanse |
-| MvaSpesifikasjonslinje         | mvaKode + spesifikasjon + mvaKodeRegnskapssystem + sats                                                                                                                       |
+| MvaSpesifikasjonslinje         | mvaKode + spesifikasjon + sats                                                                                                                                                |
 
-Regler for mva-melding:
+Regler for utfylling av mva-melding:
 
 - Start eller sluttdato for skattleggingsperioden må være innenfor registreringsdato og
   opphørsdato i Enhetsregisteret
@@ -32,14 +34,13 @@ Regler for mva-melding:
   22, 81, 82, 83, 84, 86, 87, 88 eller 89
 - Skattepliktig som er registrert i forenklet registreringsordning for skattleggingsperioden kan
   bare benytte mvaKode 3
-- Grunnlag fylles ut bare når mvaKode viser utgående mva, kjøp med omvendt avgiftsplikt eller
-  importmva
-- Sats skal fylles ut når og bare når grunnlag er fylt ut
-- Når Spesifikasjon er TapPåKrav må mvaKode være 1
+- Grunnlag og sats fylles bare ut ved utgående mva for omsetning, uttak, kjøp med omvendt avgiftsplikt eller innførsel
+- Fradrag for inngående mva føres uten grunnlag og sats
+- Når Spesifikasjon er TapPåKrav må mvaKode være 1, 11, 12 eller 13
 - Når Spesifikasjon er Justering eller tilbakeføringAvInngåendeMerverdiavgift må mvaKode
   være 1
 - Når Spesifikasjon er Uttak må mvaKode være 3, 31, 32 eller 33
-- Når Spesifikasjon er tilbakeføringAvInngåendeMerverdiavgift kan bare mvaKode 1, 11, 12, 13,
-  14, 15, 21, 22, 81, 82, 83, 84, 86, 87, 88 eller 89 benyttes
+- Når Spesifikasjon er tilbakeføringAvInngåendeMerverdiavgift må mvaKode være 1
+- Utgående mva som skal betales og inngående mva til fradrag føres med positivt fortegn i mva-meldingen
 
-[regler-mvamelding.pdf](regler-mvamelding.pdf)
+Eksempler finnes under siden [Test](/documentation/test/).

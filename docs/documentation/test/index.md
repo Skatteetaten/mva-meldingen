@@ -1,7 +1,7 @@
 ---
 icon: "cloud"
 title: "Test"
-description: ""
+description: "Testtilfeller mva-melding. Testplan."
 ---
 
 På denne siden vil det etter hvert komme informasjon om hvordan du kan gjennomføre test av den nye valideringstjenesten og innsendingsløpet inkludert å få kvittering tilbake.
@@ -10,9 +10,13 @@ For de tidlige testene hvor et fåtall av systemleverandørene er involvert, vil
 
 Resultatet av de tidlige testene vil dokumenteres og informasjon om dette vil være tilgjengelig for alle som ønsker å følge med underveis.
 
+## Testtilfeller mva-melding
+
+Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
+
 ## Testplan
 
-Testplanen onder viser når det vi være mulig å teste integrasjonene mot Skatteetaten sine nye løsninger.
+Testplanen under viser når det vi være mulig å teste integrasjonene mot Skatteetaten sine nye løsninger.
 
 <table align=center>
   <tr><th align=center>Hva</th><th align=center>Når</th><th align=center>Innhold</th></tr>
@@ -22,7 +26,7 @@ Testplanen onder viser når det vi være mulig å teste integrasjonene mot Skatt
   <td> 
   <ul>
 	<li>Valideringstjeneste </li>
-	<li>Helt enkel tjeneste med en eller få enkle valideringe </li>
+	<li>Helt enkel tjeneste med en eller få enkle valideringer </li>
     <li>Innsendingstjeneste - "Dummy"  (Ping fra SBS)</li>
   </ul>
   </td></tr>
