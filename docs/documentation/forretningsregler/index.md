@@ -1,46 +1,335 @@
 ---
 icon: "cloud"
-title: "Forretningsregler"
+title: "Introduksjon til Valideringsregler"
 description: "Regler for utfylling av mva-melding "
 ---
 
-## Regler for utfylling av mva-melding
+## Valideringsregler pr. 15 desember 2020:
 
-Unik identifikasjon
+- Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.
+- Følgende valideringsregler er foreløpig definert for mva-meldingen pr 15. desember 2020:
+- Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
+- Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
+- Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift negativt mangler
+- Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler
+- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller
+  lik utgående avgift
+- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller
+  lik utgående avgift
+- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller
+  lik utgående avgift
+- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller
+  lik utgående avgift
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra
+  utlandet med fradragsrett
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra
+  utlandet med fradragsrett
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra
+  utlandet med fradragsrett
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra
+  utlandet med fradragsrett
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet
+  med fradragsrett
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet
+  med fradragsrett
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra
+  utlandet med fradragsrett
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra
+  utlandet med fradragsrett
+- Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
+- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
+- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
+- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mval §9-6 og §9-7 kan kun sendes inn på
+  mva-kode 1
 
-| Entitet                        | Attributt                                                                                                                                                                     |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SkattemeldingForMerverdiavgift | Skattepliktig.organisasjonsnummer + SkatteMeldingForMerverdiAvgift.meldingskategori + SkattegrunnagOgBeregnetSkatt.skattleggingsperiode + Innsending.regnskapssystemreferanse |
-| MvaSpesifikasjonslinje         | mvaKode + spesifikasjon + sats                                                                                                                                                |
+## Beskrivelse av detaljerte valideringsregler nedenfor
 
-Regler for utfylling av mva-melding:
+Validering av MVA-meldingen er implementert med et sett av regler som kjøres maskinelt for å sjekke gyldigheten av
+meldingen. Reglene er utformet slik at de både er dokumentasjon av reglene for meldingen og kjørbare maskinelt. Eksempel
+på regel:
 
-- Start eller sluttdato for skattleggingsperioden må være innenfor registreringsdato og
-  opphørsdato i Enhetsregisteret
-- Skattepliktig som inngår i fellesregistrering for skattleggingsperioden uten å være
-  rapporterende selskap kan ikke levere skattemelding
-- Part som ikke er mva-pliktig for skattleggingsperioden og som leverer mva-melding av
-  kategori alminnelig, kan bare benytte mvaKode 51, 87, 89 eller 92
-- Skattepliktig må vær registrert med primærnæring for å levere skattemelding av kategori
-  primærnæring
-- Skattemelding av kategori kompensasjon skal dekke, og bare inneholde, informasjon som
-  gjelder lov om merverdiavgiftskompensasjon
-- Skattemelding av kategori primær skal dekke, og bare inneholde, informasjon som gjelder
-  primærnæring. Unntak: dersom årsomsetningen for alminnelig næring er mindre enn kr 30000
-  kan alminnelig næring inkluderes.
-- Skattemelding av kategori alminnelig skal dekke øvrig omsetning og fradrag for
-  merverdiavgift.
-- Skattemelding av kategori kompensasjon kan bare benytte mvaKode 1, 11, 12, 13, 14, 15, 21,
-  22, 81, 82, 83, 84, 86, 87, 88 eller 89
-- Skattepliktig som er registrert i forenklet registreringsordning for skattleggingsperioden kan
-  bare benytte mvaKode 3
-- Grunnlag og sats fylles bare ut ved utgående mva for omsetning, uttak, kjøp med omvendt avgiftsplikt eller innførsel
-- Fradrag for inngående mva føres uten grunnlag og sats
-- Når Spesifikasjon er TapPåKrav må mvaKode være 1, 11, 12 eller 13
-- Når Spesifikasjon er Justering eller tilbakeføringAvInngåendeMerverdiavgift må mvaKode
-  være 1
-- Når Spesifikasjon er Uttak må mvaKode være 3, 31, 32 eller 33
-- Når Spesifikasjon er tilbakeføringAvInngåendeMerverdiavgift må mvaKode være 1
-- Utgående mva som skal betales og inngående mva til fradrag føres med positivt fortegn i mva-meldingen
+```kotlin {.line-numbers}
+[1]     MvaMeldingsinnhold_GrunnlagGangerGjeldendeSats_FeilBeregnetMerverdiavgiftForAvgiftslinje(
+[2]        "Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats" {
+[3]            valideringsregel {
+[4]                mvaSpesifikasjonslinje
+[5]                    .hvor { linje -> linje.grunnlag ikkeEr tomt }
+[6]                    .skal { linje -> linje.grunnlag * linje.sats væreRundetNedTil linje.merverdiavgift }
+[7]            }
+[8]            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+[9]        }
+[10]    )
+```
 
-Eksempler finnes under siden [Test](/documentation/test/).
+Her betyr feltene i regelen ovenfor følgende:
+
+**Linje 1 - Identifikator**: Dette er referansen til regelen hver regel har en unik identifikator.
+
+**Linje 2 - Feilmelding**: Dette er feilmeldingen som bli returnert i validerings-APIet dersom MVA-meldingen ikke er i
+henhold til kravet i regelen.
+
+**Linje 3-7 - Valideringsregel**: Dette er regelen som definerer hvordan en gyldig MVA-melding skal være. Dersom denne
+regelen ikke er oppfylt vil meldingsvalideringen feile.
+
+**Linje 8 - Alvorlighetsgrad**: Dette er alvorlighetsgraden dersom valideringen feiler. Følgende alvorlighetsgrader er
+definert : AVVIKENDE_SKATTEMELDING, MANGELFULL_SKATTEMELDING, UGYLDIG_SKATTEMELDING
+
+# Detljspesifikasjon av reglene pr 15 desember 2020:
+
+```kotlin
+{
+    MvaMeldingsinnhold_SumMva_FeilSummeringAvAvgiftlinjer(
+        "Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift" {
+            valideringsregel {
+                mvaSpesifikasjonslinje.summenAv { linje ->
+                    linje.merverdiavgift
+                } skalVære skattegrunnlagOgBeregnetSkatt.fastsattMerverdiavgift
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    ),
+    MvaMeldingsinnhold_GrunnlagGangerGjeldendeSats_FeilBeregnetMerverdiavgiftForAvgiftslinje(
+        "Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.grunnlag ikkeEr tomt }
+                    .skal { linje -> linje.grunnlag * linje.sats væreRundetNedTil linje.merverdiavgift }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    ),
+
+    MvaMeldingsinnhold_Utgående_MotsattFortegn_MerknadTilMvaKodenMangler(
+        "Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift negativt mangler"
+        {
+            valideringsregel {
+                kodene(3, 6, 31, 32, 33, 51, 52, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92)
+                    .hvor { linje -> linje.grunnlag erMindreEnn 0.0 }
+                    .skal { linje -> linje.merknad?.beskrivelse ha innhold }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    ),
+
+    MvaMeldingsinnhold_Inngående_MotsattFortegn_MerknadTilMvaKodenMangler(
+        "Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler"
+        {
+            valideringsregel {
+                kodene(1, 11, 12, 13, 14, 81, 83, 86, 88, 91)
+                    .hvor { linje -> linje.grunnlag er tomt og (linje.merverdiavgift erStørreEnn 0.0) }
+                    .skal { linje -> linje.merknad?.beskrivelse ha innhold }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_VARER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_MELLOM_UTGÅENDE_OG_INNGÅENDE_AVGIFT_MVA_KODE_81(
+        "Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    utgåendeMerverdiavgiftMvaKode(81) uansetFortegnVæreStørreEllerLikEnn inngåendeMerverdiavgiftMvaKode(
+                        81
+                    )
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_VARER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_MELLOM_UTGÅENDE_OG_INNGÅENDE_AVGIFT_MVA_KODE_83(
+        "Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    utgåendeMerverdiavgiftMvaKode(83) uansetFortegnVæreStørreEllerLikEnn inngåendeMerverdiavgiftMvaKode(
+                        83
+                    )
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_OMVENDT_AVGIFTSPLIKT_FOR_TJENSTER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_MELLOM_UTGÅENDE_OG_INNGÅENDE_AVGIFT_MVA_KODE_86(
+        "Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    utgåendeMerverdiavgiftMvaKode(86) uansetFortegnVæreStørreEllerLikEnn inngåendeMerverdiavgiftMvaKode(
+                        86
+                    )
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_OMVENDT_AVGIFTSPLIKT_FOR_TJENSTER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_MELLOM_UTGÅENDE_OG_INNGÅENDE_AVGIFT_MVA_KODE_88(
+        "Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    utgåendeMerverdiavgiftMvaKode(88) uansetFortegnVæreStørreEllerLikEnn inngåendeMerverdiavgiftMvaKode(
+                        88
+                    )
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_VARER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_UTGÅENDE_AVGIFT_MANGLER_MVA_KODE_81(
+        "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag ha innhold)) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_VARER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_UTGÅENDE_AVGIFT_MANGLER_MVA_KODE_83(
+        "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag ha innhold)) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_OMVENDT_AVGIFTSPLIKT_FOR_TJENSTER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_UTGÅENDE_AVGIFT_MANGLER_MVA_KODE_86(
+        "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag ha innhold)) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_OMVENDT_AVGIFTSPLIKT_FOR_TJENSTER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_UTGÅENDE_AVGIFT_MANGLER_MVA_KODE_88(
+        "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag ha innhold)) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_OMVENDT_AVGIFTSPLIKT_FOR_TJENSTER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_INNGÅENDE_AVGIFT_MANGLER_MVA_KODE_81(
+        "Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje ->
+                    linje.mvaKode er 81 og (linje.merverdiavgift erStørreEnn 0.0)
+                } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erMindreEnn 0.0) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_OMVENDT_AVGIFTSPLIKT_FOR_TJENSTER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_INNGÅENDE_AVGIFT_MANGLER_MVA_KODE_83(
+        "Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje ->
+                    linje.mvaKode er 83 og (linje.merverdiavgift erStørreEnn 0.0)
+                } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erMindreEnn 0.0) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_VARER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_INNGÅENDE_AVGIFT_MANGLER_MVA_KODE_86(
+        "Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje ->
+                    linje.mvaKode er 86 og (linje.merverdiavgift erStørreEnn 0.0)
+                } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erMindreEnn 0.0) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_VARER_KJØPT_FRA_UTLANDET_MED_FRADRAGSRETT_AVVIK_INNGÅENDE_AVGIFT_MANGLER_MVA_KODE_88(
+        "Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.finnes { linje ->
+                    linje.mvaKode er 88 og (linje.merverdiavgift erStørreEnn 0.0)
+                } såSkal {
+                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erMindreEnn 0.0) }
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_TAP_PÅ_KRAV_FØRT_PÅ_FEIL_MVA_KODE(
+        "Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.spesifikasjon er TAP_PAA_KRAV }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_UTTAK_FØRT_PÅ_FEIL_MVA_KODE(
+        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.spesifikasjon er UTTAK }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 31, 32, 33) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
+        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.spesifikasjon er JUSTERING }
+                    .skal { linje -> linje.mvaKode være 1 }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_TILBAKEFØRING_INNGÅENDE_AVGIFT_9_6_OG_9_7_FØRT_PÅ_FEIL_MVA_KODE(
+        "Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mval §9-6 og §9-7 kan kun sendes inn på mva-kode 1"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.spesifikasjon er TILBAKEFOERING_AV_INNGAAENDE_MERVERDIAVGIFT }
+                    .skal { linje -> linje.mvaKode være 1 }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        }
+    )
+}
+
+```
