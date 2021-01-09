@@ -21,7 +21,9 @@ Hvor `<env>` er Miljøspesifikk adresse f.eks. `skatt-at.sits.no
 
 **Body** :
 
-- Iht. XSD: [Skattemeldingformerverdiavgift.v0.9](https://github.com/Skatteetaten/mva-meldingen/blob/oppdatere-regler-og-api-beskrivelse/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
+
+- Iht. XSD: [Skattemeldingformerverdiavgift.v0.8](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd)
+
 
 **Eksempel** : Innsending av XML på ugyldig format
 
@@ -29,12 +31,14 @@ POST https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/val
 
 Header: `Content-Type: application/xml`
 
-Med innhold (http body)som ikke passerer XML-validering basert på [Melding XSD](https://github.com/Skatteetaten/mva-meldingen/blob/oppdatere-regler-og-api-beskrivelse/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
-Eksempel:
+
+Med innhold (http body)som ikke passerer XML-validering basert på [XSD](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd)
+:
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9">
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8">
+
 </mvaMeldingDto>
 ```
 
@@ -43,24 +47,21 @@ Eksempel:
 status: 200
 Innhold (body)
 
-Innholdet er XML i henhold til [Valideringsresultat XSD](https://github.com/Skatteetaten/mva-meldingen/blob/oppdatere-regler-og-api-beskrivelse/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.valideringsresultat.v0.1_%C3%A6%C3%B8%C3%A5.xsd)
-:
-Eksempel:
 
 ```xml
-<?xml version='1.0' encoding='UTF-8'?>
-<valideringsresultat xmlns="no:skatteetaten:fastsetting:avgift:mva:valideringsresultat:v0.1">
-    <avvikVedMeldingslevering>ugyldig skattemelding</avvikVedMeldingslevering>
-    <avvik>
-        <stiTilAvvik>//mvaMeldingDto</stiTilAvvik>
-        <mvaKode>null</mvaKode>
-        <avviksinformasjon>
-            <begrunnelse>Mva meldingen må være på gyldig format og passere XML skjema valideringen</begrunnelse>
-            <avvikstype>ugyldig skattemelding</avvikstype>
+<valideringsresultat>
+    <status>UGYLDIG_SKATTEMELDING</status>
+    <valideringsfeil>
+        <stiTilFeil>//innsending</stiTilFeil>
+        <valideringsDetaljer>
+            <feilmelding>Mva meldingen må være på gyldig format og passere XML skjema valideringen</feilmelding>
+            <alvorlighetsgrad>UGYLDIG_SKATTEMELDING</alvorlighetsgrad>
             <avvikKode>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</avvikKode>
-            <detaljer>Cannot find the declaration of element 'mvaMeldingDto'.</detaljer>
-        </avviksinformasjon>
-    </avvik>
+            <informasjon>cvc-complex-type.2.4.b: The content of element 'mvaMeldingDto' is not complete. One of
+                '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8":innsending}' is expected.
+            </informasjon>
+        </valideringsDetaljer>
+    </valideringsfeil>
 </valideringsresultat>
 
 ```
