@@ -6,6 +6,7 @@ description: "Regler for utfylling av mva-melding "
 
 ## Valideringsregler pr. 15 desember 2020:
 
+
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt
 til fortløpende.
 Følgende valideringsregler er foreløpig definert for mva-meldingen pr 15. desember 2020:
@@ -39,6 +40,7 @@ for å sjekke gyldigheten av meldingen.
 Reglene er utformet slik at de både er dokumentasjon av reglene for meldingen og kjørbare maskinelt.
 Eksempel på regel:
 
+
 ```kotlin {.line-numbers}
 [1]     MvaMeldingsinnhold_GrunnlagGangerGjeldendeSats_FeilBeregnetMerverdiavgiftForAvgiftslinje(
 [2]        "Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats" {
@@ -56,6 +58,7 @@ Her betyr feltene i regelen ovenfor følgende:
 
 **Linje 1 - Identifikator**: Dette er referansen til regelen hver regel har en unik identifikator.
 
+
 **Linje 2 - Feilmelding**: Dette er feilmeldingen som bli returnert i validerings-APIet dersom
 MVA-meldingen ikke er i henhold til kravet i regelen.
 
@@ -65,11 +68,14 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 **Linje 8 - Alvorlighetsgrad**: Dette er alvorlighetsgraden dersom valideringen feiler.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, MANGELFULL_SKATTEMELDING, UGYLDIG_SKATTEMELDING
 
+
 # Detljspesifikasjon av reglene pr 15 desember 2020:
 
 ```kotlin
+
     MvaMeldingsinnhold_SumMva_FeilSummeringAvAvgiftlinjer(
         "Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift" {
+
             valideringsregel {
                 mvaSpesifikasjonslinje.summenAv { linje ->
                     linje.merverdiavgift
@@ -93,6 +99,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, MANGELFULL_S
         "Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift negativt mangler"
         {
             valideringsregel {
+
                 utgåendeMvaSpesifikasjonslinjer
                     .hvor { linje -> linje.grunnlag erStørreEnn 0.0 }
                     .skal { linje -> linje.merknad?.beskrivelse ha innhold }
@@ -312,4 +319,5 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, MANGELFULL_S
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
         }
     )
+
 ```

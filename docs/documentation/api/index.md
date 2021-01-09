@@ -21,7 +21,9 @@ Hvor `<env>` er Miljøspesifikk adresse f.eks. `skatt-at.sits.no
 
 **Body** :
 
+
 - Iht. XSD: [Skattemeldingformerverdiavgift.v0.8](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd)
+
 
 **Eksempel** : Innsending av XML på ugyldig format
 
@@ -29,12 +31,14 @@ POST https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/val
 
 Header: `Content-Type: application/xml`
 
+
 Med innhold (http body)som ikke passerer XML-validering basert på [XSD](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd)
 :
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
 <mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8">
+
 </mvaMeldingDto>
 ```
 
@@ -42,6 +46,7 @@ Med innhold (http body)som ikke passerer XML-validering basert på [XSD](https:/
 
 status: 200
 Innhold (body)
+
 
 ```xml
 <valideringsresultat>
@@ -58,4 +63,5 @@ Innhold (body)
         </valideringsDetaljer>
     </valideringsfeil>
 </valideringsresultat>
+
 ```
