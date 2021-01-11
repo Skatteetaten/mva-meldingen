@@ -59,12 +59,12 @@
 <p>Hwere <code class="language-text">&lt;env&gt;</code> is an environment specific address, i. e. `skatt-at.sits.no</p>
 <p><strong>Body</strong> :</p>
 <ul>
-<li>According to XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd">Skattemeldingformerverdiavgift.v0.8</a></li>
+<li>According to XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd">Skattemeldingformerverdiavgift.v0.9</a></li>
 </ul>
 <p><strong>Example</strong> : Sending in XML on incorrect format</p>
 <p>POST <a href="https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider">https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider</a></p>
 <p>Header: <code class="language-text">Content-Type: application/xml</code></p>
-<p>With content (http body) not according to XML validation based on <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd">XSD</a>
+<p>With content (http body) not according to XML validation based on <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd">XSD</a>
 :</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvaMeldingDto</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
