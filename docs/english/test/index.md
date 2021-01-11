@@ -43,7 +43,7 @@ The test plan below outlines when it will be possible to test integrations towar
     <li>VAT return service  - "Dummy"  (Ping from SBS)</li>
   </ul>
   </td></tr>
-  <tr><td>Test 3 - more validations from the validation service, simple VAT return service</td><td>mar. 21</td>
+  <tr><td>Test 3 - more validations from the validation service, simple VAT return service</td><td>mar. 2021</td>
   <td>  
   <ul>
 	<li>Validation service - Validation servcie containing a larger number of the validations to be provided. </li>

@@ -9,18 +9,24 @@ Testdokumentasjonen består av
 
 - Beskrivelse av api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
 - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
-- Forretningsregler - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
+- Valideringsregler - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
 - Valideringsregler som er en del av testen – se lenger ned på denne siden
 - Eksempler på testtilfeller – se lenger nede på denne siden
-  I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
+- I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
 
 For de tidlige testene hvor et fåtall av systemleverandørene er involvert, vil informasjon om test og testgjennomføring tas direkte med de involverte.
 
 Resultatet av de tidlige testene vil dokumenteres og informasjon om dette vil være tilgjengelig for alle som ønsker å følge med underveis.
 
+## Valderingsregler
+
+<det kommer, det kommer>
+
 ## Testtilfeller mva-melding
 
 Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
+
+Eksempler på xml-filer: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/
 
 ## Testplan
 
@@ -37,7 +43,7 @@ Testplanen under viser når det vi være mulig å teste integrasjonene mot Skatt
 	<li>Helt enkel tjeneste med en eller få enkle valideringer </li>
   </ul>
   </td></tr>
-  <tr><td>Test 3 - noe rikere valideringstjeneste og en enkel innsendingstjeneste</td><td>mar.21</td>
+  <tr><td>Test 3 - noe rikere valideringstjeneste og en enkel innsendingstjeneste</td><td>mar. 2021</td>
   <td>  
   <ul>
 	<li>Valideringstjeneste - Valideringstjeneste som inneholder mange av de valideringene som skal brukes</li>

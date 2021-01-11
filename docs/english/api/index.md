@@ -19,7 +19,7 @@ Hwere `<env>` is an environment specific address, i. e. `skatt-at.sits.no
 
 **Body** :
 
-- According to XSD: [Skattemeldingformerverdiavgift.v0.8](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd)
+- According to XSD: [Skattemeldingformerverdiavgift.v0.9](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
 
 **Example** : Sending in XML on incorrect format
 
@@ -27,7 +27,7 @@ POST https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/val
 
 Header: `Content-Type: application/xml`
 
-With content (http body) not according to XML validation based on [XSD](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.8.xsd)
+With content (http body) not according to XML validation based on [XSD](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
 :
 
 ```xml

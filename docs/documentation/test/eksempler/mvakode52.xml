@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9">
+	<innsending>
+		<regnskapssystemsreferanse>52</regnskapssystemsreferanse>
+		<regnskapssystem>
+			<systemnavn>zzx</systemnavn>
+			<systemversjon>4.34.3</systemversjon>
+		</regnskapssystem>
+		<innsender>
+			<norskIdentifikator>02067623456</norskIdentifikator>
+		</innsender>
+		<innsendingTidspunkt>2022-05-26T21:35:47Z</innsendingTidspunkt>
+	</innsending>
+	<skattegrunnlagOgBeregnetSkatt>
+		<skattleggingsperiode>
+			<periode>
+				<skattleggingsperiodeToMaaneder>mars-april</skattleggingsperiodeToMaaneder>
+			</periode>
+			<aar>2022</aar>
+		</skattleggingsperiode>
+		<fastsattMerverdiavgift>0</fastsattMerverdiavgift>
+		<mvaSpesifikasjonslinje>
+			<mvaKode>52</mvaKode>
+			<mvaKodeRegnskapsystem>utførsel</mvaKodeRegnskapsystem>
+			<grunnlag>20000</grunnlag>
+			<sats>0</sats>
+			<merverdiavgift>0</merverdiavgift>
+		</mvaSpesifikasjonslinje>
+	</skattegrunnlagOgBeregnetSkatt>
+	<betalingsinformasjon>
+		<kontonummerForTilbakebetaling>
+			<norskKontonummer>999999999</norskKontonummer>
+		</kontonummerForTilbakebetaling>
+		<kundeIdentifikasjonsnummer>3400000932456870</kundeIdentifikasjonsnummer>
+	</betalingsinformasjon>
+	<skattepliktig>
+		<organisasjonsnummer>913238254</organisasjonsnummer>
+	</skattepliktig>
+	<meldingskategori>alminnelig</meldingskategori>
+	<merknad>
+		<beskrivelse>eksempel mvakode52</beskrivelse>
+	</merknad>
+</mvaMeldingDto>

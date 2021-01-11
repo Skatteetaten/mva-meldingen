@@ -4,12 +4,11 @@ title: "Introduksjon til Valideringsregler"
 description: "Regler for utfylling av mva-melding "
 ---
 
-## Valideringsregler pr. 15 desember 2020:
-
+## Valideringsregler
 
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt
 til fortløpende.
-Følgende valideringsregler er foreløpig definert for mva-meldingen pr 15. desember 2020:
+Følgende valideringsregler er foreløpig definert for mva-meldingen:
 
 - Summen av beregnet avgift fra hver avgiftslinje skal være lik sum avgift i Mva-meldingen
 - Beregnet avgift skal stemme med oppgitt grunnlag ganger gjeldende sats
@@ -40,7 +39,6 @@ for å sjekke gyldigheten av meldingen.
 Reglene er utformet slik at de både er dokumentasjon av reglene for meldingen og kjørbare maskinelt.
 Eksempel på regel:
 
-
 ```kotlin {.line-numbers}
 [1]     MvaMeldingsinnhold_GrunnlagGangerGjeldendeSats_FeilBeregnetMerverdiavgiftForAvgiftslinje(
 [2]        "Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats" {
@@ -58,7 +56,6 @@ Her betyr feltene i regelen ovenfor følgende:
 
 **Linje 1 - Identifikator**: Dette er referansen til regelen hver regel har en unik identifikator.
 
-
 **Linje 2 - Feilmelding**: Dette er feilmeldingen som bli returnert i validerings-APIet dersom
 MVA-meldingen ikke er i henhold til kravet i regelen.
 
@@ -68,8 +65,7 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 **Linje 8 - Alvorlighetsgrad**: Dette er alvorlighetsgraden dersom valideringen feiler.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, MANGELFULL_SKATTEMELDING, UGYLDIG_SKATTEMELDING
 
-
-# Detljspesifikasjon av reglene pr 15 desember 2020:
+# Detljspesifikasjon av reglene:
 
 ```kotlin
 
@@ -321,3 +317,12 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, MANGELFULL_S
     )
 
 ```
+
+## Regler for utfylling av mva-melding
+
+Unik identifikasjon
+
+| Entitet                        | Attributt                                                                                                                                                                     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SkattemeldingForMerverdiavgift | Skattepliktig.organisasjonsnummer + SkatteMeldingForMerverdiAvgift.meldingskategori + SkattegrunnagOgBeregnetSkatt.skattleggingsperiode + Innsending.regnskapssystemreferanse |
+| MvaSpesifikasjonslinje         | mvaKode + spesifikasjon + sats + mvaKodeRegnskapssystem                                                                                                                       |
