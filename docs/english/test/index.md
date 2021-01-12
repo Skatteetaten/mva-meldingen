@@ -9,7 +9,7 @@ The test documentation consists of
 
 - Description of api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
 - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
-- Business rules - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
+- Validation rules - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
 - Validation rules that are part of the test - see further down on this page
 - Examples of test cases - see further down this page
   In addition, there is a need for a test user. This is distributed directly to those who will be testing.
@@ -25,7 +25,7 @@ Will be provided soon
 ## Test cases the VAT tax return
 
 [Test cases for the VAT tax retun](Testtilfeller mva-melding.xlsx)
-XML examples: <will be provided soon>
+XML examples: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/
 
 ## Test plan
 

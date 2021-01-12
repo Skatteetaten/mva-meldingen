@@ -20,7 +20,10 @@ Resultatet av de tidlige testene vil dokumenteres og informasjon om dette vil vÃ
 
 ## Valderingsregler
 
-<det kommer, det kommer>
+Valideringsregler klare for test
+
+- Summen av beregnet avgift fra hver avgiftslinje skal vÃ¦re lik sum avgift i Mva-meldingen
+- Beregnet avgift skal stemme med oppgitt grunnlag ganger gjeldende sats
 
 ## Testtilfeller mva-melding
 

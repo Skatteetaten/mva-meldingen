@@ -20,3 +20,17 @@ En ny mva-melding vil også gi nye muligheter for veiledning og dialog gjennom f
 - Tatt bort feilkilder gjennom validering før innsending
 - Hver melding får unik identifikator
 - Oppsett/visuell fremstilling av mva-meldingen
+
+## Overordnet løsningsoversikt - komponenter, API og meldinger
+
+Her beskrives arkitekturen i den nye løsningen. Figuren under viser en oversikt over aktører og komponenter.
+
+![mva-meldingen_oversikt.png](mva-meldingen_oversikt.png)
+
+- Et SBS oppretter mva-meldingen gjennom et brukergrensesnitt mot sluttbrukere.
+- SBS kan utføre operasjoner på skattemeldingene gjennom et API mot Altinn3. Disse API-en blir nye og er ikke de samme som benyttes i dag for Altinn2-innsending.
+- Det tilbys API for å validere mva-meldingen, signere og sende inn.
+- Eksisterende funksjonalitet i Altinn2 for Innboks og roller og rettigheter vil videreføres i den nye løsningen.
+- Skattepliktig og ev regnskapsfører eller revisor kan gå i Altinn for å se på innsendte data og signere og sende inn til Skatteetaten
+- Skatteetaten vil tilby portalløsning som gir personlige skattepliktige mulighet til innsyn og ev endring med påfølgende innsending av mva-melding.
+- Pålogging, autentisering av sluttbrukeren og/eller sluttbrukersystemet skal gjøres via ID-porten og/eller Maskinporten.

@@ -34,7 +34,7 @@ Med innhold (http body)som ikke passerer XML-validering basert på [XSD](https:/
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8">
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9">
 
 </mvaMeldingDto>
 ```
