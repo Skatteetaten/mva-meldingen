@@ -20,7 +20,7 @@ The result of the early testing will be documented and information will be made 
 
 ## Valideringsregler
 
-Will be provided soon
+Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
 
 ## Test cases the VAT tax return
 
