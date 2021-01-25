@@ -17,7 +17,7 @@ vil bli godkjent ved innsending.
 
 **URL** : `POST https://<env>/api/mva-melding/valider`
 
-Hvor `<env>` er Miljøspesifikk adresse f.eks. `skatt-at.sits.no
+Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 **Body** :
 
@@ -25,7 +25,7 @@ Hvor `<env>` er Miljøspesifikk adresse f.eks. `skatt-at.sits.no
 
 **Eksempel** : Innsending av XML på ugyldig format
 
-POST https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider
+POST https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider
 
 Header: `Content-Type: application/xml`
 
