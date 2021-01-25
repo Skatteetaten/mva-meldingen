@@ -58,13 +58,13 @@
 Dette sikrer at mva-meldingen har korrekt format og innhold og øker sannsynligheten for at mva-meldingen
 vil bli godkjent ved innsending.</p>
 <p><strong>URL</strong> : <code class="language-text">POST https://&lt;env&gt;/api/mva-melding/valider</code></p>
-<p>Hvor <code class="language-text">&lt;env&gt;</code> er Miljøspesifikk adresse f.eks. `skatt-at.sits.no</p>
+<p>Hvor <code class="language-text">&lt;env&gt;</code> er Miljøspesifikk adresse f.eks. <code class="language-text">mp-test.sits.no</code></p>
 <p><strong>Body</strong> :</p>
 <ul>
 <li>Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd">Skattemeldingformerverdiavgift.v0.9</a></li>
 </ul>
 <p><strong>Eksempel</strong> : Innsending av XML på ugyldig format</p>
-<p>POST <a href="https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider">https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider</a></p>
+<p>POST <a href="https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider">https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider</a></p>
 <p>Header: <code class="language-text">Content-Type: application/xml</code></p>
 <p>Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd">XSD</a>
 :</p>
