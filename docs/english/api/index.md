@@ -15,7 +15,7 @@ Skatteetaten assumes that the validation service is called before sending in the
 
 **URL** : `POST https://<env>/api/mva-melding/valider`
 
-Hwere `<env>` is an environment specific address, i. e. `skatt-at.sits.no
+Hwere `<env>` is an environment specific address, i. e. `mp-test.sits.no`
 
 **Body** :
 
@@ -23,7 +23,7 @@ Hwere `<env>` is an environment specific address, i. e. `skatt-at.sits.no
 
 **Example** : Sending in XML on incorrect format
 
-POST https://skatt-at.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider
+POST https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider
 
 Header: `Content-Type: application/xml`
 
