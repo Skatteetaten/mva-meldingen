@@ -23,7 +23,7 @@ A new VAT return will also provide new opportunities for guidance and dialog thr
 This illustration describes the architecture of the new solution
 Frontpage in English
 
-![VAT return overview.png](VAT return overview.png)
+![VAT_return_overview.png](VAT_return_overview.png)
 
 
 -	An end-user system creates a VAT return through a user interface.
