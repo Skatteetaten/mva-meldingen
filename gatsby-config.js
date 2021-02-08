@@ -11,6 +11,11 @@ const gatsbyConfig = {
         name: "Dokumentasjon",
       },
       {
+	        href: "/frontpage_eng",
+	        name: "Frontpage in English",
+      }	
+
+      {
         href: "/english",
         name: "Documentation in English",
       },
