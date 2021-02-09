@@ -9,12 +9,12 @@ A new VAT return will also provide new opportunities for guidance and dialog thr
 
 -	Common information structure and rules for all types of VAT returns
 -	Flexibility; code based rather than fixed fields
-  -	From electronic forms to digital interaction
+    -	From electronic forms to digital interaction
 -	Simpler to provide the correct information; remarks for VAT returns per line and in total:
-  -	Removes the need for remarks
-  -	Structured remarks for common cases
-  -	Free form remarks
-  - Attachments
+    -	Removes the need for remarks
+    -	Structured remarks for common cases
+    -	Free form remarks
+    - Attachments
 -	Refund; reporting businesses can submit a KID for reimbursement
 -	Removing errors prior to submission by validation
 -	Each return has a unique identifier
