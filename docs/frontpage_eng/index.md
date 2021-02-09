@@ -6,6 +6,7 @@ Some simplification is a result of changes in the VAT return; fever sources of e
 A new VAT return will also provide new opportunities for guidance and dialog through validation before submission, and reminders for tasks. In addition, it will be possible to offer an increased degree of access to information to achieve effectiveness and safety through digital reconciliation of the VAT return. There is also a desire for better interaction between accounting/ERP systems and Altinn/Tax Authority systems, for example automatic receipt for submitted VAT returns.
 
 ## What's new
+
 -	Common information structure and rules for all types of VAT returns
 -	Flexibility; code based rather than fixed fields
   -	From electronic forms to digital interaction
