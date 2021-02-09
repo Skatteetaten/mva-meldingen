@@ -27,7 +27,7 @@ Frontpage in English
 
 
 -	An end-user system creates a VAT return through a user interface.
--	The end-user system can execute operations on VAT returns through an API between the system and Altinn 3.
+-	The end-user system can execute operations on VAT returns through an API between the system and Altinn 3. These API's are new, and not the same as the ones currently being used in Altinn 2.
 -	API's for validation, signing and submitting VAT returns will be available
 -	Existing functionality in Altinn 2, such as inbox, roles and rights will also be available in the new service.
 -	Reporting business, accountants and advisors can access submitted information, sign VAT returns and submit returns to the tax authority.
