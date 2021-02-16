@@ -8,13 +8,13 @@ description: "Spørsmål og svar"
 
 1.	Hvilke endringer inngår i moderniseringen av mva-området? 
 
-#### Ny registreringsløsning for mva-pliktige.
+##### Ny registreringsløsning for mva-pliktige.
 Skatteetaten har lansert en ny tjeneste for virksomheter som skal registrere seg i Mva-registeret. Med den nye tjenesten vil behandlingstiden, for størsteparten av registreringene, reduseres fra flere uker til noen minutter. Link til tjenesten.
 
-#### Ny mva-melding.
+##### Ny mva-melding.
 Moderniseringen sørger for forenkling for næringslivet gjennom forbedringer som felles informasjonsstruktur og regelsett for alle typer mva-meldinger; bedre brukeropplevelse og mer fleksibilitet i oppsettet; støttende digital veiledning og mindre feilkilder. Ny mva-melding lanseres 01.01.22.
 
-#### Salgs- og kjøpsmelding.
+##### Salgs- og kjøpsmelding.
 Et forslag til ny melding er per nå under utredning hos Finansdepartementet. Forslaget innebærer at bokførte salg og kjøp på transaksjonsnivå skal rapporteres på en hensiktsmessig måte.
 
 2.	Blir det en overgangsperioder fra gammel til ny tjeneste?
