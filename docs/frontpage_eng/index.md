@@ -1,7 +1,7 @@
 # Implementation guide for system-to-system submission of VAT-report
 
 ## Background
-The MEMO-project is developing a new tax return for VAT compensation (VAT return). The goal of the MEMO-project is to achieve better compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system.
+The MEMO-project is developing a new tax return for VAT compensation (VAT return). The goal of the MEMO-project is to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system.
 Some simplification is a result of changes in the VAT return; fever sources of errors, easier returns, and making it easier to fulfil the duty to provide information.
 A new VAT return will also provide new opportunities for guidance and dialog through validation before submission, and reminders for tasks. In addition, it will be possible to offer an increased degree of access to information to achieve effectiveness and safety through digital reconciliation of the VAT return. There is also a desire for better interaction between accounting/ERP systems and Altinn/Tax Authority systems, for example automatic receipt for submitted VAT returns.
 
@@ -10,7 +10,7 @@ A new VAT return will also provide new opportunities for guidance and dialog thr
 -	Common information structure and rules for all types of VAT returns
 -	Flexibility; code based rather than fixed fields
     -	From electronic forms to digital interaction
--	Simpler to provide the correct information; remarks for VAT returns per line and in total:
+-	Easier to provide the correct information; remarks for VAT returns per line and in total:
     -	Removes the need for remarks
     -	Structured remarks for common cases
     -	Free form remarks
