@@ -44,7 +44,7 @@ Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut
 
 ### Hvilken mulighet har advokater til å bistå i enkeltsaker (registering og mva-melding)?
   
-Advokater har samme mulighet som alle andre til å tilegne seg de Altinn-roller som kreves i ny tjeneste, i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. 
+Advokater har samme mulighet som alle andre til å tilegne seg de Altinn-roller som kreves i ny tjeneste [se over.](https://skatteetaten.github.io/mva-meldingen/documentation/faq/#hvem-kan-fylle-ut-en-registrering-og-hvem-kan-sende-inn) Dette gjøres i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. 
 
 [Les mer om Altinn-roller her.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
 
