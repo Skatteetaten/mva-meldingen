@@ -46,7 +46,7 @@ Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut
   
 Advokater har samme mulighet som alle andre til å tilegne seg de Altinn-roller som kreves i ny tjeneste, i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. 
 
-[Les mer om Altinn-roller her](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
+[Les mer om Altinn-roller her.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
 
 Skatteetaten har planer om å utvikle funksjonalitet for delegering av fullmakt i enkeltsaker der en person har behov for å delegere myndighet til en fullmektig i ny tjeneste. Vi ser at det kan være relevant i flere tilfeller, inkludert ved søknad, klage og etterkontroll. Dette er tilleggsfunksjonalitet som først vil utvikles senere i prosjektperioden, og vi har per i dag ikke estimert et tidspunkt for når dette vil være klart. 
  
