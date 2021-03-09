@@ -1,5 +1,5 @@
 import requests
-from docs.documentation.test.testinnsending.InnsendingServices import printing
+from docs.documentation.test.InnsendingServices import printing
 
 
 def oprett(domene, token, app, org_nummer):

@@ -1,5 +1,5 @@
 import requests
-from docs.documentation.test.testinnsending.InnsendingServices import printing, InnloggingType
+from docs.documentation.test.InnsendingServices import printing, InnloggingType
 
 idporten = InnloggingType.idporten.name
 maskinporten = InnloggingType.maskinporten.name

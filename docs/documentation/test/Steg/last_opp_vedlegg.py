@@ -1,5 +1,5 @@
 import requests
-from docs.documentation.test.testinnsending.InnsendingServices import printing, Miljo
+from docs.documentation.test.InnsendingServices import printing, Miljo
 
 local = Miljo.local.name
 
