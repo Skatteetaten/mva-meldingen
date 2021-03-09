@@ -84,10 +84,12 @@ Innhold (body)
 
 ## Prosess Mva Melding Innsending
 
-# Anskaffelse av Altinn Token
-
 Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Innsending. Detaljert beskrivelse av Altinn3's Instans-API finnes her
 [Altinn Studio Instans API]("https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/"). Inngående kjennskap til dette API'et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.
+
+Det anbefales å benytte [swagger dokumentasjonen]("https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html") sammen med denne API-beskrivelsen.
+
+I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under [Test]("https://skatteetaten.github.io/mva-meldingen/documentation/test/")
 
 Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
 
@@ -100,7 +102,7 @@ Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives 
 Instans API'et til Mva Melding Innsending er tilgjengelig på en URL for en applikasjon hos altinn og består av
 
 ```
-instansApiUrl = <applikasjonsUrl>/instances
+instansApiUrl = {applikasjonsUrl}/instances
 ```
 
 Det vil være en applikasjon for hvert miljø. ApplikasjonsUrl'en for test-miljøet er:
@@ -115,7 +117,7 @@ Hvilket vil gi følgende:
 instansApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances"
 ```
 
-I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er skrevet `POST: /intances/` så er det implisitt `POST: <applikasjonsUrl>/instances/` (som er instansApiUrl)
+I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er skrevet `POST: /intances/` så er det implisitt `POST: {applikasjonsUrl}/instances/` (som er instansApiUrl)
 
 ![](Mva-Melding-Innsending-Sekvensdiagram.png)
 
@@ -130,45 +132,47 @@ Når en instans er opprettet vil den være mulig å oppdatere data-objektet til 
 For å opprette en instans utfører man en POST mot instansApiUrl med et `instanceOwner`-objekt hvor det fylles inn organisasjonsnummeret for organisasjonen det skal sendes mva melding for:
 
 ```JSON
-POST <applikasjonsUrl>/instances/
+POST {applikasjonsUrl}/instances/
 HEADERS:
-    "Authorization": "Bearer " + <altinnToken>
+    "Authorization": "Bearer " + "{altinnToken}"
     "content-type": "application/json"
 CONTENT/BODY:
     {
         "instanceOwner": {
-            "organisationNumber": <organisasjonsnummer>
+            "organisationNumber": "{organisasjonsnummer}"
             }
     }
 ```
 
 Dette kallet vil opprette instansen og returnere
 
+#### Response
+
 ```JSON
 Response HTTPCode: 201 (OK)
 Content:
 {
-    "id": "<partyId>/<instanceGuid>",
+    "id": "{partyId}/{instanceGuid}",
     "instanceOwner": {
-        "partyId": "<partyId>",
-        "organisationNumber": "<organisasjonsnummer>"
+        "partyId": "{partyId}",
+        "organisationNumber": "{organisasjonsnummer}"
     },
-    "appId": "skd/<ApplikasjonsNavn>",
+    "appId": "skd/{ApplikasjonsNavn}",
     "org": "skd",
     "selfLinks": {
-        "apps": "<instansUrl>", // appens instansUrl
-        "platform": "<platformUrl>" // altinn3 plattformens url for instansen
+        "apps": "{instansUrl}", // appens instansUrl
+        "platform": "{platformUrl}" // altinn3 plattformens url for instansen
     },
     "data": [
         {
-            "id": "<dataGuid>", // <dataGuid> kan benyttes i neste steg
-            "instanceGuid": "<instanceGuid>",
+            "id": "{dataGuid}", // {dataGuid} kan benyttes i neste steg
+            "instanceGuid": "{instanceGuid}",
             "dataType": "no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1",
             "contentType": "application/xml",
-            "blobStoragePath": "skd/<ApplikasjonsNavn>/<instanceGuid>/data/<dataGuid>",
+            "blobStoragePath": "skd/{ApplikasjonsNavn}/{instanceGuid}/data/{dataGuid}",
             "selfLinks": {
-                "apps": "<instanceDataAppUrl>", // <instanceDataAppUrl> kan benyttes i neste steg
-                "platform": "<instanceDataPlatformUrl>"
+                "apps": "{instanceDataAppUrl}", // {instanceDataAppUrl} kan benyttes i neste steg
+                "platform": "{instanceDataPlatformUrl}"
             },
             "size": 273,
             "locked": false,
@@ -185,7 +189,7 @@ Content:
 
 ```
 
-Fra responsen kan man finne `instansUrl` fra enten `selflinks.apps`, eller `instansApiUrl/<partyId>/<instanceGuid>`, hvor man kan finne `<partyId>/<instanceGuid>` i verdien til `id` i det returnerte instans-objektet.
+Fra responsen kan man finne `instansUrl` fra enten `selflinks.apps`, eller `instansApiUrl/{partyId}/{instanceGuid}`, hvor man kan finne `{partyId}/{instanceGuid}` i verdien til `id` i det returnerte instans-objektet.
 
 Resten av kallene i sekvensen for innsending benytter `instansUrl`.
 
@@ -193,30 +197,31 @@ Resten av kallene i sekvensen for innsending benytter `instansUrl`.
 
 MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
 
-Modellen for [no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1.xsd](../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd)
+Modellen for MvaMeldingInnsending finnes her: [no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1.xsd](../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd)
 
 Url til MvaMeldingInnsending har denne oppbygningen:
 
 ```
-mvaMeldingInnsendingUrl = <instansApiUrl>/<partyId>/<instanceGuid>/data/<dataGuid>
+mvaMeldingInnsendingUrl = {instansApiUrl}/{partyId}/{instanceGuid}/data/{dataGuid}
 ```
 
-hvor `<dataGuid>` er id til data-objektet til instansen.
+hvor `{dataGuid}` er id til data-objektet til instansen.
 
 Det er 2 måter å komme frem til `mvaMeldingInnsendingUrl` og begge benytter instansens data-liste-element som har datatypen `no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1`. Når instansen blir skapt finnes bare ett element i lista.
 
 Fra data-elementet kan man enten:
 
-- flette inn `<dataGuid>` som finnes som verdi i `"id"` i oppbygningen over,
-- eller bruke `selfLinks.apps` verdien `<instanceDataAppUrl>`, som vist i instans-responsen i forrige steg.
-  - `mvaMeldingInnsendingsUrl = <instanceDataAppUrl>`
+- flette inn `{dataGuid}` som finnes som verdi i `"id"` i oppbygningen over,
+  - eventuelt bruke `{instansApiUrl}/data/{dataGuid}`
+- eller bruke `selfLinks.apps` verdien `{instanceDataAppUrl}`, som vist i instans-responsen i forrige steg.
+  - `mvaMeldingInnsendingsUrl = {instanceDataAppUrl}`
 
-Man laster opp MvaMeldingInnsending ved å:
+Man laster opp MvaMeldingInnsending ved å benytte data-apiet til instansen:
 
 ```
-PUT <mvaMeldingInnsendingsUrl>
+PUT {mvaMeldingInnsendingsUrl}
 HEADERS:
-    "Authorization": "Bearer " + <altinnToken>
+    "Authorization": "Bearer " + "{altinnToken}"
     "content-type": "text/xml"
 ```
 
@@ -228,8 +233,84 @@ Content:
 </mvaMeldingInnsending>
 ```
 
+Eksempel på xml-fil for mvaMeldingInnsending finnes under [Test]("https://skatteetaten.github.io/mva-meldingen/documentation/test/").
+
 ### Last Opp MvaMelding
+
+Modellen for [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd](../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
+
+Url for opplasting av Mva Melding har denne oppbygningen:
+
+```
+{instansUrl}/data?datatype=mvamelding
+```
+
+Mva Melding lastes opp på med følgende request mot instansens data-api:
+
+```JSON
+POST {instansUrl}/data?datatype=mvamelding
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+    "content-type": "text/xml"
+    "Content-Disposition": "attachment; filename=mvaMelding.xml"
+```
+
+```XML
+Content:
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9">
+    ...
+</mvaMeldingDto>
+```
+
+Dette kallet vil laste opp xml-dokumentet til instansen.
 
 ### Last Opp Vedlegg
 
+Det er mulig å laste opp fra 0 til 57 vedlegg, med en individuell størrelse på 25MB.
+
+Url for opplasting av Vedlegg har denne oppbygningen:
+
+```
+{instansUrl}/data?datatype=vedlegg
+```
+
+Det tillates opplasting av følgende content-typer:
+
+- text/xml
+- application/pdf
+- image/jpeg
+- image/jpg
+- image/png
+- image/gif
+
+Vedlegg lastes opp på med følgende request mot instansens data-api:
+
+```JSON
+POST {instansUrl}/data?datatype=vedlegg
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+    "content-type": "application/pdf"
+    "Content-Disposition": "attachment; filename=merknaderTilMvaMeldingen.pdf"
+Content:
+{pdf-vedlegg i binærformat}
+```
+
+Dette kallet vil laste opp pdf-dokumentet til instansen.
+
+Husk at `content-type` skal være passende for vedlegget som skal lastes opp og at filnavnet i `Content-Disposition`- headeren også bør være passende og unikt. Det er dette filnavnet Skatteetaten vil forholde seg til for vedlegget.
+
 ### Send Inn Mva Melding Innsending
+
+Dette steget bruker prosess-apiet til instansen og instansen vil avslutte utfyllingssteget for Mva Melding Innsending og til neste steg i applikasjonens prosess for instansen. Foreløpig er det kun ett steg i applikasjonens prosess, så i skrivende stund vil dette kallet fullføre innsendingen.
+
+For å fullføre innsendingen utføres følgende kall mot prosess-apiet til instansen:
+
+```JSON
+PUT {instansUrl}/process/next
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+    "content-type": "application/json"
+```
+
+Innsendingen vil nå kunne finnes i altinns meldings-arkiv.
