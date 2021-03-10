@@ -4,8 +4,7 @@ title: "Test"
 description: "Testtilfeller mva-melding. Testplan."
 ---
 
-Vi har kommet til 'Test 3'. Se lenger ned på siden for fullstendig testplan. Vi har klar valideringstjenesten med noen av de valideringene denne tjenesten skal inneholde.
-Testdokumentasjonen består av
+Vi har kommet til 'Test 3'. Se lenger ned på siden for fullstendig testplan. Testdokumentasjonen består av
 
 - Beskrivelse av api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
 - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
@@ -13,10 +12,6 @@ Testdokumentasjonen består av
 - Valideringsregler som er en del av testen – se lenger ned på denne siden
 - Eksempler på testtilfeller – se lenger nede på denne siden
 - I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
-
-For de tidlige testene hvor et fåtall av systemleverandørene er involvert, vil informasjon om test og testgjennomføring tas direkte med de involverte.
-
-Resultatet av de tidlige testene vil dokumenteres og informasjon om dette vil være tilgjengelig for alle som ønsker å følge med underveis.
 
 # Valderingsregler
 
@@ -58,7 +53,7 @@ Konkret må sluttbrukersystemet gjøre følgende:
    - Last Opp 1 MvaMeldingInnsending
    - Last Opp 1 MvaMelding
    - Last Opp 0 eller flere Vedlegg
-   - Sender Inn MvaMeldingInnsending 
+   - Sender Inn MvaMeldingInnsending
 
 Skatteetaten har tilgjengeliggjort en testapplikasjon som viser hvordan trinnene beskrevet over kan utføres.
 Den er skrevet i [jupyter notebook formatet](https://jupyter.org/):
