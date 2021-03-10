@@ -34,7 +34,7 @@
 		<kundeIdentifikasjonsnummer>3400000932456870</kundeIdentifikasjonsnummer>
 	</betalingsinformasjon>
 	<skattepliktig>
-		<organisasjonsnummer>910149466</organisasjonsnummer>
+		<organisasjonsnummer>123456789</organisasjonsnummer>
 	</skattepliktig>
 	<meldingskategori>alminnelig</meldingskategori>
 </mvaMeldingDto>

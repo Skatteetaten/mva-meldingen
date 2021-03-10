@@ -2,7 +2,7 @@
 
 Documentation for mva-meldingen
 
-## Notebook Ekamples
+## Notebook Examples
 How to get the examples up and running(Linux Ubuntu).
 
 ### Initial setup
@@ -35,6 +35,8 @@ Using python3 moving forward. Change 3.8 with a 2.x.x if desired and python3 wit
     sudo apt-get install python3.8
     sudo apt install python3-pip 
 
+### Running notebook
+
 Move to the example files folder. 
 
     cd docs/documentation/test
@@ -47,13 +49,16 @@ Choose browser, we use Chrome. <br>
 Open innsending-eksempel.ipynb
 <br>
 <br>
-When runnin the notebook script there are these boxes with code in them that can be run. 
-You can either click on a box and press run, and do this for each box. 
-Or you can go to the toolbar and click "Cell" and then "Run All"
+To run the script. Click on a box and press "Run"
+You can do this for each box or you can go to the toolbar and click "Cell" and then "Run All"
 <br>
-If you want to do changes then it's sensible to restart the kernel. "Kernel" -> "Restart"
+If you want to do changes or re-run the script then it's sensible to restart the kernel. "Kernel" -> "Restart"
 <br>
-To remove the output prints. "Cell" -> "All Output" -> "Clear"
+Also useful to remove the output prints. "Cell" -> "All Output" -> "Clear"
+<br>
+<br>
+To run the script you need a test account in digdirs minid, as well as change the organisation number, <br>
+which is defined as a variable in the script and in the MvaMeldingInnsending ("konvolutt") and mvamelding .xml files.
 
 ## Documentation
 ### Initial setup

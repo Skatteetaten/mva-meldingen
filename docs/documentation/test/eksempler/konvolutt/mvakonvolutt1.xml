@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mvaMeldingInnsending>
   <norskIdentifikator>
-    <organisasjonsnummer>910149466</organisasjonsnummer>
+    <organisasjonsnummer>123456789</organisasjonsnummer>
   </norskIdentifikator>
   <skattleggingsperiode>
     <periode>
@@ -11,13 +11,13 @@
   </skattleggingsperiode>
   <innsendingstype>komplett</innsendingstype>
   <instansstatus>En status</instansstatus>
-  <opprettetAv>Hugo Bjørvik</opprettetAv>
+  <opprettetAv>Ola Nordmann</opprettetAv>
   <opprettingstidspunkt>2017-05-15T08:41:13+01:00</opprettingstidspunkt>
   <endringstidspunkt>2013-12-21T12:32:42+01:00</endringstidspunkt>
   <vedlegg>
     <vedleggstype>binaerVedlegg</vedleggstype>
     <kildegruppe>sluttbruker</kildegruppe>
-    <opprettetAv>Hugo Bjørvik</opprettetAv>
+    <opprettetAv>Ola Nordmann</opprettetAv>
     <opprettingstidspunkt>2016-02-20T15:56:29+01:00</opprettingstidspunkt>
     <vedleggsfil>
       <filnavn>Mystisk-fil</filnavn>
