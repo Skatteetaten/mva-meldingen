@@ -1,5 +1,5 @@
 import requests
-from docs.documentation.test.InnsendingServices import printing, Miljo
+from Steg.InnsendingServices import printing
 
 
 def neste(miljo, url, token):

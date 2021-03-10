@@ -1,5 +1,5 @@
 import requests
-from docs.documentation.test.InnsendingServices import printing, Miljo
+from Steg.InnsendingServices import printing
 
 
 def slett_sist_lastet_opp_vedlegg(miljo, url, vedlegg, token):

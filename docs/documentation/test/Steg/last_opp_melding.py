@@ -1,5 +1,5 @@
 import requests
-from docs.documentation.test.InnsendingServices import printing, Miljo
+from Steg.InnsendingServices import printing
 
 
 def last_opp(miljo, url, melding_xml, token):
