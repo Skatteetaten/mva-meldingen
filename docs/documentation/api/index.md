@@ -156,7 +156,7 @@ Content:
         {
             "id": "{dataGuid}", // {dataGuid} kan benyttes i neste steg
             "instanceGuid": "{instanceGuid}",
-            "dataType": "no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1",
+            "dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1",
             "contentType": "application/xml",
             "blobStoragePath": "skd/{ApplikasjonsNavn}/{instanceGuid}/data/{dataGuid}",
             "selfLinks": {
@@ -183,9 +183,9 @@ Resten av kallene i sekvensen for innsendingen benytter `instansUrl`. Denne kan 
 Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 ### Last Opp MvaMeldingInnsending
 
-MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
+MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
 
-Modellen for MvaMeldingInnsending finnes her: <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1.xsd</a>
+Modellen for MvaMeldingInnsending finnes her: <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd</a>
 
 
 Url til MvaMeldingInnsending har denne oppbygningen:
@@ -196,7 +196,7 @@ mvaMeldingInnsendingUrl = {instansApiUrl}/{partyId}/{instanceGuid}/data/{dataGui
 
 hvor `{dataGuid}` er id til data-objektet til instansen.
 
-Det er 2 måter å komme frem til `mvaMeldingInnsendingUrl` og begge benytter instansens data-liste-element som har datatypen `no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1`. Når instansen blir skapt finnes bare ett element i lista.
+Det er 2 måter å komme frem til `mvaMeldingInnsendingUrl` og begge benytter instansens data-liste-element som har datatypen `no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1`. Når instansen blir skapt finnes bare ett element i lista.
 
 Fra data-elementet kan man enten:
 

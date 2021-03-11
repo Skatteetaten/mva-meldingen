@@ -9,3 +9,4 @@ public
 ts
 .ipynb_checkpoints
 /venv/
+*.pyc
