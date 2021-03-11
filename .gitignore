@@ -7,3 +7,6 @@ public
 */.DS_Store
 public
 ts
+.ipynb_checkpoints
+/venv/
+*.pyc

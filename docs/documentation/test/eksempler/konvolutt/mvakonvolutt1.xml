@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingInnsending>
+  <norskIdentifikator>
+    <organisasjonsnummer>123456789</organisasjonsnummer>
+  </norskIdentifikator>
+  <skattleggingsperiode>
+    <periode>
+      <skattleggingsperiodeToMaaneder>mars-april</skattleggingsperiodeToMaaneder>
+    </periode>
+    <aar>2022</aar>
+  </skattleggingsperiode>
+  <innsendingstype>komplett</innsendingstype>
+  <instansstatus>En status</instansstatus>
+  <opprettetAv>Ola Nordmann</opprettetAv>
+  <opprettingstidspunkt>2017-05-15T08:41:13+01:00</opprettingstidspunkt>
+  <endringstidspunkt>2013-12-21T12:32:42+01:00</endringstidspunkt>
+  <vedlegg>
+    <vedleggstype>binaerVedlegg</vedleggstype>
+    <kildegruppe>sluttbruker</kildegruppe>
+    <opprettetAv>Ola Nordmann</opprettetAv>
+    <opprettingstidspunkt>2016-02-20T15:56:29+01:00</opprettingstidspunkt>
+    <vedleggsfil>
+      <filnavn>Mystisk-fil</filnavn>
+      <filekstensjon>xml</filekstensjon>
+      <filinnhold>En mystisk fil</filinnhold>
+    </vedleggsfil>
+  </vedlegg>
+  <vedlegg>
+    <vedleggstype>mva-melding</vedleggstype>
+    <kildegruppe>sluttbrukersystem</kildegruppe>
+    <opprettetAv>Karen Bjar</opprettetAv>
+    <opprettingstidspunkt>2019-02-20T15:56:29+01:00</opprettingstidspunkt>
+    <vedleggsfil>
+      <filnavn>Mytisk-fil</filnavn>
+      <filekstensjon>xml</filekstensjon>
+      <filinnhold>En mystisk fil</filinnhold>
+    </vedleggsfil>
+  </vedlegg>
+</mvaMeldingInnsending>

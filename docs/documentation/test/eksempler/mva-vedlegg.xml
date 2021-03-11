@@ -21,7 +21,7 @@
 		<fastsattMerverdiavgift>5000</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>3</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>20000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>5000</merverdiavgift>
@@ -37,7 +37,4 @@
 		<organisasjonsnummer>913238254</organisasjonsnummer>
 	</skattepliktig>
 	<meldingskategori>alminnelig</meldingskategori>
-	<merknad>
-		<beskrivelse>eksempel mvakode3</beskrivelse>
-	</merknad>
 </mvaMeldingDto>

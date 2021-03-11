@@ -4,8 +4,7 @@ title: "Test"
 description: "Testtilfeller mva-melding. Testplan."
 ---
 
-Vi har kommet til 'Test 2'. Se lenger ned på siden for fullstendig testplan. Vi har klar valideringstjenesten med noen av de valideringene denne tjenesten skal inneholde.
-Testdokumentasjonen består av
+Vi har kommet til 'Test 3'. Se lenger ned på siden for fullstendig testplan. Testdokumentasjonen består av
 
 - Beskrivelse av api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
 - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
@@ -14,22 +13,30 @@ Testdokumentasjonen består av
 - Eksempler på testtilfeller – se lenger nede på denne siden
 - I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
 
-For de tidlige testene hvor et fåtall av systemleverandørene er involvert, vil informasjon om test og testgjennomføring tas direkte med de involverte.
-
-Resultatet av de tidlige testene vil dokumenteres og informasjon om dette vil være tilgjengelig for alle som ønsker å følge med underveis.
-
 # Valderingsregler
 
 Valideringsregler klare for test:
 
 - Summen av beregnet avgift fra hver avgiftslinje skal være lik sum avgift i Mva-meldingen
 - Beregnet avgift skal stemme med oppgitt grunnlag ganger gjeldende sats
+- Beløp med motsatt fortegn som gjelder utgående avgift skal ha en merknad
+- Beløp med motsatt fortegn som gjelder fradragsført inngående avgift skal ha en merknad
+- Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1
+- Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
+- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
+- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
+- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal fradragsført beløp i inngående avgift være mindre enn eller lik utgående avgift
+- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal det alltid være fradragsført inngående avgift dersom det er beregnet utgående avgift
+- Ved kjøp av varer fra utlandet med fradragsrett skal det alltid være utgående avgift dersom det er fradragsført inngående avgift
+- Ved kjøp av varer fra utlandet med fradragsrett skal det alltid være fradragsført inngående avgift dersom det er beregnet utgående avgift
+- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal det alltid være utgående avgift dersom det er fradragsført inngående avgift
+- Ved kjøp av varer fra utlandet med fradragsrett skal fradragsført beløp i inngående avgift være mindre enn eller lik utgående avgift
 
 # Testtilfeller mva-melding
 
 Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
 
-Eksempler på xml-filer: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/
+Eksempler på xml-filer: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
 Inntil videre skal det ikke være %-tegn i fila dere sender inn
 
 # Testplan
@@ -42,13 +49,19 @@ Konkret må sluttbrukersystemet gjøre følgende:
 2. Logge inn hos ID-porten for å få en sesjon (og token).
 3. Utvikle en applikasjon/klient som:
    - Sende en request til Skatteetatens tjeneste for å validere en mva-melding.
+   - Oppretter Instans på Altinn3 appen.
+   - Last Opp 1 MvaMeldingInnsending
+   - Last Opp 1 MvaMelding
+   - Last Opp 0 eller flere Vedlegg
+   - Sender Inn MvaMeldingInnsending
 
 Skatteetaten har tilgjengeliggjort en testapplikasjon som viser hvordan trinnene beskrevet over kan utføres.
 Den er skrevet i [jupyter notebook formatet](https://jupyter.org/):
 
-1. [Jupyter notebook demo for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Last ned katalogen testinnsending og kjør skriptet demo.ipynb (skriptet vil utføre alle trinn som inngår i prosessen: kalle ping tjeneste å sjekke kobling og validere mva-melding)
-2. [Pyton skript å hent token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/hent.py) og [postman skript å validere melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). Første logge inn hos ID-Porten (se nedover), og da lagre token i format "Bearer <em>hentet-token</em>" som miljø variabel med navn "test-bearer" i postman, og bruk postman skript å validere melding.
-3. [Eksempel XML-er](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler)
+1. [Jupyter notebook demo for henting og validering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Last ned katalogen 'test' og kjør skriptet demo.ipynb (skriptet vil utføre alle trinn som inngår i prosessen: kalle ping tjeneste å sjekke kobling og validere mva-melding)
+2. [Jupyter notebook demo for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/innsending-eksempel.ipynb). Kjør skriptet innsending.ipynb. Den vil kjøre alle stegene i prosessen.
+3. [Pyton skript å hent token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py) og [postman skript å validere melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). Første logge inn hos ID-Porten (se nedover), og da lagre token i format "Bearer <em>hentet-token</em>" som miljø variabel med navn "test-bearer" i postman, og bruk postman skript å validere melding.
+4. [Eksempel XML-er](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
 
 ## Ta i bruk ID-porten
 
@@ -83,19 +96,13 @@ Vi benytter følgende testmiljø hos ID-porten:
 - /authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - /token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For detaljer rundt hvilken HTTP parametere som må sendes med i kallet, se filen [hent.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/hent.py)
+For detaljer rundt hvilken HTTP parametere som må sendes med i kallet, se filen [logge_inn_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py)
 
 ## Kalle skattemeldings-API
 
 Når callback-URL blir kalt må klienten plukke ut JWT-tokenet fra responsen og legge det i header-feltet Authorization og kalle mva-meldings-API. For detaljer, se [demo klient](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb)
 
 URL til skattemeldings-API i test er: https://mp-test.sits.no/
-
-[comment]: <> (Første testen bør være å teste at klienten når frem, dette kan gjøres ved å kalle ping tjenesten:)
-
-[comment]: <> (- `GET https://<env>/api/mva/mva-melding/ping`)
-
-[comment]: <> (- `Eksempel: GET https://mp-test.sits.no/api/mva/mva-melding/ping`)
 
 # Tidsplan for test
 
