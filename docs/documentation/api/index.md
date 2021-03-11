@@ -8,12 +8,12 @@ description: "Api-beskrivelser"
 
 MVA Meldinger som skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde bruke disse APIene:
 
-1. Skatteetatens MVA-Melding-Validering's API
+1. Skatteetatens MVA-Melding validerings API
 1. Skatteetatens Altinn3 MVA-Melding-Innsending's API
 
 som beskrives under.
 
-## Overordnet prosess for MVA-Melding-Innsending
+## Overordnet prosess for innsending av MVA-melding
 
 Den overordnede prosessen for å sende MVA-Melding:
 
@@ -40,17 +40,15 @@ vil bli godkjent ved innsending.
 Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 **Body** :
-
-- Iht. XSD: [Skattemeldingformerverdiavgift.v0.9](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
+- Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">Skattemeldingformerverdiavgift.v0.9</a>
 
 **Eksempel** : Innsending av XML på ugyldig format
 
-POST https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider
+POST <a href="https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider" target="_blank">https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider </a>
 
 Header: `Content-Type: application/xml`
 
-Med innhold (http body)som ikke passerer XML-validering basert på [XSD](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
-:
+Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">XSD</a>:
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
@@ -85,11 +83,14 @@ Innhold (body)
 ## Prosess Mva Melding Innsending
 
 Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Innsending. Detaljert beskrivelse av Altinn3's Instans-API finnes her
-[Altinn Studio Instans API]("https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/"). Inngående kjennskap til dette API'et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.
+<a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Altinn Studio Instans API</a>. Inngående kjennskap til dette API'et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.
 
-Det anbefales å benytte [swagger dokumentasjonen]("https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html") sammen med denne API-beskrivelsen.
 
-I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under [Test]("https://skatteetaten.github.io/mva-meldingen/documentation/test/")
+Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.
+
+
+I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>
+
 
 Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
 
@@ -99,25 +100,13 @@ Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives 
 4. Last Opp 0 eller flere Vedlegg
 5. Send Inn Mva Melding Innsending
 
-Instans API'et til Mva Melding Innsending er tilgjengelig på en URL for en applikasjon hos altinn og består av
-
-```
-instansApiUrl = {applikasjonsUrl}/instances
-```
-
-Det vil være en applikasjon for hvert miljø. ApplikasjonsUrl'en for test-miljøet er:
-
-```
-applikasjonsUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2"
-```
-
-Hvilket vil gi følgende:
+Instans API'et til Mva Melding Innsending er tilgjengelig på denne URLen:
 
 ```
 instansApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances"
 ```
 
-I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er skrevet `POST: /intances/` så er det implisitt `POST: {applikasjonsUrl}/instances/` (som er instansApiUrl)
+I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er skrevet `POST: /intances/` så er det implisitt `POST: instansApiUrl`
 
 ![](Mva-Melding-Innsending-Sekvensdiagram.png)
 
@@ -188,16 +177,16 @@ Content:
 }
 
 ```
+Resten av kallene i sekvensen for innsendingen benytter `instansUrl`. Denne kan bli funnet fra responsen ved opprettelsen av instansen. Se i eksempel responsen over. <br>
+`instansUrl` kan enten bruke `selflinks.apps` eller ved å utlede fra `instansApiUrl/{partyId}/{instanceGuid}`, hvor `{partyId}` og `{instanceGuid}` kan bli funnet i `id` feltet for den returnerte instansen. 
 
-Fra responsen kan man finne `instansUrl` fra enten `selflinks.apps`, eller `instansApiUrl/{partyId}/{instanceGuid}`, hvor man kan finne `{partyId}/{instanceGuid}` i verdien til `id` i det returnerte instans-objektet.
-
-Resten av kallene i sekvensen for innsending benytter `instansUrl`.
-
+Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 ### Last Opp MvaMeldingInnsending
 
 MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
 
-Modellen for MvaMeldingInnsending finnes her: [no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1.xsd](../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd)
+Modellen for MvaMeldingInnsending finnes her: <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v0.1.xsd</a>
+
 
 Url til MvaMeldingInnsending har denne oppbygningen:
 
@@ -233,11 +222,13 @@ Content:
 </mvaMeldingInnsending>
 ```
 
-Eksempel på xml-fil for mvaMeldingInnsending finnes under [Test]("https://skatteetaten.github.io/mva-meldingen/documentation/test/").
+Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>.
+
 
 ### Last Opp MvaMelding
 
-Modellen for [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd](../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
+Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a>
+
 
 Url for opplasting av Mva Melding har denne oppbygningen:
 
