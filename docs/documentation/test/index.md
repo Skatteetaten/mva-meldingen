@@ -13,32 +13,6 @@ Vi har kommet til 'Test 3'. Se lenger ned på siden for fullstendig testplan. Te
 - Eksempler på testtilfeller – se lenger nede på denne siden
 - I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
 
-# Valderingsregler
-
-Valideringsregler klare for test:
-
-- Summen av beregnet avgift fra hver avgiftslinje skal være lik sum avgift i Mva-meldingen
-- Beregnet avgift skal stemme med oppgitt grunnlag ganger gjeldende sats
-- Beløp med motsatt fortegn som gjelder utgående avgift skal ha en merknad
-- Beløp med motsatt fortegn som gjelder fradragsført inngående avgift skal ha en merknad
-- Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1
-- Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
-- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
-- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal fradragsført beløp i inngående avgift være mindre enn eller lik utgående avgift
-- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal det alltid være fradragsført inngående avgift dersom det er beregnet utgående avgift
-- Ved kjøp av varer fra utlandet med fradragsrett skal det alltid være utgående avgift dersom det er fradragsført inngående avgift
-- Ved kjøp av varer fra utlandet med fradragsrett skal det alltid være fradragsført inngående avgift dersom det er beregnet utgående avgift
-- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal det alltid være utgående avgift dersom det er fradragsført inngående avgift
-- Ved kjøp av varer fra utlandet med fradragsrett skal fradragsført beløp i inngående avgift være mindre enn eller lik utgående avgift
-
-# Testtilfeller mva-melding
-
-Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
-
-Eksempler på xml-filer: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
-Inntil videre skal det ikke være %-tegn i fila dere sender inn
-
 # Testplan
 
 ## Innhold i testen
@@ -103,6 +77,56 @@ For detaljer rundt hvilken HTTP parametere som må sendes med i kallet, se filen
 Når callback-URL blir kalt må klienten plukke ut JWT-tokenet fra responsen og legge det i header-feltet Authorization og kalle mva-meldings-API. For detaljer, se [demo klient](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb)
 
 URL til skattemeldings-API i test er: https://mp-test.sits.no/
+
+# Valderingsregler
+
+Valideringsregler klare for test:
+
+- Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
+- Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
+- Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler
+- Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler
+- Merknad til beløp med motsatt fortegn som gjelder spesifikasjonslinje for tilbakeføring av inngående mva gitt i mval §9-6 og §9-7
+- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 81)
+- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 83)
+- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift (kode 86)  
+- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift (kode 88)
+- Fradragsført inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett, skal være mindre enn eller lik utgående avgift
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett (kode 81)  
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett (kode 83)  
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett (kode 86)  
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett (kode 88)
+- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett  
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett (kode 81)
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett (kode 83)
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett (kode 86)
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett (kode 88)
+- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av klimakvoter og gull med fradragsrett
+- Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
+- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
+- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
+- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
+- Omsetning før registrering kan ikke settes som merknad på denne mva-koden
+- Omberegning/retur kan ikke settes som merknad på denne mva-koden
+- Midlertidig innførsel kan ikke settes som merknad på denne mva-koden
+- Gjeninnførsel kan ikke settes som merknad på denne mva-koden
+- Tolldeklarasjon på feil org.nr. kan ikke settes som merknad på denne mva-koden
+- Gjenutførsel kan ikke settes som merknad på denne mva-koden
+- Gjenutførsel eller retur kan ikke settes som merknad på denne mva-koden
+- Midlertid utførsel kan ikke settes som merknad på denne mva-koden
+- Tjenesteeksport kan ikke settes som merknad på denne mva-koden
+- Store anskaffelser kan ikke settes som merknad på denne mva-koden
+- Anskaffelser før mva-plikt kan ikke settes som merknad på denne mva-koden
+- Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden
+- Sesongvariasjon kan ikke settes som merknad på denne mva-koden
+- Kreditnota kan ikke settes som merknad på denne mva-koden
+
+# Testtilfeller mva-melding
+
+Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
+
+Eksempler på xml-filer: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
+Inntil videre skal det ikke være %-tegn i fila dere sender inn
 
 # Tidsplan for test
 
