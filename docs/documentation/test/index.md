@@ -4,14 +4,16 @@ title: "Test"
 description: "Testtilfeller mva-melding. Testplan."
 ---
 
-Vi har kommet til 'Test 3'. Se lenger ned på siden for fullstendig testplan. Testdokumentasjonen består av
+Informasjonen på denne siden er beregnet til de som har avtalt med Skatteetaten å delta i testløpet for modernisering av mva-meldingen. Ønsker du å delta ta gjerne kontakt via email: mva-modernisering@skatteetaten.no. Vi vil da sørge for at du får tilgang på testbruker, samt god tilgang til støtte for tekniske avklaringer.
 
-- Beskrivelse av api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
-- XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
-- Valideringsregler - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
-- Valideringsregler som er en del av testen – se lenger ned på denne siden
-- Eksempler på testtilfeller – se lenger nede på denne siden
-- I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
+Vi har kommet til Test 3. Se lengre ned på siden for fullstendig tidsplan. 
+Testdokumentasjonen i Test 3 består av
+ - Beskrivelse av api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
+ - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
+ - Valideringsregler - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
+ - Valideringsregler som er en del av testen – se lenger ned på denne siden
+ - Eksempler på testtilfeller – se lenger nede på denne siden
+ - I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
 
 # Valderingsregler
 
