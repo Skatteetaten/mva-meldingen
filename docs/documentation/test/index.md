@@ -4,7 +4,7 @@ title: "Test"
 description: "Testtilfeller mva-melding. Testplan."
 ---
 
-Informasjonen på denne siden er beregnet til de som har avtalt med Skatteetaten å delta i testløpet for modernisering av mva-meldingen. Ønsker du å delta ta gjerne kontakt via email: mva-modernisering@skatteetaten.no. Vi vil da sørge for at du får tilgang på testbruker, samt god tilgang til støtte for tekniske avklaringer.
+Informasjonen på denne siden er beregnet til de som har avtalt med Skatteetaten å delta i testløpet for modernisering av mva-meldingen. Ønsker du å delta ta gjerne kontakt via email: mva-modernisering@skatteetaten.no. Vi vil da sørge for at du får tilgang på testbruker, samt god tilgang til støtte for tekniske avklaringer. Testbrukeren er nødvendig for å få tilgang til å kjøre testapplikasjonen mot Skatteetatens tjenester. (Validering- og innsendingstjenesten)
 
 Vi har kommet til Test 3. Se lengre ned på siden for fullstendig tidsplan. 
 Testdokumentasjonen i Test 3 består av
