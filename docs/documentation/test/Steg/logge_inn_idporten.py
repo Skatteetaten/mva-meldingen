@@ -90,10 +90,6 @@ def hent_idtoken():
     # clear BrowserRedirectHandler result
     BrowserRedirectHandler.result = None
 
-    # disabled - idporten fails to register 127.0.0.1 and dynamic port numbers for now
-    # # Bind to port 0, let the OS find an available port
-    # server = HTTPServer(('127.0.0.1', 0), BrowserRedirectHandler)
-
     # Get the jwks from idporten (for token verification later)
     u = requests.get('https://{}/.well-known/openid-configuration'.format(AUTH_DOMAIN)).json()["jwks_uri"]
     jwks = requests.get(u).json()
