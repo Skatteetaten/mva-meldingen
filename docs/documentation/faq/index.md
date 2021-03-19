@@ -50,7 +50,7 @@ Det er også mulig for advokater å tilegne seg roller i virksomheter. Dette gj�
 
 [Les mer om Altinn-roller her.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
 
-Skatteetaten har planer om å utvikle funksjonalitet for delegering av fullmakt i enkeltsaker der en person har behov for å delegere myndighet til en fullmektig i ny tjeneste. Vi ser at det kan være relevant i flere tilfeller, inkludert ved søknad, klage og etterkontroll. Dette er tilleggsfunksjonalitet som først vil utvikles senere i prosjektperioden, og vi har per i dag ikke estimert et tidspunkt for når dette vil være klart. 
+Skatteetaten har planer om å utvikle funksjonalitet for delegering av fullmakt i enkeltsaker der en person har behov for å delegere myndighet til en fullmektig i ny tjeneste. Vi ser at det kan være relevant i flere tilfeller, inkludert ved søknad, klage og etterkontroll. Dette er tilleggsfunksjonalitet som først vil utvikles senere, og vi har per i dag ikke estimert et tidspunkt for når dette vil være klart. 
  
  
 ## Mva-melding
