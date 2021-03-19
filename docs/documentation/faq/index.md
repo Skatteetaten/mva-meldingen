@@ -46,7 +46,7 @@ Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut
   
 Advokater og andre rådgivere kan be virksomheten delegere, eventuelt at advokaten forespør, tilgang til "Merverdiavgift Registreringstjeneste" i Altinn. Tilgangen kan gis til en person eller en virksomhet (kun virksomheter med en eksisterende tilknytning til virksomheten i Altinn). Advokater som ønsker person-tilgang kan velge å oppgi enten personnummer eller selvvalgt brukernavn i Altinn, som identifikasjon ovenfor virksomheten.  Tilgangen er ikke tidsbegrenset, så virksomheten må fjerne tilgangen hvis advokat eller rådgiver ikke lenger skal ha tilgang. 
 
-Det er også mulig for advokater å tilegne seg roller i virksomheter. Dette gjøres i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. [se over.](https://skatteetaten.github.io/mva-meldingen/documentation/faq/#hvem-kan-fylle-ut-en-registrering-og-hvem-kan-sende-inn)
+Det er også mulig for advokater å tilegne seg roller i virksomheter. Dette gjøres i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. [se over](https://skatteetaten.github.io/mva-meldingen/documentation/faq/#hvem-kan-fylle-ut-en-registrering-og-hvem-kan-sende-inn).
 
 [Les mer om Altinn-roller her.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
 
