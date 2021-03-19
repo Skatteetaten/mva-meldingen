@@ -18,11 +18,13 @@ som beskrives under.
 Den overordnede prosessen for å sende MVA-Melding:
 
 1. Logge inn via ID-porten
+   - Login er personlig for hver sluttbruker
 1. Validere MVA-Melding mot Skatteetatens valideringstjeneste
    - Autentisering med ID-porten token
-1. Veksle ID-porten token med altinn3-token
+1. Veksle ID-porten token med Altinn3-token
+   - API-kallet er beskrevet like under sekvensdiagrammet
 1. Sende MVA-Melding mot Skatteetatens Altinn3
-   - Autentisering med Altinn3 token
+   - Autentisering med Altinn3-token
 
 ## Valider skattemelding
 
@@ -40,6 +42,7 @@ vil bli godkjent ved innsending.
 Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 **Body** :
+
 - Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">Skattemeldingformerverdiavgift.v0.9</a>
 
 **Eksempel** : Innsending av XML på ugyldig format
@@ -85,20 +88,18 @@ Innhold (body)
 Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Innsending. Detaljert beskrivelse av Altinn3's Instans-API finnes her
 <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Altinn Studio Instans API</a>. Inngående kjennskap til dette API'et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.
 
-
 Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.
-
 
 I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>
 
-
 Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
 
-1. Opprett Instans
-2. Last Opp 1 MvaMeldingInnsending
-3. Last Opp 1 MvaMelding
-4. Last Opp 0 eller flere Vedlegg
-5. Send Inn Mva Melding Innsending
+1. Veksle ID-porten token til Altinn-Token. Dette tokenet benyttes i alle kallene mot Instans-Apiet.
+2. Opprett Instans (sekvensdiagrammet starter her)
+3. Last Opp 1 MvaMeldingInnsending
+4. Last Opp 1 MvaMelding
+5. Last Opp 0 eller flere Vedlegg
+6. Send Inn Mva Melding Innsending
 
 Instans API'et til Mva Melding Innsending er tilgjengelig på denne URLen:
 
@@ -109,6 +110,19 @@ instansApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2
 I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er skrevet `POST: /intances/` så er det implisitt `POST: instansApiUrl`
 
 ![](Mva-Melding-Innsending-Sekvensdiagram.png)
+
+### Veksle ID-porten token til Altinn-token
+
+For å veksle ID-porten-tokenet må man gjøre følgende kall:
+
+```JSON
+GET `https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten`
+HEADERS:
+    "Authorization": "Bearer " + "{IDPortenToken}"
+       "content-type": "application/json"
+```
+
+og i responsen vil content være et rykende ferskt altinnToken som brukes som Bearer token i de resterende kallene. Tokenet har i dag en varighet på 8 timer. Senere i 2021 vil Altinn3 tilby refresh-tokens slik at en login vil kunne vare i opptil 3 mnd.
 
 ### Opprett Instans
 
@@ -177,16 +191,17 @@ Content:
 }
 
 ```
+
 Resten av kallene i sekvensen for innsendingen benytter `instansUrl`. Denne kan bli funnet fra responsen ved opprettelsen av instansen. Se i eksempel responsen over. <br>
-`instansUrl` kan enten bruke `selflinks.apps` eller ved å utlede fra `instansApiUrl/{partyId}/{instanceGuid}`, hvor `{partyId}` og `{instanceGuid}` kan bli funnet i `id` feltet for den returnerte instansen. 
+`instansUrl` kan enten bruke `selflinks.apps` eller ved å utlede fra `instansApiUrl/{partyId}/{instanceGuid}`, hvor `{partyId}` og `{instanceGuid}` kan bli funnet i `id` feltet for den returnerte instansen.
 
 Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
+
 ### Last Opp MvaMeldingInnsending
 
 MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
 
 Modellen for MvaMeldingInnsending finnes her: <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd</a>
-
 
 Url til MvaMeldingInnsending har denne oppbygningen:
 
@@ -224,11 +239,9 @@ Content:
 
 Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>.
 
-
 ### Last Opp MvaMelding
 
 Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a>
-
 
 Url for opplasting av Mva Melding har denne oppbygningen:
 
