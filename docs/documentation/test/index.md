@@ -48,8 +48,8 @@ Inntil videre skal det ikke være %-tegn i fila dere sender inn
 
 Konkret må sluttbrukersystemet gjøre følgende:
 
-2. Logge inn hos ID-porten for å få en sesjon (og token).
-3. Utvikle en applikasjon/klient som:
+1. Logge inn hos ID-porten for å få en sesjon (og token).
+2. Utvikle en applikasjon/klient som:
    - Sende en request til Skatteetatens tjeneste for å validere en mva-melding.
    - Oppretter Instans på Altinn3 appen.
    - Last Opp 1 MvaMeldingInnsending
