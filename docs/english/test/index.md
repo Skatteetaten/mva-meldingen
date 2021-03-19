@@ -4,19 +4,15 @@ title: "Test"
 description: ""
 ---
 
-We are now on 'Test 2'. See further down the page for a complete test plan. We have the validation service ready with some of the validations this service will contain.
-The test documentation consists of
+The information on this page is for ERP-providers that have made arrangments with the Norwegian Tax Administration to participate in testing the new verison of the VAT-report. If you wish to participate please contact us by e-mail mva-modernisering@skatteetaten.no. We will provide you with a test-user, as well as technical support if needed.  We are currently on 'Test 3'. For a complete test plan, see further down the page. Test documentation for test 3 consists of 
 
 - Description of api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
 - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
 - Validation rules - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
 - Validation rules that are part of the test - see further down on this page
 - Examples of test cases - see further down this page
-  In addition, there is a need for a test user. This is distributed directly to those who will be testing.
+  In addition, there is a need for a test user. This is distributed directly to participating ERPs.
 
-For early testing with a few solution providers, information will be shared diretly with the involved parties.
-
-The result of the early testing will be documented and information will be made available to all solution providers.
 
 # Valideringsregler
 
