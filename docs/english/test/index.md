@@ -4,7 +4,7 @@ title: "Test"
 description: ""
 ---
 
-The information on this page is for ERP-providers that have made arrangments with the Norwegian Tax Administration to participate in testing the new verison of the VAT-report. If you wish to participate please contact us by e-mail mva-modernisering@skatteetaten.no. We will provide you with a testuser, as well as technical support if needed.  We are currently on 'Test 3'. For a complete test plan, see further down the page . Test documentation for test 3 consists of 
+The information on this page is for ERP-providers that have made arrangments with the Norwegian Tax Administration to participate in testing the new verison of the VAT-report. If you wish to participate please contact us by e-mail mva-modernisering@skatteetaten.no. We will provide you with a test-user, as well as technical support if needed.  We are currently on 'Test 3'. For a complete test plan, see further down the page. Test documentation for test 3 consists of 
 
 - Description of api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
 - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
