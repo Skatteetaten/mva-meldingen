@@ -4,16 +4,17 @@ title: "Test"
 description: "Testtilfeller mva-melding. Testplan."
 ---
 
-Informasjonen på denne siden er beregnet til de som har avtalt med Skatteetaten å delta i testløpet for modernisering av mva-meldingen. Ønsker du å delta ta gjerne kontakt via email: mva-modernisering@skatteetaten.no. Vi vil da sørge for at du får tilgang på testbruker, samt god tilgang til støtte for tekniske avklaringer.
+Informasjonen på denne siden er beregnet til de som har avtalt med Skatteetaten å delta i testløpet for modernisering av mva-meldingen. Ønsker du å delta ta gjerne kontakt via email: mva-modernisering@skatteetaten.no. Vi vil da sørge for at du får tilgang på testbruker, samt god tilgang til støtte for tekniske avklaringer. Testbrukeren er nødvendig for å få tilgang til å kjøre testapplikasjonen mot Skatteetatens tjenester. (Validering- og innsendingstjenesten)
 
-Vi har kommet til Test 3. Se lengre ned på siden for fullstendig tidsplan. 
+Vi har kommet til Test 3. Se lengre ned på siden for fullstendig tidsplan.
 Testdokumentasjonen i Test 3 består av
- - Beskrivelse av api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
- - XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
- - Valideringsregler - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
- - Valideringsregler som er en del av testen – se lenger ned på denne siden
- - Eksempler på testtilfeller – se lenger nede på denne siden
- - I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
+
+- Beskrivelse av api - https://skatteetaten.github.io/mva-meldingen/documentation/api/
+- XSD - https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/
+- Valideringsregler - https://skatteetaten.github.io/mva-meldingen/documentation/forretningsregler/
+- Valideringsregler som er en del av testen – se lenger ned på denne siden
+- Eksempler på testtilfeller – se lenger nede på denne siden
+- I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
 
 # Testplan
 
@@ -21,9 +22,8 @@ Testdokumentasjonen i Test 3 består av
 
 Konkret må sluttbrukersystemet gjøre følgende:
 
-1. Få etablert et kundeforhold hos Digitaliseringsdirektoratet (DigDir) og ta i bruk ID-porten.
-2. Logge inn hos ID-porten for å få en sesjon (og token).
-3. Utvikle en applikasjon/klient som:
+1. Logge inn hos ID-porten for å få en sesjon (og token).
+2. Utvikle en applikasjon/klient som:
    - Sende en request til Skatteetatens tjeneste for å validere en mva-melding.
    - Oppretter Instans på Altinn3 appen.
    - Last Opp 1 MvaMeldingInnsending
@@ -41,16 +41,17 @@ Den er skrevet i [jupyter notebook formatet](https://jupyter.org/):
 
 ## Ta i bruk ID-porten
 
-Det første som en konsument av skattemeldings-API må gjøre er å etablere et kundeforhold hos Digitaliseringsdirektoratet (DigDir). Detaljer rundt hvordan ta i bruk ID-porten er beskrevet her: https://samarbeid.difi.no/felleslosninger/id-porten/ta-i-bruk-id-porten. Denne prosessen er delvis manuell så det er lurt å starte prosessen tidlig slik at dere kan komme i gang med testingen. Ved bestilling må dere oppgi at dere ønsker tilgang til skattemeldings-API fra skatteetaten.
+Når man starter å teste kan Skatteetatens ID-porten-integrasjon benyttes, men det anbefales å bestille egen integrasjon mot ID-porten så tidlig som mulig, både fordi når produksjonssetting intreffer må egen integrasjon mot ID-porten benyttes, og fordi prosessen er delvis manuell. Prosessen går mot Digitaliseringsdirektoratet (DigDir), og detaljer rundt hvordan man oppretter integrasjonen og tar i bruk ID-porten er beskrevet her: https://samarbeid.digdir.no/id-porten/id-porten/18. En annen fordel med å starte prosessen tidlig er at man kan teste integrasjonen i test-miljøet. Det må også opprettes egen integrasjon i produksjon. Under bestillingen må dere oppgi at dere ønsker tilgang til skattemeldings-API fra skatteetaten.
 
-Et kundeforhold hos DigDir gir tilgang til deres selvbetjeningsløsning som igjen gir tilgang til administrasjon av Kundens bruk av ID-porten. I selvbetjeningsløsning kan kunden genere et såkalt client_id og definere et callback-url:
+Kundeforholdet hos DigDir gir tilgang til deres selvbetjeningsløsning som igjen gir tilgang til administrasjon av Kundens bruk av ID-porten. I selvbetjeningsløsningen kan kunden opprette en såkalt client_id og definere en callback-url:
 
-- client_id: er unik automatisk generert identifikator for tjenesten.
-- callback-url: Uri-en som klienten får lov å gå til etter innlogging. Etter en vellykket innlogging i ID-porten vil denne url-en bli kalt.
-  Dersom det skulle ta for lang tid å få opprettet et kundeforhold hos DigDir kan sluttbrukersystemene i mellomtiden benytte Skatteetatens client_id. For denne testen har Skatteetaten opprettet følgende client_id som kan benyttes av sluttbrukersystemene:
+- client_id: en unik automatisk generert identifikator for tjenesten.
+- callback-url: Uri-en som klienten får lov å redirigere nettleseren til etter innlogging. Etter en vellykket innlogging i ID-porten vil brukeren redirigeres til denne url-en.
 
-      - `client_id: 38e634d9-5682-44ae-9b60-db636efe3156`
-      - Callback-URL til denne client_id er satt til http://localhost:12345/token (Hvis det er konsumenter som ønsker andre callback-URL kan vi ordne det)
+Inntil kundeforhold hos DigDir er etablert og integrasjon opprettet, kan sluttbrukersystemene i benytte Skatteetatens integrasjon. For denne testen har Skatteetaten opprettet følgende `client_id` som kan benyttes av sluttbrukersystemene:
+
+- `client_id: 38e634d9-5682-44ae-9b60-db636efe3156`
+- Callback-URL til denne `client_id` er satt til http://localhost:12345/token (Hvis det er konsumenter som ønsker andre callback-URL kan vi ordne det)
 
 **Nyttige lenker:**
 
@@ -60,7 +61,14 @@ Et kundeforhold hos DigDir gir tilgang til deres selvbetjeningsløsning som igje
 
 ## Logge inn hos ID-porten
 
-Klienten må foreta følgende REST kall mot ID-porten:
+ID-porten login kan implementeres i alle typer sluttbrukersystemer
+
+- Desktop Applikasjon
+- Web Applikasjon
+
+under forutsetning av at applikasjonen kan åpne en URL i en nettleser hvor login gjennomføres og samtidig som den kan kjøre en web-server som mottar en web-request (i form av en redirect fra ID-porten etter login) på callback-url'en.
+
+Sluttbrukersystemet må gjøre følgende:
 
 - Starte system browser og gjøre autorisasjonskall mot ID-porten. Les mer om det her: https://difi.github.io/felleslosninger/oidc_protocol_authorize.html
 - Brukeren blir da sendt til ID-porten for innlogging. Dere kan benytte eksisterende test-brukere som dere benytter til test mot skattemeldingen i dag.
@@ -74,11 +82,11 @@ Vi benytter følgende testmiljø hos ID-porten:
 
 For detaljer rundt hvilken HTTP parametere som må sendes med i kallet, se filen [logge_inn_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py)
 
-## Kalle skattemeldings-API
+## Kalle Mva-Meldings-API
 
-Når callback-URL blir kalt må klienten plukke ut JWT-tokenet fra responsen og legge det i header-feltet Authorization og kalle mva-meldings-API. For detaljer, se [demo klient](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb)
+Etter login og tokenforespørsel vil man ha et ID-porten-access-token. Dette tokenet benyttes som Bearer-token i HTTP-kall mot valideringstjenesten og må også veklses til et altinn-acess-token som må benyttes som Bearer-token i HTTP-kallene i innsendingsprosessen mot Skatteetatens Altinn3-API for mva-melding-innsending. Se detaljer for API'ene under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/api/" target="_blank">Api</a>.
 
-URL til skattemeldings-API i test er: https://mp-test.sits.no/
+Se også detaljer i kjørende eksempler for både login, validering og innsending, skrevet i Python nevnt under kapittelet "Innhold i testen".
 
 # Valderingsregler
 

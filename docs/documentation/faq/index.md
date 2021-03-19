@@ -42,9 +42,9 @@ Signering: Begrenset signeringsrett eller Kontaktperson NUF.
   
 Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut for en virksomhet, og dersom virksomheten har dårlige rutiner for signering kan utilsiktede utfyllinger bli sendt inn og gi alvorlige konsekvenser. Den nye bruken av roller er sikrere, og i tråd med standarden for alle andre oppgaver i Skatteetaten. 
 
-### Hvilken mulighet har advokater til å bistå i enkeltsaker (registering og mva-melding)?
+### Hvilken mulighet har advokater til å bistå i enkeltsaker (registering i Mva-registeret)?
   
-Advokater har samme mulighet som alle andre til å tilegne seg de Altinn-roller som kreves i ny tjeneste [se over.](https://skatteetaten.github.io/mva-meldingen/documentation/faq/#hvem-kan-fylle-ut-en-registrering-og-hvem-kan-sende-inn) Dette gjøres i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. 
+Advokater og andre rådgivere kan per i dag å sørge for at virksomheten delegerer, eventuelt at advokaten forespør, tilgang til "Merverdiavgift Registreringstjeneste" i Altinn. Tilgangen kan gis til en person eller en virksomhet (kun virksomheter med en eksisterende tilknytning til virksomheten i Altinn). Tilgangen er ikke tidsbegrenset, så virksomheten må fjerne tilgangen hvis advokat eller rådgiver ikke lenger skal ha tilgang. Advokater som ønsker person-tilgang kan velge å oppgi enten personnummer eller selvvalgt brukernavn i Altinn. Advokater har samme mulighet som alle andre til å tilegne seg tilgang, slik at de kan bistå virksomheter med registrering i ny tjeneste [se over.] Det er også mulig for advokater å tilegne seg roller i virksomheter. Dette gjøres i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. 
 
 [Les mer om Altinn-roller her.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
 
