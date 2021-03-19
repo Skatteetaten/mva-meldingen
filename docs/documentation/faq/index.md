@@ -34,7 +34,7 @@ For mva-melding vil det være mulig å manuelt fylle inn og sende mva-melding di
   
 Det kreves Altinn-roller for å fylle ut og sende inn søknad om samtlige registreringer. 
 
-Utfyller: Virksomheten selv, Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrett eller Revisormedarbeider.
+Utfyller: Virksomheten selv, Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører med signeringsrett, Regnskapsfører uten signeringsrett eller Revisormedarbeider.
 Signering: Begrenset signeringsrett eller Kontaktperson NUF.
 
 
