@@ -86,7 +86,7 @@ A customer relationship with DigDir provides access to their self-service soluti
 ID-porten login can be implemented in all types of end-user systems
 
 - Desktop applications
-- Web application
+- Web applications
 
 Under the condition that the application can open a URL in a web browser, where login is carried out, and also has to be able run a web-server receiving a web-request (in the form of a redirect from ID-porten after login) on the callback-url.
 
