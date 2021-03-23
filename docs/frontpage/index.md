@@ -6,6 +6,8 @@ MEMO-prosjektet utvikler ny skattemelding for merverdiavgift, heretter kalt mva-
 
 En ny mva-melding vil også gi nye muligheter for veiledning og dialog gjennom for eksempel validering før innsending og påminnelse om arbeidsoppgaver ved hjelp av arbeidsliste. I tillegg ønsker man å tilby økt grad av oppslag og innsyn for å oppå effektivisering og trygghet gjennom digital avstemming. Det er også et ønske om bedre samspill mellom regnskapssystemene og Altinn / Skatteetaten, for eksempel gjennom automatisk kvittering til regnskapssystem.
 
+Ønsker du mer informasjon om moderniseringsprosjektet for mva-området kan du lese mer på skatteetaten.no/nymva
+
 ## Hva er nytt
 
 - Felles informasjonsstruktur og regelsett for alle typer mva-melding
