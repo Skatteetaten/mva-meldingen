@@ -13,33 +13,6 @@ The information on this page is for ERP-providers that have made arrangments wit
 - Examples of test cases - see further down this page
   In addition, there is a need for a test user. This is distributed directly to participating ERPs.
 
-
-# Validation rules
-
-Validation rules ready for test:
-
-- The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return
-- The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate
-- Amounts with opposite +/- sign that applies to output VAT must contain information in the field for additional information
-- Amounts with opposite +/- sign that applies to input VAT that has been claimed deductable must contain information in the field for additional information
-- Specification lines that applies to adjustment can only be submitted on VAT code 1
-- Specification lines that applies to losses on outstanding claims can only be submitted on VAT code 1, 11, 12 or 13
-- Specification lines that applies to withdrawals can only be submitted on VAT code 3, 31, 32 or 33
-- Specification lines that applies to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
-- In the event of a reverse tax liability for deductable services purchased from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT
-- In the event of a a reverse tax liability for deductable services purchased from abroad, the input VAT must always be deducted if output tax is calculated
-- When buying deductable goods from abroad, there must always be output VAT if input VAT has been deducted
-- When buying deductable goods from abroad, the input VAT must always be deducted if output tax is calculated
-- In the event of a a reverse tax liability for deductable services purchased from abroad, there must always be output VAT if input VAT has been deducted
-- When buying deductable goods from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT
-
-# Test cases the VAT tax return
-
-Examples of test cases for the new VAT tax return [Test cases for the VAT tax retun](Testtilfeller mva-melding.xlsx)
-
-XML examples: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/
-Untill further notice there should not be % sign in the file to be sent in
-
 # Test plan
 
 ## Content of the test
@@ -57,9 +30,9 @@ The ERP-system must do the following:
 
 Skatteetaten have made available a test application that shows how the steps described above can be done. This is written in [jupyter notbook format](https://jupyter.org/):
 
-1. [Jupyter notebook demo for retrieving, validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb)Download the folder testinnsending and run the script demo.ipynb (the script will execute all steps in the process: call ping service to check the connection and validate the mva tax return.
+1. [Jupyter notebook demo for retrieving, validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb)Download the folder test and run the script demo.ipynb (the script will execute all steps in the process: call ping service to check the connection and validate the mva tax return.
 2. [Jupyter notebook demo for retrieving, validation and submitting](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/innsending-eksempel.ipynb). Run the script demo.ipynb. The script will execute all steps in the process.
-3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py) and [postman script to validate mva tax return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First step is to log in to ID-porten (described later), and store the token in the format "Bearer <em>hentet-token</em>" as an environment variable by the name "test-bearer" in postman, then use the postman script in order to validate the mva vat return.
+3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py) and [postman script to validate mva tax return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First step is to log in to ID-porten (described later), and store the token in the format "Bearer <em>token-here</em>" as an environment variable by the name "test-bearer" in postman, then use the postman script in order to validate the mva vat return.
 4. [Example XML files](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
 
 ## Start using ID-porten
@@ -108,6 +81,31 @@ For details on which HTTP parameters must be sent in the call, see the file [log
 
 After login and and token request you will have an ID-porten access-token. This token is used as a bearer token in a HTTP-call on the validation service, and must be exchanged for an Altinn-token, which is used as a bearer token in the HTTP-calls in the submission process on The tax administrations Altinn3-API for VAT tax return submission.   For details, see <a href="https://skatteetaten.github.io/mva-meldingen/documentation/api/" target="_blank">Api</a>.
 
+# Validation rules
+
+Validation rules ready for test:
+
+- The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return
+- The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate
+- Amounts with opposite +/- sign that applies to output VAT must contain information in the field for additional information
+- Amounts with opposite +/- sign that applies to input VAT that has been claimed deductable must contain information in the field for additional information
+- Specification lines that applies to adjustment can only be submitted on VAT code 1
+- Specification lines that applies to losses on outstanding claims can only be submitted on VAT code 1, 11, 12 or 13
+- Specification lines that applies to withdrawals can only be submitted on VAT code 3, 31, 32 or 33
+- Specification lines that applies to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
+- In the event of a reverse tax liability for deductable services purchased from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT
+- In the event of a a reverse tax liability for deductable services purchased from abroad, the input VAT must always be deducted if output tax is calculated
+- When buying deductable goods from abroad, there must always be output VAT if input VAT has been deducted
+- When buying deductable goods from abroad, the input VAT must always be deducted if output tax is calculated
+- In the event of a a reverse tax liability for deductable services purchased from abroad, there must always be output VAT if input VAT has been deducted
+- When buying deductable goods from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT
+
+# Test cases the VAT tax return
+
+Examples of test cases for the new VAT tax return [Test cases for the VAT tax retun](Testtilfeller mva-melding.xlsx)
+
+XML examples: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/
+Until further notice there should not be % sign in the file to be sent in
 
 # Test time line
 
