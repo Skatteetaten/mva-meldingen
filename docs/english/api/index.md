@@ -18,7 +18,7 @@ as described below.
 
 The overall process for filing VAT return:
 
-1.  Log in via ID-Porten
+1.  Log in with ID-Porten
 
     - Login is personal for each end user
 
@@ -243,7 +243,7 @@ Url to MvaMeldingInnsending has this structure:
 vatReturnFilingUrl = {instanceApiUrl}/{partyId}/{instanceGuid}/data/{dataGuid}
 ```
 
-where `{dataGuid}`is the ID of the data object of the
+where `{dataGuid}` is the ID of the data object of the
 instance.
 
 There are 2 ways to derive the `vatReturnFilingUrl` and
@@ -253,10 +253,10 @@ When the instance is created, there is only one element in the list.
 
 From the data element you can either:
 
-- merge `{dataGuid}`that exists as value in
+- merge `{dataGuid}` that exists as value in
   `"id"` in the structure above,
   - alternatively use `{instanceApiUrl}/data/{dataGuid}`
-- or use the `selfLinks.apps`value
+- or use the `selfLinks.apps` value
   `{instanceDataAppUrl}`, as shown in the instance
   response in the previous step.
   - `vatReturnFilingUrl = {instanceDataAppUrl}`
