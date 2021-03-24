@@ -1,0 +1,284 @@
+﻿<xsd:schema xmlns="no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v0.1" xmlns:skatt="http://www.skatteetaten.no/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v0.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute fixed="2021-02-09T09:49:18.099+0100" name="generertDato" />
+      <xsd:attribute fixed="0.1" name="versjon" />
+      <xsd:attribute fixed="" name="beskrivelse" />
+      <xsd:attribute fixed="MvaMeldingInnsending" name="modellnavn" />
+      <xsd:attribute fixed="no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v0.1" name="navnerom" />
+      <xsd:attribute fixed="true" name="begrepsreferanse" />
+      <xsd:attribute fixed="true" name="dokumentasjon" />
+      <xsd:attribute fixed="false" name="nillable" />
+      <xsd:attribute fixed="false" name="modellelement" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="mvaMeldingInnsending" type="MvaMeldingInnsending" />
+  <xsd:complexType name="MvaMeldingInnsending">
+    <xsd:sequence>
+      <xsd:element name="norskIdentifikator" type="Identifikator" />
+      <xsd:element name="skattleggingsperiode" type="Skattleggingsperiode" />
+      <xsd:element name="innsendingstype" type="Innsendingstype" />
+      <xsd:element name="instansstatus" type="Tekst" />
+      <xsd:element name="opprettetAv" type="Tekst" />
+      <xsd:element name="opprettingstidspunkt" type="DatoKlokkeslett" />
+      <xsd:element name="endringstidspunkt" type="DatoKlokkeslett" minOccurs="0" />
+      <xsd:element name="vedlegg" type="Vedlegg" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Vedlegg">
+    <xsd:sequence>
+      <xsd:element name="vedleggstype" type="Vedleggstype" />
+      <xsd:element name="kildegruppe" type="Kildegruppe" />
+      <xsd:element name="opprettetAv" type="Tekst" />
+      <xsd:element name="opprettingstidspunkt" type="DatoKlokkeslett" />
+      <xsd:element name="vedleggsfil" type="Vedleggsfil" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Vedleggsfil">
+    <xsd:sequence>
+      <xsd:element name="filnavn" type="Tekst" />
+      <xsd:element name="filekstensjon" type="Tekst" />
+      <xsd:element name="filinnhold" type="Tekst" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Identifikator" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/e6c4c0e0-2405-11e7-8e60-0050568351d2">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b2e1a8-9fe1-11e5-a9f8-e4115b280940" />
+        <xsd:element name="foedselsnummer" type="Foedselsnummer" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/5138da11-be20-11e6-8004-005056825ca0">
+          <xsd:annotation>
+            <xsd:documentation>https://data.skatteetaten.no/begrep/5138da11-be20-11e6-8004-005056825ca0</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Skattleggingsperiode" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/6b41c6d1-50cd-11e7-b7c5-005056821322&#xA;http://begrepskatalog/begrep/bcb34830-81b1-11e7-9c4a-0050568351d2">
+    <xsd:annotation>
+      <xsd:documentation>skattleggingsperiode er et fellesbegrep som brukes om alle former for skatt, og refererer generelt til den perioden som en gitt skattefastsetting gjelder for; i merverdiavgift kontekst er ofte brukt begrepet termin</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="periode" type="PeriodeBeskrivelse">
+        <xsd:annotation>
+          <xsd:documentation>termin</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="aar" type="Aarstall" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Innsendingstype">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="komplett" />
+      <xsd:enumeration value="ikke komplett" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b52af3-9fe1-11e5-a9f8-e4115b280940">
+    <xsd:annotation>
+      <xsd:documentation>vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett 
+</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="4000" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DatoKlokkeslett" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b52aee-9fe1-11e5-a9f8-e4115b280940">
+    <xsd:annotation>
+      <xsd:documentation>en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements and interchange formats -- Information interchange -- Representation of dates and times). </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:dateTime" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Vedleggstype">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="mva-melding" />
+      <xsd:enumeration value="binaerVedlegg" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Kildegruppe">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="etat" />
+      <xsd:enumeration value="sluttbrukersystem" />
+      <xsd:enumeration value="sluttbruker" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b2e1a8-9fe1-11e5-a9f8-e4115b280940">
+    <xsd:annotation>
+      <xsd:documentation>9 sifret nummer gitt de som er registrert i Enhetsregisteret. </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="Tekst">
+      <xsd:length value="9" />
+      <xsd:pattern value="[0-9]+" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Foedselsnummer" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/5138da10-be20-11e6-8004-005056825ca0">
+    <xsd:annotation>
+      <xsd:documentation>ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste personnummer.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="Tekst">
+      <xsd:length value="11" />
+      <xsd:pattern value="[0-9]+" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PeriodeBeskrivelse">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:sequence>
+          <xsd:element name="skattleggingsperiodeMaaned" type="SkattleggingsperiodeMaaned" />
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="skattleggingsperiodeSeksMaaneder" type="SkattleggingsperiodeSeksMaaneder" />
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="skattleggingsperiodeToMaaneder" type="SkattleggingsperiodeToMaaneder" />
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="skattleggingsperiodeHalvMaaned" type="SkattleggingsperiodeHalvMaaned" />
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="skattleggingsperiodeTreMaaneder" type="SkattleggingsperiodeTreMaaneder" />
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="skattleggingsperiodeUke" type="SkattleggingsperiodeUke" />
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="skattleggingsperiodeAar" type="SkattleggingsperiodeAar" />
+        </xsd:sequence>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Aarstall" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b2e14a-9fe1-11e5-a9f8-e4115b280940">
+    <xsd:annotation>
+      <xsd:documentation>årstall er et tall som angir årets nummer i tidsregningen i den gregorianske kalender</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:gYear" />
+  </xsd:simpleType>
+  <xsd:simpleType name="SkattleggingsperiodeMaaned">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="januar" />
+      <xsd:enumeration value="februar" />
+      <xsd:enumeration value="mars" />
+      <xsd:enumeration value="april" />
+      <xsd:enumeration value="mai" />
+      <xsd:enumeration value="juni" />
+      <xsd:enumeration value="juli" />
+      <xsd:enumeration value="august" />
+      <xsd:enumeration value="september" />
+      <xsd:enumeration value="oktober" />
+      <xsd:enumeration value="november" />
+      <xsd:enumeration value="desember" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SkattleggingsperiodeSeksMaaneder">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="januar-juni" />
+      <xsd:enumeration value="juni-desember" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SkattleggingsperiodeToMaaneder">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="januar-februar" />
+      <xsd:enumeration value="mars-april" />
+      <xsd:enumeration value="mai-juni" />
+      <xsd:enumeration value="juli-august" />
+      <xsd:enumeration value="september-oktober" />
+      <xsd:enumeration value="november-desember" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SkattleggingsperiodeHalvMaaned">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="foerste halvdel januar" />
+      <xsd:enumeration value="andre halvdel januar" />
+      <xsd:enumeration value="foerste halvdel februar" />
+      <xsd:enumeration value="andre halvdel februar" />
+      <xsd:enumeration value="foerste halvdel mars" />
+      <xsd:enumeration value="andre halvdel mars" />
+      <xsd:enumeration value="foerste halvdel april" />
+      <xsd:enumeration value="andre halvdel april" />
+      <xsd:enumeration value="foerste halvdel mai" />
+      <xsd:enumeration value="andre halvdel mai" />
+      <xsd:enumeration value="foerste halvdel juni" />
+      <xsd:enumeration value="andre halvdel juni" />
+      <xsd:enumeration value="foerste halvdel juli" />
+      <xsd:enumeration value="andre halvdel juli" />
+      <xsd:enumeration value="foerste halvdel august" />
+      <xsd:enumeration value="andre halvdel august" />
+      <xsd:enumeration value="foerste halvdel september" />
+      <xsd:enumeration value="andre halvdel september" />
+      <xsd:enumeration value="foerste halvdel oktober" />
+      <xsd:enumeration value="andre halvdel oktober" />
+      <xsd:enumeration value="foerste halvdel november" />
+      <xsd:enumeration value="andre halvdel november" />
+      <xsd:enumeration value="foerste halvdel desember" />
+      <xsd:enumeration value="andre halvdel desember" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SkattleggingsperiodeTreMaaneder">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="januar-mars" />
+      <xsd:enumeration value="april-juni" />
+      <xsd:enumeration value="juli-september" />
+      <xsd:enumeration value="oktober-desember" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SkattleggingsperiodeUke">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="uke 1" />
+      <xsd:enumeration value="uke 2" />
+      <xsd:enumeration value="uke 3" />
+      <xsd:enumeration value="uke 4" />
+      <xsd:enumeration value="uke 5" />
+      <xsd:enumeration value="uke 6" />
+      <xsd:enumeration value="uke 7" />
+      <xsd:enumeration value="uke 8" />
+      <xsd:enumeration value="uke 9" />
+      <xsd:enumeration value="uke 10" />
+      <xsd:enumeration value="uke 11" />
+      <xsd:enumeration value="uke 12" />
+      <xsd:enumeration value="uke 13" />
+      <xsd:enumeration value="uke 14" />
+      <xsd:enumeration value="uke 15" />
+      <xsd:enumeration value="uke 16" />
+      <xsd:enumeration value="uke 17" />
+      <xsd:enumeration value="uke 18" />
+      <xsd:enumeration value="uke 19" />
+      <xsd:enumeration value="uke 20" />
+      <xsd:enumeration value="uke 21" />
+      <xsd:enumeration value="uke 22" />
+      <xsd:enumeration value="uke 23" />
+      <xsd:enumeration value="uke 24" />
+      <xsd:enumeration value="uke 25" />
+      <xsd:enumeration value="uke 26" />
+      <xsd:enumeration value="uke 27" />
+      <xsd:enumeration value="uke 28" />
+      <xsd:enumeration value="uke 29" />
+      <xsd:enumeration value="uke 30" />
+      <xsd:enumeration value="uke 31" />
+      <xsd:enumeration value="uke 32" />
+      <xsd:enumeration value="uke 33" />
+      <xsd:enumeration value="uke 34" />
+      <xsd:enumeration value="uke 35" />
+      <xsd:enumeration value="uke 36" />
+      <xsd:enumeration value="uke 37" />
+      <xsd:enumeration value="uke 38" />
+      <xsd:enumeration value="uke 39" />
+      <xsd:enumeration value="uke 40" />
+      <xsd:enumeration value="uke 41" />
+      <xsd:enumeration value="uke 42" />
+      <xsd:enumeration value="uke 43" />
+      <xsd:enumeration value="uke 44" />
+      <xsd:enumeration value="uke 45" />
+      <xsd:enumeration value="uke 46" />
+      <xsd:enumeration value="uke 47" />
+      <xsd:enumeration value="uke 48" />
+      <xsd:enumeration value="uke 49" />
+      <xsd:enumeration value="uke 50" />
+      <xsd:enumeration value="uke 51" />
+      <xsd:enumeration value="uke 52" />
+      <xsd:enumeration value="uke 53" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SkattleggingsperiodeAar">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="aarlig" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
