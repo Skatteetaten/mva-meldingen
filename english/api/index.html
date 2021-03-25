@@ -48,42 +48,282 @@
         }
       }
     })
-  </script><link as="script" rel="preload" href="/mva-meldingen/webpack-runtime-1defc1ca0de2e6e5668e.js"/><link as="script" rel="preload" href="/mva-meldingen/framework-da8a1ea7f298509dc5ee.js"/><link as="script" rel="preload" href="/mva-meldingen/app-2b14fe4a334a974441cb.js"/><link as="script" rel="preload" href="/mva-meldingen/styles-c2fe8482057191dca484.js"/><link as="script" rel="preload" href="/mva-meldingen/b6f0a20a63d6adab58b8c9afc6a4bb63a39e32a5-81fa3ee79d448ffbb0d2.js"/><link as="script" rel="preload" href="/mva-meldingen/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data\english\api\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data/sq/d/270254161.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data/sq/d/270254161.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div class="ms-Fabric root-36"><div><div style="margin-bottom:35px" class="header-module--main-header--B1ZQz"><div class="header-module--main-header-content--2RY48"><div class="header-module--main-header-wrapper--34EUT"><div><div class="ms-Image header-module--main-header-logo--1fUV3 root-38"><img src="/mva-meldingen/static/ske-logo-7d479f293e61a007b36e122c48735bae.svg" class="ms-Image-image ms-Image-image--portrait is-notLoaded is-fadeIn image-39"/></div></div><div class="header-module--main-header-button--2kQ00"><button><i data-icon-name="Menu" aria-hidden="true" class="root-41"></i></button></div></div><nav class="header-module--main-header-nav--2CrOn header-module--main-header-nav-hidden--1rc-e"><ul class="header-module--main-header-menu--2o9XB"><li><a href="/mva-meldingen/">Mva-meldingen</a></li><li><a href="/mva-meldingen/documentation">Dokumentasjon</a></li><li><a href="/mva-meldingen/frontpage_eng">Frontpage in English</a></li><li><a href="/mva-meldingen/english">Documentation in English</a></li></ul></nav></div></div></div><div style="display:flex;padding:30px;max-width:1024px;margin:0 auto"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ske-Grid-42 "><div class="ske-Grid-row-45 "><div class="ske-Grid-col-46 "><h1>API</h1><div class="documentation-template-module--documentation-container--3aiYG"><div><h2 id="validating-vat-listing" style="position:relative"><a href="#validating-vat-listing" aria-label="validating vat listing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validating vat listing</h2>
-<p>The service validtes the content of a wat listing and returns a response providing potential errors, deviations and warnings. The service will do the following:</p>
+  </script><link as="script" rel="preload" href="/mva-meldingen/webpack-runtime-1defc1ca0de2e6e5668e.js"/><link as="script" rel="preload" href="/mva-meldingen/framework-da8a1ea7f298509dc5ee.js"/><link as="script" rel="preload" href="/mva-meldingen/app-2b14fe4a334a974441cb.js"/><link as="script" rel="preload" href="/mva-meldingen/styles-c2fe8482057191dca484.js"/><link as="script" rel="preload" href="/mva-meldingen/b6f0a20a63d6adab58b8c9afc6a4bb63a39e32a5-81fa3ee79d448ffbb0d2.js"/><link as="script" rel="preload" href="/mva-meldingen/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data\english\api\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data/sq/d/270254161.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data/sq/d/270254161.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mva-meldingen/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div class="ms-Fabric root-36"><div><div style="margin-bottom:35px" class="header-module--main-header--B1ZQz"><div class="header-module--main-header-content--2RY48"><div class="header-module--main-header-wrapper--34EUT"><div><div class="ms-Image header-module--main-header-logo--1fUV3 root-38"><img src="/mva-meldingen/static/ske-logo-7d479f293e61a007b36e122c48735bae.svg" class="ms-Image-image ms-Image-image--portrait is-notLoaded is-fadeIn image-39"/></div></div><div class="header-module--main-header-button--2kQ00"><button><i data-icon-name="Menu" aria-hidden="true" class="root-41"></i></button></div></div><nav class="header-module--main-header-nav--2CrOn header-module--main-header-nav-hidden--1rc-e"><ul class="header-module--main-header-menu--2o9XB"><li><a href="/mva-meldingen/">Mva-meldingen</a></li><li><a href="/mva-meldingen/documentation">Dokumentasjon</a></li><li><a href="/mva-meldingen/frontpage_eng">Frontpage in English</a></li><li><a href="/mva-meldingen/english">Documentation in English</a></li></ul></nav></div></div></div><div style="display:flex;padding:30px;max-width:1024px;margin:0 auto"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="ske-Grid-42 "><div class="ske-Grid-row-45 "><div class="ske-Grid-col-46 "><h1>API</h1><nav class="table-of-contents-module--toc--3ybUf"><ul><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-2--1Dh4V"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#vat-return-validation-and-filing-api">VAT return Validation and Filing API</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-2--1Dh4V"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#overall-process-for-filing-a-vat-return">Overall process for filing a VAT return</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-2--1Dh4V"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#validate-tax-return">Validate tax return</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-2--1Dh4V"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#vat-return-filing-process">VAT return filing Process</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-3--hThrR"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#change-id-porten-token-to-the-altinn-token">Change ID-Porten token to the Altinn token</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-3--hThrR"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#create-instance">Create Instance</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-4--1ZHxT"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#response">Response</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-3--hThrR"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#upload-vat-return-filing">Upload VAT return filing</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-3--hThrR"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#upload-vat-return">Upload VAT return</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-3--hThrR"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#upload-attachments">Upload Attachments</a></li><li class="table-of-contents-module--toc-level--xyWuY table-of-contents-module--toc-level-3--hThrR"><i data-icon-name="ArrowDown" aria-hidden="true" class="root-48"></i><a href="/mva-meldingen/english/api/#submit-vat-return-filing">Submit VAT return filing</a></li></ul></nav><div class="documentation-template-module--documentation-container--3aiYG"><div><h2 id="vat-return-validation-and-filing-api" style="position:relative"><a href="#vat-return-validation-and-filing-api" aria-label="vat return validation and filing api permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VAT return Validation and Filing API</h2>
+<p>VAT returns to be sent to Skatteetaten from an end-user
+system (SBS) should use these APIs:</p>
 <ol>
-<li>Control the format of the message</li>
-<li>Control the content and composition of the elements in the mva vat listing</li>
+<li>Skatteetaten VAT return Validation API</li>
+<li>Skatteetaten Altinn3 VAT-Return-Filing API</li>
 </ol>
-<p>Skatteetaten assumes that the validation service is called before sending in the mva vat listing. This will ensure that the mva vat listing has correct format and content and increases the probability for accepting the mva vat listing when sending in.</p>
+<p>as described below.</p>
+<h2 id="overall-process-for-filing-a-vat-return" style="position:relative"><a href="#overall-process-for-filing-a-vat-return" aria-label="overall process for filing a vat return permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overall process for filing a VAT return</h2>
+<p>The overall process for filing VAT return:</p>
+<ol>
+<li>
+<p>Log in with ID-Porten</p>
+<ul>
+<li>Login is personal for each end user</li>
+</ul>
+</li>
+<li>
+<p>Validate VAT return with Skatteetaten&#x27;s
+validation service</p>
+<ul>
+<li>Authentication with ID-Porten token</li>
+</ul>
+</li>
+<li>
+<p>Exchange ID-Porten token with Altinn3 token</p>
+<ul>
+<li>The API call is described just below the sequence diagram</li>
+</ul>
+</li>
+<li>
+<p>Send VAT return to the Altinn3 App</p>
+<ul>
+<li>Authentication with Altinn3 token</li>
+</ul>
+</li>
+</ol>
+<h2 id="validate-tax-return" style="position:relative"><a href="#validate-tax-return" aria-label="validate tax return permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validate tax return</h2>
+<p>The service validates the content of a tax return and returns a response
+with any errors, deviations and warnings. The service will do the
+following:</p>
+<ol>
+<li>Check the message format.</li>
+<li>Control the content and composition of the elements in the VAT
+return.</li>
+</ol>
+<p>Skatteetaten assumes that the validation service is called in
+advance of filing the VAT return. This ensures that the VAT return
+has the correct format, content and increases the probability that
+the VAT return will be approved upon filing.</p>
 <p><strong>URL</strong> : <code class="language-text">POST https://&lt;env&gt;/api/mva-melding/valider</code></p>
-<p>Hwere <code class="language-text">&lt;env&gt;</code> is an environment specific address, i. e. <code class="language-text">mp-test.sits.no</code></p>
+<p>Where <code class="language-text">&lt;env&gt;</code>is an environment-specific address
+e.g.<code class="language-text">mp-test.sits.no</code></p>
 <p><strong>Body</strong> :</p>
 <ul>
-<li>According to XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd">Skattemeldingformerverdiavgift.v0.9</a></li>
+<li>According to XSD:<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">Skattemeldingformerverdiavgift.v0.9</a></li>
 </ul>
-<p><strong>Example</strong> : Sending in XML on incorrect format</p>
-<p>POST <a href="https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider">https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider</a></p>
+<p><strong>Example</strong> : filing XML in invalid format</p>
+<p>POST <a href="https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider" target="_blank">https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider </a></p>
 <p>Header: <code class="language-text">Content-Type: application/xml</code></p>
-<p>With content (http body) not according to XML validation based on <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd">XSD</a>
-:</p>
+<p>With content (http body) that does not pass <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">XSD</a> validation:</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvaMeldingDto</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvaMeldingDto</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mvaMeldingDto</span><span class="token punctuation">&gt;</span></span></code></pre></div>
-<p><strong>Return</strong> :</p>
-<p>Status: 200
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mvaMeldingDto</span><span class="token punctuation">&gt;</span></span></code></pre></div>
+<p><strong>Returns</strong> :</p>
+<p>status: 200
 Content (body)</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span><span class="token punctuation">&gt;</span></span>UGYLDIG_SKATTEMELDING<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>//innsending<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsDetaljer</span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>feilmelding</span><span class="token punctuation">&gt;</span></span>Mva meldingen må være på gyldig format og passere XML skjema valideringen<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>feilmelding</span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>alvorlighetsgrad</span><span class="token punctuation">&gt;</span></span>UGYLDIG_SKATTEMELDING<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>alvorlighetsgrad</span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>avvikKode</span><span class="token punctuation">&gt;</span></span>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>avvikKode</span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>informasjon</span><span class="token punctuation">&gt;</span></span>cvc-complex-type.2.4.b: The content of element &#x27;mvaMeldingDto&#x27; is not complete. One of
-                &#x27;{&quot;no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8&quot;:innsending}&#x27; is expected.
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>informasjon</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsDetaljer</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span></code></pre></div></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div><div class="footerDecorContainer-51" role="contentinfo"><svg focusable="false" class="footer-decoration-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1440 100" version="1.1"><desc></desc><defs></defs><g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd"><g id="bakgrunn"><polygon fill="#C0797E" points="0 99.6400524 1440 99.6400524 1440 69.2255838 0 17.1793194"></polygon><path d="M1440,98 L1440,629 L0,629 L0,98 L1440,0 L1440,98 Z" fill="#6F2C3F"></path></g></g></svg></div><footer class="footerWrapper-49"><div class="footerContent-50"><div class="ske-Grid-42 "><div class="ske-Grid-row-45 "><div class="ske-Grid-col-52 "><div class="ms-Image root-54" style="height:74px"><img src="/mva-meldingen/static/ske-logo-a0e8bc5ad23f41f04a6c4e5655a5174b.svg" alt="Skatteetaten logo" class="ms-Image-image ms-Image-image--portrait is-notLoaded is-fadeIn image-55"/></div></div><div class="ske-Grid-col-56 "><div class="footer-module--footer-links--1p2zW"><div><a href="https://www.skatteetaten.no" target="blank" class="footer-module--footer-link--3N1pB" style="margin:10px 0">skatteetaten.no</a></div></div></div></div></div></div></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/english/api/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3370241ddb89d1467de6.js"],"app":["/app-2b14fe4a334a974441cb.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a7c0e2c227b82808bcb0.js"],"component---src-pages-documentation-js":["/component---src-pages-documentation-js-5de4a3bc96a208f73256.js"],"component---src-pages-english-js":["/component---src-pages-english-js-5efc5115f0dbc3c695cc.js"],"component---src-pages-index-js":["/component---src-pages-index-js-05223ca033758f7629ff.js"],"component---src-templates-documentation-template-js":["/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js"]};/*]]>*/</script><script src="/mva-meldingen/polyfill-3370241ddb89d1467de6.js" nomodule=""></script><script src="/mva-meldingen/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js" async=""></script><script src="/mva-meldingen/b6f0a20a63d6adab58b8c9afc6a4bb63a39e32a5-81fa3ee79d448ffbb0d2.js" async=""></script><script src="/mva-meldingen/styles-c2fe8482057191dca484.js" async=""></script><script src="/mva-meldingen/app-2b14fe4a334a974441cb.js" async=""></script><script src="/mva-meldingen/framework-da8a1ea7f298509dc5ee.js" async=""></script><script src="/mva-meldingen/webpack-runtime-1defc1ca0de2e6e5668e.js" async=""></script></body></html>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span><span class="token punctuation">&gt;</span></span>UGYLDIG_SKATTEMELDING<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>//innfiling<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsDetaljer</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>feilmelding</span><span class="token punctuation">&gt;</span></span>Mva meldingen må være på gyldig format og passere XML skjema valideringen<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>feilmelding</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>alvorlighetsgrad</span><span class="token punctuation">&gt;</span></span>UGYLDIG_SKATTEMELDING<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>alvorlighetsgrad</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>avvikKode</span><span class="token punctuation">&gt;</span></span>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>avvikKode</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>informasjon</span><span class="token punctuation">&gt;</span></span>cvc-complex-type.2.4.b: The content of element &#x27;mvaMeldingDto&#x27; is not complete. One of
+                    &#x27;{&quot;no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8&quot;:innfiling}&#x27; is expected.
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>informasjon</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsDetaljer</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span></code></pre></div>
+<h2 id="vat-return-filing-process" style="position:relative"><a href="#vat-return-filing-process" aria-label="vat return filing process permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VAT return filing Process</h2>
+<p>Filing of VAT returns are done with the Skatteetaten
+Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
+covers the needed sequence for filing VAT returns.</p>
+<p>It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.</p>
+<p>In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a></p>
+<p>The filing process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:</p>
+<ol>
+<li>Exchange ID-Porten token to Altinn-Token. This token is used with the Instance API.</li>
+<li>Create Instance (sequence diagram starts here)</li>
+<li>Upload 1 VAT return filing (MvaMeldingInnsending)</li>
+<li>Upload 1 VAT return (mvaMeldingDto)</li>
+<li>Upload 0 or more Attachments</li>
+<li>File VAT return</li>
+</ol>
+<p>The Instance VAT Filing API is available at this URL:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">instanceApiUrl = &quot;https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances&quot;</code></pre></div>
+<p>In the following sequence diagram, the application URL will be hidden, so if <code class="language-text">POST: /intances/</code> is written it is
+implicitly <code class="language-text">POST: instanceApiUrl</code></p>
+<p><img src="/mva-meldingen/04a461d0deaed718e3c158691195d4f0/Mva-Melding-Innsending-Sekvensdiagram-English.png"/></p>
+<h3 id="change-id-porten-token-to-the-altinn-token" style="position:relative"><a href="#change-id-porten-token-to-the-altinn-token" aria-label="change id porten token to the altinn token permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Change ID-Porten token to the Altinn token</h3>
+<p>To change ID-Porten token, make the following calls:</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json">GET `https<span class="token operator">:</span><span class="token comment">//platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten`</span>
+    HEADERS<span class="token operator">:</span>
+        <span class="token property">&quot;Authorization&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Bearer &quot;</span> + <span class="token string">&quot;{IDPortenToken}&quot;</span>
+           <span class="token property">&quot;content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span></code></pre></div>
+<p>and the response content will be a brand new altinnToken used as the
+Bearer token in the subsequent requests. The token currently has a duration of 8 hours. Later in 2021, Altinn3 will offer refresh tokens so that one login can last for up to 3 months.</p>
+<h3 id="create-instance" style="position:relative"><a href="#create-instance" aria-label="create instance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create Instance</h3>
+<p>An instance is an object in altinn that follows the process and the data model defined by the application. Skatteetaten has a VAT-Return-Filing application which has a process with currently one
+step for filing. The step is a combination of upload and confirm the VAT return.</p>
+<p>In addition to being an object, an instance has a data object defined by a data model in the app.</p>
+<p>Once an instance is created, it will be possible to update the data
+object of the instance and add other data objects to the app&#x27;s data
+model. This is done in the next step.</p>
+<p>To create an instance, you perform a POST request at the instanceApiUrl with an
+<code class="language-text">instanceOwner</code> object where you enter the organization
+number for the organization that a VAT return is to be sent on behalf of:</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json">POST <span class="token punctuation">{</span>instanceApiUrl<span class="token punctuation">}</span>
+    HEADERS<span class="token operator">:</span>
+        <span class="token property">&quot;Authorization&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Bearer &quot;</span> + <span class="token string">&quot;{altinnToken}&quot;</span>
+        <span class="token property">&quot;content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span>
+    CONTENT/BODY<span class="token operator">:</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;instanceOwner&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;organisationNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{organizationNumber}&quot;</span>
+                <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span></code></pre></div>
+<p>This request will create the instance and return the following response</p>
+<h4 id="response" style="position:relative"><a href="#response" aria-label="response permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h4>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json">Response HTTPCode<span class="token operator">:</span> <span class="token number">201</span> (OK)
+    Content<span class="token operator">:</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{partyId}/{instanceGuid}&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;instanceOwner&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;partyId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{partyId}&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;organisationNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{organizationNumber}&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;appId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;skd/{ApplicationName}&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;org&quot;</span><span class="token operator">:</span> <span class="token string">&quot;skd&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;selfLinks&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;apps&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{instanceUrl}&quot;</span><span class="token punctuation">,</span> <span class="token comment">// the instanceUrl for the app</span>
+            <span class="token property">&quot;platform&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{platformUrl}&quot;</span> <span class="token comment">// the altinn3 plattform url for the instance</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{dataGuid}&quot;</span><span class="token punctuation">,</span> <span class="token comment">// {dataGuid} can be used in the next step</span>
+                <span class="token property">&quot;instanceGuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{instanceGuid}&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;contentType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/xml&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;blobStoragePath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;skd/{ApplicationName}/{instanceGuid}/data/{dataGuid}&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;selfLinks&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;apps&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{instanceDataAppUrl}&quot;</span><span class="token punctuation">,</span> <span class="token comment">// {instanceDataAppUrl} can be used in the next step</span>
+                    <span class="token property">&quot;platform&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{instanceDataPlatformUrl}&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token number">273</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;locked&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;refs&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;isRead&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;created&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2021-03-01T08:15:25.1139057Z&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;createdBy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;86257&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;lastChanged&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2021-03-01T08:15:25.1139057Z&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;lastChangedBy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;86257&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+        <span class="token comment">// the rest of the object is snipped for documentation purposes</span>
+    <span class="token punctuation">}</span></code></pre></div>
+<p>The rest of the requests in the sequence for the filing use
+<code class="language-text">instanceUrl</code>. This can be found from the response at the
+creation of the instance. See the example of the response above.</p>
+<p><code class="language-text">instanceUrl</code> could either be picked from
+<code class="language-text">selflinks.apps</code> or derived from
+<code class="language-text">instanceApiUrl/{partyId}/{instanceGuid}</code>, where
+<code class="language-text">{partyId}</code> and <code class="language-text">{instanceGuid}</code> can be
+found in the <code class="language-text">id</code> field in the returned instance.</p>
+<p>Example instanceUrl:
+<code class="language-text">https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df</code></p>
+<h3 id="upload-vat-return-filing" style="position:relative"><a href="#upload-vat-return-filing" aria-label="upload vat return filing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upload VAT return filing</h3>
+<p>MvaMeldingInnsending is a data type for metadata for the VAT return filing.
+The object to populate is created during the instantiation and can
+be found in the instance object&#x27;s <code class="language-text">data</code> list and has
+<code class="language-text">&quot;dataType&quot;: &quot;no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1&quot;</code>.
+Since this object already exists when uploading VAT return filing,
+PUT is used to update the data element.</p>
+<p>The model for VAT return filing can be found here:
+<a href="/mva-meldingen/2b44e55bd2c30c663b9c5ca1a82ebea3/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd</a></p>
+<p>Url to MvaMeldingInnsending has this structure:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">vatReturnFilingUrl = {instanceApiUrl}/{partyId}/{instanceGuid}/data/{dataGuid}</code></pre></div>
+<p>where <code class="language-text">{dataGuid}</code> is the ID of the data object of the
+instance.</p>
+<p>There are 2 ways to derive the <code class="language-text">vatReturnFilingUrl</code> and
+both use the instance&#x27;s data list element that has the data type
+<code class="language-text">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1</code>.
+When the instance is created, there is only one element in the list.</p>
+<p>From the data element you can either:</p>
+<ul>
+<li>
+<p>merge <code class="language-text">{dataGuid}</code> that exists as value in
+<code class="language-text">&quot;id&quot;</code> in the structure above,</p>
+<ul>
+<li>alternatively use <code class="language-text">{instanceApiUrl}/data/{dataGuid}</code></li>
+</ul>
+</li>
+<li>
+<p>or use the <code class="language-text">selfLinks.apps</code> value
+<code class="language-text">{instanceDataAppUrl}</code>, as shown in the instance
+response in the previous step.</p>
+<ul>
+<li><code class="language-text">vatReturnFilingUrl = {instanceDataAppUrl}</code></li>
+</ul>
+</li>
+</ul>
+<p>You upload VAT return filing by using the data api for the instance:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">PUT {vatReturnFilingUrl}
+    HEADERS:
+        &quot;Authorization&quot;: &quot;Bearer &quot; + &quot;{altinnToken}&quot;
+        &quot;content-type&quot;: &quot;text/xml&quot;</code></pre></div>
+<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml">Content:
+    <span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvameldinginnsending</span><span class="token punctuation">&gt;</span></span>
+        ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mvameldinginnsending</span><span class="token punctuation">&gt;</span></span></code></pre></div>
+<p>Example of xml file for VAT return filing can be found under <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>.</p>
+<h3 id="upload-vat-return" style="position:relative"><a href="#upload-vat-return" aria-label="upload vat return permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upload VAT return</h3>
+<p>The model is found here:
+<a href="/mva-meldingen/d9398f572717f1e87c93daa579391752/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a></p>
+<p>The URL for uploading the VAT return has this structure:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{instanceUrl}/data?datatype=mvamelding</code></pre></div>
+<p>The VAT return is uploaded with the following request to the instance data api:</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json">POST <span class="token punctuation">{</span>instanceUrl<span class="token punctuation">}</span>/data?datatype=mvamelding
+    HEADERS<span class="token operator">:</span>
+        <span class="token property">&quot;Authorization&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Bearer &quot;</span> + <span class="token string">&quot;{altinnToken}&quot;</span>
+        <span class="token property">&quot;content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/xml&quot;</span>
+        <span class="token property">&quot;Content-Disposition&quot;</span><span class="token operator">:</span> <span class="token string">&quot;attachment; filename=mvaMelding.xml&quot;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml">Content:
+    <span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvaMeldingDto</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mvaMeldingDto</span><span class="token punctuation">&gt;</span></span></code></pre></div>
+<p>This call will upload the xml document to the instance.</p>
+<h3 id="upload-attachments" style="position:relative"><a href="#upload-attachments" aria-label="upload attachments permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upload Attachments</h3>
+<p>It is possible to upload from 0 to 57 attachments, with an individual
+size of 25MB.</p>
+<p>Url for uploading attachments has this structure:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{instanceUrl}/data?datatype=vedlegg</code></pre></div>
+<p>The following content types are allowed for attachments:</p>
+<ul>
+<li>text/xml</li>
+<li>application/pdf</li>
+<li>image/jpeg</li>
+<li>image/jpg</li>
+<li>image/png</li>
+<li>image/gif</li>
+</ul>
+<p>Attachments are uploaded with the following request to the instance data api:</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json">POST <span class="token punctuation">{</span>instanceUrl<span class="token punctuation">}</span>/data?datatype=vedlegg
+    HEADERS<span class="token operator">:</span>
+        <span class="token property">&quot;Authorization&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Bearer &quot;</span> + <span class="token string">&quot;{altinnToken}&quot;</span>
+        <span class="token property">&quot;content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/pdf&quot;</span>
+        <span class="token property">&quot;Content-Disposition&quot;</span><span class="token operator">:</span> <span class="token string">&quot;attachment; filename=merknaderTilMvaMeldingen.pdf&quot;</span>
+    Content<span class="token operator">:</span>
+    <span class="token punctuation">{</span>pdf-attachment in binary format<span class="token punctuation">}</span></code></pre></div>
+<p>This request will upload the pdf document to the instance.</p>
+<p>Remember that <code class="language-text">content-type</code> should be appropriate for
+the attachment to be uploaded and that the file name in the
+<code class="language-text">Content-Disposition</code> header should be appropriate
+and unique. This is the file name Skatteetaten will refer to
+for the attachment.</p>
+<h3 id="submit-vat-return-filing" style="position:relative"><a href="#submit-vat-return-filing" aria-label="submit vat return filing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Submit VAT return filing</h3>
+<p>This step uses the process api for the instance and the instance will go to the next step for VAT return filing in the application process. Currently, there is only
+one step in the application process, so at the time of writing, this request will complete the filing.</p>
+<p>To complete the filing, the following call is made to the process api for the instance:</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json">PUT <span class="token punctuation">{</span>instanceUrl<span class="token punctuation">}</span>/process/next
+    HEADERS<span class="token operator">:</span>
+        <span class="token property">&quot;Authorization&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Bearer &quot;</span> + <span class="token string">&quot;{altinnToken}&quot;</span>
+        <span class="token property">&quot;content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span></code></pre></div>
+<p>The filing is now complete and can be found in Altinn&#x27;s message archive.</p></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div><div class="footerDecorContainer-51" role="contentinfo"><svg focusable="false" class="footer-decoration-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1440 100" version="1.1"><desc></desc><defs></defs><g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd"><g id="bakgrunn"><polygon fill="#C0797E" points="0 99.6400524 1440 99.6400524 1440 69.2255838 0 17.1793194"></polygon><path d="M1440,98 L1440,629 L0,629 L0,98 L1440,0 L1440,98 Z" fill="#6F2C3F"></path></g></g></svg></div><footer class="footerWrapper-49"><div class="footerContent-50"><div class="ske-Grid-42 "><div class="ske-Grid-row-45 "><div class="ske-Grid-col-52 "><div class="ms-Image root-54" style="height:74px"><img src="/mva-meldingen/static/ske-logo-a0e8bc5ad23f41f04a6c4e5655a5174b.svg" alt="Skatteetaten logo" class="ms-Image-image ms-Image-image--portrait is-notLoaded is-fadeIn image-55"/></div></div><div class="ske-Grid-col-56 "><div class="footer-module--footer-links--1p2zW"><div><a href="https://www.skatteetaten.no" target="blank" class="footer-module--footer-link--3N1pB" style="margin:10px 0">skatteetaten.no</a></div></div></div></div></div></div></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/english/api/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3370241ddb89d1467de6.js"],"app":["/app-2b14fe4a334a974441cb.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a7c0e2c227b82808bcb0.js"],"component---src-pages-documentation-js":["/component---src-pages-documentation-js-5de4a3bc96a208f73256.js"],"component---src-pages-english-js":["/component---src-pages-english-js-5efc5115f0dbc3c695cc.js"],"component---src-pages-index-js":["/component---src-pages-index-js-05223ca033758f7629ff.js"],"component---src-templates-documentation-template-js":["/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js"]};/*]]>*/</script><script src="/mva-meldingen/polyfill-3370241ddb89d1467de6.js" nomodule=""></script><script src="/mva-meldingen/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js" async=""></script><script src="/mva-meldingen/b6f0a20a63d6adab58b8c9afc6a4bb63a39e32a5-81fa3ee79d448ffbb0d2.js" async=""></script><script src="/mva-meldingen/styles-c2fe8482057191dca484.js" async=""></script><script src="/mva-meldingen/app-2b14fe4a334a974441cb.js" async=""></script><script src="/mva-meldingen/framework-da8a1ea7f298509dc5ee.js" async=""></script><script src="/mva-meldingen/webpack-runtime-1defc1ca0de2e6e5668e.js" async=""></script></body></html>
