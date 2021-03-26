@@ -87,18 +87,42 @@ Validation rules ready for test:
 
 - The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return
 - The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate
-- Amounts with opposite +/- sign that applies to output VAT must contain information in the field for additional information
-- Amounts with opposite +/- sign that applies to input VAT that has been claimed deductable must contain information in the field for additional information
-- Specification lines that applies to adjustment can only be submitted on VAT code 1
-- Specification lines that applies to losses on outstanding claims can only be submitted on VAT code 1, 11, 12 or 13
-- Specification lines that applies to withdrawals can only be submitted on VAT code 3, 31, 32 or 33
-- Specification lines that applies to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
-- In the event of a reverse tax liability for deductable services purchased from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT
-- In the event of a a reverse tax liability for deductable services purchased from abroad, the input VAT must always be deducted if output tax is calculated
-- When buying deductable goods from abroad, there must always be output VAT if input VAT has been deducted
-- When buying deductable goods from abroad, the input VAT must always be deducted if output tax is calculated
-- In the event of a a reverse tax liability for deductable services purchased from abroad, there must always be output VAT if input VAT has been deducted
-- When buying deductable goods from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT
+- Additional information is lacking for output VAT amounts with opposite +/- sign
+- Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign 
+- Additional information for specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7
+- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 81)
+- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 83)
+- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 86)
+- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 88)
+- Input VAT that has been claimed deductable on climate quotas and gold must be less than or equal to output VAT
+- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 81)
+- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 83)
+- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 86)
+- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 88)
+- There must be output VAT if input VAT has been deducted for deductable climate quotas and gold
+- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 81)
+- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 83)
+- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 86)
+- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88)
+- There must be deductable input VAT if there is output VAT on deductable climate quotas and gold
+- Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13
+- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 31, 32 of 33
+- Specification lines that apply to adjustment can only be submitted on VAT code 1
+- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
+- Revenue before registration can not be submitted as information on this VAT code
+- Refund information can not be submitted on this VAT code
+- Temporary import information can not be submitted on this VAT code
+- Re-importation information can not be submitted on this VAT code
+- Toll declaration information regarding the wrong organisation number can not be submitted on this VAT code
+- Re-exportation information can not be submitted on this VAT code.
+- Re-exportation or refund information can not be submitted on this VAT code
+- Temporary export information can not be submitted on this VAT code
+- Export of services information can not be submitted on this VAT code
+- Large procurement information can not be submitted on this VAT code
+- Information about procurements before being VAT registered can not be submitted on this VAT code
+- Insurance settlement information can not be submitted on this VAT code
+- Seasonal variation information can not be submitted on this VAT code
+- Credit not information can not be submitted on this VAT code
 
 # Test cases the VAT tax return
 
