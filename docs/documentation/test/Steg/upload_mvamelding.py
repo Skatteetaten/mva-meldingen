@@ -1,8 +1,13 @@
 import requests
-from Steg.InnsendingServices import printing
+from Steg.SubmissionServices import printing, Environment
+
+local = Environment.local.name
 
 
-def last_opp(miljo, url, melding_xml, token):
+def upload(environment, url, melding_xml, token):
+    if environment == local:
+        url = url.replace('https', 'http')
+
     payload = bytearray(melding_xml, 'utf-8')
     header = {'Authorization': 'Bearer ' + token, 'content-type': 'text/xml',
               'Content-Disposition': 'attachment; filename=mva-melding.xml'}
