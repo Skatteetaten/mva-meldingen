@@ -99,7 +99,7 @@ def main_relay(**kwargs) -> dict:
     port = server.server_address[1]
     assert 0 < port < 65536
 
-    client_id = '38e634d9-5682-44ae-9b60-db636efe3156'
+    client_id = '23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09'
 
     # Public clients need state parameter and PKCE challenge
     # https://difi.github.io/felleslosninger/oidc_auth_spa.html
