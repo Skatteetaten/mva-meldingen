@@ -50,7 +50,7 @@ Kundeforholdet hos DigDir gir tilgang til deres selvbetjeningsløsning som igjen
 
 Inntil kundeforhold hos DigDir er etablert og integrasjon opprettet, kan sluttbrukersystemene i benytte Skatteetatens integrasjon. For denne testen har Skatteetaten opprettet følgende `client_id` som kan benyttes av sluttbrukersystemene:
 
-- `client_id: 38e634d9-5682-44ae-9b60-db636efe3156`
+- `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09`
 - Callback-URL til denne `client_id` er satt til http://localhost:12345/token (Hvis det er konsumenter som ønsker andre callback-URL kan vi ordne det)
 
 **Nyttige lenker:**
