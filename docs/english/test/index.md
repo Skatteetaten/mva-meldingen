@@ -45,7 +45,7 @@ A customer relationship with DigDir provides access to their self-service soluti
 - callback url: The Uri that the client is allowed to go to after logging in. After a successful login in ID-Porten, this url will be called.
   If it takes too long to establish a customer relationship with DigDir, the end-user systems can use Skatteetaten's client_id in the meantime. For this test, Skatteetaten has created the following client_id that can be used by the end-user systems:
 
-      - `client_id: 38e634d9-5682-44ae-9b60-db636efe3156`
+      - `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09`
       	  - Callback URL for this client_id is set to  http://localhost:12345/token  (If there are consumers who want other callback URLs it can be provided)
 
 **Useful links:**
