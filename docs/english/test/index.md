@@ -31,8 +31,8 @@ The ERP-system must do the following:
 Skatteetaten have made available a test application that shows how the steps described above can be done. This is written in [jupyter notbook format](https://jupyter.org/):
 
 1. [Jupyter notebook demo for retrieving, validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Download the folder test and run the script demo.ipynb (the script will execute all steps in the process: call ping service to check the connection and validate the mva tax return.
-2. [Jupyter notebook demo for retrieving, validation and submitting](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/innsending-eksempel.ipynb). Run the script demo.ipynb. The script will execute all steps in the process.
-3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py) and [postman script to validate mva tax return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First step is to log in to ID-porten (described later), and store the token in the format `Bearer <token-here>` as an environment variable by the name "test-bearer" in postman, then use the postman script in order to validate the mva vat return.
+2. [Jupyter notebook demo for retrieving, validation and submitting](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/message-submission.ipynb). Run the script demo.ipynb. The script will execute all steps in the process.
+3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) and [postman script to validate mva tax return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First step is to log in to ID-porten (described later), and store the token in the format `Bearer <token-here>` as an environment variable by the name "test-bearer" in postman, then use the postman script in order to validate the mva vat return.
 4. [Example XML files](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
 
 ## Start using ID-porten
@@ -75,7 +75,7 @@ The following test environment at ID-porten is used:
 - /authorize endpoint: `https://oidc-ver2.difi.no/idporten-oidc-provider/authorize`
 - /token endpoint: `https://oidc-ver2.difi.no/idporten-oidc-provider/token`
 
-For details on which HTTP parameters must be sent in the call, see the file [logge_inn_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py)
+For details on which HTTP parameters must be sent in the call, see the file [log_in_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py)
 
 ## Call the vat tax return API
 
