@@ -86,7 +86,7 @@ def base64_decode_response(r: requests):
     return xmltodict.unparse(utkast_resp)
 
 
-def get_idtoken():
+def get_idtoken(**kwargs) -> dict:
     # clear BrowserRedirectHandler result
     BrowserRedirectHandler.result = None
 
