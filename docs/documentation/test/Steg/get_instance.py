@@ -1,13 +1,8 @@
 import requests
-from Steg.SubmissionServices import printing, Environment
-
-local = Environment.local.name
+from Steg.SubmissionServices import printing
 
 
-def get(environment, url, token):
-    if environment == local:
-        url = url.replace('https', 'http')
-
+def get(url, token):
     header = {'Authorization': 'Bearer ' + token}
     instance = requests.request("GET", url, headers=header)
     printing(instance)

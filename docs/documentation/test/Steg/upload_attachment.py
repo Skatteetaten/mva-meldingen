@@ -1,13 +1,8 @@
 import requests
-from Steg.SubmissionServices import printing, Environment
-
-local = Environment.local.name
+from Steg.SubmissionServices import printing
 
 
-def upload(environment, url, attachment, content_type, token):
-    if environment == local:
-        url = url.replace('https', 'http')
-
+def upload(url, attachment, content_type, token):
     with open("./eksempler/" + attachment, 'rb') as file:
         payload = file.read()
     header = {'Authorization': 'Bearer ' + token, 'content-type': content_type,

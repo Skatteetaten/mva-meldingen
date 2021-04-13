@@ -1,13 +1,8 @@
 import requests
-from Steg.SubmissionServices import printing, Environment
-
-local = Environment.local.name
+from Steg.SubmissionServices import printing
 
 
-def delete_last_uploaded_attachment(environment, url, attachment, token):
-    if environment == local:
-        url = url.replace('https', 'http')
-
+def delete_last_uploaded_attachment(url, attachment, token):
     payload = bytearray(attachment, 'utf-8')
     header = {'Authorization': 'Bearer ' + token, 'content-type': 'text/xml',
               'Content-Disposition': 'attachment; filename=mva-vedlegg.xml'}
