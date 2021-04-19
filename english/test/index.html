@@ -128,18 +128,42 @@ If it takes too long to establish a customer relationship with DigDir, the end-u
 <ul>
 <li>The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return</li>
 <li>The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate</li>
-<li>Amounts with opposite +/- sign that applies to output VAT must contain information in the field for additional information</li>
-<li>Amounts with opposite +/- sign that applies to input VAT that has been claimed deductable must contain information in the field for additional information</li>
-<li>Specification lines that applies to adjustment can only be submitted on VAT code 1</li>
-<li>Specification lines that applies to losses on outstanding claims can only be submitted on VAT code 1, 11, 12 or 13</li>
-<li>Specification lines that applies to withdrawals can only be submitted on VAT code 3, 31, 32 or 33</li>
-<li>Specification lines that applies to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1</li>
-<li>In the event of a reverse tax liability for deductable services purchased from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT</li>
-<li>In the event of a a reverse tax liability for deductable services purchased from abroad, the input VAT must always be deducted if output tax is calculated</li>
-<li>When buying deductable goods from abroad, there must always be output VAT if input VAT has been deducted</li>
-<li>When buying deductable goods from abroad, the input VAT must always be deducted if output tax is calculated</li>
-<li>In the event of a a reverse tax liability for deductable services purchased from abroad, there must always be output VAT if input VAT has been deducted</li>
-<li>When buying deductable goods from abroad, the amount deducted in input VAT shall be less than or equal to the output VAT</li>
+<li>Additional information is lacking for output VAT amounts with opposite +/- sign</li>
+<li>Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign</li>
+<li>Additional information for specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7</li>
+<li>Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 81)</li>
+<li>Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 83)</li>
+<li>Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 86)</li>
+<li>Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 88)</li>
+<li>Input VAT that has been claimed deductable on climate quotas and gold must be less than or equal to output VAT</li>
+<li>There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 81)</li>
+<li>There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 83)</li>
+<li>There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 86)</li>
+<li>There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 88)</li>
+<li>There must be output VAT if input VAT has been deducted for deductable climate quotas and gold</li>
+<li>There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 81)</li>
+<li>There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 83)</li>
+<li>There must be deductable input VAT if there is output VAT on services purchased from abroad (code 86)</li>
+<li>There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88)</li>
+<li>There must be deductable input VAT if there is output VAT on deductable climate quotas and gold</li>
+<li>Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13</li>
+<li>Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 31, 32 of 33</li>
+<li>Specification lines that apply to adjustment can only be submitted on VAT code 1</li>
+<li>Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1</li>
+<li>Revenue before registration can not be submitted as information on this VAT code</li>
+<li>Refund information can not be submitted on this VAT code</li>
+<li>Temporary import information can not be submitted on this VAT code</li>
+<li>Re-importation information can not be submitted on this VAT code</li>
+<li>Toll declaration information regarding the wrong organisation number can not be submitted on this VAT code</li>
+<li>Re-exportation information can not be submitted on this VAT code.</li>
+<li>Re-exportation or refund information can not be submitted on this VAT code</li>
+<li>Temporary export information can not be submitted on this VAT code</li>
+<li>Export of services information can not be submitted on this VAT code</li>
+<li>Large procurement information can not be submitted on this VAT code</li>
+<li>Information about procurements before being VAT registered can not be submitted on this VAT code</li>
+<li>Insurance settlement information can not be submitted on this VAT code</li>
+<li>Seasonal variation information can not be submitted on this VAT code</li>
+<li>Credit not information can not be submitted on this VAT code</li>
 </ul>
 <h1 id="test-cases-the-vat-tax-return" style="position:relative"><a href="#test-cases-the-vat-tax-return" aria-label="test cases the vat tax return permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test cases the VAT tax return</h1>
 <p>Examples of test cases for the new VAT tax return <a href="/mva-meldingen/2db8405c7361104c3518159b21481719/Testtilfeller%20mva-melding.xlsx">Test cases for the VAT tax retun</a></p>
