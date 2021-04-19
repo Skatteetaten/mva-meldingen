@@ -12,15 +12,17 @@ If you want more information about the project go to www.skatteetaten.no/nymva
 -	Common information structure and rules for all types of VAT returns
 -	Flexibility; code based rather than fixed fields
     -	From electronic forms to digital interaction
+    -	No longer numbered fields, these will be replaced by a dynamic list of specifications
+    -	The new VAT-return re-uses the Standard Tax Codes from the SAF-T standard. (Note: the new VAT-return must not be confused with the SAF-T Financial file. Only the codes will be re-used - The VAT-return will still be at a very aggregated level). 
 -	Easier to provide the correct information; remarks for VAT returns per line and in total:
-    -	Removes the need for remarks
+    -	Removes the need for remarks as the new return covers more cases
     -	Structured remarks for common cases
     -	Free form remarks
-    - Attachments
+    -   Attachments
 -	Refund; reporting businesses can submit a KID for reimbursement
--	Removing errors prior to submission by validation
--	Each return has a unique identifier
--	New visual interface for the VAT returns
+-	Removing errors prior to submission by validating submissions
+-	Each return has a unique identifier, to more easily identify each VAT-return
+-	Improved setup/New visual interface for the VAT returns
 
 ## Overview of the new service - components, API and message flow 
 This illustration describes the architecture of the new solution
