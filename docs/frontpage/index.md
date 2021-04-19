@@ -10,18 +10,21 @@ En ny mva-melding vil også gi nye muligheter for veiledning og dialog gjennom f
 
 ## Hva er nytt
 
-- Felles informasjonsstruktur og regelsett for alle typer mva-melding
+-	Felles informasjonsstruktur og regelsett for alle typer mva-melding
 - Fleksibilitet: kodebasert i stedet for faste felter
   - Fra strøm på papir til digital samhandling
-- Enklere for skattepliktige å oppfylle opplysningsplikten. Merknader for melding totalt og per linje:
-  - ta bort behovet for merknader: mva-melding som dekker mer
-  - strukturerte merknader for de vanligste forholdene
-  - merknader i fritekst
-  - vedlegg
+  - Går bort fra dagens nummererte poster – erstattes med en dynamisk liste av spesifikasjonslinjer
+  - Mva-meldingen gjenbruker kodelisten Standard Tax Codes fra SAF-T standarden (NB: Den nye mva-meldingen må ikke forveksles med SAF-T filen for utveksling av regnskapsdata. Det er kun kodelisten som gjenbrukes - mva-meldingen vil fortsatt være på et svært aggregert nivå)
+- Enklere for skattepliktige å oppfylle opplysningsplikten. Mulighet for merknader for melding totalt og per linje:
+  - Tar bort mye av behovet for merknader - en mva-melding som dekker mer
+  - Strukturerte merknader for de vanligste forholdene
+  - Merknader i fritekst
+  - Vedlegg
 - Tilbakebetaling: mva-pliktig kan oppgi KID for tilbakebetaling
-- Tatt bort feilkilder gjennom validering før innsending
-- Hver melding får unik identifikator
-- Oppsett/visuell fremstilling av mva-meldingen
+- Færre feilkilder gjennom validering før innsending
+- Hver melding får unik identifikator for lettere å identifisere hver melding
+- Forbedret oppsett/visuell fremstilling av mva-meldingen
+
 
 ## Overordnet løsningsoversikt - komponenter, API og meldinger
 
