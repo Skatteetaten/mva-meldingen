@@ -12,9 +12,11 @@ En ny mva-melding vil også gi nye muligheter for veiledning og dialog gjennom f
 
 - Felles informasjonsstruktur og regelsett for alle typer mva-melding
 - Fleksibilitet: kodebasert i stedet for faste felter
+
   - Fra strøm på papir til digital samhandling
   - Går bort fra dagens nummererte poster – erstattes med en dynamisk liste av spesifikasjonslinjer
   - Mva-meldingen gjenbruker kodelisten Standard Tax Codes fra SAF-T standarden (NB: Den nye mva-meldingen må ikke forveksles med SAF-T filen for utveksling av regnskapsdata. Det er kun kodelisten som gjenbrukes - mva-meldingenv vil fortsatt være på et svært aggregert nivå)
+
 - Enklere for skattepliktige å oppfylle opplysningsplikten. Mulighet for merknader for melding totalt og per linje:
   - Tar bort mye av behovet for merknader - en mva-melding som dekker mer
   - Strukturerte merknader for de vanligste forholdene
