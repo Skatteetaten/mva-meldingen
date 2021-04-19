@@ -22,3 +22,7 @@ Eksempel på innsendt XML fil for en mva-melding på siste versjon kommer.
 # Kodelister
 
 En oversikt over kodelistene som er definert så langt finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
+
+# Merknader mot poster og hele meldingen
+
+Oversikt over merknader knyttet opp mot de ulike SAF-T kodene i mva-meldingen [merknader mot poster og hele meldingen](merknader mot poster og hele meldingen.xlsx)

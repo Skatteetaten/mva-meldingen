@@ -20,3 +20,7 @@ Example VAT return in XML format will be ready soon.
 # Encoding
 
 Overview of encoding defined so far: [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/kodelister/)
+
+# Remarks in accordance to the VAT codes and the VAT tax return
+
+Overview over remarks in accordance to the VAT codes in the VAT tax return [remarks in accordance to the VAT codes](merknader mot poster og hele meldingen.xlsx)
