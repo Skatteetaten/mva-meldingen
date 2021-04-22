@@ -8,7 +8,7 @@ urllib3.disable_warnings()
 PORTAL_MELDING_URL = "https://mp-test.sits.no/api/mva/mva-melding"
 
 
-def validate_message(token: dict, xml: str = None):
+def validate_vat_return(token: dict, xml: str = None):
     url = f"{PORTAL_MELDING_URL}/valider"
     token["content-type"] = "application/xml"
     r = requests.post(url, data=xml, headers=token, verify=False)
