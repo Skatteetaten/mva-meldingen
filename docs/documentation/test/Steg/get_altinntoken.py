@@ -1,10 +1,8 @@
 import requests
-from Steg.InnsendingServices import printing, InnloggingType
-
-idporten = InnloggingType.idporten.name
+from Steg.FilingServices import printing
 
 
-def hent(innloggings_metode, header):
+def get(header):
     if header is None:
         print("Something went wrong. header = None")
         return

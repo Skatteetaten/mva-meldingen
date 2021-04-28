@@ -1,9 +1,9 @@
 import requests
-from Steg.InnsendingServices import printing
+from Steg.FilingServices import printing
 
 
-def slett_sist_lastet_opp_vedlegg(miljo, url, vedlegg, token):
-    payload = bytearray(vedlegg, 'utf-8')
+def delete_last_uploaded_attachment(url, attachment, token):
+    payload = bytearray(attachment, 'utf-8')
     header = {'Authorization': 'Bearer ' + token, 'content-type': 'text/xml',
               'Content-Disposition': 'attachment; filename=mva-vedlegg.xml'}
 
