@@ -82,13 +82,12 @@ Dersom erfaringen med OAuth2/OpenID er liten så vil dette kreve innsats å fors
 
 Validerings-apiet validerer kun mva-meldingsfilen som er en av flere filer i innsendingen.
 
-Kategoriserte utslag
-
 ### 5. Tolkning og visning av valideringsresultatet i regnskapssystemet
 
-Valideringstjenesten vil returnere et valideringsresultat, og det vil være hensiktsmessig å presentere resultatet for sluttbrukeren, spesielt dersom valideringstjenesten finner mva-meldingen ugyldig. Ugyldige meldinger blir ikke behandlet eller ansett som mottatt av Skatteetaten. Valideringsresultatet vil også gi tilbakemeldinger på element-nivå og vil kunne være interessant å vise i kontekst av mva-meldingen som skal sendes inn.
+Valideringstjenesten vil returnere et valideringsresultat, og det vil være hensiktsmessig å presentere resultatet for sluttbrukeren, spesielt dersom valideringstjenesten finner mva-meldingen ugyldig. Dette indikeres i valideringsreultatet med status satt til UGYLDIG_SKATTEMELDING. Ugyldige meldinger blir ikke behandlet eller ansett som mottatt av Skatteetaten. Valideringsresultatet vil også gi tilbakemeldinger på element-nivå og vil kunne være interessant å vise i kontekst av mva-meldingen som skal sendes inn.
 
-Skatteetaten anbefaler å avbryte innsending dersom valideringsresultatet er ugyldig.
+<span style="color: white;background-color:red">**Skatteetaten anbefaler å avbryte innsending dersom valideringsresultatet sin status er UGYLDIG_SKATTEMELDING.**
+</span>
 
 ### 6. Sende Mva-Melding til Skatteetatens innsendings-api
 
