@@ -117,7 +117,7 @@ Valideringsregler klare for test:
 - Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
 - Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
 - Gyldig kontonummer skal finnes ved utbetaling av merverdiavgift (oppgitt kontonummer er gyldig)
-- Gyldig IBAN kontonummer skal finnes ved utbetaling av merverdiavgift (oppgitt IBAN er gyldig)
+- Gyldig kontonummer skal finnes ved utbetaling av merverdiavgift (oppgitt IBAN er gyldig)
 - Oppgitt kontonummer i mva-meldingen skal stemme med kontonummer som finnes i mva-registeret
 - Oppgitt IBAN kontonummer i mva-meldingen skal stemme med kontonummer som finnes i mva-registeret
 - Gyldig kontonummer skal finnes ved utbetaling av merverdiavgift (minst en kontonummer eller IBAN skal finnes i meldingen eller registeret)
