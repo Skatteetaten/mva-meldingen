@@ -1,4 +1,4 @@
-# Implementation guide for system-to-system submission of VAT-report
+# Introduction to system submission of VAT-report
 
 ## Background
 
