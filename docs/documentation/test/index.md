@@ -116,6 +116,25 @@ Valideringsregler klare for test:
 - Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
 - Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
 - Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
+- Gyldig kontonummer skal finnes ved utbetaling av merverdiavgift (oppgitt kontonummer er gyldig)
+- Gyldig IBAN kontonummer skal finnes ved utbetaling av merverdiavgift (oppgitt IBAN er gyldig)
+- Oppgitt kontonummer i mva-meldingen skal stemme med kontonummer som finnes i mva-registeret
+- Oppgitt IBAN kontonummer i mva-meldingen skal stemme med kontonummer som finnes i mva-registeret
+- Gyldig kontonummer skal finnes ved utbetaling av merverdiavgift (minst en kontonummer eller IBAN skal finnes i meldingen eller registeret)
+- Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (alminnelig)
+- Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (primær)
+- Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (alminnelig)
+- Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (primær)
+- Rapporterende enhet i en fellesregistrering skal ha mva-plikt
+- Avgiftspliktig omsetning skal være under en million for alminnelig næring plikter med årlig skattleggingsperiode
+- Spesifikasjonslinjer skal ha en gyldig mva-kode i mva-meldinger som gjelder en alminnelig næring plikt
+- Spesifikasjonslinjer skal ha en gyldig mva-kode i mva-meldinger som gjelder en primærnæring plikt
+- Fradrag for inngående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (alminnelig)
+- Fradrag for inngående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (primær)
+- Fradrag for inngående og utgående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (alminnelig)
+- Fradrag for inngående og utgående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (primær)
+- Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (alminnelig)
+- Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (primær)
 - Omsetning før registrering kan ikke settes som merknad på denne mva-koden
 - Omberegning/retur kan ikke settes som merknad på denne mva-koden
 - Midlertidig innførsel kan ikke settes som merknad på denne mva-koden
