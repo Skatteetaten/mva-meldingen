@@ -109,6 +109,25 @@ Validation rules ready for test:
 - Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 31, 32 of 33
 - Specification lines that apply to adjustment can only be submitted on VAT code 1
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
+- There must be a valid account number if there is to be a repayment of VAT (the given account number is valid)
+- There must be a valid account number if there is to be a repayment of VAT (the given IBAN number is valid)
+- The specified account number in the VAT return must match the account number found in the VAT register
+- The specified IBAN number in the VAT return must match the account number found in the VAT register
+- There must be a valid account number if there is to be a repayment of VAT (at least on account number or IBAN is found in the VAT return or the register)
+- The specified category for the VAT return does not match the details in the VAT register (general industry)
+- The specified category for the VAT return does not match the details in the VAT register (primary industry)
+- The specified tax period does not match the details in the VAT register (general industry)
+- The specified tax period does not match the details in the VAT register (primary industry)
+- The reporting body for a joint registration must be registered for VAT
+- Total revnue in the VAT return must be under one million for yearly general industry returns
+- Specification lines must have valid VAT codes for returns relating to general industry registrations
+- Specification lines must have valid VAT codes for returns relating to primary industry registrations
+- Deductions for input VAT must not be declared without a registration in the VAT register (general industry)
+- Deductions for input VAT must not be declared without a registration in the VAT register (primary industry)
+- Deductions for input and output VAT must not be declared without a registration in the VAT register (general industry)
+- Deductions for input and output VAT must not be declared without a registration in the VAT register (primary industry)
+- VAT returns must not be sent in before the related tax period has ended (general industry)
+- VAT returns must not be sent in before the related tax period has ended (primary industry)
 - Revenue before registration can not be submitted as information on this VAT code
 - Refund information can not be submitted on this VAT code
 - Temporary import information can not be submitted on this VAT code
