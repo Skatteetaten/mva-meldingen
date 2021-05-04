@@ -1,4 +1,4 @@
-# Implementasjonsguide for systeminnsending av mva-meldingen
+# Introduksjon til systeminnsending av mva-meldingen
 
 ## Bakgrunn og behov
 
