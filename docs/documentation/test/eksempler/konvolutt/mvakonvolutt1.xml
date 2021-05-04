@@ -11,17 +11,39 @@
   </skattleggingsperiode>
   <innsendingstype>komplett</innsendingstype>
   <instansstatus>En status</instansstatus>
-  <opprettetAv>Ola Nordmann</opprettetAv>
+  <opprettetAv>Hugo Bjørvik</opprettetAv>
   <opprettingstidspunkt>2017-05-15T08:41:13+01:00</opprettingstidspunkt>
   <endringstidspunkt>2013-12-21T12:32:42+01:00</endringstidspunkt>
   <vedlegg>
     <vedleggstype>binaerVedlegg</vedleggstype>
     <kildegruppe>sluttbruker</kildegruppe>
-    <opprettetAv>Ola Nordmann</opprettetAv>
+    <opprettetAv>Hugo Bjørvik</opprettetAv>
     <opprettingstidspunkt>2016-02-20T15:56:29+01:00</opprettingstidspunkt>
     <vedleggsfil>
-      <filnavn>Mystisk-fil</filnavn>
+      <filnavn>mva-vedlegg</filnavn>
       <filekstensjon>xml</filekstensjon>
+      <filinnhold>En mystisk fil</filinnhold>
+    </vedleggsfil>
+  </vedlegg>
+  <vedlegg>
+    <vedleggstype>binaerVedlegg</vedleggstype>
+    <kildegruppe>sluttbruker</kildegruppe>
+    <opprettetAv>Hugo Bjørvik</opprettetAv>
+    <opprettingstidspunkt>2016-02-20T15:56:29+01:00</opprettingstidspunkt>
+    <vedleggsfil>
+      <filnavn>pdf-vedlegg</filnavn>
+      <filekstensjon>pdf</filekstensjon>
+      <filinnhold>En mystisk fil</filinnhold>
+    </vedleggsfil>
+  </vedlegg>
+  <vedlegg>
+    <vedleggstype>binaerVedlegg</vedleggstype>
+    <kildegruppe>sluttbruker</kildegruppe>
+    <opprettetAv>Hugo Bjørvik</opprettetAv>
+    <opprettingstidspunkt>2016-02-20T15:56:29+01:00</opprettingstidspunkt>
+    <vedleggsfil>
+      <filnavn>png-vedlegg</filnavn>
+      <filekstensjon>png</filekstensjon>
       <filinnhold>En mystisk fil</filinnhold>
     </vedleggsfil>
   </vedlegg>
@@ -31,7 +53,7 @@
     <opprettetAv>Karen Bjar</opprettetAv>
     <opprettingstidspunkt>2019-02-20T15:56:29+01:00</opprettingstidspunkt>
     <vedleggsfil>
-      <filnavn>Mytisk-fil</filnavn>
+      <filnavn>melding_xml</filnavn>
       <filekstensjon>xml</filekstensjon>
       <filinnhold>En mystisk fil</filinnhold>
     </vedleggsfil>
