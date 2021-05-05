@@ -28,7 +28,7 @@ The ERP-system must do the following:
    - Upload 0 or more attachements
    - Submit MvaMeldingInnsending
 
-Skatteetaten have made available a test application that shows how the steps described above can be done. This is written in [jupyter notbook format](https://jupyter.org/):
+Skatteetaten have made available a test application that shows how the steps described above can be done. This is written in [jupyter notebook format](https://jupyter.org/):
 
 1. [Jupyter notebook demo for retrieving, validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Download the folder test and run the script demo.ipynb (the script will execute all steps in the process: call ping service to check the connection and validate the mva tax return.
 2. [Jupyter notebook demo for retrieving, validation and submitting](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/message-submission.ipynb). Run the script demo.ipynb. The script will execute all steps in the process.
