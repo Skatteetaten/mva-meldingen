@@ -92,7 +92,7 @@ The following validation rules are definded for the VAT return listing:
 - Seasonal variation information can not be submitted on this VAT code
 - Credit not information can not be submitted on this VAT code
 
-## Description of detailed validation rules
+## Detailed description of the validation rules
 
 Validation of the VAT return is implemented with a set of rules that are run automatically to check the validity of the message.
 The rules are designed so that they are both documentation of the rules for the message and runnable by the system.
