@@ -88,63 +88,6 @@ Etter login og tokenforespørsel vil man ha et ID-porten-access-token. Dette tok
 
 Se også detaljer i kjørende eksempler for både login, validering og innsending, skrevet i Python nevnt under kapittelet "Innhold i testen".
 
-# Valderingsregler
-
-Valideringsregler klare for test:
-
-- Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
-- Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
-- Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler
-- Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler
-- Merknad til beløp med motsatt fortegn som gjelder spesifikasjonslinje for tilbakeføring av inngående mva gitt i mval §9-6 og §9-7
-- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 81)
-- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 83)
-- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift (kode 86)
-- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift (kode 88)
-- Fradragsført inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett, skal være mindre enn eller lik utgående avgift
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett (kode 81)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett (kode 83)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett (kode 86)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett (kode 88)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett (kode 81)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett (kode 83)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett (kode 86)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett (kode 88)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av klimakvoter og gull med fradragsrett
-- Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
-- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
-- Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (alminnelig)
-- Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (primær)
-- Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (alminnelig)
-- Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (primær)
-- Rapporterende enhet i en fellesregistrering skal ha mva-plikt
-- Avgiftspliktig omsetning skal være under en million for alminnelig næring plikter med årlig skattleggingsperiode
-- Spesifikasjonslinjer skal ha en gyldig mva-kode i mva-meldinger som gjelder en alminnelig næring plikt
-- Spesifikasjonslinjer skal ha en gyldig mva-kode i mva-meldinger som gjelder en primærnæring plikt
-- Fradrag for inngående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (alminnelig)
-- Fradrag for inngående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (primær)
-- Fradrag for inngående og utgående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (alminnelig)
-- Fradrag for inngående og utgående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (primær)
-- Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (alminnelig)
-- Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (primær)
-- Omsetning før registrering kan ikke settes som merknad på denne mva-koden
-- Omberegning/retur kan ikke settes som merknad på denne mva-koden
-- Midlertidig innførsel kan ikke settes som merknad på denne mva-koden
-- Gjeninnførsel kan ikke settes som merknad på denne mva-koden
-- Tolldeklarasjon på feil org.nr. kan ikke settes som merknad på denne mva-koden
-- Gjenutførsel kan ikke settes som merknad på denne mva-koden
-- Gjenutførsel eller retur kan ikke settes som merknad på denne mva-koden
-- Midlertid utførsel kan ikke settes som merknad på denne mva-koden
-- Tjenesteeksport kan ikke settes som merknad på denne mva-koden
-- Store anskaffelser kan ikke settes som merknad på denne mva-koden
-- Anskaffelser før mva-plikt kan ikke settes som merknad på denne mva-koden
-- Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden
-- Sesongvariasjon kan ikke settes som merknad på denne mva-koden
-- Kreditnota kan ikke settes som merknad på denne mva-koden
-
 # Testtilfeller mva-melding
 
 Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
