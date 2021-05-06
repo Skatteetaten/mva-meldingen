@@ -163,10 +163,20 @@ We recommend that the the validation has been invoked and has been successful be
 If the validation fails, there is no reason for the end user to submit it, because it will not be considered delivered and it will not be processed by the Tax Authorities. We recommend keeping submission disabled and display the validation errors for the VAT Return. The validation results will include which validation rule(s) fails and which MVA-codes entries are causing it.
 ![](Skisse til dokumentasjon 02 EN.png)
 
-### Validation succeeds
+### Validation succeeds without anomalies
 
-If the validation is successful, the submission feature can safely be enabled. If the validation succeeds, the Tax Authorities will most likely accept the VAT Return and process it automatically.
+If the validation is successful, the submission feature can safely be enabled. The Tax Authorities will accept the VAT Return and process valid Vat-Returns automatically.
+
+It is safe to enable the submit-feature, as shown with a "Send"-button in the following sketch.
+
 ![](Skisse til dokumentasjon 03 EN.png)
+
+### Validation succeeds with anomalies
+
+Anomalies will be returned in the validation result. The VAT Return will still be valid in the presence of anomalies. The Tax Authorities will accept the VAT Return and process valid VAT Returns with anomalies automatically.
+
+It is safe to enable the submit-feature, as shown with a "Send"-button in the following sketch.
+![](Skisse til dokumentasjon 02 EN Avviksmelding.png)
 
 ### Submitting the VAT Return
 
