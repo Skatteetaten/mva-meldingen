@@ -11,8 +11,12 @@
         <tekniskNavn>12</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
+                <tekst>Redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
                 <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Reduced rate - Passenger transport, accommodation, public broadcasting and entry to cinemas, sports events, amusement parks and experience centres</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -27,12 +31,16 @@
         <tekniskNavn>12</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
+                <tekst>Redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
                 <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Reduced rate - Passenger transport, accommodation, public broadcasting and entry to cinemas, sports events, amusement parks and experience centres</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
-            <fradato>2020-11-01</fradato>
+            <fradato>2021-07-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
             <satstype>redusert sats</satstype>
@@ -42,13 +50,17 @@
         <tekniskNavn>6</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
+                <tekst>Redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
                 <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Reduced rate - Passenger transport, accommodation, public broadcasting and entry to cinemas, sports events, amusement parks and experience centres</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
-            <fradato>2020-10-31</fradato>
-            <tildato>2020-04-01</tildato>
+            <fradato>2020-04-01</fradato>
+            <tildato>2021-06-30</tildato>
         </gyldigForBehandling>
         <kodetillegg>
             <satstype>redusert sats</satstype>
@@ -58,8 +70,12 @@
         <tekniskNavn>15</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Næringsmiddel</tekst>
+                <tekst>Redusert sats - Næringsmiddel</tekst>
                 <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Reduced rate - Foodstuffs</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -76,6 +92,10 @@
                 <tekst>Alminnelig sats</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Standard rate</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
             <fradato>2005-01-01</fradato>
@@ -91,6 +111,10 @@
                 <tekst>Null sats</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Zero rate</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
         <kodetillegg>
             <satstype>nullsats</satstype>
@@ -100,8 +124,12 @@
         <tekniskNavn>11,11</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>sats for førstehåndsomsetning av fisk</tekst>
+                <tekst>Redusert sats for førstehåndsomsetning av fisk</tekst>
                 <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Reduced rate - First-hand sales of fish</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -115,8 +143,12 @@
         <tekniskNavn>8</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
+                <tekst>Redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
                 <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Reduced rate - Passenger transport, accommodation, public broadcasting and entry to cinemas, sports events, amusement parks and experience centres</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -131,8 +163,12 @@
         <tekniskNavn>10</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
+                <tekst>Redusert sats - Persontransport, overnatting, allmennkringkasting samt adgang til kino, idrettsarrangementer, fornøyelsesparker og opplevelsessentre</tekst>
                 <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Reduced rate - Passenger transport, accommodation, public broadcasting and entry to cinemas, sports events, amusement parks and experience centres</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
