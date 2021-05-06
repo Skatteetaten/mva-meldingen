@@ -122,7 +122,7 @@ The tax authorities will validate the following:
 - That the attachments that have been uploaded are in the list of attachments in the VAT-Return-Filing file and vice versa.
 - That the Message category is the same in the VAT-Return file and the VAT-Return-Filing file.
 
-A 4xx error will be returned if the validation fails.
+The response will have the http status code 409 if the validation fails.
 
 When the upload is complete, the submission can be completed. The user who completes the submission must be authorized for this for the relevant organization. The end user must have one of the following Altinn roles:
 
@@ -132,18 +132,15 @@ When the upload is complete, the submission can be completed. The user who compl
 
 ### 7. Obtain the feedback of the submission from the Tax Administration's submission api
 
-Behind the scenes, this is an asynchronous operation involving multiple microservices. To facilitate a better user experience and ease the implementation of retrieving our feedback, we have made an extension to the rest-api that will block until the state of the submission has reached our definition of done. This will save you from implementing a loop that will poll the submission API for your submission status and interpret if we have provided feedback.
+Behind the scenes, this is an asynchronous operation involving multiple microservices. To facilitate a better user experience and ease the implementation of retrieving our feedback, we have made an extension to the rest-api that will block until the state of the submission has reached our definition of done. This will save you from implementing a loop that will poll the submission API for your submission status and determine if we have provided feedback.
+
+When the synchronous operation returns, it is possible to download the feedback. The return object includes links to the feedback files.
 
 ### 8. Download and interpret the Tax Administration's feedback
 
 Our feedback currently consists of:
 
-- A status for the submission (altinn instance substatus)
-- A Receipt in PDF-format
-- Payment information in xml
-- Validation results in xml
-
-When we have provided our feedback it will be possible to present the receipt for the end user.
+These documents are uploaded to the instance for the submission. The locations from which they can be downloaded can be found in the data-list element on the instance returned from either the instance api or the feedback extension of the api discussed in \# 7.
 
 ## UI Proposal
 
@@ -156,7 +153,7 @@ In the following sketches we assume that
 - The user has a valid ID-Porten Access Token
 - A VAT Return has been generated
 
-### Step 1 - Invoke validation
+### Invoke validation
 
 We recommend that the the validation has been invoked and has been successful before enabling submission. If a VAT return is submitted that is rendered invalid by Skatteetaten, the submission is considered "Not delivered", even though it is technically possible to submit an invalid VAT Return.
 ![](Skisse til dokumentasjon 01 EN.png)
