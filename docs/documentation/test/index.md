@@ -16,32 +16,6 @@ Testdokumentasjonen i Test 3 består av
 - Eksempler på testtilfeller – se lenger nede på denne siden
 - I tillegg er det behov for testbruker. Dette distribueres direkte til de som skal være med å teste.
 
-# Valderingsregler
-
-Valideringsregler klare for test:
-
-- Summen av beregnet avgift fra hver avgiftslinje skal være lik sum avgift i Mva-meldingen
-- Beregnet avgift skal stemme med oppgitt grunnlag ganger gjeldende sats
-- Beløp med motsatt fortegn som gjelder utgående avgift skal ha en merknad
-- Beløp med motsatt fortegn som gjelder fradragsført inngående avgift skal ha en merknad
-- Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1
-- Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
-- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
-- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal fradragsført beløp i inngående avgift være mindre enn eller lik utgående avgift
-- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal det alltid være fradragsført inngående avgift dersom det er beregnet utgående avgift
-- Ved kjøp av varer fra utlandet med fradragsrett skal det alltid være utgående avgift dersom det er fradragsført inngående avgift
-- Ved kjøp av varer fra utlandet med fradragsrett skal det alltid være fradragsført inngående avgift dersom det er beregnet utgående avgift
-- Ved omvendt avgiftsplikt for tjenester kjøpt fra utlandet med fradragsrett skal det alltid være utgående avgift dersom det er fradragsført inngående avgift
-- Ved kjøp av varer fra utlandet med fradragsrett skal fradragsført beløp i inngående avgift være mindre enn eller lik utgående avgift
-
-# Testtilfeller mva-melding
-
-Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
-
-Eksempler på xml-filer: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
-Inntil videre skal det ikke være %-tegn i fila dere sender inn
-
 # Testplan
 
 ## Innhold i testen
@@ -76,7 +50,7 @@ Kundeforholdet hos DigDir gir tilgang til deres selvbetjeningsløsning som igjen
 
 Inntil kundeforhold hos DigDir er etablert og integrasjon opprettet, kan sluttbrukersystemene i benytte Skatteetatens integrasjon. For denne testen har Skatteetaten opprettet følgende `client_id` som kan benyttes av sluttbrukersystemene:
 
-- `client_id: 38e634d9-5682-44ae-9b60-db636efe3156`
+- `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09`
 - Callback-URL til denne `client_id` er satt til http://localhost:12345/token (Hvis det er konsumenter som ønsker andre callback-URL kan vi ordne det)
 
 **Nyttige lenker:**
@@ -113,6 +87,13 @@ For detaljer rundt hvilken HTTP parametere som må sendes med i kallet, se filen
 Etter login og tokenforespørsel vil man ha et ID-porten-access-token. Dette tokenet benyttes som Bearer-token i HTTP-kall mot valideringstjenesten og må også veklses til et altinn-acess-token som må benyttes som Bearer-token i HTTP-kallene i innsendingsprosessen mot Skatteetatens Altinn3-API for mva-melding-innsending. Se detaljer for API'ene under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/api/" target="_blank">Api</a>.
 
 Se også detaljer i kjørende eksempler for både login, validering og innsending, skrevet i Python nevnt under kapittelet "Innhold i testen".
+
+# Testtilfeller mva-melding
+
+Se eksempler på testtilfeller for ny mva-melding [testtilfeller for ny mva-melding](Testtilfeller mva-melding.xlsx)
+
+Eksempler på xml-filer: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
+Inntil videre skal det ikke være %-tegn i fila dere sender inn
 
 # Tidsplan for test
 
