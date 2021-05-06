@@ -3,37 +3,6 @@ icon: "cloud"
 title: "Business rules"
 description: "Business rules for the VAT tax return"
 ---
-## Filling out the VAT tax return
-The following is a set of rules for filling out a VAT tax return. These rules are a summary of the more detailed validation rules. It is the validation rules below that are in fact implemented. Example tax returns may be found in the [Test page](/english/test/)
-
-- Beginning and end date for the taxation period must be within the registration period in the Enhetsregister (if it is given).
-- Taxpayer that is included in a registration as one taxable person (VAT-law 2-2 (3)) and who files the VAT return must be reporting taxpayer for the taxation period.
-- A legal entity that is not registered in the VAT register for the taxation period, and who files a VAT tax return, can only use the mvaKode 51, 87, 89 or 92.
-- The taxpayer must be registered as "primærnæring" in order to file a VAT tax return of the category "primær".
-- VAT return of the category "kompensasjon" must contain, and only contain, information that is described in the law of VAT compensation.
-- VAT tax return of category "primær" must contain, and only contain, information that covers the primary industries. Exception: if the yearly turnover in other industries is less then NOK 30000 information from other industries may be included.
-- VAT tax return of category "alminnelig" is to cover all other turnover and deductions for VAT.
-- VAT tax return of category "kompensasjon" can only include VAT codes 1, 11, 12, 13, 14, 15, 21, 22, 81, 82, 83, 84, 86, 87, 88 or 89.
-- Taxpayers that are registered for the simplified registration scheme for the taxation period can only use VAT code 3.
-- Grunnlag and sats is to be filled in when the VAT code is for outbound VAT regarding turnover, "uttak", the recipient of the goods or services is liable for the VAT, or import of goods or services.
-- Grunnlag and sats is not to be filled in for inbound VAT.
-- When a spesifikasjon is "TapPåKrav" the VAT code must be 1, 11, 12, 13.
-- When a spesifikasjon is a "Justering" or “tilbakeføringAvInngåendeMerverdiavgift" the VAT code must be 1.
-- When a spesifikasjon is an "Uttak" the VAT code must be in 3, 31, 32 or 33.
-
-
-| Norwegian term                         | English term                                          |
-| -------------------------------------- | ----------------------------------------------------- |
-| Grunnlag                               | Basis of calculation of VAT                           |
-| Kompensasjon                           | Compensation, regulated by the "VAT compensation act" |
-| Primær                                 | Primary industries like agriculture                   |
-| Alminnelig                             | Common industries                                     |
-| Sats                                   | VAT rate                                              |
-| TapPåKrav                              | Lost claims                                           |
-| Uttak                                  | Delivery of goods or services without remuneration    |
-| TilbakeføringAvInngåendeMerverdiavgift | Reversal of deductions of VAT                         |
-| Spesifikasjon                          | Specification                                         |
-
 ## Validation rules
 
 The validation rules are under development an new validation rules will be added.
