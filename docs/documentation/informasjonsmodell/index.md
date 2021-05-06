@@ -1,7 +1,9 @@
 ---
 icon: "cloud"
-title: "Informasjonsmodeller og kodeverk"
-description: "Informasjonsmodeller og kodeverk"
+title: "Informasjonsmodeller, xsd og kodelister"
+description: "xsd for mva-melding
+- xsd for innsending 
+- nedlastbare kodelister (xml)"
 ---
 
 Grafisk fremstilling av xsd og kodelister for mva-meldingen:
@@ -17,11 +19,16 @@ Enkel prototype på ny mva-melding:
 Versjon 9.0.0 av denne XSD'en ligger vedlagt og heter
 [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd)
 
-Eksempel på innsendt XML fil for en mva-melding på siste versjon kommer.
+Eksempler på mva-meldinger i xml-format finnes under test.
 
 # Kodelister
 
-En oversikt over kodelistene som er definert så langt finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
+En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
+
+- Kodeliste for mva-kode: [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml)
+- Kodeliste for mva-spesifikasjon: [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml)
+- Kodeliste for sats: [sats](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/sats.xml)
+- Kodeliste for merknader: [merknader](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknader.xml)
 
 # Merknader mot poster og hele meldingen
 
