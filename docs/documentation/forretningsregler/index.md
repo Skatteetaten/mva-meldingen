@@ -83,7 +83,7 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 - Sesongvariasjon kan ikke settes som merknad på denne mva-koden
 - Kreditnota kan ikke settes som merknad på denne mva-koden
 
-## Beskrivelse av detaljerte valideringsregler nedenfor
+## Detaljspesifikasjon av reglene:
 
 Validering av MVA-meldingen er implementert med et sett av regler som kjøres maskinelt
 for å sjekke gyldigheten av meldingen.
@@ -115,8 +115,6 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 
 **Linje 8 - Alvorlighetsgrad**: Dette er alvorlighetsgraden dersom valideringen feiler.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKATTEMELDING
-
-# Detaljspesifikasjon av reglene:
 
 ```kotlin
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
