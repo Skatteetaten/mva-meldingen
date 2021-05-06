@@ -81,63 +81,6 @@ For details on which HTTP parameters must be sent in the call, see the file [log
 
 After login and and token request you will have an ID-porten access-token. This token is used as a bearer token in a HTTP-call on the validation service, and must be exchanged for an Altinn-token, which is used as a bearer token in the HTTP-calls in the filing process on the Tax Administrations Altinn3-API for VAT tax return filing. For details, see <a href="https://skatteetaten.github.io/mva-meldingen/english/api/" target="_blank">Api</a>.
 
-# Validation rules
-
-Validation rules ready for test:
-
-- The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return
-- The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate
-- Additional information is lacking for output VAT amounts with opposite +/- sign
-- Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign
-- Additional information for specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7
-- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 81)
-- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 83)
-- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 86)
-- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 88)
-- Input VAT that has been claimed deductable on climate quotas and gold must be less than or equal to output VAT
-- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 81)
-- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 83)
-- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 86)
-- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 88)
-- There must be output VAT if input VAT has been deducted for deductable climate quotas and gold
-- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 81)
-- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 83)
-- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 86)
-- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88)
-- There must be deductable input VAT if there is output VAT on deductable climate quotas and gold
-- Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13
-- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 31, 32 of 33
-- Specification lines that apply to adjustment can only be submitted on VAT code 1
-- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
-- The specified category for the VAT return does not match the details in the VAT register (general industry)
-- The specified category for the VAT return does not match the details in the VAT register (primary industry)
-- The specified tax period does not match the details in the VAT register (general industry)
-- The specified tax period does not match the details in the VAT register (primary industry)
-- The reporting body for a joint registration must be registered for VAT
-- Total revnue in the VAT return must be under one million for yearly general industry returns
-- Specification lines must have valid VAT codes for returns relating to general industry registrations
-- Specification lines must have valid VAT codes for returns relating to primary industry registrations
-- Deductions for input VAT must not be declared without a registration in the VAT register (general industry)
-- Deductions for input VAT must not be declared without a registration in the VAT register (primary industry)
-- Deductions for input and output VAT must not be declared without a registration in the VAT register (general industry)
-- Deductions for input and output VAT must not be declared without a registration in the VAT register (primary industry)
-- VAT returns must not be sent in before the related tax period has ended (general industry)
-- VAT returns must not be sent in before the related tax period has ended (primary industry)
-- Revenue before registration can not be submitted as information on this VAT code
-- Refund information can not be submitted on this VAT code
-- Temporary import information can not be submitted on this VAT code
-- Re-importation information can not be submitted on this VAT code
-- Toll declaration information regarding the wrong organisation number can not be submitted on this VAT code
-- Re-exportation information can not be submitted on this VAT code.
-- Re-exportation or refund information can not be submitted on this VAT code
-- Temporary export information can not be submitted on this VAT code
-- Export of services information can not be submitted on this VAT code
-- Large procurement information can not be submitted on this VAT code
-- Information about procurements before being VAT registered can not be submitted on this VAT code
-- Insurance settlement information can not be submitted on this VAT code
-- Seasonal variation information can not be submitted on this VAT code
-- Credit not information can not be submitted on this VAT code
-
 # Test cases the VAT tax return
 
 Examples of test cases for the new VAT tax return [Test cases for the VAT tax retun](Testtilfeller mva-melding.xlsx)
