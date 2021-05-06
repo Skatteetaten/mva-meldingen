@@ -1,8 +1,8 @@
 import requests
-from Steg.InnsendingServices import printing
+from Steg.FilingServices import printing
 
 
-def last_opp(miljo, url, konvolutt_xml, token):
+def upload(url, konvolutt_xml, token):
     payload = bytearray(konvolutt_xml, 'utf-8')
     header = {'Authorization': 'Bearer ' + token, 'content-type': 'application/xml',
               'Content-Disposition': 'attachment; filename=konvolutt.xml'}

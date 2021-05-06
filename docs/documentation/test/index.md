@@ -36,7 +36,7 @@ Den er skrevet i [jupyter notebook formatet](https://jupyter.org/):
 
 1. [Jupyter notebook demo for henting og validering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Last ned katalogen 'test' og kjør skriptet demo.ipynb (skriptet vil utføre alle trinn som inngår i prosessen: kalle ping tjeneste å sjekke kobling og validere mva-melding)
 2. [Jupyter notebook demo for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/innsending-eksempel.ipynb). Kjør skriptet innsending.ipynb. Den vil kjøre alle stegene i prosessen.
-3. [Pyton skript å hent token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py) og [postman skript å validere melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). Første logge inn hos ID-Porten (se nedover), og da lagre token i format "Bearer <em>hentet-token</em>" som miljø variabel med navn "test-bearer" i postman, og bruk postman skript å validere melding.
+3. [Pyton skript å hent token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) og [postman skript å validere melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). Første logge inn hos ID-Porten (se nedover), og da lagre token i format "Bearer <em>hentet-token</em>" som miljø variabel med navn "test-bearer" i postman, og bruk postman skript å validere melding.
 4. [Eksempel XML-er](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
 
 ## Ta i bruk ID-porten
@@ -80,56 +80,13 @@ Vi benytter følgende testmiljø hos ID-porten:
 - /authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - /token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For detaljer rundt hvilken HTTP parametere som må sendes med i kallet, se filen [logge_inn_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py)
+For detaljer rundt hvilken HTTP parametere som må sendes med i kallet, se filen [log_in_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py)
 
 ## Kalle Mva-Meldings-API
 
 Etter login og tokenforespørsel vil man ha et ID-porten-access-token. Dette tokenet benyttes som Bearer-token i HTTP-kall mot valideringstjenesten og må også veklses til et altinn-acess-token som må benyttes som Bearer-token i HTTP-kallene i innsendingsprosessen mot Skatteetatens Altinn3-API for mva-melding-innsending. Se detaljer for API'ene under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/api/" target="_blank">Api</a>.
 
 Se også detaljer i kjørende eksempler for både login, validering og innsending, skrevet i Python nevnt under kapittelet "Innhold i testen".
-
-# Valderingsregler
-
-Valideringsregler klare for test:
-
-- Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
-- Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
-- Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler
-- Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler
-- Merknad til beløp med motsatt fortegn som gjelder spesifikasjonslinje for tilbakeføring av inngående mva gitt i mval §9-6 og §9-7
-- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 81)
-- Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 83)
-- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift (kode 86)
-- Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift (kode 88)
-- Fradragsført inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett, skal være mindre enn eller lik utgående avgift
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett (kode 81)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett (kode 83)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett (kode 86)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett (kode 88)
-- Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett (kode 81)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av varer fra utlandet med fradragsrett (kode 83)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett (kode 86)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett (kode 88)
-- Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av klimakvoter og gull med fradragsrett
-- Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
-- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
-- Omsetning før registrering kan ikke settes som merknad på denne mva-koden
-- Omberegning/retur kan ikke settes som merknad på denne mva-koden
-- Midlertidig innførsel kan ikke settes som merknad på denne mva-koden
-- Gjeninnførsel kan ikke settes som merknad på denne mva-koden
-- Tolldeklarasjon på feil org.nr. kan ikke settes som merknad på denne mva-koden
-- Gjenutførsel kan ikke settes som merknad på denne mva-koden
-- Gjenutførsel eller retur kan ikke settes som merknad på denne mva-koden
-- Midlertid utførsel kan ikke settes som merknad på denne mva-koden
-- Tjenesteeksport kan ikke settes som merknad på denne mva-koden
-- Store anskaffelser kan ikke settes som merknad på denne mva-koden
-- Anskaffelser før mva-plikt kan ikke settes som merknad på denne mva-koden
-- Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden
-- Sesongvariasjon kan ikke settes som merknad på denne mva-koden
-- Kreditnota kan ikke settes som merknad på denne mva-koden
 
 # Testtilfeller mva-melding
 

@@ -28,11 +28,11 @@ The ERP-system must do the following:
    - Upload 0 or more attachements
    - Submit MvaMeldingInnsending
 
-Skatteetaten have made available a test application that shows how the steps described above can be done. This is written in [jupyter notbook format](https://jupyter.org/):
+Skatteetaten have made available a test application that shows how the steps described above can be done. This is written in [jupyter notebook format](https://jupyter.org/):
 
 1. [Jupyter notebook demo for retrieving, validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Download the folder test and run the script demo.ipynb (the script will execute all steps in the process: call ping service to check the connection and validate the mva tax return.
 2. [Jupyter notebook demo for retrieving, validation and submitting](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/innsending-eksempel.ipynb). Run the script demo.ipynb. The script will execute all steps in the process.
-3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py) and [postman script to validate mva tax return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First step is to log in to ID-porten (described later), and store the token in the format `Bearer <token-here>` as an environment variable by the name "test-bearer" in postman, then use the postman script in order to validate the mva vat return.
+3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) and [postman script to validate mva tax return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First step is to log in to ID-porten (described later), and store the token in the format `Bearer <token-here>` as an environment variable by the name "test-bearer" in postman, then use the postman script in order to validate the mva vat return.
 4. [Example XML files](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
 
 ## Start using ID-porten
@@ -75,54 +75,11 @@ The following test environment at ID-porten is used:
 - /authorize endpoint: `https://oidc-ver2.difi.no/idporten-oidc-provider/authorize`
 - /token endpoint: `https://oidc-ver2.difi.no/idporten-oidc-provider/token`
 
-For details on which HTTP parameters must be sent in the call, see the file [logge_inn_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/logge_inn_idporten.py)
+For details on which HTTP parameters must be sent in the call, see the file [log_in_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py)
 
 ## Call the vat tax return API
 
 After login and and token request you will have an ID-porten access-token. This token is used as a bearer token in a HTTP-call on the validation service, and must be exchanged for an Altinn-token, which is used as a bearer token in the HTTP-calls in the filing process on the Tax Administrations Altinn3-API for VAT tax return filing. For details, see <a href="https://skatteetaten.github.io/mva-meldingen/english/api/" target="_blank">Api</a>.
-
-# Validation rules
-
-Validation rules ready for test:
-
-- The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return
-- The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate
-- Additional information is lacking for output VAT amounts with opposite +/- sign
-- Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign
-- Additional information for specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7
-- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 81)
-- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 83)
-- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 86)
-- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 88)
-- Input VAT that has been claimed deductable on climate quotas and gold must be less than or equal to output VAT
-- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 81)
-- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 83)
-- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 86)
-- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 88)
-- There must be output VAT if input VAT has been deducted for deductable climate quotas and gold
-- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 81)
-- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 83)
-- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 86)
-- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88)
-- There must be deductable input VAT if there is output VAT on deductable climate quotas and gold
-- Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13
-- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 31, 32 of 33
-- Specification lines that apply to adjustment can only be submitted on VAT code 1
-- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
-- Revenue before registration can not be submitted as information on this VAT code
-- Refund information can not be submitted on this VAT code
-- Temporary import information can not be submitted on this VAT code
-- Re-importation information can not be submitted on this VAT code
-- Toll declaration information regarding the wrong organisation number can not be submitted on this VAT code
-- Re-exportation information can not be submitted on this VAT code.
-- Re-exportation or refund information can not be submitted on this VAT code
-- Temporary export information can not be submitted on this VAT code
-- Export of services information can not be submitted on this VAT code
-- Large procurement information can not be submitted on this VAT code
-- Information about procurements before being VAT registered can not be submitted on this VAT code
-- Insurance settlement information can not be submitted on this VAT code
-- Seasonal variation information can not be submitted on this VAT code
-- Credit not information can not be submitted on this VAT code
 
 # Test cases the VAT tax return
 

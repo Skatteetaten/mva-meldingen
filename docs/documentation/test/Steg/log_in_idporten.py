@@ -47,10 +47,12 @@ class BrowserRedirectHandler(BaseHTTPRequestHandler):
 def random_bytes(n: int) -> bytes:
     return bytearray(random.getrandbits(8) for _ in range(n))
 
+
 def base64_response(s: str, encoding: str) -> str:
     base64_bytes = s.encode(encoding)
     message_bytes = base64.b64decode(base64_bytes)
     return message_bytes.decode(encoding)
+
 
 def decode_dokument(dokument):
     orginal_conten = dokument["content"]
@@ -72,6 +74,7 @@ def iter_dokumenter(d):
             pass
     return d
 
+
 def base64_decode_response(r: requests):
 
     if not r: # ikke 200 ok
@@ -83,7 +86,7 @@ def base64_decode_response(r: requests):
     return xmltodict.unparse(utkast_resp)
 
 
-def main_relay(**kwargs) -> dict:
+def get_idtoken(**kwargs) -> dict:
     # clear BrowserRedirectHandler result
     BrowserRedirectHandler.result = None
 
@@ -109,6 +112,10 @@ def main_relay(**kwargs) -> dict:
     pkce_secret = urlsafe_b64encode(random_bytes(32)).decode().rstrip("=").encode()
     pkce_challenge = urlsafe_b64encode(sha256(pkce_secret).digest()).decode()
     nonce = "{}".format(int(time.time() * 1e6))
+    print("state:", state)
+    print("pkce_secret:", pkce_secret.decode("utf-8"))
+    print("pkce_challenge:", pkce_challenge)
+    print("nonce:", nonce)
 
     u = 'https://{}/authorize'.format(AUTH_DOMAIN) + \
         quote(('?scope=openid'
@@ -193,4 +200,3 @@ def main_relay(**kwargs) -> dict:
 
     header = {'Authorization': 'Bearer ' + js['access_token']}
     return header
-

@@ -1,11 +1,11 @@
 from enum import Enum
 
 
-class Miljo(Enum):
+class Environment(Enum):
     tt02 = "https://skd.apps.tt02.altinn.no/"
 
 
-class InnloggingType(Enum):
+class LoginMethod(Enum):
     idporten = "idporten"
 
 
