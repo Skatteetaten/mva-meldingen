@@ -225,6 +225,40 @@ found in the `id` field in the returned instance.
 Example instanceUrl:
 `https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 
+**Error messages**
+
+_Response 400 - Bad Request:_ <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+_Response 403 - Forbidden:_ <br>
+Example Value:
+
+```JSON
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.3","title":"Forbidden","status":403,"traceId":"00-44eab35cb9ca2049b24de316f380a774-a724e045b09dfc44-00"}
+```
+
+This error message could occur if you try to create an instance where the logged-in user does not have the necessary rights to the organisation number defined in the request header.
+This can also occur if the user does not have the correct roles necessary for creating an instance.
+
+_Response 404 - Not Found:_ <br>
+Example Value:
+
+```JSON
+"Cannot lookup party: Failed to lookup party by organisationNumber: 123456789. The exception was: 404 - Not Found - "
+```
+
+This error message can occur when you set an invalid organisation number in the request header.
+
 ### Upload VAT return filing
 
 MvaMeldingInnsending is a data type for metadata for the VAT return filing.
@@ -280,12 +314,22 @@ Content:
 
 Example of xml file for VAT return filing can be found under <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>.
 
+**Error Messages**
+
+_Response 403 - Forbidden:_ <br>
+If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
+
 ### Upload VAT return
 
 The model is found here:
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a>
 
 The URL for uploading the VAT return has this structure:
+
+**Error Messages**
+
+_Response 403 - Forbidden:_ <br>
+If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
 
 ```
 {instanceUrl}/data?datatype=mvamelding
@@ -351,6 +395,11 @@ the attachment to be uploaded and that the file name in the
 and unique. This is the file name Skatteetaten will refer to
 for the attachment.
 
+**Error Messages**
+
+_Response 403 - Forbidden:_ <br>
+If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
+
 ### Submit VAT return filing
 
 This step uses the process api for the instance and the instance will go to the next step for VAT return filing in the application process. Currently, there is only
@@ -366,3 +415,78 @@ PUT {instanceUrl}/process/next
 ```
 
 The filing is now complete and can be found in Altinn's message archive.
+
+**Error Messages**
+
+_Response 403 - Forbidden:_ <br>
+If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
+
+_Response 409 - Conflict:_ <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+```
+"Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
+```
+
+You will get this error message if the organisation number used when creating the instance is different from the organisation number defined in vat-return submission.
+
+```
+"Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
+```
+
+You will get this error message if the organisation number defined in vat. return submission is different from the organisation number defined in vat-return.
+
+```
+"Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra listen med vedlegg som er lastet opp i instansen."
+```
+
+If the list of attachments defined in at-return submission is different from the attachments uploaded to the instance, you will get this error message.
+
+```
+"Valideringsfeil: Meldingskategorien i MvaMeldingInnsending (\"konvolutt\") er forsjellig fra Meldingskategorien i {filnavn}"
+```
+
+This error message will occur if the value of the field message category in vat-return submission is different from the message category in the vat-return.
+
+### Retrieving the instance
+
+**Error Messages**
+
+_Response 400 - Bad Request:_ <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+_Response 403 - Forbidden:_ <br>
+This error message will occur if the logged-in user attempt to retrieve the instance, but the person does not have the correct roles.
+
+_Response 404 - Not Found:_ <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```

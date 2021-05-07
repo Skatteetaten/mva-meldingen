@@ -197,6 +197,40 @@ Resten av kallene i sekvensen for innsendingen benytter `instansUrl`. Denne kan 
 
 Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 
+**Feilmeldinger**
+
+_Respons 400 - Bad Request:_ <br>
+Eksempel verdi
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+_Respons 403 - Forbidden:_ <br>
+Eksempel verdi
+
+```JSON
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.3","title":"Forbidden","status":403,"traceId":"00-44eab35cb9ca2049b24de316f380a774-a724e045b09dfc44-00"}
+```
+
+Denne feilmeldingen kan en få hvis en prøver å lage en instanse hvor innlogget bruker ikke har rettigheter til organisasjonen definert i request header.
+Dette vil da også gjelde hvis innlogget bruker ikke har tilstrekkelig roller for å opprette en instans.
+
+_Respons 404 - Not Found:_ <br>
+Eksempel verdi
+
+```JSON
+"Cannot lookup party: Failed to lookup party by organisationNumber: 123456789. The exception was: 404 - Not Found - "
+```
+
+Denne feilmeldingen kan en få hvis en setter organisasjonsnummeret i request headeren til noe ugyldig.
+
 ### Last Opp MvaMeldingInnsending
 
 MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
@@ -239,6 +273,11 @@ Content:
 
 Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>.
 
+**Feilmeldinger**
+
+_Respons 403 - Forbidden:_ <br>
+Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
+
 ### Last Opp MvaMelding
 
 Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a>
@@ -268,6 +307,11 @@ Content:
 ```
 
 Dette kallet vil laste opp xml-dokumentet til instansen.
+
+**Feilmeldinger**
+
+_Respons 403 - Forbidden:_ <br>
+Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
 ### Last Opp Vedlegg
 
@@ -304,6 +348,11 @@ Dette kallet vil laste opp pdf-dokumentet til instansen.
 
 Husk at `content-type` skal være passende for vedlegget som skal lastes opp og at filnavnet i `Content-Disposition`- headeren også bør være passende og unikt. Det er dette filnavnet Skatteetaten vil forholde seg til for vedlegget.
 
+**Feilmeldinger**
+
+_Respons 403 - Forbidden:_ <br>
+Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
+
 ### Send Inn Mva Melding Innsending
 
 Dette steget bruker prosess-apiet til instansen og instansen vil avslutte utfyllingssteget for Mva Melding Innsending og til neste steg i applikasjonens prosess for instansen. Foreløpig er det kun ett steg i applikasjonens prosess, så i skrivende stund vil dette kallet fullføre innsendingen.
@@ -318,3 +367,78 @@ HEADERS:
 ```
 
 Innsendingen vil nå kunne finnes i altinns meldings-arkiv.
+
+**Feilmeldinger**
+
+_Respons 403 - Forbidden:_ <br>
+Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
+
+_Respons 409 - Conflict:_ <br>
+Eksempel verdi
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+```
+"Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
+```
+
+Hvis organisasjonsnummeret som ble brukt til å lage instansen er forskjellig fra organisasjonsnummeret definert i MvaMeldingInnsending vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
+```
+
+Hvis organisasjonsnummeret som er definert i MvaMeldingInnsending er forskjellig fra organisjasnonsnummeret som er definert i mva-meldingen vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra listen med vedlegg som er lastet opp i instansen."
+```
+
+Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig fra de som har blitt lastet opp instansen vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: Meldingskategorien i MvaMeldingInnsending (\"konvolutt\") er forsjellig fra Meldingskategorien i {filnavn}"
+```
+
+Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig fra meldingskategorien i mva-meldigen vil en få denne feilmeldingen.
+
+### Hent instansen
+
+**Feilmeldinger**
+
+_Respons 400 - Bad Request:_ <br>
+Eksempel verdi
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+_Respons 403 - Forbidden:_ <br>
+Hvis innlogget bruker prøver å hente instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
+
+_Respons 404 - Not Found:_ <br>
+Eksempel verdi
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
