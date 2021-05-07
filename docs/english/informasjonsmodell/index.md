@@ -2,7 +2,7 @@
 icon: "cloud"
 title: "Information models, XSD and encoding"
 description: "xsd for VAT return (mva-melding)
-- XSD for filing information 
+- XSD for submitting information 
 - encoding in XML-format"
 ---
 
@@ -34,9 +34,9 @@ Overview of encoding/ code list: [Oversikten over kodelister](https://github.com
 
 Overview over remarks in accordance to the VAT codes in the VAT tax return [remarks in accordance to the VAT codes](merknader mot poster og hele meldingen.xlsx)
 
-# XSD for filing metadata
+# XSD for submitting metadata
 
-The filing of the VAT return requires an XML file containg metadata. This file must be according to the XSD for filing.
+The submission of the VAT return requires an XML file containg metadata. This file must be according to the XSD for submission.
 
 [no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd)
 

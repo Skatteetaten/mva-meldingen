@@ -4,19 +4,19 @@ title: "API"
 description: "API descriptions"
 ---
 
-## VAT return Validation and Filing API
+## VAT return Validation and Submission API
 
 VAT returns to be sent to Skatteetaten from an end-user
 system (SBS) should use these APIs:
 
 1.  Skatteetaten VAT return Validation API
-2.  Skatteetaten Altinn3 VAT-Return-Filing API
+2.  Skatteetaten Altinn3 VAT-Return-Submission API
 
 as described below.
 
-## Overall process for filing a VAT return
+## Overall process for Submission a VAT return
 
-The overall process for filing VAT return:
+The overall process for submitting VAT return:
 
 1.  Log in with ID-Porten
 
@@ -46,9 +46,9 @@ following:
     return.
 
 Skatteetaten assumes that the validation service is called in
-advance of filing the VAT return. This ensures that the VAT return
+advance of submitting the VAT return. This ensures that the VAT return
 has the correct format, content and increases the probability that
-the VAT return will be approved upon filing.
+the VAT return will be approved upon submission.
 
 **URL** : `POST https://<env>/api/mva-melding/valider`
 
@@ -59,7 +59,7 @@ e.g.`mp-test.sits.no`
 
 - According to XSD:<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">Skattemeldingformerverdiavgift.v0.9</a>
 
-**Example** : filing XML in invalid format
+**Example** : Submitting XML in invalid format
 
 POST <a href="https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider" target="_blank">https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiavgift/valider </a>
 
@@ -96,15 +96,15 @@ Content (body)
     </valideringsresultat>
 ```
 
-## VAT return filing Process
+## VAT return submission Process
 
-Filing of VAT returns are done with the Skatteetaten
+Submission of VAT returns are done with the Skatteetaten
 Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
-covers the needed sequence for filing VAT returns.
+covers the needed sequence for submitting VAT returns.
 
 It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.
 
-In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
+In addition, there are running examples of VAT return submission that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
 
 The filing process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:
 
