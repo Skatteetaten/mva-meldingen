@@ -366,3 +366,127 @@ PUT {instanceUrl}/process/next
 ```
 
 The filing is now complete and can be found in Altinn's message archive.
+
+## Error messages
+
+### `POST {org}/{app}/instances`
+
+**Response 400 - Bad Request:** <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+**Response 403 - Forbidden:** <br>
+Example Value:
+
+```JSON
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.3","title":"Forbidden","status":403,"traceId":"00-44eab35cb9ca2049b24de316f380a774-a724e045b09dfc44-00"}
+```
+
+This error message could occur if you try to create an instance where the logged-in user does not have the necessary rights to the organisation number defined in the request header.
+This can also occur if the user does not have the correct roles necessary for creating an instance.
+
+**Response 404 - Not Found:** <br>
+Example Value:
+
+```JSON
+"Cannot lookup party: Failed to lookup party by organisationNumber: 123456789. The exception was: 404 - Not Found - "
+```
+
+This error message can occur when you set an invalid organisation number in the request header.
+
+### `PUT {instansUrl}/data/{dataId}`
+
+**Response 403 - Forbidden:** <br>
+If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
+
+### `POST {instansUrl}/data?dataType=mvamelding`
+
+**Response 403 - Forbidden:** <br>
+If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
+
+### `POST {instansUrl}/data?dataType=vedlegg`
+
+**Response 403 - Forbidden:** <br>
+If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
+
+### `PUT {instansUrl}/process/next`
+
+**Response 403 - Forbidden:** <br>
+If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
+
+**Response 409 - Conflict:** <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+```
+"Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
+```
+
+You will get this error message if the organisation number used when creating the instance is different from the organisation number defined in vat-return submission.
+
+```
+"Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
+```
+
+You will get this error message if the organisation number defined in vat. return submission is different from the organisation number defined in vat-return.
+
+```
+"Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra listen med vedlegg som er lastet opp i instansen."
+```
+
+If the list of attachments defined in at-return submission is different from the attachments uploaded to the instance, you will get this error message.
+
+```
+"Valideringsfeil: Meldingskategorien i MvaMeldingInnsending (\"konvolutt\") er forsjellig fra Meldingskategorien i {filnavn}"
+```
+
+This error message will occur if the value of the field message category in vat-return submission is different from the message category in the vat-return.
+
+### `GET {instansUrl}`
+
+**Response 400 - Bad Request:** <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```
+
+**Response 403 - Forbidden:** <br>
+This error message will occur if the logged-in user attempt to retrieve the instance, but the person does not have the correct roles.
+
+**Response 404 - Not Found:** <br>
+Example Value
+
+```JSON
+{
+  "type": "string",
+  "title": "string",
+  "status": 0,
+  "detail": "string",
+  "instance": "string"
+}
+```

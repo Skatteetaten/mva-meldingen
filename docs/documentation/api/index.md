@@ -323,8 +323,8 @@ Innsendingen vil nå kunne finnes i altinns meldings-arkiv.
 
 ### `POST {org}/{app}/instances`
 
-**Response 400 - Bad Request:** <br>
-Example Value
+**Respons 400 - Bad Request:** <br>
+Eksempel verdi
 
 ```JSON
 {
@@ -336,8 +336,8 @@ Example Value
 }
 ```
 
-**Response 403 - Forbidden:** <br>
-Example Value:
+**Respons 403 - Forbidden:** <br>
+Eksempel verdi
 
 ```JSON
 {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.3","title":"Forbidden","status":403,"traceId":"00-44eab35cb9ca2049b24de316f380a774-a724e045b09dfc44-00"}
@@ -346,8 +346,8 @@ Example Value:
 Denne feilmeldingen kan en få hvis en prøver å lage en instanse hvor innlogget bruker ikke har rettigheter til organisasjonen definert i request header.
 Dette vil da også gjelde hvis innlogget bruker ikke har tilstrekkelig roller for å opprette en instans.
 
-**Response 404 - Not Found:** <br>
-Example Value:
+**Respons 404 - Not Found:** <br>
+Eksempel verdi
 
 ```JSON
 "Cannot lookup party: Failed to lookup party by organisationNumber: 123456789. The exception was: 404 - Not Found - "
@@ -355,28 +355,28 @@ Example Value:
 
 Denne feilmeldingen kan en få hvis en setter organisasjonsnummeret i request headeren til noe ugyldig.
 
-### `PUT {instansUrl}/data?dataType=mvamelding`
+### `PUT {instansUrl}/data/{dataId}`
 
-**Response 403 - Forbidden:** <br>
+**Respons 403 - Forbidden:** <br>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
-### `POST {instansUrl}/data/{dataId}`
+### `POST {instansUrl}/data?dataType=mvamelding`
 
-**Response 403 - Forbidden:** <br>
+**Respons 403 - Forbidden:** <br>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
 ### `POST {instansUrl}/data?dataType=vedlegg`
 
-**Response 403 - Forbidden:** <br>
+**Respons 403 - Forbidden:** <br>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
 ### `PUT {instansUrl}/process/next`
 
-**Response 403 - Forbidden:** <br>
+**Respons 403 - Forbidden:** <br>
 Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
-**Response 409 - Conflict:** <br>
-Example Value
+**Respons 409 - Conflict:** <br>
+Eksempel verdi
 
 ```JSON
 {
@@ -392,7 +392,7 @@ Example Value
 "Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
 ```
 
-Hvis organisasjonsnummeret som ble brukt til å lage instansen er forskjellig fra organisasjonsnummeret definert i MvaMeldingInnsend vil en få denne feilmeldingen.
+Hvis organisasjonsnummeret som ble brukt til å lage instansen er forskjellig fra organisasjonsnummeret definert i MvaMeldingInnsending vil en få denne feilmeldingen.
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
@@ -414,8 +414,8 @@ Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig f
 
 ### `GET {instansUrl}`
 
-**Response 400 - Bad Request:** <br>
-Example Value
+**Respons 400 - Bad Request:** <br>
+Eksempel verdi
 
 ```JSON
 {
@@ -427,11 +427,11 @@ Example Value
 }
 ```
 
-**Response 403 - Forbidden:** <br>
+**Respons 403 - Forbidden:** <br>
 Hvis innlogget bruker prøver å hente instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
-**Response 404 - Not Found:** <br>
-Example Value
+**Respons 404 - Not Found:** <br>
+Eksempel verdi
 
 ```JSON
 {
