@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kodeliste xmlns="urn:no:skatteetaten:kodelistebibliotek:domain:v1">
+    <tekniskNavn>merknadTilsvarendeMvakode</tekniskNavn>
+    <beskrivelse>
+        <spraakTekst>
+            <tekst>Kodeliste for å vise sammenheng mellom strukturerte merknader og mva koder i mva-melding</tekst>
+            <spraak>no</spraak>
+        </spraakTekst>
+        <spraakTekst>
+            <tekst>List of codes that show which structured remarks er valid for which  vat kodes in the tax return for VAT</tekst>
+            <spraak>en</spraak>
+        </spraakTekst>
+    </beskrivelse>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>forsikringsoppgjør</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 14</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>14</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 14</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>14</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 14</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>14</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 14</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>14</mvaKode>
+            <merknad>tolldeklarasjon på feil organisasjonsnummer</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 14</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>14</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 14</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>14</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 14</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>14</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 15</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>15</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 15</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>15</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 15</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>15</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 15</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>15</mvaKode>
+            <merknad>tolldeklarasjon på feil organisasjonsnummer</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 15</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>15</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 15</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>15</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 15</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>15</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 3</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>3</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 3</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>3</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 3</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>3</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 3</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>3</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 3</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>3</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 3</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>3</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 31</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>31</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 31</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>31</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 31</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>31</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 31</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>31</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 31</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>31</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 31</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>31</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>32</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>32</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>32</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>32</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>32</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>32</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 33</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>33</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 33</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>33</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 33</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>33</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 33</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>33</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 33</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>33</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 33</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>33</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 5</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>5</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 5</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>5</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 5</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>5</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 5</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>5</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 5</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>5</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 51</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>51</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 51</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>51</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 51</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>51</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>tolldeklarasjon på feil organisasjonsnummer</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>gjenutførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>gjenutførsel eller retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>midlertidig utførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>tjenesteeksport</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 52</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>52</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 6</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>6</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 6</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>6</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 6</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>6</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 6</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>6</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 6</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>6</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 6</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>6</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>gjeninnførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>tolldeklarasjon på feil organisasjonsnummer</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>gjenutførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>gjeninnførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>tolldeklarasjon på feil organisasjonsnummer</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>gjenutførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>82</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>gjeninnførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>tolldeklarasjon på feil organisasjonsnummer</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>gjenutførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 83</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>83</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>gjeninnførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>tolldeklarasjon på feil organisasjonsnummer</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>gjenutførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 85</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>85</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 85</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>85</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 85</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>85</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 85</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>85</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 85</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>85</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 85</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>85</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 85</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>85</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>87</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>omberegning/retur</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>midlertidig innførsel</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>store anskaffelser</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>anskaffelser foretatt før mva-plikt</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>sesongvariasjon</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 92</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>92</mvaKode>
+            <merknad>periodisering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 92</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>92</mvaKode>
+            <merknad>feil mva-kode brukt tidligere</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 92</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>92</mvaKode>
+            <merknad>feil i regnskapsprogram</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 92</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>92</mvaKode>
+            <merknad>omsetning før registrering</merknad>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 89</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>89</mvaKode>
+            <merknad>kreditnota</merknad>
+        </kodetillegg>
+    </kode>
+    <lokaltForvaltet>true</lokaltForvaltet>
+</kodeliste>
