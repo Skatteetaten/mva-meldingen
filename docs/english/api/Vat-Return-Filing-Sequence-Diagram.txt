@@ -1,0 +1,52 @@
+title Vat-Return-Filing - Sequence Diagram
+
+participant SBS
+participant ID-Porten(SBS)
+participant Altinn3-Exchange
+participant Altinn3-App
+participant Tax Administration API
+
+activate SBS
+SBS->ID-Porten(SBS):Log-in
+activate ID-Porten(SBS)
+ID-Porten(SBS)-->SBS:ID + Code
+SBS->ID-Porten(SBS):Code
+ID-Porten(SBS)-->SBS:ID-Porten-Token
+deactivate ID-Porten(SBS)
+
+SBS->Altinn3-Exchange:Exchange ID-Porten-Token
+activate Altinn3-Exchange
+Altinn3-Exchange-->SBS:Altinn-Token
+deactivate Altinn3-Exchange
+
+==Validation==
+SBS->Tax Administration API:Validate(vat-return)\nBearer: Altinn-Token
+activate Tax Administration API
+Tax Administration API-->SBS:Validation results
+deactivate Tax Administration API
+
+==Data Filling==
+SBS -> Altinn3-App:Create instance\nBearer: Altinn-Token
+activate Altinn3-App
+Altinn3-App-->SBS:Instance
+SBS->Altinn3-App:Upload vat-return filing\nBearer: Altinn-Token
+Altinn3-App-->SBS:Updated instance
+SBS->Altinn3-App:Upload vat-return\nBearer: Altinn-Token
+Altinn3-App-->SBS:Updated instance
+loop 0 til 57
+SBS->Altinn3-App:Upload attachments\nBearer: Altinn-Token
+Altinn3-App->SBS:Updated instance
+end
+
+==Complete Data Filling==
+SBS->Altinn3-App:Fullfør Utfylling\nBearer: Altinn-Token
+Altinn3-App->SBS:Oppdatert instans
+
+==Complete Filing==
+SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token
+Altinn3-App->SBS:Updated instance
+
+==Retrieve Feedback Synchronous==
+SBS->Altinn3-App:Get Feedback\nBearer: Altinn-Token
+Altinn3-App->SBS:Updated instance
+deactivate Altinn3-App

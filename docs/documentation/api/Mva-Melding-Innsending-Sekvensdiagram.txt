@@ -1,0 +1,52 @@
+title Mva-Melding-Innsending - Sekvensdiagram
+
+participant SBS
+participant ID-Porten(SBS)
+participant Altinn3-Exchange
+participant Altinn3-App
+participant Skatteetaten API
+
+activate SBS
+SBS->ID-Porten(SBS):Login
+activate ID-Porten(SBS)
+ID-Porten(SBS)-->SBS:ID + Code
+SBS->ID-Porten(SBS):Code
+ID-Porten(SBS)-->SBS:ID-Porten-Token
+deactivate ID-Porten(SBS)
+
+SBS->Altinn3-Exchange:Veksle ID-Porten-Token
+activate Altinn3-Exchange
+Altinn3-Exchange-->SBS:Altinn-Token
+deactivate Altinn3-Exchange
+
+==Validering==
+SBS->Skatteetaten API:Valider(mva-melding)\nBearer: Altinn-Token
+activate Skatteetaten API
+Skatteetaten API-->SBS:Valideringsresultat
+deactivate Skatteetaten API
+
+==Utfylling==
+SBS -> Altinn3-App:Opprett instans\nBearer: Altinn-Token
+activate Altinn3-App
+Altinn3-App-->SBS:Instans
+SBS->Altinn3-App:Last opp MvaMeldingInnsending\nBearer: Altinn-Token
+Altinn3-App-->SBS:Oppdatert instans
+SBS->Altinn3-App:Last opp mva-melding\nBearer: Altinn-Token
+Altinn3-App-->SBS:Oppdatert instans
+loop 0 til 57
+SBS->Altinn3-App:Last opp vedlegg\nBearer: Altinn-Token
+Altinn3-App->SBS:Oppdatert instans
+end
+
+==Fullfør Utfylling==
+SBS->Altinn3-App:Fullfør Utfylling\nBearer: Altinn-Token
+Altinn3-App->SBS:Oppdatert instans
+
+==Fullfør Innsending==
+SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token
+Altinn3-App->SBS:Oppdatert instans
+
+==Hent Tilbakemelding synkront==
+SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token
+Altinn3-App->SBS:Oppdatert instans
+deactivate Altinn3-App
