@@ -1,0 +1,34 @@
+title Vat-Return-Submission-Sequence-Diagram-asynchronous
+
+participant SBS
+participant ID-Porten(SBS)
+participant Altinn3-Exchange
+participant Altinn3-App
+participant Tax Administration API
+
+==Authentication==
+activate SBS
+SBS->ID-Porten(SBS):Log-in
+activate ID-Porten(SBS)
+ID-Porten(SBS)-->SBS:ID + Code
+SBS->ID-Porten(SBS):Code
+ID-Porten(SBS)-->SBS:ID-Porten-Token
+deactivate ID-Porten(SBS)
+
+SBS->Altinn3-Exchange:Exchange ID-Porten-Token
+activate Altinn3-Exchange
+Altinn3-Exchange-->SBS:Altinn-Token
+deactivate Altinn3-Exchange
+
+space 
+==Check feedback status towards Altinn3-App==
+loop Polling to feedback is ready
+SBS->Altinn3-App:Check status on feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/status
+Altinn3-App-->SBS:Status
+end
+
+space
+==Retrieve feedback synchronous towards Altinn3-App==
+SBS->Altinn3-App:Retrieve feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
+Altinn3-App-->SBS:Updated instance
+deactivate Altinn3-App

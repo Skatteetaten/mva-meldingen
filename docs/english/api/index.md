@@ -4,7 +4,7 @@ title: "API"
 description: "API descriptions"
 ---
 
-## VAT return Validation and Submission API
+# VAT return Validation and Submission API
 
 VAT returns to be sent to Skatteetaten from an end-user
 system (SBS) should use these APIs:
@@ -14,26 +14,56 @@ system (SBS) should use these APIs:
 
 as described below.
 
-## Overall process for Submission a VAT return
+# VAT return submission Process
 
-The overall process for submitting VAT return:
+Submission of VAT returns are done with the Skatteetaten
+Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
+covers the needed sequence for submitting VAT returns.
 
-1.  Log in with ID-Porten
+It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.
 
-    - Login is personal for each end user
+In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
 
-2.  Validate VAT return with Skatteetaten's
-    validation service
+The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:
 
-    - Authentication with ID-Porten token
+1. Authentication
+   - Change ID-Porten token to Altinn token
+2. Validation
+3. Data filling towards Altinn3-App
+   - Create instance towards Altinn3-App
+   - Upload vat-return submission towards Altinn3-App
+   - Upload vat-return towards Altinn3-App
+   - Upload attachements towards Altinn3-App
+4. Complete data filling towards Altinn3-App
+5. Complete submission towards Altinn3-App
+6. Retrieve feedback towards Altinn3-App
 
-3.  Exchange ID-Porten token with Altinn3 token
+The Instance VAT Filing API is available at this URL:
 
-    - The API call is described just below the sequence diagram
+```
+instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances"
+```
 
-4.  Send VAT return to the Altinn3 App
+In the following sequence diagram, the application URL will be hidden, so if `POST: /intances/` is written it is
+implicitly `POST: instanceApiUrl`
 
-    - Authentication with Altinn3 token
+![](Vat-Return-Submission-Sequence-Diagram.png)
+
+## Authentication
+
+### Change ID-Porten token to the Altinn token
+
+To change ID-Porten token, make the following calls:
+
+```JSON
+GET `https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten`
+    HEADERS:
+        "Authorization": "Bearer " + "{IDPortenToken}"
+           "content-type": "application/json"
+```
+
+and the response content will be a brand new altinnToken used as the
+Bearer token in the subsequent requests. The token currently has a duration of 8 hours. Later in 2021, Altinn3 will offer refresh tokens so that one login can last for up to 3 months.
 
 ## Validate tax return
 
@@ -74,7 +104,7 @@ With content (http body) that does not pass <a href="https://github.com/Skatteet
     </mvaMeldingDto>
 ```
 
-**Returns** :
+### Response
 
 status: 200
 Content (body)
@@ -96,54 +126,10 @@ Content (body)
     </valideringsresultat>
 ```
 
-## VAT return submission Process
+## Create Instance
 
-Submission of VAT returns are done with the Skatteetaten
-Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
-covers the needed sequence for submitting VAT returns.
-
-It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.
-
-In addition, there are running examples of VAT return submission that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
-
-The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:
-
-1.  Exchange ID-Porten token to Altinn-Token. This token is used with the Instance API.
-2.  Create Instance (sequence diagram starts here)
-3.  Upload 1 VAT return submission (MvaMeldingInnsending)
-4.  Upload 1 VAT return (mvaMeldingDto)
-5.  Upload 0 or more Attachments
-6.  File VAT return
-
-The Instance VAT Submission API is available at this URL:
-
-```
-instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances"
-```
-
-In the following sequence diagram, the application URL will be hidden, so if `POST: /intances/` is written it is
-implicitly `POST: instanceApiUrl`
-
-![](Mva-Melding-Innsending-Sekvensdiagram-English.png)
-
-### Change ID-Porten token to the Altinn token
-
-To change ID-Porten token, make the following calls:
-
-```JSON
-GET `https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten`
-    HEADERS:
-        "Authorization": "Bearer " + "{IDPortenToken}"
-           "content-type": "application/json"
-```
-
-and the response content will be a brand new altinnToken used as the
-Bearer token in the subsequent requests. The token currently has a duration of 8 hours. Later in 2021, Altinn3 will offer refresh tokens so that one login can last for up to 3 months.
-
-### Create Instance
-
-An instance is an object in altinn that follows the process and the data model defined by the application. Skatteetaten has a VAT-Return-Submission application which has a process with currently one
-step for submitting. The step is a combination of upload and confirm the VAT return.
+An instance is an object in altinn that follows the process and the data model defined by the application. Skatteetaten has a VAT-Return-Submission application which has a process with currently three
+steps for submitting. The steps are uploading data, confirm and feedback.
 
 In addition to being an object, an instance has a data object defined by a data model in the app.
 
@@ -170,7 +156,7 @@ POST {instanceApiUrl}
 
 This request will create the instance and return the following response
 
-#### Response
+### Response
 
 ```JSON
 Response HTTPCode: 201 (OK)
@@ -225,7 +211,7 @@ found in the `id` field in the returned instance.
 Example instanceUrl:
 `https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 
-**Error messages**
+### Error messages
 
 _Response 400 - Bad Request:_ <br>
 Example Value
@@ -259,7 +245,7 @@ Example Value:
 
 This error message can occur when you set an invalid organisation number in the request header.
 
-### Upload VAT return submission
+## Upload VAT return submission
 
 MvaMeldingInnsending is a data type for metadata for the VAT return submission.
 The object to populate is created during the instantiation and can
@@ -314,19 +300,19 @@ Content:
 
 Example of xml file for VAT return submission can be found under <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>.
 
-**Error Messages**
+### Error Messages
 
 _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
 
-### Upload VAT return
+## Upload VAT return
 
 The model is found here:
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a>
 
 The URL for uploading the VAT return has this structure:
 
-**Error Messages**
+### Error Messages
 
 _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
@@ -355,7 +341,7 @@ Content:
 
 This call will upload the xml document to the instance.
 
-### Upload Attachments
+## Upload Attachments
 
 It is possible to upload from 0 to 57 attachments, with an individual
 size of 25MB.
@@ -395,17 +381,16 @@ the attachment to be uploaded and that the file name in the
 and unique. This is the file name Skatteetaten will refer to
 for the attachment.
 
-**Error Messages**
+### Error Messages
 
 _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.
 
-### Submit VAT return submission
+## Complete Data Filling
 
-This step uses the process api for the instance and the instance will go to the next step for VAT return submission in the application process. Currently, there is only
-one step in the application process, so at the time of writing, this request will complete the submission.
+This step uses the process api for the instance and the instance will go to the next step for VAT return filing in the application process.
 
-To complete the submission, the following call is made to the process api for the instance:
+To complete the data filling, the following call is made to the process api for the instance:
 
 ```JSON
 PUT {instanceUrl}/process/next
@@ -414,9 +399,9 @@ PUT {instanceUrl}/process/next
         "content-type": "application/json"
 ```
 
-The submission is now complete and can be found in Altinn's message archive.
+The submission will now be in the confirmation step.
 
-**Error Messages**
+### Error Messages
 
 _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
@@ -458,9 +443,46 @@ If the list of attachments defined in at-return submission is different from the
 
 This error message will occur if the value of the field message category in vat-return submission is different from the message category in the vat-return.
 
-### Retrieving the instance
+## Complete vat-return submission
 
-**Error Messages**
+This step uses the process-api for the instance, and it will end the confirmation step for the submission.
+It will also update the instance to the next step in the application, the feedback step.
+
+To complete the submission, the following call is used towards the process-api on the instance:
+
+```JSON
+PUT {instansUrl}/process/next
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+    "content-type": "application/json"
+```
+
+The submission will now be in the feedback step.
+
+### Error Messages
+
+_Response 403 - Forbidden:_ <br>
+If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
+
+## Retrieve feedback
+
+This step will retrieve the feedback, which the Tax Administration have uploaded, on the instance.
+When the instance has recieved the feedback from the Tax Administration, it will be located in archive in the altinn inbox.
+To get the feedback one can either use a polling function using an asynchronous API-endpoint or by using a synchronous API-endpoint.
+
+Alternative approach for retrieving feedback, by using an asynchronous API-endpoint.
+![](Vat-Return-Submission-Sequence-Diagram-asynchronous.png)
+
+To get the feedback using a synchronous API-endpoint a call towards the instance is used:
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken"
+    "accept": "application/json"
+```
+
+### Error Messages
 
 _Response 400 - Bad Request:_ <br>
 Example Value
