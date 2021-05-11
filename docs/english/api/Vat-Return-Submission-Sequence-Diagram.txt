@@ -1,4 +1,4 @@
-title Vat-Return-Filing-Sequence-Diagram
+title Vat-Return-Submission-Sequence-Diagram
 
 participant SBS
 participant ID-Porten(SBS)
