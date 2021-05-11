@@ -34,4 +34,4 @@ Frontpage in English
 - Existing functionality in Altinn 2, such as inbox, roles and rights will also be available in the new service.
 - Reporting business, accountants and advisors can access submitted information, sign VAT returns and submit returns to the tax authority.
 - The tax authority will offer a portal solution where taxable persons can access submitted information, make changes and submit VAT returns.
-- Login and authentication of the end user or system is carried out using ID-porten or Maskinporten.
+- Login and authentication of the end user or system is carried out using ID-porten. The project will consider support for Maskinporten at a later stage.

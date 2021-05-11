@@ -6,7 +6,7 @@ MEMO-prosjektet utvikler ny skattemelding for merverdiavgift, heretter kalt mva-
 
 En ny mva-melding vil også gi nye muligheter for veiledning og dialog gjennom for eksempel validering før innsending og påminnelse om arbeidsoppgaver ved hjelp av arbeidsliste. I tillegg ønsker man å tilby økt grad av oppslag og innsyn for å oppå effektivisering og trygghet gjennom digital avstemming. Det er også et ønske om bedre samspill mellom regnskapssystemene og Altinn / Skatteetaten, for eksempel gjennom automatisk kvittering til regnskapssystem.
 
-Ønsker du mer informasjon om moderniseringsprosjektet for mva-området kan du lese mer på www.skatteetaten.no/nymva
+Ønsker du mer informasjon om moderniseringsprosjektet for mva-området kan du lese mer på [skatteetaten.no/nymva](http://skatteetaten.no/nymva)
 
 ## Hva er nytt
 
@@ -39,4 +39,4 @@ Her beskrives arkitekturen i den nye løsningen. Figuren under viser en oversikt
 - Eksisterende funksjonalitet i Altinn2 for Innboks og roller og rettigheter vil videreføres i den nye løsningen.
 - Skattepliktig og ev regnskapsfører eller revisor kan gå i Altinn for å se på innsendte data og signere og sende inn til Skatteetaten
 - Skatteetaten vil tilby portalløsning som gir personlige skattepliktige mulighet til innsyn og ev endring med påfølgende innsending av mva-melding.
-- Pålogging, autentisering av sluttbrukeren og/eller sluttbrukersystemet skal gjøres via ID-porten og/eller Maskinporten.
+- Pålogging, autentisering av sluttbrukeren og/eller sluttbrukersystemet skal gjøres via ID-porten. Prosjektet ser på å utvikle støtte for Maskinporten etter hvert.
