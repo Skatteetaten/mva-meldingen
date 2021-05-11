@@ -9,7 +9,7 @@ description: "Regler for utfylling av mva-melding "
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.
 Følgende valideringsregler er foreløpig definert for mva-meldingen:
 
-- Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
+- Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
 - Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler
 - Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler
@@ -64,7 +64,7 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 
 ## Detaljspesifikasjon av reglene:
 
-Validering av MVA-meldingen er implementert med et sett av regler som kjøres maskinelt
+Validering av mva-meldingen er implementert med et sett av regler som kjøres maskinelt
 for å sjekke gyldigheten av meldingen.
 Reglene er utformet slik at de både er dokumentasjon av reglene for meldingen og kjørbare maskinelt.
 Eksempel på regel:
