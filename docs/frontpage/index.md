@@ -40,5 +40,3 @@ Her beskrives arkitekturen i den nye løsningen. Figuren under viser en oversikt
 - Skattepliktig og ev regnskapsfører eller revisor kan gå i Altinn for å se på innsendte data og signere og sende inn til Skatteetaten
 - Skatteetaten vil tilby portalløsning som gir personlige skattepliktige mulighet til innsyn og ev endring med påfølgende innsending av mva-melding.
 - Pålogging, autentisering av sluttbrukeren og/eller sluttbrukersystemet skal gjøres via ID-porten. Prosjektet ser på å utvikle støtte for Maskinporten etter hvert.
-
-Mer informasjon om moderniseringsprosjektet kan du finne på [skatteetaten.no/nymva](https://www.skatteetaten.no/nymva)
