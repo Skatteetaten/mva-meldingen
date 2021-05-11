@@ -4,6 +4,8 @@ title: "ID-Porten & Authentication"
 description: "How to authenticate with ID-Porten"
 ---
 
+## Introduction
+
 ## Start using ID-porten
 
 When starting testing it is possible to use the Norwegian Tax Administration ID-porten integration , however we recommend setting up your own integration, as the process is partially manual, and when using the service in production each user must have their own integration. Another advantage of starting the integration process early is that the integration can be tested in the test environment. ID-porten is owned by the Norwegian Digitalisation Agency (Digdir) and details on how to start using ID-porten is provided here: <a href="https://samarbeid.digdir.no/id-porten/id-porten/18" target="_blank">ID-Porten documentation</a>. When ordering access, please provide information that you would like to access the skattemeldings-API from Skatteetaten.
