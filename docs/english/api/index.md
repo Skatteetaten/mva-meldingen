@@ -106,16 +106,16 @@ It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-me
 
 In addition, there are running examples of VAT return submission that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
 
-The filing process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:
+The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:
 
 1.  Exchange ID-Porten token to Altinn-Token. This token is used with the Instance API.
 2.  Create Instance (sequence diagram starts here)
-3.  Upload 1 VAT return filing (MvaMeldingInnsending)
+3.  Upload 1 VAT return submission (MvaMeldingInnsending)
 4.  Upload 1 VAT return (mvaMeldingDto)
 5.  Upload 0 or more Attachments
 6.  File VAT return
 
-The Instance VAT Filing API is available at this URL:
+The Instance VAT Submission API is available at this URL:
 
 ```
 instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances"
@@ -142,8 +142,8 @@ Bearer token in the subsequent requests. The token currently has a duration of 8
 
 ### Create Instance
 
-An instance is an object in altinn that follows the process and the data model defined by the application. Skatteetaten has a VAT-Return-Filing application which has a process with currently one
-step for filing. The step is a combination of upload and confirm the VAT return.
+An instance is an object in altinn that follows the process and the data model defined by the application. Skatteetaten has a VAT-Return-Submission application which has a process with currently one
+step for submitting. The step is a combination of upload and confirm the VAT return.
 
 In addition to being an object, an instance has a data object defined by a data model in the app.
 
@@ -212,7 +212,7 @@ Response HTTPCode: 201 (OK)
     }
 ```
 
-The rest of the requests in the sequence for the filing use
+The rest of the requests in the sequence for the submission use
 `instanceUrl`. This can be found from the response at the
 creation of the instance. See the example of the response above.
 
@@ -225,28 +225,28 @@ found in the `id` field in the returned instance.
 Example instanceUrl:
 `https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 
-### Upload VAT return filing
+### Upload VAT return submission
 
-MvaMeldingInnsending is a data type for metadata for the VAT return filing.
+MvaMeldingInnsending is a data type for metadata for the VAT return submission.
 The object to populate is created during the instantiation and can
 be found in the instance object's `data` list and has
 `"dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1"`.
-Since this object already exists when uploading VAT return filing,
+Since this object already exists when uploading VAT return submission,
 PUT is used to update the data element.
 
-The model for VAT return filing can be found here:
+The model for VAT return submission can be found here:
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd</a>
 
 Url to MvaMeldingInnsending has this structure:
 
 ```
-vatReturnFilingUrl = {instanceApiUrl}/{partyId}/{instanceGuid}/data/{dataGuid}
+vatReturnSubmissionUrl = {instanceApiUrl}/{partyId}/{instanceGuid}/data/{dataGuid}
 ```
 
 where `{dataGuid}` is the ID of the data object of the
 instance.
 
-There are 2 ways to derive the `vatReturnFilingUrl` and
+There are 2 ways to derive the `vatReturnSubmissionUrl` and
 both use the instance's data list element that has the data type
 `no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1`.
 When the instance is created, there is only one element in the list.
@@ -259,12 +259,12 @@ From the data element you can either:
 - or use the `selfLinks.apps` value
   `{instanceDataAppUrl}`, as shown in the instance
   response in the previous step.
-  - `vatReturnFilingUrl = {instanceDataAppUrl}`
+  - `vatReturnSubmissionUrl = {instanceDataAppUrl}`
 
-You upload VAT return filing by using the data api for the instance:
+You upload VAT return submission by using the data api for the instance:
 
 ```
-PUT {vatReturnFilingUrl}
+PUT {vatReturnSubmissionUrl}
     HEADERS:
         "Authorization": "Bearer " + "{altinnToken}"
         "content-type": "text/xml"
@@ -278,7 +278,7 @@ Content:
     </mvameldinginnsending>
 ```
 
-Example of xml file for VAT return filing can be found under <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>.
+Example of xml file for VAT return submission can be found under <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>.
 
 ### Upload VAT return
 
@@ -351,12 +351,12 @@ the attachment to be uploaded and that the file name in the
 and unique. This is the file name Skatteetaten will refer to
 for the attachment.
 
-### Submit VAT return filing
+### Submit VAT return submission
 
-This step uses the process api for the instance and the instance will go to the next step for VAT return filing in the application process. Currently, there is only
-one step in the application process, so at the time of writing, this request will complete the filing.
+This step uses the process api for the instance and the instance will go to the next step for VAT return submission in the application process. Currently, there is only
+one step in the application process, so at the time of writing, this request will complete the submission.
 
-To complete the filing, the following call is made to the process api for the instance:
+To complete the submission, the following call is made to the process api for the instance:
 
 ```JSON
 PUT {instanceUrl}/process/next
@@ -365,4 +365,4 @@ PUT {instanceUrl}/process/next
         "content-type": "application/json"
 ```
 
-The filing is now complete and can be found in Altinn's message archive.
+The submission is now complete and can be found in Altinn's message archive.

@@ -102,7 +102,7 @@ The validation service will return a validation result, and it will be appropria
 A submission consists of the following files:
 
 - VAT-Return (MvaMelding)
-- VAT-Return-Filing (MvaMeldingInnsending)
+- VAT-Return-Submission (MvaMeldingInnsending)
 - Attachments
 
 and needs to be uploaded to the submission api in several calls. The sequence of calls is documented under the API documentation, and consists of a series of simple Http calls.
@@ -118,9 +118,9 @@ Once all the files have been uploaded, a call must be made to complete the uploa
 
 The tax authorities will validate the following:
 
-- That the organization number is the same in the VAT-Return file, the VAT-Return-Filing file and that the same organization number was used when creating the submission at the submission API.
-- That the attachments that have been uploaded are in the list of attachments in the VAT-Return-Filing file and vice versa.
-- That the Message category is the same in the VAT-Return file and the VAT-Return-Filing file.
+- That the organization number is the same in the VAT-Return file, the VAT-Return-Submission file and that the same organization number was used when creating the submission at the submission API.
+- That the attachments that have been uploaded are in the list of attachments in the VAT-Return-Submission file and vice versa.
+- That the Message category is the same in the VAT-Return file and the VAT-Return-Submission file.
 
 A 4xx error will be returned if the validation fails.
 
@@ -177,7 +177,7 @@ There are multiple steps in submitting the VAT Return using the submission API, 
 
 When clicking the Send-button we recommend that you
 
-1. Invoke the series of API calls described in the API-documentation for submission (filing)
+1. Invoke the series of API calls described in the API-documentation for submission.
 2. Invoke the synchronous (and blocking) API call discussed in #7 above to wait for feedback
 
 Both could be performed while som busy indicator like a spinner is being presented.

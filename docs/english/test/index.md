@@ -79,7 +79,7 @@ For details on which HTTP parameters must be sent in the call, see the file [log
 
 ## Call the vat tax return API
 
-After login and and token request you will have an ID-porten access-token. This token is used as a bearer token in a HTTP-call on the validation service, and must be exchanged for an Altinn-token, which is used as a bearer token in the HTTP-calls in the filing process on the Tax Administrations Altinn3-API for VAT tax return filing. For details, see <a href="https://skatteetaten.github.io/mva-meldingen/english/api/" target="_blank">Api</a>.
+After login and and token request you will have an ID-porten access-token. This token is used as a bearer token in a HTTP-call on the validation service, and must be exchanged for an Altinn-token, which is used as a bearer token in the HTTP-calls in the submission process on the Tax Administrations Altinn3-API for VAT tax return submission. For details, see <a href="https://skatteetaten.github.io/mva-meldingen/english/api/" target="_blank">Api</a>.
 
 # Test cases the VAT tax return
 
