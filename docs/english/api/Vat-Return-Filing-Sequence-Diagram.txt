@@ -32,7 +32,7 @@ space
 SBS -> Altinn3-App:Create instance\nBearer: Altinn-Token\nPOST: /instances/
 activate Altinn3-App
 Altinn3-App-->SBS:Instance
-SBS->Altinn3-App:Upload vat-return filing\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>
+SBS->Altinn3-App:Upload vat-return submission\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>
 Altinn3-App-->SBS:Updated instance
 SBS->Altinn3-App:Upload vat-return\nBearer: Altinn-Token\nPOST: /instances/<partyId>/<instanceGuid>/data?dataType=mvamelding
 Altinn3-App-->SBS:Updated instance
@@ -47,7 +47,7 @@ SBS->Altinn3-App:Fullfør Utfylling\nBearer: Altinn-Token\nPUT: /instances/<part
 Altinn3-App-->SBS:Updated instance
 
 space
-==Complete filing towards Altinn3-App==
+==Complete Submission towards Altinn3-App==
 SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Updated instance
 

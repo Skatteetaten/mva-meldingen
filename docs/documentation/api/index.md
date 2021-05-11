@@ -45,8 +45,6 @@ I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er 
 
 ![](Mva-Melding-Innsending-Sekvensdiagram.png)
 
-![](Mva-Melding-Innsending-Sekvensdiagram-asynkron.png)
-
 ## Veksle ID-porten token til Altinn-token
 
 For å veksle ID-porten-tokenet må man gjøre følgende kall:
@@ -428,6 +426,9 @@ Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men p
 Dette steget vil hente tilbakemeldingen på instansen som Skatteetaten har lastet opp.
 Når instansen har fått tilbakemelding fra Skatteetaten vil den befinne seg i arkivet i altinn-innboksen.
 For å få tak i tilbakemeldingene kan man enten polle ved bruk av et asynkron API-endepunkt eller ved å bruke et synkron API-endepunkt.
+
+Alternativ tilnærming for å hente tilbakemelding ved bruk av et asynkron API-endepunkt.
+![](Mva-Melding-Innsending-Sekvensdiagram-asynkron.png)
 
 For å få tak i tilbakemeldingen ved bruk av et synkron API-endepunkt utføres det et kall mot instansen:
 

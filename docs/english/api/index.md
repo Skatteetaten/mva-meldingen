@@ -48,8 +48,6 @@ implicitly `POST: instanceApiUrl`
 
 ![](Vat-Return-Filing-Sequence-Diagram.png)
 
-![](Vat-Return-Filing-Sequence-Diagram-asynchronous.png)
-
 ## Change ID-Porten token to the Altinn token
 
 To change ID-Porten token, make the following calls:
@@ -469,7 +467,10 @@ This step will retrieve the feedback, which the Tax Administration have uploaded
 When the instance has recieved the feedback from the Tax Administration, it will be located in archive in the altinn inbox.
 To get the feedback one can either use a polling function using an asynchronous API-endpoint or by using a synchronous API-endpoint.
 
-To get the feedback using a synchronous API-endpoint a call towards the instance i used:
+Alternative approach for retrieving feedback, by using an asynchronous API-endpoint.
+![](Vat-Return-Filing-Sequence-Diagram-asynchronous.png)
+
+To get the feedback using a synchronous API-endpoint a call towards the instance is used:
 
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback
