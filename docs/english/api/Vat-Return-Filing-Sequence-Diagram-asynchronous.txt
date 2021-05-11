@@ -1,4 +1,4 @@
-title Vat-Return-Filing-Sequence-Diagram
+title Vat-Return-Filing-Sequence-Diagram-asynchronous
 
 participant SBS
 participant ID-Porten(SBS)
@@ -46,7 +46,11 @@ Altinn3-App-->SBS:Updated instance
 SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Updated instance
 
-==Retrieve Feedback Synchronous==
-SBS->Altinn3-App:Get Feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
+==Retrieve Feedback Asynchronous==
+loop Polling to feedback is ready
+SBS->Altinn3-App:Check status on feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/status
+Altinn3-App-->SBS:Status
+end
+SBS->Altinn3-App:Retrieve feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
 Altinn3-App-->SBS:Updated instance
 deactivate Altinn3-App

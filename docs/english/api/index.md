@@ -124,7 +124,7 @@ instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2
 In the following sequence diagram, the application URL will be hidden, so if `POST: /intances/` is written it is
 implicitly `POST: instanceApiUrl`
 
-![](Mva-Melding-Innsending-Sekvensdiagram-English.png)
+![](Vat-Return-Filing-Sequence-Diagram.png)
 
 ### Change ID-Porten token to the Altinn token
 

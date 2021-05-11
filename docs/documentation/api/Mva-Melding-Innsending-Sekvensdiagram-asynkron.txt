@@ -1,4 +1,4 @@
-title Mva-Melding-Innsending-Sekvensdiagram
+title Mva-Melding-Innsending-Sekvensdiagram-asynkron
 
 participant SBS
 participant ID-Porten(SBS)
@@ -46,7 +46,12 @@ Altinn3-App-->SBS:Oppdatert instans
 SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Oppdatert instans
 
-==Hent Tilbakemelding Synkron==
-SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
+==Hent Tilbakemelding Asynkron==
+loop Polling til tilbakemelding er klar
+SBS->Altinn3-App:Sjekk om ferdig behandlet\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/status
+Altinn3-App-->SBS:Status
+end
+SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/
 Altinn3-App-->SBS:Oppdatert instans
+
 deactivate Altinn3-App
