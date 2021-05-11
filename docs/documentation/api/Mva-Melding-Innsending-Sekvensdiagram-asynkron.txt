@@ -1,0 +1,36 @@
+title Mva-Melding-Innsending-Sekvensdiagram-asynkron
+
+participant SBS
+participant ID-Porten(SBS)
+participant Altinn3-Exchange
+participant Altinn3-App
+participant Skatteetaten API
+
+==Autentisering==
+activate SBS
+SBS->ID-Porten(SBS):Login
+activate ID-Porten(SBS)
+ID-Porten(SBS)-->SBS:ID + Code
+SBS->ID-Porten(SBS):Code
+ID-Porten(SBS)-->SBS:ID-Porten-Token
+deactivate ID-Porten(SBS)
+
+SBS->Altinn3-Exchange:Veksle ID-Porten-Token
+activate Altinn3-Exchange
+Altinn3-Exchange-->SBS:Altinn-Token
+deactivate Altinn3-Exchange
+
+space
+==Sjekk tilbakemelding status mot Altinn3-App==
+loop Polling til tilbakemelding er klar
+activate Altinn3-App
+SBS->Altinn3-App:Sjekk om ferdig behandlet\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/status
+Altinn3-App-->SBS:Status
+end
+
+space
+==Hent tilbakemelding synkron mot Altinn3-App==
+SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/
+Altinn3-App-->SBS:Oppdatert instans
+
+deactivate Altinn3-App
