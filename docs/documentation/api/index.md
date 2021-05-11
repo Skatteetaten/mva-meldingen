@@ -25,6 +25,7 @@ I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebo
 Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
 
 1. Autentisering
+   - Veksle ID-porten token til Altinn-token
 2. Validering mot Skatteetaten
 3. Utfylling mot Altinn3-App
    - Opprett instans mot Altinn3-App
@@ -45,7 +46,9 @@ I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er 
 
 ![](Mva-Melding-Innsending-Sekvensdiagram.png)
 
-## Veksle ID-porten token til Altinn-token
+## Autentisering
+
+### Veksle ID-porten token til Altinn-token
 
 For å veksle ID-porten-tokenet må man gjøre følgende kall:
 

@@ -27,6 +27,7 @@ In addition, there are running examples of VAT return filing that use Jupyter No
 The filing process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:
 
 1. Authentication
+   - Change ID-Porten token to Altinn token
 2. Validation
 3. Data filling towards Altinn3-App
    - Create instance towards Altinn3-App
@@ -48,7 +49,9 @@ implicitly `POST: instanceApiUrl`
 
 ![](Vat-Return-Submission-Sequence-Diagram.png)
 
-## Change ID-Porten token to the Altinn token
+## Authentication
+
+### Change ID-Porten token to the Altinn token
 
 To change ID-Porten token, make the following calls:
 
