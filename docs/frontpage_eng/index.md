@@ -6,7 +6,7 @@ The MEMO-project is developing a new tax return for VAT compensation (VAT return
 Some simplification is a result of changes in the VAT return; fever sources of errors, easier returns, and making it easier to fulfil the duty to provide information.
 A new VAT return will also provide new opportunities for guidance and dialog through validation before submission, and reminders for tasks. In addition, it will be possible to offer an increased degree of access to information to achieve effectiveness and safety through digital reconciliation of the VAT return. There is also a desire for better interaction between accounting/ERP systems and Altinn/Tax Authority systems, for example automatic receipt for submitted VAT returns.
 
-If you want more information about the project go to [skatteetaten.nonymva](http://www.skatteetaten.no/nymva).
+If you want more information about the project go to [skatteetaten.no/nymva](http://www.skatteetaten.no/nymva).
 
 ## What's new
 
