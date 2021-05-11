@@ -6,6 +6,7 @@ participant Altinn3-Exchange
 participant Altinn3-App
 participant Skatteetaten API
 
+==Autentisering==
 activate SBS
 SBS->ID-Porten(SBS):Login
 activate ID-Porten(SBS)
@@ -19,13 +20,15 @@ activate Altinn3-Exchange
 Altinn3-Exchange-->SBS:Altinn-Token
 deactivate Altinn3-Exchange
 
-==Validering==
+space
+==Validering mot Skatteetaten==
 SBS->Skatteetaten API:Valider(mva-melding)\nBearer: Altinn-Token
 activate Skatteetaten API
 Skatteetaten API-->SBS:Valideringsresultat
 deactivate Skatteetaten API
 
-==Utfylling==
+space
+==Utfylling mot Altinn3-App==
 SBS -> Altinn3-App:Opprett instans\nBearer: Altinn-Token\nPOST: /instances/
 activate Altinn3-App
 Altinn3-App-->SBS:Instans
@@ -38,15 +41,18 @@ SBS->Altinn3-App:Last opp vedlegg\nBearer: Altinn-Token\nPOST: /instances/<party
 Altinn3-App-->SBS:Oppdatert instans
 end
 
-==Fullfør Utfylling==
+space
+==Fullfør utfylling mot Altinn3-App==
 SBS->Altinn3-App:Fullfør Utfylling\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Oppdatert instans
 
-==Fullfør Innsending==
+space
+==Fullfør innsending mot Altinn3-App==
 SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Oppdatert instans
 
-==Hent Tilbakemelding Synkron==
+space
+==Hent tilbakemelding synkron mot Altinn3-App==
 SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
 Altinn3-App-->SBS:Oppdatert instans
 deactivate Altinn3-App

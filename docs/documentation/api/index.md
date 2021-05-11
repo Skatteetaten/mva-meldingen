@@ -13,18 +13,52 @@ MVA Meldinger som skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) bu
 
 som beskrives under.
 
-## Overordnet prosess for innsending av MVA-melding
+# Prosess innsending og validering
 
-Den overordnede prosessen for å sende MVA-Melding:
+Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Innsending. Detaljert beskrivelse av Altinn3's Instans-API finnes her
+<a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Altinn Studio Instans API</a>. Inngående kjennskap til dette API'et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.
 
-1. Logge inn via ID-porten
-   - Login er personlig for hver sluttbruker
-1. Validere MVA-Melding mot Skatteetatens valideringstjeneste
-   - Autentisering med ID-porten token
-1. Veksle ID-porten token med Altinn3-token
-   - API-kallet er beskrevet like under sekvensdiagrammet
-1. Sende MVA-Melding mot Skatteetatens Altinn3
-   - Autentisering med Altinn3-token
+Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.
+
+I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>
+
+Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
+
+1. Autentisering
+2. Validering mot Skatteetaten
+3. Utfylling mot Altinn3-App
+   - Opprett instans mot Altinn3-App
+   - Last opp MvaMeldingInnsending mot Altinn3-App
+   - Last opp mva-melding mot Altinn3-App
+   - Last opp vedlegg mot Altinn3-App
+4. Fullfør utfylling mot Altinn3-App
+5. Fullfør innsending mot Altinn3-App
+6. Hent tilbakemelding mot Altinn3-App
+
+Instans API'et til Mva Melding Innsending er tilgjengelig på denne URLen:
+
+```
+instansApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances"
+```
+
+I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er skrevet `POST: /intances/` så er det implisitt `POST: instansApiUrl`
+
+![](Mva-Melding-Innsending-Sekvensdiagram.png)
+
+![](Mva-Melding-Innsending-Sekvensdiagram-asynkron.png)
+
+## Veksle ID-porten token til Altinn-token
+
+For å veksle ID-porten-tokenet må man gjøre følgende kall:
+
+```JSON
+GET `https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten`
+HEADERS:
+    "Authorization": "Bearer " + "{IDPortenToken}"
+       "content-type": "application/json"
+```
+
+og i responsen vil content være et rykende ferskt altinnToken som brukes som Bearer token i de resterende kallene. Tokenet har i dag en varighet på 8 timer. Senere i 2021 vil Altinn3 tilby refresh-tokens slik at en login vil kunne vare i opptil 3 mnd.
 
 ## Valider skattemelding
 
@@ -60,7 +94,7 @@ Med innhold (http body)som ikke passerer XML-validering basert på <a href="http
 </mvaMeldingDto>
 ```
 
-**Retur** :
+### Response
 
 status: 200
 Innhold (body)
@@ -83,50 +117,9 @@ Innhold (body)
 
 ```
 
-## Prosess Mva Melding Innsending
+## Opprett Instans
 
-Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Innsending. Detaljert beskrivelse av Altinn3's Instans-API finnes her
-<a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Altinn Studio Instans API</a>. Inngående kjennskap til dette API'et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.
-
-Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.
-
-I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>
-
-Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
-
-1. Veksle ID-porten token til Altinn-Token. Dette tokenet benyttes i alle kallene mot Instans-Apiet.
-2. Opprett Instans (sekvensdiagrammet starter her)
-3. Last Opp 1 MvaMeldingInnsending
-4. Last Opp 1 MvaMelding
-5. Last Opp 0 eller flere Vedlegg
-6. Send Inn Mva Melding Innsending
-
-Instans API'et til Mva Melding Innsending er tilgjengelig på denne URLen:
-
-```
-instansApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances"
-```
-
-I følgende sekvensdiagram vil applikasjonsUrl'en være skjult, så hvis det er skrevet `POST: /intances/` så er det implisitt `POST: instansApiUrl`
-
-![](Mva-Melding-Innsending-Sekvensdiagram.png)
-
-### Veksle ID-porten token til Altinn-token
-
-For å veksle ID-porten-tokenet må man gjøre følgende kall:
-
-```JSON
-GET `https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten`
-HEADERS:
-    "Authorization": "Bearer " + "{IDPortenToken}"
-       "content-type": "application/json"
-```
-
-og i responsen vil content være et rykende ferskt altinnToken som brukes som Bearer token i de resterende kallene. Tokenet har i dag en varighet på 8 timer. Senere i 2021 vil Altinn3 tilby refresh-tokens slik at en login vil kunne vare i opptil 3 mnd.
-
-### Opprett Instans
-
-En instans er et objekt i altinn som følger prosessen og datamodellen definert av en applikasjon. Skatteetaten har en Mva-Melding-Innsendings applikasjon har en prosess med foreløpig ett steg for innsending. Steget er et ufyllings-steg.
+En instans er et objekt i altinn som følger prosessen og datamodellen definert av en applikasjon. Skatteetaten har en Mva-Melding-Innsendings applikasjon som har en prosess med foreløpig tre steg for innsending. Stegene er utfyllings-, bekreftelses- og tilbakemeldings-steg.
 
 En instans har i tillegg til å være et objekt, et data-objekt definert av en datamodell i appen.
 
@@ -149,7 +142,7 @@ CONTENT/BODY:
 
 Dette kallet vil opprette instansen og returnere
 
-#### Response
+### Response
 
 ```JSON
 Response HTTPCode: 201 (OK)
@@ -197,7 +190,7 @@ Resten av kallene i sekvensen for innsendingen benytter `instansUrl`. Denne kan 
 
 Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 
-**Feilmeldinger**
+### Feilmeldinger
 
 _Respons 400 - Bad Request:_ <br>
 Eksempel verdi
@@ -231,7 +224,7 @@ Eksempel verdi
 
 Denne feilmeldingen kan en få hvis en setter organisasjonsnummeret i request headeren til noe ugyldig.
 
-### Last Opp MvaMeldingInnsending
+## Last Opp MvaMeldingInnsending
 
 MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
 
@@ -273,12 +266,12 @@ Content:
 
 Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>.
 
-**Feilmeldinger**
+### Feilmeldinger
 
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
-### Last Opp MvaMelding
+## Last Opp MvaMelding
 
 Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a>
 
@@ -308,12 +301,12 @@ Content:
 
 Dette kallet vil laste opp xml-dokumentet til instansen.
 
-**Feilmeldinger**
+### Feilmeldinger
 
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
-### Last Opp Vedlegg
+## Last Opp Vedlegg
 
 Det er mulig å laste opp fra 0 til 57 vedlegg, med en individuell størrelse på 25MB.
 
@@ -348,16 +341,16 @@ Dette kallet vil laste opp pdf-dokumentet til instansen.
 
 Husk at `content-type` skal være passende for vedlegget som skal lastes opp og at filnavnet i `Content-Disposition`- headeren også bør være passende og unikt. Det er dette filnavnet Skatteetaten vil forholde seg til for vedlegget.
 
-**Feilmeldinger**
+### Feilmeldinger
 
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
-### Send Inn Mva Melding Innsending
+## Fullfør utfylling
 
-Dette steget bruker prosess-apiet til instansen og instansen vil avslutte utfyllingssteget for Mva Melding Innsending og til neste steg i applikasjonens prosess for instansen. Foreløpig er det kun ett steg i applikasjonens prosess, så i skrivende stund vil dette kallet fullføre innsendingen.
+Dette steget bruker prosess-apiet til instansen og instansen vil avslutte utfyllingssteget for Mva Melding Innsending og til neste steg i applikasjonens prosess for instansen.
 
-For å fullføre innsendingen utføres følgende kall mot prosess-apiet til instansen:
+For å fullføre utfyllingen utføres følgende kall mot prosess-apiet til instansen:
 
 ```JSON
 PUT {instansUrl}/process/next
@@ -366,9 +359,9 @@ HEADERS:
     "content-type": "application/json"
 ```
 
-Innsendingen vil nå kunne finnes i altinns meldings-arkiv.
+Innsendingen vil nå være i bekreftelses-steget.
 
-**Feilmeldinger**
+### Feilmeldinger
 
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
@@ -410,9 +403,42 @@ Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig f
 
 Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig fra meldingskategorien i mva-meldigen vil en få denne feilmeldingen.
 
-### Hent instansen
+## Fullfør MvaMeldingInnsending
 
-**Feilmeldinger**
+Dette steget bruker prosess-apiet til instansen og instansen vil avslutte bekreftelsessteget for Mva Melding Innsending og oppdatere instansen til neste steg i applikasjonens prosess.
+
+For å fullføre innsendingen utføres følgende kall mot prosess-apiet til instansen:
+
+```JSON
+PUT {instansUrl}/process/next
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+    "content-type": "application/json"
+```
+
+Innsendingen vil nå være i tilbakemeldings-steget.
+
+### Feilmeldinger
+
+_Respons 403 - Forbidden:_ <br>
+Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
+
+## Hent tilbakemelding
+
+Dette steget vil hente tilbakemeldingen på instansen som Skatteetaten har lastet opp.
+Når instansen har fått tilbakemelding fra Skatteetaten vil den befinne seg i arkivet i altinn-innboksen.
+For å få tak i tilbakemeldingene kan man enten polle ved bruk av et asynkron API-endepunkt eller ved å bruke et synkron API-endepunkt.
+
+For å få tak i tilbakemeldingen ved bruk av et synkron API-endepunkt utføres det et kall mot instansen:
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken"
+    "accept": "application/json"
+```
+
+### Feilmeldinger
 
 _Respons 400 - Bad Request:_ <br>
 Eksempel verdi

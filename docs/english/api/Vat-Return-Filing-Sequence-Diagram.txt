@@ -6,6 +6,7 @@ participant Altinn3-Exchange
 participant Altinn3-App
 participant Tax Administration API
 
+==Authentication==
 activate SBS
 SBS->ID-Porten(SBS):Log-in
 activate ID-Porten(SBS)
@@ -19,13 +20,15 @@ activate Altinn3-Exchange
 Altinn3-Exchange-->SBS:Altinn-Token
 deactivate Altinn3-Exchange
 
-==Validation==
+space
+==Validation towards Tax Administration==
 SBS->Tax Administration API:Validate(vat-return)\nBearer: Altinn-Token
 activate Tax Administration API
 Tax Administration API-->SBS:Validation results
 deactivate Tax Administration API
 
-==Data Filling==
+space
+==Data filling towards Altinn3-App==
 SBS -> Altinn3-App:Create instance\nBearer: Altinn-Token\nPOST: /instances/
 activate Altinn3-App
 Altinn3-App-->SBS:Instance
@@ -38,15 +41,18 @@ SBS->Altinn3-App:Upload attachments\nBearer: Altinn-Token\nPOST: /instances/<par
 Altinn3-App->SBS:Updated instance
 end
 
-==Complete Data Filling==
+space
+==Complete data filling towards Altinn3-App==
 SBS->Altinn3-App:Fullfør Utfylling\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Updated instance
 
-==Complete Filing==
+space
+==Complete filing towards Altinn3-App==
 SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Updated instance
 
-==Retrieve Feedback Synchronous==
+space
+==Retrieve feedback synchronous towards Altinn3-App==
 SBS->Altinn3-App:Get Feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
 Altinn3-App-->SBS:Updated instance
 deactivate Altinn3-App
