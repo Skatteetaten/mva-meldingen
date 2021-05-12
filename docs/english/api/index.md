@@ -388,7 +388,7 @@ If the logged-in user attempt to upload a file to the instance, but the person d
 
 ## Complete Data Filling
 
-This step uses the process api for the instance and the instance will go to the next step for VAT return submission in the application process.
+This step uses the process api for the instance, and the instance will go to the next step for VAT return submission in the application process.
 
 To complete the data filling, the following call is made to the process api for the instance:
 

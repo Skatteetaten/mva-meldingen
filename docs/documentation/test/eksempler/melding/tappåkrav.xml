@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9">
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
 	<innsending>
 		<regnskapssystemsreferanse>1002</regnskapssystemsreferanse>
 		<regnskapssystem>
 			<systemnavn>zzx</systemnavn>
 			<systemversjon>4.34.3</systemversjon>
 		</regnskapssystem>
-		<innsender>
-			<norskIdentifikator>02067623456</norskIdentifikator>
-		</innsender>
-		<innsendingTidspunkt>2022-05-26T21:35:47Z</innsendingTidspunkt>
 	</innsending>
 	<skattegrunnlagOgBeregnetSkatt>
 		<skattleggingsperiode>
@@ -21,14 +17,11 @@
 		<fastsattMerverdiavgift>-100000</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 		<mvaKode>1</mvaKode>
-	<spesifikasjon>tap paa krav</spesifikasjon>
+			<spesifikasjon>tap paa krav</spesifikasjon>
 			<merverdiavgift>-100000</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>
 	<betalingsinformasjon>
-		<kontonummerForTilbakebetaling>
-			<norskKontonummer>999999999</norskKontonummer>
-		</kontonummerForTilbakebetaling>
 		<kundeIdentifikasjonsnummer>3400000932456870</kundeIdentifikasjonsnummer>
 	</betalingsinformasjon>
 	<skattepliktig>
