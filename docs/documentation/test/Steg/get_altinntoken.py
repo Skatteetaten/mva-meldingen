@@ -1,5 +1,4 @@
 import requests
-from Steg.SubmissionServices import printing
 
 
 def get(header):
@@ -9,6 +8,10 @@ def get(header):
     url = "https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten"
     header["content-type"] = "application/json"
     response = requests.request("GET", url, headers=header)
-    printing(response)
+
+    print("status code:", response.status_code)
+    print("reason:", response.reason)
+    print("headers:", response.headers)
+    print("content:", response.content.decode("utf-8"), "\n")
 
     return response.content.decode("utf-8")

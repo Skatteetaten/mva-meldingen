@@ -14,7 +14,7 @@ system (SBS) should use these APIs:
 
 as described below.
 
-# VAT return submission Process
+## Overall process for Submission and validating VAT return
 
 Submission of VAT returns are done with the Skatteetaten
 Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
@@ -22,9 +22,9 @@ covers the needed sequence for submitting VAT returns.
 
 It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.
 
-In addition, there are running examples of VAT return submission that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
+In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
 
-The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram and it is as follows:
+The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram, and it is as follows:
 
 1. Authentication
    - Change ID-Porten token to Altinn token
@@ -38,10 +38,10 @@ The submission process is performed with a sequence of calls to the Instance API
 5. Complete submission towards Altinn3-App
 6. Retrieve feedback towards Altinn3-App
 
-The Instance VAT Submission API is available at this URL:
+The Instance VAT Filing API is available at this URL:
 
 ```
-instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances"
+instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances"
 ```
 
 In the following sequence diagram, the application URL will be hidden, so if `POST: /intances/` is written it is
@@ -113,13 +113,13 @@ Content (body)
 <valideringsresultat>
         <status>UGYLDIG_SKATTEMELDING</status>
         <valideringsfeil>
-            <stiTilFeil>//innsending</stiTilFeil>
+            <stiTilFeil>//innfiling</stiTilFeil>
             <valideringsDetaljer>
                 <feilmelding>Mva meldingen må være på gyldig format og passere XML skjema valideringen</feilmelding>
                 <alvorlighetsgrad>UGYLDIG_SKATTEMELDING</alvorlighetsgrad>
                 <avvikKode>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</avvikKode>
                 <informasjon>cvc-complex-type.2.4.b: The content of element 'mvaMeldingDto' is not complete. One of
-                    '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0":innsending}' is expected.
+                    '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8":innfiling}' is expected.
                 </informasjon>
             </valideringsDetaljer>
         </valideringsfeil>
@@ -209,7 +209,7 @@ creation of the instance. See the example of the response above.
 found in the `id` field in the returned instance.
 
 Example instanceUrl:
-`https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
+`https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 
 ### Error messages
 
@@ -388,7 +388,7 @@ If the logged-in user attempt to upload a file to the instance, but the person d
 
 ## Complete Data Filling
 
-This step uses the process api for the instance, and the instance will go to the next step for VAT return submission in the application process.
+This step uses the process api for the instance and the instance will go to the next step for VAT return filing in the application process.
 
 To complete the data filling, the following call is made to the process api for the instance:
 

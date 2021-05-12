@@ -12,11 +12,12 @@ def validate_vat_return(token: dict, xml: str = None):
     url = f"{PORTAL_MELDING_URL}/valider"
     token["content-type"] = "application/xml"
     r = requests.post(url, data=xml, headers=token, verify=False)
-    print(r)
+
     print("status code:", r.status_code)
     print("reason:", r.reason)
-    print("headers:", r.headers, "\n")
+    print("headers:", r.headers)
     print("content:", r.content.decode("utf-8"), "\n")
+
     return r
 
 
@@ -28,6 +29,12 @@ def validate_example_file(token: dict, filnavn: str) -> str:
         xml = file.read().replace('\n', '').replace('\t', '').replace('%', '')
         r = requests.post(url, data=xml, headers=token, verify=False)
         r.raise_for_status()
+
+        print("status code:", r.status_code)
+        print("reason:", r.reason)
+        print("headers:", r.headers)
+        print("content:", r.content.decode("utf-8"), "\n")
+
         return r
 
 

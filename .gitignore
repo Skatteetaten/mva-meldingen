@@ -10,3 +10,4 @@ ts
 .ipynb_checkpoints
 /venv/
 *.pyc
+/docs/documentation/test/eksempler/tilbakemelding/
