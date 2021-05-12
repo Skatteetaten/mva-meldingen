@@ -404,6 +404,28 @@ Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig f
 
 Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig fra meldingskategorien i mva-meldigen vil en få denne feilmeldingen.
 
+Appen vil også kalle valideringstjenesten etter utfyllingssteget. Hvis den finner feil aller avvik i mva-meldingen vil det bli sendt tilbake med en 409 feilmelding,
+hvor selve valideringsresultatet vil ligge i bodyen.
+
+Eksempel body:
+
+```XML
+<valideringsresultat>
+    <status>UGYLDIG_SKATTEMELDING</status>
+    <valideringsfeil>
+        <stiTilFeil>//innsending</stiTilFeil>
+        <valideringsDetaljer>
+            <feilmelding>Mva meldingen må være på gyldig format og passere XML skjema valideringen</feilmelding>
+            <alvorlighetsgrad>UGYLDIG_SKATTEMELDING</alvorlighetsgrad>
+            <avvikKode>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</avvikKode>
+            <informasjon>cvc-complex-type.2.4.b: The content of element 'mvaMeldingDto' is not complete. One of
+                '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8":innsending}' is expected.
+            </informasjon>
+        </valideringsDetaljer>
+    </valideringsfeil>
+</valideringsresultat>
+```
+
 ## Fullfør MvaMeldingInnsending
 
 Dette steget bruker prosess-apiet til instansen og instansen vil avslutte bekreftelsessteget for Mva Melding Innsending og oppdatere instansen til neste steg i applikasjonens prosess.
