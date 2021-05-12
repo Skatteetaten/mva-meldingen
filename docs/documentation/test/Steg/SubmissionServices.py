@@ -10,4 +10,4 @@ class LoginMethod(Enum):
 
 
 class App(Enum):
-    SIT = "skd/mva-melding-innsending-sit"
+    ETM2 = "skd/mva-melding-innsending-etm2"
