@@ -1,11 +1,11 @@
 ---
 icon: "cloud"
 title: "Test"
-description: "Testtilfeller mva-melding. Testplan."
+description: "Test cases VAT-return and test plan"
 ---
 ## Krav til testgjennomføring
 
-Systemleverandørene har ansvar for egen testgjennomføring. Det må fokuserer på at validerings- og innsendingstjenestene fungerer som forventet. Implementasjonsguiden må være avgjørende for å få løsningen på plass for systemleverandørene. 
+Systemleverandørene har ansvar for egen testgjennomføring. Det må fokuseres på at validerings- og innsendingstjenestene fungerer som forventet. Implementasjonsguiden må være avgjørende for å få løsningen på plass for systemleverandørene. 
 
 Prosjektet bistår med feilsøk, evt. feilretting, samt oppfølging av saker som er sendt inn i testmiljøet.
 
