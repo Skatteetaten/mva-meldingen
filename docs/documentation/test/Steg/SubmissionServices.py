@@ -11,11 +11,3 @@ class LoginMethod(Enum):
 
 class App(Enum):
     ETM2 = "skd/mva-melding-innsending-etm2"
-
-
-def printing(response):
-    print(response)
-    print("status code:", response.status_code)
-    print("reason:", response.reason)
-    print("headers:", response.headers, "\n")
-    print("content:", response.content.decode("utf-8"), "\n")
