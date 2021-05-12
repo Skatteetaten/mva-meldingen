@@ -445,8 +445,12 @@ This error message will occur if the value of the field message category in vat-
 
 **Validation Service**
 
-The app will also call the validation service after the data filling step. If it discovers a fault or deviation it will be returned with a 409 error message,
-where the validation result itself will be contained in the body.
+```
+"Valideringsfeil: Ugyldig mva-melding"
+```
+
+The app will also call the validation service during the completion of the data filling step. If the vat-return is invalid,
+it will return a 409 error message, and the validation result in xml as content.
 
 Example body:
 
@@ -466,6 +470,8 @@ Example body:
     </valideringsfeil>
 </valideringsresultat>
 ```
+
+You can find an explanation for all the validation rules [here](/english/forretningsregler/).
 
 ## Complete vat-return submission
 

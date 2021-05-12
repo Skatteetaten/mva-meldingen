@@ -406,8 +406,12 @@ Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig f
 
 **Valideringstjenesten**
 
-Appen vil også kalle valideringstjenesten etter utfyllingssteget. Hvis den finner feil aller avvik i mva-meldingen vil det bli sendt tilbake med en 409 feilmelding,
-hvor selve valideringsresultatet vil ligge i bodyen.
+```
+"Valideringsfeil: Ugyldig mva-melding"
+```
+
+Appen vil også kalle valideringstjenesten under fullføring av utfyllingen. Hvis mva-meldingen er ugyldig,
+vil det returneres feilmelding 409 og valideringsresultatet i xml som content.
 
 Eksempel body:
 
@@ -427,6 +431,8 @@ Eksempel body:
     </valideringsfeil>
 </valideringsresultat>
 ```
+
+For en liste over valideringsfeil, kan man finne [her](/documentation/forretningsregler/).
 
 ## Fullfør MvaMeldingInnsending
 
