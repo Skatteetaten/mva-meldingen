@@ -443,6 +443,36 @@ If the list of attachments defined in at-return submission is different from the
 
 This error message will occur if the value of the field message category in vat-return submission is different from the message category in the vat-return.
 
+**Validation Service**
+
+```
+"Valideringsfeil: Ugyldig mva-melding"
+```
+
+The app will also call the validation service during the completion of the data filling step. If the vat-return is invalid,
+it will return a 409 error message, and the validation result in xml as content.
+
+Example value:
+
+```XML
+<valideringsresultat>
+    <status>UGYLDIG_SKATTEMELDING</status>
+    <valideringsfeil>
+        <stiTilFeil>//innsending</stiTilFeil>
+        <valideringsDetaljer>
+            <feilmelding>Mva meldingen må være på gyldig format og passere XML skjema valideringen</feilmelding>
+            <alvorlighetsgrad>UGYLDIG_SKATTEMELDING</alvorlighetsgrad>
+            <avvikKode>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</avvikKode>
+            <informasjon>cvc-complex-type.2.4.b: The content of element 'mvaMeldingDto' is not complete. One of
+                '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8":innsending}' is expected.
+            </informasjon>
+        </valideringsDetaljer>
+    </valideringsfeil>
+</valideringsresultat>
+```
+
+You can find an explanation for all the validation rules [here](/english/forretningsregler/).
+
 ## Complete vat-return submission
 
 This step uses the process-api for the instance, and it will end the confirmation step for the submission.
