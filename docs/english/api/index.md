@@ -443,6 +443,8 @@ If the list of attachments defined in at-return submission is different from the
 
 This error message will occur if the value of the field message category in vat-return submission is different from the message category in the vat-return.
 
+**Validation Service**
+
 The app will also call the validation service after the data filling step. If it discovers a fault or deviation it will be returned with a 409 error message,
 where the validation result itself will be contained in the body.
 

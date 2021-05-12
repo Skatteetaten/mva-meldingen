@@ -404,6 +404,8 @@ Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig f
 
 Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig fra meldingskategorien i mva-meldigen vil en få denne feilmeldingen.
 
+**Valideringstjenesten**
+
 Appen vil også kalle valideringstjenesten etter utfyllingssteget. Hvis den finner feil aller avvik i mva-meldingen vil det bli sendt tilbake med en 409 feilmelding,
 hvor selve valideringsresultatet vil ligge i bodyen.
 
