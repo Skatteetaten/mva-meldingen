@@ -6,9 +6,9 @@ description: "How to authenticate with ID-Porten"
 
 ## Introduction
 
-To authenticate with ID-Porten, you must implement an Open ID Connect solution against ID-Porten. It can be challenging to implement and considered the least trivial task to solve when submitting a VAT return.
+To authenticate with ID-Porten, you must implement an Open ID Connect solution against ID-Porten. It can be challenging to implement and should be considered the least trivial task to solve when developing a solution for submitting a VAT return.
 
-The most important thing first: The Tax Authorities have resources that can help you understand and find a good solution for your application.
+The most important thing first: The Tax Administration have resources that can help you understand and find a good solution for your application.
 
 This page contains information about what needs to be done and what is specific to the Tax Administration in the Open ID Connect integration.
 
@@ -26,9 +26,9 @@ It is recommended to get started with ID-Porten as early as possible as it will 
 
 How to get started with ID-Porten is described here: <a href="https://samarbeid.digdir.no/id-porten/id-porten/18" target="_blank">ID-Porten </a>.
 
-Another advantage of starting the process early is that you can test your Integration in the test environment, which includes API's with both Altinn3 and the Tax Administration. Also a separate integration must be created for production.
+Another advantage of starting the process early is that you can test your Integration in the test environment, which includes APIs with both Altinn3 and the Tax Administration. Also a separate integration must be created for production.
 
-The Tax Administration's Integration with identifier `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` can be used until you are ready to use your own Integration. This will be removed at some point after you have received notification from the Tax Authorities. See more [here](#configure-the-application-to-use-the-integration-from-samarbeidsportalen)
+The Tax Administration's Integration with identifier `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` can be used until you are ready to use your own Integration. This will be removed at some point after you have received notification from the Tax Administration. See more [here](#configure-the-application-to-use-the-integration-from-samarbeidsportalen)
 
 ## Configuring an Integration in Samarbeidsportalen
 
@@ -39,7 +39,7 @@ You open <a href="https://minside-samarbeid.digdir.no/" target="_blank"> https:/
 And select Integrasjoner under Ver 2 as shown below.
 ![](SamarbeidsportalenOversikt.png)
 
-Then you are taken on to the Integrations in Ver 2. Ver 2 is the test environment where users are synchronized with the Tax Authorities test environment.
+Then you are taken on to the Integrations in Ver 2. Ver 2 is the test environment where users are synchronized with the Tax Administration test environment.
 ![](NyIntegrasjon.png)
 
 And by clicking Ny integrasjon, you can start configuring the Integration with the Tax Administration.
@@ -48,7 +48,7 @@ And by clicking Ny integrasjon, you can start configuring the Integration with t
 
 In this wizard, a Difi-tjeneste of the API client type will be configured, as shown above.
 
-A review of the various fields in the configuration follows with norwegian subsection headers that will correspond with the images and what you should see in Samarbeidsportalen (where Norwegian is the only language)
+A review of the various fields in the configuration follows with Norwegian subsection headers that will correspond with the images and what you should see in Samarbeidsportalen (where Norwegian is the only language)
 
 ### Difi-tjeneste
 
