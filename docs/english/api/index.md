@@ -452,7 +452,7 @@ This error message will occur if the value of the field message category in vat-
 The app will also call the validation service during the completion of the data filling step. If the vat-return is invalid,
 it will return a 409 error message, and the validation result in xml as content.
 
-Example body:
+Example value:
 
 ```XML
 <valideringsresultat>
