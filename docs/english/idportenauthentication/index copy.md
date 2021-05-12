@@ -88,7 +88,7 @@ Dette skal være organisasjonsnummeret til organisasjonen din.
 
 ### Integrasjonens identifikator
 
-Når integrasjonen blir opprettet dukker det opp en Guid her. Det er dette som er `client\_id`
+Når integrasjonen blir opprettet dukker det opp en Guid her.
 
 ### Navn på integrasjonen & Beskrivelse
 
@@ -110,8 +110,6 @@ Et refresh_token kan ha veldig lang levetid og brukes til å utstede nye access_
 
 ### Klientautentiseringsmetode
 
-Bestemmer hvilken autentiseringsmetode integrasjonen bruker for å autentisere seg (ikke slutt-brukeren).
-
 Velg none dersom det ikke brukes refresh_token.
 
 ### Applikasjonstype
@@ -129,7 +127,7 @@ private:
 
 - web
 
-Men dette betyr ikke at en web-applikasjon må være privat. Man kan trygt bruke browser for web-applikasjoner som ikke bruker refresh-tokens.
+Men dette betyr ikke at applikasjonen ikke kan være en web-applikasjon. Man kan trygt bruke browser for web-applikasjoner som ikke bruker refresh-tokens. Det er det browser er til i dette skjemaet.
 
 ### Gyldig(e) redirect uri-er
 
