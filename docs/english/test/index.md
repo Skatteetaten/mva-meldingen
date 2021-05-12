@@ -12,7 +12,6 @@ The project team will contribute with debugging, bug fixing, and following up of
 
 The project team is available via Slack for technical clarifications and for direct contact with developers and test managers. The project team can also be reached via mva-modernisering@skatteetaten.no. Contact us here to receive access to Slack.
 
-
 ## The test environment and test data
 
 System providers must have test environments which can make use of synthetic data
@@ -21,7 +20,7 @@ Connection against the test environment occurs through ID-porten and for the pur
 
 The system providers will receive synthetic test users that can also be found in the test environments in the ID-porten (ver2) and Altinn (TT02).
 
-Skatteetaten's test environment will be available at agreed periods between May 2021 and January 2022. In July 2021 it should not be expected that the environment will be available. 
+Skatteetaten's test environment will be available at agreed periods between May 2021 and January 2022. In July 2021 it should not be expected that the environment will be available.
 
 ## Test planning
 
