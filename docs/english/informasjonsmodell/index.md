@@ -52,7 +52,7 @@ Example files for VAT return in XML format can be downloaded from the test secti
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>regnskapssystemrefereanse</td><td>Description: The taxpayers unique reference for the filing <br>
+  <tr><td>regnskapssystemrefereanse</td><td>Description: The taxpayers unique reference for the submission <br>
   Purpose: To ensure that the taxpayer and the tax office refer to the same message. 
 	</td>
   </tr>
