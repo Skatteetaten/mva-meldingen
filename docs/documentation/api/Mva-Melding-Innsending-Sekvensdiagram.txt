@@ -22,7 +22,7 @@ deactivate Altinn3-Exchange
 
 space
 ==Validering mot Skatteetaten==
-SBS->Skatteetaten API:Valider(mva-melding)\nBearer: Altinn-Token
+SBS->Skatteetaten API:Valider(mva-melding)\nBearer: ID-Porten-Token
 activate Skatteetaten API
 Skatteetaten API-->SBS:Valideringsresultat
 deactivate Skatteetaten API

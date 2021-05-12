@@ -22,7 +22,7 @@ deactivate Altinn3-Exchange
 
 space
 ==Validation towards Tax Administration==
-SBS->Tax Administration API:Validate(vat-return)\nBearer: Altinn-Token
+SBS->Tax Administration API:Validate(vat-return)\nBearer: ID-Porten-Token
 activate Tax Administration API
 Tax Administration API-->SBS:Validation results
 deactivate Tax Administration API
