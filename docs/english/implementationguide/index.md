@@ -1,6 +1,6 @@
 ---
 icon: "cloud"
-title: "Implementation Guide (pre-release)"
+title: "Implementation Guide"
 description: "A developer's guide to implementation"
 ---
 
