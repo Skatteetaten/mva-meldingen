@@ -10,7 +10,7 @@ For å autentisere med ID-porten må man implementere en Open ID Connect løsnin
 
 Det aller viktigste først: Skatteetaten har ressurser som kan hjelpe deg å forstå og finne en god løsning for din applikasjon.
 
-Denne siden inneholder informasjon om hva som må gjøres, og hva som er spesifikt for Skattetaten i en Open ID Connect-løsning.
+Denne siden inneholder informasjon om hva som må gjøres, og hva som er spesifikt for Skatteetaten i en Open ID Connect-løsning.
 
 Grovt sett er det følgende som må gjøres:
 
