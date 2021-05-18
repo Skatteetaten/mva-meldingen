@@ -34,6 +34,6 @@ The system providers will, after the end of the test period and in advance of pr
 
 During week 19 will all of the documentation be updated and available here on github.
 
-The test environment will be available from 25th May.
+The test environment will be available from the 25th of May.
 
 ![Testplan](Testplan_eng.png)
