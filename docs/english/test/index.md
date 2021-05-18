@@ -36,4 +36,4 @@ During week 19 will all of the documentation be updated and available here on gi
 
 The test environment will be available from 25th May.
 
-![Testplan](../../documentation/test/Testplan_eng.png)
+![Testplan](Testplan_eng.png)
