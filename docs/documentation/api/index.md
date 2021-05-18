@@ -78,7 +78,7 @@ Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 **Body** :
 
-- Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">Skattemeldingformerverdiavgift.v0.9</a>
+- Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a>
 
 **Eksempel** : Innsending av XML på ugyldig format
 
@@ -86,11 +86,11 @@ POST <a href="https://mp-test.sits.no/api/mva-melding/skattemeldingformerverdiav
 
 Header: `Content-Type: application/xml`
 
-Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">XSD</a>:
+Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a>:
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9">
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
 
 </mvaMeldingDto>
 ```
@@ -110,7 +110,7 @@ Innhold (body)
             <alvorlighetsgrad>UGYLDIG_SKATTEMELDING</alvorlighetsgrad>
             <avvikKode>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</avvikKode>
             <informasjon>cvc-complex-type.2.4.b: The content of element 'mvaMeldingDto' is not complete. One of
-                '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8":innsending}' is expected.
+                '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0":innsending}' is expected.
             </informasjon>
         </valideringsDetaljer>
     </valideringsfeil>
@@ -164,7 +164,7 @@ Content:
         {
             "id": "{dataGuid}", // {dataGuid} kan benyttes i neste steg
             "instanceGuid": "{instanceGuid}",
-            "dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1",
+            "dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0",
             "contentType": "application/xml",
             "blobStoragePath": "skd/{ApplikasjonsNavn}/{instanceGuid}/data/{dataGuid}",
             "selfLinks": {
@@ -229,7 +229,7 @@ Denne feilmeldingen kan en få hvis en setter organisasjonsnummeret i request he
 
 MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
 
-Modellen for MvaMeldingInnsending finnes her: <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1.xsd</a>
+Modellen for MvaMeldingInnsending finnes her: <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a>
 
 Url til MvaMeldingInnsending har denne oppbygningen:
 
@@ -239,7 +239,7 @@ mvaMeldingInnsendingUrl = {instansApiUrl}/{partyId}/{instanceGuid}/data/{dataGui
 
 hvor `{dataGuid}` er id til data-objektet til instansen.
 
-Det er 2 måter å komme frem til `mvaMeldingInnsendingUrl` og begge benytter instansens data-liste-element som har datatypen `no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1`. Når instansen blir skapt finnes bare ett element i lista.
+Det er 2 måter å komme frem til `mvaMeldingInnsendingUrl` og begge benytter instansens data-liste-element som har datatypen `no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0`. Når instansen blir skapt finnes bare ett element i lista.
 
 Fra data-elementet kan man enten:
 
@@ -265,7 +265,7 @@ Content:
 </mvaMeldingInnsending>
 ```
 
-Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>.
+Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/" target="_blank">Test</a>.
 
 ### Feilmeldinger
 
@@ -274,7 +274,7 @@ Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har i
 
 ## Last Opp MvaMelding
 
-Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v0.9.xsd</a>
+Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
 
 Url for opplasting av Mva Melding har denne oppbygningen:
 
@@ -295,7 +295,7 @@ HEADERS:
 ```XML
 Content:
 <?xml version="1.0" encoding="UTF-8"?>
-<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9">
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
     ...
 </mvaMeldingDto>
 ```
@@ -321,10 +321,11 @@ Det tillates opplasting av følgende content-typer:
 
 - text/xml
 - application/pdf
+- application/vnd.oasis.opendocument.formula
+- application/vnd.openxmlformats-officedocument.wordprocessingml.document
 - image/jpeg
 - image/jpg
 - image/png
-- image/gif
 
 Vedlegg lastes opp på med følgende request mot instansens data-api:
 
@@ -425,14 +426,14 @@ Eksempel verdi:
             <alvorlighetsgrad>UGYLDIG_SKATTEMELDING</alvorlighetsgrad>
             <avvikKode>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</avvikKode>
             <informasjon>cvc-complex-type.2.4.b: The content of element 'mvaMeldingDto' is not complete. One of
-                '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.8":innsending}' is expected.
+                '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0":innsending}' is expected.
             </informasjon>
         </valideringsDetaljer>
     </valideringsfeil>
 </valideringsresultat>
 ```
 
-For en liste over valideringsfeil, kan man finne [her](/documentation/forretningsregler/).
+For en liste over valideringsfeil, kan man finne under [Valideringsregler](/documentation/forretningsregler/).
 
 ## Fullfør MvaMeldingInnsending
 

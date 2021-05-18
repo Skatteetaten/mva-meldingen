@@ -1,7 +1,7 @@
 ---
 icon: "cloud"
-title: "Business rules"
-description: "Business rules for the VAT tax return"
+title: "Validation rules"
+description: "Validation rules for the VAT tax return"
 ---
 
 ## Validation rules

@@ -16,7 +16,7 @@ The project team is available via Slack for technical clarifications and for dir
 
 System providers must have test environments which can make use of synthetic data
 
-Connection against the test environment occurs through ID-porten and for the purpose of testing, Skatteetaten's ID-porten integration can be used. It is recommended that the providers order their own integration against ID-porten as soon as possible because the process is partly manual and can be time consuming. See more [here.](https://github.com/Skatteetaten/mva-meldingen/blob/may-test-page-update/docs/english/implementationguide/index.md#3-id-porten-integration)
+Connection against the test environment occurs through ID-porten and for the purpose of testing, Skatteetaten's ID-porten integration can be used. It is recommended that the providers order their own integration against ID-porten as soon as possible because the process is partly manual and can be time consuming. See more in [implementation guide section 3. ID-porten integration.](https://skatteetaten.github.io/mva-meldingen/english/implementationguide/#3-id-porten-integration)
 
 The system providers will receive synthetic test users that can also be found in the test environments in the ID-porten (ver2) and Altinn (TT02).
 

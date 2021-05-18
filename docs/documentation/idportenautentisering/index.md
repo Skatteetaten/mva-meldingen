@@ -28,7 +28,7 @@ Hvordan man kommer i gang med ID-porten er beskrevet her: <a href="https://samar
 
 En annen fordel med å starte prosessen tidlig er at man kan teste Integrasjonen i test-miljøet som inkluderer både Altinn3 og Skatteetaten. Det må også opprettes egen integrasjon for produksjon.
 
-Skatteetatens Integrasjon med Indentifikator `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` kan benyttes til ID-Porten er klar til å tas i bruk. Denne vil bli fjernet etter varsel. Se mer [her](#konfigurere-applikasjonen-til-å-bruke-integrasjonen-fra-samarbeidsportalen)
+Skatteetatens Integrasjon med Indentifikator `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` kan benyttes til ID-Porten er klar til å tas i bruk. Denne vil bli fjernet etter varsel. Se mer i [avsnittet under](#konfigurere_en_integrasjon_i_samarbeidsportalen)
 
 ## Konfigurere en Integrasjon i Samarbeidsportalen
 

@@ -16,7 +16,7 @@ Prosjektet er tilgjengelig via Slack for tekniske avklaringer og direkte kontakt
 
 Systemleverandørene må ha testmiljøer som kun består av syntetiske data
 
-Oppkobling mot testmiljøet skjer via IDporten og i forbindelse med test kan Skatteetatens IDporten-integrasjon benyttes. Det anbefales å bestille egen integrasjon mot ID-porten så tidlig som mulig da dette er en delvis manuell og tidkrevende prosess. Se mer [her](https://github.com/Skatteetaten/mva-meldingen/blob/may-test-page-update/docs/documentation/implementasjonsguide/index.md#3-id-porten-integrasjon)
+Oppkobling mot testmiljøet skjer via IDporten og i forbindelse med test kan Skatteetatens IDporten-integrasjon benyttes. Det anbefales å bestille egen integrasjon mot ID-porten så tidlig som mulig da dette er en delvis manuell og tidkrevende prosess. Se mer i [implementasjonsguiden kapittel 3. ID-porten integrasjon](https://skatteetaten.github.io/mva-meldingen/documentation/implementasjonsguide/#3-id-porten-integrasjon)
 
 Systemleverandørene vil få utdelt syntetiske testbrukere som også finnes i testmiljøene til IDporten (ver2) og Altinn (TT02).
 
