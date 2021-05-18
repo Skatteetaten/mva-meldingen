@@ -40,7 +40,7 @@ Signering: Begrenset signeringsrett eller Kontaktperson NUF.
 
 ### Hvorfor har Skatteetaten valgt å begrense utfylling av registreringssøknad gjennom Altinn-roller?
   
-Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut for en virksomhet, og dersom virksomheten har dårlige rutiner for signering kan utilsiktede utfyllinger bli sendt inn og gi alvorlige konsekvenser. Den nye bruken av roller er sikrere, og i tråd med standarden for alle andre oppgaver i Skatteetaten. 
+Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut for en virksomhet, og dersom virksomheten har dårlige rutiner for signering kan utilsiktede utfyllinger bli sendt inn og gi alvorlige konsekvenser. Den nye bruken av roller er sikrere, og i tråd med standarden for alle andre moderniserte oppgaver i Skatteetaten. 
 
 ### Hvilken mulighet har advokater til å bistå i enkeltsaker (registering i Mva-registeret)?
   
