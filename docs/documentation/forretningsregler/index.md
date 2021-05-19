@@ -1,6 +1,6 @@
 ---
 icon: "cloud"
-title: "Introduksjon til Valideringsregler"
+title: "Valideringsregler"
 description: "Regler for utfylling av mva-melding "
 ---
 
