@@ -1,7 +1,7 @@
 ---
 icon: "cloud"
-title: "Frequently asked questions"
-description: "Questions and answers"
+title: "Questions and answers"
+description: "Frequently asked questions"
 ---
 
 ## General
