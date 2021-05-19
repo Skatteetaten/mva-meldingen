@@ -16,9 +16,9 @@ Prosjektet er tilgjengelig via Slack for tekniske avklaringer og direkte kontakt
 
 Systemleverandørene må ha testmiljøer som kun består av syntetiske data
 
-Oppkobling mot testmiljøet skjer via IDporten og i forbindelse med test kan Skatteetatens IDporten-integrasjon benyttes. Det anbefales å bestille egen integrasjon mot ID-porten så tidlig som mulig da dette er en delvis manuell og tidkrevende prosess. Se mer i [implementasjonsguiden kapittel 3. ID-porten integrasjon](https://skatteetaten.github.io/mva-meldingen/documentation/implementasjonsguide/#3-id-porten-integrasjon)
+Oppkobling mot testmiljøet skjer via ID-porten og i forbindelse med test kan Skatteetatens ID-porten-integrasjon benyttes. Det anbefales å bestille egen integrasjon mot ID-porten så tidlig som mulig da dette er en delvis manuell og tidkrevende prosess. Se mer i [implementasjonsguiden kapittel 3. ID-porten integrasjon](https://skatteetaten.github.io/mva-meldingen/documentation/implementasjonsguide/#3-id-porten-integrasjon)
 
-Systemleverandørene må ved oppstart av test ta kontakt med prosjektet på MVA-Modernisering@skatteetaten.no for å få tildelt testbruker. Dette er syntetisk testbruker som også skal brukes for pålogging i IDporten og Altinn. Det vil kun være disse testbrukeren som kan benyttes for å få testet. Testbrukere som ligger tilgjengelig på DigDir sine sider vil ikke kunne brukes.
+Systemleverandørene må ved oppstart av test ta kontakt med prosjektet på MVA-Modernisering@skatteetaten.no for å få tildelt testbruker. Dette er syntetisk testbruker som også skal brukes for pålogging i ID-porten og Altinn. Det vil kun være disse testbrukeren som kan benyttes for å få testet. Testbrukere som ligger tilgjengelig på Digdir sine sider vil ikke kunne brukes.
 
 Testmiljøet til Skatteetaten vil være tilgjengelig i avtalte perioder fra mai og frem til januar 2022. I juli 2021 kan det ikke forventes at miljøet skal være tilgjengelig.
 
