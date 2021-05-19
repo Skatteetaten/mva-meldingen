@@ -68,13 +68,18 @@ Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra re
 På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om forslaget rundt rapportering på transaksjonsnivå. 
 
 ### Kan man vedlegge dokumentasjon som filvedlegg til mva-meldingen? 
-Ja, man kan vedelgge inntil 50 vedlegg per melding, og vedlegg kan være opp til 25 MB per fil. 
+Ja, man kan vedlegge inntil 50 vedlegg per melding, og vedlegg kan være opp til 25 MB per fil. 
 Vi vil støtte følgende formater:
 
 	- PDF
 	- Open Office XML (OOXML)
 	- Open Document Format (ODF)
 	- JPG eller PNG
+
+### Hvordan autentiserer man seg for innsending av mva-melding?
+Autentisering vil skje via ID-porten, med personlig pålogging. Dagens Altinn innlogging med brukernavn og passord vil ikke kunne benyttes. Sluttbrukersystemene må tilby et påloggingsvindu til ID-porten for bruker, slik at bruker kan logge på med eID og SBS får tilbake et ID-porten-token som brukes videre mot Skatteetaten og Altinn sine tjenester.  For å slippe å logge på mange ganger varer en pålogging i 8 timer.
+
+Vi ønsker å kunne tilby støtte for maskinporten, og ser på de juridiske og praktiske problemstillingene rundt dette, men det kommer senere enn 1. januar 2022. I planene som foreligger nå er det ID-porten som er løsningen. 
 
 
 ## Salgs- og kjøpsmelding
