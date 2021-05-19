@@ -19,7 +19,7 @@ Et forslag til ny melding er per nå under utredning hos Finansdepartementet. Fo
 
 ### Blir det en overgangsperioder fra gammel til ny tjeneste?
   
-For registreringsløsningen varer overgangsperioden frem til 1. mars 2021 for nyregistreringer. Samordet Registermelding del 2 vil være åpen for endring og opphør av registrering frem til 2. kvartal 2021. 
+For registreringsløsningen varte overgangsperioden i to uker, frem til 1. mars 2021 for nyregistreringer. Samordet Registermelding del 2 vil være åpen for endring og opphør av registrering frem til 2. kvartal 2021. 
 For mva-melding er det ikke planlagt en overgangsperiode.
 
 ### Vil det finnes en «nødløsning» dersom vi får tekniske problemer?
