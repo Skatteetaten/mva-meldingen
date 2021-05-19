@@ -18,7 +18,7 @@ System providers must have test environments which can make use of synthetic dat
 
 Connection against the test environment occurs through ID-porten and for the purpose of testing, Skatteetaten's ID-porten integration can be used. It is recommended that the providers order their own integration against ID-porten as soon as possible because the process is partly manual and can be time consuming. See more in [implementation guide section 3. ID-porten integration.](https://skatteetaten.github.io/mva-meldingen/english/implementationguide/#3-id-porten-integration)
 
-The system providers will receive synthetic test users that can also be found in the test environments in the ID-porten (ver2) and Altinn (TT02).
+The ERP system providers must contact the project at mva-modernisering@skatteetaten.no to receive test users. These are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test VAT-return. Ordinary Digdir test users will not work for this purpose. 
 
 Skatteetaten's test environment will be available at agreed periods between May 2021 and January 2022. In July 2021 it should not be expected that the environment will be available.
 
