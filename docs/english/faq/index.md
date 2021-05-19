@@ -49,8 +49,6 @@ It is also possible for legal councel to acquire Altinn-roles in reporting busin
 
 The Tax Administration have plans to develop functionality for delegating power of attorney in individual cases where there is need to delegate to a proxy. There can be a need for this in different cases, such as application, complaints and control. This is additional functionality which will be developed at a later time. 
  
- 
- 
 ## VAT-return
 
 ### When will the new VAT-return be launched?
@@ -79,6 +77,8 @@ Authentication will be carried out with personal login in ID-porten, not by pass
 
 We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. If Maskinporten is offered for VAT-returns, it will be later than Januart 1st 2022. ID-porten will be used until further notice.
 
+### Will it still be possible to submit a "Supplementary return"?
+Supplementary returns will no longer be in use. If there are changes in the ERP that makes it necessary to correct a VAT-return, this can be done by submitting a replacement VAT-return, after correcting the accounts in the ERP. The last VAT-return for a term will be valid. 
 
 ## Sales and purchase report
 
