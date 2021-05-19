@@ -74,6 +74,12 @@ We will support the following file formats:
 - Open Document Format (ODF)
 - JPG eller PNG
 
+### What authentication methods will be used for VAT-return submissions?
+Authentication will be carried out with personal login in ID-porten, not by password and username like today. ERPs must offer ID-porten login window for their users, so they can log in using electronic ID from ID-porten. To avoid unnecessary logins user will stay logged in for 8 hours. 
+
+We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. If Maskinporten is offered for VAT-returns, it will be later than Januart 1st 2022. ID-porten will be used until further notice.
+
+
 ## Sales and purchase report
 
 ### What does the sales and purchase report entail, and when will it be launched?
