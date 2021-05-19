@@ -6,6 +6,12 @@ description: "En utviklers guide til implementasjonen"
 
 ## Implementasjonsguide
 
+### Endringslogg
+
+| Dato       | Hva ble endret?                                                                                                                             |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2021.05.19 | La til denne endringsloggen og inkluderte at mva-meldingen meldingen blir validert under [fullføring av opplasting](#InnsendingValidering). |
+
 ## Forord
 
 Denne guiden er skrevet av en utvikler for å gi leverandører en oversikt over et tenkt prosjekt for å implementere elektronisk innsending av modernisert Mva-Melding til Skattetatens API'er. Guiden vil hjelpe prosjektledere og utviklere med forståelsen av omfanget og hvilke tekniske betraktninger man bør ta stilling til.
@@ -76,6 +82,8 @@ ID-Portens innlogging krever at applikasjonen kan lytte til en URL som er konfig
 
 Dersom erfaringen med OAuth2/OpenID er liten så vil dette kreve innsats å forstå og implementere på en god måte. Alle elementene i ID-Porten integrasjonen henger sammen og det er viktig å bevare brukeropplevelsen under utviklingen.
 
+<a name="KalleValidering"></a>
+
 ### 4. Validere Mva-Melding mot Skatteetatens validerings-api
 
 Å kalle valideringstjenesten med ID-Porten-token er nærmest trivielt dersom man har en mva-melding og man har et gyldig token fra ID-Porten. Vi anbefaler en prosess hvor valideringstjenesten kalles med mva-meldingen før man starter innsendingen.
@@ -107,13 +115,14 @@ Brukeren som starter innsendingen må være autorisert for dette for den aktuell
 
 Når alle filene er lastet opp må man gjøre et kall for å fullføre opplasting, og innsendingen vil være klar for fullføring dersom ingen valideringsfeil finnes.
 
-Skatteetaten validerer følgende:
+<a name="InnsendingValidering"></a>Skatteetaten validerer følgende:
 
 - At organisasjonsnummer er likt i Mva-Meldingsfilen, Mva-Melding-Innsendingsfilen og at det samme organisasjonsnummer som ble brukt for å skape innsendingen (instansens organisasjonsnummer må også være det samme).
 - At vedleggene som er lastet opp er i lista over vedlegg i Mva-Melding-Innsendingsfilen og vise versa.
 - At Meldingskategorien er lik i Mva-Meldingsfilen og Mva-Melding-Innsendingsfilen
+- At Mva-Meldingen er gyldig. Skatteetaten gjør samme kall som i [4. Validere Mva-Melding](#4-validere-mva-melding-mot-skatteetatens-validerings-api), og returnerer valideringsresultatet som innhold i responsen.
 
-Responsen vil ha http-statuskoden 409 hvis valideringen mislykkes.
+Responsen vil ha http-statuskoden 409 hvis valideringen mislykkes. Det er mulig å oppdatere de opplastede filene med egne API-kall. Mer info kan finnes hos Altinn Studio Instans API og <a href="../api#prosess-innsending-og-validering" target="_blank">referanse finnes i API-dokumentasjonen</a>
 
 Når opplastningen er fullført, kan innsendingen fullføres. Brukeren som fullfører innsendingen må være autorisert for dette for den aktuelle organisasjonen. Sluttbrukeren må ha en av de følgende Altinn-rollene:
 

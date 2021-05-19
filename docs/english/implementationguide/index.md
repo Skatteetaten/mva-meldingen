@@ -6,6 +6,12 @@ description: "A developer's guide to implementation"
 
 ## Implementation Guide
 
+### Change log
+
+| Date       | What changed?                                                                                                |
+| :--------- | :----------------------------------------------------------------------------------------------------------- |
+| 2021.05.19 | Added this change log and included validation of VAT-Return file [during submission](#SubmissionValidation). |
+
 ## Preface
 
 This guide has been written by a developer to give suppliers an overview of a planned project to implement electronic submission of a modernized VAT Return to the Tax Administration's APIs. The guide will help project managers and developers to understand the scope and highlight technical considerations.
@@ -116,13 +122,14 @@ The user initiating the submission must be authorized to do so for the organizat
 
 Once all the files have been uploaded, a call must be made to complete the upload, and the submission will be ready for completion if no validation error exists.
 
-The tax authorities will validate the following:
+<a name="SubmissionValidation"></a>The tax authorities will validate the following:
 
 - That the organization number is the same in the VAT-Return file, the VAT-Return-Submission file and that the same organization number was used when creating the submission at the submission API.
 - That the attachments that have been uploaded are in the list of attachments in the VAT-Return-Submission file and vice versa.
 - That the Message category is the same in the VAT-Return file and the VAT-Return-Submission file.
+- That the VAT-Return is valid. The tax authorities will do the same validation as in [4. Validate VAT Return](#4-validate-vat-return-against-the-tax-administrations-validation-api), and return the validation result.
 
-The response will have the http status code 409 if the validation fails.
+The response will have the http status code 409 if the validation fails. It is possible to update the uploaded files through Altinn Studio Instance API, more information can be found <a href="../api#overall-process-for-submission-and-validating-vat-return" target="_blank">in the API documentation</a>
 
 When the upload is complete, the submission can be completed. The user who completes the submission must be authorized for this for the relevant organization. The end user must have one of the following Altinn roles:
 
