@@ -18,16 +18,16 @@ This guide has been written by a developer to give suppliers an overview of a pl
 
 ## Overview
 
-|  #  | Task                                                                                    | Addictions | Complexity |
-| :-: | --------------------------------------------------------------------------------------- | :--------: | :--------: |
-|  1  | Extraction of revenue from the accounting system for filling in a modernized VAT Return |     -      |  \* [^1]   |
-|  2  | Display of the VAT Return in the Accounting System                                      |     1      |  \* [^1]   |
-|  3  | ID-Porten integration                                                                   |     -      |     21     |
-|  4  | Validate VAT Return against the Tax Administration's validation api                     |     3      |     1      |
-|  5  | Interpretation and display of the validation result in the accounting system            |     4      |  \* [^1]   |
-|  6  | Send VAT Return to the Tax Administration's submission api                              |     3      |     1      |
-|  7  | Obtain the status of the submission from the Tax Administration's submission api        |     3      |     2      |
-|  8  | Download and interpret the Tax Administration's feedback                                |     3      |     2      |
+|  #  | Task                                                                                    | Dependencies | Complexity |
+| :-: | --------------------------------------------------------------------------------------- | :----------: | :--------: |
+|  1  | Extraction of revenue from the accounting system for filling in a modernized VAT Return |      -       |  \* [^1]   |
+|  2  | Display of the VAT Return in the Accounting System                                      |      1       |  \* [^1]   |
+|  3  | ID-Porten integration                                                                   |      -       |     21     |
+|  4  | Validate VAT Return against the Tax Administration's validation api                     |      3       |     1      |
+|  5  | Interpretation and display of the validation result in the accounting system            |      4       |  \* [^1]   |
+|  6  | Send VAT Return to the Tax Administration's submission api                              |      3       |     1      |
+|  7  | Obtain the status of the submission from the Tax Administration's submission api        |      3       |     2      |
+|  8  | Download and interpret the Tax Administration's feedback                                |      3       |     2      |
 
 ## Task details
 
