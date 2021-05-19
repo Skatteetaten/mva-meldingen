@@ -81,6 +81,9 @@ Autentisering vil skje via ID-porten, med personlig pålogging. Dagens Altinn in
 
 Vi ønsker å kunne tilby støtte for maskinporten, og ser på de juridiske og praktiske problemstillingene rundt dette, men det kommer senere enn 1. januar 2022. I planene som foreligger nå er det ID-porten som er løsningen. 
 
+### Kan man fortsatt sende inn tilleggsmelding?
+Tilleggsmelding vil ikke lenger være aktuelt. Hvis man gjør endringer i regnskapssystemet som fører til at man vil korrigere mva-meldingen sender man inn en ny komplett melding. Siste melding vil alltid være gjeldende. 
+
 
 ## Salgs- og kjøpsmelding
 
