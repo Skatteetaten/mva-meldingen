@@ -67,6 +67,15 @@ Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra re
 
 På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om forslaget rundt rapportering på transaksjonsnivå. 
 
+### Kan man vedlegge dokumentasjon som filvedlegg til mva-meldingen? 
+Ja, man kan vedelgge inntil 50 vedlegg per melding, og vedlegg kan være opp til 25 MB per fil. 
+Vi vil støtte følgende formater:
+	*PDF
+	*Open Office XML (OOXML)
+	*Open Document Format (ODF)
+	*JPG eller PNG
+
+
 ## Salgs- og kjøpsmelding
 
 ### Hva innebærer salgs- og kjøpsmelding og når kommer den?
