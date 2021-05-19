@@ -69,10 +69,10 @@ Same level as before. For more information regarding the suggested reporting on 
 Yes, it is possible to attach up to 50 files, and the files can be up to 25mb per file. 
 We will support the following file formats: 
 
- - PDF
-	- Open Office XML (OOXML)
-	- Open Document Format (ODF)
-	- JPG eller PNG
+- PDF
+- Open Office XML (OOXML)
+- Open Document Format (ODF)
+- JPG eller PNG
 
 ## Sales and purchase report
 
