@@ -30,6 +30,17 @@ The project team will offer meetings with a focus on test planning and carrying 
 
 The system providers will, after the end of the test period and in advance of production, summarise their tests. The summary will show what has been tested, along with the status of the carried out tests, including a summary of bugs and inadequacies. The providers will, at Skatteetatens request, provide documentation on how the integration has been tested.
 
+## Test application
+A test application has been written in jupyter notebook, for use when testing the solution from the Tax adminisatration: 
+
+1. [Jupyter notebook demo for fetching and validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Downlaod the catalog  'test' and run the script demo.ipynb (The script will carry out all steps in the process: call ping service to check connection and validate VAT-return).
+
+2. [Jupyter notebook demo for fetching, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/innsending-eksempel.ipynb). run the script innsending.ipynb. It will run all the steps in the process. 
+
+3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) and [postman script to validate return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First log in to [ID-Porten](https://skatteetaten.github.io/mva-meldingen/english/idportenauthentication/), and save the token in the format "Bearer <em>hentet-token</em>" as the environment variablewith the name "test-bearer" in postman, and use the postman script to validate the return. 
+
+4. [Example XML's](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
+
 ## 'Test 4'
 
 During week 19 will all of the documentation be updated and available here on github.
