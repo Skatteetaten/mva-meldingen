@@ -58,6 +58,8 @@ The new VAT-return will be launched on January 1st 2022. This means that you mus
 ### How will the new VAT-return be submitted?
 Businesses and advisors are encouraged to deliver directly from their ERP. The Tax Administration is working with ERP-suppliers to enable this. For those who do not have an ERP, or if the ERP is not suited to deliver VAT-returns, the Tax administration is developing a portal for submitting VAT-returns. Altinn will still be used for identification and information exchange.
 
+### Will it be possible to upload the VAT-return in XML-format in the portal?
+We are not planning functionality for uploading VAT-returns in XML-format in the portal. 
 
 ### At what aggregation level will amounts be entered in the new VAT-return? 
 
