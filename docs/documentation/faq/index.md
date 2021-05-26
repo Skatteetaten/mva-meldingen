@@ -63,6 +63,9 @@ Fra 1. januar 2022. Første frist for innlevering vil avhenge av hvilken termin 
 
 Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra regnskapssystemet. Skatteetaten jobber tett med systemleverandører for å tilrettelegge for dette. For de som ikke har regnskapssystem, eller av annen grunn ikke kan levere gjennom regnskapssystem, utvikler Skatteetaten en egen portal som kan brukes for levering av mva-melding. Altinn vil fortsatt brukes for identifisering og informasjonsutveksling. En bruker er ikke ment å merke at innleveringen skjer gjennom Skatteetaten kontra Altinn.
 
+### Vil det være mulig å laste opp MVA meldingen i XML format i portalen?
+Det er i utgangspunktet ikke tenkt å lage mulighet til å laste opp xml til portal.
+
 ### På hvilket aggregeringsnivå skal beløp oppgis i ny mva-melding? 
 
 På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om forslaget rundt rapportering på transaksjonsnivå. 
@@ -75,6 +78,7 @@ Vi vil støtte følgende formater:
 	- Open Office XML (OOXML)
 	- Open Document Format (ODF)
 	- JPG eller PNG
+
 
 ### Hvordan autentiserer man seg for innsending av mva-melding?
 Autentisering vil skje via ID-porten, med personlig pålogging. Dagens Altinn innlogging med brukernavn og passord vil ikke kunne benyttes. Sluttbrukersystemene må tilby et påloggingsvindu til ID-porten for bruker, slik at bruker kan logge på med eID og SBS får tilbake et ID-porten-token som brukes videre mot Skatteetaten og Altinn sine tjenester.  For å slippe å logge på mange ganger varer en pålogging i 8 timer.
