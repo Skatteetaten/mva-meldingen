@@ -61,6 +61,8 @@ The following validation rules are definded for the VAT return listing:
 - Insurance settlement information can not be submitted on this VAT code
 - Seasonal variation information can not be submitted on this VAT code
 - Credit not information can not be submitted on this VAT code
+- Input VAT must be declared without a VAT-basis or VAT-rate
+- Output VAT must be declared with a VAT-basis and VAT-rate
 
 ## Detailed description of the validation rules
 

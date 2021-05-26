@@ -13,7 +13,7 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
 - Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler
 - Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler
-- Merknad til beløp med motsatt fortegn som gjelder spesifikasjonslinje for tilbakeføring av inngående mva gitt i mval §9-6 og §9-7
+- Merknad til beløp med motsatt fortegn som gjelder spesifikasjonslinje for tilbakeføring av inngående mva. gitt i mval §9-6 og §9-7
 - Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 81)
 - Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 83)
 - Fradragsført inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett skal være mindre enn eller lik utgående avgift (kode 86)
@@ -32,7 +32,7 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 - Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
 - Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
 - Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
-- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
+- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
 - Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (alminnelig)
 - Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (primær)
 - Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (alminnelig)
@@ -61,6 +61,8 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 - Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden
 - Sesongvariasjon kan ikke settes som merknad på denne mva-koden
 - Kreditnota kan ikke settes som merknad på denne mva-koden
+- Inngående mva. skal føres uten grunnlag og sats
+- Utgående mva. skal føres med grunnlag og sats
 
 ## Detaljspesifikasjon av reglene:
 
