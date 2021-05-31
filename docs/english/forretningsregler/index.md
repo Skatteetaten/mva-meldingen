@@ -96,7 +96,7 @@ If this rule is not met, the validation will fail.
 ** Line 8 - Severity **: This is the severity if the validation fails.
 The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT return, MANGELFULL_SKATTEMELDING (inadequate VAT return), UGYLDIG_SKATTEMELDING (invalid vat return)
 
-##Detailed Spesification of the rules
+##Detailed Specification of the rules
 
 ```kotlin
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
