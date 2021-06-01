@@ -805,5 +805,251 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R060 }
         }
     )
+    
+    MVA_KODE_MERKNAD_OMSETNING_FØR_REGISTRERING(
+        "Omsetning før registrering kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Omsetning før registrering" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(
+                            3, 31, 32, 33, 52, 6, 86, 87, 88, 89, 90, 91, 92
+                        )
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R004 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_OMBEREGNING_RETUR(
+        "Omberegning/retur kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Omberegning/retur" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(
+                            81, 82, 83, 84, 85, 86, 87, 88, 89
+                        )
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R005 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_MIDLERTIDIG_INNFØRSEL(
+        "Midlertidig innførsel kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Midlertidig innførsel" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(
+                            81,
+                            82,
+                            83,
+                            84,
+                            86,
+                            87,
+                            88,
+                            89
+                        )
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R006 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_GJENINNFØRSEL(
+        "Gjeninnførsel kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Gjeninnførsel" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(81, 82, 83, 84)
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R007 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_TOLLDEKLARASJON_PÅ_FEIL_ORGNR(
+        "Tolldeklarasjon på feil organisasjonsnummer kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Tolldeklarasjon på feil org.nr." }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(14, 15, 52, 81, 82, 83, 84)
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R008 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_GJENUTFØRSEL(
+        "Gjenutførsel kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Gjenutførsel" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(52, 81, 82, 83, 84)
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R009 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_GJENUTFØRSEL_ELLER_RETUR(
+        "Gjenutførsel eller retur kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Gjenutførsel eller retur" }
+                    .skal { linje ->
+                        linje.mvaKode være 52
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R010 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_MIDLERTID_UTFØRSEL(
+        "Midlertid utførsel kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Midlertid utførsel" }
+                    .skal { linje ->
+                        linje.mvaKode være 52
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R011 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_TJENESTEEKSPORT(
+        "Tjenesteeksport kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Tjenesteeksport" }
+                    .skal { linje ->
+                        linje.mvaKode være 52
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R012 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_STORE_ANSKAFFELSER(
+        "Store anskaffelser kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Store anskaffelser" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R013 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_ANSKAFFELSER_FØR_MVA_PLIKT(
+        "Anskaffelser før mva-plikt kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Anskaffelser før mva-plikt" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R014 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_FORSIKRINGSOPPGJØR(
+        "Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Forsikringsoppgjør" }
+                    .skal { linje ->
+                        linje.mvaKode være 1
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R015 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_SESONGVARIASJON(
+        "Sesongvariasjon kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Sesongvariasjon" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(
+                            1,
+                            11,
+                            12,
+                            13,
+                            14,
+                            15,
+                            3,
+                            31,
+                            32,
+                            33,
+                            5,
+                            52,
+                            6,
+                            81,
+                            82,
+                            83,
+                            84,
+                            85,
+                            86,
+                            87,
+                            88,
+                            89
+                        )
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R016 }
+        }
+    ),
+
+    MVA_KODE_MERKNAD_KREDITNOTA(
+        "Kreditnota kan ikke settes som merknad på denne mva-koden" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.beskrivelse er "Kreditnota" }
+                    .skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 3, 31, 32, 33, 5, 52, 6, 86, 87, 88, 89)
+                    }
+            }
+            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            kategori { MERKNAD }
+            regelnummer { R017 }
+        }
+    )
 
 ```
