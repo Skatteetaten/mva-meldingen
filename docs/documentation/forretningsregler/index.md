@@ -30,9 +30,9 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 - Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift for tjenester kjøpt fra utlandet med fradragsrett (kode 88)
 - Det skal være fradragsført inngående avgift dersom det er beregnet utgående avgift ved kjøp av klimakvoter og gull med fradragsrett
 - Spesifikasjonslinje som gjelder tap på krav kan kun sendes inn på mva-kode 1, 11, 12 eller 13
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 31, 32 eller 33
-- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1
-- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1
+- Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31, 32 eller 33
+- Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1
+- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1 eller 81
 - Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (alminnelig)
 - Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (primær)
 - Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (alminnelig)
@@ -79,7 +79,7 @@ Eksempel på regel:
 [5]                    .hvor { linje -> linje.grunnlag ikkeEr tomt }
 [6]                    .skal { linje -> linje.grunnlag * linje.sats væreRundetNedTil linje.merverdiavgift }
 [7]            }
-[8]            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+[8]            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
 [9]        }
 [10]    )
 ```
@@ -97,7 +97,7 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 **Linje 8 - Alvorlighetsgrad**: Dette er alvorlighetsgraden dersom valideringen feiler.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKATTEMELDING
 
-```kotlin
+```kotlin    
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift" {
             valideringsregel {
@@ -147,14 +147,14 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.merknad?.beskrivelse har innhold medmindre (
                             linje.mvaKode er "1" og (
                                 linje.spesifikasjon væreMedI spesifikasjonene(
-                                    JUSTERING,
-                                    TAP_PAA_KRAV,
-                                    TILBAKEFOERING_AV_INNGAAENDE_MERVERDIAVGIFT
+                                    JUSTERING.spesifikasjon,
+                                    TAPPÅKRAV.spesifikasjon,
+                                    TILBAKEFØRING.spesifikasjon
                                 )
                                 )
                                 eller (
                                     linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13) og (
-                                        linje.spesifikasjon er TAP_PAA_KRAV
+                                        linje.spesifikasjon er TAPPÅKRAV.spesifikasjon.kode
                                         )
                                     )
                             )
@@ -172,7 +172,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             valideringsregel {
                 kodene(1)
                     .hvor { linje ->
-                        linje.grunnlag er tomt og (linje.merverdiavgift erMindreEnn 0.0) og (linje.spesifikasjon er TILBAKEFOERING_AV_INNGAAENDE_MERVERDIAVGIFT)
+                        linje.grunnlag er tomt og (linje.merverdiavgift erMindreEnn 0.0) og (linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode)
                     }
                     .skal { linje -> linje.merknad?.beskrivelse har innhold }
             }
@@ -192,7 +192,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R023 }
         }
@@ -208,7 +208,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R024 }
         }
@@ -224,7 +224,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R025 }
         }
@@ -240,7 +240,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R026 }
         }
@@ -256,7 +256,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R027 }
         }
@@ -417,7 +417,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er TAP_PAA_KRAV }
+                    .hvor { linje -> linje.spesifikasjon er TAPPÅKRAV.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -431,7 +431,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er UTTAK }
+                    .hvor { linje -> linje.spesifikasjon er UTTAK.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 32, 33) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -441,11 +441,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er JUSTERING }
+                    .hvor { linje -> linje.spesifikasjon er JUSTERING.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode være 1 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -455,11 +455,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_TILBAKEFØRING_INNGÅENDE_AVGIFT_9_6_OG_9_7_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i Merverdiavgiftsloven §9-6 og §9-7 kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i Merverdiavgiftsloven §9-6 og §9-7 kan kun sendes inn på mva-kode 1 eller 81"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er TILBAKEFOERING_AV_INNGAAENDE_MERVERDIAVGIFT }
+                    .hvor { linje -> linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode væreMedI mvaKodene(1, 81) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -472,7 +472,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         "Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er alminnelig og (harAktivPlikt er true) såSkal {
+                meldingskategori er alminnelig og (registrertMeldingskategori har innhold) såSkal {
                     meldingskategori være registrertMeldingskategori
                 }
             }
@@ -486,7 +486,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         "Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er primærnæring og (harAktivPlikt er true) såSkal {
+                meldingskategori er primærnæring og (registrertMeldingskategori har innhold) såSkal {
                     meldingskategori være registrertMeldingskategori
                 }
             }
@@ -783,7 +783,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                    innsending.innsendingTidspunkt måVæreEfter slutTerminsdato
+                    nå måVæreEfter slutTerminsdato
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -797,15 +797,70 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                    innsending.innsendingTidspunkt måVæreEfter slutTerminsdato
+                    nå måVæreEfter slutTerminsdato
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
             regelnummer { R060 }
         }
-    )
-    
+    ),
+
+    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erStørreEnn 0.0 såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R061 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erMindreEnn 0.0 såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R062 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erStørreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R063 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erMindreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R064 }
+        }
+    ),
     MVA_KODE_MERKNAD_OMSETNING_FØR_REGISTRERING(
         "Omsetning før registrering kan ikke settes som merknad på denne mva-koden" {
             valideringsregel {
@@ -817,7 +872,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R004 }
         }
@@ -834,7 +889,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R005 }
         }
@@ -858,7 +913,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R006 }
         }
@@ -873,7 +928,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode væreMedI mvaKodene(81, 82, 83, 84)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R007 }
         }
@@ -888,7 +943,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode væreMedI mvaKodene(14, 15, 52, 81, 82, 83, 84)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R008 }
         }
@@ -903,7 +958,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode væreMedI mvaKodene(52, 81, 82, 83, 84)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R009 }
         }
@@ -918,7 +973,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode være 52
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R010 }
         }
@@ -933,7 +988,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode være 52
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R011 }
         }
@@ -948,7 +1003,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode være 52
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R012 }
         }
@@ -963,7 +1018,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R013 }
         }
@@ -978,7 +1033,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R014 }
         }
@@ -993,7 +1048,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode være 1
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R015 }
         }
@@ -1031,7 +1086,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R016 }
         }
@@ -1046,7 +1101,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                         linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 3, 31, 32, 33, 5, 52, 6, 86, 87, 88, 89)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R017 }
         }
