@@ -30,8 +30,8 @@ The following validation rules are definded for the VAT return listing:
 - There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88)
 - There must be deductable input VAT if there is output VAT on deductable climate quotas and gold
 - Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13
-- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 31, 32 of 33
-- Specification lines that apply to adjustment can only be submitted on VAT code 1
+- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 5, 31, 32 of 33
+- Specification lines that apply to adjustment can only be submitted on VAT code 1 or 81
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
 - The specified category for the VAT return does not match the details in the VAT register (general industry)
 - The specified category for the VAT return does not match the details in the VAT register (primary industry)
@@ -79,7 +79,7 @@ Example of rule:
 [5]                    .hvor { linje -> linje.grunnlag ikkeEr tomt }
 [6]                    .skal { linje -> linje.grunnlag * linje.sats væreRundetNedTil linje.merverdiavgift }
 [7]            }
-[8]            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+[8]            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
 [9]        }
 [10]    )
 ```
@@ -94,7 +94,7 @@ Each line can be translated to the following:
 If this rule is not met, the validation will fail.
 
 ** Line 8 - Severity **: This is the severity if the validation fails.
-The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT return, MANGELFULL_SKATTEMELDING (inadequate VAT return), UGYLDIG_SKATTEMELDING (invalid vat return)
+The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous VAT return), UGYLDIG_SKATTEMELDING (invalid vat return)
 
 ##Detailed Specification of the rules
 
@@ -148,14 +148,14 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.merknad?.beskrivelse har innhold medmindre (
                             linje.mvaKode er "1" og (
                                 linje.spesifikasjon væreMedI spesifikasjonene(
-                                    JUSTERING,
-                                    TAP_PAA_KRAV,
-                                    TILBAKEFOERING_AV_INNGAAENDE_MERVERDIAVGIFT
+                                    JUSTERING.spesifikasjon,
+                                    TAPPÅKRAV.spesifikasjon,
+                                    TILBAKEFØRING.spesifikasjon
                                 )
                                 )
                                 eller (
                                     linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13) og (
-                                        linje.spesifikasjon er TAP_PAA_KRAV
+                                        linje.spesifikasjon er TAPPÅKRAV.spesifikasjon.kode
                                         )
                                     )
                             )
@@ -173,7 +173,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
             valideringsregel {
                 kodene(1)
                     .hvor { linje ->
-                        linje.grunnlag er tomt og (linje.merverdiavgift erMindreEnn 0.0) og (linje.spesifikasjon er TILBAKEFOERING_AV_INNGAAENDE_MERVERDIAVGIFT)
+                        linje.grunnlag er tomt og (linje.merverdiavgift erMindreEnn 0.0) og (linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode)
                     }
                     .skal { linje -> linje.merknad?.beskrivelse har innhold }
             }
@@ -193,7 +193,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R023 }
         }
@@ -209,7 +209,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R024 }
         }
@@ -225,7 +225,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R025 }
         }
@@ -241,7 +241,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R026 }
         }
@@ -257,7 +257,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                     )
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R027 }
         }
@@ -418,7 +418,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er TAP_PAA_KRAV }
+                    .hvor { linje -> linje.spesifikasjon er TAPPÅKRAV.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -432,7 +432,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er UTTAK }
+                    .hvor { linje -> linje.spesifikasjon er UTTAK.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 32, 33) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -442,11 +442,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er JUSTERING }
+                    .hvor { linje -> linje.spesifikasjon er JUSTERING.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode være 1 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -456,11 +456,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_TILBAKEFØRING_INNGÅENDE_AVGIFT_9_6_OG_9_7_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i Merverdiavgiftsloven §9-6 og §9-7 kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder tilbakeføring av inngående mva gitt i Merverdiavgiftsloven §9-6 og §9-7 kan kun sendes inn på mva-kode 1 eller 81"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.spesifikasjon er TILBAKEFOERING_AV_INNGAAENDE_MERVERDIAVGIFT }
+                    .hvor { linje -> linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode }
                     .skal { linje -> linje.mvaKode væreMedI mvaKodene(1, 81) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -473,7 +473,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
         "Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er alminnelig og (harAktivPlikt er true) såSkal {
+                meldingskategori er alminnelig og (registrertMeldingskategori har innhold) såSkal {
                     meldingskategori være registrertMeldingskategori
                 }
             }
@@ -487,7 +487,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
         "Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er primærnæring og (harAktivPlikt er true) såSkal {
+                meldingskategori er primærnæring og (registrertMeldingskategori har innhold) såSkal {
                     meldingskategori være registrertMeldingskategori
                 }
             }
@@ -784,7 +784,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                    innsending.innsendingTidspunkt måVæreEfter slutTerminsdato
+                    nå måVæreEfter slutTerminsdato
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -798,7 +798,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                    innsending.innsendingTidspunkt måVæreEfter slutTerminsdato
+                    nå måVæreEfter slutTerminsdato
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -806,7 +806,62 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
             regelnummer { R060 }
         }
     ),
-    
+
+    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erStørreEnn 0.0 såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R061 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erMindreEnn 0.0 såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R062 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erStørreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R063 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
+        {
+            valideringsregel {
+                fastsatmerverdiavgift erMindreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R064 }
+        }
+    ),
     MVA_KODE_MERKNAD_OMSETNING_FØR_REGISTRERING(
         "Omsetning før registrering kan ikke settes som merknad på denne mva-koden" {
             valideringsregel {
@@ -818,7 +873,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R004 }
         }
@@ -835,7 +890,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R005 }
         }
@@ -859,7 +914,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R006 }
         }
@@ -874,7 +929,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode væreMedI mvaKodene(81, 82, 83, 84)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R007 }
         }
@@ -889,7 +944,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode væreMedI mvaKodene(14, 15, 52, 81, 82, 83, 84)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R008 }
         }
@@ -904,7 +959,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode væreMedI mvaKodene(52, 81, 82, 83, 84)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R009 }
         }
@@ -919,7 +974,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode være 52
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R010 }
         }
@@ -934,7 +989,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode være 52
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R011 }
         }
@@ -949,7 +1004,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode være 52
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R012 }
         }
@@ -964,7 +1019,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R013 }
         }
@@ -979,7 +1034,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R014 }
         }
@@ -994,7 +1049,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode være 1
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R015 }
         }
@@ -1032,12 +1087,12 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         )
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R016 }
         }
     ),
-    
+
     MVA_KODE_MERKNAD_KREDITNOTA(
         "Kreditnota kan ikke settes som merknad på denne mva-koden" {
             valideringsregel {
@@ -1047,7 +1102,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (deviant VAT
                         linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 3, 31, 32, 33, 5, 52, 6, 86, 87, 88, 89)
                     }
             }
-            alvorlighetsgrad { MANGELFULL_SKATTEMELDING }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
             regelnummer { R017 }
         }
