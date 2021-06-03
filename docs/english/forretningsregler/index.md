@@ -31,8 +31,8 @@ The following validation rules are definded for the VAT return listing:
 - There must be deductable input VAT if there is output VAT on deductable climate quotas and gold
 - Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13
 - Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 5, 31, 32 of 33
-- Specification lines that apply to adjustment can only be submitted on VAT code 1 or 81
-- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1
+- Specification lines that apply to adjustment can only be submitted on VAT code 1
+- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1 or 81
 - The specified category for the VAT return does not match the details in the VAT register (general industry)
 - The specified category for the VAT return does not match the details in the VAT register (primary industry)
 - The specified tax period does not match the details in the VAT register (general industry)
@@ -807,61 +807,6 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         }
     ),
 
-    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erStørreEnn 0.0 såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R061 }
-        }
-    ),
-
-    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erMindreEnn 0.0 såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R062 }
-        }
-    ),
-
-    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erStørreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R063 }
-        }
-    ),
-
-    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erMindreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R064 }
-        }
-    ),
     MVA_KODE_MERKNAD_OMSETNING_FØR_REGISTRERING(
         "Omsetning før registrering kan ikke settes som merknad på denne mva-koden" {
             valideringsregel {
