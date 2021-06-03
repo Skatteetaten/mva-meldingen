@@ -805,62 +805,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R060 }
         }
     ),
-
-    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erStørreEnn 0.0 såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R061 }
-        }
-    ),
-
-    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erMindreEnn 0.0 såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R062 }
-        }
-    ),
-
-    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erStørreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R063 }
-        }
-    ),
-
-    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_ER_MYNDIGHETSFASTATT_PGA_MANGLENDE_MVA_MELDING(
-        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
-        {
-            valideringsregel {
-                fastsatmerverdiavgift erMindreEnn 0.0 og (myndighetsfastsatt er gjort) såSkal {
-                    historiskeMeldinger være levert
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { TIDLIGERE_TERMINER }
-            regelnummer { R064 }
-        }
-    ),
+    
     MVA_KODE_MERKNAD_OMSETNING_FØR_REGISTRERING(
         "Omsetning før registrering kan ikke settes som merknad på denne mva-koden" {
             valideringsregel {
