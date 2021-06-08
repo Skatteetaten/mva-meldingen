@@ -19,6 +19,7 @@ description: "Validation rules for the VAT tax return"
 	</td>
   </tr>
 </table>
+
 ## Validation rules
 
 The validation rules are under development an new validation rules will be added.
