@@ -3,7 +3,22 @@ icon: "cloud"
 title: "Validation rules"
 description: "Validation rules for the VAT tax return"
 ---
-
+### Change log
+<table align=center>
+  <tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
+  <tr>
+      <td>2021.06.07</td>
+      <td>
+          <ul>
+            <li>VAT code 5 added as a valid VAT code for withdrawals. </li>
+            <li> VAT code 81 added as a valid VAT code for reversal of input VAT. </li>
+            <li> Severity level "mangelfull melding" has been removed and the rules which used this severity level now give the response "avvikende skattemelding". </li>
+            <li> Rules R023 - R027 now use the severity level "ugyldig skattemelding". </li>
+            <li> The description in rule R040 was corrected. </li>
+          </ul>      
+	</td>
+  </tr>
+</table>
 ## Validation rules
 
 The validation rules are under development an new validation rules will be added.
