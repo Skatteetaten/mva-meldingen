@@ -3,6 +3,22 @@ icon: "cloud"
 title: "Valideringsregler"
 description: "Regler for utfylling av mva-melding "
 ---
+### Endringslogg
+<table align=center>
+  <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
+  <tr>
+      <td>2021.06.07</td>
+      <td>
+          <ul>
+            <li> Mva-kode 5 lagt til som gjeldende mva-kode for uttak. </li>
+            <li> Mva-kode 81 lagt til som gjeldende mva-kode for tilbakeføring av inngående mva. </li>
+            <li> Alvorlighetsgrad "mangelfull melding" er fjernet og reglene som brukt det bruker nå alvorlighetsgrad "avvikende skattemelding". </li>
+            <li> Reglene R023 - R027 er nå satt til alvorlighetsgrad "ugyldig skattemelding". </li>
+            <li> Tekst for regel R040 var korrigert. </li>
+          </ul>      
+	</td>
+  </tr>
+</table>
 
 ## Valideringsregler
 
