@@ -30,9 +30,9 @@ The project team will offer meetings with a focus on test planning and carrying 
 
 The system providers will, after the end of the test period and in advance of production, summarise their tests. The summary will show what has been tested, along with the status of the carried out tests, including a summary of bugs and inadequacies. The providers will, at Skatteetatens request, provide documentation on how the integration has been tested.
 
-## Test application
+## Test applications
 
-A test application has been written in jupyter notebook, for use when testing the solution from the Tax adminisatration:
+Some test applications has been written in jupyter notebook, for use when testing the solution from the Tax adminisatration:
 
 1. [Jupyter notebook demo for fetching and validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Downlaod the catalog 'test' and run the script demo.ipynb (The script will carry out all steps in the process: call ping service to check connection and validate VAT-return).
 
