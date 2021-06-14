@@ -473,6 +473,14 @@ HEADERS:
     "accept": "application/json"
 ```
 
+Hvis kallet er vellykket vil en få status kode 200 og et json objekt i retur:
+
+```JSON
+{
+  "isFeedbackProvided":	boolean
+}
+```
+
 ### Feilmeldinger
 
 _Respons 400 - Bad Request:_ <br>

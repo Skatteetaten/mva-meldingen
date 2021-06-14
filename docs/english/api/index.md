@@ -513,6 +513,14 @@ HEADERS:
     "accept": "application/json"
 ```
 
+If the call is successful it will return a status code 200, and a json object:
+
+```JSON
+{
+  "isFeedbackProvided":	boolean
+}
+```
+
 ### Error Messages
 
 _Response 400 - Bad Request:_ <br>
