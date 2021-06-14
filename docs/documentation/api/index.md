@@ -457,24 +457,15 @@ Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men p
 
 ## Hent tilbakemelding
 
-Dette steget vil hente tilbakemeldingen på instansen som Skatteetaten har lastet opp.
-Når instansen har fått tilbakemelding fra Skatteetaten vil den befinne seg i arkivet i altinn-innboksen.
-For å få tak i tilbakemeldingene kan man enten polle ved bruk av et asynkron API-endepunkt eller ved å bruke et synkron API-endepunkt.
+Skatteetaten har laget 2 api-endepunkter for å forenkle utviklingen av dette steget:
 
-Alternativ tilnærming for å hente tilbakemelding ved bruk av et asynkron API-endepunkt.
-![](Mva-Melding-Innsending-Sekvensdiagram-asynkron.png)
+- Et endepunkt som returnerer en status for om Skatteetaten har gitt tilbakemelding.
+- Et synkront endepunkt som returnerer instansen når Skatteetaten har behandlet mva-meldingen og gitt tilbakemelding.
 
-For å få tak i tilbakemeldingen ved bruk av et synkron API-endepunkt utføres det et kall mot instansen:
+Det følgende sekvensdiagrammet viser hvordan man kan identifisere om Skatteetaten har gitt tilbakemelding til en gitt instans, og hvordan instansen kan hentes.
+![](Hente-Tilbakemelding.png)
 
-```JSON
-GET {instansUrl}/{partyId}/{instanceGuid}/feedback
-HEADERS:
-    "Authorization": "Bearer " + "{altinnToken"
-    "accept": "application/json"
-```
-
-<br>
-For å få tak i statusen til tilbameldingen kan man utføre et kall mot instansen:
+For å hente status for tilbamelding kan man utføre kall mot instansens feedback-api:
 
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback/status
@@ -490,6 +481,25 @@ Hvis kallet er vellykket vil en få status kode 200 og et json objekt i retur:
   "isFeedbackProvided":	boolean
 }
 ```
+
+hvor `isFeedbackProvided` returneres som `true` dersom tilbakemelding er gitt, som `false` ellers.
+
+<br>
+For å hente en instans hvor tilbakemelding er gitt kan man utføre et kall mot det synkrone API-endepunktet:
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken"
+    "accept": "application/json"
+```
+
+Dette endepunktet vil returnere instansen når Skatteetaten har gitt tilbakemelding, og vil inneholde data-elementer for alle tilbakemeldingsfilene fra Skatteetaten.
+
+**Merk: Sistnevnte endepunkt skal kun brukes i følgende situasjoner:**
+
+- Sluttbruker venter på tilbakemelding.
+- Etter at status-endepunktet har returnert `isFeedbackProvided : true`
 
 ### Feilmeldinger
 
