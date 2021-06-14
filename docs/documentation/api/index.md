@@ -473,6 +473,16 @@ HEADERS:
     "accept": "application/json"
 ```
 
+<br>
+For å få tak i statusen til tilbameldingen kan man utføre et kall mot instansen:
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback/status
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken"
+    "accept": "application/json"
+```
+
 Hvis kallet er vellykket vil en få status kode 200 og et json objekt i retur:
 
 ```JSON

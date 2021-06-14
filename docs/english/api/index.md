@@ -504,10 +504,20 @@ To get the feedback one can either use a polling function using an asynchronous 
 Alternative approach for retrieving feedback, by using an asynchronous API-endpoint.
 ![](Vat-Return-Submission-Sequence-Diagram-asynchronous.png)
 
-To get the feedback using a synchronous API-endpoint a call towards the instance is used:
+To get the feedback using a synchronous API-endpoint, use a call towards the instance:
 
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken"
+    "accept": "application/json"
+```
+
+<br>
+To get the status of the feedback, use a call towards the instance:
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback/status
 HEADERS:
     "Authorization": "Bearer " + "{altinnToken"
     "accept": "application/json"
