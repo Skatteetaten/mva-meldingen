@@ -1,4 +1,4 @@
-title Vat-Return-Submission-Sequence-Diagram-asynchronous
+title Get Feedback
 
 participant SBS
 participant ID-Porten(SBS)
@@ -24,7 +24,7 @@ space
 ==Check feedback status towards Altinn3-App==
 loop Polling to feedback is ready
 SBS->Altinn3-App:Check status on feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/status
-Altinn3-App-->SBS:Status
+Altinn3-App-->SBS:FeedbackStatus
 end
 
 space

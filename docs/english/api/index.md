@@ -497,24 +497,16 @@ If the logged-in user attempt to update to the next task in the instance process
 
 ## Retrieve feedback
 
-This step will retrieve the feedback, which the Tax Administration have uploaded, on the instance.
-When the instance has recieved the feedback from the Tax Administration, it will be located in archive in the altinn inbox.
-To get the feedback one can either use a polling function using an asynchronous API-endpoint or by using a synchronous API-endpoint.
+The Tax Administration has created 2 api-endpoints to simplify the development of this step:
 
-Alternative approach for retrieving feedback, by using an asynchronous API-endpoint.
-![](Vat-Return-Submission-Sequence-Diagram-asynchronous.png)
+- An endpoint, which returns a status on whether the Tax Administration has provided feedback.
+- A synchronous endpoint, which returns the instance when the Tax Administration has processed the vat-return, and provided feedback.
 
-To get the feedback using a synchronous API-endpoint, use a call towards the instance:
+The following sequence diagram shows how to identify if the Tax Administration has provided feedback to a given instance,
+and how to retrieve it.
+![](Get-Feedback.png)
 
-```JSON
-GET {instansUrl}/{partyId}/{instanceGuid}/feedback
-HEADERS:
-    "Authorization": "Bearer " + "{altinnToken"
-    "accept": "application/json"
-```
-
-<br>
-To get the status of the feedback, use a call towards the instance:
+You can get the status of the feedback by performing a request towards the feedback-api for the instance.
 
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback/status
@@ -530,6 +522,25 @@ If the call is successful it will return a status code 200, and a json object:
   "isFeedbackProvided":	boolean
 }
 ```
+
+Where `isFeedbackProvided` returns as `true` if feedback has been given, otherwise it will return `false`
+
+To retrieve the instance where the feedback has been provided, use a call towards the synchronous API-endpoint:
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken"
+    "accept": "application/json"
+```
+
+This endpoint will return the instance when the Tax Administration has given feedback,
+and it will contain data elements for all the feedback files from the Tax Administration.
+
+**Note: Latter mentioned endpoint should only be used in the following situations:**
+
+- End user is waiting on feedback.
+- After the status-endpoint has returned `isFeedbackProvided : true`
 
 ### Error Messages
 
