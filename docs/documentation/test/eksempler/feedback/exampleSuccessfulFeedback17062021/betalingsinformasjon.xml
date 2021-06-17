@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<betalingsinformasjon xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:betalingsinformasjon:v1.0">
+  <innsendingsreferanse>50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58</innsendingsreferanse>
+  <skattepliktig>
+    <organisasjonsnummer>911158612</organisasjonsnummer>
+  </skattepliktig>
+  <skattleggingsperiode>
+    <periode>
+      <skattleggingsperiodeToMaaneder>januar-februar</skattleggingsperiodeToMaaneder>
+    </periode>
+    <aar>2022</aar>
+  </skattleggingsperiode>
+  <kundeidentifikasjonsnummer>99999999999999</kundeidentifikasjonsnummer>
+  <beloep>0</beloep>
+  <betaleTil>Skatteetaten</betaleTil>
+  <betalingsfrist>2021-05-21</betalingsfrist>
+  <betalesTilKonto>
+    <norskKontonummer>12345678903</norskKontonummer>
+  </betalesTilKonto>
+</betalingsinformasjon>
