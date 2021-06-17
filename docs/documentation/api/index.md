@@ -6,6 +6,14 @@ description: "Api-beskrivelser"
 
 # MVA Melding Validerings og Innsendings API
 
+## Endringslogg
+
+| Dato       | Hva ble endret?                                                       |
+| :--------- | :-------------------------------------------------------------------- |
+| 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding). |
+
+## Introduksjon
+
 MVA Meldinger som skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde bruke disse APIene:
 
 1. Skatteetatens MVA-Melding validerings API

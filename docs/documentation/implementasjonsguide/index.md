@@ -8,9 +8,10 @@ description: "En utviklers guide til implementasjonen"
 
 ### Endringslogg
 
-| Dato       | Hva ble endret?                                                                                                                             |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
-| 2021.05.19 | La til denne endringsloggen og inkluderte at mva-meldingen meldingen blir validert under [fullføring av opplasting](#InnsendingValidering). |
+| Dato       | Hva ble endret?                                                                                                                                                                                   |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2021.05.19 | La til denne endringsloggen og inkluderte at mva-meldingen meldingen blir validert under [fullføring av opplasting](#InnsendingValidering).                                                       |
+| 2021.06.17 | Oppdatering av [hente tilbakemelding](#7-hente-tilbakemelding-på-innsendingen-fra-skatteetatens-innsendings-api) og [tilbakemeldingsfiler](#8-laste-ned-og-tolke-skatteetatens-tilbakemeldinger). |
 
 ## Forord
 
