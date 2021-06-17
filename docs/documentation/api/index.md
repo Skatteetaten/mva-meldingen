@@ -546,7 +546,7 @@ Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne
 
 Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/eksempler/feedback/exampleSuccessfulFeedback17062021/" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
 
-Filene som kan lastes ned vil ha dataType:
+Filene som kan lastes ned vil ha `dataType`:
 
 - betalingsinformasjon
 - valideringsresultat
@@ -561,6 +561,8 @@ GET {selfLinks.apps}
 HEADERS:
     "Authorization": "Bearer " + "{altinnToken}"
 ```
+
+hvor `selfLinks.apps` kan hentes fra listen med data-elementer på instansen som vist her:
 
 ```JSON
   "data": [

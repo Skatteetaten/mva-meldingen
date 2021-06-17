@@ -6,6 +6,14 @@ description: "API descriptions"
 
 # VAT return Validation and Submission API
 
+## Changelog
+
+| Dato       | Hva ble endret?                                           |
+| :--------- | :-------------------------------------------------------- |
+| 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback). |
+
+## Introduction
+
 VAT returns to be sent to Skatteetaten from an end-user
 system (SBS) should use these APIs:
 
@@ -511,7 +519,7 @@ You can get the status of the feedback by performing a request towards the feedb
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback/status
 HEADERS:
-    "Authorization": "Bearer " + "{altinnToken"
+    "Authorization": "Bearer " + "{altinnToken}"
     "accept": "application/json"
 ```
 
@@ -530,7 +538,7 @@ To retrieve the instance where the feedback has been provided, use a call toward
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback
 HEADERS:
-    "Authorization": "Bearer " + "{altinnToken"
+    "Authorization": "Bearer " + "{altinnToken}"
     "accept": "application/json"
 ```
 
@@ -571,4 +579,66 @@ Example Value
   "detail": "string",
   "instance": "string"
 }
+```
+
+### Feedback files
+
+Once the Tax Administration has given feedback, the files for the feedback can be downloaded from the instance.
+
+Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/eksempler/feedback/exampleSuccessfulFeedback17062021/" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
+
+The files that can be downloaded will have `dataType`:
+
+- betalingsinformasjon
+- valideringsresultat
+- kvittering
+
+and download URLs are found in the instance object `data` elements returned from the feedback or instance api as shown below (irrelevant json removed).
+
+Given a `data` element, the file can be retrieved using:
+
+```JSON
+GET {selfLinks.apps}
+HEADERS:
+    "Authorization": "Bearer" + "{altinnToken}"
+```
+
+where `selfLinks.apps` is retrieved from the list of data-elements on the instance as shown here:
+
+```JSON
+  "data": [
+    {
+      "id": "82c96a52-ad0b-428f-8005-7f214daf367e",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "valideringsresultat",
+      "filename": "valideringsresultat.xml",
+      "contentType": "text/xml",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e"
+      }
+    },
+    {
+      "id": "726a315f-7e5e-4514-8ef1-5eda624407d4",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "betalingsinformasjon",
+      "filename": "betalingsinformasjon.xml",
+      "contentType": "text/xml",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4"
+      }
+    },
+    {
+      "id": "cbce850a-a887-4598-aea4-710ea9ffdc7d",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "kvittering",
+      "filename": "kvittering.pdf",
+      "contentType": "application/pdf",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d"
+      }
+    }
+  ]
 ```
