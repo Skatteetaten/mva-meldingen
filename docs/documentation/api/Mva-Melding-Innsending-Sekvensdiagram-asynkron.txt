@@ -1,4 +1,4 @@
-title Mva-Melding-Innsending-Sekvensdiagram-asynkron
+title Hente Tilbakemelding
 
 participant SBS
 participant ID-Porten(SBS)
@@ -25,7 +25,7 @@ space
 loop Polling til tilbakemelding er klar
 activate Altinn3-App
 SBS->Altinn3-App:Sjekk om ferdig behandlet\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback/status
-Altinn3-App-->SBS:Status
+Altinn3-App-->SBS:FeedbackStatus
 end
 
 space

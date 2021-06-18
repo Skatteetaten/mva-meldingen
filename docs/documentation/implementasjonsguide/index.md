@@ -8,9 +8,10 @@ description: "En utviklers guide til implementasjonen"
 
 ### Endringslogg
 
-| Dato       | Hva ble endret?                                                                                                                             |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
-| 2021.05.19 | La til denne endringsloggen og inkluderte at mva-meldingen meldingen blir validert under [fullføring av opplasting](#InnsendingValidering). |
+| Dato       | Hva ble endret?                                                                                                                                                                                   |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2021.05.19 | La til denne endringsloggen og inkluderte at mva-meldingen meldingen blir validert under [fullføring av opplasting](#InnsendingValidering).                                                       |
+| 2021.06.17 | Oppdatering av [hente tilbakemelding](#7-hente-tilbakemelding-på-innsendingen-fra-skatteetatens-innsendings-api) og [tilbakemeldingsfiler](#8-laste-ned-og-tolke-skatteetatens-tilbakemeldinger). |
 
 ## Forord
 
@@ -134,6 +135,10 @@ Når opplastningen er fullført, kan innsendingen fullføres. Brukeren som fullf
 
 Bak kulissene er dette en asynkron operasjon som involverer flere mikrotjenester. For å legge til rette for en bedre brukeropplevelse og lette implementasjonen av å finne ut om Skatteetaten har mottatt innsending, har vi gjort en utvidelse av rest-api'et som vil blokkere til tilstanden for innleveringen har nådd Skatteetatens definisjon av mottatt. Dette vil spare deg for å implementere en pollende løkke som vil måtte vite og finne ut om Skatteetaten har mottatt innsendingen og gitt tilbakemelding.
 
+I tilfelle det skal polles for å hente tilbakemelding skal status-endepunktet brukes til det returnerer at tilbakemelding er gitt, før instansen hentes, enten med feedback-apiet, eller med instans-apiet.
+
+Flere detaljer om regler og tilbakemelding finnes i <a href="../api#hent-tilbakemelding" target="_blank">API-dokumentasjonen</a>
+
 ### 8. Laste ned og tolke Skatteetatens tilbakemeldinger
 
 Skatteetatens tilbakemeldinger består av:
@@ -144,6 +149,8 @@ Skatteetatens tilbakemeldinger består av:
 - Valideringsresultat i xml
 
 Disse dokumentene er lastet opp til instansen for innsendingen. Lokasjonen hvor de kan lastes ned fra finnes i dataliste-elementet i instansen som returneres fra enten instans-api'et eller tilbakemeldingsutvidelsen av api'et omtalt i punkt 7.
+
+Flere detaljer om tilbakemeldingsfilene finnes i <a href="../api#tilbakemeldingsfiler" target="_blank">API-dokumentasjonen</a>
 
 ## UI-forslag
 

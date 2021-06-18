@@ -8,9 +8,10 @@ description: "A developer's guide to implementation"
 
 ### Change log
 
-| Date       | What changed?                                                                                                |
-| :--------- | :----------------------------------------------------------------------------------------------------------- |
-| 2021.05.19 | Added this change log and included validation of VAT-Return file [during submission](#SubmissionValidation). |
+| Date       | What changed?                                                                                                                                                                                        |
+| :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2021.05.19 | Added this change log and included validation of VAT-Return file [during submission](#SubmissionValidation).                                                                                         |
+| 2021.06.17 | Update of [obtain feedback](#7-obtain-the-feedback-of-the-submission-from-the-tax-administrations-submission-api) & [download feedback](#8-download-and-interpret-the-tax-administrations-feedback). |
 
 ## Preface
 
@@ -141,13 +142,22 @@ When the upload is complete, the submission can be completed. The user who compl
 
 Behind the scenes, this is an asynchronous operation involving multiple microservices. To facilitate a better user experience and ease the implementation of retrieving our feedback, we have made an extension to the rest-api that will block until the state of the submission has reached our definition of done. This will save you from implementing a loop that will poll the submission API for your submission status and determine if we have provided feedback.
 
-When the synchronous operation returns, it is possible to download the feedback. The return object includes links to the feedback files.
+In case of polling to obtain feedback, the status endpoint should be used until it returns that feedback has been given before the instance is retrieved. The instance could be retrieved either with the feedback or instance api.
+
+More details about rules and feedback can be found in the <a href="../api#retrieve-feedback" target="_blank">API documentation</a>
 
 ### 8. Download and interpret the Tax Administration's feedback
 
 Our feedback currently consists of:
 
+- Status for submission (altinn instance status)
+- Receipt in PDF-format
+- Payment information in xml-file
+- Validationresult in xml-file
+
 These documents are uploaded to the instance for the submission. The locations from which they can be downloaded can be found in the data-list element on the instance returned from either the instance api or the feedback extension of the api discussed in \# 7.
+
+More details on the feedback files can be found in the <a href="../api#feedback-files" target="_blank">API documentation</a>
 
 ## UI Proposal
 

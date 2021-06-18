@@ -6,6 +6,14 @@ description: "Api-beskrivelser"
 
 # MVA Melding Validerings og Innsendings API
 
+## Endringslogg
+
+| Dato       | Hva ble endret?                                                       |
+| :--------- | :-------------------------------------------------------------------- |
+| 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding). |
+
+## Introduksjon
+
 MVA Meldinger som skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde bruke disse APIene:
 
 1. Skatteetatens MVA-Melding validerings API
@@ -457,21 +465,49 @@ Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men p
 
 ## Hent tilbakemelding
 
-Dette steget vil hente tilbakemeldingen på instansen som Skatteetaten har lastet opp.
-Når instansen har fått tilbakemelding fra Skatteetaten vil den befinne seg i arkivet i altinn-innboksen.
-For å få tak i tilbakemeldingene kan man enten polle ved bruk av et asynkron API-endepunkt eller ved å bruke et synkron API-endepunkt.
+Skatteetaten har laget 2 api-endepunkter for å forenkle utviklingen av dette steget:
 
-Alternativ tilnærming for å hente tilbakemelding ved bruk av et asynkron API-endepunkt.
-![](Mva-Melding-Innsending-Sekvensdiagram-asynkron.png)
+- Et endepunkt som returnerer en status for om Skatteetaten har gitt tilbakemelding.
+- Et synkront endepunkt som returnerer instansen når Skatteetaten har behandlet mva-meldingen og gitt tilbakemelding.
 
-For å få tak i tilbakemeldingen ved bruk av et synkron API-endepunkt utføres det et kall mot instansen:
+Det følgende sekvensdiagrammet viser hvordan man kan identifisere om Skatteetaten har gitt tilbakemelding til en gitt instans, og hvordan instansen kan hentes.
+![](Hente-Tilbakemelding.png)
+
+For å hente status for tilbamelding kan man utføre kall mot instansens feedback-api:
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback/status
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+    "accept": "application/json"
+```
+
+Hvis kallet er vellykket vil en få status kode 200 og et json objekt i retur:
+
+```JSON
+{
+  "isFeedbackProvided":	boolean
+}
+```
+
+hvor `isFeedbackProvided` returneres som `true` dersom tilbakemelding er gitt, som `false` ellers.
+
+<br>
+For å hente en instans hvor tilbakemelding er gitt kan man utføre et kall mot det synkrone API-endepunktet:
 
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback
 HEADERS:
-    "Authorization": "Bearer " + "{altinnToken"
+    "Authorization": "Bearer " + "{altinnToken}"
     "accept": "application/json"
 ```
+
+Dette endepunktet vil returnere instansen når Skatteetaten har gitt tilbakemelding, og vil inneholde data-elementer for alle tilbakemeldingsfilene fra Skatteetaten.
+
+**Merk: Sistnevnte endepunkt skal kun brukes i følgende situasjoner:**
+
+- Sluttbruker venter på tilbakemelding.
+- Etter at status-endepunktet har returnert `isFeedbackProvided : true`
 
 ### Feilmeldinger
 
@@ -502,4 +538,66 @@ Eksempel verdi
   "detail": "string",
   "instance": "string"
 }
+```
+
+### Tilbakemeldingsfiler
+
+Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne lastes ned fra instansen.
+
+Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/eksempler/feedback/exampleSuccessfulFeedback17062021/" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
+
+Filene som kan lastes ned vil ha `dataType`:
+
+- betalingsinformasjon
+- valideringsresultat
+- kvittering
+
+og URL'er for nedlastning finnes i instans-objektets `data`-element returnert fra feedback- eller instans-api'et som vist under (irrelevant json er fjernet).
+
+Gitt ett `data` element, kan filen hentes ved å bruke:
+
+```JSON
+GET {selfLinks.apps}
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+```
+
+hvor `selfLinks.apps` kan hentes fra listen med data-elementer på instansen som vist her:
+
+```JSON
+  "data": [
+    {
+      "id": "82c96a52-ad0b-428f-8005-7f214daf367e",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "valideringsresultat",
+      "filename": "valideringsresultat.xml",
+      "contentType": "text/xml",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e"
+      }
+    },
+    {
+      "id": "726a315f-7e5e-4514-8ef1-5eda624407d4",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "betalingsinformasjon",
+      "filename": "betalingsinformasjon.xml",
+      "contentType": "text/xml",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4"
+      }
+    },
+    {
+      "id": "cbce850a-a887-4598-aea4-710ea9ffdc7d",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "kvittering",
+      "filename": "kvittering.pdf",
+      "contentType": "application/pdf",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d"
+      }
+    }
+  ]
 ```

@@ -6,6 +6,14 @@ description: "API descriptions"
 
 # VAT return Validation and Submission API
 
+## Changelog
+
+| Dato       | Hva ble endret?                                           |
+| :--------- | :-------------------------------------------------------- |
+| 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback). |
+
+## Introduction
+
 VAT returns to be sent to Skatteetaten from an end-user
 system (SBS) should use these APIs:
 
@@ -497,21 +505,50 @@ If the logged-in user attempt to update to the next task in the instance process
 
 ## Retrieve feedback
 
-This step will retrieve the feedback, which the Tax Administration have uploaded, on the instance.
-When the instance has recieved the feedback from the Tax Administration, it will be located in archive in the altinn inbox.
-To get the feedback one can either use a polling function using an asynchronous API-endpoint or by using a synchronous API-endpoint.
+The Tax Administration has created 2 api-endpoints to simplify the development of this step:
 
-Alternative approach for retrieving feedback, by using an asynchronous API-endpoint.
-![](Vat-Return-Submission-Sequence-Diagram-asynchronous.png)
+- An endpoint, which returns a status on whether the Tax Administration has provided feedback.
+- A synchronous endpoint, which returns the instance when the Tax Administration has processed the vat-return, and provided feedback.
 
-To get the feedback using a synchronous API-endpoint a call towards the instance is used:
+The following sequence diagram shows how to identify if the Tax Administration has provided feedback to a given instance,
+and how to retrieve it.
+![](Get-Feedback.png)
+
+You can get the status of the feedback by performing a request towards the feedback-api for the instance.
+
+```JSON
+GET {instansUrl}/{partyId}/{instanceGuid}/feedback/status
+HEADERS:
+    "Authorization": "Bearer " + "{altinnToken}"
+    "accept": "application/json"
+```
+
+If the call is successful it will return a status code 200, and a json object:
+
+```JSON
+{
+  "isFeedbackProvided":	boolean
+}
+```
+
+Where `isFeedbackProvided` returns as `true` if feedback has been given, otherwise it will return `false`
+
+To retrieve the instance where the feedback has been provided, use a call towards the synchronous API-endpoint:
 
 ```JSON
 GET {instansUrl}/{partyId}/{instanceGuid}/feedback
 HEADERS:
-    "Authorization": "Bearer " + "{altinnToken"
+    "Authorization": "Bearer " + "{altinnToken}"
     "accept": "application/json"
 ```
+
+This endpoint will return the instance when the Tax Administration has given feedback,
+and it will contain data elements for all the feedback files from the Tax Administration.
+
+**Note: Latter mentioned endpoint should only be used in the following situations:**
+
+- End user is waiting on feedback.
+- After the status-endpoint has returned `isFeedbackProvided : true`
 
 ### Error Messages
 
@@ -542,4 +579,66 @@ Example Value
   "detail": "string",
   "instance": "string"
 }
+```
+
+### Feedback files
+
+Once the Tax Administration has given feedback, the files for the feedback can be downloaded from the instance.
+
+Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/eksempler/feedback/exampleSuccessfulFeedback17062021/" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
+
+The files that can be downloaded will have `dataType`:
+
+- betalingsinformasjon
+- valideringsresultat
+- kvittering
+
+and download URLs are found in the instance object `data` elements returned from the feedback or instance api as shown below (irrelevant json removed).
+
+Given a `data` element, the file can be retrieved using:
+
+```JSON
+GET {selfLinks.apps}
+HEADERS:
+    "Authorization": "Bearer" + "{altinnToken}"
+```
+
+where `selfLinks.apps` is retrieved from the list of data-elements on the instance as shown here:
+
+```JSON
+  "data": [
+    {
+      "id": "82c96a52-ad0b-428f-8005-7f214daf367e",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "valideringsresultat",
+      "filename": "valideringsresultat.xml",
+      "contentType": "text/xml",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e"
+      }
+    },
+    {
+      "id": "726a315f-7e5e-4514-8ef1-5eda624407d4",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "betalingsinformasjon",
+      "filename": "betalingsinformasjon.xml",
+      "contentType": "text/xml",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4"
+      }
+    },
+    {
+      "id": "cbce850a-a887-4598-aea4-710ea9ffdc7d",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "kvittering",
+      "filename": "kvittering.pdf",
+      "contentType": "application/pdf",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d"
+      }
+    }
+  ]
 ```
