@@ -544,7 +544,7 @@ Eksempel verdi
 
 Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne lastes ned fra instansen.
 
-Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/eksempler/feedback/exampleSuccessfulFeedback17062021/" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
+Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
 
 Filene som kan lastes ned vil ha `dataType`:
 
