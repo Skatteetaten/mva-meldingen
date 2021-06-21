@@ -8,6 +8,12 @@ description: "XSD for mva-melding
 
 # XSD for mva-meldingen
 
+### Endringslogg
+
+| Dato       | Hva ble endret?                                                                                                                                                                                                |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2021.06.21 | Oppdaterte kodeliste [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), rettet "tap på krav" til "tapPåKrav" |
+
 ## XSD for mva-meldingen versjon 1.0
 
 Mva-meldingen sendes inn i XML-format. Den må være i henhold til strukturen dokumentert i XSD for mva-melding.
