@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>-1200</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>13</mvaKode>
-			<mvaKodeRegnskapsystem>12% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1200</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>

@@ -17,14 +17,14 @@
 		<fastsattMerverdiavgift>0</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>81</mvaKode>
-			<mvaKodeRegnskapsystem>25% utg mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utg mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>81</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>

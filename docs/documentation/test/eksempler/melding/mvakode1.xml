@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>-2500</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>1</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>

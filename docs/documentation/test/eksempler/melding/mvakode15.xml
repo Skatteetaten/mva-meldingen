@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>-1500</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>15</mvaKode>
-			<mvaKodeRegnskapsystem>15% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>

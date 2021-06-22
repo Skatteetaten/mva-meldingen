@@ -17,14 +17,14 @@
 		<fastsattMerverdiavgift>0</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>88</mvaKode>
-			<mvaKodeRegnskapsystem>12% utg mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 utg mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>12</sats>
 			<merverdiavgift>1200</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>88</mvaKode>
-			<mvaKodeRegnskapsystem>12% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1200</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>

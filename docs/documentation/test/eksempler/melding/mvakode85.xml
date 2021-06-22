@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>0</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>85</mvaKode>
-			<mvaKodeRegnskapsystem>0% utg mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>0 utg mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>0</sats>
 			<merverdiavgift>0</merverdiavgift>
