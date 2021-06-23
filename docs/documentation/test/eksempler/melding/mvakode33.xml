@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>2400</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>33</mvaKode>
-			<mvaKodeRegnskapsystem>12% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>20000</grunnlag>
 			<sats>12</sats>
 			<merverdiavgift>2400</merverdiavgift>

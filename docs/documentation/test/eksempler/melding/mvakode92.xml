@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>2500</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>92</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>

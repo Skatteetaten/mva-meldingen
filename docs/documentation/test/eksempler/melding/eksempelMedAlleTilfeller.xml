@@ -17,12 +17,12 @@
 		<fastsattMerverdiavgift>77511</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>1</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>3</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>20000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>5000</merverdiavgift>
@@ -43,46 +43,46 @@
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>11</mvaKode>
-			<mvaKodeRegnskapsystem>15% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>12</mvaKode>
-			<mvaKodeRegnskapsystem>11,11% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>11,11 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1111</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>13</mvaKode>
-			<mvaKodeRegnskapsystem>12% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1200</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>14</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>15</mvaKode>
-			<mvaKodeRegnskapsystem>15% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1500</merverdiavgift>
 		</mvaSpesifikasjonslinje>		
 		<mvaSpesifikasjonslinje>
 			<mvaKode>31</mvaKode>
-			<mvaKodeRegnskapsystem>15% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>20000</grunnlag>
 			<sats>15</sats>
 			<merverdiavgift>3000</merverdiavgift>
 		</mvaSpesifikasjonslinje>		
 		<mvaSpesifikasjonslinje>
 			<mvaKode>32</mvaKode>
-			<mvaKodeRegnskapsystem>11,11% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>11,11 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>20000</grunnlag>
 			<sats>11,11</sats>
 			<merverdiavgift>2222</merverdiavgift>
 		</mvaSpesifikasjonslinje>		
 		<mvaSpesifikasjonslinje>
 			<mvaKode>33</mvaKode>
-			<mvaKodeRegnskapsystem>12% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>20000</grunnlag>
 			<sats>12</sats>
 			<merverdiavgift>2400</merverdiavgift>
@@ -103,102 +103,102 @@
 		</mvaSpesifikasjonslinje>		
 		<mvaSpesifikasjonslinje>
 			<mvaKode>81</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>81</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>82</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>83</mvaKode>
-			<mvaKodeRegnskapsystem>15% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>15</sats>
 			<merverdiavgift>1500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>83</mvaKode>
-			<mvaKodeRegnskapsystem>15% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>84</mvaKode>
-			<mvaKodeRegnskapsystem>15% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>15</sats>
 			<merverdiavgift>1500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>85</mvaKode>
-			<mvaKodeRegnskapsystem>0% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>0 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>0</sats>
 			<merverdiavgift>0</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>86</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>86</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>87</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>88</mvaKode>
-			<mvaKodeRegnskapsystem>12% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>12</sats>
 			<merverdiavgift>1200</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>88</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-1200</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>89</mvaKode>
-			<mvaKodeRegnskapsystem>12% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>12</sats>
 			<merverdiavgift>1200</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>91</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>91</mvaKode>
-			<mvaKodeRegnskapsystem>25% inng mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
 			<merverdiavgift>-2500</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>92</mvaKode>
-			<mvaKodeRegnskapsystem>25% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>25</sats>
 			<merverdiavgift>2500</merverdiavgift>
@@ -211,8 +211,8 @@
 		</mvaSpesifikasjonslinje>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>1</mvaKode>
-			<spesifikasjon>tap paa krav</spesifikasjon>
-			<mvaKodeRegnskapsystem>tap paa krav</mvaKodeRegnskapsystem>
+			<spesifikasjon>tapPåKrav</spesifikasjon>
+			<mvaKodeRegnskapsystem>tapPåKrav</mvaKodeRegnskapsystem>
 			<merverdiavgift>-100000</merverdiavgift>
 		</mvaSpesifikasjonslinje>		<mvaSpesifikasjonslinje>
 			<mvaKode>1</mvaKode>

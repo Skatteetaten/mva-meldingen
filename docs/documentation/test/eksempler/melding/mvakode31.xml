@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>3000</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>31</mvaKode>
-			<mvaKodeRegnskapsystem>15% utgående mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>15 utgående mva</mvaKodeRegnskapsystem>
 			<grunnlag>20000</grunnlag>
 			<sats>15</sats>
 			<merverdiavgift>3000</merverdiavgift>

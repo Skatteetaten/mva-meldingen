@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>-100000</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 		<mvaKode>1</mvaKode>
-			<spesifikasjon>tap paa krav</spesifikasjon>
+			<spesifikasjon>tapPåKrav</spesifikasjon>
 			<merverdiavgift>-100000</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>

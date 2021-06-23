@@ -17,7 +17,7 @@
 		<fastsattMerverdiavgift>1200</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
 			<mvaKode>89</mvaKode>
-			<mvaKodeRegnskapsystem>12% utg mva</mvaKodeRegnskapsystem>
+			<mvaKodeRegnskapsystem>12 utg mva</mvaKodeRegnskapsystem>
 			<grunnlag>10000</grunnlag>
 			<sats>12</sats>
 			<merverdiavgift>1200</merverdiavgift>
