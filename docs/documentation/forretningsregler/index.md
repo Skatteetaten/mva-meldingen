@@ -16,7 +16,15 @@ description: "Regler for utfylling av mva-melding "
             <li> Reglene R023 - R027 er nå satt til alvorlighetsgrad "ugyldig skattemelding". </li>
             <li> Tekst for regel R040 var korrigert. </li>
           </ul>      
-	</td>
+      </td>
+  </tr>
+  <tr>
+      <td>2021.06.28</td>
+      <td>
+          <ul>
+            <li> Valideringsregler R065-R068 lagt til detaljspesifikasjonen. </li>
+          </ul>      
+      </td>
   </tr>
 </table>
 
