@@ -16,7 +16,15 @@ description: "Regler for utfylling av mva-melding "
             <li> Reglene R023 - R027 er nå satt til alvorlighetsgrad "ugyldig skattemelding". </li>
             <li> Tekst for regel R040 var korrigert. </li>
           </ul>      
-	</td>
+      </td>
+  </tr>
+  <tr>
+      <td>2021.06.28</td>
+      <td>
+          <ul>
+            <li> Valideringsregler R065-R068 lagt til detaljspesifikasjonen. </li>
+          </ul>      
+      </td>
   </tr>
 </table>
 
@@ -819,6 +827,80 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
             regelnummer { R060 }
+        }
+    ),
+    
+    MVA_KODE_FOR_INNGÅENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS(
+        "Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.hvor { linje ->
+                    linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15) eller (
+                        linje.spesifikasjon væreMedI spesifikasjonene(
+                            JUSTERING.spesifikasjon,
+                            TAPPÅKRAV.spesifikasjon,
+                            TILBAKEFØRING.spesifikasjon
+                        ) og (linje.mvaKode er 1)
+                        )
+                }
+                    .skal { linje -> linje.sats være tomt og (linje.grunnlag være tomt) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R065 }
+        }
+    ),
+
+    MVA_KODE_FOR_UTGÅENDE_AVGIFT_MANGLER_GRUNNLAG_OG_SATS(
+        "Beløp som gjelder utgående avgift skal ha med grunnlag og sats"
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje.hvor { linje ->
+                    linje.mvaKode væreMedI mvaKodene(3, 5, 6, 31, 32, 33, 51, 52) eller (
+                        linje.spesifikasjon er UTTAK.spesifikasjon og (
+                            linje.mvaKode væreMedI mvaKodene(
+                                3,
+                                5,
+                                31,
+                                32,
+                                33
+                            )
+                            )
+                        )
+                }
+                    .skal { linje -> linje.sats ha innhold og (linje.grunnlag ha innhold) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R066 }
+        }
+    ),
+
+    MVA_KODE_FOR_UTGÅENDE_AVGIFT_MANGLER_GRUNNLAG_OG_SATS_MVA_KODE_81_TIl_92(
+        "Beløp som gjelder utgående avgift skal ha med grunnlag og sats"
+        {
+            valideringsregel {
+                kodene(81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92)
+                    .hvor { linje -> linje.merverdiavgift erStørreEnn 0.0 }
+                    .skal { linje -> linje.sats ha innhold og (linje.grunnlag ha innhold) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R067 }
+        }
+    ),
+
+    MVA_KODE_FOR_INNGÅENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS_MVA_KODE_81_TIL_91(
+        "Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats"
+        {
+            valideringsregel {
+                kodene(81, 83, 86, 88, 91)
+                    .hvor { linje -> linje.merverdiavgift erMindreEnn 0.0 }
+                    .skal { linje -> linje.sats være tomt og (linje.grunnlag være tomt) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R068 }
         }
     ),
     
