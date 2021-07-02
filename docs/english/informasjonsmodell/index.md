@@ -16,7 +16,7 @@ description: "XSD for VAT return (mva-melding)
 
 ## Version 1.0 of the XSD for the VAT return
 
-Version 1.0 of this XSD is found here [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0](https://github.com/Skatteetaten/mva-meldingen/tree/oppdatere-regler-og-api-Description/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
+Version 1.0 of this XSD is found here [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
 
 Graphical representation of the XSD and encoding for the [VAT return](SkattemeldingForMerverdiavgift2020.png):
 
