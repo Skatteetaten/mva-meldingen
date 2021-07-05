@@ -357,7 +357,7 @@ size of 25MB.
 Url for uploading attachments has this structure:
 
 ```
-{instanceUrl}/data?datatype=vedlegg
+{instanceUrl}/data?datatype=binaerVedlegg
 ```
 
 The following content types are allowed for attachments:
@@ -373,7 +373,7 @@ The following content types are allowed for attachments:
 Attachments are uploaded with the following request to the instance data api:
 
 ```JSON
-POST {instanceUrl}/data?datatype=vedlegg
+POST {instanceUrl}/data?datatype=binaerVedlegg
     HEADERS:
         "Authorization": "Bearer " + "{altinnToken}"
         "content-type": "application/pdf"

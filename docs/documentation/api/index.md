@@ -322,7 +322,7 @@ Det er mulig å laste opp fra 0 til 57 vedlegg, med en individuell størrelse p�
 Url for opplasting av Vedlegg har denne oppbygningen:
 
 ```
-{instansUrl}/data?datatype=vedlegg
+{instansUrl}/data?datatype=binaerVedlegg
 ```
 
 Det tillates opplasting av følgende content-typer:
@@ -338,7 +338,7 @@ Det tillates opplasting av følgende content-typer:
 Vedlegg lastes opp på med følgende request mot instansens data-api:
 
 ```JSON
-POST {instansUrl}/data?datatype=vedlegg
+POST {instansUrl}/data?datatype=binaerVedlegg
 HEADERS:
     "Authorization": "Bearer " + "{altinnToken}"
     "content-type": "application/pdf"
