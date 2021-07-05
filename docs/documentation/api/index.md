@@ -11,6 +11,7 @@ description: "Api-beskrivelser"
 | Dato       | Hva ble endret?                                                       |
 | :--------- | :-------------------------------------------------------------------- |
 | 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding). |
+| 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.              |
 
 ## Introduksjon
 
