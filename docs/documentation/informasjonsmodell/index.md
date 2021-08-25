@@ -135,6 +135,181 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 
 </table>
 
+## Feltbeskrivelse for MvaMeldingInnsending
+
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>norskIdentifikator</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>skattleggingsperiode</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>meldingskategori</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>innsendingstype</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>instansstatus</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>oprettetAv</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>oprettingstidspunkt</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedlegg
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>vedleggstype</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>kildegruppe</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>opprettetAv</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>opprettingstidspunkt</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>vedleggsfil</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedleggsfil
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>filnavn</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>filekstensjon</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>filinnhold</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+</table>
+
+<br>
+Identifikator
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>organisasjonsnummer</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>foedselsnummer</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+</table>
+
+<br>
+Skattleggingsperiode
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>periode</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+  <tr><td>aar</td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+</table>
+
+<br>
+Meldingskategori
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td> - </td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+</table>
+
+<br>
+Innsendingstype
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td> - </td>
+    <td>
+        Beskrivelse:  <br>
+        Formål: 
+	</td>
+  </tr>
+</table>
+
 ## Kodelister
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
