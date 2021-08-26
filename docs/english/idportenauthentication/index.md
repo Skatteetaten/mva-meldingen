@@ -6,6 +6,12 @@ description: "How to authenticate with ID-Porten"
 
 ## Introduction
 
+### Change log
+
+| Date       | What changed?                                                  |
+| :--------- | :------------------------------------------------------------- |
+| 2021.08.26 | Added how to request the [Tax Administration scopes](#scopes). |
+
 To authenticate with ID-Porten, you must implement an Open ID Connect solution against ID-Porten. It can be challenging to implement and should be considered the least trivial task to solve when developing a solution for submitting a VAT return.
 
 The most important thing first: The Tax Administration have resources that can help you understand and find a good solution for your application.
@@ -82,7 +88,15 @@ To use the validation and submission APIs, the following scopes must be added:
 
 To add them use the "Add scopes" button.
 
-If the Skatteetaten scopes are not found in the search, it is because they have not been added yet. These are ordered by the Tax Administration and will be available when they are ready. But fear not: they will not be validated until they are available.
+If the Skatteetaten scopes are not found in the search, it is because Skatteetaten hasn't given your organization access to them yet. Your organization can now request access to the scopes using the following procedure.
+
+#### Requesting the scopes
+
+The scopes must be ordered by your organization by sending an e-mail to [mva-modernisering@skatteetaten.no](mailto:mva-modernisering@skatteetaten.no) and provide the **organization number** for the organization that manages the integration.
+
+The tax authorities will provide access to the scopes and they can then be added to the integration. The scopes must also be added to the code that integrates with ID-Porten so that the scopes are included in the access token from ID-Porten.
+
+The sample code [log_in_idporten.py](../test/Steg/log_in_idporten.py#L105-L164) has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
 
 ### Kundens org.nr.
 
@@ -90,7 +104,7 @@ This should be the organization number of your organization.
 
 ### Integrasjonens identifikator
 
-When the integration is created, a Guide appears here. This is the `client\_id`
+When the integration is created, a Guide appears here. This is the `client_id`
 
 ### Navn på integrasjonen & Beskrivelse
 
@@ -139,7 +153,7 @@ Determines which uris are valid to use as redirect uri's after successful login.
 
 When the authentication process starts, the user must be taken from the application to the login page at ID-Porten. And when the login is successful, the user is redirected back to the application.
 
-This is accomplished by including "redirect_uri" in the parameters used to open a browser with ID-porten login. The redirect_uri is sent as parameter ** MUST ** be present in the list of Gyldig(e) redirect uri-er in the Integration.
+This is accomplished by including `redirect_uri` in the parameters used to open a browser with ID-porten login. The `redirect_uri` is sent as parameter **MUST** be present in the list of Gyldig(e) redirect uri-er in the Integration.
 
 The application depends on having an endpoint that can process requests to the redirect_uri.
 
@@ -210,4 +224,4 @@ We use the following test environment at ID-Porten:
 - authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py" target="_blank"> log_in_idporten.py</a>
+For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py" target="_blank">log_in_idporten.py</a>

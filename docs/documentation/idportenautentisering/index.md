@@ -94,7 +94,7 @@ Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modern
 
 Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
 
-Eksempelkoden [log_in_idporten.py](../test/Steg/log_in_idporten.py#L105-L164) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen. Se linjene
+Eksempelkoden [log_in_idporten.py](../test/Steg/log_in_idporten.py#L105-L164) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
 
 ### Kundens org.nr.
 
@@ -149,7 +149,7 @@ Men dette betyr ikke at en web-applikasjon må være privat. Man kan trygt bruke
 
 Når autentiseringsprosessen starter skal brukeren føres fra applikasjonen til login-siden hos ID-Porten. Og når innloggingen er vellykket blir brukeren redirigert tilbake til applikasjonen.
 
-Dette oppnås ved å inkludere "redirect_uri" i parameterene som brukes for å åpne nettleservinduet hos ID-Porten. redirect_uri som sendes som parameter **MÅ** være tilstede i listen over Gyldig(e) redirect uri-er i Integrasjonen.
+Dette oppnås ved å inkludere `redirect_uri` i parameterene som brukes for å åpne nettleservinduet hos ID-Porten. `redirect_uri` som sendes som parameter **MÅ** være tilstede i listen over Gyldig(e) redirect uri-er i Integrasjonen.
 
 Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen til redirect_uri.
 
