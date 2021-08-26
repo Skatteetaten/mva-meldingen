@@ -6,6 +6,12 @@ description: "Hvordan autentisere med ID-Porten"
 
 ## Introduksjon
 
+### Endringslogg
+
+| Dato       | Hva ble endret?                                                |
+| :--------- | :------------------------------------------------------------- |
+| 2021.08.26 | Lagt til hvordan man [bestiller Skatteetaten scopes](#scopes). |
+
 For å autentisere med ID-porten må man implementere en Open ID Connect løsning mot ID-Porten. Det kan være utfordrende å implementere og sees på som det minst trivielle å løse med hensyn på innsending av mva-melding.
 
 Det aller viktigste først: Skatteetaten har ressurser som kan hjelpe deg å forstå og finne en god løsning for din applikasjon.
@@ -80,7 +86,15 @@ For å bruke validerings og innsendings-api'ene må følgende scopes legges til:
 
 For å legge dem til bruk knappen "Legg til scopes".
 
-Dersom skatteeten-scopene ikke finnes i søket er det fordi de ikke er lagt til ennå. Disse bestilles av Skatteetaten og blir tilgjengelige når de er klare. Men frykt ikke: De vil ikke bli validert før de er tilgjengelige.
+Dersom skatteeten-scopene ikke finnes i søket er det fordi Skatteetaten ikke har gitt din organisasjon tilgang til disse scopene ennå. Din organisasjon kan nå bestille tilgang til scopene ved å følge prosedyren under.
+
+#### Bestilling av scopes
+
+Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modernisering@skatteetaten.no](mailto:mva-modernisering@skatteetaten.no) og oppgi **organisasjonsnummer** for organisasjonen som administrerer integrasjonen.
+
+Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
+
+Eksempelkoden [log_in_idporten.py](../test/Steg/log_in_idporten.py) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
 
 ### Kundens org.nr.
 
@@ -88,7 +102,7 @@ Dette skal være organisasjonsnummeret til organisasjonen din.
 
 ### Integrasjonens identifikator
 
-Når integrasjonen blir opprettet dukker det opp en Guid her. Det er dette som er `client\_id`
+Når integrasjonen blir opprettet dukker det opp en Guid her. Det er dette som er `client_id`
 
 ### Navn på integrasjonen & Beskrivelse
 
