@@ -34,7 +34,7 @@ Hvordan man kommer i gang med ID-porten er beskrevet her: <a href="https://samar
 
 En annen fordel med å starte prosessen tidlig er at man kan teste Integrasjonen i test-miljøet som inkluderer både Altinn3 og Skatteetaten. Det må også opprettes egen integrasjon for produksjon.
 
-Skatteetatens Integrasjon med Indentifikator `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` kan benyttes til ID-Porten er klar til å tas i bruk. Denne vil bli fjernet etter varsel. Se mer i [avsnittet under](#konfigurere_en_integrasjon_i_samarbeidsportalen)
+Skatteetatens Integrasjon med Indentifikator `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` kan benyttes til ID-Porten er klar til å tas i bruk. Denne vil bli fjernet etter varsel. Se mer i [avsnittet under](#konfigurere-en-integrasjon-i-samarbeidsportalen)
 
 ## Konfigurere en Integrasjon i Samarbeidsportalen
 
@@ -94,7 +94,7 @@ Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modern
 
 Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
 
-Eksempelkoden [log_in_idporten.py](../test/Steg/log_in_idporten.py) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
+Eksempelkoden [log_in_idporten.py](../test/Steg/log_in_idporten.py#L105-L164) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen. Se linjene
 
 ### Kundens org.nr.
 
