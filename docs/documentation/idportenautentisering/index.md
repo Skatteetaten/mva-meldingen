@@ -6,6 +6,12 @@ description: "Hvordan autentisere med ID-Porten"
 
 ## Introduksjon
 
+### Endringslogg
+
+| Dato       | Hva ble endret?                                                |
+| :--------- | :------------------------------------------------------------- |
+| 2021.08.26 | Lagt til hvordan man [bestiller Skatteetaten scopes](#scopes). |
+
 For å autentisere med ID-porten må man implementere en Open ID Connect løsning mot ID-Porten. Det kan være utfordrende å implementere og sees på som det minst trivielle å løse med hensyn på innsending av mva-melding.
 
 Det aller viktigste først: Skatteetaten har ressurser som kan hjelpe deg å forstå og finne en god løsning for din applikasjon.
@@ -28,7 +34,7 @@ Hvordan man kommer i gang med ID-porten er beskrevet her: <a href="https://samar
 
 En annen fordel med å starte prosessen tidlig er at man kan teste Integrasjonen i test-miljøet som inkluderer både Altinn3 og Skatteetaten. Det må også opprettes egen integrasjon for produksjon.
 
-Skatteetatens Integrasjon med Indentifikator `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` kan benyttes til ID-Porten er klar til å tas i bruk. Denne vil bli fjernet etter varsel. Se mer i [avsnittet under](#konfigurere_en_integrasjon_i_samarbeidsportalen)
+Skatteetatens Integrasjon med Indentifikator `client_id: 23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09` kan benyttes til ID-Porten er klar til å tas i bruk. Denne vil bli fjernet etter varsel. Se mer i [avsnittet under](#konfigurere-en-integrasjon-i-samarbeidsportalen)
 
 ## Konfigurere en Integrasjon i Samarbeidsportalen
 
@@ -80,7 +86,15 @@ For å bruke validerings og innsendings-api'ene må følgende scopes legges til:
 
 For å legge dem til bruk knappen "Legg til scopes".
 
-Dersom skatteeten-scopene ikke finnes i søket er det fordi de ikke er lagt til ennå. Disse bestilles av Skatteetaten og blir tilgjengelige når de er klare. Men frykt ikke: De vil ikke bli validert før de er tilgjengelige.
+Dersom skatteeten-scopene ikke finnes i søket er det fordi Skatteetaten ikke har gitt din organisasjon tilgang til disse scopene ennå. Din organisasjon kan nå bestille tilgang til scopene ved å følge prosedyren under.
+
+#### Bestilling av scopes
+
+Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modernisering@skatteetaten.no](mailto:mva-modernisering@skatteetaten.no) og oppgi **organisasjonsnummer** for organisasjonen som administrerer integrasjonen.
+
+Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
+
+Eksempelkoden [log_in_idporten.py](../test/Steg/log_in_idporten.py#L105-L164) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
 
 ### Kundens org.nr.
 
@@ -88,7 +102,7 @@ Dette skal være organisasjonsnummeret til organisasjonen din.
 
 ### Integrasjonens identifikator
 
-Når integrasjonen blir opprettet dukker det opp en Guid her. Det er dette som er `client\_id`
+Når integrasjonen blir opprettet dukker det opp en Guid her. Det er dette som er `client_id`
 
 ### Navn på integrasjonen & Beskrivelse
 
@@ -135,7 +149,7 @@ Men dette betyr ikke at en web-applikasjon må være privat. Man kan trygt bruke
 
 Når autentiseringsprosessen starter skal brukeren føres fra applikasjonen til login-siden hos ID-Porten. Og når innloggingen er vellykket blir brukeren redirigert tilbake til applikasjonen.
 
-Dette oppnås ved å inkludere "redirect_uri" i parameterene som brukes for å åpne nettleservinduet hos ID-Porten. redirect_uri som sendes som parameter **MÅ** være tilstede i listen over Gyldig(e) redirect uri-er i Integrasjonen.
+Dette oppnås ved å inkludere `redirect_uri` i parameterene som brukes for å åpne nettleservinduet hos ID-Porten. `redirect_uri` som sendes som parameter **MÅ** være tilstede i listen over Gyldig(e) redirect uri-er i Integrasjonen.
 
 Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen til redirect_uri.
 
