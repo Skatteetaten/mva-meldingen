@@ -102,6 +102,7 @@ def get_idtoken(**kwargs) -> dict:
     assert 0 < port < 65536
 
     client_id = '23cc2587-ea4e-4a5f-aa5c-dfce3d6c5f09'
+    scope = 'openid skatteetaten:mvameldingvalidering skatteetaten:mvameldinginnsending'
 
     # Public clients need state parameter and PKCE challenge
     # https://difi.github.io/felleslosninger/oidc_auth_spa.html
@@ -117,7 +118,7 @@ def get_idtoken(**kwargs) -> dict:
     print("nonce:", nonce)
 
     u = 'https://{}/authorize'.format(AUTH_DOMAIN) + \
-        quote(('?scope=openid'
+        quote(('?scope={}'
                '&acr_values=Level3'
                '&client_id={}'
                '&redirect_uri=http://localhost:{}/token'
@@ -126,7 +127,7 @@ def get_idtoken(**kwargs) -> dict:
                '&nonce={}'
                '&code_challenge={}'
                '&code_challenge_method=S256'
-               '&ui_locales=nb'.format(client_id, port, state, nonce, pkce_challenge)), safe='?&=_')
+               '&ui_locales=nb'.format(scope, client_id, port, state, nonce, pkce_challenge)), safe='?&=_')
     print(u)
 
     # Open web browser to get ID-porten authorization token
@@ -154,7 +155,8 @@ def get_idtoken(**kwargs) -> dict:
                'code_verifier': pkce_secret,
                'code': qs['code'][0],
                'redirect_uri': 'http://localhost:{}/token'.format(port),
-               'client_id': client_id}
+               'client_id': client_id,
+               'scope': scope}
     headers = {'Accept': 'application/json'}
     r = requests.post('https://{}/token'.format(AUTH_DOMAIN), headers=headers, data=payload)
     r.raise_for_status()
