@@ -135,6 +135,132 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 
 </table>
 
+## Feltbeskrivelse for MvaMeldingInnsending
+
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr><td>meldingskategori</td>
+    <td>
+        Beskrivelse: type skjema som sendes inn <br>
+        Formål: å sikre at brukeren dekker sin plikt for egenfastsetting
+	</td>
+  </tr>
+  <tr><td>innsendingstype</td>
+    <td>
+        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være <strong>komplett</strong>. <br>
+        Formål: Feltet beholdes for på et senere tidspunkt kunne åpne for at revisor kommenterer/ skriver merknad på de mva-meldingene (f. eks. merverdiavgift kompensasjon) som skal godkjennes av revisor før innsending.
+	</td>
+  </tr>
+  <tr><td>instansstatus</td>
+    <td>
+        Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra hendelser på instansen. Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
+	</td>
+  </tr>
+  <tr><td>oprettetAv</td>
+    <td>
+        Beskrivelse: Dette feltet skal inneholde navn på innlogget bruker. <br>
+        Formål: Innholdet i denne vises i Altinn.
+	</td>
+  </tr>
+  <tr><td>oprettingstidspunkt</td>
+    <td>
+        Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra instansen. 
+        Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
+	</td>
+  </tr>
+</table>
+
+<br>
+Identifikator (Enten organisasjonsnummer eller foedselsnummer)
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>organisasjonsnummer</td>
+    <td>
+        Beskrivelse: unik identifikator for den skattepliktige som foretar egenfastsetting <br>
+        Formål: ivareta den skattepliktiges rettigheter og plikter
+	</td>
+  </tr>
+  <tr><td>foedselsnummer</td>
+    <td>
+        Beskrivelse: unik identifikator for den skattepliktige som foretar egenfastsetting <br>
+        Formål: ivareta den skattepliktiges rettigheter og plikter
+	</td>
+  </tr>
+</table>
+
+<br>
+Skattleggingsperiode
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>periode</td>
+    <td>
+        Beskrivelse: den perioden egenfastsettingen gjelder for <br>
+        Formål: sikre samsvar mellom bokføring og egenfastsetting
+	</td>
+  </tr>
+  <tr><td>aar</td>
+    <td>
+        Beskrivelse: det året egenfastsettingen gjelder for <br>
+        Formål: sikre samsvar mellom bokføring og egenfastsetting
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedlegg
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>vedleggstype</td>
+    <td>
+        Beskrivelse: Type vedlegg som blir lastet opp på instansen i Altinn. 
+        Hvor en kan enten bruke mva-melding for selve mva-meldingen, eller binaerVedlegg for generelle vedlegg. <br>
+	</td>
+  </tr>
+  <tr><td>kildegruppe</td>
+    <td>
+        Beskrivelse: Hvilken gruppe innsendingen kommer fra. 
+        Valgmuligheter: <strong>etat</strong>, <strong>sluttbrukersystem</strong>, <strong>sluttbruker</strong> <br>
+	</td>
+  </tr>
+  <tr><td>opprettetAv</td>
+    <td>
+        Beskrivelse: Dette feltet skal inneholde navn på innlogget bruker  <br>
+        Formål: Innholdet i denne vises i Altinn
+	</td>
+  </tr>
+  <tr><td>opprettingstidspunkt</td>
+    <td>
+        Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra instansen. 
+        Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedleggsfil
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>filnavn</td>
+    <td>
+        Beskrivelse: navnet på filen som er lagt med som vedlegg <br>
+	</td>
+  </tr>
+  <tr><td>filekstensjon</td>
+    <td>
+        Beskrivelse: ekstensjonen til filen som er lagt med som vedlegg <br>
+	</td>
+  </tr>
+  <tr><td>filinnhold</td>
+    <td>
+        Beskrivelse: Gir en beskrivelse av innholdet i vedleggsfilen <br>
+	</td>
+  </tr>
+</table>
+
 ## Kodelister
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
