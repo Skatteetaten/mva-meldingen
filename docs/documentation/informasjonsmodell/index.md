@@ -147,7 +147,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
   </tr>
   <tr><td>innsendingstype</td>
     <td>
-        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være **komplett**. <br>
+        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være <strong>komplett</strong>. <br>
         Formål: Feltet beholdes for på et senere tidspunkt kunne åpne for at revisor kommenterer/ skriver merknad på de mva-meldingene (f. eks. merverdiavgift kompensasjon) som skal godkjennes av revisor før innsending.
 	</td>
   </tr>
@@ -222,7 +222,7 @@ Vedlegg
   <tr><td>kildegruppe</td>
     <td>
         Beskrivelse: Hvilken gruppe innsendingen kommer fra. 
-        Valgmuligheter: **etat**, **sluttbrukersystem**, **sluttbruker** <br>
+        Valgmuligheter: <strong>etat</strong>, <strong>sluttbrukersystem</strong>, <strong>sluttbruker</strong> <br>
 	</td>
   </tr>
   <tr><td>opprettetAv</td>
