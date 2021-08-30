@@ -147,7 +147,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
   </tr>
   <tr><td>innsendingstype</td>
     <td>
-        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være komplett. <br>
+        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være **komplett**. <br>
         Formål: Feltet beholdes for på et senere tidspunkt kunne åpne for at revisor kommenterer/ skriver merknad på de mva-meldingene (f. eks. merverdiavgift kompensasjon) som skal godkjennes av revisor før innsending.
 	</td>
   </tr>
@@ -171,65 +171,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 </table>
 
 <br>
-Vedlegg
-<table align=center>
-  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
-  <tr>
-    <td>vedleggstype</td>
-    <td>
-        Beskrivelse: Type vedlegg som blir lastet opp på instansen i Altinn. 
-        Hvor en kan enten bruke mva-melding for selve mva-meldingen, eller binaerVedlegg for generelle vedlegg. <br>
-        Formål: 
-	</td>
-  </tr>
-  <tr><td>kildegruppe</td>
-    <td>
-        Beskrivelse: Hvilken gruppe innsendingen kommer fra. 
-        Valgmuligheter: etat, sluttbrukersystem, sluttbruker <br>
-        Formål: 
-	</td>
-  </tr>
-  <tr><td>opprettetAv</td>
-    <td>
-        Beskrivelse: Dette feltet skal inneholde navn på innlogget bruker  <br>
-        Formål: Innholdet i denne vises i Altinn
-	</td>
-  </tr>
-  <tr><td>opprettingstidspunkt</td>
-    <td>
-        Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra instansen. 
-        Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
-	</td>
-  </tr>
-</table>
-
-<br>
-Vedleggsfil
-<table align=center>
-  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
-  <tr>
-    <td>filnavn</td>
-    <td>
-        Beskrivelse: navnet på filen som er lagt med som vedlegg <br>
-        Formål: 
-	</td>
-  </tr>
-  <tr><td>filekstensjon</td>
-    <td>
-        Beskrivelse: ekstensjonen til filen som er lagt med som vedlegg <br>
-        Formål: 
-	</td>
-  </tr>
-  <tr><td>filinnhold</td>
-    <td>
-        Beskrivelse: Gir en beskrivelse av innholdet i vedleggsfilen <br>
-        Formål: 
-	</td>
-  </tr>
-</table>
-
-<br>
-Identifikator
+Identifikator (Enten organisasjonsnummer eller foedselsnummer)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr>
@@ -262,6 +204,59 @@ Skattleggingsperiode
     <td>
         Beskrivelse: det året egenfastsettingen gjelder for <br>
         Formål: sikre samsvar mellom bokføring og egenfastsetting
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedlegg
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>vedleggstype</td>
+    <td>
+        Beskrivelse: Type vedlegg som blir lastet opp på instansen i Altinn. 
+        Hvor en kan enten bruke mva-melding for selve mva-meldingen, eller binaerVedlegg for generelle vedlegg. <br>
+	</td>
+  </tr>
+  <tr><td>kildegruppe</td>
+    <td>
+        Beskrivelse: Hvilken gruppe innsendingen kommer fra. 
+        Valgmuligheter: **etat**, **sluttbrukersystem**, **sluttbruker** <br>
+	</td>
+  </tr>
+  <tr><td>opprettetAv</td>
+    <td>
+        Beskrivelse: Dette feltet skal inneholde navn på innlogget bruker  <br>
+        Formål: Innholdet i denne vises i Altinn
+	</td>
+  </tr>
+  <tr><td>opprettingstidspunkt</td>
+    <td>
+        Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra instansen. 
+        Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedleggsfil
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
+  <tr>
+    <td>filnavn</td>
+    <td>
+        Beskrivelse: navnet på filen som er lagt med som vedlegg <br>
+	</td>
+  </tr>
+  <tr><td>filekstensjon</td>
+    <td>
+        Beskrivelse: ekstensjonen til filen som er lagt med som vedlegg <br>
+	</td>
+  </tr>
+  <tr><td>filinnhold</td>
+    <td>
+        Beskrivelse: Gir en beskrivelse av innholdet i vedleggsfilen <br>
 	</td>
   </tr>
 </table>
