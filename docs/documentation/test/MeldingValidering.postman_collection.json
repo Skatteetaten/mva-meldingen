@@ -1,77 +1,95 @@
 {
-  "info": {
-    "_postman_id": "dd8eddb4-b537-47cd-8b55-687a149c2f68",
-    "name": "MeldingValidering",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "Valider 0",
-      "protocolProfileBehavior": {
-        "disabledSystemHeaders": {
-          "content-type": true
-        }
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "{{test-bearer}}",
-            "type": "text"
-          },
-          {
-            "key": "content-type",
-            "value": "application/xml",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<mvaMeldingDto xmlns=\"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9\">\n<innsending>\n</innsending>\n</mvaMeldingDto>"
-        },
-        "url": {
-          "raw": "https://mp-test.sits.no/api/mva/mva-melding/valider",
-          "protocol": "https",
-          "host": ["mp-test", "sits", "no"],
-          "path": ["api", "mva", "mva-melding", "valider"]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Valider 1",
-      "protocolProfileBehavior": {
-        "disabledSystemHeaders": {
-          "content-type": true
-        }
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "type": "text",
-            "value": "{{test-bearer}}"
-          },
-          {
-            "key": "content-type",
-            "type": "text",
-            "value": "application/xml"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<mvaMeldingDto xmlns=\"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9\">\n\t<innsending>\n\t\t<regnskapssystemsreferanse>3</regnskapssystemsreferanse>\n\t\t<regnskapssystem>\n\t\t\t<systemnavn>zzx</systemnavn>\n\t\t\t<systemversjon>4.34.3</systemversjon>\n\t\t</regnskapssystem>\n\t\t<innsender>\n\t\t\t<norskIdentifikator>02067623456</norskIdentifikator>\n\t\t</innsender>\n\t\t<innsendingTidspunkt>2022-05-26T21:35:47Z</innsendingTidspunkt>\n\t</innsending>\n\t<skattegrunnlagOgBeregnetSkatt>\n    <skattleggingsperiode>\n    </skattleggingsperiode>\n\t</skattegrunnlagOgBeregnetSkatt>\n</mvaMeldingDto>\n"
-        },
-        "url": {
-          "raw": "https://mp-test.sits.no/api/mva/mva-melding/valider",
-          "protocol": "https",
-          "host": ["mp-test", "sits", "no"],
-          "path": ["api", "mva", "mva-melding", "valider"]
-        }
-      },
-      "response": []
-    }
-  ]
+	"info": {
+		"_postman_id": "ce6f1729-51e9-42f7-ad17-6eb3379e29df",
+		"name": "MeldingValidering",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Valider 0",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{test-bearer}}",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<mvaMeldingDto xmlns=\"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9\">\n<innsending>\n</innsending>\n</mvaMeldingDto>"
+				},
+				"url": {
+					"raw": "https://mp-test.sits.no/api/mva/mva-melding/valider",
+					"protocol": "https",
+					"host": [
+						"mp-test",
+						"sits",
+						"no"
+					],
+					"path": [
+						"api",
+						"mva",
+						"mva-melding",
+						"valider"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valider 1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{test-bearer}}"
+					},
+					{
+						"key": "content-type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<mvaMeldingDto xmlns=\"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0\">\n<innsending>\n<regnskapssystemsreferanse>29</regnskapssystemsreferanse>\n<regnskapssystem>\n<systemnavn>Min System</systemnavn>\n<systemversjon>16.01.0</systemversjon>\n</regnskapssystem>\n</innsending>\n<skattegrunnlagOgBeregnetSkatt>\n<skattleggingsperiode>\n<periode>\n<skattleggingsperiodeToMaaneder>januar-februar</skattleggingsperiodeToMaaneder>\n</periode>\n<aar>2021</aar>\n</skattleggingsperiode>\n<fastsattMerverdiavgift>120.00</fastsattMerverdiavgift>\n<mvaSpesifikasjonslinje>\n<mvaKode>3</mvaKode>\n<grunnlag>1000.00</grunnlag>\n<sats>12</sats>\n<merverdiavgift>120.00</merverdiavgift>\n</mvaSpesifikasjonslinje>\n</skattegrunnlagOgBeregnetSkatt>\n<betalingsinformasjon/>\n<skattepliktig>\n<organisasjonsnummer>910000000</organisasjonsnummer>\n</skattepliktig>\n<meldingskategori>alminnelig</meldingskategori>\n<merknad>\n<beskrivelse/>\n</merknad>\n</mvaMeldingDto>"
+				},
+				"url": {
+					"raw": "https://mp-test.sits.no/api/mva/mva-melding/valider",
+					"protocol": "https",
+					"host": [
+						"mp-test",
+						"sits",
+						"no"
+					],
+					"path": [
+						"api",
+						"mva",
+						"mva-melding",
+						"valider"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }
