@@ -13,6 +13,7 @@ description: "XSD for mva-melding
 | Dato       | Hva ble endret?                                                                                                                                                                                                |
 | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2021.06.21 | Oppdaterte kodeliste [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), rettet "tap på krav" til "tapPåKrav" |
+| 2021.08.31 | Oppdaterte med beskrivelse av feltene i MvaMeldingInnsending                                                                                                                                                   |
 
 ## XSD for mva-meldingen versjon 1.0
 
@@ -137,6 +138,8 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 
 ## Feltbeskrivelse for MvaMeldingInnsending
 
+### MvaMeldingInnsending
+
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr><td>meldingskategori</td>
@@ -169,9 +172,10 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 	</td>
   </tr>
 </table>
-
 <br>
-Identifikator (Enten organisasjonsnummer eller foedselsnummer)
+
+### Identifikator (Enten organisasjonsnummer eller foedselsnummer)
+
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr>
@@ -188,9 +192,10 @@ Identifikator (Enten organisasjonsnummer eller foedselsnummer)
 	</td>
   </tr>
 </table>
-
 <br>
-Skattleggingsperiode
+
+### Skattleggingsperiode
+
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr>
@@ -207,16 +212,18 @@ Skattleggingsperiode
 	</td>
   </tr>
 </table>
-
 <br>
-Vedlegg
+
+### Vedlegg
+
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr>
     <td>vedleggstype</td>
     <td>
         Beskrivelse: Type vedlegg som blir lastet opp på instansen i Altinn. 
-        Hvor en kan enten bruke mva-melding for selve mva-meldingen, eller binaerVedlegg for generelle vedlegg. <br>
+        Hvor en kan enten bruke <strong>mva-melding</strong> for selve mva-meldingen, 
+        eller <strong>binaerVedlegg</strong> for generelle vedlegg. <br>
 	</td>
   </tr>
   <tr><td>kildegruppe</td>
@@ -238,9 +245,10 @@ Vedlegg
 	</td>
   </tr>
 </table>
-
 <br>
-Vedleggsfil
+
+### Vedleggsfil
+
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr>

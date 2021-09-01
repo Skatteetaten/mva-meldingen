@@ -13,6 +13,7 @@ description: "XSD for VAT return (mva-melding)
 | Date       | What changed?                                                                                                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2021.06.21 | Updated code list [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), correcting "tap på krav" to "tapPåKrav" |
+| 2021.08.31 | Updated with description of the fields in the VAT return submission                                                                                                                                            |
 
 ## Version 1.0 of the XSD for the VAT return
 
@@ -128,6 +129,135 @@ Purpose: to show calculated VAT per line
 Purpose: to ensure that the taxpayer can explain his own application of the law where necessary 
   </tr>
 
+</table>
+
+## Description of the fields in the VAT return submission
+
+### MvaMeldingInnsending
+
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
+  <tr><td>meldingskategori</td>
+    <td>
+        Description: the subtype of the VAT return <br>
+        Purpose: to ensure that the user can fulfill their VAT reporting obligations
+	</td>
+  </tr>
+  <tr><td>innsendingstype</td>
+    <td>
+        Description: A VAT return with meldingskategori alminnelig og primær will always be <strong>komplett</strong> <br>
+        Purpose: The field is kept so at a later date it can be opened for auditors to comment/write notes on those vat returns (e.g. VAT compensation) that should be approved by an auditor before submission.
+</td>
+  </tr>
+  <tr><td>instansstatus</td>
+    <td>
+        Description: This field will be removed since we get the required information from the events on the instance. <br>
+        This will be done by making the field optional in a transition and removed at a appropriate time.
+	</td>
+  </tr>
+  <tr><td>oprettetAv</td>
+    <td>
+        Description: This field should contain the name of the logged in user. <br>
+        Purpose: The content of this field will be displayed in Altinn.
+	</td>
+  </tr>
+  <tr><td>oprettingstidspunkt</td>
+    <td>
+        Description: This field will be removed since we get the required information from the events on the instance. <br>
+        This will be done by making the field optional in a transition and removed at a appropriate time.
+	</td>
+  </tr>
+</table>
+
+<br>
+Identifikator (Either organisasjonsnummer or foedselsnummer)
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
+  <tr>
+    <td>organisasjonsnummer</td>
+    <td>
+        Description: unique identifier for the taxable organisation <br>
+        Purpose: to take care of the rights and obligations of the taxpayer
+	</td>
+  </tr>
+  <tr><td>foedselsnummer</td>
+    <td>
+        Description: unique identifier for the taxable organisation <br>
+        Purpose: to take care of the rights and obligations of the taxpayer
+	</td>
+  </tr>
+</table>
+
+<br>
+Skattleggingsperiode
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
+  <tr>
+    <td>periode</td>
+    <td>
+        Description: the taxation period for which the VAT return applies <br>
+        Purpose: to ensure consistency between book keeping and VAT return period.
+	</td>
+  </tr>
+  <tr><td>aar</td>
+    <td>
+        Description: the taxation year for which the VAT return applies <br>
+        Purpose: to ensure consistency between book keeping and VAT return period.
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedlegg
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
+  <tr>
+    <td>vedleggstype</td>
+    <td>
+        Description: Type of attachments which is uploaded to the instance on Altinn.
+        Where you can either use <strong>mva-melding</strong> for the VAT return, or <strong>binaerVedlegg</strong> for general attachments.
+	</td>
+  </tr>
+  <tr><td>kildegruppe</td>
+    <td>
+        Description: Which group the submission comes from. <br>
+        Options: <strong>etat</strong>, <strong>sluttbrukersystem</strong>, <strong>sluttbruker</strong> 
+	</td>
+  </tr>
+  <tr><td>opprettetAv</td>
+    <td>
+        Description: This field should contain the name of the logged in user. <br>
+        Purpose: The content of this field will be displayed in Altinn.
+	</td>
+  </tr>
+  <tr><td>opprettingstidspunkt</td>
+    <td>
+        Description: This field will be removed since we get the required information from the events on the instance. <br>
+        This will be done by making the field optional in a transition and removed at a appropriate time.
+	</td>
+  </tr>
+</table>
+
+<br>
+Vedleggsfil
+<table align=center>
+  <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
+  <tr>
+    <td>filnavn</td>
+    <td>
+        Description: Name of the file which is uploaded as attachment <br>
+	</td>
+  </tr>
+  <tr><td>filekstensjon</td>
+    <td>
+        Description: The file extension for the file which is uploaded as attachment <br>
+	</td>
+  </tr>
+  <tr><td>filinnhold</td>
+    <td>
+        Description: description of the contents of the file which is uploaded as attachment <br>
+	</td>
+  </tr>
 </table>
 
 ## Encoding
