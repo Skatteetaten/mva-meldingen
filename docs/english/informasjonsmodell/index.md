@@ -177,13 +177,13 @@ Identifikator (Either organisasjonsnummer or foedselsnummer)
     <td>organisasjonsnummer</td>
     <td>
         Description: unique identifier for the taxable organisation <br>
-        Purpose: to take care of the rights and ibligations of the taxpayer
+        Purpose: to take care of the rights and obligations of the taxpayer
 	</td>
   </tr>
   <tr><td>foedselsnummer</td>
     <td>
         Description: unique identifier for the taxable organisation <br>
-        Purpose: to take care of the rights and ibligations of the taxpayer
+        Purpose: to take care of the rights and obligations of the taxpayer
 	</td>
   </tr>
 </table>
