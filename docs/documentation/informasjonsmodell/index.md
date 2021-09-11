@@ -271,7 +271,8 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 
 ## Kodelister
 
-| Gruppe og kode	| Beskrivelse av kode, fradrag og spesifikasjon	 |
+| Gruppe og kode	| Beskrivelse av kode, fradrag og spesifikasjon	|
+| --------------------- | --------------------------------------------- |
 | Salg av varer og tjenester i Norge|      |		 
 | 3	| Salg og uttak av varer og tjenester (høy sats) |
 | Spesifikasjonslinje til kode 3 | Uttak |
