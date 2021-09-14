@@ -9,17 +9,17 @@ description: "Spørsmål og svar"
 ### Hvilke endringer inngår i moderniseringen av mva-området? 
 
 ##### Ny registreringsløsning for mva-pliktige.
-Skatteetaten har lansert en ny tjeneste for virksomheter som skal registrere seg i Mva-registeret. Med den nye tjenesten vil behandlingstiden, for størsteparten av registreringene, reduseres fra flere uker til noen minutter. [Link til tjenesten](https://www.skatteetaten.no/bedrift-og-organisasjon/avgifter/mva/registrere/).
+Skatteetaten har lansert en ny tjeneste for virksomheter som skal registrere seg i Mva-registeret. Med den nye tjenesten vil behandlingstiden, for flesteparten av registreringene, reduseres fra flere uker til noen minutter. [Den nye registreringsløsningen ligger på skatteetaten.no.](https://www.skatteetaten.no/bedrift-og-organisasjon/avgifter/mva/registrere/).
 
 ##### Ny mva-melding.
 Moderniseringen sørger for forenkling for næringslivet gjennom forbedringer som felles informasjonsstruktur og regelsett for alle typer mva-meldinger; bedre brukeropplevelse og mer fleksibilitet i oppsettet; støttende digital veiledning og mindre feilkilder. Ny mva-melding lanseres 01.01.22.
 
 ##### Salgs- og kjøpsmelding.
-Et forslag til ny melding er per nå under utredning hos Finansdepartementet. Forslaget innebærer at bokførte salg og kjøp på transaksjonsnivå skal rapporteres på en hensiktsmessig måte. Forslaget krever lov- og forskriftsendringer, og vil bli sendt på høring før det blir endelig vedtatt.
+Et forslag til ny melding er sendt på høring. Forslaget innebærer at bokførte salg og kjøp på transaksjonsnivå skal rapporteres på en hensiktsmessig måte. Fristen for å sende inn høringsuttalelser er 26. november 2021. [Du kan lese hele høringsforslaget her.](https://www.skatteetaten.no/rettskilder/type/horinger/opplysningsplikt-salgs-og-kjopstransaksjoner/)
 
 ### Blir det en overgangsperioder fra gammel til ny tjeneste?
   
-For registreringsløsningen varte overgangsperioden i to uker, frem til 1. mars 2021 for nyregistreringer. Samordet Registermelding del 2 vil være åpen for endring og opphør av registrering frem til 2. kvartal 2021. 
+Samordet Registermelding del 2 er ikke lenger åpen for endring og opphør av registrering etter 2. kvartal 2021. 
 For mva-melding er det ikke planlagt en overgangsperiode.
 
 ### Vil det finnes en «nødløsning» dersom vi får tekniske problemer?
@@ -27,9 +27,15 @@ For mva-melding er det ikke planlagt en overgangsperiode.
 For registreringsløsningen har man mulighet til å sende inn en ufullstendig søknad som tilbys etter de første stegene i tjenesten. 
 For mva-melding vil det være mulig å manuelt fylle inn og sende mva-melding direkte i innlogget tjeneste på Skatteetatens hjemmesider.
 
-## Hvem kan fylle mva-registrering og mva-melding, og hvem kan sende inn? 
+## Hvem kan fylle ut mva-registrering og mva-melding, og hvem kan sende inn? 
 
-Det kreves Altinn-roller eller tilgang til "Merverdiavgift Registreringstjeneste" for å fylle ut og/eller sende inn søknad om samtlige registreringer i mva-registeret. I tillegg kreves det også Altinn-roller for å fylle ut og levere mva-melding.
+### Hvorfor har Skatteetaten valgt å begrense utfylling gjennom Altinn-roller?
+  
+Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut for en virksomhet, og dersom virksomheten har dårlige rutiner for signering kan utilsiktede utfyllinger bli sendt inn og gi alvorlige konsekvenser. Den nye bruken av roller er sikrere, og i tråd med standarden for alle andre moderniserte oppgaver i Skatteetaten.Det kreves Altinn-roller eller tilgang til "Merverdiavgift Registreringstjeneste" for å fylle ut og/eller sende inn søknad om samtlige registreringer i mva-registeret. I tillegg kreves det også Altinn-roller for å fylle ut og levere mva-melding.
+
+### Mer om Altinn-roller 
+
+[Her kan du se en oversikt over de ulike Altinn-rollene og lese mer om Altinns roller og rettigheter.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
 
 ### Registreringsprosessen 
 For å fylle ut søknaden må du ha en av følgende roller i Altinn:
@@ -50,16 +56,9 @@ Det gjøres ikke endringer fra dagens praksis:
 Utfyller: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrett eller Revisormedarbeider
 Signering: Begrenset signeringsrett, Kontaktperson NUF eller Regnskapsfører med signeringsrett
 
-### Mer om Altinn-roller 
-
-[Her kan du se en oversikt over de ulike Altinn-rollene og lese mer om Altinns roller og rettigheter.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
-
 ### Utvidet funksjonalitet
 Skatteetaten har planer om å utvikle funksjonalitet for delegering av fullmakt i enkeltsaker der en person har behov for å delegere myndighet til en fullmektig, da det kan være relevant i flere tilfeller, inkludert ved søknad, klage og etterkontroll. Dette er tilleggsfunksjonalitet som utvikles senere, og det finnes per i dag ikke estimert et tidspunkt for når dette vil være klart.
 
-### Hvorfor har Skatteetaten valgt å begrense utfylling gjennom Altinn-roller?
-  
-Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut for en virksomhet, og dersom virksomheten har dårlige rutiner for signering kan utilsiktede utfyllinger bli sendt inn og gi alvorlige konsekvenser. Den nye bruken av roller er sikrere, og i tråd med standarden for alle andre moderniserte oppgaver i Skatteetaten. 
 
  
 ## Mva-melding
@@ -70,7 +69,7 @@ Fra 1. januar 2022. Første frist for innlevering vil avhenge av hvilken termin 
 
 ### Skal leveringen av mva-melding skje via Altinn eller via Skatteetatens nettside?
 
-Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra regnskapssystemet. Skatteetaten jobber tett med systemleverandører for å tilrettelegge for dette. For de som ikke har regnskapssystem, eller av annen grunn ikke kan levere gjennom regnskapssystem, utvikler Skatteetaten en egen egen webbasert innlogget tjeneste som kan brukes for levering av mva-melding. Altinn vil fortsatt brukes for identifisering og informasjonsutveksling. En bruker er ikke ment å merke at innleveringen skjer gjennom Skatteetaten kontra Altinn.
+Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra regnskapssystemet. Skatteetaten jobber tett med systemleverandører for å tilrettelegge for dette. For de som ikke har regnskapssystem, eller av annen grunn ikke kan levere gjennom regnskapssystem, utvikler Skatteetaten en egen  webbasert innlogget tjeneste som kan brukes for levering av mva-melding. Altinn vil fortsatt brukes for identifisering og informasjonsutveksling. 
 
 ### Er levering i innlogget tjeneste en permanent løsning som er åpen for alle (hvis man ikke kan eller vil bruke system-system)?
 Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
@@ -86,7 +85,8 @@ På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om fo
 ### Er det laget et utkast visuelt hvordan den nye meldingen skal se ut?
 Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssystemet. Målet er at brukerne skal føre regnskap som normalt, og at systemet sammenstiller informasjonen fra regnskapet til mva-meldingen, slik at brukeren kan sende inn. 
 
-Den nye rapporteringen vil være kodebasert og legge til rette for digital samhandling. Dagens nummererte poster erstattes av en dynamisk liste av spesifikasjonslinjer. Det vil dessuten bli mulig å gi merknader både samlet og per linje.
+Den nye rapporteringen vil være kodebasert og legge til rette for digital samhandling. Dagens nummererte poster erstattes av en dynamisk liste av spesifikasjonslinjer. Det vil bli mulig å gi merknader både samlet og per linje.
+[Kodelisten for den nye mva-meldingen er tilgjengelig på Github, under Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister)
 
 ### Kan man vedlegge dokumentasjon som filvedlegg til mva-meldingen? 
 Ja, man kan vedlegge inntil 50 vedlegg per melding, og vedlegg kan være opp til 25 MB per fil. 
@@ -113,14 +113,14 @@ Det er enheten som står oppført som rapporterende enhet som må levere mva-mel
 Ja, vi tar høyde for dette i valideringen og har lagt inn  en toleranse på +/- 3 kroner. Det er det samme som i dagens mva-løsning.
 
 ### Vil det foreligge en kodeliste over disse "redigerte" beskrivelsene for de ulike kodene? 
-Den kan finnes på Github: https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister
+[Den kan finnes på Github.](https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister)
 
 
 ## Salgs- og kjøpsmelding
 
 ### Hva innebærer salgs- og kjøpsmelding og når kommer den?
 
-Salgs- og kjøpsmelding er på forslagsstadiet, og er til utredning hos Finansdepartementet. Når forslaget blir sendt på høring vil det fremkomme ønsket ikrafttredelsesdato. Det vil bli hensyntatt at virksomheter, leverandører av regnskapssystemer og Skatteetaten trenger tid til å tilpasse systemer. Forslaget gjelder å innføre en opplysningsplikt om salgs- og kjøpstransaksjoner for bokføringspliktige og offentlige virksomheter, med mulige unntak. Offentlig virksomhet er en betydelig innkjøper og foreslås omfattet av opplysningsplikten. 
+Salgs- og kjøpsmelding er sendt på høring og det tas sikte på at endringene trer i kraft i 2024. Det vil bli hensyntatt at virksomheter, leverandører av regnskapssystemer og Skatteetaten trenger tid til å tilpasse systemer. Forslaget gjelder å innføre en opplysningsplikt om salgs- og kjøpstransaksjoner for bokføringspliktige og offentlige virksomheter, med mulige unntak. Offentlig virksomhet er en betydelig innkjøper og foreslås omfattet av opplysningsplikten. 
 Opplysningsplikten gjelder den enkelte salgs- og kjøpstransaksjon med opplysninger om fakturanummer, dokumentasjonsdato, angivelse av partene i transaksjonen med navn og organisasjonsnummer, samt opplysninger om vederlag og merverdiavgift. Opplysningsplikten vil bidra til at transaksjoner kan ses i sammenheng. Dette er ikke mulig i dag. Det skal ikke rapporteres hva den enkelte transaksjon gjelder.  
 En stor andel av de bokføringspliktige fører regnskapet elektronisk og har allerede i dag krav til å kunne gjengi bokførte opplysninger i standardisert form (SAF-T). Dette tilrettelegger for at rapporteringen kan gjøres direkte fra regnskapssystemet til skattemyndighetene.     
 Hensikten med en slik melding er å øke etterlevelse, sørge for økt likebehandling og hindre urettmessig konkurransevridning i næringslivet. Det vil gi Skatteetaten et bedre grunnlag for å vurdere veilednings- og kontrolltiltak for å redusere skatte- og avgiftsunndragelser. Et viktig mål er at salgs- og kjøpsmeldingen i liten grad vil skape merarbeid for næringslivet, ved innrapportering fra regnskapssystem.
