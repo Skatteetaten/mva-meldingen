@@ -261,7 +261,58 @@ Vedleggsfil
 </table>
 
 ## Encoding
-
+	
+| Group and code	| Description of code, deductions and specification |
+| --------------------- | --------------------------------------------- |
+| Sales of goods and services in Norway |      |		 
+| 3	| Sales and withdrawals of goods and services (standard rate) |
+| Specification line for code 3 | withdrawal |
+| 31	| Sales and withdrawals of goods and services (middle rate) |
+| Specification line for code 31| withdrawal |
+| 33	| Sales and withdrawals of goods and services (low rate) |
+| Specification line for code 33| withdrawal |
+| 5	| Sales of goods and services exempt from value added tax |
+| Specification line for code 5 | withdrawal |
+| 6	| Sales of goods and services outside the scope of the Value Added Tax Act |
+| Sales of goods and services to other countries (exports) |    |		 
+| 52	| Sales of goods and services exempt from value added tax to other countries |
+| Purchases of goods and services in Norway (Deductions) |    | 
+| 1	| Purchases of goods and services (standard rate) |
+| Specification line for code 1 | losses on outstanding claims and cancellations |
+| Specification line for code 1 | adjustment of input VAT on capital goods |
+| Specification line for code 1 | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
+| 11	| Purchases of goods and services (middle rate) |
+| Specification line for code 11 | losses on outstanding claims and cancellations |
+| 13	| Purchases of goods and services (low rate) |
+| Specification line for code 13 | losses on outstanding claims and cancellations |
+| Purchases of goods from abroad (import) |    |		 
+| 81	| Purchases of goods from abroad with deductions (standard rate) |
+| 81	| Deductions on purchases of goods from abroad with deductions (standard rate) |
+| Specification line for code 81 | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
+| 14	| Purchases of goods from abroad, value added tax paid upon import (standard rate) |
+| 82	| Purchases of goods from abroad without deduction entitlement (standard rate) |
+| 83	| Purchases of goods from abroad with deductions (middle rate) |
+| 83	| Deductions on purchases of goods from abroad with deductions (middle rate) |
+| 15	| Purchases of goods from abroad, value added tax paid upon import (middle rate) |
+| 84	| Purchases of goods from abroad without deduction entitlement (middle rate) |
+| 85	| Purchases of goods from abroad with a zero-rate |
+| Purchases of services from abroad (import) |    |		 
+| 86	| Purchases of services from abroad with deductions (standard rate) | 
+| 86	| Deductions on purchases of services from abroad with deductions (standard rate) |
+| 87	| Purchases of services from abroad without deduction entitlement (standard rate) | 
+| 88	| Purchases of services from abroad with deductions (low rate) |
+| 88	| Deductions on purchases of services from abroad with deductions (low rate) |
+| 89	| Purchases of services from abroad without deduction entitlement (low rate) |
+| Fish etc. |    |
+| 32	| Sales of fish and other marine wildlife resources |
+| Specification line for code 32 | withdrawal |
+| 12 	| Value added tax paid upon the purchase of fish and other marine wildlife resources |
+| Specification line for code 12 | Losses on outstanding claims and cancellations |
+| Emission allowances and gold |		 
+| 51	| Sales of emission allowances and gold to businesses/self-employed persons |
+| 91	| Purchases of emission allowances and gold |
+| 91	| Deductions on purchases of emission allowances and gold |
+| 92	| Purchases of emission allowances and gold without deduction entitlement |
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/kodelister/)
 
 - Encoding for VAT code: [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml)
