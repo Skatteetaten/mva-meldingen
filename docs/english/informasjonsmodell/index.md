@@ -278,17 +278,17 @@ Vedleggsfil
 | 52	| Sales of goods and services exempt from value added tax to other countries |
 | Purchases of goods and services in Norway (Deductions) |    | 
 | 1	| Purchases of goods and services (standard rate) |
-| Specification line for code 1 | losses on outstanding claims |
-| Specification line for code 1 | Justering av merverdiavgift for kapitalvarer |
-| Specification line for code 1 | Tilbakeføring av merverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom) |
+| Specification line for code 1 | losses on outstanding claims and cancellations |
+| Specification line for code 1 | adjustment of input VAT on capital goods |
+| Specification line for code 1 | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | 11	| Purchases of goods and services (middle rate) |
-| Specification line for code 11 | losses on outstanding claims |
+| Specification line for code 11 | losses on outstanding claims and cancellations |
 | 13	| Purchases of goods and services (low rate) |
-| Specification line for code 13 | losses on outstanding claims |
+| Specification line for code 13 | losses on outstanding claims and cancellations |
 | Purchases of goods from abroad (import) |    |		 
 | 81	| Purchases of goods from abroad with deductions (standard rate) |
 | 81	| Deductions on purchases of goods from abroad with deductions (standard rate) |
-| Specification line for code 81	| Tilbakeføring av merverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom) |
+| Specification line for code 81 | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | 14	| Purchases of goods from abroad, value added tax paid upon import (standard rate) |
 | 82	| Purchases of goods from abroad without deduction entitlement (standard rate) |
 | 83	| Purchases of goods from abroad with deductions (middle rate) |
@@ -307,7 +307,7 @@ Vedleggsfil
 | 32	| Sales of fish and other marine wildlife resources |
 | Specification line for code 32 | withdrawal |
 | 12 	| Value added tax paid upon the purchase of fish and other marine wildlife resources |
-| Specification line for code 12 | Losses on outstanding claims |
+| Specification line for code 12 | Losses on outstanding claims and cancellations |
 | Emission allowances and gold |		 
 | 51	| Sales of emission allowances and gold to businesses/self-employed persons |
 | 91	| Purchases of emission allowances and gold |
