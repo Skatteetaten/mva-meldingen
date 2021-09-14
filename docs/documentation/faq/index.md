@@ -25,33 +25,42 @@ For mva-melding er det ikke planlagt en overgangsperiode.
 ### Vil det finnes en «nødløsning» dersom vi får tekniske problemer?
   
 For registreringsløsningen har man mulighet til å sende inn en ufullstendig søknad som tilbys etter de første stegene i tjenesten. 
-For mva-melding vil det være mulig å manuelt fylle inn og sende mva-melding direkte i portalen.
- 
+For mva-melding vil det være mulig å manuelt fylle inn og sende mva-melding direkte i innlogget tjeneste på Skatteetatens hjemmesider.
 
-## Registreringsløsning
+## Hvem kan fylle mva-registrering og mva-melding, og hvem kan sende inn? 
 
-### Hvem kan fylle ut en registrering og hvem kan sende inn? 
-  
-Det kreves Altinn-roller for å fylle ut og sende inn søknad om samtlige registreringer. 
+Det kreves Altinn-roller eller tilgang til "Merverdiavgift Registreringstjeneste" for å fylle ut og/eller sende inn søknad om samtlige registreringer i mva-registeret. I tillegg kreves det også Altinn-roller for å fylle ut og levere mva-melding.
 
-Utfyller: Virksomheten selv, Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører med signeringsrett, Regnskapsfører uten signeringsrett eller Revisormedarbeider.
-Signering: Begrenset signeringsrett eller Kontaktperson NUF.
+### Registreringsprosessen 
+For å fylle ut søknaden må du ha en av følgende roller i Altinn:
+Virksomheten selv, Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører med signeringsrett, Regnskapsfører uten signeringsrett eller Revisormedarbeider.
+For å signere må du ha en av følgende roller i Altinn:
+Begrenset signeringsrett eller Kontaktperson NUF.
 
+### Delegert tilgang til registreringstjenesten 
+Advokater og andre rådgivere som ikke benytter Altinn-roller, kan be virksomheten delegere tilgang til "Merverdiavgift Registreringstjeneste" i Altinn. Alternativt kan vedkommende forespørre tilgang dersom man har en tilknytning til virksomheten i Altinn fra før.
+Tilgangen til "Merverdiavgift Registreringstjeneste" i Altinn kan gis på personnivå eller på virksomhetsnivå (tilgangen gis kun på virksomhetsnivå dersom man har tilknytning til virksomheten fra før).
+Ved tilgang på personnivå oppgir man personnummer eller selvvalgt brukernavn i Altinn overfor virksomheten. Tilgangen er ikke tidsbegrenset, så virksomheten bør fjerne tilgangen hvis advokat eller rådgiver ikke lenger skal ha tilgang. En funksjonalitet for tidsbegrensning kommer trolig etter hvert.
+Altinn-roller for advokater og rådgivere
+Det er også mulig for advokater og rådgivere å tilegne seg Altinn-roller for en virksomhet. Dette gjøres i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i Enhetsregisteret
 
-### Hvorfor har Skatteetaten valgt å begrense utfylling av registreringssøknad gjennom Altinn-roller?
+### Mva-melding 
+Hvem kan fylle ut og levere mva-melding?
+Det gjøres ikke endringer fra dagens praksis:
+Utfyller: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrett eller Revisormedarbeider
+Signering: Begrenset signeringsrett, Kontaktperson NUF eller Regnskapsfører med signeringsrett
+
+### Mer om Altinn-roller 
+
+[Her kan du se en oversikt over de ulike Altinn-rollene og lese mer om Altinns roller og rettigheter.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
+
+### Utvidet funksjonalitet
+Skatteetaten har planer om å utvikle funksjonalitet for delegering av fullmakt i enkeltsaker der en person har behov for å delegere myndighet til en fullmektig, da det kan være relevant i flere tilfeller, inkludert ved søknad, klage og etterkontroll. Dette er tilleggsfunksjonalitet som utvikles senere, og det finnes per i dag ikke estimert et tidspunkt for når dette vil være klart.
+
+### Hvorfor har Skatteetaten valgt å begrense utfylling gjennom Altinn-roller?
   
 Slik utfylling fungerer i dag er det ingen begrensning på hvem som kan fylle ut for en virksomhet, og dersom virksomheten har dårlige rutiner for signering kan utilsiktede utfyllinger bli sendt inn og gi alvorlige konsekvenser. Den nye bruken av roller er sikrere, og i tråd med standarden for alle andre moderniserte oppgaver i Skatteetaten. 
 
-### Hvilken mulighet har advokater til å bistå i enkeltsaker (registering i Mva-registeret)?
-  
-Advokater og andre rådgivere kan be virksomheten delegere tilgang til "Merverdiavgift Registreringstjeneste" i Altinn. Eventuelt kan advokaten forespørre tilgang dersom man har en tilknytning til virksomheten i Altinn fra før. Tilgangen kan gis til en person eller en virksomhet (kun virksomheter med tilknytning til virksomheten fra før). Advokater som ønsker person-tilgang kan velge å oppgi enten personnummer eller selvvalgt brukernavn i Altinn, som identifikasjon ovenfor virksomheten.  Tilgangen er ikke tidsbegrenset, så virksomheten må fjerne tilgangen hvis advokat eller rådgiver ikke lenger skal ha tilgang. 
-
-Det er også mulig for advokater å tilegne seg roller i virksomheter. Dette gjøres i samhandling med virksomheten det gjelder. Rolletittelen vil kun vises for den som har delegert rollen og vil ikke være synlig i andre systemer, som for eksempel i enhetsregisteret. [se over](https://skatteetaten.github.io/mva-meldingen/documentation/faq/#hvem-kan-fylle-ut-en-registrering-og-hvem-kan-sende-inn).
-
-[Les mer om Altinn-roller her.](https://www.altinn.no/hjelp/profil/roller-og-rettigheter/)
-
-Skatteetaten har planer om å utvikle funksjonalitet for delegering av fullmakt i enkeltsaker der en person har behov for å delegere myndighet til en fullmektig i ny tjeneste. Vi ser at det kan være relevant i flere tilfeller, inkludert ved søknad, klage og etterkontroll. Dette er tilleggsfunksjonalitet som først vil utvikles senere, og vi har per i dag ikke estimert et tidspunkt for når dette vil være klart. 
- 
  
 ## Mva-melding
 
@@ -61,14 +70,23 @@ Fra 1. januar 2022. Første frist for innlevering vil avhenge av hvilken termin 
 
 ### Skal leveringen av mva-melding skje via Altinn eller via Skatteetatens nettside?
 
-Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra regnskapssystemet. Skatteetaten jobber tett med systemleverandører for å tilrettelegge for dette. For de som ikke har regnskapssystem, eller av annen grunn ikke kan levere gjennom regnskapssystem, utvikler Skatteetaten en egen portal som kan brukes for levering av mva-melding. Altinn vil fortsatt brukes for identifisering og informasjonsutveksling. En bruker er ikke ment å merke at innleveringen skjer gjennom Skatteetaten kontra Altinn.
+Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra regnskapssystemet. Skatteetaten jobber tett med systemleverandører for å tilrettelegge for dette. For de som ikke har regnskapssystem, eller av annen grunn ikke kan levere gjennom regnskapssystem, utvikler Skatteetaten en egen egen webbasert innlogget tjeneste som kan brukes for levering av mva-melding. Altinn vil fortsatt brukes for identifisering og informasjonsutveksling. En bruker er ikke ment å merke at innleveringen skjer gjennom Skatteetaten kontra Altinn.
 
-### Vil det være mulig å laste opp MVA meldingen i XML format i portalen?
-Det er i utgangspunktet ikke tenkt å lage mulighet til å laste opp xml til portal.
+### Er levering i innlogget tjeneste en permanent løsning som er åpen for alle (hvis man ikke kan eller vil bruke system-system)?
+Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
+
+### Vil det være mulig å laste opp en XML-fil med grunnlagsdataene i portalen, slik at bruker da får utfylt dataene i portalen basert på innholdet i filen?
+
+Prosjektet vurderer om vi skal lage denne type funksjonalitet. Endelig svar på om det vil bli mulig å laste opp XML i portalen vil komme i løpet av høsten. 
 
 ### På hvilket aggregeringsnivå skal beløp oppgis i ny mva-melding? 
 
 På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om forslaget rundt rapportering på transaksjonsnivå. 
+
+### Er det laget et utkast visuelt hvordan den nye meldingen skal se ut?
+Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssystemet. Målet er at brukerne skal føre regnskap som normalt, og at systemet sammenstiller informasjonen fra regnskapet til mva-meldingen, slik at brukeren kan sende inn. 
+
+Den nye rapporteringen vil være kodebasert og legge til rette for digital samhandling. Dagens nummererte poster erstattes av en dynamisk liste av spesifikasjonslinjer. Det vil dessuten bli mulig å gi merknader både samlet og per linje.
 
 ### Kan man vedlegge dokumentasjon som filvedlegg til mva-meldingen? 
 Ja, man kan vedlegge inntil 50 vedlegg per melding, og vedlegg kan være opp til 25 MB per fil. 
@@ -81,12 +99,21 @@ Vi vil støtte følgende formater:
 
 
 ### Hvordan autentiserer man seg for innsending av mva-melding?
-Autentisering vil skje via ID-porten, med personlig pålogging. Dagens Altinn innlogging med brukernavn og passord vil ikke kunne benyttes. Sluttbrukersystemene må tilby et påloggingsvindu til ID-porten for bruker, slik at bruker kan logge på med eID og SBS får tilbake et ID-porten-token som brukes videre mot Skatteetaten og Altinn sine tjenester.  For å slippe å logge på mange ganger varer en pålogging i 8 timer.
+Autentisering vil skje via ID-porten, med personlig pålogging for system til system og for innlogget tjeneste. Dagens Altinn innlogging med brukernavn og passord vil ikke kunne benyttes. Sluttbrukersystemene må tilby et påloggingsvindu til ID-porten for bruker, slik at bruker kan logge på med eID og SBS får tilbake et ID-porten-token som brukes videre mot Skatteetaten og Altinn sine tjenester.  For å slippe å logge på mange ganger varer en pålogging i 8 timer.
 
 Vi ønsker å kunne tilby støtte for maskinporten, og ser på de juridiske og praktiske problemstillingene rundt dette, men det kommer senere enn 1. januar 2022. I planene som foreligger nå er det ID-porten som er løsningen. 
 
 ### Kan man fortsatt sende inn tilleggsmelding?
 Tilleggsmelding vil ikke lenger være aktuelt. Hvis man gjør endringer i regnskapssystemet som fører til at man vil korrigere mva-meldingen sender man inn en ny komplett melding. Siste melding vil alltid være gjeldende. 
+
+### Hvordan skal fellesregistrerte selskaper rapportere mva-meldingen?
+Det er enheten som står oppført som rapporterende enhet som må levere mva-meldingen for hele fellesregistreringen fra regnskapssystemet eller i portalen.
+
+### Når man kutter desimaler på grunnlag og på mva-beløp, da kan man få "avvik" når man kontrollerer ved å gange grunnlaget med mva-prosent. Vil dette slå ut på valideringen?
+Ja, vi tar høyde for dette i valideringen og har lagt inn  en toleranse på +/- 3 kroner. Det er det samme som i dagens mva-løsning.
+
+### Vil det foreligge en kodeliste over disse "redigerte" beskrivelsene for de ulike kodene? 
+Den kan finnes på Github: https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister
 
 
 ## Salgs- og kjøpsmelding
@@ -102,9 +129,18 @@ Hensikten med en slik melding er å øke etterlevelse, sørge for økt likebehan
 
 Forslaget innebærer en mulighet for at enkelte virksomheter ikke trenger å levere salgs- og kjøpsmelding.
 
+### Er det aktuelt å utvide dagens SAF-T Financial Norway XML fil til å ta med salgs/kjøps faktura, eller vil ny salgs kjøpsmelding være helt utenfor SAF-T Financial Norway XML filen? 
+
+Salgs- og kjøpsmeldingen vil være noe annet enn SAF-T regnskap, men det er aktuelt å gjenbruke noe av strukturen.
+
+
 ## Test
 
 ### Vil testingen av mva-melding være åpen for alle?
 
 Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/documentation/test/). 
 Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten er velkommen til å ta kontakt gjennom mva-modernisering@skatteetaten.no.
+
+### Vil det komme en testversjon av portalen så man kan teste utfylling og de nye valideringene før første innlevering neste år?
+Vi brukertester løsningen, men det vil ikke være mulig å logge seg inn for teste.
+
