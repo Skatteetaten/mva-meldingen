@@ -266,29 +266,29 @@ Vedleggsfil
 | --------------------- | --------------------------------------------- |
 | Sales of goods and services in Norway |      |		 
 | 3	| Sales and withdrawals of goods and services (standard rate) |
-| Specification line for code 3 | withdrawal |
+| Specification line for code 3 | Withdrawal |
 | 31	| Sales and withdrawals of goods and services (middle rate) |
-| Specification line for code 31| withdrawal |
+| Specification line for code 31| Withdrawal |
 | 33	| Sales and withdrawals of goods and services (low rate) |
-| Specification line for code 33| withdrawal |
+| Specification line for code 33| Withdrawal |
 | 5	| Sales of goods and services exempt from value added tax |
-| Specification line for code 5 | withdrawal |
+| Specification line for code 5 | Withdrawal |
 | 6	| Sales of goods and services outside the scope of the Value Added Tax Act |
 | Sales of goods and services to other countries (exports) |    |		 
 | 52	| Sales of goods and services exempt from value added tax to other countries |
-| Purchases of goods and services in Norway (Deductions) |    | 
+| Purchases of goods and services in Norway (deductions) |    | 
 | 1	| Purchases of goods and services (standard rate) |
-| Specification line for code 1 | losses on outstanding claims and cancellations |
-| Specification line for code 1 | adjustment of input VAT on capital goods |
-| Specification line for code 1 | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
+| Specification line for code 1 | Losses on outstanding claims and cancellations |
+| Specification line for code 1 | Adjustment of input VAT on capital goods |
+| Specification line for code 1 | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | 11	| Purchases of goods and services (middle rate) |
-| Specification line for code 11 | losses on outstanding claims and cancellations |
+| Specification line for code 11 | Losses on outstanding claims and cancellations |
 | 13	| Purchases of goods and services (low rate) |
-| Specification line for code 13 | losses on outstanding claims and cancellations |
+| Specification line for code 13 | Losses on outstanding claims and cancellations |
 | Purchases of goods from abroad (import) |    |		 
 | 81	| Purchases of goods from abroad with deductions (standard rate) |
 | 81	| Deductions on purchases of goods from abroad with deductions (standard rate) |
-| Specification line for code 81 | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
+| Specification line for code 81 | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | 14	| Purchases of goods from abroad, value added tax paid upon import (standard rate) |
 | 82	| Purchases of goods from abroad without deduction entitlement (standard rate) |
 | 83	| Purchases of goods from abroad with deductions (middle rate) |
@@ -305,7 +305,7 @@ Vedleggsfil
 | 89	| Purchases of services from abroad without deduction entitlement (low rate) |
 | Fish etc. |    |
 | 32	| Sales of fish and other marine wildlife resources |
-| Specification line for code 32 | withdrawal |
+| Specification line for code 32 | Withdrawal |
 | 12 	| Value added tax paid upon the purchase of fish and other marine wildlife resources |
 | Specification line for code 12 | Losses on outstanding claims and cancellations |
 | Emission allowances and gold |		 
