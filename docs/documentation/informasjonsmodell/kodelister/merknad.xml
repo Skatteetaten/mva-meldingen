@@ -206,5 +206,50 @@
             </spraakTekst>
         </beskrivelse>
     </kode>
+    <kode>
+        <tekniskNavn>bygg i egenregi</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Beregnet uttak i fra den avgiftspliktige del jf. Merverdiavgiftsloven § 3-26</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+    </kode>
+    <kode>
+        <tekniskNavn>uttak av varer ved sletting av virksomhet i mva-register</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Uttak av varer ved sletting av virksomhet i mva-register</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+    </kode>
+    <kode>
+        <tekniskNavn>fast eiendom</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Tilbakeføring av fradragsført inngående merverdiavgift for fast eiendom jf.  Merverdiavgiftsloven §9-7</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+    </kode>
+    <kode>
+        <tekniskNavn>personkjøretøy</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Tilbakeføring av fradragsført inngående merverdiavgift for personkjøretøy jf. Merverdiavgiftsloven §9-6</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+    </kode>
+    <kode>
+        <tekniskNavn>demobil</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>beregnet uttak ved registrering av bil som skal brukes som demobil  jf. Merverdiavgiftsloven §3-24</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+    </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>
