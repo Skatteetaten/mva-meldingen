@@ -51,7 +51,9 @@ It is also possible for legal councel to acquire Altinn-roles in reporting busin
 ### VAT-return roles
 
 To fill out and submit VAT-returns, the same Altinn-roles as today are needed:
+
 The business itself can fill out the VAT-return, or someone with the Altinn role Auditor in charge/Ansvarlig revisor, Accounting employee/Regnskapsmedarbeider, Accountant without signing rights/Regnskapsfører uten signeringsrettighet or Assistant auditor/Revisormedarbeider. 
+
 If you are going to sign on behalf of others, you must have the Altinn role “Limited signing rights/Begrenset signeringsrettighet", "Contact person NUF/Kontaktperson NUF”, if you are registering a Norwegian registered foreign enterprise (NUF) and Accountant with signing rights/Regnskapsfører med signeringsrettighet . 
 
 ### Addititional functionality
@@ -78,16 +80,16 @@ Same level as before. For more information regarding the suggested reporting on 
 ### Has a draft been made visually of what the new message should look like?
 The tax authorities do not set requirements for what the report should look like in the accounting system. The goal is for users to keep accounts as normal, and for the system to compile the information from the accounts to the VAT-return, so that the user can submit the return. 
 The new reporting will be code-based and will facilitate digital collaboration. Today's numbered fields will be replaced by a dynamic list of specification lines. It will also be possible to provide comments both for the entire report and per line.
-[the code list for the new VAT-report can be found here](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding)
+the code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
 
 ### Is it possible to attach files with documentation in the new VAT-return?
 Yes, it is possible to attach up to 50 files, and the files can be up to 25mb per file. 
 We will support the following file formats: 
 
-- PDF
-- Open Office XML (OOXML)
-- Open Document Format (ODF)
-- JPG eller PNG
+    - PDF
+    - Open Office XML (OOXML)
+    - Open Document Format (ODF)
+    - JPG eller PNG
 
 ### What authentication methods will be used for VAT-return submissions?
 Authentication will be carried out with personal login in ID-porten for both system-to-system and portal submissions, not by password and username like today. ERPs must offer ID-porten login window for their users, so they can log in using electronic ID from ID-porten. To avoid unnecessary logins user will stay logged in for 8 hours. 
@@ -104,14 +106,16 @@ The reporting entity must deliver the VAT-report from the accounting system or i
 Yes, we consider this in the validation, and have added a tolerance of +/- 3 kroner. The tolerance is the same as in today's VAT solution.
 
 ### Will there be a code list of descriptions for the various codes?
-[This can be found on Github](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding)
+This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
 
 ## Sales and purchase report
 
 ### What does the sales and purchase report entail, and when will it be launched?
 
 A proposition for a new solution for reporting on sales and purchases is currently in a mandatory public consultation, and the launch is planned for 2024. The need for time to develop the sales and purchase report for businesses, ERPs and the Tax Administration will be taken into account. The proposal includes a reporting duty for sales and purchase transactions for private and public organisations. The reporting duty will apply for single transactions, and include information regarding invoice number, documentation date, name of parties in the transaction, organisational number and information on VAT and remuneration. 
+
 The new reporting duty will make it possible to see transactions in context, which is not possible today. There will be no requirement to report information on the purpose of the transaction. A large number of businesses are using ERPs with requirements to provide accounting information in standardised formats (SAF-T). This enables direct reporting from the ERP to the tax administration. 
+
 The purpose of the new reporting duty is to increase compliance, help both businesses and the Tax Administration to ensure equal treatment and prevent unlawful distortion of competition for businesses. An important goal is to limit extra work for businesses, by offering reporting directly from ERPs.
 
 ### Will the new reporting duty apply to all businesses, or will there be exceptions for small businesses? 
