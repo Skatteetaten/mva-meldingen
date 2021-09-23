@@ -77,13 +77,14 @@ For at brukeren ikke skal måtte logge inn hver gang en Mva-Melding skal sendes 
 
 Både applikasjonstypen og kjøremiljøet vil være med å bestemme om man har mulighet til å benytte refresh-tokens.
 
-ID-Portens innlogging krever at applikasjonen kan lytte til en URL som er konfigurert i ID-Porten klienten når sluttbrukeren har gjennomført autentisering via ID-Porten. Browseren vil redirgere brukeren til nevnte URL så det vil ikke kreve noen endringer i nettverk eller brannmur. Det vil være mindre komplekst å gjøre dette i en web-applikasjon eller SPA i forhold til en skrivebordsapplikasjon.
+ID-Portens innlogging krever at applikasjonen kan lytte til en URL som er konfigurert i ID-Porten klienten når sluttbrukeren har gjennomført autentisering via ID-Porten. Browseren vil redirigere brukeren til nevnte URL så det vil ikke kreve noen endringer i nettverk eller brannmur. Det vil være mindre komplekst å gjøre dette i en web-applikasjon eller SPA i forhold til en skrivebordsapplikasjon.
 
 #### OAuth2/OpenID - erfaring
 
 Dersom erfaringen med OAuth2/OpenID er liten så vil dette kreve innsats å forstå og implementere på en god måte. Alle elementene i ID-Porten integrasjonen henger sammen og det er viktig å bevare brukeropplevelsen under utviklingen.
 
-<a name="KalleValidering"></a>
+
+Les mer om [ID-porten & Autentisering](https://skatteetaten.github.io/mva-meldingen/documentation/idportenautentisering/)
 
 ### 4. Validere Mva-Melding mot Skatteetatens validerings-api
 
@@ -93,7 +94,7 @@ Validerings-apiet validerer kun mva-meldingsfilen som er en av flere filer i inn
 
 ### 5. Tolkning og visning av valideringsresultatet i regnskapssystemet
 
-Valideringstjenesten vil returnere et valideringsresultat, og det vil være hensiktsmessig å presentere resultatet for sluttbrukeren, spesielt dersom valideringstjenesten finner mva-meldingen ugyldig. Dette indikeres i valideringsreultatet med status satt til UGYLDIG_SKATTEMELDING. Ugyldige meldinger blir ikke behandlet eller ansett som mottatt av Skatteetaten. Valideringsresultatet vil også gi tilbakemeldinger på element-nivå og vil kunne være interessant å vise i kontekst av mva-meldingen som skal sendes inn.
+Valideringstjenesten vil returnere et valideringsresultat, og det vil være hensiktsmessig å presentere resultatet for sluttbrukeren, spesielt dersom valideringstjenesten finner mva-meldingen ugyldig. Dette indikeres i valideringsresultatet med status satt til UGYLDIG_SKATTEMELDING. Ugyldige meldinger blir ikke behandlet eller ansett som mottatt av Skatteetaten. Valideringsresultatet vil også gi tilbakemeldinger på element-nivå og vil kunne være interessant å vise i kontekst av mva-meldingen som skal sendes inn.
 
 <span style="color: red">**Skatteetaten anbefaler å avbryte innsending dersom valideringsresultatet sin status er UGYLDIG_SKATTEMELDING.**
 </span>
@@ -133,7 +134,7 @@ Når opplastningen er fullført, kan innsendingen fullføres. Brukeren som fullf
 
 ### 7. Hente tilbakemelding på innsendingen fra Skatteetatens innsendings-api
 
-Bak kulissene er dette en asynkron operasjon som involverer flere mikrotjenester. For å legge til rette for en bedre brukeropplevelse og lette implementasjonen av å finne ut om Skatteetaten har mottatt innsending, har vi gjort en utvidelse av rest-api'et som vil blokkere til tilstanden for innleveringen har nådd Skatteetatens definisjon av mottatt. Dette vil spare deg for å implementere en pollende løkke som vil måtte vite og finne ut om Skatteetaten har mottatt innsendingen og gitt tilbakemelding.
+Bak kulissene er dette en asynkron operasjon som involverer flere mikrotjenester. For å legge til rette for en bedre brukeropplevelse og lette implementasjonen av å finne ut om Skatteetaten har mottatt innsending, har vi gjort en utvidelse av rest-apiet som vil blokkere til tilstanden for innleveringen har nådd Skatteetatens definisjon av mottatt. Dette vil spare deg for å implementere en pollende løkke som vil måtte vite og finne ut om Skatteetaten har mottatt innsendingen og gitt tilbakemelding.
 
 I tilfelle det skal polles for å hente tilbakemelding skal status-endepunktet brukes til det returnerer at tilbakemelding er gitt, før instansen hentes, enten med feedback-apiet, eller med instans-apiet.
 
