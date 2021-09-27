@@ -15,7 +15,7 @@ The Tax Administration has launched a new registration solution for the Value Ad
 The goal of the project is to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system. The new VAT-return will be launched on 1 January 2022. 
 
 ##### New sales and purchases report.
-A proposition for a new solution for reporting on sales and purchases is currently in a mandatory public consultation. The proposed solution will help both businesses and the Tax Administration to ensure equal treatment and prevent unlawful distortion of competition for businesses.  The deadline for the consultation is november 26, 2021. [The proposal can be found here](https://www.skatteetaten.no/rettskilder/type/horinger/opplysningsplikt-salgs-og-kjopstransaksjoner/)
+A proposal for a new solution for reporting on sales and purchases is currently in a mandatory public consultation. The proposed solution will help both businesses and the Tax Administration to ensure equal treatment and prevent unlawful distortion of competition for businesses.  The deadline for the consultation is november 26, 2021. [The proposal can be found here](https://www.skatteetaten.no/rettskilder/type/horinger/opplysningsplikt-salgs-og-kjopstransaksjoner/)
 
 ### Will there be a transition period from the old to the new services?
 Coordinated Register Notification part 2 is no longer available for changing or deleting an application until the second quarter of 2021.
@@ -80,7 +80,7 @@ Same level as before. For more information regarding the suggested reporting on 
 ### Has a draft been made visually of what the new message should look like?
 The tax authorities do not set requirements for what the report should look like in the accounting system. The goal is for users to keep accounts as normal, and for the system to compile the information from the accounts to the VAT-return, so that the user can submit the return. 
 The new reporting will be code-based and will facilitate digital collaboration. Today's numbered fields will be replaced by a dynamic list of specification lines. It will also be possible to provide comments both for the entire report and per line.
-the code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
+The code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
 
 ### Is it possible to attach files with documentation in the new VAT-return?
 Yes, it is possible to attach up to 50 files, and the files can be up to 25mb per file. 
@@ -90,6 +90,7 @@ We will support the following file formats:
     - Open Office XML (OOXML)
     - Open Document Format (ODF)
     - JPG eller PNG
+    
 
 ### What authentication methods will be used for VAT-return submissions?
 Authentication will be carried out with personal login in ID-porten for both system-to-system and portal submissions, not by password and username like today. ERPs must offer ID-porten login window for their users, so they can log in using electronic ID from ID-porten. To avoid unnecessary logins user will stay logged in for 8 hours. 
