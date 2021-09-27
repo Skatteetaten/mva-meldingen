@@ -24,7 +24,7 @@ Grovt sett er det følgende som må gjøres:
 2. Konfigurere en Integrasjon i Samarbeidsportalen
 3. Konfigurere applikasjonen til å bruke Integrasjonen fra Samarbeidsportalen
 
-Det er utenfor denne dokumentasjonen å gå beskrive Open ID Connect og OAuth2, men de detaljene som er spesifikke for Integrasjonen og Skatteetaten blir beskrevet i det følgende.
+Det er utenfor denne dokumentasjonen å beskrive Open ID Connect og OAuth2, men de detaljene som er spesifikke for Integrasjonen og Skatteetaten blir beskrevet i det følgende.
 
 ## Ta i bruk ID-porten
 
@@ -94,7 +94,7 @@ Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modern
 
 Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
 
-Eksempelkoden [log_in_idporten.py](../test/Steg/log_in_idporten.py#L105-L164) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
+Eksempelkoden [log_in_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
 
 ### Kundens org.nr.
 
@@ -118,7 +118,7 @@ Her kan det velges:
 
 - refresh_token
 
-I tilfeller hvor det ikke er helt sikkert at tokens eller hemmeligheter er beskyttet fra røvere, anbefales ikke bruken. Refresh-tokens kan derfor ikke brukes i for eksempel en SPA, hvor nettleseren ikke helt sikkert kan beskytte hemmeligheter eller tokens over lang tid. Det anbefales derfor å ikke bruke refresh_tokens i JS/SPA-applikasjoner eller i frittstående applikasjoner som installeres på sluttbrukerens personlige datamaskin. ID-porten har derfor begrensninger på refresh_token-bruk utenfor web-applikasjoner, hvor tokens og hemmeligheter kan beskyttes på tjeneren.
+I tilfeller hvor det ikke er helt sikkert at tokens eller hemmeligheter er beskyttet fra røvere, anbefales ikke bruken. Refresh-tokens kan derfor ikke brukes i for eksempel en SPA, hvor nettleseren ikke helt sikkert kan beskytte hemmeligheter eller tokens over lang tid. Det anbefales derfor å ikke bruke 'refresh_tokens' i JS/SPA-applikasjoner eller i frittstående applikasjoner som installeres på sluttbrukerens personlige datamaskin. ID-porten har derfor begrensninger på refresh_token-bruk utenfor web-applikasjoner, hvor tokens og hemmeligheter kan beskyttes på tjeneren.
 
 Et refresh_token kan ha veldig lang levetid og brukes til å utstede nye access_tokens.
 
