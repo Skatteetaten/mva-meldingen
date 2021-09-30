@@ -51,7 +51,7 @@ The submission process is performed with a sequence of calls to the Instance API
 The Instance VAT Filing API is available at this URL:
 
 ```
-instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances"
+instanceApiUrl = "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances"
 ```
 
 In the following sequence diagram, the application URL will be hidden, so if `POST: /intances/` is written it is
@@ -123,13 +123,13 @@ Content (body)
 <valideringsresultat>
         <status>UGYLDIG_SKATTEMELDING</status>
         <valideringsfeil>
-            <stiTilFeil>//innfiling</stiTilFeil>
+            <stiTilFeil>//innsending</stiTilFeil>
             <valideringsDetaljer>
                 <feilmelding>Mva meldingen må være på gyldig format og passere XML skjema valideringen</feilmelding>
                 <alvorlighetsgrad>UGYLDIG_SKATTEMELDING</alvorlighetsgrad>
                 <avvikKode>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</avvikKode>
                 <informasjon>cvc-complex-type.2.4.b: The content of element 'mvaMeldingDto' is not complete. One of
-                    '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0":innfiling}' is expected.
+                    '{"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0":innsending}' is expected.
                 </informasjon>
             </valideringsDetaljer>
         </valideringsfeil>
@@ -219,7 +219,7 @@ creation of the instance. See the example of the response above.
 found in the `id` field in the returned instance.
 
 Example instanceUrl:
-`https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
+`https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df`
 
 ### Error messages
 
@@ -297,7 +297,7 @@ You upload VAT return submission by using the data api for the instance:
 PUT {vatReturnSubmissionUrl}
     HEADERS:
         "Authorization": "Bearer " + "{altinnToken}"
-        "content-type": "text/xml"
+        "content-type": "application/xml"
 ```
 
 ```xml
