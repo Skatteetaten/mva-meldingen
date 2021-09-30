@@ -8,9 +8,10 @@ description: "How to authenticate with ID-Porten"
 
 ### Change log
 
-| Date       | What changed?                                                  |
-| :--------- | :------------------------------------------------------------- |
-| 2021.08.26 | Added how to request the [Tax Administration scopes](#scopes). |
+| Date       | What changed?                                                                                                |
+| :--------- | :----------------------------------------------------------------------------------------------------------- |
+| 2021.08.26 | Added how to request the [Tax Administration scopes](#scopes).                                               |
+| 2021.09.30 | Added section for static redirect-uri challenge under [Gyldig(e) redirect uri-er](#gyldige-redirect-uri-er). |
 
 To authenticate with ID-Porten, you must implement an Open ID Connect solution against ID-Porten. It can be challenging to implement and should be considered the least trivial task to solve when developing a solution for submitting a VAT return.
 
@@ -96,7 +97,7 @@ The scopes must be ordered by your organization by sending an e-mail to [mva-mod
 
 The tax authorities will provide access to the scopes and they can then be added to the integration. The scopes must also be added to the code that integrates with ID-Porten so that the scopes are included in the access token from ID-Porten.
 
-The sample code <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py#L105-L164" target="_blank">log\_in\_idporten.py</a> has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
+The sample code <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py#L105-L164" target="_blank">log_in_idporten.py</a> has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
 
 ### Kundens org.nr.
 
@@ -156,6 +157,22 @@ When the authentication process starts, the user must be taken from the applicat
 This is accomplished by including `redirect_uri` in the parameters used to open a browser with ID-porten login. The `redirect_uri` is sent as parameter **MUST** be present in the list of Gyldig(e) redirect uri-er in the Integration.
 
 The application depends on having an endpoint that can process requests to the redirect_uri.
+
+#### Administration of an unmanageable amount of redirect URIs
+
+We have had some reports regarding challenges with the administration of static redirect URIs in connection with integration with ID-porten. When the amount of redirect URIs are unmanageable there is a recommendation for a dynamic soultion:
+
+The Norwegian Digitalisation Agency has recently published information that may be useful in this case:
+<a href="https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky" target="_blank"> https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky</a> (unavailable in English)
+The system vendor will be the owner of the integration(s) associated with dynamic provisioning solutions.
+
+#### Alternative solution
+
+If the solution above cannot be used in the system portfolio of the system supplier, it is also possible to let the end-user own and manage the ID-porten integrations.
+If you choose a solution where each individual customer manages and owns ID-porten integrations, the system suppliers must provide support for their customers' integrations. The Norwegian Tax Administration only support inquiries from system suppliers for their integrations, not inquiries from customers of system suppliers. The Norwegian Tax Administration will only provide access to the necessary scopes for the organization numbers in question in the cases where this solution is chosen.
+System suppliers who wish to use the alternative solution should contact The Norwegian Tax Administration with information on how many customers are involved, before they start with the development of these integrations.
+
+**The Norwegian Tax Administration still recommend solutions where the system supplier manages and owns the integrations in ID-porten.**
 
 ### Gyldig(e) post logout redirect uri-er
 
