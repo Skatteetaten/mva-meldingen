@@ -7,6 +7,26 @@ description: "Validation rules for the VAT tax return"
 <table align=center>
   <tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
   <tr>
+      <td>2021.10.12</td>
+      <td>
+          <ul>
+            <li> The text for rule R018 was corrected. </li>
+            <li> R020 - R022 checks both merknad fields </li>
+            <li> R028 - R032 now uses the severity level "ugyldig skattemelding" </li>
+            <li> R028 - R037 corrected the check for in- and outgoing lines </li>
+            <li> R047 - R058 will not run if register data unavailable, descriptions changed </li>
+            <li> R072 and R073 added for better feedback when there is an error with a VAT registration </li>
+            <li> R059 and R060 exceptions added for VAT registered that have reported termination, bankruptcy or death </li>
+            <li> R066 description change </li>
+            <li> R067 and R068 updated to handle exception for VAT code 81 </li>
+            <li> R078 added (reversal of input VAT specification requires a remark) </li>
+            <li> R079 added (KID validation) </li>
+            <li> R080 added (account number required for repayments) </li>
+            <li> R004 - R017 fixed rules replaced with R074 - R076 which use the code list merknadTilsvarendeMvaKode </li>
+          </ul>      
+      </td>
+  </tr>
+  <tr>
       <td>2021.06.07</td>
       <td>
           <ul>
@@ -59,8 +79,8 @@ The following validation rules are definded for the VAT return listing:
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1 or 81
 - The specified category for the VAT return does not match the details in the VAT register (general industry)
 - The specified category for the VAT return does not match the details in the VAT register (primary industry)
-- The specified tax period does not match the details in the VAT register (general industry)
-- The specified tax period does not match the details in the VAT register (primary industry)
+- The specified tax period type does not match the details in the VAT register (general industry)
+- The specified tax period type does not match the details in the VAT register (primary industry)
 - The reporting body for a joint registration must be registered for VAT
 - Total revnue in the VAT return must be under one million for yearly general industry returns
 - Specification lines must have valid VAT codes for returns relating to general industry registrations
@@ -71,22 +91,13 @@ The following validation rules are definded for the VAT return listing:
 - Deductions for input and output VAT must not be declared without a registration in the VAT register (primary industry)
 - VAT returns must not be sent in before the related tax period has ended (general industry)
 - VAT returns must not be sent in before the related tax period has ended (primary industry)
-- Revenue before registration can not be submitted as information on this VAT code
-- Refund information can not be submitted on this VAT code
-- Temporary import information can not be submitted on this VAT code
-- Re-importation information can not be submitted on this VAT code
-- Toll declaration information regarding the wrong organisation number can not be submitted on this VAT code
-- Re-exportation information can not be submitted on this VAT code.
-- Re-exportation or refund information can not be submitted on this VAT code
-- Temporary export information can not be submitted on this VAT code
-- Export of services information can not be submitted on this VAT code
-- Large procurement information can not be submitted on this VAT code
-- Information about procurements before being VAT registered can not be submitted on this VAT code
-- Insurance settlement information can not be submitted on this VAT code
-- Seasonal variation information can not be submitted on this VAT code
-- Credit not information can not be submitted on this VAT code
 - Input VAT must be declared without a VAT-basis or VAT-rate
 - Output VAT must be declared with a VAT-basis and VAT-rate
+- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 require a remark
+- Account number must be registered for VAT returns that require a repayment
+- Remarks must be valid for the given VAT code (expected VAT direction)
+- Remarks must be valid for the given VAT code (opposite VAT direction)
+- Remarks must be valid for the given VAT code (lines with a specification)
 
 ## Detailed description of the validation rules
 
@@ -904,7 +915,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R068 }
         }
     ),
-
+    
     MVA_KODE_MERKNAD_OMSETNING_FØR_REGISTRERING(
         "Omsetning før registrering kan ikke settes som merknad på denne mva-koden" {
             valideringsregel {
