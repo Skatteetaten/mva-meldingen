@@ -22,7 +22,7 @@ description: "Regler for utfylling av mva-melding "
             <li> R078 lagt til (tilbakeføring spesifikasjon kreves merknad) </li>
             <li> R079 lagt til (KID validering) </li>
             <li> R080 lagt til (Kontonummer oppgitt for utbetalinger) </li>
-            <li> R004 - R017 fast merknadsregler erstattet med R074 - R076 som bruker kodeliste (https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml) </li>
+            <li> R004 - R017 fast merknadsregler erstattet med R074 - R076 som bruker kodeliste merknadTilsvarendeMvaKode </li>
           </ul>      
       </td>
   </tr>
