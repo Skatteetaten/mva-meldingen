@@ -861,7 +861,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertSomKonkursbo eller skattepliktigHarRegistrertSomDødsbo)
+                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -875,7 +875,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertSomKonkursbo eller skattepliktigHarRegistrertSomDødsbo)
+                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
