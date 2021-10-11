@@ -862,7 +862,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertSomKonkursbo eller skattepliktigHarRegistrertSomDødsbo)
+                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -876,7 +876,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertSomKonkursbo eller skattepliktigHarRegistrertSomDødsbo)
+                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
