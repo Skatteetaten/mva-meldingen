@@ -10,12 +10,13 @@ description: "XSD for mva-melding
 
 ### Endringslogg
 
-| Dato       | Hva ble endret?                                                                                                                                                                                                |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2021.06.21 | Oppdaterte kodeliste [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), rettet "tap på krav" til "tapPåKrav" |
-| 2021.08.31 | Oppdaterte med beskrivelse av feltene i MvaMeldingInnsending                                                                                                                                                   |
-| 2021.09.13 | Ny tabell for beskrivelse av kodelister                                                                                                                                                                        |
-| 2021.09.21 | Oppdatert informasjonsmodell for mva-melding. Fjernet SAFT-koder det ikke skal rapporteres på                                                                                                                  |
+| Dato       | Hva ble endret?                                                                                                                                                                                                   |
+| :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2021.06.21 | Oppdaterte kodeliste [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), rettet "tap på krav" til "tapPåKrav"    |
+| 2021.08.31 | Oppdaterte med beskrivelse av feltene i MvaMeldingInnsending                                                                                                                                                      |
+| 2021.09.13 | Ny tabell for beskrivelse av kodelister                                                                                                                                                                           |
+| 2021.09.21 | Oppdatert informasjonsmodell for mva-melding. Fjernet SAFT-koder det ikke skal rapporteres på                                                                                                                     |
+| 2021.10.12 | Oppdatert kodeliste [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), inkl. fjernet duplikat |
 
 ## XSD for mva-meldingen versjon 1.0
 

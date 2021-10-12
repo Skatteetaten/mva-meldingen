@@ -8,9 +8,10 @@ description: "Hvordan autentisere med ID-Porten"
 
 ### Endringslogg
 
-| Dato       | Hva ble endret?                                                |
-| :--------- | :------------------------------------------------------------- |
-| 2021.08.26 | Lagt til hvordan man [bestiller Skatteetaten scopes](#scopes). |
+| Dato       | Hva ble endret?                                                                                  |
+| :--------- | :----------------------------------------------------------------------------------------------- |
+| 2021.08.26 | Lagt til hvordan man [bestiller Skatteetaten scopes](#scopes).                                   |
+| 2021.08.26 | Lagt til seksjon for mange redirect-uri's [Gyldig(e) redirect uri-er](#gyldige-redirect-uri-er). |
 
 For å autentisere med ID-porten må man implementere en Open ID Connect løsning mot ID-Porten. Det kan være utfordrende å implementere og sees på som det minst trivielle å løse med hensyn på innsending av mva-melding.
 
@@ -94,7 +95,7 @@ Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modern
 
 Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
 
-Eksempelkoden [log_in_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
+Eksempelkoden <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py#L105-L164" target="_blank">log_in_idporten.py</a> er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
 
 ### Kundens org.nr.
 
@@ -152,6 +153,10 @@ Når autentiseringsprosessen starter skal brukeren føres fra applikasjonen til 
 Dette oppnås ved å inkludere `redirect_uri` i parameterene som brukes for å åpne nettleservinduet hos ID-Porten. `redirect_uri` som sendes som parameter **MÅ** være tilstede i listen over Gyldig(e) redirect uri-er i Integrasjonen.
 
 Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen til redirect_uri.
+
+#### Svært mange redirect_uri
+
+Dersom sluttbrukersystemet sin portefølje har veldig mange installasjoner som ikke deler domene kan de heller ikke dele `redirect_uri`. Installasjonene kan være både on-premise eller i skyen. Siden det er et krav at hvert domene må ha sin egen `redirect_uri` kan det bli utfordrende å administrere disse i selvbetjeningsportalen.
 
 ### Gyldig(e) post logout redirect uri-er
 

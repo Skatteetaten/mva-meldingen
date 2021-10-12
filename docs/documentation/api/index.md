@@ -264,7 +264,7 @@ Man laster opp MvaMeldingInnsending ved å benytte data-apiet til instansen:
 PUT {mvaMeldingInnsendingsUrl}
 HEADERS:
     "Authorization": "Bearer " + "{altinnToken}"
-    "content-type": "text/xml"
+    "content-type": "application/xml"
 ```
 
 ```XML

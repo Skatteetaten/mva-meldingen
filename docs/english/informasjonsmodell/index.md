@@ -10,12 +10,13 @@ description: "XSD for VAT return (mva-melding)
 
 ### Change log
 
-| Date       | What changed?                                                                                                                                                                                                  |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2021.06.21 | Updated code list [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), correcting "tap på krav" to "tapPåKrav" |
-| 2021.08.31 | Updated with description of the fields in the VAT return submission                                                                                                                                            |
-| 2021.09.13 | New table describing the usage of SAF-T codes                                                                                                                                                                  |
-| 2021.09.21 | Information model for VAT return updated. SAF-T codes not to be reported (0,7, 20,21 and 22) are removed.                                                                                                      |
+| Date       | What changed?                                                                                                                                                                                                            |
+| :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2021.06.21 | Updated code list [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), correcting "tap på krav" to "tapPåKrav"           |
+| 2021.08.31 | Updated with description of the fields in the VAT return submission                                                                                                                                                      |
+| 2021.09.13 | New table describing the usage of SAF-T codes                                                                                                                                                                            |
+| 2021.09.21 | Information model for VAT return updated. SAF-T codes not to be reported (0,7, 20,21 and 22) are removed.                                                                                                                |
+| 2021.10.12 | Updated code list [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), including removal of duplicates |
 
 ## Version 1.0 of the XSD for the VAT return
 
