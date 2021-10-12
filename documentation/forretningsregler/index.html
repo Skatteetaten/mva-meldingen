@@ -52,6 +52,26 @@
 <table align="center">
   <tbody><tr><th style="width:25%;text-align:left">Dato</th><th style="text-align:left"> Hva ble endret? </th></tr>
   <tr>
+      <td>2021.10.12</td>
+      <td>
+          <ul>
+            <li> Tekst for regel R018 var korrigert. </li>
+            <li> R020 - R022 sjekker både merknad felt </li>
+            <li> R028 - R032 er nå satt til alvorlighetsgrad &quot;ugyldig skattemelding&quot; </li>
+            <li> R028 - R037 korriger sjekk av inn- og utgående linjer </li>
+            <li> R047 - R058 skal ikke kjøre hvis register data utilgjengelig, tekst endret </li>
+            <li> R072 og R073 lagt til for bedre tilbakemelding hvis en feil oppstår med plikt </li>
+            <li> R059 og R060 unntak for skattepliktig som har meldt opphør, konkursbo eller dødsbo </li>
+            <li> R066 tekst endring </li>
+            <li> R067 og R068 oppdatert å håndtere kode 81 unntak </li>
+            <li> R078 lagt til (tilbakeføring spesifikasjon kreves merknad) </li>
+            <li> R079 lagt til (KID validering) </li>
+            <li> R080 lagt til (Kontonummer oppgitt for utbetalinger) </li>
+            <li> R004 - R017 fast merknadsregler erstattet med R074 - R076 som bruker kodeliste merknadTilsvarendeMvaKode </li>
+          </ul>      
+      </td>
+  </tr>
+  <tr>
       <td>2021.06.07</td>
       <td>
           <ul>
@@ -102,8 +122,8 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:</p>
 <li>Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 kan kun sendes inn på mva-kode 1 eller 81</li>
 <li>Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (alminnelig)</li>
 <li>Oppgitt meldingskategori skal stemme med opplysningene i mva-registeret (primær)</li>
-<li>Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (alminnelig)</li>
-<li>Oppgitt skattleggingsperiode skal stemme med opplysningene i mva-registeret (primær)</li>
+<li>Oppgitt skattleggingsperiodetype skal stemme med opplysningene i mva-registeret (alminnelig)</li>
+<li>Oppgitt skattleggingsperiodetype skal stemme med opplysningene i mva-registeret (primær)</li>
 <li>Rapporterende enhet i en fellesregistrering skal ha mva-plikt</li>
 <li>Avgiftspliktig omsetning skal være under en million for alminnelig næring plikter med årlig skattleggingsperiode</li>
 <li>Spesifikasjonslinjer skal ha en gyldig mva-kode i mva-meldinger som gjelder en alminnelig næring plikt</li>
@@ -114,22 +134,13 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:</p>
 <li>Fradrag for inngående og utgående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (primær)</li>
 <li>Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (alminnelig)</li>
 <li>Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (primær)</li>
-<li>Omsetning før registrering kan ikke settes som merknad på denne mva-koden</li>
-<li>Omberegning/retur kan ikke settes som merknad på denne mva-koden</li>
-<li>Midlertidig innførsel kan ikke settes som merknad på denne mva-koden</li>
-<li>Gjeninnførsel kan ikke settes som merknad på denne mva-koden</li>
-<li>Tolldeklarasjon på feil org.nr. kan ikke settes som merknad på denne mva-koden</li>
-<li>Gjenutførsel kan ikke settes som merknad på denne mva-koden</li>
-<li>Gjenutførsel eller retur kan ikke settes som merknad på denne mva-koden</li>
-<li>Midlertid utførsel kan ikke settes som merknad på denne mva-koden</li>
-<li>Tjenesteeksport kan ikke settes som merknad på denne mva-koden</li>
-<li>Store anskaffelser kan ikke settes som merknad på denne mva-koden</li>
-<li>Anskaffelser før mva-plikt kan ikke settes som merknad på denne mva-koden</li>
-<li>Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden</li>
-<li>Sesongvariasjon kan ikke settes som merknad på denne mva-koden</li>
-<li>Kreditnota kan ikke settes som merknad på denne mva-koden</li>
 <li>Inngående mva. skal føres uten grunnlag og sats</li>
 <li>Utgående mva. skal føres med grunnlag og sats</li>
+<li>Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 må sendes med en merknad</li>
+<li>Kontonummer må være registrert for meldinger som kunne føre til en utbetaling</li>
+<li>Merknader må være gyldig for brukt mva-kode (vanlig fortegn)</li>
+<li>Merknader må være gyldig for brukt mva-kode (motsatt fortegn)</li>
+<li>Merknader må være gyldig for brukt mva-kode (linje med spesifikasjon)</li>
 </ul>
 <h2 id="detaljspesifikasjon-av-reglene" style="position:relative"><a href="#detaljspesifikasjon-av-reglene" aria-label="detaljspesifikasjon av reglene permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detaljspesifikasjon av reglene:</h2>
 <p>Validering av mva-meldingen er implementert med et sett av regler som kjøres maskinelt
@@ -155,7 +166,7 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.</p>
 <p><strong>Linje 8 - Alvorlighetsgrad</strong>: Dette er alvorlighetsgraden dersom valideringen feiler.
 Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</em>SKATTEMELDING</p>
 <div class="gatsby-highlight" data-language="kotlin"><pre class="language-kotlin"><code class="language-kotlin">    <span class="token function">MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift&quot;</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift&quot;</span> <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">summenAv</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                     linje<span class="token punctuation">.</span>merverdiavgift
@@ -185,7 +196,10 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             valideringsregel <span class="token punctuation">{</span>
                 <span class="token function">kodene</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">51</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span>
                     <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>grunnlag erMindreEnn <span class="token number">0.0</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse har innhold <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse har innhold<span class="token punctuation">)</span> <span class="token function">eller</span>
+                            <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
@@ -200,7 +214,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
                 <span class="token function">kodene</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">)</span>
                     <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>grunnlag er tomt <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
                     <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse har innhold <span class="token function">medmindre</span> <span class="token punctuation">(</span>
+                        <span class="token punctuation">(</span><span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse har innhold<span class="token punctuation">)</span> <span class="token function">eller</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">medmindre</span> <span class="token punctuation">(</span>
                             linje<span class="token punctuation">.</span>mvaKode er <span class="token string">&quot;1&quot;</span> <span class="token function">og</span> <span class="token punctuation">(</span>
                                 linje<span class="token punctuation">.</span>spesifikasjon væreMedI <span class="token function">spesifikasjonene</span><span class="token punctuation">(</span>
                                     JUSTERING<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">,</span>
@@ -230,7 +244,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
                     <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>grunnlag er tomt <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er TILBAKEFØRING<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode<span class="token punctuation">)</span>
                     <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse har innhold <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse har innhold<span class="token punctuation">)</span> <span class="token function">eller</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
@@ -322,11 +336,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R028 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
@@ -336,11 +350,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R029 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
@@ -350,11 +364,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R030 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
@@ -364,11 +378,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R031 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
@@ -378,11 +392,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R032 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
@@ -393,9 +407,9 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
@@ -409,9 +423,9 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">83</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
@@ -425,9 +439,9 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">86</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
@@ -441,9 +455,9 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">88</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
@@ -457,9 +471,9 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                    linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag har innhold<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode er <span class="token number">91</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
@@ -525,10 +539,10 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
     MVA_PLIKT_OPPGITT_MELDINGSKATEGORI_ALMINNELIG_NÆ<span class="token function">RING_FINNES_IKKE</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret&quot;</span>
+        <span class="token string">&quot;Det finnes ingen plikt i mva-registeret med oppgitt meldingskategori for denne parten.&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span> <span class="token punctuation">(</span>meldingskategori er alminnelig<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     meldingskategori være registrertMeldingskategori
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -539,10 +553,10 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
     MVA_PLIKT_OPPGITT_MELDINGSKATEGORI_PRIMÆRNÆ<span class="token function">RING_FINNES_IKKE</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret&quot;</span>
+        <span class="token string">&quot;Det finnes ingen plikt i mva-registeret med oppgitt meldingskategori for denne parten.&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span> <span class="token punctuation">(</span>meldingskategori er primærnæring<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     meldingskategori være registrertMeldingskategori
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -556,9 +570,10 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Oppgitt skattleggingsperiode stemmer ikke med opplysningene for denne meldingskategorien i mva-registeret&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertSkattleggingsperiode har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    skattleggingsperiode være registrertSkattleggingsperiode
-                <span class="token punctuation">}</span>
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertSkattleggingsperiodetype har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                        skattleggingsperiodetype være registrertSkattleggingsperiodetype
+                    <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> PLIKT <span class="token punctuation">}</span>
@@ -567,11 +582,12 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
     MVA_PLIKT_OPPGITT_SKATTLEGGINGSPERIODE_FOR__MELDINGSKATEGORI__PRIMÆRNÆ<span class="token function">RING_FINNES_IKKE</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Oppgitt skattleggingsperiode stemmer ikke med opplysningene for denne meldingskategorien i mva-registeret&quot;</span>
+        <span class="token string">&quot;Oppgitt skattleggingsperiodetype stemmer ikke med opplysningene for denne meldingskategorien i mva-registeret&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertSkattleggingsperiode har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    skattleggingsperiode være registrertSkattleggingsperiode
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertSkattleggingsperiodetype har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    skattleggingsperiodetype være registrertSkattleggingsperiodetype
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
@@ -580,11 +596,41 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
+    <span class="token function">MVA_PLIKT_FOR__MELDINGSKATEGORI_DEKKER_IKKE_SKATTELEGGINGSPERIODE_ALMINNELIG</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Det finnes ingen plikt med oppgitt meldingskategori som innkluderer start datoen av oppgitt skattleggingsperiode&quot;</span>
+        <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er alminnelig<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    startDatoForPeriodeVæreInnenforGyldigFraOgTilDatoer
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> PLIKT <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R072 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token function">MVA_PLIKT_FOR__MELDINGSKATEGORI_DEKKER_IKKE_SKATTELEGGINGSPERIODE_PRIMAERNAERING</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Det finnes ingen plikt med oppgitt meldingskategori som innkluderer start datoen av oppgitt skattleggingsperiode&quot;</span>
+        <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er primærnæring<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    startDatoForPeriodeVæreInnenforGyldigFraOgTilDatoer
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> PLIKT <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R073 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+
     <span class="token function">MVA_PLIKT_DELTAKERE_I_FELLESREGISTRERING_HAR_IKKE_MVA_PLIKT</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Det er rapporterende enhet i en fellesregistrering som har mva-plikt og skal sende inn mva-melding for fellesregistreringen&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                registrertRapporterendeEnhet har innhold såSkal <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span> <span class="token punctuation">(</span>registrertRapporterendeEnhet har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     skattepliktig være registrertRapporterendeEnhet
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -598,7 +644,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;For å kunne levere mva-melding som alminnelig næring med års termin så skal avgiftspliktig omsetningen være under en million i året&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>skattleggingsperiode er årlig<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>skattleggingsperiodetype er årlig<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     omsetning væreMindreEnn <span class="token number">1100000.0</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -612,7 +658,8 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Kun gyldige mva-koder til meldingskategori &#x27;Alminnelig næring&#x27; hvor det finnes plikt i mva-registere kan sendes inn&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                             <span class="token number">1</span><span class="token punctuation">,</span>
@@ -654,7 +701,8 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Kun gyldige mva-koder til meldingskategori &#x27;Primærnæring&#x27; hvor det finnes plikt i mva-registeret kan sendes inn&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori har innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                             <span class="token number">1</span><span class="token punctuation">,</span>
@@ -696,12 +744,13 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span>
                     <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span> <span class="token function">medmindre</span> <span class="token punctuation">(</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                             <span class="token number">3</span><span class="token punctuation">,</span>
                             <span class="token number">31</span><span class="token punctuation">,</span>
@@ -712,7 +761,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
                             <span class="token number">92</span>
                         <span class="token punctuation">)</span>
                     <span class="token punctuation">}</span> <span class="token function">og</span> <span class="token punctuation">(</span>
-                        mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                             linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                                 <span class="token number">1</span><span class="token punctuation">,</span>
                                 <span class="token number">11</span><span class="token punctuation">,</span>
@@ -735,12 +784,13 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                registerDataHentetOk er OK <span class="token function">og</span>
+                    <span class="token punctuation">(</span>meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span>
                     <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span> <span class="token function">medmindre</span> <span class="token punctuation">(</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                             <span class="token number">3</span><span class="token punctuation">,</span>
                             <span class="token number">31</span><span class="token punctuation">,</span>
@@ -751,7 +801,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
                             <span class="token number">92</span>
                         <span class="token punctuation">)</span>
                     <span class="token punctuation">}</span> <span class="token function">og</span> <span class="token punctuation">(</span>
-                        mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                             linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                                 <span class="token number">1</span><span class="token punctuation">,</span>
                                 <span class="token number">11</span><span class="token punctuation">,</span>
@@ -774,17 +824,19 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
-                            <span class="token number">3</span><span class="token punctuation">,</span>
-                            <span class="token number">31</span><span class="token punctuation">,</span>
-                            <span class="token number">32</span><span class="token punctuation">,</span>
-                            <span class="token number">33</span>
+                registerDataHentetOk er OK <span class="token function">og</span> <span class="token punctuation">(</span>
+                    meldingskategori er alminnelig <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>
+                        mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                            linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
+                                <span class="token number">3</span><span class="token punctuation">,</span>
+                                <span class="token number">31</span><span class="token punctuation">,</span>
+                                <span class="token number">32</span><span class="token punctuation">,</span>
+                                <span class="token number">33</span>
+                            <span class="token punctuation">)</span>
+                        <span class="token punctuation">}</span>
                         <span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-                    <span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">ikkeFinnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">detIkkeFinner</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                             <span class="token number">1</span><span class="token punctuation">,</span>
                             <span class="token number">11</span><span class="token punctuation">,</span>
@@ -806,17 +858,19 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token string">&quot;Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">finnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
-                            <span class="token number">3</span><span class="token punctuation">,</span>
-                            <span class="token number">31</span><span class="token punctuation">,</span>
-                            <span class="token number">32</span><span class="token punctuation">,</span>
-                            <span class="token number">33</span>
+                registerDataHentetOk er OK <span class="token function">og</span> <span class="token punctuation">(</span>
+                    meldingskategori er primærnæring <span class="token function">og</span> <span class="token punctuation">(</span>registrertMeldingskategori er tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>
+                        mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">inneholder</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                            linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
+                                <span class="token number">3</span><span class="token punctuation">,</span>
+                                <span class="token number">31</span><span class="token punctuation">,</span>
+                                <span class="token number">32</span><span class="token punctuation">,</span>
+                                <span class="token number">33</span>
+                            <span class="token punctuation">)</span>
+                        <span class="token punctuation">}</span>
                         <span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-                    <span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">ikkeFinnes</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">detIkkeFinner</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                         linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                             <span class="token number">1</span><span class="token punctuation">,</span>
                             <span class="token number">11</span><span class="token punctuation">,</span>
@@ -839,7 +893,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 meldingskategori er alminnelig såSkal <span class="token punctuation">{</span>
-                    nå måVæreEfter slutTerminsdato
+                    <span class="token punctuation">(</span>nå væreEtter slutTerminsdato<span class="token punctuation">)</span> <span class="token function">medmindre</span> <span class="token punctuation">(</span>skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo<span class="token punctuation">)</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
@@ -853,7 +907,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 meldingskategori er primærnæring såSkal <span class="token punctuation">{</span>
-                    nå måVæreEfter slutTerminsdato
+                    <span class="token punctuation">(</span>nå væreEtter slutTerminsdato<span class="token punctuation">)</span> <span class="token function">medmindre</span> <span class="token punctuation">(</span>skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo<span class="token punctuation">)</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
@@ -861,7 +915,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             regelnummer <span class="token punctuation">{</span> R060 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    
+
     MVA_KODE_FOR_INNGÅ<span class="token function">ENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats&quot;</span>
         <span class="token punctuation">{</span>
@@ -889,7 +943,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
                     linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">51</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">)</span> <span class="token function">eller</span> <span class="token punctuation">(</span>
-                        linje<span class="token punctuation">.</span>spesifikasjon er UTTAK<span class="token punctuation">.</span>spesifikasjon <span class="token function">og</span> <span class="token punctuation">(</span>
+                        linje<span class="token punctuation">.</span>spesifikasjon er UTTAK<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode <span class="token function">og</span> <span class="token punctuation">(</span>
                             linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
                                 <span class="token number">3</span><span class="token punctuation">,</span>
                                 <span class="token number">5</span><span class="token punctuation">,</span>
@@ -914,7 +968,10 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             valideringsregel <span class="token punctuation">{</span>
                 <span class="token function">kodene</span><span class="token punctuation">(</span><span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span>
                     <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merverdiavgift erStørreEnn <span class="token number">0.0</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>sats ha innhold <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag ha innhold<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>sats ha innhold <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag ha innhold<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">eller</span>
+                            <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>mvaKode være <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon være TILBAKEFØRING<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
@@ -928,256 +985,114 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             valideringsregel <span class="token punctuation">{</span>
                 <span class="token function">kodene</span><span class="token punctuation">(</span><span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">)</span>
                     <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merverdiavgift erMindreEnn <span class="token number">0.0</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>sats være tomt <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag være tomt<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>sats være tomt <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag være tomt<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">eller</span>
+                            <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>mvaKode være <span class="token number">81</span> <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon være TILBAKEFØRING<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R068 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    
-    MVA_KODE_MERKNAD_OMSETNING_FØ<span class="token function">R_REGISTRERING</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Omsetning før registrering kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
+
+    <span class="token function">MVA_MELDINGSINNHOLD_MERKNAD_MANGLER</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;For denne spesifikasjonslinjen kreves det en gyldig merknad&quot;</span>
+        <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
+
                 mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Omsetning før registrering&quot;</span> <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        linje<span class="token punctuation">.</span>spesifikasjon er TILBAKEFØRING<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode
+                    <span class="token punctuation">}</span>
                     <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
-                            <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">92</span>
-                        <span class="token punctuation">)</span>
+                        <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse ha innhold<span class="token punctuation">)</span> <span class="token function">eller</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad ha innhold<span class="token punctuation">)</span>
                     <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R004 <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R078 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-    <span class="token function">MVA_KODE_MERKNAD_OMBEREGNING_RETUR</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Omberegning/retur kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
+    <span class="token function">MVA_MELDINGSINNHOLD_KID_NUMMER_GYLDIG</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;KID nummer må være gyldig hvis oppgitt&quot;</span>
+        <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Omberegning/retur&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
-                            <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span>
-                        <span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
+                <span class="token punctuation">(</span>kidNummer har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    <span class="token punctuation">(</span>kidNummer inneholde kunTallEllerKunTallMedBindestrekEtterSisteSiffer<span class="token punctuation">)</span> <span class="token function">og</span>
+                        <span class="token punctuation">(</span>kidNummer haLengdeStørreEnn <span class="token number">1</span><span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>kidNummer haLengdeMindreEnn <span class="token number">26</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R005 <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R079 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-    MVA_KODE_MERKNAD_MIDLERTIDIG_INNFØ<span class="token function">RSEL</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Midlertidig innførsel kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
+    <span class="token function">MVA_MELDINGSINNHOLD_KONTONUMMER_FINNES_IKKE</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Kontonummer mangler ved utbetaling av merverdiavgift&quot;</span>
+        <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Midlertidig innførsel&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
-                            <span class="token number">81</span><span class="token punctuation">,</span>
-                            <span class="token number">82</span><span class="token punctuation">,</span>
-                            <span class="token number">83</span><span class="token punctuation">,</span>
-                            <span class="token number">84</span><span class="token punctuation">,</span>
-                            <span class="token number">86</span><span class="token punctuation">,</span>
-                            <span class="token number">87</span><span class="token punctuation">,</span>
-                            <span class="token number">88</span><span class="token punctuation">,</span>
-                            <span class="token number">89</span>
-                        <span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
+                <span class="token punctuation">(</span>skattegrunnlagOgBeregnetSkatt<span class="token punctuation">.</span>fastsattMerverdiavgift kunne føreTilEnUtbetaling<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    registrertKontonummer har innhold
+                <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R006 <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> KONTONUMMER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R080 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-    MVA_KODE_MERKNAD_GJENINNFØ<span class="token function">RSEL</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Gjeninnførsel kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
+    <span class="token function">MVA_KODE_MERKNAD_FORTEGN_GYLDIG_VANLIG_FORTEGN</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Merknaden er ikke gyldig på denne mva-koden med vanlig fortegn&quot;</span> <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Gjeninnførsel&quot;</span> <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold og linje<span class="token punctuation">.</span><span class="token function">harVanligFortegn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token function">og</span>
+                            <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
                     <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">)</span>
+                        linje<span class="token punctuation">.</span>haGyldigMerknadForOppgittMvaKodeOgBelø<span class="token function">pOgSpesifikasjon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
                     <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R007 <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R074 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-    MVA_KODE_MERKNAD_TOLLDEKLARASJON_PÅ<span class="token function">_FEIL_ORGNR</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Tolldeklarasjon på feil organisasjonsnummer kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
+    <span class="token function">MVA_KODE_MERKNAD_FORTEGN_GYLDIG_MOTSATT_FORTEGN</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Merknaden er ikke gyldig på denne mva-koden med motsatt fortegn&quot;</span> <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Tolldeklarasjon på feil org.nr.&quot;</span> <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold og linje<span class="token punctuation">.</span><span class="token function">harMotsattFortegn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token function">og</span>
+                            <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er tomt<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
                     <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">)</span>
+                        linje<span class="token punctuation">.</span>haGyldigMerknadForOppgittMvaKodeOgBelø<span class="token function">pOgSpesifikasjon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
                     <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R008 <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R075 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-    MVA_KODE_MERKNAD_GJENUTFØ<span class="token function">RSEL</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Gjenutførsel kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
+    <span class="token function">MVA_KODE_MERKNAD_FORTEGN_GYLDIG_FOR_SPESIFIKASJON</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Merknaden er ikke gyldig på denne mva-koden med oppgitt spesifikasjon og fortegn&quot;</span> <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Gjenutførsel&quot;</span> <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
+                        linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon har innhold<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
                     <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">)</span>
+                        linje<span class="token punctuation">.</span>haGyldigMerknadForOppgittMvaKodeOgBelø<span class="token function">pOgSpesifikasjon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
                     <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R009 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    MVA_KODE_MERKNAD_GJENUTFØ<span class="token function">RSEL_ELLER_RETUR</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Gjenutførsel eller retur kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Gjenutførsel eller retur&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode være <span class="token number">52</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R010 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    MVA_KODE_MERKNAD_MIDLERTID_UTFØ<span class="token function">RSEL</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Midlertid utførsel kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Midlertid utførsel&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode være <span class="token number">52</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R011 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    <span class="token function">MVA_KODE_MERKNAD_TJENESTEEKSPORT</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Tjenesteeksport kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Tjenesteeksport&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode være <span class="token number">52</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R012 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    <span class="token function">MVA_KODE_MERKNAD_STORE_ANSKAFFELSER</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Store anskaffelser kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Store anskaffelser&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R013 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    MVA_KODE_MERKNAD_ANSKAFFELSER_FØ<span class="token function">R_MVA_PLIKT</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Anskaffelser før mva-plikt kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Anskaffelser før mva-plikt&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R014 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    MVA_KODE_MERKNAD_FORSIKRINGSOPPGJØ<span class="token function">R</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Forsikringsoppgjør&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode være <span class="token number">1</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R015 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    <span class="token function">MVA_KODE_MERKNAD_SESONGVARIASJON</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Sesongvariasjon kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Sesongvariasjon&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span>
-                            <span class="token number">1</span><span class="token punctuation">,</span>
-                            <span class="token number">11</span><span class="token punctuation">,</span>
-                            <span class="token number">12</span><span class="token punctuation">,</span>
-                            <span class="token number">13</span><span class="token punctuation">,</span>
-                            <span class="token number">14</span><span class="token punctuation">,</span>
-                            <span class="token number">15</span><span class="token punctuation">,</span>
-                            <span class="token number">3</span><span class="token punctuation">,</span>
-                            <span class="token number">31</span><span class="token punctuation">,</span>
-                            <span class="token number">32</span><span class="token punctuation">,</span>
-                            <span class="token number">33</span><span class="token punctuation">,</span>
-                            <span class="token number">5</span><span class="token punctuation">,</span>
-                            <span class="token number">52</span><span class="token punctuation">,</span>
-                            <span class="token number">6</span><span class="token punctuation">,</span>
-                            <span class="token number">81</span><span class="token punctuation">,</span>
-                            <span class="token number">82</span><span class="token punctuation">,</span>
-                            <span class="token number">83</span><span class="token punctuation">,</span>
-                            <span class="token number">84</span><span class="token punctuation">,</span>
-                            <span class="token number">85</span><span class="token punctuation">,</span>
-                            <span class="token number">86</span><span class="token punctuation">,</span>
-                            <span class="token number">87</span><span class="token punctuation">,</span>
-                            <span class="token number">88</span><span class="token punctuation">,</span>
-                            <span class="token number">89</span>
-                        <span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R016 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    <span class="token function">MVA_KODE_MERKNAD_KREDITNOTA</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Kreditnota kan ikke settes som merknad på denne mva-koden&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                mvaSpesifikasjonslinje
-                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse er <span class="token string">&quot;Kreditnota&quot;</span> <span class="token punctuation">}</span>
-                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R017 <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R076 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span></code></pre></div></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div><div class="footerDecorContainer-51" role="contentinfo"><svg focusable="false" class="footer-decoration-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1440 100" version="1.1"><desc></desc><defs></defs><g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd"><g id="bakgrunn"><polygon fill="#C0797E" points="0 99.6400524 1440 99.6400524 1440 69.2255838 0 17.1793194"></polygon><path d="M1440,98 L1440,629 L0,629 L0,98 L1440,0 L1440,98 Z" fill="#6F2C3F"></path></g></g></svg></div><footer class="footerWrapper-49"><div class="footerContent-50"><div class="ske-Grid-42 "><div class="ske-Grid-row-45 "><div class="ske-Grid-col-52 "><div class="ms-Image root-54" style="height:74px"><img src="/mva-meldingen/static/ske-logo-a0e8bc5ad23f41f04a6c4e5655a5174b.svg" alt="Skatteetaten logo" class="ms-Image-image ms-Image-image--portrait is-notLoaded is-fadeIn image-55"/></div></div><div class="ske-Grid-col-56 "><div class="footer-module--footer-links--1p2zW"><div><a href="https://www.skatteetaten.no" target="blank" class="footer-module--footer-link--3N1pB" style="margin:10px 0">skatteetaten.no</a></div></div></div></div></div></div></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/documentation/forretningsregler/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3370241ddb89d1467de6.js"],"app":["/app-2b14fe4a334a974441cb.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a7c0e2c227b82808bcb0.js"],"component---src-pages-documentation-js":["/component---src-pages-documentation-js-5de4a3bc96a208f73256.js"],"component---src-pages-english-js":["/component---src-pages-english-js-5efc5115f0dbc3c695cc.js"],"component---src-pages-index-js":["/component---src-pages-index-js-05223ca033758f7629ff.js"],"component---src-templates-documentation-template-js":["/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js"]};/*]]>*/</script><script src="/mva-meldingen/polyfill-3370241ddb89d1467de6.js" nomodule=""></script><script src="/mva-meldingen/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js" async=""></script><script src="/mva-meldingen/b6f0a20a63d6adab58b8c9afc6a4bb63a39e32a5-81fa3ee79d448ffbb0d2.js" async=""></script><script src="/mva-meldingen/styles-c2fe8482057191dca484.js" async=""></script><script src="/mva-meldingen/app-2b14fe4a334a974441cb.js" async=""></script><script src="/mva-meldingen/framework-da8a1ea7f298509dc5ee.js" async=""></script><script src="/mva-meldingen/webpack-runtime-1defc1ca0de2e6e5668e.js" async=""></script></body></html>
