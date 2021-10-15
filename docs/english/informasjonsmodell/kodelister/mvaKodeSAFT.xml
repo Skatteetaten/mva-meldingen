@@ -11,11 +11,11 @@
         <tekniskNavn>1</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer og tjenester (høy sats)</tekst>
+                <tekst>Kjøp av varer og tjenester med fradrag (høy sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods and services (standard rate)</tekst>
+                <tekst>Purchases of goods and services with deductions (standard rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -27,12 +27,12 @@
             <temaRekkefoelge>3</temaRekkefoelge>
             <beskrivelseIStandard_en>Deductible domestic input value added tax, standard rate</beskrivelseIStandard_en>
             <tapPaaKrav>SANN</tapPaaKrav>
+            <tilbakefoeringAvInngaaendeMerverdiavgift>SANN</tilbakefoeringAvInngaaendeMerverdiavgift>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <tema_en>Purchases of goods and services in Norway</tema_en>
             <kompensasjon >SANN</kompensasjon >
             <justering>SANN</justering>
-            <tilbakefoeringAvMerverdiavgift>SANN</tilbakefoeringAvMerverdiavgift>
             <beskrivelseIStandard>Fradragsberettiget innenlands inngående merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kodeBrukesTilSpesifiseringAv>
         </kodetillegg>
@@ -120,11 +120,11 @@
         <tekniskNavn>11</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer og tjenester (middels sats)</tekst>
+                <tekst>Kjøp av varer og tjenester med fradrag (middels sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods and services (middle rate)</tekst>
+                <tekst>Purchases of goods and services with deductions (middle rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -148,11 +148,11 @@
         <tekniskNavn>12</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Merverdiavgift betalt ved kjøp av fisk og andre marine viltlevende ressurser</tekst>
+                <tekst>Kjøp av fisk og andre marine viltlevende ressurser</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Value added tax paid upon the purchase of fish and other marine wildlife resources</tekst>
+                <tekst>Purchase of fish and other marine wildlife resources</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -173,11 +173,11 @@
         <tekniskNavn>13</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer og tjenester med (lav sats)</tekst>
+                <tekst>Kjøp av varer og tjenester med fradrag (lav sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods and services (low rate)</tekst>
+                <tekst>Purchases of goods and services with deductions (low rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -201,11 +201,11 @@
         <tekniskNavn>14</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer fra utlandet, betalt merverdiavgift ved innførsel (høy sats)</tekst>
+                <tekst>Fradrag på kjøp av varer fra utlandet (merverdiavgift betalt ved innførsel, høy sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods from abroad, value added tax paid upon import (standard rate)</tekst>
+                <tekst>Deductions on purchases of goods from abroad, value added tax paid upon import (standard rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -228,11 +228,11 @@
         <tekniskNavn>15</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer fra utlandet, betalt merverdiavgift ved innførsel (middels sats)</tekst>
+                <tekst>Fradrag på kjøp av varer fra utlandet (merverdiavgift betalt ved innførsel, middels sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods from abroad, value added tax paid upon import (middle rate)</tekst>
+                <tekst>Deductions on purchases of goods from abroad, value added tax paid upon import (middle rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -388,11 +388,11 @@
         <tekniskNavn>81</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer fra utlandet med fradrag (høy sats)</tekst>
+                <tekst>Kjøp av varer fra utlandet med fradragsrett (høy sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods from abroad with deductions (standard rate)</tekst>
+                <tekst>Kjøp av varer fra utlandet med fradragsrett (høy sats)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -401,15 +401,15 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag_en>Deductions (value added tax not paid upon import)</fradrag_en>
-            <fradrag>Fradrag (ikke betalt merverdiavgift ved innførsel)</fradrag>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
             <beskrivelseIStandard_en>Basis, import of goods with deduction entitlement for import value added tax, standard rate</beskrivelseIStandard_en>
+            <tilbakefoeringAvInngaaendeMerverdiavgift>SANN</tilbakefoeringAvInngaaendeMerverdiavgift>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <tema_en>Purchases of goods from abroad (import)</tema_en>
             <kompensasjon >SANN</kompensasjon >
-            <tilbakefoeringAvMerverdiavgift>SANN</tilbakefoeringAvMerverdiavgift>
             <beskrivelseIStandard>Grunnlag innførsel av varer med fradragsrett for innførselsmerverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Inngående og utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
         </kodetillegg>
@@ -445,7 +445,7 @@
         <tekniskNavn>83</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer fra utlandet med fradrag (middels sats)</tekst>
+                <tekst>Kjøp av varer fra utlandet med fradragsrett (middels sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -458,7 +458,7 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag_en>Deductions (value added tax not paid upon import)</fradrag_en>
-            <fradrag>Fradrag (ikke betalt merverdiavgift ved innførsel)</fradrag>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
             <beskrivelseIStandard_en>Basis, import of goods with deduction entitlement for import value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
@@ -501,7 +501,7 @@
         <tekniskNavn>85</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer fra utlandet med null-sats</tekst>
+                <tekst>Kjøp av varer fra utlandet som det ikke skal beregnes merverdiavgift på (nullsats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -528,7 +528,7 @@
         <tekniskNavn>86</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av tjenester fra utlandet med fradrag (høy sats)</tekst>
+                <tekst>Kjøp av tjenester fra utlandet med fradragsrett (høy sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -541,7 +541,7 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag_en>Deductions related to purchases (the value added tax)</fradrag_en>
-            <fradrag>Fradrag på kjøp (merverdiavgiften)</fradrag>
+            <fradrag>Fradrag på kjøp av tjenester fra utlandet (høy sats)</fradrag>
             <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <temaRekkefoelge>5</temaRekkefoelge>
             <beskrivelseIStandard_en>Services purchased from abroad with deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
@@ -584,7 +584,7 @@
         <tekniskNavn>88</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av tjenester fra utlandet med fradrag (lav sats)</tekst>
+                <tekst>Kjøp av tjenester fra utlandet med fradragsrett (lav sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -597,7 +597,7 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag_en>Deductions related to purchases (the value added tax)</fradrag_en>
-            <fradrag>Fradrag på kjøp (merverdiavgiften)</fradrag>
+            <fradrag>Fradrag på kjøp av tjenester fra utlandet (lav sats)</fradrag>
             <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <temaRekkefoelge>5</temaRekkefoelge>
             <beskrivelseIStandard_en>Services purchased from abroad with deduction entitlement for value added tax, reduced rate, low</beskrivelseIStandard_en>
@@ -653,7 +653,7 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag_en>Deductions</fradrag_en>
-            <fradrag>Fradrag</fradrag>
+            <fradrag>Fradrag på kjøp av klimakvoter og gull</fradrag>
             <tema>Klimakvoter og gull</tema>
             <temaRekkefoelge>7</temaRekkefoelge>
             <beskrivelseIStandard_en>Purchased emission allowances or gold with deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
@@ -668,7 +668,7 @@
         <tekniskNavn>92</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av klimakvoter og gull som er uten fradragsrett</tekst>
+                <tekst>Kjøp av klimakvoter og gull uten fradragsrett</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>

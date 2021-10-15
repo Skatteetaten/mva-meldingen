@@ -27,12 +27,12 @@
             <temaRekkefoelge>3</temaRekkefoelge>
             <beskrivelseIStandard_en>Deductible domestic input value added tax, standard rate</beskrivelseIStandard_en>
             <tapPaaKrav>SANN</tapPaaKrav>
+            <tilbakefoeringAvInngaaendeMerverdiavgift>SANN</tilbakefoeringAvInngaaendeMerverdiavgift>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <tema_en>Purchases of goods and services in Norway</tema_en>
             <kompensasjon >SANN</kompensasjon >
             <justering>SANN</justering>
-            <tilbakefoeringAvMerverdiavgift>SANN</tilbakefoeringAvMerverdiavgift>
             <beskrivelseIStandard>Fradragsberettiget innenlands inngående merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kodeBrukesTilSpesifiseringAv>
         </kodetillegg>
@@ -405,11 +405,11 @@
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
             <beskrivelseIStandard_en>Basis, import of goods with deduction entitlement for import value added tax, standard rate</beskrivelseIStandard_en>
+            <tilbakefoeringAvInngaaendeMerverdiavgift>SANN</tilbakefoeringAvInngaaendeMerverdiavgift>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <tema_en>Purchases of goods from abroad (import)</tema_en>
             <kompensasjon >SANN</kompensasjon >
-            <tilbakefoeringAvMerverdiavgift>SANN</tilbakefoeringAvMerverdiavgift>
             <beskrivelseIStandard>Grunnlag innførsel av varer med fradragsrett for innførselsmerverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Inngående og utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
         </kodetillegg>
