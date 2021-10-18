@@ -43,7 +43,7 @@ Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https:/
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
-  <tr><td>meldingskatergori</td><td>Beskrivelse: type skjema som sendes inn <br>
+  <tr><td>meldingskategori</td><td>Beskrivelse: type skjema som sendes inn <br>
 	Formål: å sikre at brukeren dekker sin plikt for egenfastsetting
 	</td>
   </tr>
