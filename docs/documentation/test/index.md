@@ -20,7 +20,7 @@ Oppkobling mot testmiljøet skjer via ID-porten og i forbindelse med test kan Sk
 
 Systemleverandørene må ved oppstart av test ta kontakt med prosjektet på MVA-Modernisering@skatteetaten.no for å få tildelt testbruker. Dette er syntetisk testbruker som også skal brukes for pålogging i ID-porten og Altinn. Det vil kun være disse testbrukeren som kan benyttes for å få testet. Testbrukere som ligger tilgjengelig på Digdir sine sider vil ikke kunne brukes.
 
-Testmiljøet til Skatteetaten vil være tilgjengelig i avtalte perioder fra mai og frem til januar 2022. I juli 2021 kan det ikke forventes at miljøet skal være tilgjengelig.
+Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny mva-melding er lansert, så lenge det er behov for det.
 
 ## Testplanlegging
 
