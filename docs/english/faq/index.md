@@ -8,13 +8,13 @@ description: "Frequently asked questions"
 
 ### Which changes are coming in the modernisation of the VAT-domain? 
 
-##### New registration solution for the Value Added Tax Register.
+#### New registration solution for the Value Added Tax Register.
 The Tax Administration has launched a new registration solution for the Value Added Tax Register. With the new service, processing time for most registration cases will be reduced from weeks to minutes. [The new service can be found at Skatteetaten.no](https://www.skatteetaten.no/en/business-and-organisation/vat-and-duties/vat/register/).
 
-##### New VAT-return.
+#### New VAT-return
 The goal of the project is to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system. The new VAT-return will be launched on 1 January 2022. 
 
-##### New sales and purchases report.
+#### New sales and purchases report
 A proposal for a new solution for reporting on sales and purchases is currently in a mandatory public consultation. The proposed solution will help both businesses and the Tax Administration to ensure equal treatment and prevent unlawful distortion of competition for businesses.  The deadline for the consultation is november 26, 2021. [The proposal can be found here](https://www.skatteetaten.no/rettskilder/type/horinger/opplysningsplikt-salgs-og-kjopstransaksjoner/)
 
 ### Will there be a transition period from the old to the new services?
@@ -28,7 +28,6 @@ For the VAT-return it will be possible to file and submit the VAT-return in the 
 ## Who can fill out an application for registration, and who can submit? 
 
 ### Why has the Tax Administration chosen to limit filling out registrations or VAT-returns by using Altinn-roles?
-  
 Until now, there has been no limit to who can fill out returns for a business, and if the business has poor routines for signing, unintended returns can be submittet and give serious consequences. The new use of roles is safer, and in line with all other modernised services in the Tax Administration.  Roles are required for both registration and vat-report submission. 
  
 
@@ -43,13 +42,11 @@ If you are going to sign on behalf of others, you must have the Altinn role “L
 
 
 ### Delegated access to registration service
-  
 Legal councel and other advisors can ask the business to delegate access to "Merverdiavgift Registreringstjeneste" in Altinn. Alternatively the legal councel can request access from the business, if a prior relationship exists. Access can be given to a person or another business (only businesses with a prior relationship with the reporting business in Altinn). Legal councel who wants personal access can submit either their personal identity number or their Altinn-username, as identification for the reporting business.  Access is not time-limited, so the reporting business should remove the access if the legal councel or advisor no longer needs access. 
 
 It is also possible for legal councel to acquire Altinn-roles in reporting businesses. This must be done in co-operation with the business in question. The role title will only be visible for the one who delegates, and not in other systems, such as the Register of Legal Entities.
 
 ### VAT-return roles
-
 To fill out and submit VAT-returns, the same Altinn-roles as today are needed:
 
 The business itself can fill out the VAT-return, or someone with the Altinn role Auditor in charge/Ansvarlig revisor, Accounting employee/Regnskapsmedarbeider, Accountant without signing rights/Regnskapsfører uten signeringsrettighet or Assistant auditor/Revisormedarbeider. 
@@ -62,7 +59,6 @@ The Tax Administration have plans to develop functionality for delegating power 
 ## VAT-return
 
 ### When will the new VAT-return be launched?
-
 The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. 
 
 ### How will the new VAT-return be submitted?
@@ -112,7 +108,6 @@ This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/engli
 ## Sales and purchase report
 
 ### What does the sales and purchase report entail, and when will it be launched?
-
 A proposition for a new solution for reporting on sales and purchases is currently in a mandatory public consultation, and the launch is planned for 2024. The need for time to develop the sales and purchase report for businesses, ERPs and the Tax Administration will be taken into account. The proposal includes a reporting duty for sales and purchase transactions for private and public organisations. The reporting duty will apply for single transactions, and include information regarding invoice number, documentation date, name of parties in the transaction, organisational number and information on VAT and remuneration. 
 
 The new reporting duty will make it possible to see transactions in context, which is not possible today. There will be no requirement to report information on the purpose of the transaction. A large number of businesses are using ERPs with requirements to provide accounting information in standardised formats (SAF-T). This enables direct reporting from the ERP to the tax administration. 
@@ -120,7 +115,6 @@ The new reporting duty will make it possible to see transactions in context, whi
 The purpose of the new reporting duty is to increase compliance, help both businesses and the Tax Administration to ensure equal treatment and prevent unlawful distortion of competition for businesses. An important goal is to limit extra work for businesses, by offering reporting directly from ERPs.
 
 ### Will the new reporting duty apply to all businesses, or will there be exceptions for small businesses? 
-
 The proposal opens for exceptions in some cases. 
 
 ### Is it relevant to extend the current SAF-T Financial Norway XML file to include a sales / purchase invoice, or will a new sales purchase report be completely outside the SAF-T Financial Norway XML file?
@@ -130,7 +124,6 @@ The sales and purchase report will be something other than SAF-T Financial, but 
 ## Test
 
 ### Will testing of the new VAT-report be open for everyone?
-
 Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/english/test/). 
 If you are interested in participating in testing, please contact the Tax Administration at mva-modernisering@skatteetaten.no.
 
