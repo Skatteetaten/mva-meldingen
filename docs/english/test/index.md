@@ -20,7 +20,7 @@ Connection against the test environment occurs through ID-porten and for the pur
 
 The ERP system providers must contact the project at mva-modernisering@skatteetaten.no to receive test users. These are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test VAT-return. Ordinary Digdir test users will not work for this purpose.
 
-Skatteetaten's test environment will be available at agreed periods between May 2021 and January 2022. In July 2021 it should not be expected that the environment will be available.
+Skatteetaten's test environment will be available as long as it is needed, after the new VAT-return is launched in January 2022. 
 
 ## Test planning
 
