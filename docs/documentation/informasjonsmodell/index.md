@@ -164,13 +164,13 @@ Feltet skal ikke fylles ut for inngående mva. <br>
         Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra hendelser på instansen. Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
 	</td>
   </tr>
-  <tr><td>oprettetAv</td>
+  <tr><td>opprettetAv</td>
     <td>
         Beskrivelse: Dette feltet skal inneholde navn på innlogget bruker. <br>
         Formål: Innholdet i denne vises i Altinn.
 	</td>
   </tr>
-  <tr><td>oprettingstidspunkt</td>
+  <tr><td>opprettingstidspunkt</td>
     <td>
         Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra instansen. 
         Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
