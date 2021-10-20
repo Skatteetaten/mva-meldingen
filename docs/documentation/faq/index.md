@@ -70,7 +70,7 @@ Skatteetaten har planer om å utvikle funksjonalitet for delegering av fullmakt 
 
 ### Når trer ny mva-melding i kraft?
 
-Fra 1. januar 2022. Første frist for innlevering vil avhenge av hvilken termin man har. 
+Fra 1. januar 2022. Første frist for innlevering vil avhenge av hvilken termin man har. Mva-meldinger og korrigeringer som gjelder for terminer til og med 31. desember 2021 må leveres på gammelt format i Altinn, slik som tidligere.
 
 ### Skal leveringen av mva-melding skje via Altinn eller via Skatteetatens nettside?
 
