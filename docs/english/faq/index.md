@@ -59,7 +59,7 @@ The Tax Administration have plans to develop functionality for delegating power 
 ## VAT-return
 
 ### When will the new VAT-return be launched?
-The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. 
+The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. VAT-retunrs and corrections for terms up till and including December 31st 2021 must be submitted in the old format through Altinn, as before.
 
 ### How will the new VAT-return be submitted?
 Businesses and advisors are encouraged to deliver directly from their ERP. The Tax Administration is working with ERP-suppliers to enable this. For those who do not have an ERP, or if the ERP is not suited to deliver VAT-returns, the Tax administration is developing a web-based portal for submitting VAT-returns. Altinn will still be used for identification and information exchange.
