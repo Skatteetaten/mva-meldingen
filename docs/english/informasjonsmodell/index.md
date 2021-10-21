@@ -331,10 +331,6 @@ Vedleggsfil
 - Encoding for remarks: [merknader](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknad.xml)
 - Encoding for remarks and corresponding VAT code: [merknadTilsvarendeMvaKode.xml](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml)
 
-## Remarks in accordance to the VAT codes and the VAT tax return
-
-Overview over remarks in accordance to the VAT codes in the VAT tax return [remarks in accordance to the VAT codes](merknader mot poster og hele meldingen.xlsx)
-
 # XSD for uploading metadata
 
 The submission of the VAT return requires an XML file containg metadata. This file must be according to the XSD for submission.
