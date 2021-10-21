@@ -17,6 +17,8 @@ description: "XSD for VAT return (mva-melding)
 | 2021.09.13 | New table describing the usage of SAF-T codes                                                                                                                                                                            |
 | 2021.09.21 | Information model for VAT return updated. SAF-T codes not to be reported (0,7, 20,21 and 22) are removed.                                                                                                                |
 | 2021.10.12 | Updated code list [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), including removal of duplicates |
+| 2021.10.15 | Updated code lists                                                                                                                                                                                                       |
+| 2021.10.21 | Updated description of period and taxation period with information about SkattleggingsperiodeUke and SkattleggingsperiodeHalvmåndelig                                                                                    |
 
 ## Version 1.0 of the XSD for the VAT return
 
@@ -89,6 +91,7 @@ Purpose: To be able to pay to the bank accounts that require KID
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>skattleggingsperiode</td><td>Description: the taxation period for which the VAT return applies <br>
+  Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
 Purpose: to ensure consistency between bookkeeping and VAT return period 
 	</td>
   </tr>
@@ -201,6 +204,7 @@ Skattleggingsperiode
     <td>periode</td>
     <td>
         Description: the taxation period for which the VAT return applies <br>
+		Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
         Purpose: to ensure consistency between book keeping and VAT return period.
 	</td>
   </tr>

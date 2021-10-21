@@ -17,6 +17,8 @@ description: "XSD for mva-melding
 | 2021.09.13 | Ny tabell for beskrivelse av kodelister                                                                                                                                                                           |
 | 2021.09.21 | Oppdatert informasjonsmodell for mva-melding. Fjernet SAFT-koder det ikke skal rapporteres på                                                                                                                     |
 | 2021.10.12 | Oppdatert kodeliste [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), inkl. fjernet duplikat |
+| 2021.10.15 | Oppdatert kodelister                                                                                                                                                                                              |
+| 2021.10.15 | Oppdatert beskrivelse av periode og skattleggingsperiode med informasjon om SkattleggingsperiodeUke og SkattleggingsperiodeHalvmåndelig                                                                           |
 
 ## XSD for mva-meldingen versjon 1.0
 
@@ -93,6 +95,7 @@ Oppgis bare dersom det er tilgodebeløp.
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr><td>skattleggingsperiode</td><td>Beskrivelse: den perioden egenfastsettingen gjelder for <br>
+  Periode angis i henhold til kodeverket for Skattleggingsperiode. SkattleggingsperiodeUke følger kalenderens ukenummerering, eksempelvis løper uke 1 i 2022 fra 3. til 9. januar. I SkattleggingsperiodeHalvmåndelig løper første halvdel fra 1. til 15. i måneden og andre halvdel løper fra 16. til siste i måneden. <br>    
   Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
@@ -207,6 +210,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
     <td>periode</td>
     <td>
         Beskrivelse: den perioden egenfastsettingen gjelder for <br>
+		Periode angis i henhold til kodeverket for Skattleggingsperiode. SkattleggingsperiodeUke følger kalenderens ukenummerering, eksempelvis løper uke 1 i 2022 fra 3. til 9. januar. I SkattleggingsperiodeHalvmåndelig løper første halvdel fra 1. til 15. i måneden og andre halvdel løper fra 16. til siste i måneden. <br>   
         Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
