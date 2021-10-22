@@ -79,9 +79,9 @@ Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra re
 ### Er levering i innlogget tjeneste en permanent løsning som er åpen for alle (hvis man ikke kan eller vil bruke system-system)?
 Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
 
-### Vil det være mulig å laste opp en XML-fil med grunnlagsdataene i portalen, slik at bruker da får utfylt dataene i portalen basert på innholdet i filen?
+### Vil det være mulig å laste opp en XML-fil med grunnlagsdataene i innlogget løsning, slik at bruker da får utfylt dataene basert på innholdet i filen?
 
-Prosjektet vurderer om vi skal lage denne type funksjonalitet. Endelig svar på om det vil bli mulig å laste opp XML i portalen vil komme i løpet av høsten. 
+Ja, det vil være mulig å laste opp en XML-fil i innlogget løsning. Det vil ikke være mulig å gjøre endringer på tall eller merknader etter opplasting av XML-filen, men det vil være mulig å laste opp vedlegg. 
 
 ### På hvilket aggregeringsnivå skal beløp oppgis i ny mva-melding? 
 
