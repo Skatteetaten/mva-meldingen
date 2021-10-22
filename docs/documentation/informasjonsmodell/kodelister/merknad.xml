@@ -46,7 +46,7 @@
                 <spraak>nn</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Corrections due to post-payment invoicing, previously omitted/forgotten invoices, rent that is paid quarterly, half-yearly or yearly</tekst>
+                <tekst>Corrections due to post-payment invoicing, previously omitted or forgotten invoices, or annual account dispositions</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -115,7 +115,7 @@
                 <spraak>nn</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Insurance settlement in connection with destruction of/damage to an asset</tekst>
+                <tekst>VAT has been deducted in relation to an insurance settlement concerning the business</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -130,7 +130,7 @@
         <tekniskNavn>omsetning før registrering</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Omsetning før registrering i mva-register</tekst>
+                <tekst>Omsetning før registrering i Merverdiavgiftsregisteret</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -260,7 +260,7 @@
         <kodetillegg>
             <kortbeskrivelse_en>Re-export or returns</kortbeskrivelse_en>
             <merknadGjelder>mva kode</merknadGjelder>
-            <kortbeskrivelse_no>Gjenutførsel  eller retur</kortbeskrivelse_no>
+            <kortbeskrivelse_no>Gjenutførsel eller retur</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Gjenutførsel eller retur</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
@@ -345,7 +345,7 @@
                 <spraak>nn</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sales document used to cancel all or parts of an invoice. Created when an invoice that has already been posted in the accounts must be partially or fully reversed.</tekst>
+                <tekst>Invoice is used to change all or parts of a previous invoice</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -360,7 +360,7 @@
         <tekniskNavn>anskaffelser foretatt før mva registrering</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Anskaffelser foretatt før registrering i Merverdiavgiftsregisteret,  tilbakegående avgiftsoppgjør eller forklaring på store fradrag for inngående merverdiavgift</tekst>
+                <tekst>Anskaffelser foretatt før registrering i Merverdiavgiftsregisteret, tilbakegående avgiftsoppgjør eller forklaring på store fradrag for inngående merverdiavgift</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -368,7 +368,7 @@
                 <spraak>nn</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Retrospective value added tax settlement, explanation of large deductions for input VAT</tekst>
+                <tekst>Purchases made before registration in the VAT register, retrospective VAT refunds or explanation of large deductions for input VAT</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>

@@ -78,9 +78,9 @@ Businesses and advisors are encouraged to deliver directly from their ERP. The T
 
 Yes, the portal is a permanent solution that is open to everyone.
 
-### Will it be possible to upload the VAT-return in XML-format in the portal?
+### Will it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
 
-The project is considering whether we should create this type of functionality. The final answer to whether it will be possible to upload XML in the portal will come during the autumn.
+Yes, it will be possible. It will not be possible to change numbers or notes in the uploaded XML-file, but it will be possible to upload attachements
 
 ### At what aggregation level will amounts be entered in the new VAT-return?
 
