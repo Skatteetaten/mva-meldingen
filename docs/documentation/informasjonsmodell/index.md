@@ -10,12 +10,16 @@ description: "XSD for mva-melding
 
 ### Endringslogg
 
-| Dato       | Hva ble endret?                                                                                                                                                                                                |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2021.06.21 | Oppdaterte kodeliste [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), rettet "tap på krav" til "tapPåKrav" |
-| 2021.08.31 | Oppdaterte med beskrivelse av feltene i MvaMeldingInnsending                                                                                                                                                   |
-| 2021.09.13 | Ny tabell for beskrivelse av kodelister                                                                                                                                                                        |
-| 2021.09.21 | Oppdatert informasjonsmodell for mva-melding. Fjernet SAFT-koder det ikke skal rapporteres på                                                                                                                  |
+| Dato       | Hva ble endret?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2021.06.21 | Oppdaterte kodeliste [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), rettet "tap på krav" til "tapPåKrav"                                                                                                                                                                                                                                                                                                                                                      |
+| 2021.08.31 | Oppdaterte med beskrivelse av feltene i MvaMeldingInnsending                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 2021.09.13 | Ny tabell for beskrivelse av kodelister                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 2021.09.21 | Oppdatert informasjonsmodell for mva-melding. Fjernet SAFT-koder det ikke skal rapporteres på                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 2021.10.12 | Oppdatert kodeliste [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), inkl. fjernet duplikat                                                                                                                                                                                                                                                                                                                                                   |
+| 2021.10.15 | Oppdatert kodelister                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 2021.10.21 | Oppdatert beskrivelse av periode og skattleggingsperiode med informasjon om SkattleggingsperiodeUke og SkattleggingsperiodeHalvmåndelig                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 2021.10.22 | Oppdaterte kodelister, rettet engelske tekster i [merknad](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknad.xml), lagt til nytt element "fradrag" i [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), oversettinger til nynorsk i [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml). |
 
 ## XSD for mva-meldingen versjon 1.0
 
@@ -42,7 +46,7 @@ Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https:/
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
-  <tr><td>meldingskatergori</td><td>Beskrivelse: type skjema som sendes inn <br>
+  <tr><td>meldingskategori</td><td>Beskrivelse: type skjema som sendes inn <br>
 	Formål: å sikre at brukeren dekker sin plikt for egenfastsetting
 	</td>
   </tr>
@@ -92,6 +96,7 @@ Oppgis bare dersom det er tilgodebeløp.
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr><td>skattleggingsperiode</td><td>Beskrivelse: den perioden egenfastsettingen gjelder for <br>
+  Periode angis i henhold til kodeverket for Skattleggingsperiode. SkattleggingsperiodeUke følger kalenderens ukenummerering, eksempelvis løper uke 1 i 2022 fra 3. til 9. januar. I SkattleggingsperiodeHalvmåndelig løper første halvdel fra 1. til 15. i måneden og andre halvdel løper fra 16. til siste i måneden. <br>    
   Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
@@ -163,13 +168,13 @@ Feltet skal ikke fylles ut for inngående mva. <br>
         Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra hendelser på instansen. Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
 	</td>
   </tr>
-  <tr><td>oprettetAv</td>
+  <tr><td>opprettetAv</td>
     <td>
         Beskrivelse: Dette feltet skal inneholde navn på innlogget bruker. <br>
         Formål: Innholdet i denne vises i Altinn.
 	</td>
   </tr>
-  <tr><td>oprettingstidspunkt</td>
+  <tr><td>opprettingstidspunkt</td>
     <td>
         Beskrivelse: Dette feltet kommer vi til å fjerne da vi får denne informasjonen fra instansen. 
         Dette skal gjøres ved at det settes til valgfritt i en overgang og fases ut ved en passende anledning.
@@ -206,6 +211,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
     <td>periode</td>
     <td>
         Beskrivelse: den perioden egenfastsettingen gjelder for <br>
+		Periode angis i henhold til kodeverket for Skattleggingsperiode. SkattleggingsperiodeUke følger kalenderens ukenummerering, eksempelvis løper uke 1 i 2022 fra 3. til 9. januar. I SkattleggingsperiodeHalvmåndelig løper første halvdel fra 1. til 15. i måneden og andre halvdel løper fra 16. til siste i måneden. <br>   
         Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
@@ -334,10 +340,6 @@ En oversikt over kodelistene finnes i [Oversikten over kodelister](https://githu
 - Kodeliste for sats: [sats](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/sats.xml)
 - Kodeliste for merknader: [merknad](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknad.xml)
 - Kodeliste for merknader og tilsvarende mva-kode: [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml)
-
-## Merknader mot poster og hele meldingen
-
-Oversikt over merknader knyttet opp mot de ulike SAF-T kodene i mva-meldingen [merknader mot poster og hele meldingen](merknader mot poster og hele meldingen.xlsx)
 
 # XSD for innsending
 

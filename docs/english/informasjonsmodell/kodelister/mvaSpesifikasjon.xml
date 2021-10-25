@@ -11,11 +11,11 @@
         <tekniskNavn>justering</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Justering</tekst>
+                <tekst>Justering av merverdiavgift for kapitalvarer</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Adjustment</tekst>
+                <tekst>VAT adjustment for capital goods</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -37,11 +37,11 @@
         <tekniskNavn>tilbakeføringAvInngåendeMerverdiavgift</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Tibakeføring av Inngående Merverdiavgift</tekst>
+                <tekst>Tilbakeføring av merverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Reversal of input value added tax</tekst>
+                <tekst>Reversal of input value added tax for capital goods (only passenger vehicles and real estate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -87,5 +87,3 @@
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>
-
-

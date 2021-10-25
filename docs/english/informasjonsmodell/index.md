@@ -10,12 +10,16 @@ description: "XSD for VAT return (mva-melding)
 
 ### Change log
 
-| Date       | What changed?                                                                                                                                                                                                  |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2021.06.21 | Updated code list [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), correcting "tap på krav" to "tapPåKrav" |
-| 2021.08.31 | Updated with description of the fields in the VAT return submission                                                                                                                                            |
-| 2021.09.13 | New table describing the usage of SAF-T codes                                                                                                                                                                  |
-| 2021.09.21 | Information model for VAT return updated. SAF-T codes not to be reported (0,7, 20,21 and 22) are removed.                                                                                                      |
+| Date       | What changed?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2021.06.21 | Updated code list [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml), correcting "tap på krav" to "tapPåKrav"                                                                                                                                                                                                                                                                                                                                              |
+| 2021.08.31 | Updated with description of the fields in the VAT return submission                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 2021.09.13 | New table describing the usage of SAF-T codes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 2021.09.21 | Information model for VAT return updated. SAF-T codes not to be reported (0,7, 20,21 and 22) are removed.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 2021.10.12 | Updated code list [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), including removal of duplicates                                                                                                                                                                                                                                                                                                                                    |
+| 2021.10.15 | Updated code lists                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 2021.10.21 | Updated description of period and taxation period with information about SkattleggingsperiodeUke and SkattleggingsperiodeHalvmåndelig                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 2021.10.22 | Updated code lists, correcting English texts in [merknad](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknad.xml), added new element "fradrag" in [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), nynorsk translations in [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml). |
 
 ## Version 1.0 of the XSD for the VAT return
 
@@ -88,6 +92,7 @@ Purpose: To be able to pay to the bank accounts that require KID
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>skattleggingsperiode</td><td>Description: the taxation period for which the VAT return applies <br>
+  Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
 Purpose: to ensure consistency between bookkeeping and VAT return period 
 	</td>
   </tr>
@@ -200,6 +205,7 @@ Skattleggingsperiode
     <td>periode</td>
     <td>
         Description: the taxation period for which the VAT return applies <br>
+		Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
         Purpose: to ensure consistency between book keeping and VAT return period.
 	</td>
   </tr>
@@ -325,10 +331,6 @@ Vedleggsfil
 - Encoding for VAT rate: [sats](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/sats.xml)
 - Encoding for remarks: [merknader](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknad.xml)
 - Encoding for remarks and corresponding VAT code: [merknadTilsvarendeMvaKode.xml](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml)
-
-## Remarks in accordance to the VAT codes and the VAT tax return
-
-Overview over remarks in accordance to the VAT codes in the VAT tax return [remarks in accordance to the VAT codes](merknader mot poster og hele meldingen.xlsx)
 
 # XSD for uploading metadata
 

@@ -3,9 +3,31 @@ icon: "cloud"
 title: "Validation rules"
 description: "Validation rules for the VAT tax return"
 ---
+
 ### Change log
+
 <table align=center>
   <tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
+  <tr>
+      <td>2021.10.12</td>
+      <td>
+          <ul>
+            <li> The text for rule R018 was corrected. </li>
+            <li> R020 - R022 checks both merknad fields </li>
+            <li> R028 - R032 now uses the severity level "ugyldig skattemelding" </li>
+            <li> R028 - R037 corrected the check for in- and outgoing lines </li>
+            <li> R047 - R058 will not run if register data unavailable, descriptions changed </li>
+            <li> R072 and R073 added for better feedback when there is an error with a VAT registration </li>
+            <li> R059 and R060 exceptions added for VAT registered that have reported termination, bankruptcy or death </li>
+            <li> R066 description change </li>
+            <li> R067 and R068 updated to handle exception for VAT code 81 </li>
+            <li> R078 added (reversal of input VAT specification requires a remark) </li>
+            <li> R079 added (KID validation) </li>
+            <li> R080 added (account number required for repayments) </li>
+            <li> R004 - R017 fixed rules replaced with R074 - R076 which use the code list merknadTilsvarendeMvaKode </li>
+          </ul>      
+      </td>
+  </tr>
   <tr>
       <td>2021.06.07</td>
       <td>
@@ -59,8 +81,8 @@ The following validation rules are definded for the VAT return listing:
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1 or 81
 - The specified category for the VAT return does not match the details in the VAT register (general industry)
 - The specified category for the VAT return does not match the details in the VAT register (primary industry)
-- The specified tax period does not match the details in the VAT register (general industry)
-- The specified tax period does not match the details in the VAT register (primary industry)
+- The specified tax period type does not match the details in the VAT register (general industry)
+- The specified tax period type does not match the details in the VAT register (primary industry)
 - The reporting body for a joint registration must be registered for VAT
 - Total revnue in the VAT return must be under one million for yearly general industry returns
 - Specification lines must have valid VAT codes for returns relating to general industry registrations
@@ -71,22 +93,13 @@ The following validation rules are definded for the VAT return listing:
 - Deductions for input and output VAT must not be declared without a registration in the VAT register (primary industry)
 - VAT returns must not be sent in before the related tax period has ended (general industry)
 - VAT returns must not be sent in before the related tax period has ended (primary industry)
-- Revenue before registration can not be submitted as information on this VAT code
-- Refund information can not be submitted on this VAT code
-- Temporary import information can not be submitted on this VAT code
-- Re-importation information can not be submitted on this VAT code
-- Toll declaration information regarding the wrong organisation number can not be submitted on this VAT code
-- Re-exportation information can not be submitted on this VAT code.
-- Re-exportation or refund information can not be submitted on this VAT code
-- Temporary export information can not be submitted on this VAT code
-- Export of services information can not be submitted on this VAT code
-- Large procurement information can not be submitted on this VAT code
-- Information about procurements before being VAT registered can not be submitted on this VAT code
-- Insurance settlement information can not be submitted on this VAT code
-- Seasonal variation information can not be submitted on this VAT code
-- Credit not information can not be submitted on this VAT code
 - Input VAT must be declared without a VAT-basis or VAT-rate
 - Output VAT must be declared with a VAT-basis and VAT-rate
+- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 require a remark
+- Account number must be registered for VAT returns that require a repayment
+- Remarks must be valid for the given VAT code (expected VAT direction)
+- Remarks must be valid for the given VAT code (opposite VAT direction)
+- Remarks must be valid for the given VAT code (lines with a specification)
 
 ## Detailed description of the validation rules
 
@@ -123,8 +136,8 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
 ##Detailed Specification of the rules
 
 ```kotlin
-    MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
-        "Summen av merverviavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift" {
+       MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
+        "Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift" {
             valideringsregel {
                 mvaSpesifikasjonslinje.summenAv { linje ->
                     linje.merverdiavgift
@@ -154,7 +167,10 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 kodene(3, 6, 31, 32, 33, 51, 52, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92)
                     .hvor { linje -> linje.grunnlag erMindreEnn 0.0 }
-                    .skal { linje -> linje.merknad?.beskrivelse har innhold }
+                    .skal { linje ->
+                        (linje.merknad?.beskrivelse har innhold) eller
+                            (linje.merknad?.utvalgtMerknad har innhold)
+                    }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
@@ -169,7 +185,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
                 kodene(1, 11, 12, 13, 14, 15, 81, 83, 86, 88, 91)
                     .hvor { linje -> linje.grunnlag er tomt og (linje.merverdiavgift erStørreEnn 0.0) }
                     .skal { linje ->
-                        linje.merknad?.beskrivelse har innhold medmindre (
+                        ((linje.merknad?.beskrivelse har innhold) eller (linje.merknad?.utvalgtMerknad har innhold)) medmindre (
                             linje.mvaKode er "1" og (
                                 linje.spesifikasjon væreMedI spesifikasjonene(
                                     JUSTERING.spesifikasjon,
@@ -199,7 +215,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
                     .hvor { linje ->
                         linje.grunnlag er tomt og (linje.merverdiavgift erMindreEnn 0.0) og (linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode)
                     }
-                    .skal { linje -> linje.merknad?.beskrivelse har innhold }
+                    .skal { linje -> ((linje.merknad?.beskrivelse har innhold) eller (linje.merknad?.utvalgtMerknad har innhold)) }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
@@ -291,11 +307,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett"
         {
             valideringsregel {
-                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R028 }
         }
@@ -305,11 +321,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av varer fra utlandet med fradragsrett"
         {
             valideringsregel {
-                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R029 }
         }
@@ -319,11 +335,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett"
         {
             valideringsregel {
-                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R030 }
         }
@@ -333,11 +349,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder tjenester kjøpt fra utlandet med fradragsrett"
         {
             valideringsregel {
-                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R031 }
         }
@@ -347,11 +363,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Utgående avgift skal være beregnet dersom det er ført fradrag for inngående avgift som gjelder kjøp av klimakvoter og gull med fradragsrett"
         {
             valideringsregel {
-                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 91 og (linje.merverdiavgift erMindreEnn 0.0) } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 91 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
+                mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 91 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 91 og (linje.merverdiavgift erStørreEnn 0.0 og (linje.grunnlag har innhold)) }
                 }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R032 }
         }
@@ -362,9 +378,9 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 mvaSpesifikasjonslinje.finnes { linje ->
-                    linje.mvaKode er 81 og (linje.merverdiavgift erStørreEnn 0.0)
-                } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 81 og (linje.merverdiavgift erMindreEnn 0.0) }
+                    linje.mvaKode er 81 og (linje.grunnlag har innhold) og (linje.spesifikasjon er tomt)
+                }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 81 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }
                 }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
@@ -378,9 +394,9 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 mvaSpesifikasjonslinje.finnes { linje ->
-                    linje.mvaKode er 83 og (linje.merverdiavgift erStørreEnn 0.0)
-                } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 83 og (linje.merverdiavgift erMindreEnn 0.0) }
+                    linje.mvaKode er 83 og (linje.grunnlag har innhold) og (linje.spesifikasjon er tomt)
+                }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 83 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }
                 }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
@@ -394,9 +410,9 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 mvaSpesifikasjonslinje.finnes { linje ->
-                    linje.mvaKode er 86 og (linje.merverdiavgift erStørreEnn 0.0)
-                } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 86 og (linje.merverdiavgift erMindreEnn 0.0) }
+                    linje.mvaKode er 86 og (linje.grunnlag har innhold) og (linje.spesifikasjon er tomt)
+                }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 86 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }
                 }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
@@ -410,9 +426,9 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 mvaSpesifikasjonslinje.finnes { linje ->
-                    linje.mvaKode er 88 og (linje.merverdiavgift erStørreEnn 0.0)
-                } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 88 og (linje.merverdiavgift erMindreEnn 0.0) }
+                    linje.mvaKode er 88 og (linje.grunnlag har innhold) og (linje.spesifikasjon er tomt)
+                }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 88 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }
                 }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
@@ -426,9 +442,9 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 mvaSpesifikasjonslinje.finnes { linje ->
-                    linje.mvaKode er 91 og (linje.merverdiavgift erStørreEnn 0.0)
-                } såSkal {
-                    mvaSpesifikasjonslinje.finnes { linje -> linje.mvaKode er 91 og (linje.merverdiavgift erMindreEnn 0.0) }
+                    linje.mvaKode er 91 og (linje.grunnlag har innhold) og (linje.spesifikasjon er tomt)
+                }.såSkal {
+                    mvaSpesifikasjonslinje.inneholder { linje -> linje.mvaKode er 91 og (linje.grunnlag er tomt) og (linje.spesifikasjon er tomt) }
                 }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
@@ -494,10 +510,10 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     ),
 
     MVA_PLIKT_OPPGITT_MELDINGSKATEGORI_ALMINNELIG_NÆRING_FINNES_IKKE(
-        "Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret"
+        "Det finnes ingen plikt i mva-registeret med oppgitt meldingskategori for denne parten."
         {
             valideringsregel {
-                meldingskategori er alminnelig og (registrertMeldingskategori har innhold) såSkal {
+                registerDataHentetOk er OK og (meldingskategori er alminnelig) såSkal {
                     meldingskategori være registrertMeldingskategori
                 }
             }
@@ -508,10 +524,10 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     ),
 
     MVA_PLIKT_OPPGITT_MELDINGSKATEGORI_PRIMÆRNÆRING_FINNES_IKKE(
-        "Oppgitt meldingskategori stemmer ikke med opplysningene  i mva-registeret"
+        "Det finnes ingen plikt i mva-registeret med oppgitt meldingskategori for denne parten."
         {
             valideringsregel {
-                meldingskategori er primærnæring og (registrertMeldingskategori har innhold) såSkal {
+                registerDataHentetOk er OK og (meldingskategori er primærnæring) såSkal {
                     meldingskategori være registrertMeldingskategori
                 }
             }
@@ -525,9 +541,10 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Oppgitt skattleggingsperiode stemmer ikke med opplysningene for denne meldingskategorien i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er alminnelig og (registrertSkattleggingsperiode har innhold) såSkal {
-                    skattleggingsperiode være registrertSkattleggingsperiode
-                }
+                registerDataHentetOk er OK og
+                    (meldingskategori er alminnelig og (registrertSkattleggingsperiodetype har innhold)).såSkal {
+                        skattleggingsperiodetype være registrertSkattleggingsperiodetype
+                    }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
@@ -536,11 +553,12 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     ),
 
     MVA_PLIKT_OPPGITT_SKATTLEGGINGSPERIODE_FOR__MELDINGSKATEGORI__PRIMÆRNÆRING_FINNES_IKKE(
-        "Oppgitt skattleggingsperiode stemmer ikke med opplysningene for denne meldingskategorien i mva-registeret"
+        "Oppgitt skattleggingsperiodetype stemmer ikke med opplysningene for denne meldingskategorien i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er primærnæring og (registrertSkattleggingsperiode har innhold) såSkal {
-                    skattleggingsperiode være registrertSkattleggingsperiode
+                registerDataHentetOk er OK og
+                    (meldingskategori er primærnæring og (registrertSkattleggingsperiodetype har innhold)) såSkal {
+                    skattleggingsperiodetype være registrertSkattleggingsperiodetype
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -549,11 +567,41 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         }
     ),
 
+    MVA_PLIKT_FOR__MELDINGSKATEGORI_DEKKER_IKKE_SKATTELEGGINGSPERIODE_ALMINNELIG(
+        "Det finnes ingen plikt med oppgitt meldingskategori som innkluderer start datoen av oppgitt skattleggingsperiode"
+        {
+            valideringsregel {
+                registerDataHentetOk er OK og
+                    (meldingskategori er alminnelig og (registrertMeldingskategori er alminnelig)) såSkal {
+                    startDatoForPeriodeVæreInnenforGyldigFraOgTilDatoer
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R072 }
+        }
+    ),
+
+    MVA_PLIKT_FOR__MELDINGSKATEGORI_DEKKER_IKKE_SKATTELEGGINGSPERIODE_PRIMAERNAERING(
+        "Det finnes ingen plikt med oppgitt meldingskategori som innkluderer start datoen av oppgitt skattleggingsperiode"
+        {
+            valideringsregel {
+                registerDataHentetOk er OK og
+                    (meldingskategori er primærnæring og (registrertMeldingskategori er primærnæring)) såSkal {
+                    startDatoForPeriodeVæreInnenforGyldigFraOgTilDatoer
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R073 }
+        }
+    ),
+
     MVA_PLIKT_DELTAKERE_I_FELLESREGISTRERING_HAR_IKKE_MVA_PLIKT(
         "Det er rapporterende enhet i en fellesregistrering som har mva-plikt og skal sende inn mva-melding for fellesregistreringen"
         {
             valideringsregel {
-                registrertRapporterendeEnhet har innhold såSkal {
+                registerDataHentetOk er OK og (registrertRapporterendeEnhet har innhold) såSkal {
                     skattepliktig være registrertRapporterendeEnhet
                 }
             }
@@ -567,7 +615,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "For å kunne levere mva-melding som alminnelig næring med års termin så skal avgiftspliktig omsetningen være under en million i året"
         {
             valideringsregel {
-                meldingskategori er alminnelig og (skattleggingsperiode er årlig) såSkal {
+                meldingskategori er alminnelig og (skattleggingsperiodetype er årlig) såSkal {
                     omsetning væreMindreEnn 1100000.0
                 }
             }
@@ -581,7 +629,8 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Kun gyldige mva-koder til meldingskategori 'Alminnelig næring' hvor det finnes plikt i mva-registere kan sendes inn"
         {
             valideringsregel {
-                meldingskategori er alminnelig og (registrertMeldingskategori har innhold) såSkal {
+                registerDataHentetOk er OK og
+                    (meldingskategori er alminnelig og (registrertMeldingskategori har innhold)) såSkal {
                     mvaSpesifikasjonslinje.skal { linje ->
                         linje.mvaKode væreMedI mvaKodene(
                             1,
@@ -623,7 +672,8 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Kun gyldige mva-koder til meldingskategori 'Primærnæring' hvor det finnes plikt i mva-registeret kan sendes inn"
         {
             valideringsregel {
-                meldingskategori er primærnæring og (registrertMeldingskategori har innhold) såSkal {
+                registerDataHentetOk er OK og
+                    (meldingskategori er primærnæring og (registrertMeldingskategori har innhold)) såSkal {
                     mvaSpesifikasjonslinje.skal { linje ->
                         linje.mvaKode væreMedI mvaKodene(
                             1,
@@ -665,12 +715,13 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er alminnelig og (registrertMeldingskategori er tomt) såSkal {
+                registerDataHentetOk er OK og
+                    (meldingskategori er alminnelig og (registrertMeldingskategori er tomt)) såSkal {
                     mvaSpesifikasjonslinje.skal { linje ->
                         linje.mvaKode væreMedI mvaKodene(3, 31, 32, 33, 87, 89, 92)
                     }
                 } medmindre (
-                    mvaSpesifikasjonslinje.finnes { linje ->
+                    mvaSpesifikasjonslinje.inneholder { linje ->
                         linje.mvaKode væreMedI mvaKodene(
                             3,
                             31,
@@ -681,7 +732,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
                             92
                         )
                     } og (
-                        mvaSpesifikasjonslinje.finnes { linje ->
+                        mvaSpesifikasjonslinje.inneholder { linje ->
                             linje.mvaKode væreMedI mvaKodene(
                                 1,
                                 11,
@@ -704,12 +755,13 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er primærnæring og (registrertMeldingskategori er tomt) såSkal {
+                registerDataHentetOk er OK og
+                    (meldingskategori er primærnæring og (registrertMeldingskategori er tomt)) såSkal {
                     mvaSpesifikasjonslinje.skal { linje ->
                         linje.mvaKode væreMedI mvaKodene(3, 31, 32, 33, 87, 89, 92)
                     }
                 } medmindre (
-                    mvaSpesifikasjonslinje.finnes { linje ->
+                    mvaSpesifikasjonslinje.inneholder { linje ->
                         linje.mvaKode væreMedI mvaKodene(
                             3,
                             31,
@@ -720,7 +772,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
                             92
                         )
                     } og (
-                        mvaSpesifikasjonslinje.finnes { linje ->
+                        mvaSpesifikasjonslinje.inneholder { linje ->
                             linje.mvaKode væreMedI mvaKodene(
                                 1,
                                 11,
@@ -743,17 +795,19 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er alminnelig og (registrertMeldingskategori er tomt) og (
-                    mvaSpesifikasjonslinje.finnes { linje ->
-                        linje.mvaKode væreMedI mvaKodene(
-                            3,
-                            31,
-                            32,
-                            33
+                registerDataHentetOk er OK og (
+                    meldingskategori er alminnelig og (registrertMeldingskategori er tomt) og (
+                        mvaSpesifikasjonslinje.inneholder { linje ->
+                            linje.mvaKode væreMedI mvaKodene(
+                                3,
+                                31,
+                                32,
+                                33
+                            )
+                        }
                         )
-                    }
-                    ) såSkal {
-                    mvaSpesifikasjonslinje.ikkeFinnes { linje ->
+                    ).såSkal {
+                    mvaSpesifikasjonslinje.detIkkeFinner { linje ->
                         linje.mvaKode væreMedI mvaKodene(
                             1,
                             11,
@@ -775,17 +829,19 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Det kan ikke føres fradrag for inngående avgift på en termin hvor det ikke finnes plikt i mva-registeret"
         {
             valideringsregel {
-                meldingskategori er primærnæring og (registrertMeldingskategori er tomt) og (
-                    mvaSpesifikasjonslinje.finnes { linje ->
-                        linje.mvaKode væreMedI mvaKodene(
-                            3,
-                            31,
-                            32,
-                            33
+                registerDataHentetOk er OK og (
+                    meldingskategori er primærnæring og (registrertMeldingskategori er tomt) og (
+                        mvaSpesifikasjonslinje.inneholder { linje ->
+                            linje.mvaKode væreMedI mvaKodene(
+                                3,
+                                31,
+                                32,
+                                33
+                            )
+                        }
                         )
-                    }
-                    ) såSkal {
-                    mvaSpesifikasjonslinje.ikkeFinnes { linje ->
+                    ).såSkal {
+                    mvaSpesifikasjonslinje.detIkkeFinner { linje ->
                         linje.mvaKode væreMedI mvaKodene(
                             1,
                             11,
@@ -808,7 +864,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                    nå måVæreEfter slutTerminsdato
+                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -822,7 +878,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                    nå måVæreEfter slutTerminsdato
+                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigErRegistrertSomKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -830,7 +886,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R060 }
         }
     ),
-    
+
     MVA_KODE_FOR_INNGÅENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS(
         "Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats"
         {
@@ -858,7 +914,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 mvaSpesifikasjonslinje.hvor { linje ->
                     linje.mvaKode væreMedI mvaKodene(3, 5, 6, 31, 32, 33, 51, 52) eller (
-                        linje.spesifikasjon er UTTAK.spesifikasjon og (
+                        linje.spesifikasjon er UTTAK.spesifikasjon.kode og (
                             linje.mvaKode væreMedI mvaKodene(
                                 3,
                                 5,
@@ -883,7 +939,10 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 kodene(81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92)
                     .hvor { linje -> linje.merverdiavgift erStørreEnn 0.0 }
-                    .skal { linje -> linje.sats ha innhold og (linje.grunnlag ha innhold) }
+                    .skal { linje ->
+                        (linje.sats ha innhold og (linje.grunnlag ha innhold)) eller
+                            (linje.mvaKode være 81 og (linje.spesifikasjon være TILBAKEFØRING.spesifikasjon.kode))
+                    }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
@@ -897,7 +956,10 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 kodene(81, 83, 86, 88, 91)
                     .hvor { linje -> linje.merverdiavgift erMindreEnn 0.0 }
-                    .skal { linje -> linje.sats være tomt og (linje.grunnlag være tomt) }
+                    .skal { linje ->
+                        (linje.sats være tomt og (linje.grunnlag være tomt)) eller
+                            (linje.mvaKode være 81 og (linje.spesifikasjon være TILBAKEFØRING.spesifikasjon.kode))
+                    }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
@@ -905,249 +967,104 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         }
     ),
 
-    MVA_KODE_MERKNAD_OMSETNING_FØR_REGISTRERING(
-        "Omsetning før registrering kan ikke settes som merknad på denne mva-koden" {
+    MVA_MELDINGSINNHOLD_MERKNAD_MANGLER(
+        "For denne spesifikasjonslinjen kreves det en gyldig merknad"
+        {
             valideringsregel {
+
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Omsetning før registrering" }
+                    .hvor { linje ->
+                        linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode
+                    }
                     .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(
-                            3, 31, 32, 33, 52, 6, 86, 87, 88, 89, 90, 91, 92
-                        )
+                        (linje.merknad?.beskrivelse ha innhold) eller (linje.merknad?.utvalgtMerknad ha innhold)
                     }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R004 }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R078 }
         }
     ),
 
-    MVA_KODE_MERKNAD_OMBEREGNING_RETUR(
-        "Omberegning/retur kan ikke settes som merknad på denne mva-koden" {
+    MVA_MELDINGSINNHOLD_KID_NUMMER_GYLDIG(
+        "KID nummer må være gyldig hvis oppgitt"
+        {
             valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Omberegning/retur" }
-                    .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(
-                            81, 82, 83, 84, 85, 86, 87, 88, 89
-                        )
-                    }
+                (kidNummer har innhold) såSkal {
+                    (kidNummer inneholde kunTallEllerKunTallMedBindestrekEtterSisteSiffer) og
+                        (kidNummer haLengdeStørreEnn 1) og (kidNummer haLengdeMindreEnn 26)
+                }
             }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R005 }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R079 }
         }
     ),
 
-    MVA_KODE_MERKNAD_MIDLERTIDIG_INNFØRSEL(
-        "Midlertidig innførsel kan ikke settes som merknad på denne mva-koden" {
+    MVA_MELDINGSINNHOLD_KONTONUMMER_FINNES_IKKE(
+        "Kontonummer mangler ved utbetaling av merverdiavgift"
+        {
             valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Midlertidig innførsel" }
-                    .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(
-                            81,
-                            82,
-                            83,
-                            84,
-                            86,
-                            87,
-                            88,
-                            89
-                        )
-                    }
+                (skattegrunnlagOgBeregnetSkatt.fastsattMerverdiavgift kunne føreTilEnUtbetaling) såSkal {
+                    registrertKontonummer har innhold
+                }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R006 }
+            kategori { KONTONUMMER }
+            regelnummer { R080 }
         }
     ),
 
-    MVA_KODE_MERKNAD_GJENINNFØRSEL(
-        "Gjeninnførsel kan ikke settes som merknad på denne mva-koden" {
+    MVA_KODE_MERKNAD_FORTEGN_GYLDIG_VANLIG_FORTEGN(
+        "Merknaden er ikke gyldig på denne mva-koden med vanlig fortegn" {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Gjeninnførsel" }
+                    .hvor { linje ->
+                        linje.merknad?.utvalgtMerknad har innhold og linje.harVanligFortegn() og
+                            (linje.spesifikasjon er tomt)
+                    }
                     .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(81, 82, 83, 84)
+                        linje.haGyldigMerknadForOppgittMvaKodeOgBeløpOgSpesifikasjon()
                     }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
-            regelnummer { R007 }
+            regelnummer { R074 }
         }
     ),
 
-    MVA_KODE_MERKNAD_TOLLDEKLARASJON_PÅ_FEIL_ORGNR(
-        "Tolldeklarasjon på feil organisasjonsnummer kan ikke settes som merknad på denne mva-koden" {
+    MVA_KODE_MERKNAD_FORTEGN_GYLDIG_MOTSATT_FORTEGN(
+        "Merknaden er ikke gyldig på denne mva-koden med motsatt fortegn" {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Tolldeklarasjon på feil org.nr." }
+                    .hvor { linje ->
+                        linje.merknad?.utvalgtMerknad har innhold og linje.harMotsattFortegn() og
+                            (linje.spesifikasjon er tomt)
+                    }
                     .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(14, 15, 52, 81, 82, 83, 84)
+                        linje.haGyldigMerknadForOppgittMvaKodeOgBeløpOgSpesifikasjon()
                     }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
-            regelnummer { R008 }
+            regelnummer { R075 }
         }
     ),
 
-    MVA_KODE_MERKNAD_GJENUTFØRSEL(
-        "Gjenutførsel kan ikke settes som merknad på denne mva-koden" {
+    MVA_KODE_MERKNAD_FORTEGN_GYLDIG_FOR_SPESIFIKASJON(
+        "Merknaden er ikke gyldig på denne mva-koden med oppgitt spesifikasjon og fortegn" {
             valideringsregel {
                 mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Gjenutførsel" }
+                    .hvor { linje ->
+                        linje.merknad?.utvalgtMerknad har innhold og (linje.spesifikasjon har innhold)
+                    }
                     .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(52, 81, 82, 83, 84)
+                        linje.haGyldigMerknadForOppgittMvaKodeOgBeløpOgSpesifikasjon()
                     }
             }
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MERKNAD }
-            regelnummer { R009 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_GJENUTFØRSEL_ELLER_RETUR(
-        "Gjenutførsel eller retur kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Gjenutførsel eller retur" }
-                    .skal { linje ->
-                        linje.mvaKode være 52
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R010 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_MIDLERTID_UTFØRSEL(
-        "Midlertid utførsel kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Midlertid utførsel" }
-                    .skal { linje ->
-                        linje.mvaKode være 52
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R011 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_TJENESTEEKSPORT(
-        "Tjenesteeksport kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Tjenesteeksport" }
-                    .skal { linje ->
-                        linje.mvaKode være 52
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R012 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_STORE_ANSKAFFELSER(
-        "Store anskaffelser kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Store anskaffelser" }
-                    .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R013 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_ANSKAFFELSER_FØR_MVA_PLIKT(
-        "Anskaffelser før mva-plikt kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Anskaffelser før mva-plikt" }
-                    .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 14, 15, 81, 82, 83, 84, 85, 86, 87, 88, 89)
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R014 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_FORSIKRINGSOPPGJØR(
-        "Forsikringsoppgjør kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Forsikringsoppgjør" }
-                    .skal { linje ->
-                        linje.mvaKode være 1
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R015 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_SESONGVARIASJON(
-        "Sesongvariasjon kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Sesongvariasjon" }
-                    .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(
-                            1,
-                            11,
-                            12,
-                            13,
-                            14,
-                            15,
-                            3,
-                            31,
-                            32,
-                            33,
-                            5,
-                            52,
-                            6,
-                            81,
-                            82,
-                            83,
-                            84,
-                            85,
-                            86,
-                            87,
-                            88,
-                            89
-                        )
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R016 }
-        }
-    ),
-
-    MVA_KODE_MERKNAD_KREDITNOTA(
-        "Kreditnota kan ikke settes som merknad på denne mva-koden" {
-            valideringsregel {
-                mvaSpesifikasjonslinje
-                    .hvor { linje -> linje.merknad?.beskrivelse er "Kreditnota" }
-                    .skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(1, 11, 12, 13, 3, 31, 32, 33, 5, 52, 6, 86, 87, 88, 89)
-                    }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MERKNAD }
-            regelnummer { R017 }
+            regelnummer { R076 }
         }
     )
 
