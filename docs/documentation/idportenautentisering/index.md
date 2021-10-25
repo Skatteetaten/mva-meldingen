@@ -158,6 +158,16 @@ Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen
 
 Dersom sluttbrukersystemet sin portefølje har veldig mange installasjoner som ikke deler domene kan de heller ikke dele `redirect_uri`. Installasjonene kan være både on-premise eller i skyen. Siden det er et krav at hvert domene må ha sin egen `redirect_uri` kan det bli utfordrende å administrere disse i selvbetjeningsportalen.
 
+Digitaliseringsetaten har nylig publisert informasjon som kan være nyttig i dette tilfellet:
+<a href="https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky" target="_blank"> https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky</a>
+Systemleverandøren vil være eieren av integrasjonen(e) knyttet til automatiske dynamiske løsninger.
+
+#### Alternativ løsning
+
+Dersom løsningen ovenfor ikke kan brukes i systemporteføljen til systemleverandøren, er det også mulig å la sluttbrukersystemets kunder eie og administrere ID-porten integrasjonene.
+Hvis du velger en løsning der hver enkelt kunde administrerer og eier ID-porten-integrasjon, må systemleverandørene supportere kundenes integrasjoner. Skatteetaten supporterer bare henvendelser fra systemleverandører for deres integrasjoner, ikke henvendelser fra systemleverandørers kunder. Skatteetaten vil gi tilgang til de nødvendige scopene for de aktuelle organisasjonsnummerene i tilfeller der denne løsningen velges.
+Systemleverandører som ønsker å benytte denne alternative løsningen bør kontakte Skatteetaten med informasjon om hvor mange kunder som er involvert, før de starter med utviklingen av denne løsningen.
+
 ### Gyldig(e) post logout redirect uri-er
 
 Liksom Gyldig(e) redirect uri-er, bortsett fra at denne redirigeringen vil intreffe dersom applikasjonen har bedt ID-porten å logge ut brukeren på samme måte som ved innlogging.
