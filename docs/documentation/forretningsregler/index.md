@@ -103,8 +103,8 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 - Fradrag for inngående og utgående avgift skal ikke føres hvor det ikke finnes en plikt i mva-registeret (primær)
 - Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (alminnelig)
 - Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (primær)
-- Mva-meldinger for tidligere terminer skulle være levert
-- Mva-meldinger for tidligere terminer skulle være levert og derfor vil avgift til gode for denne terminen ikke bli utbetalt
+- Mva-meldinger for tidligere terminer skulle vært levert
+- Mva-meldinger for tidligere terminer skulle vært levert og derfor vil avgift til gode for denne terminen ikke bli utbetalt
 - Inngående mva. skal føres uten grunnlag og sats
 - Utgående mva. skal føres med grunnlag og sats
 - Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 må sendes med en merknad
@@ -121,7 +121,7 @@ Følgende tekniske regler er også spesifisert som validerer xsd format og kodel
 - Spesifikasjonslinjer skal bare bruke kjente merknader på utvalgt merknad felt
 - Mva-meldingen skal bare bruke en kjent merknad på utvalgt merknad felt
 
-To praktiske regler er også definert for å hindre innsending til nye systemet for tidlig eller for gammelt meldinger:
+To praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:
 - Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2022
 - Innsending og validering av mva-meldinger fra før 2022 er ikke tilgjengelig
 
