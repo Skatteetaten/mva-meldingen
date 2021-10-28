@@ -109,7 +109,7 @@ covers the needed sequence for submitting VAT returns.</p>
 <li>Retrieve feedback towards Altinn3-App</li>
 </ol>
 <p>The Instance VAT Filing API is available at this URL:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">instanceApiUrl = &quot;https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances&quot;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">instanceApiUrl = &quot;https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances&quot;</code></pre></div>
 <p>In the following sequence diagram, the application URL will be hidden, so if <code class="language-text">POST: /intances/</code> is written it is
 implicitly <code class="language-text">POST: instanceApiUrl</code></p>
 <p><img src="/mva-meldingen/daf279f4e97594c00db6f8c6dd0b842f/Vat-Return-Submission-Sequence-Diagram.png"/></p>
@@ -156,13 +156,13 @@ Content (body)</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span><span class="token punctuation">&gt;</span></span>UGYLDIG_SKATTEMELDING<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>//innfiling<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>//innsending<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stiTilFeil</span><span class="token punctuation">&gt;</span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>valideringsDetaljer</span><span class="token punctuation">&gt;</span></span>
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>feilmelding</span><span class="token punctuation">&gt;</span></span>Mva meldingen må være på gyldig format og passere XML skjema valideringen<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>feilmelding</span><span class="token punctuation">&gt;</span></span>
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>alvorlighetsgrad</span><span class="token punctuation">&gt;</span></span>UGYLDIG_SKATTEMELDING<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>alvorlighetsgrad</span><span class="token punctuation">&gt;</span></span>
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>avvikKode</span><span class="token punctuation">&gt;</span></span>MvaMeldingsinnhold_Xml_SkjemaValideringsfeil<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>avvikKode</span><span class="token punctuation">&gt;</span></span>
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>informasjon</span><span class="token punctuation">&gt;</span></span>cvc-complex-type.2.4.b: The content of element &#x27;mvaMeldingDto&#x27; is not complete. One of
-                    &#x27;{&quot;no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0&quot;:innfiling}&#x27; is expected.
+                    &#x27;{&quot;no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0&quot;:innsending}&#x27; is expected.
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>informasjon</span><span class="token punctuation">&gt;</span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsDetaljer</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
@@ -235,7 +235,7 @@ creation of the instance. See the example of the response above.</p>
 <code class="language-text">{partyId}</code> and <code class="language-text">{instanceGuid}</code> can be
 found in the <code class="language-text">id</code> field in the returned instance.</p>
 <p>Example instanceUrl:
-<code class="language-text">https://skd.apps.tt02.altinn.no/skd/mva-melding-innfiling-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df</code></p>
+<code class="language-text">https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df</code></p>
 <h3 id="error-messages" style="position:relative"><a href="#error-messages" aria-label="error messages permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error messages</h3>
 <p><em>Response 400 - Bad Request:</em> <br/>
 Example Value</p>
@@ -294,7 +294,7 @@ response in the previous step.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">PUT {vatReturnSubmissionUrl}
     HEADERS:
         &quot;Authorization&quot;: &quot;Bearer &quot; + &quot;{altinnToken}&quot;
-        &quot;content-type&quot;: &quot;text/xml&quot;</code></pre></div>
+        &quot;content-type&quot;: &quot;application/xml&quot;</code></pre></div>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml">Content:
     <span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvameldinginnsending</span><span class="token punctuation">&gt;</span></span>
