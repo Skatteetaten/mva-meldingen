@@ -112,6 +112,14 @@ We want to offer Maskinporten support for system-to-system VAT-returns and we ar
 
 Supplementary returns will no longer be in use. If there are changes in the ERP that makes it necessary to correct a VAT-return, this can be done by submitting a replacement VAT-return, after correcting the accounts in the ERP. The last VAT-return for a term will be valid.
 
+### How can we report VAT from a closed accounting period when we cannot use a supplementary return?
+
+There are two alternatives:
+
+1. Reopen the period (eg 1st term) and post the new information in this period, before the period closes again. This means that the SAF-T file that supports the last VAT-return can be taken from this accounting period. The tax authorities recommend reporting in this manner if possible.
+
+2. Register the transaction in a new period, but override the date so that it is posted with the date for the period the transaction belongs in. The SAF-T file that supports the last submitted VAT return (in case of audit) must then also contain the later period in which the new transactions / dispositions are posted.
+
 ### How should jointly registered companies report the VAT return?
 
 The reporting entity must deliver the VAT-report from the accounting system or in the portal, on behalf of all the jointly registered entities.
