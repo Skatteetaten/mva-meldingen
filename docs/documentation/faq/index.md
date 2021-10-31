@@ -121,6 +121,14 @@ Vi ønsker å kunne tilby støtte for maskinporten, og ser på de juridiske og p
 
 Tilleggsmelding vil ikke lenger være aktuelt. Hvis man gjør endringer i regnskapssystemet som fører til at man vil korrigere mva-meldingen sender man inn en ny komplett melding. Siste melding vil alltid være gjeldende.
 
+### Hvordan rapportere fra lukket regnskapsperiode når man ikke kan bruke tilleggsmelding?
+
+Det er  er to alternative måter å løse dette på:
+
+1. Gjenåpne perioden (f.eks. 1. termin) og bokføre de nye opplysninger i denne perioden, før perioden lukkes på nytt. Det vil si at SAF-T filen som underbygger siste merverdiavgiftsoppgave kan tas fra denne regnskapsperioden. Skatteetaten anbefaler at det gjøres på denne måten dersom dette er mulig.
+
+2. Registrere transaksjonen i ny periode, men overstyre datoen slik at den bokføres med dato tilhørende den perioden den hører hjemme i. SAF-T filen som underbygger sist innsendte mva-melding (gitt kontroll) må da også inneholde den senere perioden der de nye transaksjonene/disposisjonene er bokført.
+
 ### Hvordan skal fellesregistrerte selskaper rapportere mva-meldingen?
 
 Det er enheten som står oppført som rapporterende enhet som må levere mva-meldingen for hele fellesregistreringen fra regnskapssystemet eller i portalen.
