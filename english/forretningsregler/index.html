@@ -52,6 +52,16 @@
 <table align="center">
   <tbody><tr><th style="width:25%;text-align:left">Date</th><th style="text-align:left"> What was changed? </th></tr>
   <tr>
+      <td>2021.10.29</td>
+      <td>
+          <ul>
+            <li> R001 - R003 og R069 - R071 technical rules added </li>
+            <li> R000 og R077 logistical rules added </li>
+            <li> R060 og R061 VAT returns for earlier tax periods rules added </li>
+          </ul>      
+      </td>
+  </tr>
+  <tr>
       <td>2021.10.12</td>
       <td>
           <ul>
@@ -134,6 +144,8 @@ The following validation rules are definded for the VAT return listing:</p>
 <li>Deductions for input and output VAT must not be declared without a registration in the VAT register (primary industry)</li>
 <li>VAT returns must not be sent in before the related tax period has ended (general industry)</li>
 <li>VAT returns must not be sent in before the related tax period has ended (primary industry)</li>
+<li>VAT returns for earlier tax periods should have been submitted</li>
+<li>VAT returns for earlier tax periods should have been submitted and therefore repayments for this tax period will not be paid</li>
 <li>Input VAT must be declared without a VAT-basis or VAT-rate</li>
 <li>Output VAT must be declared with a VAT-basis and VAT-rate</li>
 <li>Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 require a remark</li>
@@ -141,6 +153,20 @@ The following validation rules are definded for the VAT return listing:</p>
 <li>Remarks must be valid for the given VAT code (expected VAT direction)</li>
 <li>Remarks must be valid for the given VAT code (opposite VAT direction)</li>
 <li>Remarks must be valid for the given VAT code (lines with a specification)</li>
+</ul>
+<p>The following technical rules are defined for the purpose of validating the format and code lists in the tax return:</p>
+<ul>
+<li>The VAT return should be in a valid format</li>
+<li>The specification lines should only use valid VAT codes</li>
+<li>The specification lines should only use valid VAT-rates</li>
+<li>The specification lines should only use valid specifications</li>
+<li>The specification lines should only use valid remarks in the &#x27;utvalgt merknad&#x27; field</li>
+<li>The VAT return should only use a valid remark in the &#x27;utvalgt merknad&#x27; field</li>
+</ul>
+<p>Two logistical rules are also defined for the purpose of preventing early submission to the new system or submission of earlier VAT returns:</p>
+<ul>
+<li>The submission and validation service is not available before 01.01.2022</li>
+<li>The submission and validation of VAT returns from before 2022 is not available</li>
 </ul>
 <h2 id="detailed-description-of-the-validation-rules" style="position:relative"><a href="#detailed-description-of-the-validation-rules" aria-label="detailed description of the validation rules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detailed description of the validation rules</h2>
 <p>Validation of the VAT return is implemented with a set of rules that are run automatically to check the validity of the message.
@@ -914,7 +940,35 @@ The following severity levels are defined : AVVIKENDE<em>SKATTEMELDING (anomalou
             regelnummer <span class="token punctuation">{</span> R060 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
+  
+    MVA_MELDINGSINNHOLD_AVGIFT_Å<span class="token function">_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Det mangler mva-melding for tidligere terminer&quot;</span>
+        <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                historiskeFastsettingDataHentetOk er OK <span class="token function">og</span> <span class="token punctuation">(</span>fastsattmerverdiavgift erStørreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    historiskeMeldinger være levert
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> TIDLIGERE_TERMINER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R061 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    <span class="token function">MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt&quot;</span>
+        <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                historiskeFastsettingDataHentetOk er OK <span class="token function">og</span> <span class="token punctuation">(</span>fastsattmerverdiavgift erMindreEnn <span class="token number">0.0</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    historiskeMeldinger være levert
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> TIDLIGERE_TERMINER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R062 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
     MVA_KODE_FOR_INNGÅ<span class="token function">ENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats&quot;</span>
         <span class="token punctuation">{</span>
@@ -1094,4 +1148,99 @@ The following severity levels are defined : AVVIKENDE<em>SKATTEMELDING (anomalou
             kategori <span class="token punctuation">{</span> MERKNAD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R076 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span></code></pre></div></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div><div class="footerDecorContainer-51" role="contentinfo"><svg focusable="false" class="footer-decoration-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1440 100" version="1.1"><desc></desc><defs></defs><g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd"><g id="bakgrunn"><polygon fill="#C0797E" points="0 99.6400524 1440 99.6400524 1440 69.2255838 0 17.1793194"></polygon><path d="M1440,98 L1440,629 L0,629 L0,98 L1440,0 L1440,98 Z" fill="#6F2C3F"></path></g></g></svg></div><footer class="footerWrapper-49"><div class="footerContent-50"><div class="ske-Grid-42 "><div class="ske-Grid-row-45 "><div class="ske-Grid-col-52 "><div class="ms-Image root-54" style="height:74px"><img src="/mva-meldingen/static/ske-logo-a0e8bc5ad23f41f04a6c4e5655a5174b.svg" alt="Skatteetaten logo" class="ms-Image-image ms-Image-image--portrait is-notLoaded is-fadeIn image-55"/></div></div><div class="ske-Grid-col-56 "><div class="footer-module--footer-links--1p2zW"><div><a href="https://www.skatteetaten.no" target="blank" class="footer-module--footer-link--3N1pB" style="margin:10px 0">skatteetaten.no</a></div></div></div></div></div></div></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/english/forretningsregler/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3370241ddb89d1467de6.js"],"app":["/app-2b14fe4a334a974441cb.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a7c0e2c227b82808bcb0.js"],"component---src-pages-documentation-js":["/component---src-pages-documentation-js-5de4a3bc96a208f73256.js"],"component---src-pages-english-js":["/component---src-pages-english-js-5efc5115f0dbc3c695cc.js"],"component---src-pages-index-js":["/component---src-pages-index-js-05223ca033758f7629ff.js"],"component---src-templates-documentation-template-js":["/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js"]};/*]]>*/</script><script src="/mva-meldingen/polyfill-3370241ddb89d1467de6.js" nomodule=""></script><script src="/mva-meldingen/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js" async=""></script><script src="/mva-meldingen/b6f0a20a63d6adab58b8c9afc6a4bb63a39e32a5-81fa3ee79d448ffbb0d2.js" async=""></script><script src="/mva-meldingen/styles-c2fe8482057191dca484.js" async=""></script><script src="/mva-meldingen/app-2b14fe4a334a974441cb.js" async=""></script><script src="/mva-meldingen/framework-da8a1ea7f298509dc5ee.js" async=""></script><script src="/mva-meldingen/webpack-runtime-1defc1ca0de2e6e5668e.js" async=""></script></body></html>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    <span class="token function">MvaMeldingsinnhold_Xml_SkjemaValideringsfeil</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Mva-meldingen må være på gyldig format og passere XML skjema valideringen&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span> xmlInput skalXmlValideres OK <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R001 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    <span class="token function">MvaMeldingsinnhold_MvaKode_UkjentMvaKode</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Kodelinjene i mva-meldingen skal bare bruke kjente koder&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                mvaSpesifikasjonslinje
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode væreMedI mvaKodelisten <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R002 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    <span class="token function">MvaMeldingsinnhold_MvaSats_UkjentSats</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Satsene i mva-meldingen skal være gyldige&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                mvaSpesifikasjonslinje
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>sats har innhold <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>sats væreMedI <span class="token function">gyldigSatsForMvaKodeForPerioden</span><span class="token punctuation">(</span>linje<span class="token punctuation">.</span>mvaKode<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R003 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    <span class="token function">MvaMeldingsinnhold_MvaSpesifikasjoner_UkjentSpesifikasjon</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Spesifikasjonene i mva-meldingen skal være gyldige&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                mvaSpesifikasjonslinje
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>spesifikasjon har innhold <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>spesifikasjon væreMedI mvaSpesifikasjoner <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R069 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    <span class="token function">MvaMeldingsinnhold_SpesifikasjonslinjeMerknad_UkjentMerknad</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Utvalgt merknadene i mva spesifikasjonslinjer skal være gyldige&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                mvaSpesifikasjonslinje
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad væreMedI mvaMeldingMerknader <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R070 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    <span class="token function">MvaMeldingsinnhold_MvaMeldingMerknad_UkjentMerknad</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Utvalgt merknadene i mva-meldingen skal være gyldige&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                <span class="token punctuation">(</span>meldingUtvalgtMerknad har innhold<span class="token punctuation">)</span><span class="token punctuation">.</span>såSkal <span class="token punctuation">{</span>
+                    meldingUtvalgtMerknad væreMedI mvaMeldingMerknader
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R071 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    INNLEVERING_FØ<span class="token function">R_1_1_2022</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Innsending og validering av Mva-melding er ikke tilgjengelig enda&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                nå måVæreEtterEllerLik førsteJan2022
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> PLIKT <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R000 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    INNLEVERING_MELDING_FRA_FØ<span class="token function">R_2022</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Innsending og validering av Mva-melding fra før 2022 er ikke tilgjengelig&quot;</span> <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                skattleggingsperiodeår måVæreEtterEllerLik år2022
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> PLIKT <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R077 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre></div></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div><div class="footerDecorContainer-51" role="contentinfo"><svg focusable="false" class="footer-decoration-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1440 100" version="1.1"><desc></desc><defs></defs><g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd"><g id="bakgrunn"><polygon fill="#C0797E" points="0 99.6400524 1440 99.6400524 1440 69.2255838 0 17.1793194"></polygon><path d="M1440,98 L1440,629 L0,629 L0,98 L1440,0 L1440,98 Z" fill="#6F2C3F"></path></g></g></svg></div><footer class="footerWrapper-49"><div class="footerContent-50"><div class="ske-Grid-42 "><div class="ske-Grid-row-45 "><div class="ske-Grid-col-52 "><div class="ms-Image root-54" style="height:74px"><img src="/mva-meldingen/static/ske-logo-a0e8bc5ad23f41f04a6c4e5655a5174b.svg" alt="Skatteetaten logo" class="ms-Image-image ms-Image-image--portrait is-notLoaded is-fadeIn image-55"/></div></div><div class="ske-Grid-col-56 "><div class="footer-module--footer-links--1p2zW"><div><a href="https://www.skatteetaten.no" target="blank" class="footer-module--footer-link--3N1pB" style="margin:10px 0">skatteetaten.no</a></div></div></div></div></div></div></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/english/forretningsregler/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3370241ddb89d1467de6.js"],"app":["/app-2b14fe4a334a974441cb.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a7c0e2c227b82808bcb0.js"],"component---src-pages-documentation-js":["/component---src-pages-documentation-js-5de4a3bc96a208f73256.js"],"component---src-pages-english-js":["/component---src-pages-english-js-5efc5115f0dbc3c695cc.js"],"component---src-pages-index-js":["/component---src-pages-index-js-05223ca033758f7629ff.js"],"component---src-templates-documentation-template-js":["/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js"]};/*]]>*/</script><script src="/mva-meldingen/polyfill-3370241ddb89d1467de6.js" nomodule=""></script><script src="/mva-meldingen/component---src-templates-documentation-template-js-aedfd7eca05df1ef6837.js" async=""></script><script src="/mva-meldingen/b6f0a20a63d6adab58b8c9afc6a4bb63a39e32a5-81fa3ee79d448ffbb0d2.js" async=""></script><script src="/mva-meldingen/styles-c2fe8482057191dca484.js" async=""></script><script src="/mva-meldingen/app-2b14fe4a334a974441cb.js" async=""></script><script src="/mva-meldingen/framework-da8a1ea7f298509dc5ee.js" async=""></script><script src="/mva-meldingen/webpack-runtime-1defc1ca0de2e6e5668e.js" async=""></script></body></html>
