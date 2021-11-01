@@ -9,6 +9,16 @@ description: "Validation rules for the VAT tax return"
 <table align=center>
   <tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
   <tr>
+      <td>2021.10.29</td>
+      <td>
+          <ul>
+            <li> R001 - R003 og R069 - R071 technical rules added </li>
+            <li> R000 og R077 logistical rules added </li>
+            <li> R060 og R061 VAT returns for earlier tax periods rules added </li>
+          </ul>      
+      </td>
+  </tr>
+  <tr>
       <td>2021.10.12</td>
       <td>
           <ul>
@@ -93,6 +103,8 @@ The following validation rules are definded for the VAT return listing:
 - Deductions for input and output VAT must not be declared without a registration in the VAT register (primary industry)
 - VAT returns must not be sent in before the related tax period has ended (general industry)
 - VAT returns must not be sent in before the related tax period has ended (primary industry)
+- VAT returns for earlier tax periods should have been submitted
+- VAT returns for earlier tax periods should have been submitted and therefore repayments for this tax period will not be paid
 - Input VAT must be declared without a VAT-basis or VAT-rate
 - Output VAT must be declared with a VAT-basis and VAT-rate
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 require a remark
@@ -100,6 +112,18 @@ The following validation rules are definded for the VAT return listing:
 - Remarks must be valid for the given VAT code (expected VAT direction)
 - Remarks must be valid for the given VAT code (opposite VAT direction)
 - Remarks must be valid for the given VAT code (lines with a specification)
+
+The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
+- The VAT return should be in a valid format
+- The specification lines should only use valid VAT codes
+- The specification lines should only use valid VAT-rates
+- The specification lines should only use valid specifications
+- The specification lines should only use valid remarks in the 'utvalgt merknad' field
+- The VAT return should only use a valid remark in the 'utvalgt merknad' field
+
+Two logistical rules are also defined for the purpose of preventing early submission to the new system or submission of earlier VAT returns:
+- The submission and validation service is not available before 01.01.2022
+- The submission and validation of VAT returns from before 2022 is not available
 
 ## Detailed description of the validation rules
 
@@ -886,7 +910,35 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R060 }
         }
     ),
-
+  
+    MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer"
+        {
+            valideringsregel {
+                historiskeFastsettingDataHentetOk er OK og (fastsattmerverdiavgift erStørreEnn 0.0) såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R061 }
+        }
+    ),
+    
+    MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
+        "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
+        {
+            valideringsregel {
+                historiskeFastsettingDataHentetOk er OK og (fastsattmerverdiavgift erMindreEnn 0.0) såSkal {
+                    historiskeMeldinger være levert
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { TIDLIGERE_TERMINER }
+            regelnummer { R062 }
+        }
+    ),
+    
     MVA_KODE_FOR_INNGÅENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS(
         "Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats"
         {
@@ -1066,6 +1118,101 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             kategori { MERKNAD }
             regelnummer { R076 }
         }
-    )
+    ),
+    
+    MvaMeldingsinnhold_Xml_SkjemaValideringsfeil(
+        "Mva-meldingen må være på gyldig format og passere XML skjema valideringen" {
+            valideringsregel { xmlInput skalXmlValideres OK }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R001 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaKode_UkjentMvaKode(
+        "Kodelinjene i mva-meldingen skal bare bruke kjente koder" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodelisten }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R002 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaSats_UkjentSats(
+        "Satsene i mva-meldingen skal være gyldige" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.sats har innhold }
+                    .skal { linje -> linje.sats væreMedI gyldigSatsForMvaKodeForPerioden(linje.mvaKode) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R003 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaSpesifikasjoner_UkjentSpesifikasjon(
+        "Spesifikasjonene i mva-meldingen skal være gyldige" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.spesifikasjon har innhold }
+                    .skal { linje -> linje.spesifikasjon væreMedI mvaSpesifikasjoner }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R069 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_SpesifikasjonslinjeMerknad_UkjentMerknad(
+        "Utvalgt merknadene i mva spesifikasjonslinjer skal være gyldige" {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.utvalgtMerknad har innhold }
+                    .skal { linje -> linje.merknad?.utvalgtMerknad væreMedI mvaMeldingMerknader }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R070 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaMeldingMerknad_UkjentMerknad(
+        "Utvalgt merknadene i mva-meldingen skal være gyldige" {
+            valideringsregel {
+                (meldingUtvalgtMerknad har innhold).såSkal {
+                    meldingUtvalgtMerknad væreMedI mvaMeldingMerknader
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R071 }
+        }
+    ),
+    
+    INNLEVERING_FØR_1_1_2022(
+        "Innsending og validering av Mva-melding er ikke tilgjengelig enda" {
+            valideringsregel {
+                nå måVæreEtterEllerLik førsteJan2022
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R000 }
+        }
+    ),
+    
+    INNLEVERING_MELDING_FRA_FØR_2022(
+        "Innsending og validering av Mva-melding fra før 2022 er ikke tilgjengelig" {
+            valideringsregel {
+                skattleggingsperiodeår måVæreEtterEllerLik år2022
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R077 }
+        }
+    ),
 
 ```
