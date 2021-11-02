@@ -4974,5 +4974,89 @@
             <forventetFortegn>+</forventetFortegn>
         </kodetillegg>
     </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av varer fra utlandet med fradragsrett (høy sats)</mvaKodeBeskrivelse_no>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>justering</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av varer og tjenester med fradrag (høy sats)</mvaKodeBeskrivelse_no>
+            <tema>Kjøp av varer og tjenester i Norge (fradrag)</tema>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>-</forventetFortegn>
+            <mvaSpesifikasjon>tapPåKrav</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 1</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>1</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av varer og tjenester med fradrag (høy sats)</mvaKodeBeskrivelse_no>
+            <tema>Kjøp av varer og tjenester i Norge (fradrag)</tema>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>justering</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 11</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>11</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av varer og tjenester med fradrag (middels sats)</mvaKodeBeskrivelse_no>
+            <tema>Kjøp av varer og tjenester i Norge (fradrag)</tema>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>-</forventetFortegn>
+            <mvaSpesifikasjon>tapPåKrav</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 13</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>13</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av varer og tjenester med fradrag (lav sats)</mvaKodeBeskrivelse_no>
+            <tema>Kjøp av varer og tjenester i Norge (fradrag)</tema>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>-</forventetFortegn>
+            <mvaSpesifikasjon>tapPåKrav</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av varer fra utlandet med fradragsrett (høy sats)</mvaKodeBeskrivelse_no>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>justering</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 12</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>12</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
+            <tema>Fisk m.m.</tema>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>-</forventetFortegn>
+            <mvaSpesifikasjon>tapPåKrav</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>

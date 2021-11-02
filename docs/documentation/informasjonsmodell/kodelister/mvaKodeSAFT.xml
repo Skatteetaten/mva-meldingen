@@ -353,7 +353,6 @@
             <temaRekkefoelge>6</temaRekkefoelge>
             <beskrivelseIStandard_en>Output value added tax, reduced rate, fish</beskrivelseIStandard_en>
             <satstype>redusert sats, råfisk</satstype>
-            <uttak>SANN</uttak>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <tema_en>Fish etc.</tema_en>
             <beskrivelseIStandard>Utgående merverdiavgift, redusert sats, fisk</beskrivelseIStandard>
@@ -480,6 +479,7 @@
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <kompensasjon >SANN</kompensasjon >
+            <justering>SANN</justering>
             <fradrag_en>Deductions (value added tax not paid upon import)</fradrag_en>
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
