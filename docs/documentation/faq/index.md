@@ -86,6 +86,13 @@ Virksomheter og rådgivere oppfordres til å levere mva-meldingen direkte fra re
 
 Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
 
+### Kan vi allerede nå se hvordan den innloggede løsningen for manuell inntasting av mva-melding vil se ut?
+
+Vi har ikke et testmiljø der man kan prøve ut den innloggede løsningen for manuell inntasting av mva-melding, men vi har i informasjonsmøter vist skjermbilder med utkast til hvordan løsningen kan se ut. 
+Løsningen er fortsatt under utvikling, men man kan se et [eksempel med skjermbilder i pdf-format her]([https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min%20merverdiavgift%20-%20mva%20melding%20utkast%20ekstern.pdf). Dette er kun et eksempel på hvordan det kan bli seende ut, den ferdige løsningen kan se annerledes ut. Innsending vil også variere i utseende for ulike virksomheter ettersom hva de skal rapportere.
+
+
+
 ### Vil det være mulig å laste opp en XML-fil med grunnlagsdataene i innlogget løsning, slik at bruker da får utfylt dataene basert på innholdet i filen?
 
 Ja, det vil være mulig å laste opp en XML-fil i innlogget løsning. Det vil ikke være mulig å gjøre endringer på tall eller merknader etter opplasting av XML-filen, men det vil være mulig å laste opp vedlegg.
