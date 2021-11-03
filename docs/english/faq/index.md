@@ -81,7 +81,7 @@ Yes, the portal is a permanent solution that is open to everyone.
 ### Is it possible to see what the logged in solution for manual entry of VAT-report will look like?
 
 We do not have a test environment where you can try out the logged-in solution for manually entering a VAT-report, but in information meetings we have shown screenshots with drafts of what the solution might look like.
-The logged-in solution is still under development, but you can see an [example with screenshots in pdf format here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min%20merverdiavgift%20-%20mva%20melding%20utkast%20ekstern.pdf). This is just an example of what it might look like, and only covers a some submissions. The finished solution may look different. Submissions will also vary in appearance for different businesses depending on what they are reporting.
+The logged-in solution is still under development, but you can see an [example with screenshots in pdf format here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min-merverdiavgift-mva-melding-utkast-ekstern.pdf). This is just an example of what it might look like, and only covers a some submissions. The finished solution may look different. Submissions will also vary in appearance for different businesses depending on what they are reporting.
 
 ### Will it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
 
