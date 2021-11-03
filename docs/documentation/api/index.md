@@ -13,6 +13,7 @@ description: "Api-beskrivelser"
 | 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding). |
 | 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.              |
 | 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                 |
+| 2021.11.04 | Oppdatert URL for valideringstjenesten.                               |
 
 ## Introduksjon
 
@@ -82,9 +83,9 @@ Skatteetaten forutsetter at valideringstjenesten blir kalt i forkant av innsendi
 Dette sikrer at mva-meldingen har korrekt format og innhold og øker sannsynligheten for at mva-meldingen
 vil bli godkjent ved innsending.
 
-**URL** : `POST https://<env>/api/mva/mva-melding/valider`
+**URL** : `POST https://<env>/api/mva/grensesnittstoette/mva-melding/valider`
 
-Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
+Hvor `<env>` er Miljøspesifikk adresse f.eks. `skatt-oidc-etm2vk-s.sits.no`
 
 **Body** :
 
@@ -92,7 +93,7 @@ Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 **Eksempel** : Innsending av XML på ugyldig format
 
-POST <a href="https://mp-test.sits.no/api/mva/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/mva-melding/valider </a>
+POST <a href="https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a>
 
 Header: `Content-Type: application/xml`
 
