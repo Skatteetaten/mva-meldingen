@@ -88,8 +88,11 @@ Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
 
 ### Kan vi allerede nå se hvordan den innloggede løsningen for manuell utfylling av mva-melding vil se ut?
 
-Vi har ikke et testmiljø der man kan prøve ut den innloggede løsningen for manuell utfylling av mva-melding, men vi har i informasjonsmøter vist skjermbilder med utkast til hvordan løsningen kan se ut. 
-Løsningen er fortsatt under utvikling, men man kan se et [eksempel med skjermbilder i pdf-format her]([https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min%20merverdiavgift%20-%20mva%20melding%20utkast%20ekstern.pdf). Dette er kun et eksempel på hvordan det kan bli seende ut, og dekker kun noen forhold. Den ferdige løsningen kan se annerledes ut. Innsending vil også variere i utseende for ulike virksomheter avhengig av hva de skal rapportere.
+Vi har ikke et testmiljø der man kan prøve ut den innloggede løsningen for manuell utfylling av mva-melding, men vi har i informasjonsmøter vist skjermbilder med utkast til hvordan løsningen kan se ut.
+
+Løsningen er fortsatt under utvikling, men man kan se et [eksempel med skjermbilder i pdf-format her](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min-merverdiavgift-mva-melding-utkast-ekstern.pdf)
+
+Dette er kun et eksempel på hvordan det kan bli seende ut, og dekker kun noen forhold. Den ferdige løsningen kan se annerledes ut. Innsending vil også variere i utseende for ulike virksomheter avhengig av hva de skal rapportere.
 
 ### Vil det være mulig å laste opp en XML-fil med grunnlagsdataene i innlogget løsning, slik at bruker da får utfylt dataene basert på innholdet i filen?
 
@@ -99,7 +102,7 @@ Ja, det vil være mulig å laste opp en XML-fil i innlogget løsning. Det vil ik
 
 På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om forslaget rundt rapportering på transaksjonsnivå.
 
-### Er det laget et utkast visuelt hvordan den nye meldingen skal se ut?
+### Er det laget et utkast visuelt hvordan den nye meldingen skal se ut i regnskapssystemet?
 
 Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssystemet. Målet er at brukerne skal føre regnskap som normalt, og at systemet sammenstiller informasjonen fra regnskapet til mva-meldingen, slik at brukeren kan sende inn.
 
@@ -128,7 +131,7 @@ Tilleggsmelding vil ikke lenger være aktuelt. Hvis man gjør endringer i regnsk
 
 ### Hvordan rapportere fra lukket regnskapsperiode når man ikke kan bruke tilleggsmelding?
 
-Det er  er to alternative måter å løse dette på:
+Det er er to alternative måter å løse dette på:
 
 1. Gjenåpne perioden (f.eks. 1. termin) og bokføre de nye opplysninger i denne perioden, før perioden lukkes på nytt. Det vil si at SAF-T filen som underbygger siste merverdiavgiftsoppgave kan tas fra denne regnskapsperioden. Skatteetaten anbefaler at det gjøres på denne måten dersom dette er mulig.
 

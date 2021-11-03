@@ -81,7 +81,7 @@ Yes, the portal is a permanent solution that is open to everyone.
 ### Is it possible to see what the logged in solution for manual entry of VAT-report will look like?
 
 We do not have a test environment where you can try out the logged-in solution for manually entering a VAT-report, but in information meetings we have shown screenshots with drafts of what the solution might look like.
-The logged-in solution is still under development, but you can see an [example with screenshots in pdf format here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min%20merverdiavgift%20-%20mva%20melding%20utkast%20ekstern.pdf). This is just an example of what it might look like, and only covers a some submissions. The finished solution may look different. Submissions will also vary in appearance for different businesses depending on what they are reporting.
+The logged-in solution is still under development, but you can see an [example with screenshots in pdf format here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min-merverdiavgift-mva-melding-utkast-ekstern.pdf). This is just an example of what it might look like, and only covers a some submissions. The finished solution may look different. Submissions will also vary in appearance for different businesses depending on what they are reporting.
 
 ### Will it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
 
@@ -91,7 +91,7 @@ Yes, it will be possible. It will not be possible to change numbers or notes in 
 
 Same level as before. For more information regarding the suggested reporting on transaction levels, see "Sales and purchase report".
 
-### Has a draft been made visually of what the new message should look like?
+### Has a draft been made visually of what the new report should look like in the ERP?
 
 The tax authorities do not set requirements for what the report should look like in the accounting system. The goal is for users to keep accounts as normal, and for the system to compile the information from the accounts to the VAT-return, so that the user can submit the return.
 The new reporting will be code-based and will facilitate digital collaboration. Today's numbered fields will be replaced by a dynamic list of specification lines. It will also be possible to provide comments both for the entire report and per line.
