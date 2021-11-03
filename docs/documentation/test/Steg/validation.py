@@ -5,7 +5,7 @@ import requests
 import urllib3
 urllib3.disable_warnings()
 
-PORTAL_MELDING_URL = "https://mp-test.sits.no/api/mva/mva-melding"
+PORTAL_MELDING_URL = "https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding"
 
 
 def validate_vat_return(token: dict, xml: str = None):

@@ -12,7 +12,8 @@ description: "API descriptions"
 | :--------- | :-------------------------------------------------------- |
 | 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback). |
 | 2021.07.05 | Corrected the datatype for when uploading attachments.    |
-| 2021.07.05 | Changed the URL for validation to the correct value       |
+| 2021.08.03 | Changed the URL for validation to the correct value       |
+| 2021.11.04 | Updated URL for validation service                        |
 
 ## Introduction
 
@@ -90,10 +91,10 @@ advance of submitting the VAT return. This ensures that the VAT return
 has the correct format, content and increases the probability that
 the VAT return will be approved upon submission.
 
-**URL** : `POST https://<env>/api/mva/mva-melding/valider`
+**URL** : `POST https://<env>/api/mva/grensesnittstoette/mva-melding/valider`
 
 Where `<env>`is an environment-specific address
-e.g.`mp-test.sits.no`
+e.g.`skatt-oidc-etm2vk-s.sits.no`
 
 **Body** :
 
@@ -101,7 +102,7 @@ e.g.`mp-test.sits.no`
 
 **Example** : Submitting XML in invalid format
 
-POST <a href="https://mp-test.sits.no/api/mva/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/mva-melding/valider </a>
+POST <a href="https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a>
 
 Header: `Content-Type: application/xml`
 
