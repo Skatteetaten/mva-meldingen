@@ -14,6 +14,7 @@ description: "Api-beskrivelser"
 | 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.              |
 | 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                 |
 | 2021.11.04 | Oppdatert URL for valideringstjenesten.                               |
+| 2021.11.08 | Oppdatert liste over valideringsfeil                                  |
 
 ## Introduksjon
 
@@ -415,6 +416,24 @@ Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig f
 ```
 
 Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig fra meldingskategorien i mva-meldigen vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: skattleggingsperiode er påkrevd i MvaMeldingInnsending. Validation error: skattleggingsperiode is required in MvaMeldingInnsending"
+```
+
+Hvis verdien i skattleggingsperiode feltet i MvaMeldingInnsending er null vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: skattleggingsperiode må være utfylt. Validation error: skattleggingsperiode must be populated"
+```
+
+Hvis verdien i skattleggingsperiode feltet i MvaMeldingInnsending er tom vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: instansstatus er påkrevd i MvaMeldingInnsending. Validation error: instansstatus is required in MvaMeldingInnsending"
+```
+
+Hvis verdien i instansstatus feltet i MvaMeldingInnsending er null vil en få denne feilmeldingen.
 
 **Valideringstjenesten**
 
