@@ -11,7 +11,7 @@
         <tekniskNavn>1</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer og tjenester med fradrag (høy sats)</tekst>
+                <tekst>Kjøp av varer og tjenester med fradragsrett (høy sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -19,7 +19,7 @@
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Kjøp av varer og tenester med frådrag (høg sats)</tekst>
+                <tekst>Kjøp av varer og tenester med frådragsrett (høg sats)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -78,15 +78,15 @@
         <tekniskNavn>5</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Salg av varer og tjenester som er fritatt for merverdiavgift</tekst>
+                <tekst>Salg og uttak av varer og tjenester som er fritatt for merverdiavgift</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sales of goods and services exempt from value added tax</tekst>
+                <tekst>Sales and withdrawals of goods and services exempt from value added tax</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sal av varer og tenester som er fritatte for meirverdiavgift</tekst>
+                <tekst>Sal og uttak av varer og tenester som er fritatte for meirverdiavgift</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -140,7 +140,7 @@
         <tekniskNavn>11</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer og tjenester med fradrag (middels sats)</tekst>
+                <tekst>Kjøp av varer og tjenester med fradragsrett (middels sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -148,7 +148,7 @@
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Kjøp av varer og tenester med frådrag (middels sats)</tekst>
+                <tekst>Kjøp av varer og tenester med frådragsrett (middels sats)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -203,15 +203,15 @@
         <tekniskNavn>13</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer og tjenester med fradrag (lav sats)</tekst>
+                <tekst>Kjøp av varer og tjenester med fradragsrett (lav sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods and services with deductions (low rate)</tekst>
+                <tekst>Purchases of goods and services with deduction entitlement (low rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Kjøp av varer og tenester med frådrag (låg sats)</tekst>
+                <tekst>Kjøp av varer og tenester med frådragsrett (låg sats)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -759,11 +759,11 @@
         <tekniskNavn>91</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av klimakvoter og gull</tekst>
+                <tekst>Kjøp av klimakvoter og gull med fradragsrett</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of emission allowances and gold</tekst>
+                <tekst>Purchases of emission allowances and gold with deductions</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -776,7 +776,7 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag_en>Deductions</fradrag_en>
-            <fradrag>Fradrag på kjøp av klimakvoter og gull</fradrag>
+            <fradrag>Fradrag på kjøp av klimakvoter og gull med frådragsrett</fradrag>
             <tema>Klimakvoter og gull</tema>
             <tema_nn>Klimakvoter og gull</tema_nn>
             <temaRekkefoelge>7</temaRekkefoelge>
