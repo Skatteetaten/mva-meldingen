@@ -31,7 +31,7 @@
           "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<mvaMeldingDto xmlns=\"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v0.9\">\n<innsending>\n</innsending>\n</mvaMeldingDto>"
         },
         "url": {
-          "raw": "https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider",
+          "raw": "https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider",
           "protocol": "https",
           "host": ["mp-test", "sits", "no"],
           "path": ["api", "mva", "mva-melding", "valider"]
@@ -65,7 +65,7 @@
           "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<mvaMeldingDto xmlns=\"no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0\">\n<innsending>\n<regnskapssystemsreferanse>29</regnskapssystemsreferanse>\n<regnskapssystem>\n<systemnavn>Min System</systemnavn>\n<systemversjon>16.01.0</systemversjon>\n</regnskapssystem>\n</innsending>\n<skattegrunnlagOgBeregnetSkatt>\n<skattleggingsperiode>\n<periode>\n<skattleggingsperiodeToMaaneder>januar-februar</skattleggingsperiodeToMaaneder>\n</periode>\n<aar>2021</aar>\n</skattleggingsperiode>\n<fastsattMerverdiavgift>120.00</fastsattMerverdiavgift>\n<mvaSpesifikasjonslinje>\n<mvaKode>3</mvaKode>\n<grunnlag>1000.00</grunnlag>\n<sats>12</sats>\n<merverdiavgift>120.00</merverdiavgift>\n</mvaSpesifikasjonslinje>\n</skattegrunnlagOgBeregnetSkatt>\n<betalingsinformasjon/>\n<skattepliktig>\n<organisasjonsnummer>910000000</organisasjonsnummer>\n</skattepliktig>\n<meldingskategori>alminnelig</meldingskategori>\n<merknad>\n<beskrivelse/>\n</merknad>\n</mvaMeldingDto>"
         },
         "url": {
-          "raw": "https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider",
+          "raw": "https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider",
           "protocol": "https",
           "host": ["mp-test", "sits", "no"],
           "path": ["api", "mva", "mva-melding", "valider"]

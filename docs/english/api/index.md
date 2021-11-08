@@ -95,7 +95,7 @@ the VAT return will be approved upon submission.
 **URL** : `POST https://<env>/api/mva/grensesnittstoette/mva-melding/valider`
 
 Where `<env>`is an environment-specific address
-e.g.`skatt-oidc-etm2vk-s.sits.no`
+e.g.`mp-test.sits.no`
 
 **Body** :
 
@@ -103,7 +103,7 @@ e.g.`skatt-oidc-etm2vk-s.sits.no`
 
 **Example** : Submitting XML in invalid format
 
-POST <a href="https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://skatt-oidc-etm2vk-s.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a>
+POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a>
 
 Header: `Content-Type: application/xml`
 
