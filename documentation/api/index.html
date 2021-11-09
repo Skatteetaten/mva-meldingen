@@ -71,7 +71,15 @@
 
 
 
-<table><thead><tr><th style="text-align:left">Dato</th><th style="text-align:left">Hva ble endret?</th></tr></thead><tbody><tr><td style="text-align:left">2021.06.17</td><td style="text-align:left">Oppdatert dokumentasjon for <a href="#hent-tilbakemelding">tilbakemeldinger</a>.</td></tr><tr><td style="text-align:left">2021.07.05</td><td style="text-align:left">Justerte til riktig datatype for opplastning av vedlegg.</td></tr><tr><td style="text-align:left">2021.08.03</td><td style="text-align:left">Endret URL til valideringstjenesten til riktig verdi.</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">Dato</th><th style="text-align:left">Hva ble endret?</th></tr></thead><tbody><tr><td style="text-align:left">2021.06.17</td><td style="text-align:left">Oppdatert dokumentasjon for <a href="#hent-tilbakemelding">tilbakemeldinger</a>.</td></tr><tr><td style="text-align:left">2021.07.05</td><td style="text-align:left">Justerte til riktig datatype for opplastning av vedlegg.</td></tr><tr><td style="text-align:left">2021.08.03</td><td style="text-align:left">Endret URL til valideringstjenesten til riktig verdi.</td></tr><tr><td style="text-align:left">2021.11.04</td><td style="text-align:left">Oppdatert URL for valideringstjenesten.</td></tr><tr><td style="text-align:left">2021.11.08</td><td style="text-align:left">Oppdatert liste over valideringsfeil</td></tr></tbody></table>
 <h2 id="introduksjon" style="position:relative"><a href="#introduksjon" aria-label="introduksjon permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduksjon</h2>
 <p>MVA Meldinger som skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde bruke disse APIene:</p>
 <ol>
@@ -127,14 +135,14 @@ HEADERS<span class="token operator">:</span>
 <p>Skatteetaten forutsetter at valideringstjenesten blir kalt i forkant av innsending av mva-meldingen.
 Dette sikrer at mva-meldingen har korrekt format og innhold og øker sannsynligheten for at mva-meldingen
 vil bli godkjent ved innsending.</p>
-<p><strong>URL</strong> : <code class="language-text">POST https://&lt;env&gt;/api/mva/mva-melding/valider</code></p>
+<p><strong>URL</strong> : <code class="language-text">POST https://&lt;env&gt;/api/mva/grensesnittstoette/mva-melding/valider</code></p>
 <p>Hvor <code class="language-text">&lt;env&gt;</code> er Miljøspesifikk adresse f.eks. <code class="language-text">mp-test.sits.no</code></p>
 <p><strong>Body</strong> :</p>
 <ul>
 <li>Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a></li>
 </ul>
 <p><strong>Eksempel</strong> : Innsending av XML på ugyldig format</p>
-<p>POST <a href="https://mp-test.sits.no/api/mva/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/mva-melding/valider </a></p>
+<p>POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a></p>
 <p>Header: <code class="language-text">Content-Type: application/xml</code></p>
 <p>Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a>:</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;</span>
@@ -344,6 +352,12 @@ Eksempel verdi</p>
 <p>Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig fra de som har blitt lastet opp instansen vil en få denne feilmeldingen.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: Meldingskategorien i MvaMeldingInnsending (\&quot;konvolutt\&quot;) er forsjellig fra Meldingskategorien i {filnavn}&quot;</code></pre></div>
 <p>Hvis verdien i meldingskategori feltet for MvaMeldingInnsending er forskjellig fra meldingskategorien i mva-meldigen vil en få denne feilmeldingen.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: skattleggingsperiode er påkrevd i MvaMeldingInnsending. Validation error: skattleggingsperiode is required in MvaMeldingInnsending&quot;</code></pre></div>
+<p>Hvis verdien i skattleggingsperiode feltet i MvaMeldingInnsending er null vil en få denne feilmeldingen.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: skattleggingsperiode må være utfylt. Validation error: skattleggingsperiode must be populated&quot;</code></pre></div>
+<p>Hvis verdien i skattleggingsperiode feltet i MvaMeldingInnsending er tom vil en få denne feilmeldingen.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: instansstatus er påkrevd i MvaMeldingInnsending. Validation error: instansstatus is required in MvaMeldingInnsending&quot;</code></pre></div>
+<p>Hvis verdien i instansstatus feltet i MvaMeldingInnsending er null vil en få denne feilmeldingen.</p>
 <p><strong>Valideringstjenesten</strong></p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: Ugyldig mva-melding&quot;</code></pre></div>
 <p>Appen vil også kalle valideringstjenesten under fullføring av utfyllingen. Hvis mva-meldingen er ugyldig,
