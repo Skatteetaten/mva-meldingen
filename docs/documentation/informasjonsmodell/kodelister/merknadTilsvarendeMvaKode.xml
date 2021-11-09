@@ -1317,18 +1317,6 @@
             <mvaKode>32</mvaKode>
             <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
             <tema>Fisk m.m.</tema>
-            <merknad>feil i regnskapsprogram</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
             <merknad>feil mva-kode brukt tidligere</merknad>
             <levertFortegn>-</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
@@ -1351,18 +1339,6 @@
             <mvaKode>32</mvaKode>
             <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
             <tema>Fisk m.m.</tema>
-            <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
             <merknad>fritekstfelt</merknad>
             <levertFortegn>-</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
@@ -1385,30 +1361,6 @@
             <mvaKode>32</mvaKode>
             <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
             <tema>Fisk m.m.</tema>
-            <merknad>fritekstfelt</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
-            <merknad>fritekstfelt</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
             <merknad>kreditnota</merknad>
             <levertFortegn>-</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
@@ -1423,18 +1375,6 @@
             <merknad>kreditnota</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
-            <merknad>kreditnota</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -1454,18 +1394,6 @@
             <mvaKode>32</mvaKode>
             <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
             <tema>Fisk m.m.</tema>
-            <merknad>omsetning før registrering</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
             <merknad>periodisering</merknad>
             <levertFortegn>-</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
@@ -1480,30 +1408,6 @@
             <merknad>periodisering</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
-            <merknad>periodisering</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
-            <merknad>uttak av varer ved sletting av virksomhet i mva-register</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -4034,18 +3938,6 @@
             <merknad>avvikende fakturering</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 32</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>32</mvaKode>
-            <mvaKodeBeskrivelse_no>Salg av fisk og andre marine viltlevende ressurser</mvaKodeBeskrivelse_no>
-            <tema>Fisk m.m.</tema>
-            <merknad>avvikende fakturering</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-            <mvaSpesifikasjon>uttak</mvaSpesifikasjon>
         </kodetillegg>
     </kode>
     <kode>
