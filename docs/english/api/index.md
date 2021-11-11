@@ -14,7 +14,8 @@ description: "API descriptions"
 | 2021.07.05 | Corrected the datatype for when uploading attachments.    |
 | 2021.08.03 | Changed the URL for validation to the correct value       |
 | 2021.11.04 | Updated URL for validation service                        |
-| 2021.11.08 | Udated validation error list                              |
+| 2021.11.08 | Updated validation error list                             |
+| 2021.11.11 | Updated error messages when filing submission             |
 
 ## Introduction
 
@@ -503,6 +504,17 @@ Example value:
 ```
 
 You can find an explanation for all the validation rules [here](/english/forretningsregler/).
+
+**Validation of MvaMeldingInnsending against the xsd model** 
+<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
+
+Example:
+```
+Valideringsfeil / Validation error: 
+The 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:skattleggingsperiodeToMaaneder' element is invalid - The value 'juli-september' is invalid according to its datatype 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:SkattleggingsperiodeToMaaneder' - The Enumeration constraint failed.
+The element 'mvaMeldingInnsending' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0' has invalid child element 'opprettingstidspunkt' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0'. List of possible elements expected: 'opprettetAv' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0'.
+```
+
 
 ## Complete vat-return submission
 
