@@ -79,7 +79,11 @@
 
 
 
-<table><thead><tr><th style="text-align:left">Dato</th><th style="text-align:left">Hva ble endret?</th></tr></thead><tbody><tr><td style="text-align:left">2021.06.17</td><td style="text-align:left">Oppdatert dokumentasjon for <a href="#hent-tilbakemelding">tilbakemeldinger</a>.</td></tr><tr><td style="text-align:left">2021.07.05</td><td style="text-align:left">Justerte til riktig datatype for opplastning av vedlegg.</td></tr><tr><td style="text-align:left">2021.08.03</td><td style="text-align:left">Endret URL til valideringstjenesten til riktig verdi.</td></tr><tr><td style="text-align:left">2021.11.04</td><td style="text-align:left">Oppdatert URL for valideringstjenesten.</td></tr><tr><td style="text-align:left">2021.11.08</td><td style="text-align:left">Oppdatert liste over valideringsfeil</td></tr></tbody></table>
+
+
+
+
+<table><thead><tr><th style="text-align:left">Dato</th><th style="text-align:left">Hva ble endret?</th></tr></thead><tbody><tr><td style="text-align:left">2021.06.17</td><td style="text-align:left">Oppdatert dokumentasjon for <a href="#hent-tilbakemelding">tilbakemeldinger</a>.</td></tr><tr><td style="text-align:left">2021.07.05</td><td style="text-align:left">Justerte til riktig datatype for opplastning av vedlegg.</td></tr><tr><td style="text-align:left">2021.08.03</td><td style="text-align:left">Endret URL til valideringstjenesten til riktig verdi.</td></tr><tr><td style="text-align:left">2021.11.04</td><td style="text-align:left">Oppdatert URL for valideringstjenesten.</td></tr><tr><td style="text-align:left">2021.11.08</td><td style="text-align:left">Oppdatert liste over valideringsfeil</td></tr><tr><td style="text-align:left">2021.11.11</td><td style="text-align:left">Oppdatert feilmeldinger ved utfylling av mva-melding</td></tr></tbody></table>
 <h2 id="introduksjon" style="position:relative"><a href="#introduksjon" aria-label="introduksjon permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduksjon</h2>
 <p>MVA Meldinger som skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde bruke disse APIene:</p>
 <ol>
@@ -308,7 +312,6 @@ Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har i
 <li>application/vnd.oasis.opendocument.formula</li>
 <li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li>
 <li>image/jpeg</li>
-<li>image/jpg</li>
 <li>image/png</li>
 </ul>
 <p>Vedlegg lastes opp på med følgende request mot instansens data-api:</p>
@@ -378,6 +381,12 @@ vil det returneres feilmelding 409 og valideringsresultatet i xml som content.</
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span></code></pre></div>
 <p>For en liste over valideringsfeil, kan man finne under <a href="/mva-meldingen/documentation/forretningsregler/">Valideringsregler</a>.</p>
+<p><strong>Validering av MvaMeldingInnsending opp mot xsd modellen</strong>
+<a href="/mva-meldingen/8b1b88433741fb3a8e1bd7474281ccef/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
+<p>Eksempel:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Valideringsfeil / Validation error: 
+The &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:skattleggingsperiodeToMaaneder&#x27; element is invalid - The value &#x27;juli-september&#x27; is invalid according to its datatype &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:SkattleggingsperiodeToMaaneder&#x27; - The Enumeration constraint failed.
+The element &#x27;mvaMeldingInnsending&#x27; in namespace &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0&#x27; has invalid child element &#x27;opprettingstidspunkt&#x27; in namespace &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0&#x27;. List of possible elements expected: &#x27;opprettetAv&#x27; in namespace &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0&#x27;.</code></pre></div>
 <h2 id="fullfør-mvameldinginnsending" style="position:relative"><a href="#fullf%C3%B8r-mvameldinginnsending" aria-label="fullfør mvameldinginnsending permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fullfør MvaMeldingInnsending</h2>
 <p>Dette steget bruker prosess-apiet til instansen og instansen vil avslutte bekreftelsessteget for Mva Melding Innsending og oppdatere instansen til neste steg i applikasjonens prosess.</p>
 <p>For å fullføre innsendingen utføres følgende kall mot prosess-apiet til instansen:</p>
