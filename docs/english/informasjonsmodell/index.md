@@ -81,7 +81,7 @@ Purpose: To be able to follow up systematic errors with the system supplier inst
 
 ### Betalingsinformasjon
 
-Oppgis bare dersom det er tilgodebeløp.
+KID oppgis bare dersom det er tilgodebeløp.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
