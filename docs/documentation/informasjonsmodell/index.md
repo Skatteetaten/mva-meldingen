@@ -84,7 +84,7 @@ Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https:/
 
 ### Betalingsinformasjon
 
-Oppgis bare dersom det er tilgodebeløp.
+Kid oppgis bare dersom det er tilgodebeløp.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
