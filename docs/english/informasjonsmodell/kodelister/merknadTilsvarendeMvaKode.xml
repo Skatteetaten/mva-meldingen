@@ -2259,28 +2259,6 @@
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
-            <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
-            <merknad>feil mva-kode brukt tidligere</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
         </kodetillegg>
@@ -2292,41 +2270,8 @@
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
             <merknad>fritekstfelt</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
-            <merknad>fritekstfelt</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
-            <merknad>fritekstfelt</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
-            <merknad>gjeninnførsel</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
         </kodetillegg>
     </kode>
     <kode>
@@ -2338,39 +2283,6 @@
             <merknad>kreditnota</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av tjenester fra utlandet (høy sats)</fradrag>
-            <merknad>midlertidig innførsel</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av tjenester fra utlandet (høy sats)</fradrag>
-            <merknad>omberegning eller retur</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
-            <merknad>periodisering</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
         </kodetillegg>
     </kode>
     <kode>
@@ -4383,50 +4295,6 @@
         </kodetillegg>
     </kode>
     <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
-            <merknad>kreditnota</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
-            <merknad>feil i regnskapsprogram</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
-            <merknad>fritekstfelt</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>81</mvaKode>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
-            <merknad>avvikende fakturering</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
         <tekniskNavn>gyldig merknad for mva kode 82</tekniskNavn>
         <kodetillegg>
             <mvaKode>82</mvaKode>
@@ -4948,6 +4816,39 @@
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
             <mvaSpesifikasjon>tapPåKrav</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <merknad>periodisering</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>-</forventetFortegn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <merknad>avvikende fakturering</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>-</forventetFortegn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 81</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>81</mvaKode>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <merknad>feil i regnskapsprogram</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>-</forventetFortegn>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
