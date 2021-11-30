@@ -22,6 +22,7 @@ description: "XSD for mva-melding
 | 2021.10.22 | Oppdaterte kodelister, rettet engelske tekster i [merknad](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknad.xml), lagt til nytt element "fradrag" i [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), oversettinger til nynorsk i [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml). |
 | 2021.11.02 | Oppdaterte kodelister, lagt til nye gyldige merknader for SAFT mva-koder 81, 1, 11, 12 and 13 i [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), små oppdateringer i kodetillegg for SAFT mva-kode 12, 1 og 81 i [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml).                                                                                   |
 | 2021.11.09 | Oppdaterte kodelister, fjernet merknader med spesifikasjon for uttak på kode 32 i [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                            |
+| 2021.11.09 | Oppdaterte kodelister, oppdatering til kode 81 i [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                                                             |
 
 ## XSD for mva-meldingen versjon 1.0
 
@@ -84,7 +85,7 @@ Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https:/
 
 ### Betalingsinformasjon
 
-Oppgis bare dersom det er tilgodebeløp.
+Kid oppgis bare dersom det er tilgodebeløp.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
