@@ -23,6 +23,7 @@ description: "XSD for VAT return (mva-melding)
 | 2021.11.02 | Updated code lists, added valid remarks for SAFT VAT codes 81, 1, 11, 12 and 13 in [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml), small update to kodetillegg for SAFT VAT code 12, 1 and 81 in [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml).                                                                                          |
 | 2021.11.09 | Updated code lists, removed remarks with "uttak" for code 32 [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                                         |
 | 2021.11.09 | Updated code lists, corrections to code 81 in [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                                                        |
+| 2021.12.03 | Updated code list summary, added adjustment specification for code 81. |
 
 ## Version 1.0 of the XSD for the VAT return
 
@@ -302,6 +303,7 @@ Vedleggsfil
 | 81                                                       | Purchases of goods from abroad with deductions (standard rate)                             |
 | 81                                                       | Deductions on purchases of goods from abroad with deductions (standard rate)               |
 | Specification line for code 81                           | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
+| Specification line for code 81                           | adjustment of input VAT on capital goods                                                   |
 | 14                                                       | Purchases of goods from abroad, value added tax paid upon import (standard rate)           |
 | 82                                                       | Purchases of goods from abroad without deduction entitlement (standard rate)               |
 | 83                                                       | Purchases of goods from abroad with deductions (middle rate)                               |
