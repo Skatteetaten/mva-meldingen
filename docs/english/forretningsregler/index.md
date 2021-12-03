@@ -7,7 +7,17 @@ description: "Validation rules for the VAT tax return"
 ### Change log
 
 <table align=center>
-  <tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
+	<tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
+	<tr>
+      <td>2021.12.03</td>
+      <td>
+          <ul>
+            <li> R039 removed VAT code 32 from valid values for 'uttak' specification </li>
+            <li> R040 added VAT code 81 as a valid value for 'justering' specification </li>
+            <li> R059 and R060 exceptional cases only apply to current tax periods </li>
+          </ul>      
+      </td>
+    </tr>
   <tr>
       <td>2021.11.18</td>
       <td>
@@ -130,6 +140,7 @@ The following validation rules are definded for the VAT return listing:
 - Remarks must be valid for the given VAT code (lines with a specification)
 
 The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
+
 - The VAT return should be in a valid format
 - The specification lines should only use valid VAT codes
 - The specification lines should only use valid VAT-rates
@@ -138,6 +149,7 @@ The following technical rules are defined for the purpose of validating the form
 - The VAT return should only use a valid remark in the 'utvalgt merknad' field
 
 Two logistical rules are also defined for the purpose of preventing early submission to the new system or submission of earlier VAT returns:
+
 - The submission and validation service is not available before 01.01.2022
 - The submission and validation of VAT returns from before 2022 is not available
 
@@ -492,12 +504,12 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_UTTAK_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31, 32 eller 33"
+        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31 eller 33"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er UTTAK.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 32, 33) }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 33) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -506,12 +518,12 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1 og 81"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er JUSTERING.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode være 1 }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(1,81) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -888,7 +900,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -902,7 +918,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -910,7 +930,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R060 }
         }
     ),
-  
+
     MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
         "Det mangler mva-melding for tidligere terminer"
         {
@@ -924,7 +944,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R061 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_AVGIFT_TIL_GODE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
         "Det mangler mva-melding for tidligere terminer. Avgift til gode for denne terminen vil ikke bli utbetalt"
         {
@@ -938,7 +958,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R062 }
         }
     ),
-    
+
     MVA_KODE_FOR_INNGÅENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS(
         "Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats"
         {
@@ -984,7 +1004,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R066 }
         }
     ),
-    
+
     MVA_KODE_FOR_INNGÅENDE_ELLER_UTGÅENDE_FEIL_GRUNNLAG_ELLER_SATS(
         "Inngående spesifikasjonslinjer skal være uten grunnlag og sats, mens utgående spesifikasjonslinjer skal være med grunnlag og sats"
         {
@@ -1102,7 +1122,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R076 }
         }
     ),
-    
+
     MvaMeldingsinnhold_Xml_SkjemaValideringsfeil(
         "Mva-meldingen må være på gyldig format og passere XML skjema valideringen" {
             valideringsregel { xmlInput skalXmlValideres OK }
@@ -1111,7 +1131,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R001 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaKode_UkjentMvaKode(
         "Kodelinjene i mva-meldingen skal bare bruke kjente koder" {
             valideringsregel {
@@ -1123,7 +1143,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R002 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaSats_UkjentSats(
         "Satsene i mva-meldingen skal være gyldige" {
             valideringsregel {
@@ -1136,7 +1156,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R003 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaSpesifikasjoner_UkjentSpesifikasjon(
         "Spesifikasjonene i mva-meldingen skal være gyldige" {
             valideringsregel {
@@ -1149,7 +1169,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R069 }
         }
     ),
-    
+
     MvaMeldingsinnhold_SpesifikasjonslinjeMerknad_UkjentMerknad(
         "Utvalgt merknadene i mva spesifikasjonslinjer skal være gyldige" {
             valideringsregel {
@@ -1162,7 +1182,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R070 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaMeldingMerknad_UkjentMerknad(
         "Utvalgt merknadene i mva-meldingen skal være gyldige" {
             valideringsregel {
@@ -1175,7 +1195,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R071 }
         }
     ),
-    
+
     INNLEVERING_FØR_1_1_2022(
         "Innsending og validering av Mva-melding er ikke tilgjengelig enda" {
             valideringsregel {
@@ -1186,7 +1206,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R000 }
         }
     ),
-    
+
     INNLEVERING_MELDING_FRA_FØR_2022(
         "Innsending og validering av Mva-melding fra før 2022 er ikke tilgjengelig" {
             valideringsregel {
@@ -1197,7 +1217,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R077 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_BELØP_INNEHOLDER_DESIMALER(
         "Innsendte beløp skal ikke inneholde desimaler"
         {

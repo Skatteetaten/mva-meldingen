@@ -9,6 +9,16 @@ description: "Regler for utfylling av mva-melding "
 <table align=center>
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
     <tr>
+      <td>2021.12.03</td>
+      <td>
+          <ul>
+            <li> R039 tatt bort at 'uttak' spesifikasjon er gyldig på mva kode 32 </li>
+            <li> R040 lagt til at 'justering' spesifikasjon er gyldig på mva kode 81 </li>
+            <li> R059 og R060 unntak tilfeller skal kun gjelde for påbegynnte skatteleggingsperioder </li>
+          </ul>      
+      </td>
+    </tr>
+    <tr>
       <td>2021.11.18</td>
       <td>
           <ul>
@@ -130,6 +140,7 @@ Følgende valideringsregler er foreløpig definert for mva-meldingen:
 - Merknader må være gyldig for brukt mva-kode (linje med spesifikasjon)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
+
 - Mva-meldingen skal være på gyldig format
 - Spesifikasjonslinjer skal bare bruke kjente mva-koder
 - Spesifikasjonslinjer skal bare bruke gyldige satser
@@ -138,6 +149,7 @@ Følgende tekniske regler er også spesifisert som validerer xsd format og kodel
 - Mva-meldingen skal bare bruke en kjent merknad på utvalgt merknad felt
 
 To praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:
+
 - Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2022
 - Innsending og validering av mva-meldinger fra før 2022 er ikke tilgjengelig
 
@@ -491,12 +503,12 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_UTTAK_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31, 32 eller 33"
+        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31 eller 33"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er UTTAK.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 32, 33) }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 33) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -505,12 +517,12 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1 og 81"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er JUSTERING.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode være 1 }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(1,81) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -887,7 +899,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                     (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -901,7 +917,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                     (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -909,7 +929,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R060 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_AVGIFT_Å_BETALE_TIDLIGERE_TERMINER_MANGLER_MVA_MELDING(
         "Det mangler mva-melding for tidligere terminer"
         {
@@ -937,7 +957,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R062 }
         }
     ),
-    
+
     MVA_KODE_FOR_INNGÅENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS(
         "Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats"
         {
@@ -1000,7 +1020,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R081 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_MERKNAD_MANGLER(
         "For denne spesifikasjonslinjen kreves det en gyldig merknad"
         {
@@ -1100,7 +1120,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R076 }
         }
     ),
-    
+
     MvaMeldingsinnhold_Xml_SkjemaValideringsfeil(
         "Mva-meldingen må være på gyldig format og passere XML skjema valideringen" {
             valideringsregel { xmlInput skalXmlValideres OK }
@@ -1109,7 +1129,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R001 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaKode_UkjentMvaKode(
         "Kodelinjene i mva-meldingen skal bare bruke kjente koder" {
             valideringsregel {
@@ -1121,7 +1141,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R002 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaSats_UkjentSats(
         "Satsene i mva-meldingen skal være gyldige" {
             valideringsregel {
@@ -1134,7 +1154,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R003 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaSpesifikasjoner_UkjentSpesifikasjon(
         "Spesifikasjonene i mva-meldingen skal være gyldige" {
             valideringsregel {
@@ -1147,7 +1167,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R069 }
         }
     ),
-    
+
     MvaMeldingsinnhold_SpesifikasjonslinjeMerknad_UkjentMerknad(
         "Utvalgt merknadene i mva spesifikasjonslinjer skal være gyldige" {
             valideringsregel {
@@ -1160,7 +1180,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R070 }
         }
     ),
-    
+
     MvaMeldingsinnhold_MvaMeldingMerknad_UkjentMerknad(
         "Utvalgt merknadene i mva-meldingen skal være gyldige" {
             valideringsregel {
@@ -1173,7 +1193,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R071 }
         }
     ),
-    
+
     INNLEVERING_FØR_1_1_2022(
         "Innsending og validering av Mva-melding er ikke tilgjengelig enda" {
             valideringsregel {
@@ -1184,7 +1204,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R000 }
         }
     ),
-    
+
     INNLEVERING_MELDING_FRA_FØR_2022(
         "Innsending og validering av Mva-melding fra før 2022 er ikke tilgjengelig" {
             valideringsregel {
@@ -1195,7 +1215,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R077 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_BELØP_INNEHOLDER_DESIMALER(
         "Innsendte beløp skal ikke inneholde desimaler"
         {
