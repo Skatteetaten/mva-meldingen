@@ -9,6 +9,16 @@ description: "Regler for utfylling av mva-melding "
 <table align=center>
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
     <tr>
+      <td>2021.12.03</td>
+      <td>
+          <ul>
+            <li> R039 tatt bort at 'uttak' spesifikasjon er gyldig på mva kode 32 </li>
+            <li> R040 lagt til at 'justering' spesifikasjon er gyldig på mva kode 81 </li>
+            <li> R059 og R060 unntak tilfeller skal kun gjelde for påbegynnte skatteleggingsperioder </li>
+          </ul>      
+      </td>
+    </tr>
+    <tr>
       <td>2021.11.18</td>
       <td>
           <ul>
@@ -491,12 +501,12 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_UTTAK_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31, 32 eller 33"
+        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31 eller 33"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er UTTAK.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 32, 33) }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 33) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -505,12 +515,12 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1 og 81"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er JUSTERING.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode være 1 }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(1,81) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -887,7 +897,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                     (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -901,7 +915,11 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                     (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
