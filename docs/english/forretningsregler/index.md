@@ -7,7 +7,17 @@ description: "Validation rules for the VAT tax return"
 ### Change log
 
 <table align=center>
-  <tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
+	<tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
+	<tr>
+      <td>2021.12.03</td>
+      <td>
+          <ul>
+            <li> R039 removed VAT code 32 from valid values for 'uttak' specification </li>
+            <li> R040 added VAT code 81 as a valid value for 'justering' specification </li>
+            <li> R059 and R060 exceptional cases only apply to current tax periods </li>
+          </ul>      
+      </td>
+    </tr>
   <tr>
       <td>2021.11.18</td>
       <td>
@@ -492,12 +502,12 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_UTTAK_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31, 32 eller 33"
+        "Spesifikasjonslinje som gjelder uttak kan kun sendes inn på mva-kode 3, 5, 31 eller 33"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er UTTAK.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 32, 33) }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(3, 5, 31, 33) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -506,12 +516,12 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     ),
 
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1"
+        "Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1 og 81"
         {
             valideringsregel {
                 mvaSpesifikasjonslinje
                     .hvor { linje -> linje.spesifikasjon er JUSTERING.spesifikasjon.kode }
-                    .skal { linje -> linje.mvaKode være 1 }
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodene(1,81) }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
@@ -888,7 +898,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er alminnelig såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -902,7 +916,11 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         {
             valideringsregel {
                 meldingskategori er primærnæring såSkal {
-                    (nå væreEtter slutTerminsdato) medmindre (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                    (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
+                        (
+                            (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                            )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
