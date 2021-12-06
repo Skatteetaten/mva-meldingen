@@ -300,13 +300,13 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | Salg av varer og tjenester til utlandet (eksport) |                                                                                           |
 | 52                                                | Salg av varer og tjenester til utlandet som er fritatt for merverdiavgift                 |
 | Kjøp av varer og tjenester i Norge (fradrag)      |                                                                                           |
-| 1                                                 | Kjøp av varer og tjenester med fradrag (høy sats)                                         |
+| 1                                                 | Kjøp av varer og tjenester med fradragsrett (høy sats)                                    |
 | Spesifikasjonslinje til kode 1                    | Tap på krav                                                                               |
 | Spesifikasjonslinje til kode 1                    | Justering av merverdiavgift for kapitalvarer                                              |
 | Spesifikasjonslinje til kode 1                    | Tilbakeføring av merverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom)     |
-| 11                                                | Kjøp av varer og tjenester med fradrag (middels sats)                                     |
+| 11                                                | Kjøp av varer og tjenester med fradragsrett (middels sats)                                |
 | Spesifikasjonslinje til kode 11                   | Tap på krav                                                                               |
-| 13                                                | Kjøp av varer og tjenester med fradrag (lav sats)                                         |
+| 13                                                | Kjøp av varer og tjenester med fradragsrett (lav sats)                                    |
 | Spesifikasjonslinje til kode 13                   | Tap på krav                                                                               |
 | Kjøp av varer fra utlandet (import)               |                                                                                           |
 | 81                                                | Kjøp av varer fra utlandet med fradragsrett (høy sats)                                    |
@@ -329,7 +329,6 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | 89                                                | Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)                               |
 | Fisk m.m.                                         |                                                                                           |
 | 32                                                | Salg av fisk og andre marine viltlevende ressurser                                        |
-| Spesifikasjonslinje til kode 32                   | Uttak                                                                                     |
 | 12                                                | Kjøp av fisk og andre marine viltlevende ressurser                                        |
 | Spesifikasjonslinje til kode 12                   | Tap på krav                                                                               |
 | Klimakvoter og gull                               |

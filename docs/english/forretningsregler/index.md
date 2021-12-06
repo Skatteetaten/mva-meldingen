@@ -112,7 +112,7 @@ The following validation rules are definded for the VAT return listing:
 - There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88)
 - There must be deductable input VAT if there is output VAT on deductable climate quotas and gold
 - Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13
-- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 5, 31, 32 of 33
+- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 5, 31 or 33
 - Specification lines that apply to adjustment can only be submitted on VAT code 1
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1 or 81
 - The specified category for the VAT return does not match the details in the VAT register (general industry)
