@@ -110,15 +110,15 @@
         <tekniskNavn>6</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Salg av varer og tjenester som er unntatt merverdiavgiftsloven</tekst>
+                <tekst>Salg og uttak av varer og tjenester som er unntatt merverdiavgiftsloven</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sales of goods and services outside the scope of the Value Added Tax Act</tekst>
+                <tekst>Sales and withdrawals of goods and services outside the scope of the Value Added Tax Act</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sal av varer og tenester som er unntatte frå meirverdiavgiftslova</tekst>
+                <tekst>Sal og uttak av varer og tenester som er unntatte frå meirverdiavgiftslova</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -207,7 +207,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods and services with deduction entitlement (low rate)</tekst>
+                <tekst>Purchases of goods and services with deductions (low rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -461,7 +461,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Kjøp av varer fra utlandet med fradragsrett (høy sats)</tekst>
+                <tekst>Purchases of goods from abroad with deductions (standard rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -797,7 +797,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of emission allowances and gold without deduction entitlement</tekst>
+                <tekst>Purchases of emission allowances and gold without deductions</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>

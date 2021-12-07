@@ -285,9 +285,9 @@ Vedleggsfil
 | Specification line for code 31                           | withdrawal                                                                                 |
 | 33                                                       | Sales and withdrawals of goods and services (low rate)                                     |
 | Specification line for code 33                           | withdrawal                                                                                 |
-| 5                                                        | Sales of goods and services exempt from value added tax                                    |
+| 5                                                        | Sales and withdrawals of goods and services exempt from value added tax                    |
 | Specification line for code 5                            | withdrawal                                                                                 |
-| 6                                                        | Sales of goods and services outside the scope of the Value Added Tax Act                   |
+| 6                                                        | Sales and withdrawals of goods and services outside the scope of the Value Added Tax Act   |
 | Sales of goods and services to other countries (exports) |                                                                                            |
 | 52                                                       | Sales of goods and services exempt from value added tax to other countries                 |
 | Purchases of goods and services in Norway (Deductions)   |                                                                                            |
@@ -320,9 +320,9 @@ Vedleggsfil
 | 89                                                       | Purchases of services from abroad without deduction entitlement (low rate)                 |
 | Fish etc.                                                |                                                                                            |
 | 32                                                       | Sales of fish and other marine wildlife resources                                          |
-| 12                                                       | Value added tax paid upon the purchase of fish and other marine wildlife resources         |
+| 12                                                       | Purchase of fish and other marine wildlife resources                                       |
 | Specification line for code 12                           | Losses on outstanding claims and cancellations                                             |
-| Emission allowances and gold                             |
+| Emission allowances and gold                             |                                                                                            |
 | 51                                                       | Sales of emission allowances and gold to businesses/self-employed persons                  |
 | 91                                                       | Purchases of emission allowances and gold                                                  |
 | 91                                                       | Deductions on purchases of emission allowances and gold                                    |
