@@ -90,7 +90,7 @@ Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
 
 Vi har ikke et testmiljø der man kan prøve ut den innloggede løsningen for manuell utfylling av mva-melding, men vi har i informasjonsmøter vist skjermbilder med utkast til hvordan løsningen kan se ut.
 
-Løsningen er fortsatt under utvikling, men man kan se et [eksempel med skjermbilder i pdf-format her](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Min-merverdiavgift-mva-melding-utkast-ekstern.pdf)
+Løsningen er fortsatt under utvikling, men man kan se en [klikkbar demo her](https://h2ihxe.axshare.com/)
 
 Dette er kun et eksempel på hvordan det kan bli seende ut, og dekker kun noen forhold. Den ferdige løsningen kan se annerledes ut. Innsending vil også variere i utseende for ulike virksomheter avhengig av hva de skal rapportere.
 
