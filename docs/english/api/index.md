@@ -9,13 +9,14 @@ description: "API descriptions"
 ## Changelog
 
 | Dato       | Hva ble endret?                                           |
-| :--------- | :-------------------------------------------------------- |
+|:-----------|:----------------------------------------------------------|
 | 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback). |
 | 2021.07.05 | Corrected the datatype for when uploading attachments.    |
 | 2021.08.03 | Changed the URL for validation to the correct value       |
 | 2021.11.04 | Updated URL for validation service                        |
 | 2021.11.08 | Updated validation error list                             |
 | 2021.11.11 | Updated error messages when filing submission             |
+| 2021.12.08 | Updated valid content type for binaerVedlegg              |
 
 ## Introduction
 
@@ -370,9 +371,17 @@ The following content types are allowed for attachments:
 - text/xml
 - application/pdf
 - application/vnd.oasis.opendocument.formula
+- application/vnd.oasis.opendocument.text
+- application/vnd.oasis.opendocument.spreadsheet
+- application/vnd.oasis.opendocument.presentation
+- application/vnd.oasis.opendocument.graphics
 - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+- application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+- application/vnd.openxmlformats-officedocument.presentationml.presentation
+- application/msword
+- application/vnd.ms-excel
+- application/vnd.ms-powerpoint
 - image/jpeg
-- image/jpg
 - image/png
 
 Attachments are uploaded with the following request to the instance data api:
