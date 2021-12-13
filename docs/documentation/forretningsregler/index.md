@@ -1030,6 +1030,79 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             kategori { MERKNAD }
             regelnummer { R076 }
         }
+    ),
+        
+    MvaMeldingsinnhold_Xml_SkjemaValideringsfeil(
+        "Mva-meldingen må være på gyldig format og passere XML skjema valideringen." {
+            valideringsregel { xmlInput skalXmlValideres OK }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R001 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaKode_UkjentMvaKode(
+        "Kodelinjene i mva-meldingen må inneholde gyldige koder." {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .skal { linje -> linje.mvaKode væreMedI mvaKodelisten }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R002 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaSats_UkjentSats(
+        "Satsene i mva-meldingen må være gyldige." {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.sats har innhold }
+                    .skal { linje -> linje.sats væreMedI gyldigSatsForMvaKodeForPerioden(linje.mvaKode) }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R003 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaSpesifikasjoner_UkjentSpesifikasjon(
+        "Spesifikasjonslinjene i mva-meldingen skal være gyldige." {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.spesifikasjon har innhold }
+                    .skal { linje -> linje.spesifikasjon væreMedI mvaSpesifikasjoner }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R069 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_SpesifikasjonslinjeMerknad_UkjentMerknad(
+        "Utvalgte merknader i mva-spesifikasjonslinjer skal være gyldige." {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.merknad?.utvalgtMerknad har innhold }
+                    .skal { linje -> linje.merknad?.utvalgtMerknad væreMedI mvaMeldingMerknader }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R070 }
+        }
+    ),
+    
+    MvaMeldingsinnhold_MvaMeldingMerknad_UkjentMerknad(
+        "Utvalgte merknader i mva-meldingen skal være gyldige." {
+            valideringsregel {
+                (meldingUtvalgtMerknad har innhold).såSkal {
+                    meldingUtvalgtMerknad væreMedI mvaMeldingMerknader
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R071 }
+        }
     )
 
 ```
