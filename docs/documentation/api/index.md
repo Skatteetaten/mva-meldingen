@@ -9,13 +9,14 @@ description: "Api-beskrivelser"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                       |
-| :--------- | :-------------------------------------------------------------------- |
+|:-----------|:----------------------------------------------------------------------|
 | 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding). |
 | 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.              |
 | 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                 |
 | 2021.11.04 | Oppdatert URL for valideringstjenesten.                               |
 | 2021.11.08 | Oppdatert liste over valideringsfeil                                  |
 | 2021.11.11 | Oppdatert feilmeldinger ved utfylling av mva-melding                  |
+| 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                       |
 
 ## Introduksjon
 
@@ -335,7 +336,16 @@ Det tillates opplasting av følgende content-typer:
 - text/xml
 - application/pdf
 - application/vnd.oasis.opendocument.formula
+- application/vnd.oasis.opendocument.text
+- application/vnd.oasis.opendocument.spreadsheet
+- application/vnd.oasis.opendocument.presentation
+- application/vnd.oasis.opendocument.graphics
 - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+- application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+- application/vnd.openxmlformats-officedocument.presentationml.presentation
+- application/msword
+- application/vnd.ms-excel
+- application/vnd.ms-powerpoint
 - image/jpeg
 - image/png
 
