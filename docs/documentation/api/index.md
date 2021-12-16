@@ -16,6 +16,7 @@ description: "Api-beskrivelser"
 | 2021.11.04 | Oppdatert URL for valideringstjenesten.                               |
 | 2021.11.08 | Oppdatert liste over valideringsfeil                                  |
 | 2021.11.11 | Oppdatert feilmeldinger ved utfylling av mva-melding                  |
+| 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                       |
 
 ## Introduksjon
 
@@ -335,7 +336,16 @@ Det tillates opplasting av følgende content-typer:
 - text/xml
 - application/pdf
 - application/vnd.oasis.opendocument.formula
+- application/vnd.oasis.opendocument.text
+- application/vnd.oasis.opendocument.spreadsheet
+- application/vnd.oasis.opendocument.presentation
+- application/vnd.oasis.opendocument.graphics
 - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+- application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+- application/vnd.openxmlformats-officedocument.presentationml.presentation
+- application/msword
+- application/vnd.ms-excel
+- application/vnd.ms-powerpoint
 - image/jpeg
 - image/png
 
@@ -465,16 +475,16 @@ Eksempel verdi:
 
 For en liste over valideringsfeil, kan man finne under [Valideringsregler](/documentation/forretningsregler/).
 
-**Validering av MvaMeldingInnsending opp mot xsd modellen** 
+**Validering av MvaMeldingInnsending opp mot xsd modellen**
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
 
 Eksempel:
+
 ```
-Valideringsfeil / Validation error: 
+Valideringsfeil / Validation error:
 The 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:skattleggingsperiodeToMaaneder' element is invalid - The value 'juli-september' is invalid according to its datatype 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:SkattleggingsperiodeToMaaneder' - The Enumeration constraint failed.
 The element 'mvaMeldingInnsending' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0' has invalid child element 'opprettingstidspunkt' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0'. List of possible elements expected: 'opprettetAv' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0'.
 ```
-
 
 ## Fullfør MvaMeldingInnsending
 
