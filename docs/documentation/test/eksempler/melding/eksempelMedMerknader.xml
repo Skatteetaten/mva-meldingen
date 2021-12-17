@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
+  <innsending>
+    <regnskapssystemsreferanse>1e22af4d-dece-4b23-9935-eeb4184845cc</regnskapssystemsreferanse>
+    <regnskapssystem>
+      <systemnavn>et-fantastisk-system</systemnavn>
+      <systemversjon>the-one-and-only</systemversjon>
+    </regnskapssystem>
+  </innsending>
+  <skattegrunnlagOgBeregnetSkatt>
+    <skattleggingsperiode>
+      <periode>
+        <skattleggingsperiodeToMaaneder>mars-april</skattleggingsperiodeToMaaneder>
+      </periode>
+      <aar>2020</aar>
+    </skattleggingsperiode>
+    <fastsattMerverdiavgift>27522</fastsattMerverdiavgift>
+    <mvaSpesifikasjonslinje>
+      <mvaKode>3</mvaKode>
+      <grunnlag>101312</grunnlag>
+      <sats>25</sats>
+      <merverdiavgift>25328</merverdiavgift>
+      <merknad>
+        <beskrivelse>What do you call a fish wearing a bowtie.. Sofishticated</beskrivelse>
+      </merknad>
+    </mvaSpesifikasjonslinje>
+    <mvaSpesifikasjonslinje>
+      <mvaKode>52</mvaKode>
+      <grunnlag>25255</grunnlag>
+      <sats>0</sats>
+      <merverdiavgift>0</merverdiavgift>
+    </mvaSpesifikasjonslinje>
+    <mvaSpesifikasjonslinje>
+      <mvaKode>81</mvaKode>
+      <grunnlag>14141</grunnlag>
+      <sats>25</sats>
+      <merverdiavgift>3535</merverdiavgift>
+      <merknad>
+        <utvalgtMerknad>feil i regnskapsprogram</utvalgtMerknad>
+      </merknad>
+    </mvaSpesifikasjonslinje>
+    <mvaSpesifikasjonslinje>
+      <mvaKode>81</mvaKode>
+      <merverdiavgift>-1341</merverdiavgift>
+    </mvaSpesifikasjonslinje>
+  </skattegrunnlagOgBeregnetSkatt>
+  <betalingsinformasjon/>
+  <skattepliktig>
+    <organisasjonsnummer>910122975</organisasjonsnummer>
+  </skattepliktig>
+  <meldingskategori>alminnelig</meldingskategori>
+  <merknad>
+    <beskrivelse>I don't trust stairs. They're always up to something.</beskrivelse>
+  </merknad>
+</mvaMeldingDto>
