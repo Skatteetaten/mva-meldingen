@@ -9,7 +9,7 @@ description: "API descriptions"
 ## Changelog
 
 | Dato       | Hva ble endret?                                           |
-| :--------- | :-------------------------------------------------------- |
+|:-----------|:----------------------------------------------------------|
 | 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback). |
 | 2021.07.05 | Corrected the datatype for when uploading attachments.    |
 | 2021.08.03 | Changed the URL for validation to the correct value       |
