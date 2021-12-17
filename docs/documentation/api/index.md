@@ -475,16 +475,16 @@ Eksempel verdi:
 
 For en liste over valideringsfeil, kan man finne under [Valideringsregler](/documentation/forretningsregler/).
 
-**Validering av MvaMeldingInnsending opp mot xsd modellen** 
+**Validering av MvaMeldingInnsending opp mot xsd modellen**
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
 
 Eksempel:
+
 ```
-Valideringsfeil / Validation error: 
+Valideringsfeil / Validation error:
 The 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:skattleggingsperiodeToMaaneder' element is invalid - The value 'juli-september' is invalid according to its datatype 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:SkattleggingsperiodeToMaaneder' - The Enumeration constraint failed.
 The element 'mvaMeldingInnsending' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0' has invalid child element 'opprettingstidspunkt' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0'. List of possible elements expected: 'opprettetAv' in namespace 'no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0'.
 ```
-
 
 ## Fullfør MvaMeldingInnsending
 

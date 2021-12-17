@@ -2268,7 +2268,7 @@
         <kodetillegg>
             <mvaKode>81</mvaKode>
             <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <merknad>fritekstfelt</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
@@ -2279,7 +2279,7 @@
         <kodetillegg>
             <mvaKode>81</mvaKode>
             <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <merknad>kreditnota</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
@@ -4823,7 +4823,7 @@
         <kodetillegg>
             <mvaKode>81</mvaKode>
             <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <merknad>periodisering</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
@@ -4834,7 +4834,7 @@
         <kodetillegg>
             <mvaKode>81</mvaKode>
             <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <merknad>avvikende fakturering</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
@@ -4845,7 +4845,7 @@
         <kodetillegg>
             <mvaKode>81</mvaKode>
             <tema>Kjøp av varer fra utlandet (import)</tema>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <merknad>feil i regnskapsprogram</merknad>
             <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>

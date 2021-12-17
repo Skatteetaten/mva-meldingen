@@ -24,6 +24,7 @@ description: "XSD for VAT return (mva-melding)
 | 2021.11.09 | Updated code lists, removed remarks with "uttak" for code 32 [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                                         |
 | 2021.11.29 | Updated code lists, corrections to code 81 in [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                                                        |
 | 2021.12.03 | Updated code list summary, added adjustment specification for code 81.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 2021.12.07 | Minor updates to description of spraakTekst in mvaKodeSAFT.xml                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ## Version 1.0 of the XSD for the VAT return
 
@@ -285,19 +286,19 @@ Vedleggsfil
 | Specification line for code 31                           | withdrawal                                                                                 |
 | 33                                                       | Sales and withdrawals of goods and services (low rate)                                     |
 | Specification line for code 33                           | withdrawal                                                                                 |
-| 5                                                        | Sales of goods and services exempt from value added tax                                    |
+| 5                                                        | Sales and withdrawals of goods and services exempt from value added tax                    |
 | Specification line for code 5                            | withdrawal                                                                                 |
-| 6                                                        | Sales of goods and services outside the scope of the Value Added Tax Act                   |
+| 6                                                        | Sales and withdrawals of goods and services outside the scope of the Value Added Tax Act   |
 | Sales of goods and services to other countries (exports) |                                                                                            |
 | 52                                                       | Sales of goods and services exempt from value added tax to other countries                 |
 | Purchases of goods and services in Norway (Deductions)   |                                                                                            |
-| 1                                                        | Purchases of goods and services (standard rate)                                            |
+| 1                                                        | Purchases of goods and services with deductions (standard rate)                            |
 | Specification line for code 1                            | losses on outstanding claims and cancellations                                             |
 | Specification line for code 1                            | adjustment of input VAT on capital goods                                                   |
 | Specification line for code 1                            | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
-| 11                                                       | Purchases of goods and services (middle rate)                                              |
+| 11                                                       | Purchases of goods and services with deductions (middle rate)                              |
 | Specification line for code 11                           | losses on outstanding claims and cancellations                                             |
-| 13                                                       | Purchases of goods and services (low rate)                                                 |
+| 13                                                       | Purchases of goods and services with deduction entitlement (low rate)                      |
 | Specification line for code 13                           | losses on outstanding claims and cancellations                                             |
 | Purchases of goods from abroad (import)                  |                                                                                            |
 | 81                                                       | Purchases of goods from abroad with deductions (standard rate)                             |
@@ -320,10 +321,9 @@ Vedleggsfil
 | 89                                                       | Purchases of services from abroad without deduction entitlement (low rate)                 |
 | Fish etc.                                                |                                                                                            |
 | 32                                                       | Sales of fish and other marine wildlife resources                                          |
-| Specification line for code 32                           | withdrawal                                                                                 |
-| 12                                                       | Value added tax paid upon the purchase of fish and other marine wildlife resources         |
+| 12                                                       | Purchase of fish and other marine wildlife resources                                       |
 | Specification line for code 12                           | Losses on outstanding claims and cancellations                                             |
-| Emission allowances and gold                             |
+| Emission allowances and gold                             |                                                                                            |
 | 51                                                       | Sales of emission allowances and gold to businesses/self-employed persons                  |
 | 91                                                       | Purchases of emission allowances and gold                                                  |
 | 91                                                       | Deductions on purchases of emission allowances and gold                                    |
