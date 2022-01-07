@@ -151,7 +151,7 @@ Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/docume
 
 ### Finnes det en oversikt som viser hva de gamle mva-kodene skal føres som i SAF-T koder i ny mva-melding?
 
-Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her]()
+Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her](https://skatteetaten.github.io/mva-meldingen/documentation/faq/Speiling%20poster%20mva-melding%20-%20SAF-T%20koder%20.xlsx)
 
 ## Salgs- og kjøpsmelding
 
