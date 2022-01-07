@@ -137,6 +137,9 @@ Yes, we consider this in the validation, and have added a tolerance of +/- 3 kro
 
 This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
 
+### Is there an overview of how the old VAT-codes translate into SAF-T VAT-codes?
+Yes, it can be found [here](https://skatteetaten.github.io/mva-meldingen/documentation/faq/Speiling%20poster%20mva-melding%20-%20SAF-T%20koder%20.xlsx)
+
 ## Sales and purchase report
 
 ### What does the sales and purchase report entail, and when will it be launched?
