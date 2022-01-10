@@ -145,9 +145,13 @@ Det er enheten som står oppført som rapporterende enhet som må levere mva-mel
 
 Ja, vi tar høyde for dette i valideringen og har lagt inn en toleranse på +/- 3 kroner. Det er det samme som i dagens mva-løsning.
 
-### Vil det foreligge en kodeliste over disse "redigerte" beskrivelsene for de ulike kodene?
+### Vil det foreligge en kodeliste med beskrivelser for de ulike kodene?
 
 Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister)
+
+### Finnes det en oversikt som viser hva de gamle mva-kodene skal føres som i SAF-T koder i ny mva-melding?
+
+Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her](https://skatteetaten.github.io/mva-meldingen/documentation/faq/Speiling%20poster%20mva-melding%20-%20SAF-T%20koder%20.xlsx)
 
 ## Salgs- og kjøpsmelding
 
