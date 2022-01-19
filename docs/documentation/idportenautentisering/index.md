@@ -222,9 +222,9 @@ under forutsetning av at applikasjonen kan åpne en URL i en nettleser hvor logi
 
 Sluttbrukersystemet må gjøre følgende:
 
-- Starte system browser og gjøre autorisasjonskall mot ID-porten. Les mer om det her: <a href="https://difi.github.io/felleslosninger/oidc_protocol_authorize.html" target="_blank">https://difi.github.io/felleslosninger/oidc_protocol_authorize.html</a>, Brukeren blir da sendt til ID-porten for innlogging.
+- Starte system browser og gjøre autorisasjonskall mot ID-porten. Les mer om det her: <a href="https://docs.digdir.no/oidc_protocol_authorize.html" target="_blank">https://docs.digdir.no/oidc_protocol_authorize.html</a>, Brukeren blir da sendt til ID-porten for innlogging.
 - Sette opp en webserver som kan motta en requests til en av uri'ene Integrasjonens [gyldige redirect uri-er](#gyldige-redirect-uri-er). Etter vellykket pålogging i ID-porten vil browseren redirigeres til denne webserveren. I tilfelle applikasjonen er en SPA, må det settes opp en rute for en av disse uri-ene i stedet for en webserver.
-- Gjøre et tokenforespørsel. Les mer om det her: <a href="https://difi.github.io/felleslosninger/oidc_protocol_token.html" target="_blank">https://difi.github.io/felleslosninger/oidc_protocol_token.html</a>
+- Gjøre et tokenforespørsel. Les mer om det her: <a href="https://docs.digdir.no/oidc_protocol_token.html" target="_blank">https://docs.digdir.no/oidc_protocol_token.html</a>
 
 Vi benytter følgende testmiljø hos ID-porten:
 

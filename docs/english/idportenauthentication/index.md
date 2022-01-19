@@ -231,10 +231,10 @@ provided that the application can open a URL in a browser where login is perform
 
 The end user system must do the following:
 
-Launch system browser and make authorization calls against ID-Porten. Read more about it here: <a href="https://difi.github.io/felleslosninger/oidc_protocol_authorize.html" target="_blank"> https://difi.github.io/felleslosninger/oidc_protocol_authorize.html</a>. The user is then sent to the ID-Porten login.
+Launch system browser and make authorization calls against ID-Porten. Read more about it here: <a href="https://docs.digdir.no/oidc_protocol_authorize.html" target="_blank"> https://docs.digdir.no/oidc_protocol_authorize.html</a>. The user is then sent to the ID-Porten login.
 Set up a web server that can process requests for one of the [Gyldig(e) redirect uri-er](#gyldige-redirect-uri-er). After successfully logging in to ID-Porten, the browser will be redirected to the web server. In case the application is a SPA, a route must be set up and processed by the SPA for one of these uris.
 
-- Make a token request. Read more about it here: <a href="https://difi.github.io/felleslosninger/oidc_protocol_token.html" target="_blank"> https://difi.github.io/felleslosninger/oidc_protocol_token.html</a>
+- Make a token request. Read more about it here: <a href="https://docs.digdir.no/oidc_protocol_token.html" target="_blank"> https://docs.digdir.no/oidc_protocol_token.html</a>
 
 We use the following test environment at ID-Porten:
 

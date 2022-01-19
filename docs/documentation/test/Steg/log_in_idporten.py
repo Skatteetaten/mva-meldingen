@@ -105,7 +105,7 @@ def get_idtoken(**kwargs) -> dict:
     scope = 'openid skatteetaten:mvameldingvalidering skatteetaten:mvameldinginnsending'
 
     # Public clients need state parameter and PKCE challenge
-    # https://difi.github.io/felleslosninger/oidc_auth_spa.html
+    # https://docs.digdir.no/oidc_auth_spa.html
     # https://tools.ietf.org/html/draft-ietf-oauth-browser-based-apps-00
 
     state = urlsafe_b64encode(random_bytes(16)).decode().rstrip("=")
