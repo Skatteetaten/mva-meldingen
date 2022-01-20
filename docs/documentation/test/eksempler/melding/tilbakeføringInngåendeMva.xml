@@ -16,8 +16,8 @@
 		</skattleggingsperiode>
 		<fastsattMerverdiavgift>40000</fastsattMerverdiavgift>
 		<mvaSpesifikasjonslinje>
-		<mvaKode>1</mvaKode>
-	<spesifikasjon>tilbakefoeringAvInngaaendeMerverdiavgift</spesifikasjon>
+			<mvaKode>1</mvaKode>
+			<spesifikasjon>tilbakeføringAvInngåendeMerverdiavgift</spesifikasjon>
 			<merverdiavgift>40000</merverdiavgift>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>
@@ -29,6 +29,6 @@
 	</skattepliktig>
 	<meldingskategori>alminnelig</meldingskategori>
 	<merknad>
-		<beskrivelse>eksempel ark tilbakeføringInngåendeMva</beskrivelse>
+		<beskrivelse>eksempel ark tilbakeføringAvInngåendeMerverdiavgift</beskrivelse>
 	</merknad>
 </mvaMeldingDto>
