@@ -29,6 +29,6 @@
 	</skattepliktig>
 	<meldingskategori>alminnelig</meldingskategori>
 	<merknad>
-		<beskrivelse>eksempel ark tilbakeføringInngåendeMva</beskrivelse>
+		<beskrivelse>eksempel ark tapPåKrav</beskrivelse>
 	</merknad>
 </mvaMeldingDto>
