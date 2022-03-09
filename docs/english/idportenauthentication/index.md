@@ -163,7 +163,7 @@ The application depends on having an endpoint that can process requests to the r
 We have had some reports regarding challenges with the administration of static redirect URIs in connection with integration with ID-porten. When the amount of redirect URIs are unmanageable there is a recommendation for a dynamic soultion:
 
 The Norwegian Digitalisation Agency has recently published information that may be useful in this case:
-<a href="https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky" target="_blank"> https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky</a> (unavailable in English)
+<a href="https://docs.digdir.no/docs/idporten/oidc/oidc_api_admin" target="_blank"> https://docs.digdir.no/docs/idporten/oidc/oidc_api_admin</a> (unavailable in English)
 The system vendor will be the owner of the integration(s) associated with dynamic provisioning solutions.
 
 #### Alternative solution
@@ -241,4 +241,4 @@ We use the following test environment at ID-Porten:
 - authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py" target="_blank">log_in_idporten.py</a>
+For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py" target="_blank">log\_in\_idporten.py</a>
