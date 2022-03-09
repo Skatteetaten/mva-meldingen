@@ -241,4 +241,4 @@ We use the following test environment at ID-Porten:
 - authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py" target="_blank">log_in_idporten.py</a>
+For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py" target="_blank">log\_in\_idporten.py</a>
