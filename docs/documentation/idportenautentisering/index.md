@@ -159,7 +159,7 @@ Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen
 Dersom sluttbrukersystemet sin portefølje har veldig mange installasjoner som ikke deler domene kan de heller ikke dele `redirect_uri`. Installasjonene kan være både on-premise eller i skyen. Siden det er et krav at hvert domene må ha sin egen `redirect_uri` kan det bli utfordrende å administrere disse i selvbetjeningsportalen.
 
 Digitaliseringsetaten har nylig publisert informasjon som kan være nyttig i dette tilfellet:
-<a href="https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky" target="_blank"> https://docs.digdir.no/oidc_api_admin.html#run-time-provisjonering--sky</a>
+<a href="https://docs.digdir.no/docs/idporten/oidc/oidc_api_admin" target="_blank"> https://docs.digdir.no/docs/idporten/oidc/oidc_api_admin</a>
 Systemleverandøren vil være eieren av integrasjonen(e) knyttet til automatiske dynamiske løsninger.
 
 #### Alternativ løsning
