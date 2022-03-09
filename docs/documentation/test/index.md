@@ -1,8 +1,14 @@
 ---
 icon: "cloud"
-title: "Test"
-description: "Testcaser mva-melding og test plan"
+title: "Test & Produksjon"
+description: "Informasjon om testing og produksjon"
 ---
+
+## Endringslogg
+
+| Dato       | Hva ble endret?                                                                              |
+| :--------- | :------------------------------------------------------------------------------------------- |
+| 2022.03.09 | La til miljøinformasjon for [produksjon](#produksjonsmilj%C3%B8) og [test](#testmilj%C3%B8). |
 
 ## Krav til testgjennomføring
 
@@ -29,9 +35,10 @@ Prosjektet vil tilby egne møter med fokus på testplanlegging og gjennomføring
 ## Oppsummering av test og oppstart i produksjon
 
 Systemleverandørene skal etter avsluttet testperiode og i forkant av produksjon oppsummere testen. Oppsummeringen skal vise hva som er testet, samt status etter gjennomført test inkludert oversikt over feil og mangler. Systemleverandørene skal på skatteetatens forespørsel fremlegge dokumentasjon på hvordan integrasjon er
-testet. 
+testet.
 
 ## Testapplikasjon
+
 Det er skrevet en testapplikasjon som kan brukes i forbindelse med test av løsningen mot Skatteetaten. Den er skrevet i [jupyter notebook formatet](https://jupyter.org/):
 
 1. [Jupyter notebook demo for henting og validering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Last ned katalogen 'test' og kjør skriptet demo.ipynb (skriptet vil utføre alle trinn som inngår i prosessen: kalle ping tjeneste å sjekke kobling og validere mva-melding)
@@ -42,10 +49,28 @@ Det er skrevet en testapplikasjon som kan brukes i forbindelse med test av løsn
 
 4. [Eksempel XML-er](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
 
-## 'Test 4'
+## Testmiljø
 
-I løpet av uke 19 vil all dokumentasjon være oppdatert og tilgjengelig her på github.
+### Url'er til testmiljøet
 
-Testmiljøet vil være tilgjengelig fra 25.mai.
+| Tjeneste              | Url                                                                                 |
+| :-------------------- | :---------------------------------------------------------------------------------- |
+| Validering            | https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider |
+| Innsending            | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/                    |
+| Instans API           | https://skd.apps.tt02.altinn.no/skd/skd/mva-melding-innsending-etm2/instances       |
+| ID-porten integrasjon | https://oidc-ver2.difi.no/idporten-oidc-provider/.well-known/openid-configuration   |
+| Altinn tokenveksling  | https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten            |
 
-![Testplan](Testplan.png)
+## Produksjonsmiljø
+
+Produksjonsmiljøet er funksjonelt likt med testmiljøet.
+
+### Url'er til produksjonsmiljøet
+
+| Tjeneste              | Url                                                                                 |
+| :-------------------- | :---------------------------------------------------------------------------------- |
+| Validering            | https://idporten.api.skatteetaten.no/api/mva/grensesnittstoette/mva-melding/valider |
+| Innsending            | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/                           |
+| Instans API           | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/instances                  |
+| ID-porten integrasjon | https://oidc.difi.no/idporten-oidc-provider/.well-known/openid-configuration        |
+| Altinn tokenveksling  | https://platform.altinn.no/authentication/api/v1/exchange/id-porten                 |
