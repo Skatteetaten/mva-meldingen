@@ -52,13 +52,13 @@ Some test applications has been written in jupyter notebook, for use when testin
 
 ### Test URLS:
 
-| Service                                | Url                                                                                 |
-| :------------------------------------- | :---------------------------------------------------------------------------------- |
-| Validation Service                     | https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider |
-| Submission Service                     | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/                    |
-| Instance API-url                       | https://skd.apps.tt02.altinn.no/skd/skd/mva-melding-innsending-etm2/instances       |
-| ID-porten integration production uri’s | https://oidc-ver2.difi.no/idporten-oidc-provider/.well-known/openid-configuration   |
-| Altinn token exchange uri              | https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten            |
+| Service                   | Url                                                                                 |
+| :------------------------ | :---------------------------------------------------------------------------------- |
+| Validation Service        | https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider |
+| Submission Service        | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/                    |
+| Instance API-url          | https://skd.apps.tt02.altinn.no/skd/skd/mva-melding-innsending-etm2/instances       |
+| ID-porten integration     | https://oidc-ver2.difi.no/idporten-oidc-provider/.well-known/openid-configuration   |
+| Altinn token exchange uri | https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten            |
 
 ## Production environment
 
@@ -66,10 +66,10 @@ The production environment is functionally equal to the test environment.
 
 ### Production URLS:
 
-| Service                                | Url                                                                                 |
-| :------------------------------------- | :---------------------------------------------------------------------------------- |
-| Validation Service                     | https://idporten.api.skatteetaten.no/api/mva/grensesnittstoette/mva-melding/valider |
-| Submission Service                     | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/                           |
-| Instance API-url                       | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/instances                  |
-| ID-porten integration production uri’s | https://oidc.difi.no/idporten-oidc-provider/.well-known/openid-configuration        |
-| Altinn token exchange uri              | https://platform.altinn.no/authentication/api/v1/exchange/id-porten                 |
+| Service                   | Url                                                                                 |
+| :------------------------ | :---------------------------------------------------------------------------------- |
+| Validation Service        | https://idporten.api.skatteetaten.no/api/mva/grensesnittstoette/mva-melding/valider |
+| Submission Service        | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/                           |
+| Instance API-url          | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/instances                  |
+| ID-porten integration     | https://oidc.difi.no/idporten-oidc-provider/.well-known/openid-configuration        |
+| Altinn token exchange uri | https://platform.altinn.no/authentication/api/v1/exchange/id-porten                 |
