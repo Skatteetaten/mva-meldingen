@@ -546,6 +546,10 @@ The submission will now be in the feedback step.
 _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
 
+### Payment information available
+
+When the submission is completed and the instance is in the feedback step, the payment information will be available for download. It can be found by downloading the instance and downloading the file `betalingsinformasjon.xml`, and has the data type `payment information`. See [feedback files](#feedback-files).
+
 ## Retrieve feedback
 
 The Tax Administration has created 2 api-endpoints to simplify the development of this step:
@@ -627,6 +631,8 @@ Example Value
 ### Feedback files
 
 Once the Tax Administration has given feedback, the files for the feedback can be downloaded from the instance.
+
+Payment information will be available when the submission is completed, it is being produced when [completing the vat return submission](#complete-vat-return-submission).
 
 Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
 

@@ -1,8 +1,14 @@
 ---
 icon: "cloud"
-title: "Test"
-description: "Test cases VAT-return and test plan"
+title: "Test & Production"
+description: "Test and production information"
 ---
+
+## Changelog
+
+| Date       | Changes                                                                                                     |
+| :--------- | :---------------------------------------------------------------------------------------------------------- |
+| 2022.03.09 | Updated documentation with [Production](#production-environment) and [Test](#test-environment) environments |
 
 ## Testing requirements
 
@@ -20,7 +26,7 @@ Connection against the test environment occurs through ID-porten and for the pur
 
 The ERP system providers must contact the project at mva-modernisering@skatteetaten.no to receive test users. These are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test VAT-return. Ordinary Digdir test users will not work for this purpose.
 
-Skatteetaten's test environment will be available as long as it is needed, after the new VAT-return is launched in January 2022. 
+Skatteetaten's test environment will be available as long as it is needed, after the new VAT-return is launched in January 2022.
 
 ## Test planning
 
@@ -42,10 +48,28 @@ Some test applications has been written in jupyter notebook, for use when testin
 
 4. [Example XML's](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
 
-## 'Test 4'
+## Test environment
 
-During week 19 will all of the documentation be updated and available here on github.
+### Test URLS:
 
-The test environment will be available from the 25th of May.
+| Service                                | Url                                                                                 |
+| :------------------------------------- | :---------------------------------------------------------------------------------- |
+| Validation Service                     | https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider |
+| Submission Service                     | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/                    |
+| Instance API-url                       | https://skd.apps.tt02.altinn.no/skd/skd/mva-melding-innsending-etm2/instances       |
+| ID-porten integration production uri’s | https://oidc-ver2.difi.no/idporten-oidc-provider/.well-known/openid-configuration   |
+| Altinn token exchange uri              | https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten            |
 
-![Testplan](Testplan_eng.png)
+## Production environment
+
+The production environment is functionally equal to the test environment.
+
+### Production URLS:
+
+| Service                                | Url                                                                                 |
+| :------------------------------------- | :---------------------------------------------------------------------------------- |
+| Validation Service                     | https://idporten.api.skatteetaten.no/api/mva/grensesnittstoette/mva-melding/valider |
+| Submission Service                     | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/                           |
+| Instance API-url                       | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/instances                  |
+| ID-porten integration production uri’s | https://oidc.difi.no/idporten-oidc-provider/.well-known/openid-configuration        |
+| Altinn token exchange uri              | https://platform.altinn.no/authentication/api/v1/exchange/id-porten                 |

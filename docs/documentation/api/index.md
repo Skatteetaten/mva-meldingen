@@ -8,15 +8,16 @@ description: "Api-beskrivelser"
 
 ## Endringslogg
 
-| Dato       | Hva ble endret?                                                       |
-| :--------- | :-------------------------------------------------------------------- |
-| 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding). |
-| 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.              |
-| 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                 |
-| 2021.11.04 | Oppdatert URL for valideringstjenesten.                               |
-| 2021.11.08 | Oppdatert liste over valideringsfeil                                  |
-| 2021.11.11 | Oppdatert feilmeldinger ved utfylling av mva-melding                  |
-| 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                       |
+| Dato       | Hva ble endret?                                                                             |
+| :--------- | :------------------------------------------------------------------------------------------ |
+| 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding).                       |
+| 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.                                    |
+| 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                                       |
+| 2021.11.04 | Oppdatert URL for valideringstjenesten.                                                     |
+| 2021.11.08 | Oppdatert liste over valideringsfeil                                                        |
+| 2021.11.11 | Oppdatert feilmeldinger ved utfylling av mva-melding                                        |
+| 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                                             |
+| 2022.03.08 | Betalingsinformasjon kan [lastes ned](#tilbakemeldingsfiler) etter fullføring av innsending |
 
 ## Introduksjon
 
@@ -506,6 +507,10 @@ Innsendingen vil nå være i tilbakemeldings-steget.
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
+### Betalingsinformasjon tilgjengelig
+
+Når Innsendingen er fullført og instansen nå er i tilbakemeldings-steget, vil betalingsinformasjonen være tilgjengelig på instansen. Den kan finnes ved å hente instansen og laste ned fila `betalingsinformasjon.xml`, og har datatypen `betalingsinformasjon`. Se [tilbakemeldingsfiler](#tilbakemeldingsfiler).
+
 ## Hent tilbakemelding
 
 Skatteetaten har laget 2 api-endepunkter for å forenkle utviklingen av dette steget:
@@ -586,6 +591,8 @@ Eksempel verdi
 ### Tilbakemeldingsfiler
 
 Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne lastes ned fra instansen.
+
+Betalingsinformasjonen vil kunne lastes etter [innsendingen er fullført](#fullf%C3%B8r-mvameldinginnsending), da den blir produsert under fullføringen.
 
 Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
 
