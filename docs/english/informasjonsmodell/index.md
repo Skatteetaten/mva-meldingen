@@ -169,13 +169,13 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
         This will be done by making the field optional in a transition and removed at a appropriate time.
 	</td>
   </tr>
-  <tr><td>oprettetAv</td>
+  <tr><td>opprettetAv</td>
     <td>
         Description: This field should contain the name of the logged in user. <br>
         Purpose: The content of this field will be displayed in Altinn.
 	</td>
   </tr>
-  <tr><td>oprettingstidspunkt</td>
+  <tr><td>opprettingstidspunkt</td>
     <td>
         Description: This field will be removed since we get the required information from the events on the instance. <br>
         This will be done by making the field optional in a transition and removed at a appropriate time.
