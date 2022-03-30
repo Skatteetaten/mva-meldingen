@@ -144,7 +144,7 @@ Det er enheten som står oppført som rapporterende enhet som må levere mva-mel
 
 ### Når man kutter desimaler på grunnlag og på mva-beløp, da kan man få "avvik" når man kontrollerer ved å gange grunnlaget med mva-prosent. Vil dette slå ut på valideringen?
 
-Ja, vi tar høyde for dette i valideringen og har lagt inn en toleranse på +/- 3 kroner. Det er det samme som i dagens mva-løsning.
+Ja, vi tar høyde for dette i valideringen og har lagt inn en toleranse på +/- 10 kroner. Det er en økning fra den gamle mva-løsningen som hadde en toleranse på +/- 3 kroner.
 
 ### Vil det foreligge en kodeliste med beskrivelser for de ulike kodene?
 
