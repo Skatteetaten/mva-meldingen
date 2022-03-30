@@ -131,7 +131,7 @@ The reporting entity must deliver the VAT-report from the accounting system or i
 
 ### When you round decimals on the basis and on the amount of VAT, then you can get "deviations" when you check by multiplying the basis by VAT percentage. Will this affect the validation?
 
-Yes, we consider this in the validation, and have added a tolerance of +/- 3 kroner. The tolerance is the same as in today's VAT solution.
+Yes, we consider this in the validation, and have added a tolerance of +/- 10 kroner. The tolerance is increased from the previous VAT solution, where the tolerance was +/- 3 kroner.
 
 ### Will there be a code list of descriptions for the various codes?
 
