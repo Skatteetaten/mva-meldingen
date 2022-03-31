@@ -7,8 +7,9 @@ description: "Test and production information"
 ## Changelog
 
 | Date       | Changes                                                                                                     |
-| :--------- | :---------------------------------------------------------------------------------------------------------- |
+|:-----------|:------------------------------------------------------------------------------------------------------------|
 | 2022.03.09 | Updated documentation with [Production](#production-environment) and [Test](#test-environment) environments |
+| 2022.03.31 | Corrected typo for Altinn Instance API url in test environment                                              |
 
 ## Testing requirements
 
@@ -56,7 +57,7 @@ Some test applications has been written in jupyter notebook, for use when testin
 | :------------------------ | :---------------------------------------------------------------------------------- |
 | Validation Service        | https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider |
 | Submission Service        | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/                    |
-| Instance API-url          | https://skd.apps.tt02.altinn.no/skd/skd/mva-melding-innsending-etm2/instances       |
+| Instance API-url          | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances       |
 | ID-porten integration     | https://oidc-ver2.difi.no/idporten-oidc-provider/.well-known/openid-configuration   |
 | Altinn token exchange uri | https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten            |
 
