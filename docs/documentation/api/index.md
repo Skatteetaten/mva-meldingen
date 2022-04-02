@@ -280,7 +280,7 @@ Content:
 </mvaMeldingInnsending>
 ```
 
-Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/" target="_blank">Test</a>.
+Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/konvolutt" target="_blank">Test</a>.
 
 ### Feilmeldinger
 
