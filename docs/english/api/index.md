@@ -312,7 +312,7 @@ Content:
     </mvameldinginnsending>
 ```
 
-Example of xml file for VAT return submission can be found under <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/" target="_blank">Test</a>.
+Example of xml file for VAT return submission can be found under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/konvolutt" target="_blank">Test</a>.
 
 ### Error Messages
 
