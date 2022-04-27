@@ -9,6 +9,17 @@ description: "Regler for utfylling av mva-melding "
 <table align=center>
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
     <tr>
+      <td>2022.04.27</td>
+      <td>
+          <ul>
+            <li> R060 forlis unntak lagt til</li>
+            <li> R079 KID nummer må oppfylle mod10 eller mod11 validering </li>
+            <li> R079 KID nummer kan ikke være lik kontonummeret </li>
+            <li> R084 sjekk at det er innsendt spesifikasjonslinjer når fastsatt merverdiavgift har et beløp som er ikke 0 </li>
+          </ul>      
+      </td>
+    </tr>
+    <tr>
       <td>2021.12.14</td>
       <td>
           <ul>
@@ -794,7 +805,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                     (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
                         (
                             (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
-                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                                (skattemeldingGjelderForlis eller skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                             )
                 }
             }
@@ -919,7 +930,9 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             valideringsregel {
                 (kidNummer har innhold) såSkal {
                     (kidNummer inneholde kunTallEllerKunTallMedBindestrekEtterSisteSiffer) og
-                        (kidNummer haLengdeStørreEnn 1) og (kidNummer haLengdeMindreEnn 26)
+                        (kidNummer haLengdeStørreEnn 1) og (kidNummer haLengdeMindreEnn 26) og
+                        (kidNummer.oppfyllerMOD10EllerMOD11Validering()) og
+                        (kidNummer erIkkeLik registrertKontonummer)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -976,6 +989,20 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R083 }
+        }
+    ),
+    
+    MVA_MELDINGSINNHOLD_BELØP_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER(
+        "Det må sendes inn mva-koder når det er oppgitt beløp i 'fastsatt merverdiavgift'."
+        {
+            valideringsregel {
+                skattegrunnlagOgBeregnetSkatt.fastsattMerverdiavgift.ikkeEr(0.0) såSkal {
+                    mvaSpesifikasjonslinje.ikkeVæreEnTomListe()
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R084 }
         }
     ),
 
