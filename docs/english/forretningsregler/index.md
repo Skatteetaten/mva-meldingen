@@ -9,6 +9,17 @@ description: "Validation rules for the VAT tax return"
 <table align=center>
 	<tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
 	    <tr>
+      <td>2022.04.27</td>
+      <td>
+          <ul>
+            <li> R060 shipwreck exception added</li>
+            <li> R079 KID number must meet mod10 or mod11 requirements </li>
+            <li> R079 KID number can not be the same as account number </li>
+            <li> R084 check for VAT specification lines when declared VAT amount (fastsatt merverdiavgift) field has a non-zero value </li>
+          </ul>      
+      </td>
+    </tr>
+	    <tr>
       <td>2021.12.14</td>
       <td>
           <ul>
@@ -799,7 +810,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
                     (nå væreEtter skatteleggingsperiodeSluttdato) medmindre
                         (
                             (nå erEtterEllerLik skatteleggingsperiodeStartdato) og
-                                (skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
+                                (skattemeldingGjelderForlis eller skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo)
                             )
                 }
             }
@@ -924,7 +935,10 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 (kidNummer har innhold) såSkal {
                     (kidNummer inneholde kunTallEllerKunTallMedBindestrekEtterSisteSiffer) og
-                        (kidNummer haLengdeStørreEnn 1) og (kidNummer haLengdeMindreEnn 26)
+                        (kidNummer haLengdeStørreEnn 1) og (kidNummer haLengdeMindreEnn 26) og
+			(kidNummer haLengdeStørreEnn 1) og (kidNummer haLengdeMindreEnn 26) og
+                        (kidNummer.oppfyllerMOD10EllerMOD11Validering()) og
+                        (kidNummer erIkkeLik registrertKontonummer)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -983,7 +997,21 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R083 }
         }
     ),
-
+    
+    MVA_MELDINGSINNHOLD_BELØP_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER(
+        "Det må sendes inn mva-koder når det er oppgitt beløp i 'fastsatt merverdiavgift'."
+        {
+            valideringsregel {
+                skattegrunnlagOgBeregnetSkatt.fastsattMerverdiavgift.ikkeEr(0.0) såSkal {
+                    mvaSpesifikasjonslinje.ikkeVæreEnTomListe()
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R084 }
+        }
+    ),
+    
     MVA_KODE_MERKNAD_FORTEGN_GYLDIG_VANLIG_FORTEGN(
         "Det må fylles ut gyldig merknad på kode med vanlig fortegn." {
             valideringsregel {
