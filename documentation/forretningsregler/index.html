@@ -52,6 +52,17 @@
 <table align="center">
   <tbody><tr><th style="width:25%;text-align:left">Dato</th><th style="text-align:left"> Hva ble endret? </th></tr>
     <tr>
+      <td>2022.04.27</td>
+      <td>
+          <ul>
+            <li> R060 forlis unntak lagt til</li>
+            <li> R079 KID nummer må oppfylle mod10 eller mod11 validering </li>
+            <li> R079 KID nummer kan ikke være lik kontonummeret </li>
+            <li> R084 sjekk at det er innsendt spesifikasjonslinjer når fastsatt merverdiavgift har et beløp som er ikke 0 </li>
+          </ul>      
+      </td>
+    </tr>
+    <tr>
       <td>2021.12.14</td>
       <td>
           <ul>
@@ -824,7 +835,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
                     <span class="token punctuation">(</span>nå væreEtter skatteleggingsperiodeSluttdato<span class="token punctuation">)</span> <span class="token function">medmindre</span>
                         <span class="token punctuation">(</span>
                             <span class="token punctuation">(</span>nå erEtterEllerLik skatteleggingsperiodeStartdato<span class="token punctuation">)</span> <span class="token function">og</span>
-                                <span class="token punctuation">(</span>skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo<span class="token punctuation">)</span>
+                                <span class="token punctuation">(</span>skattemeldingGjelderForlis eller skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo<span class="token punctuation">)</span>
                             <span class="token punctuation">)</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -949,7 +960,9 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             valideringsregel <span class="token punctuation">{</span>
                 <span class="token punctuation">(</span>kidNummer har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     <span class="token punctuation">(</span>kidNummer inneholde kunTallEllerKunTallMedBindestrekEtterSisteSiffer<span class="token punctuation">)</span> <span class="token function">og</span>
-                        <span class="token punctuation">(</span>kidNummer haLengdeStørreEnn <span class="token number">1</span><span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>kidNummer haLengdeMindreEnn <span class="token number">26</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">(</span>kidNummer haLengdeStørreEnn <span class="token number">1</span><span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>kidNummer haLengdeMindreEnn <span class="token number">26</span><span class="token punctuation">)</span> <span class="token function">og</span>
+                        <span class="token punctuation">(</span>kidNummer<span class="token punctuation">.</span><span class="token function">oppfyllerMOD10EllerMOD11Validering</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">og</span>
+                        <span class="token punctuation">(</span>kidNummer erIkkeLik registrertKontonummer<span class="token punctuation">)</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
@@ -1006,6 +1019,20 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R083 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
+    MVA_MELDINGSINNHOLD_BELØ<span class="token function">P_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Det må sendes inn mva-koder når det er oppgitt beløp i &#x27;fastsatt merverdiavgift&#x27;.&quot;</span>
+        <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                skattegrunnlagOgBeregnetSkatt<span class="token punctuation">.</span>fastsattMerverdiavgift<span class="token punctuation">.</span><span class="token function">ikkeEr</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span>ikkeVæ<span class="token function">reEnTomListe</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R084 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 

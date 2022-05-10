@@ -52,6 +52,17 @@
 <table align="center">
 	<tbody><tr><th style="width:25%;text-align:left">Date</th><th style="text-align:left"> What was changed? </th></tr>
 	    <tr>
+      <td>2022.04.27</td>
+      <td>
+          <ul>
+            <li> R060 shipwreck exception added</li>
+            <li> R079 KID number must meet mod10 or mod11 requirements </li>
+            <li> R079 KID number can not be the same as account number </li>
+            <li> R084 check for VAT specification lines when declared VAT amount (fastsatt merverdiavgift) field has a non-zero value </li>
+          </ul>      
+      </td>
+    </tr>
+	    <tr>
       <td>2021.12.14</td>
       <td>
           <ul>
@@ -827,7 +838,7 @@ The following severity levels are defined : AVVIKENDE<em>SKATTEMELDING (anomalou
                     <span class="token punctuation">(</span>nå væreEtter skatteleggingsperiodeSluttdato<span class="token punctuation">)</span> <span class="token function">medmindre</span>
                         <span class="token punctuation">(</span>
                             <span class="token punctuation">(</span>nå erEtterEllerLik skatteleggingsperiodeStartdato<span class="token punctuation">)</span> <span class="token function">og</span>
-                                <span class="token punctuation">(</span>skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo<span class="token punctuation">)</span>
+                                <span class="token punctuation">(</span>skattemeldingGjelderForlis eller skattepliktigHarMeldtOpphør eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller skattepliktigErRegistrertSomDødsbo<span class="token punctuation">)</span>
                             <span class="token punctuation">)</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -952,7 +963,10 @@ The following severity levels are defined : AVVIKENDE<em>SKATTEMELDING (anomalou
             valideringsregel <span class="token punctuation">{</span>
                 <span class="token punctuation">(</span>kidNummer har innhold<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
                     <span class="token punctuation">(</span>kidNummer inneholde kunTallEllerKunTallMedBindestrekEtterSisteSiffer<span class="token punctuation">)</span> <span class="token function">og</span>
-                        <span class="token punctuation">(</span>kidNummer haLengdeStørreEnn <span class="token number">1</span><span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>kidNummer haLengdeMindreEnn <span class="token number">26</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">(</span>kidNummer haLengdeStørreEnn <span class="token number">1</span><span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>kidNummer haLengdeMindreEnn <span class="token number">26</span><span class="token punctuation">)</span> <span class="token function">og</span>
+			<span class="token punctuation">(</span>kidNummer haLengdeStørreEnn <span class="token number">1</span><span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>kidNummer haLengdeMindreEnn <span class="token number">26</span><span class="token punctuation">)</span> <span class="token function">og</span>
+                        <span class="token punctuation">(</span>kidNummer<span class="token punctuation">.</span><span class="token function">oppfyllerMOD10EllerMOD11Validering</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">og</span>
+                        <span class="token punctuation">(</span>kidNummer erIkkeLik registrertKontonummer<span class="token punctuation">)</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
@@ -1011,7 +1025,21 @@ The following severity levels are defined : AVVIKENDE<em>SKATTEMELDING (anomalou
             regelnummer <span class="token punctuation">{</span> R083 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
+    
+    MVA_MELDINGSINNHOLD_BELØ<span class="token function">P_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Det må sendes inn mva-koder når det er oppgitt beløp i &#x27;fastsatt merverdiavgift&#x27;.&quot;</span>
+        <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                skattegrunnlagOgBeregnetSkatt<span class="token punctuation">.</span>fastsattMerverdiavgift<span class="token punctuation">.</span><span class="token function">ikkeEr</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                    mvaSpesifikasjonslinje<span class="token punctuation">.</span>ikkeVæ<span class="token function">reEnTomListe</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R084 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    
     <span class="token function">MVA_KODE_MERKNAD_FORTEGN_GYLDIG_VANLIG_FORTEGN</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Det må fylles ut gyldig merknad på kode med vanlig fortegn.&quot;</span> <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
