@@ -10,6 +10,7 @@ description: "Informasjon om testing og produksjon"
 |:-----------|:---------------------------------------------------------------------------------------------|
 | 2022.03.09 | La til miljøinformasjon for [produksjon](#produksjonsmilj%C3%B8) og [test](#testmilj%C3%B8). |
 | 2022.03.31 | Rettet en skrivefeil på Altinn instans API for testmiljøet                                   |
+| 2022.05.11 | La til ny informasjon om testbrukere fra Tenor                                               |
 
 ## Krav til testgjennomføring
 
