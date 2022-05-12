@@ -10,6 +10,7 @@ description: "Test and production information"
 |:-----------|:------------------------------------------------------------------------------------------------------------|
 | 2022.03.09 | Updated documentation with [Production](#production-environment) and [Test](#test-environment) environments |
 | 2022.03.31 | Corrected typo for Altinn Instance API url in test environment                                              |
+| 2000.05.11 | Added information about testusers from Tenor test data search                                               |
 
 ## Testing requirements
 
