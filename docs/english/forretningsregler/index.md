@@ -12,7 +12,7 @@ description: "Validation rules for the VAT tax return"
       <td>2022.05.18</td>
       <td>
           <ul>
-            <li> R085 Check for amount of basis exceeds the maximum value according to requirements from DVH</li>
+            <li> R085 Check the value of the VAT basis does not exceed the allowed maximum value</li>
           </ul>      
       </td>
     </tr>

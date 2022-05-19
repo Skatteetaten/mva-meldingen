@@ -12,7 +12,7 @@ description: "Regler for utfylling av mva-melding "
       <td>2022.05.18</td>
       <td>
           <ul>
-            <li> R085 sjekk at beløpet på grunnlag er lik eller mindre enn maxverdi i henhold til krav fra DVH</li>
+            <li> R085 sjekk at beløpet på grunnlaget er mindre enn maks verdi"</li>
           </ul>      
       </td>
     </tr>
