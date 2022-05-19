@@ -9,6 +9,14 @@ description: "Regler for utfylling av mva-melding "
 <table align=center>
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
     <tr>
+      <td>2022.05.18</td>
+      <td>
+          <ul>
+            <li> R085 sjekk at beløpet på grunnlaget er mindre enn maks verdi"</li>
+          </ul>      
+      </td>
+    </tr>
+    <tr>
       <td>2022.04.27</td>
       <td>
           <ul>
@@ -1003,6 +1011,20 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R084 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_GRUNNLAG_OVERSTIGER_MAKS_VERDI(
+        "Beløpet på grunnlaget overstiger maks verdi."
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.grunnlag ikkeEr tomt }
+                    .skal { linje -> linje.grunnlag væreLikEllerMindreEnn maksGrunnlagVerdi }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R085 }
         }
     ),
 

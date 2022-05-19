@@ -8,7 +8,15 @@ description: "Validation rules for the VAT tax return"
 
 <table align=center>
 	<tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
-	    <tr>
+    <tr>
+      <td>2022.05.18</td>
+      <td>
+          <ul>
+            <li> R085 Check the value of the VAT basis does not exceed the allowed maximum value</li>
+          </ul>      
+      </td>
+    </tr>
+    <tr>
       <td>2022.04.27</td>
       <td>
           <ul>
@@ -19,7 +27,7 @@ description: "Validation rules for the VAT tax return"
           </ul>      
       </td>
     </tr>
-	    <tr>
+    <tr>
       <td>2021.12.14</td>
       <td>
           <ul>
@@ -1009,6 +1017,20 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R084 }
+        }
+    ),
+
+    MVA_MELDINGSINNHOLD_GRUNNLAG_OVERSTIGER_MAKS_VERDI(
+        "Beløpet på grunnlaget overstiger maks verdi."
+        {
+            valideringsregel {
+                mvaSpesifikasjonslinje
+                    .hvor { linje -> linje.grunnlag ikkeEr tomt }
+                    .skal { linje -> linje.grunnlag væreLikEllerMindreEnn maksGrunnlagVerdi }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R085 }
         }
     ),
     
