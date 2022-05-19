@@ -52,6 +52,14 @@
 <table align="center">
   <tbody><tr><th style="width:25%;text-align:left">Dato</th><th style="text-align:left"> Hva ble endret? </th></tr>
     <tr>
+      <td>2022.05.18</td>
+      <td>
+          <ul>
+            <li> R085 sjekk at beløpet på grunnlaget er mindre enn maks verdi&quot;</li>
+          </ul>      
+      </td>
+    </tr>
+    <tr>
       <td>2022.04.27</td>
       <td>
           <ul>
@@ -1033,6 +1041,20 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R084 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token function">MVA_MELDINGSINNHOLD_GRUNNLAG_OVERSTIGER_MAKS_VERDI</span><span class="token punctuation">(</span>
+        <span class="token string">&quot;Beløpet på grunnlaget overstiger maks verdi.&quot;</span>
+        <span class="token punctuation">{</span>
+            valideringsregel <span class="token punctuation">{</span>
+                mvaSpesifikasjonslinje
+                    <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>grunnlag ikkeEr tomt <span class="token punctuation">}</span>
+                    <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>grunnlag væreLikEllerMindreEnn maksGrunnlagVerdi <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
+            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
+            regelnummer <span class="token punctuation">{</span> R085 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
