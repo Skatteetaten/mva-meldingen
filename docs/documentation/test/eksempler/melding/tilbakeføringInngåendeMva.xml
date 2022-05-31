@@ -19,6 +19,9 @@
 			<mvaKode>1</mvaKode>
 			<spesifikasjon>tilbakeføringAvInngåendeMerverdiavgift</spesifikasjon>
 			<merverdiavgift>40000</merverdiavgift>
+			<merknad>
+        			<utvalgtMerknad>fast eiendom</utvalgtMerknad>
+      			</merknad>
 		</mvaSpesifikasjonslinje>
 	</skattegrunnlagOgBeregnetSkatt>
 	<betalingsinformasjon>
