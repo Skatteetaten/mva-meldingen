@@ -121,9 +121,11 @@ Supplementary returns will no longer be in use. If there are changes in the ERP 
 
 There are two alternatives:
 
-1. Reopen the period (eg 1st term) and post the new information in this period, before the period closes again. This means that the SAF-T file that supports the last VAT-return can be taken from this accounting period. The tax authorities recommend reporting in this manner if possible.
+1. Reopen the period (eg 1st term) and post the new information in this period, before the period is closed again. This means that the SAF-T file that supports the last VAT-return (given audit where SAF-T file submission has been required) can be taken from this accounting period. The tax authorities recommend reporting in this manner if possible.
 
-2. Register the transaction in a new period, if the ERP functionality allows sorting the transactions in the in the right period. The transactions must be possible to separate from the other transactions, and the chain of audit must be maintained. The SAF-T file that supports the last submitted VAT return (in case of audit) must then also contain the later period in which the new transactions / dispositions are posted. This may lead to submitting two SAF-T files for two different periods, to include the entire basis for the corrected VAT-return.
+2. Register the transaction in a new period (for example 2nd term), if the ERP functionality allows sorting the transactions in the in the right period. The transactions must be possible to separate from the other transactions, and the chain of audit must be maintained. The SAF-T file that supports the last submitted VAT return for 1st term (in case of audit) must then also contain the later period in which the new transactions / dispositions are posted. This may lead to submitting two SAF-T files for two different periods, to include the entire basis for the corrected VAT-return.
+
+SAF-T files should only be submitted when requested by the Tax Authority, for audit purposes. 
 
 ### How should jointly registered companies report the VAT return?
 
