@@ -133,9 +133,12 @@ Tilleggsmelding vil ikke lenger være aktuelt. Hvis man gjør endringer i regnsk
 
 Det er er to alternative måter å løse dette på:
 
-1. Gjenåpne perioden (f.eks. 1. termin) og bokføre de nye opplysninger i denne perioden, før perioden lukkes på nytt. Det vil si at SAF-T filen som underbygger siste mva-melding kan tas fra denne regnskapsperioden. Skatteetaten anbefaler at det gjøres på denne måten dersom dette er mulig.
+1.	Gjenåpne perioden (f.eks. 1. termin) og bokføre de nye opplysningerne i denne perioden, før perioden lukkes på nytt. Det vil si at SAF-T filen som underbygger siste mva-melding (gitt en etterfølgende kontroll med krav om innsending av SAF-T regnskapsfil) kan tas fra denne regnskapsperioden. Skatteetaten anbefaler at det gjøres på denne måten dersom dette er mulig.
 
-2. Registrere transaksjonen i ny periode, gitt funksjonalitet i regnskapssystemet som gjør at transaksjonene kan skilles ut på riktig periode. Transaksjonen må enkelt kunne skilles ut fra de andre transaksjonene, og kontrollsporet må ivaretas. SAF-T filen som underbygger sist innsendte mva-melding (gitt kontroll) må da også inneholde den senere perioden der de nye transaksjonene/disposisjonene er bokført. Dette kan medføre at man sender inn to SAF-T filer tilhørende to ulike perioder, for å få med seg hele grunnlaget for korreksjonsmeldingen.
+2.	Registrere transaksjonen i ny periode (f.eks. 2. termin), gitt funksjonalitet i regnskapssystemet som gjør at transaksjonene kan skilles ut på riktig periode. Transaksjonen må enkelt kunne skilles ut fra de andre transaksjonene, og kontrollsporet må ivaretas. SAF-T filen som underbygger sist innsendte mva-melding for 1. termin (gitt kontroll) må da også inneholde den senere perioden der de nye transaksjonene/disposisjonene er bokført. Dette kan medføre at man sender inn to SAF-T filer tilhørende to ulike perioder, for å få med seg hele grunnlaget for korreksjonsmeldingen.
+
+Det understrekes at SAF-T regnskapsfil kun skal sendes inn på forespørsel fra Skatteetaten, i forbindelse med kontroll.
+
 
 
 ### Hvordan skal fellesregistrerte selskaper rapportere mva-meldingen?
