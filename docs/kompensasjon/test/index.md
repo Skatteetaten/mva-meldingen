@@ -7,7 +7,7 @@ description: "Informasjon om testing og produksjon"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                                              |
-|:-----------|:---------------------------------------------------------------------------------------------|
+| :--------- | :------------------------------------------------------------------------------------------- |
 | 2022.03.09 | La til miljøinformasjon for [produksjon](#produksjonsmilj%C3%B8) og [test](#testmilj%C3%B8). |
 | 2022.03.31 | Rettet en skrivefeil på Altinn instans API for testmiljøet                                   |
 | 2022.05.11 | La til ny informasjon om testbrukere fra Tenor                                               |
@@ -59,7 +59,7 @@ Det er skrevet en testapplikasjon som kan brukes i forbindelse med test av løsn
 | :-------------------- | :---------------------------------------------------------------------------------- |
 | Validering            | https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider |
 | Innsending            | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/                    |
-| Instans API           | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances       |
+| Instans API           | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances           |
 | ID-porten integrasjon | https://oidc-ver2.difi.no/idporten-oidc-provider/.well-known/openid-configuration   |
 | Altinn tokenveksling  | https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten            |
 

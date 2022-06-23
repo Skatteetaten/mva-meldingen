@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@skatteetaten/frontend-components/Grid";
 import { graphql } from "gatsby";
-import { renderAst } from '../components/renderAst';
+import { renderAst } from "../components/renderAst";
 
 import TableOfContents from "starter/components/TableOfContents";
 
@@ -28,13 +28,23 @@ export default function Template({ data }) {
     <Grid>
       <Grid.Row>
         <Grid.Col {...mainGrid}>
+          <a href="https://skatteetaten.github.io/mva-meldingen/frontpage_eng/">
+            English
+          </a>
+          <h3>
+            Vi oppdaterer dokumentasjonen med ny struktur og informasjon om
+            kompensasjonsmelding - feil og døde lenker kan forekomme
+          </h3>
           <h1>{frontmatter.title}</h1>
           {headings && (
-            <TableOfContents headings={headings} slug={fields.slug} minHeaders={1} />
+            <TableOfContents
+              headings={headings}
+              slug={fields.slug}
+              minHeaders={1}
+            />
           )}
-          <div
-            className={styles.documentationContainer}>
-            { renderAst(htmlAst) }
+          <div className={styles.documentationContainer}>
+            {renderAst(htmlAst)}
           </div>
         </Grid.Col>
       </Grid.Row>

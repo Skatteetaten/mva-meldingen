@@ -4,6 +4,8 @@ title: "Spørsmål og svar"
 description: "Spørsmål og svar"
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/english/faq/)
+
 ## Generelt
 
 ### Hvilke endringer inngår i moderniseringen av mva-området?
@@ -133,13 +135,11 @@ Tilleggsmelding vil ikke lenger være aktuelt. Hvis man gjør endringer i regnsk
 
 Det er er to alternative måter å løse dette på:
 
-1.	Gjenåpne perioden (f.eks. 1. termin) og bokføre de nye opplysningerne i denne perioden, før perioden lukkes på nytt. Det vil si at SAF-T filen som underbygger siste mva-melding (gitt en etterfølgende kontroll med krav om innsending av SAF-T regnskapsfil) kan tas fra denne regnskapsperioden. Skatteetaten anbefaler at det gjøres på denne måten dersom dette er mulig.
+1. Gjenåpne perioden (f.eks. 1. termin) og bokføre de nye opplysningerne i denne perioden, før perioden lukkes på nytt. Det vil si at SAF-T filen som underbygger siste mva-melding (gitt en etterfølgende kontroll med krav om innsending av SAF-T regnskapsfil) kan tas fra denne regnskapsperioden. Skatteetaten anbefaler at det gjøres på denne måten dersom dette er mulig.
 
-2.	Registrere transaksjonen i ny periode (f.eks. 2. termin), gitt funksjonalitet i regnskapssystemet som gjør at transaksjonene kan skilles ut på riktig periode. Transaksjonen må enkelt kunne skilles ut fra de andre transaksjonene, og kontrollsporet må ivaretas. SAF-T filen som underbygger sist innsendte mva-melding for 1. termin (gitt kontroll) må da også inneholde den senere perioden der de nye transaksjonene/disposisjonene er bokført. Dette kan medføre at man sender inn to SAF-T filer tilhørende to ulike perioder, for å få med seg hele grunnlaget for korreksjonsmeldingen.
+2. Registrere transaksjonen i ny periode (f.eks. 2. termin), gitt funksjonalitet i regnskapssystemet som gjør at transaksjonene kan skilles ut på riktig periode. Transaksjonen må enkelt kunne skilles ut fra de andre transaksjonene, og kontrollsporet må ivaretas. SAF-T filen som underbygger sist innsendte mva-melding for 1. termin (gitt kontroll) må da også inneholde den senere perioden der de nye transaksjonene/disposisjonene er bokført. Dette kan medføre at man sender inn to SAF-T filer tilhørende to ulike perioder, for å få med seg hele grunnlaget for korreksjonsmeldingen.
 
 Det understrekes at SAF-T regnskapsfil kun skal sendes inn på forespørsel fra Skatteetaten, i forbindelse med kontroll.
-
-
 
 ### Hvordan skal fellesregistrerte selskaper rapportere mva-meldingen?
 
@@ -147,7 +147,7 @@ Det er enheten som står oppført som rapporterende enhet som må levere mva-mel
 
 ### Når man kutter desimaler på grunnlag og på mva-beløp, da kan man få "avvik" når man kontrollerer ved å gange grunnlaget med mva-prosent. Vil dette slå ut på valideringen?
 
-Ja, vi tar høyde for dette i valideringen og har lagt inn en toleranse på +/-1kr x antall linjer, begrenset nedad til +/10 kroner. En melding med 3 linjer vil dermed  ha +/-10 kroner toleranse, mens en melding med 14 linjer vil ha +/-14 kroner toleranse.
+Ja, vi tar høyde for dette i valideringen og har lagt inn en toleranse på +/-1kr x antall linjer, begrenset nedad til +/10 kroner. En melding med 3 linjer vil dermed ha +/-10 kroner toleranse, mens en melding med 14 linjer vil ha +/-14 kroner toleranse.
 
 ### Vil det foreligge en kodeliste med beskrivelser for de ulike kodene?
 
@@ -156,7 +156,6 @@ Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/docume
 ### Finnes det en oversikt som viser hva de gamle mva-kodene skal føres som i SAF-T koder i ny mva-melding?
 
 Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf)
-
 
 ## Salgs- og kjøpsmelding
 

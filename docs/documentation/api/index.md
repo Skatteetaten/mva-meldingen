@@ -4,6 +4,8 @@ title: "API"
 description: "Api-beskrivelser"
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/english/api/)
+
 # MVA Melding Validerings og Innsendings API
 
 ## Endringslogg

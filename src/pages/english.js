@@ -5,7 +5,7 @@ import SkeBasis from "@skatteetaten/frontend-components/SkeBasis";
 import { SingleColumnRow } from "../components/Columns";
 import { graphql, Link } from "gatsby";
 
-const DocumentationPage = ({
+const EnglishPage = ({
   data: {
     allMarkdownRemark: { edges },
     site: { pathPrefix },
@@ -14,8 +14,7 @@ const DocumentationPage = ({
   const prefix = process.env.NODE_ENV !== "production" ? "" : pathPrefix;
   const contents = edges
     .filter(
-      ({ node }) =>
-        node.fields && node.fields.slug.search("/documentation/") >= 0
+      ({ node }) => node.fields && node.fields.slug.search("/english/") >= 0
     )
     .map(({ node }) => ({
       to: `${prefix}${node.fields.slug}`,
@@ -28,14 +27,7 @@ const DocumentationPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <a href="https://skatteetaten.github.io/mva-meldingen/english/">
-            English
-          </a>
-          <h3>
-            Vi oppdaterer dokumentasjonen med ny struktur og informasjon om
-            kompensasjonsmelding - feil og døde lenker kan forekomme
-          </h3>
-          <h1>Dokumentasjon felles</h1>
+          <h1>Dokumentation</h1>
         </SingleColumnRow>
         <SingleColumnRow>
           <NavigationTile
@@ -48,10 +40,10 @@ const DocumentationPage = ({
   );
 };
 
-export default DocumentationPage;
+export default EnglishPage;
 
 export const pageQuery = graphql`
-  query DocumentationQuery {
+  query EnglishQuery {
     site {
       pathPrefix
     }

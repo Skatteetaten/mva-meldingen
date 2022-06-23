@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
+    <innsending>
+        <regnskapssystemsreferanse>3</regnskapssystemsreferanse>
+        <regnskapssystem>
+            <systemnavn>zzx</systemnavn>
+            <systemversjon>4.34.3</systemversjon>
+        </regnskapssystem>
+    </innsending>
+    <skattegrunnlagOgBeregnetSkatt>
+        <skattleggingsperiode>
+            <periode>
+                <skattleggingsperiodeToMaaneder>januar-februar</skattleggingsperiodeToMaaneder>
+            </periode>
+            <aar>2020</aar>
+        </skattleggingsperiode>
+        <fastsattMerverdiavgift>15000</fastsattMerverdiavgift>
+        <mvaSpesifikasjonslinje>
+            <mvaKode>1</mvaKode>
+            <mvaKodeRegnskapsystem>25 inng mva</mvaKodeRegnskapsystem>
+            <sats>25</sats>
+            <merverdiavgift>-10000</merverdiavgift>
+        </mvaSpesifikasjonslinje>
+        <mvaSpesifikasjonslinje>
+            <mvaKode>3</mvaKode>
+            <mvaKodeRegnskapsystem>25 utgående mva</mvaKodeRegnskapsystem>
+            <grunnlag>100000</grunnlag>
+            <sats>25</sats>
+            <merverdiavgift>25000</merverdiavgift>
+        </mvaSpesifikasjonslinje>
+    </skattegrunnlagOgBeregnetSkatt>
+    <betalingsinformasjon>
+        <kundeIdentifikasjonsnummer>3400000932456870</kundeIdentifikasjonsnummer>
+    </betalingsinformasjon>
+    <skattepliktig>
+        <organisasjonsnummer>911158612</organisasjonsnummer>
+    </skattepliktig>
+    <meldingskategori>alminnelig</meldingskategori>
+</mvaMeldingDto>

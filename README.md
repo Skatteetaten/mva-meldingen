@@ -2,16 +2,22 @@
 
 Documentation for mva-meldingen
 
+We are re-arranging and updating documentation to include "komensasjonsmeldingmreverdiavgift" and prepare for "omvendt avgiftsplikt".
+
+The work is expected to be completed by 29th of june. In the meanwhile the
+
 ## Notebook Examples
+
 How to get the examples up and running(Linux Ubuntu).
 
 ### Initial setup
+
 <i>Open terminal in this repository(mva-meldingen). </i> <br>
 Install jupyter notebook
 
     snap install jupyter
 
-Check that you have python and pip installed. 
+Check that you have python and pip installed.
 
     #Check the system Python version
     python --version
@@ -30,14 +36,14 @@ Check that you have python and pip installed.
 
 If you are missing them, then you need to install them. <br>
 Using python3 moving forward. Change 3.8 with a 2.x.x if desired and python3 with python to use Python2.
-    
-    sudo apt-get update
-    sudo apt-get install python3.8
-    sudo apt install python3-pip 
+  
+ sudo apt-get update
+sudo apt-get install python3.8
+sudo apt install python3-pip
 
 ### Running notebook
 
-Move to the example files folder. 
+Move to the example files folder.
 
     cd docs/documentation/test
 
@@ -61,6 +67,7 @@ To run the script you need a test account in digdirs minid, as well as change th
 which is defined as a variable in the script and in the MvaMeldingInnsending ("konvolutt") and mvamelding .xml files.
 
 ## Documentation
+
 ### Initial setup
 
 Getting the gatsby-starter-skatteetaten module (TODO: Add more docs)

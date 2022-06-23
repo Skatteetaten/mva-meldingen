@@ -1,22 +1,31 @@
 const gatsbyConfig = {
   siteMetadata: {
     title: "Mva-meldingen",
+
     menu: [
       {
         href: "/",
-        name: "Mva-meldingen",
+        name: "Modernisering av Mva-området",
       },
       {
         href: "/documentation",
-        name: "Dokumentasjon",
+        name: "Felles ",
       },
       {
-        href: "/frontpage_eng",
-        name: "Frontpage in English",
+        href: "/mvameldingen",
+        name: "Mva-meldingen ",
       },
+      {
+        href: "/kompensasjon",
+        name: "Kompensasjonsmeldingen",
+      },
+      //      {
+      //        href: "/frontpage_eng",
+      //        name: "Frontpage in English",
+      //      },
       {
         href: "/english",
-        name: "Documentation in English",
+        name: "English",
       },
     ],
   },

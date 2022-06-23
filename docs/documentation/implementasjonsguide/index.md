@@ -4,6 +4,8 @@ title: "Implementasjonsguide"
 description: "En utviklers guide til implementasjonen"
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/english/implementationguide/)
+
 ## Implementasjonsguide
 
 ### Endringslogg
@@ -82,7 +84,6 @@ ID-Portens innlogging krever at applikasjonen kan lytte til en URL som er konfig
 #### OAuth2/OpenID - erfaring
 
 Dersom erfaringen med OAuth2/OpenID er liten så vil dette kreve innsats å forstå og implementere på en god måte. Alle elementene i ID-Porten integrasjonen henger sammen og det er viktig å bevare brukeropplevelsen under utviklingen.
-
 
 Les mer om [ID-porten & Autentisering](https://skatteetaten.github.io/mva-meldingen/documentation/idportenautentisering/)
 

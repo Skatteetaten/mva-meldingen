@@ -1,0 +1,250 @@
+{
+  "id": "50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58",
+  "instanceOwner": {
+    "partyId": "50267437",
+    "personNumber": null,
+    "organisationNumber": "911158612"
+  },
+  "appId": "skd/mva-melding-innsending-etm2",
+  "org": "skd",
+  "selfLinks": {
+    "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58",
+    "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58"
+  },
+  "dueBefore": null,
+  "visibleAfter": "2021-05-21T11:28:13.0797162Z",
+  "process": {
+    "started": "2021-05-21T11:28:13.0389803Z",
+    "startEvent": "StartEvent_1",
+    "currentTask": null,
+    "ended": "2021-05-21T11:29:35.5242382Z",
+    "endEvent": "EndEvent_1"
+  },
+  "status": {
+    "isArchived": true,
+    "archived": "2021-05-21T11:29:35.5242382Z",
+    "isSoftDeleted": false,
+    "softDeleted": null,
+    "isHardDeleted": false,
+    "hardDeleted": null,
+    "readStatus": 1,
+    "substatus": {
+      "label": "Mottatt",
+      "description": "Mva-meldingen er levert og mottatt av Skatteetaten."
+    }
+  },
+  "completeConfirmations": [
+    {
+      "stakeholderId": "skd",
+      "confirmedOn": "2021-05-21T11:29:35.9320856Z"
+    }
+  ],
+  "data": [
+    {
+      "id": "13750453-c8d9-49a2-9656-0041051b7817",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0",
+      "filename": null,
+      "contentType": "application/xml",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/13750453-c8d9-49a2-9656-0041051b7817",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/13750453-c8d9-49a2-9656-0041051b7817",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/13750453-c8d9-49a2-9656-0041051b7817"
+      },
+      "size": 2364,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:28:13.4040417Z",
+      "createdBy": "86257",
+      "lastChanged": "2021-05-21T11:28:13.9274714Z",
+      "lastChangedBy": "86257"
+    },
+    {
+      "id": "87ff3fc2-a47f-4dc9-8b4d-63fe27aa05f7",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "mvamelding",
+      "filename": "mva-melding.xml",
+      "contentType": "text/xml",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/87ff3fc2-a47f-4dc9-8b4d-63fe27aa05f7",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/87ff3fc2-a47f-4dc9-8b4d-63fe27aa05f7",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/87ff3fc2-a47f-4dc9-8b4d-63fe27aa05f7"
+      },
+      "size": 1573,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:28:14.111938Z",
+      "createdBy": "86257",
+      "lastChanged": "2021-05-21T11:28:14.111938Z",
+      "lastChangedBy": "86257"
+    },
+    {
+      "id": "59945050-c2f5-40ac-b242-1f031c5a1fcd",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "binaerVedlegg",
+      "filename": "mva-vedlegg.xml",
+      "contentType": "text/xml",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/59945050-c2f5-40ac-b242-1f031c5a1fcd",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/59945050-c2f5-40ac-b242-1f031c5a1fcd",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/59945050-c2f5-40ac-b242-1f031c5a1fcd"
+      },
+      "size": 1426,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:28:14.2707275Z",
+      "createdBy": "86257",
+      "lastChanged": "2021-05-21T11:28:14.2707275Z",
+      "lastChangedBy": "86257"
+    },
+    {
+      "id": "de025513-b620-42da-8a82-a41adcea4a77",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "binaerVedlegg",
+      "filename": "pdf-vedlegg.pdf",
+      "contentType": "application/pdf",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/de025513-b620-42da-8a82-a41adcea4a77",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/de025513-b620-42da-8a82-a41adcea4a77",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/de025513-b620-42da-8a82-a41adcea4a77"
+      },
+      "size": 4921,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:28:14.4334887Z",
+      "createdBy": "86257",
+      "lastChanged": "2021-05-21T11:28:14.4334887Z",
+      "lastChangedBy": "86257"
+    },
+    {
+      "id": "60252392-8f4a-4031-9639-a65b77a2b423",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "binaerVedlegg",
+      "filename": "png-vedlegg.png",
+      "contentType": "image/png",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/60252392-8f4a-4031-9639-a65b77a2b423",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/60252392-8f4a-4031-9639-a65b77a2b423",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/60252392-8f4a-4031-9639-a65b77a2b423"
+      },
+      "size": 72366,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:28:14.6220796Z",
+      "createdBy": "86257",
+      "lastChanged": "2021-05-21T11:28:14.6220796Z",
+      "lastChangedBy": "86257"
+    },
+    {
+      "id": "befb3825-0a18-40fc-a14a-2b345721c933",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "utfyllingslogg",
+      "filename": "utfyllingslogg.json",
+      "contentType": "application/json",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/befb3825-0a18-40fc-a14a-2b345721c933",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/befb3825-0a18-40fc-a14a-2b345721c933",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/befb3825-0a18-40fc-a14a-2b345721c933"
+      },
+      "size": 110,
+      "locked": false,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:28:14.960917Z",
+      "createdBy": "86257",
+      "lastChanged": "2021-05-21T11:28:14.960917Z",
+      "lastChangedBy": "86257"
+    },
+    {
+      "id": "d7a75546-bb3a-4bf0-a851-5225a40981fb",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "signeringslogg",
+      "filename": "signeringslogg.json",
+      "contentType": "application/json",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/d7a75546-bb3a-4bf0-a851-5225a40981fb",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/d7a75546-bb3a-4bf0-a851-5225a40981fb",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/d7a75546-bb3a-4bf0-a851-5225a40981fb"
+      },
+      "size": 112,
+      "locked": false,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:28:15.897737Z",
+      "createdBy": "86257",
+      "lastChanged": "2021-05-21T11:28:15.897737Z",
+      "lastChangedBy": "86257"
+    },
+    {
+      "id": "82c96a52-ad0b-428f-8005-7f214daf367e",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "valideringsresultat",
+      "filename": "valideringsresultat.xml",
+      "contentType": "text/xml",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/82c96a52-ad0b-428f-8005-7f214daf367e"
+      },
+      "size": 221,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:29:33.7356205Z",
+      "createdBy": "974761076",
+      "lastChanged": "2021-05-21T11:29:33.7356205Z",
+      "lastChangedBy": "974761076"
+    },
+    {
+      "id": "726a315f-7e5e-4514-8ef1-5eda624407d4",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "betalingsinformasjon",
+      "filename": "betalingsinformasjon.xml",
+      "contentType": "text/xml",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/726a315f-7e5e-4514-8ef1-5eda624407d4"
+      },
+      "size": 836,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:29:33.9068032Z",
+      "createdBy": "974761076",
+      "lastChanged": "2021-05-21T11:29:33.9068032Z",
+      "lastChangedBy": "974761076"
+    },
+    {
+      "id": "cbce850a-a887-4598-aea4-710ea9ffdc7d",
+      "instanceGuid": "55604b08-1690-4a8d-bf6b-95c11dc40c58",
+      "dataType": "kvittering",
+      "filename": "kvittering.pdf",
+      "contentType": "application/pdf",
+      "blobStoragePath": "skd/mva-melding-innsending-etm2/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d",
+      "selfLinks": {
+        "apps": "https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-sit/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d",
+        "platform": "https://platform.tt02.altinn.no/storage/api/v1/instances/50267437/55604b08-1690-4a8d-bf6b-95c11dc40c58/data/cbce850a-a887-4598-aea4-710ea9ffdc7d"
+      },
+      "size": 97428,
+      "locked": true,
+      "refs": [],
+      "isRead": true,
+      "created": "2021-05-21T11:29:34.9443109Z",
+      "createdBy": "974761076",
+      "lastChanged": "2021-05-21T11:29:34.9443109Z",
+      "lastChangedBy": "974761076"
+    }
+  ],
+  "presentationTexts": null,
+  "dataValues": null,
+  "created": "2021-05-21T11:28:13.0797162Z",
+  "createdBy": "86257",
+  "lastChanged": "2021-05-21T11:29:35.932086Z",
+  "lastChangedBy": "974761076"
+}

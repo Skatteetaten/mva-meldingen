@@ -4,6 +4,8 @@ title: "ID-Porten & Autentisering"
 description: "Hvordan autentisere med ID-Porten"
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/english/idportenauthentication/)
+
 ## Introduksjon
 
 ### Endringslogg

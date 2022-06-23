@@ -1,3 +1,7 @@
+[English](https://skatteetaten.github.io/mva-meldingen/frontpage_eng)
+
+<h3>Vi oppdaterer dokumentasjonen med ny struktur og informasjon om kompensasjonsmelding - feil og døde lenker kan forekomme</h3>
+
 # Introduksjon til systeminnsending av mva-meldingen
 
 ## Bakgrunn og behov

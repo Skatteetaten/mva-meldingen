@@ -1,7 +1,7 @@
 ---
 icon: "cloud"
-title: "Valideringsregler"
-description: "Regler for utfylling av mva-melding "
+title: "Valideringsregler - kompensasjonsmelding"
+description: "Regler for utfylling av kompensasjonsmeldingmelding "
 ---
 
 ### Endringslogg
@@ -999,7 +999,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R083 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_BELØP_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER(
         "Det må sendes inn mva-koder når det er oppgitt beløp i 'fastsatt merverdiavgift'."
         {
