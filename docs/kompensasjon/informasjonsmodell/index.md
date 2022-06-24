@@ -274,57 +274,26 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 
 ## Kodelister
 
-| Gruppe og kode                                    | Beskrivelse av kode, fradrag og spesifikasjon                                             |
+| Gruppe og kode                                    | Beskrivelse av Kode og Spesifikasjon                                             |
 | ------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Salg av varer og tjenester i Norge                |                                                                                           |
-| 3                                                 | Salg og uttak av varer og tjenester (høy sats)                                            |
-| Spesifikasjonslinje til kode 3                    | Uttak                                                                                     |
-| 31                                                | Salg og uttak av varer og tjenester (middels sats)                                        |
-| Spesifikasjonslinje til kode 31                   | Uttak                                                                                     |
-| 33                                                | Salg og uttak av varer og tjenester (lav sats)                                            |
-| Spesifikasjonslinje til kode 33                   | Uttak                                                                                     |
-| 5                                                 | Salg og uttak av varer og tjenester som er fritatt for merverdiavgift                     |
-| Spesifikasjonslinje til kode 5                    | Uttak                                                                                     |
-| 6                                                 | Salg og uttak av varer og tjenester som er unntatt merverdiavgiftsloven                   |
-| Salg av varer og tjenester til utlandet (eksport) |                                                                                           |
-| 52                                                | Salg av varer og tjenester til utlandet som er fritatt for merverdiavgift                 |
-| Kjøp av varer og tjenester i Norge (fradrag)      |                                                                                           |
-| 1                                                 | Kjøp av varer og tjenester med fradragsrett (høy sats)                                    |
-| Spesifikasjonslinje til kode 1                    | Tap på krav                                                                               |
-| Spesifikasjonslinje til kode 1                    | Justering av merverdiavgift for kapitalvarer                                              |
-| Spesifikasjonslinje til kode 1                    | Tilbakeføring av merverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom)     |
-| 11                                                | Kjøp av varer og tjenester med fradragsrett (middels sats)                                |
-| Spesifikasjonslinje til kode 11                   | Tap på krav                                                                               |
-| 13                                                | Kjøp av varer og tjenester med fradragsrett (lav sats)                                    |
+| Kompensasjon for merverdiavgift ved kjøp av varer og tjenester i Norge		|                                                       |
+| 1                                                 | Kompensasjon for merverdiavgift (høy sats)						|
+| Spesifikasjonslinje til kode 1                    | Justering merverdiavgiftskompensasjon fast eiendom					|
+| 11                                                | Kompensasjon for merverdiavgift (middel sats)						|
+| 13                                                | Kompensasjon for merverdiavgift (lav sats)						|
 | Spesifikasjonslinje til kode 13                   | Tap på krav                                                                               |
-| Kjøp av varer fra utlandet (import)               |                                                                                           |
-| 81                                                | Kjøp av varer fra utlandet med fradragsrett (høy sats)                                    |
-| 81                                                | Fradrag på kjøp av varer fra utlandet (høy sats)                                          |
-| Spesifikasjonslinje til kode 81                   | Tilbakeføring av merverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom)     |
-| Spesifikasjonslinje til kode 81                   | Justering av merverdiavgift for kapitalvarer                                              |
-| 14                                                | Fradrag på kjøp av varer fra utlandet (merverdiavgift betalt ved innførsel, høy sats)     |
-| 82                                                | Kjøp av varer fra utlandet uten fradragsrett (høy sats)                                   |
-| 83                                                | Kjøp av varer fra utlandet med fradragsrett (middels sats)                                |
-| 83                                                | Fradrag på kjøp av varer fra utlandet (middels sats)                                      |
-| 15                                                | Fradrag på kjøp av varer fra utlandet (merverdiavgift betalt ved innførsel, middels sats) |
-| 84                                                | Kjøp av varer fra utlandet uten fradragsrett (middels sats)                               |
-| 85                                                | Kjøp av varer fra utlandet som det ikke skal beregnes merverdiavgift på (nullsats)        |
-| Kjøp av tjenester fra utlandet (import)           |                                                                                           |
-| 86                                                | Kjøp av tjenester fra utlandet med fradragsrett (høy sats)                                |
-| 86                                                | Fradrag på kjøp av tjenester fra utlandet (høy sats)                                      |
-| 87                                                | Kjøp av tjenester fra utlandet uten fradragsrett (høy sats)                               |
-| 88                                                | Kjøp av tjenester fra utlandet med fradragsrett (lav sats)                                |
-| 88                                                | Fradrag på kjøp av tjenester fra utlandet (lav sats)                                      |
-| 89                                                | Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)                               |
-| Fisk m.m.                                         |                                                                                           |
-| 32                                                | Salg av fisk og andre marine viltlevende ressurser                                        |
-| 12                                                | Kjøp av fisk og andre marine viltlevende ressurser                                        |
-| Spesifikasjonslinje til kode 12                   | Tap på krav                                                                               |
+| Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (import)		|							|
+| 81                                                | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (høy sats)			|
+| Spesifikasjonslinje til kode 81                   | Justering merverdiavgiftskompensasjon fast eiendom					|
+| 83                                                | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (middels sats)		|
+| 14                                                | Kompensasjon for merverdiavgift betalt ved innførsel (høy sats)				|
+| Spesifikasjonslinje til kode 14                   | Justering merverdiavgiftskompensasjon fast eiendom					|
+| 15                                                | Kompensasjon for merverdiavgift betalt ved innførsel (middels sats)			|
+| Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (import)		|							|
+| 86                                                | Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (høy sats)		|
+| 88                                                | Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (lav sats)		|
 | Klimakvoter og gull                               |                                                                                           |
-| 51                                                | Salg av klimakvoter og gull til næringsdrivende                                           |
-| 91                                                | Kjøp av klimakvoter og gull med fradragsrett                                              |
-| 91                                                | Fradrag på kjøp av klimakvoter og gull                                                    |
-| 92                                                | Kjøp av klimakvoter og gull uten fradragsrett                                             |
+| 91                                                | Kompensasjon for merverdiavgift ved kjøp av klimakvoter eller gull (høy sats)		|
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
 
