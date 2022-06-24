@@ -14,9 +14,9 @@ description: "XSD for kompensasjonsmelding
 | :--------- | :-------------------------------------- |
 | 2022.06.22 | Side opprettet for kompensasjonsmelding |  |
 
-## XSD for mva-meldingen versjon 1.0
+## XSD for kompensasjonsmelding for merverdiavgift versjon 1.0
 
-Mva-meldingen sendes inn i XML-format. Den må være i henhold til strukturen dokumentert i XSD for mva-melding.
+Kompensasjonsmelding for merverdiavgift skal sendes inn i XML-format. Den må være i henhold til strukturen dokumentert i XSD for mva-melding. Det er altså samme XSD for begge meldingene. 
 
 Versjon 1.0 av denne XSD'en ligger her:
 [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
