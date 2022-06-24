@@ -130,7 +130,7 @@ Responsen vil ha http-statuskoden 409 hvis valideringen mislykkes. Det er mulig 
 Når opplastningen er fullført, kan innsendingen fullføres. Brukeren som fullfører innsendingen må være autorisert for dette for den aktuelle organisasjonen. Sluttbrukeren må ha en av de følgende Altinn-rollene:
 
 - Begrenset signeringsrett
-- Kontaktperson NUF
+- Kontaktperson NUF (gjelder ikke for Skattemelding for merverdiavgiftskompensasjon) 
 - Regnskapsfører med signeringsrett
 
 ### 7. Hente tilbakemelding på innsendingen fra Skatteetatens innsendings-api
