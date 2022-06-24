@@ -24,7 +24,7 @@ description: "Api-beskrivelser"
 
 ## Introduksjon
 
-API'ene fungerer for flere typer meldinger i merverdiavgiftsområdet, som mva-meldinger (tidligere RF-0002/0004 ordinær mva-melding og 0005 omvendt avgiftsplikt) og Skattemelding for merverdiavgiftskompensasjon. Når disse meldingene skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde disse APIene brukes:
+API'ene fungerer for følgende kategorier skattemeldinger for merverdiavgift: Ordinær mva-melding (RF-0002/0004), mva-melding for omvendt avgiftsplikt (RF-0005) og Skattemelding for merverdiavgiftskompensasjon (RF-0009). Når disse meldingene skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde disse APIene brukes:
 
 1. Skatteetatens MVA-Melding validerings API
 1. Skatteetatens Altinn3 MVA-Melding-Innsending's API
