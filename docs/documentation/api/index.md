@@ -20,15 +20,16 @@ description: "Api-beskrivelser"
 | 2021.11.11 | Oppdatert feilmeldinger ved utfylling av mva-melding                                        |
 | 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                                             |
 | 2022.03.08 | Betalingsinformasjon kan [lastes ned](#tilbakemeldingsfiler) etter fullføring av innsending |
+| 2022.06.24 | Endringer i forbindelse med utvidelse av dokumentasjon for andre meldingstyper              |
 
 ## Introduksjon
 
-MVA Meldinger som skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde bruke disse APIene:
+API'ene fungerer for flere typer meldinger i merverdiavgiftsområdet, som mva-meldinger (tidligere RF-0002/0004 ordinær mva-melding og 0005 omvendt avgiftsplikt) og Skattemelding for merverdiavgiftskompensasjon. Når disse meldingene skal sendes til Skatteetaten fra et sluttbrukersystem (SBS) burde disse APIene brukes:
 
 1. Skatteetatens MVA-Melding validerings API
 1. Skatteetatens Altinn3 MVA-Melding-Innsending's API
 
-som beskrives under.
+I API-beskrivelsen brukes mva-melding som en samlebetegnelse på de ulike meldingstypene. API'ene beskrives under. 
 
 # Prosess innsending og validering
 
