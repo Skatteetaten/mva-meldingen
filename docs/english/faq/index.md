@@ -80,8 +80,7 @@ Yes, the portal is a permanent solution that is open to everyone.
 
 ### Is it possible to see what the logged in solution for manual entry of VAT-report will look like?
 
-We do not have a test environment where you can try out the logged-in solution for manually entering a VAT-report, but in information meetings we have shown screenshots with drafts of what the solution might look like.
-The logged-in solution is still under development, but you can see a [clickable demo here](https://h2ihxe.axshare.com/) (in norwegian). This is just an example of what it might look like, and only covers a some submissions. The finished solution may look different. Submissions will also vary in appearance for different businesses depending on what they are reporting.
+You can log in to the testenvironment here: https://skatt-sbstest.sits.no/web/mva/ to test the logged in solution. To use the testenvironment you must have Tenor testdata, user guide for obtaining these can be found here: https://skatteetaten.github.io/mva-meldingen/english/test/#the-test-environment-and-test-data
 
 ### Will it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
 
@@ -125,7 +124,7 @@ There are two alternatives:
 
 2. Register the transaction in a new period (for example 2nd term), if the ERP functionality allows sorting the transactions in the in the right period. The transactions must be possible to separate from the other transactions, and the chain of audit must be maintained. The SAF-T file that supports the last submitted VAT return for 1st term (in case of audit) must then also contain the later period in which the new transactions / dispositions are posted. This may lead to submitting two SAF-T files for two different periods, to include the entire basis for the corrected VAT-return.
 
-SAF-T files should only be submitted when requested by the Tax Authority, for audit purposes. 
+SAF-T files should only be submitted when requested by the Tax Authority, for audit purposes.
 
 ### How should jointly registered companies report the VAT return?
 
