@@ -4,7 +4,7 @@ Documentation for mva-meldingen
 
 We are re-arranging and updating documentation to include "komensasjonsmeldingmreverdiavgift" and prepare for "omvendt avgiftsplikt".
 
-The work is expected to be completed by 29th of june. In the meanwhile the
+The work is expected to be completed by 29th of june. In the meanwhile the documentation may be incomplete and contain broken links
 
 ## Notebook Examples
 
@@ -36,8 +36,8 @@ Check that you have python and pip installed.
 
 If you are missing them, then you need to install them. <br>
 Using python3 moving forward. Change 3.8 with a 2.x.x if desired and python3 with python to use Python2.
-  
- sudo apt-get update
+
+sudo apt-get update
 sudo apt-get install python3.8
 sudo apt install python3-pip
 
