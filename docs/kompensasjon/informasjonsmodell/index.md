@@ -43,7 +43,7 @@ Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https:/
 	Formål: å sikre at brukeren dekker sin plikt for egenfastsetting
 	</td>
   </tr>
-    <tr><td>merknad</td><td>Beskrivelse: informasjon om innholdet i mva-meldingen <br>
+    <tr><td>merknad</td><td>Beskrivelse: informasjon om innholdet i kompensasjonsmelding for merverdiavgift <br>
 	Formål: å sikre at skattepliktig kan forklare egen rettsanvendelse der det er nødvendig
 	</td>
   </tr>
@@ -88,8 +88,8 @@ Kid oppgis bare dersom det er tilgodebeløp.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
-  <tr><td>skattleggingsperiode</td><td>Beskrivelse: den perioden egenfastsettingen gjelder for <br>
-  Periode angis i henhold til kodeverket for Skattleggingsperiode. SkattleggingsperiodeUke følger kalenderens ukenummerering, eksempelvis løper uke 1 i 2022 fra 3. til 9. januar. I SkattleggingsperiodeHalvmåndelig løper første halvdel fra 1. til 15. i måneden og andre halvdel løper fra 16. til siste i måneden. <br>    
+  <tr><td>skattleggingsperiode</td><td>Beskrivelse: den perioden skattefastsettingen gjelder for <br>
+  Periode angis i henhold til kodeverket for Skattleggingsperiode. For Skattemelding for merverdiavgiftskompensasjon gjelder 2-månedlig termin, men private kan ta med krav som omfatter et helt kalenderår i sjette terminskattleggingsperiode. Virksomheter som nevnt i merverdiavgiftskompensasjonsloven § 2 første ledd bokstav b til e og borettslag og boligsameier som nevnt i annet ledd kan fremsette krav som omfatter et helt kalenderår i skattemeldingen for sjette periode. <br>    
   Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
@@ -152,7 +152,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
   </tr>
   <tr><td>innsendingstype</td>
     <td>
-        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være <strong>komplett</strong>. <br>
+        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være <strong>komplett</strong>. En hovedmelding av typen kompensasjonsmelding vil være komplett ved revisors signering. En korrigert kompensasjonsmelding etter frist er komplett når den sendes inn av virksomhet. <br>
         Formål: Feltet beholdes for på et senere tidspunkt kunne åpne for at revisor kommenterer/ skriver merknad på de mva-meldingene (f. eks. merverdiavgift kompensasjon) som skal godkjennes av revisor før innsending.
 	</td>
   </tr>
@@ -203,8 +203,8 @@ Feltet skal ikke fylles ut for inngående mva. <br>
   <tr>
     <td>periode</td>
     <td>
-        Beskrivelse: den perioden egenfastsettingen gjelder for <br>
-		Periode angis i henhold til kodeverket for Skattleggingsperiode. SkattleggingsperiodeUke følger kalenderens ukenummerering, eksempelvis løper uke 1 i 2022 fra 3. til 9. januar. I SkattleggingsperiodeHalvmåndelig løper første halvdel fra 1. til 15. i måneden og andre halvdel løper fra 16. til siste i måneden. <br>   
+        Beskrivelse: den perioden skattefastsettingen gjelder for <br>
+		Periode angis i henhold til kodeverket for Skattleggingsperiode. For Skattemelding for merverdiavgiftskompensasjon gjelder 2-månedlig skattleggingsperiode. Virksomheter som nevnt i merverdiavgiftskompensasjonsloven § 2 første ledd bokstav b til e og borettslag og boligsameier som nevnt i annet ledd kan fremsette krav som omfatter et helt kalenderår i skattemeldingen for sjette periode. <br>   
         Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
