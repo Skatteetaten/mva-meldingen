@@ -182,4 +182,4 @@ Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten e
 
 ### Vil det komme en testversjon av portalen så man kan teste utfylling og de nye valideringene før første innlevering neste år?
 
-Vi brukertester løsningen, men det vil ikke være mulig å logge seg inn for teste.
+Testversjon av portalen finnes her: https://skatt-sbstest.sits.no/web/mva/. For å benytte seg av denne må man bruke Tenor Testdata, i henhold til [brukerveiledning](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/#testmilj%C3%B8-og-testdata)
