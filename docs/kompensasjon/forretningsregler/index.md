@@ -18,7 +18,7 @@ description: "Regler for utfylling av kompensasjonsmeldingmelding "
 ## Valideringsregler
 
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.
-Følgende valideringsregler er foreløpig definert for mva-meldingen:
+Følgende valideringsregler er foreløpig definert for kompensasjonsmelding for merverdiavgift:
 
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
