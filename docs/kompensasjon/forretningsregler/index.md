@@ -46,7 +46,7 @@ To praktiske regler er også definert for å hindre feilaktige innsendinger til 
 
 ## Detaljspesifikasjon av reglene:
 
-Validering av mva-meldingen er implementert med et sett av regler som kjøres maskinelt
+Validering av kompensasjonsmelding for merverdiavgift er implementert med et sett av regler som kjøres maskinelt
 for å sjekke gyldigheten av meldingen.
 Reglene er utformet slik at de både er dokumentasjon av reglene for meldingen og kjørbare maskinelt.
 Eksempel på regel:
