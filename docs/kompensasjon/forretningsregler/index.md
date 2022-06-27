@@ -10,11 +10,7 @@ description: "Regler for utfylling av kompensasjonsmeldingmelding "
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
     <tr>
       <td>2022.06.26</td>
-      <td>
-          <ul>
-            <li> Lagt til side for valideringsregler kompensasjonsmelding</li>
-          </ul>      
-      </td>
+      <td>Lagt til side for valideringsregler kompensasjonsmelding</td>
     </tr>
     <tr>
 </table>
