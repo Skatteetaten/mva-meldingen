@@ -55,7 +55,7 @@ Vi vil støtte følgende formater:
     - Open Document Format (ODF)
     - JPG eller PNG
 
-### Hvordan autentiserer man seg for innsending av mva-melding?
+### Hvordan autentiserer man seg for innsending av kompensasjonsmelding for merverdiavgift?
 
 Autentisering vil skje via ID-porten, med personlig pålogging for system til system og for innlogget tjeneste. Dagens Altinn innlogging med brukernavn og passord vil ikke kunne benyttes. Sluttbrukersystemene må tilby et påloggingsvindu til ID-porten for bruker, slik at bruker kan logge på med eID og SBS får tilbake et ID-porten-token som brukes videre mot Skatteetaten og Altinn sine tjenester. For å slippe å logge på mange ganger varer en pålogging i 8 timer.
 
@@ -68,7 +68,7 @@ Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/kompen
 
 ## Test
 
-### Vil testingen av mva-melding være åpen for alle?
+### Vil testingen av kompensasjonsmelding for merverdiavgift være åpen for alle?
 
 Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/kompensasjon/test/).
 Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten er velkommen til å ta kontakt gjennom mva-modernisering@skatteetaten.no.
