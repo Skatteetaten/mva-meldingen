@@ -29,6 +29,13 @@ Følgende valideringsregler er foreløpig definert for kompensasjonsmelding for 
 - Kontonummer må være registrert for meldinger som kunne føre til en utbetaling
 - Merknader må være gyldig for brukt mva-kode (vanlig fortegn)
 - Merknader må være gyldig for brukt mva-kode (motsatt fortegn)
+- Innsending og valideringstjenesten er ikke tilgjengelig før 1.1.2023
+- Innsending og validering av kompensasjonsmelding fra før 2023 er ikke tilgjengelig
+- Kompensasjonsmelding kan kun sendes inn for gyldig terminkategori (2-månedlig)
+- Første kompensasjonsmelding for et kalenderår må være på mer enn 20 000 kroner i mva
+- Kompensasjonsmelding sendt inn før leveringsfrist må ha revisorattestasjon
+- Kompensasjonsmelding kan ikke sendes inn etter leveringsfrist hvis ikke har en godkjent melding eller fastsetting fra Skatteetaten for terminen
+- Kompensasjonsmelding sendt inn etter leveringsfrist må ha et lavere tilgodebeløp enn forrige innsendte melding eller fastsetting fra Skatteetaten
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -41,8 +48,8 @@ Følgende tekniske regler er også spesifisert som validerer xsd format og kodel
 
 To praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:
 
-- Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2022
-- Innsending og validering av mva-meldinger fra før 2022 er ikke tilgjengelig
+- Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2023
+- Innsending og validering av mva-meldinger fra før 2023 er ikke tilgjengelig
 
 ## Detaljspesifikasjon av reglene:
 
