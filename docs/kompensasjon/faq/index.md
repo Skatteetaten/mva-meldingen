@@ -45,7 +45,7 @@ Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssyste
 Den nye rapporteringen vil være kodebasert og legge til rette for digital samhandling. Dagens nummererte poster erstattes av en dynamisk liste av spesifikasjonslinjer. Det vil bli mulig å gi merknader både samlet og per linje.
 Kodelisten for den nye mva-meldingen er tilgjengelig på Github, under [Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/kompensasjon/informasjonsmodell/#kodelister)
 
-### Kan man vedlegge dokumentasjon som filvedlegg til mva-meldingen?
+### Kan man vedlegge dokumentasjon som filvedlegg til kompensasjonsmelding for merverdiavgift?
 
 Ja, man kan vedlegge inntil 50 vedlegg per melding, og vedlegg kan være opp til 25 MB per fil.
 Vi vil støtte følgende formater:
