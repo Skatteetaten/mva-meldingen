@@ -283,12 +283,12 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | 13                                                | Kompensasjon for merverdiavgift (lav sats)						|
 | Spesifikasjonslinje til kode 13                   | Tap på krav                                                                               |
 | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (import)		|							|
-| 81                                                | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (høy sats)			|
-| Spesifikasjonslinje til kode 81                   | Justering merverdiavgiftskompensasjon fast eiendom					|
-| 83                                                | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (middels sats)		|
 | 14                                                | Kompensasjon for merverdiavgift betalt ved innførsel (høy sats)				|
 | Spesifikasjonslinje til kode 14                   | Justering merverdiavgiftskompensasjon fast eiendom					|
 | 15                                                | Kompensasjon for merverdiavgift betalt ved innførsel (middels sats)			|
+| 81                                                | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (høy sats)			|
+| Spesifikasjonslinje til kode 81                   | Justering merverdiavgiftskompensasjon fast eiendom					|
+| 83                                                | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (middels sats)		|
 | Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (import)		|							|
 | 86                                                | Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (høy sats)		|
 | 88                                                | Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (lav sats)		|
