@@ -22,15 +22,12 @@ Følgende valideringsregler er foreløpig definert for kompensasjonsmelding for 
 
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
-- Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler
-- Merknad til beløp med motsatt fortegn som gjelder spesifikasjonslinje for tilbakeføring av inngående mva. gitt i mval §9-6 og §9-7
-- Mva-meldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig (alminnelig)
+- Merknad til beløp med motsatt fortegn som gjelder kompensasjon av inngående avgift mangler
+- Kompensasjonsmeldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig 
 - Inngående mva. skal føres uten grunnlag og sats
 - Kontonummer må være registrert for meldinger som kunne føre til en utbetaling
 - Merknader må være gyldig for brukt mva-kode (vanlig fortegn)
 - Merknader må være gyldig for brukt mva-kode (motsatt fortegn)
-- Innsending og valideringstjenesten er ikke tilgjengelig før 1.1.2023
-- Innsending og validering av kompensasjonsmelding fra før 2023 er ikke tilgjengelig
 - Kompensasjonsmelding kan kun sendes inn for gyldig terminkategori (2-månedlig)
 - Første kompensasjonsmelding for et kalenderår må være på mer enn 20 000 kroner i mva
 - Kompensasjonsmelding sendt inn før leveringsfrist må ha revisorattestasjon
@@ -39,17 +36,17 @@ Følgende valideringsregler er foreløpig definert for kompensasjonsmelding for 
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
-- Mva-meldingen skal være på gyldig format
+- Kompensasjonsmeldingen skal være på gyldig format
 - Spesifikasjonslinjer skal bare bruke kjente mva-koder
 - Spesifikasjonslinjer skal bare bruke gyldige satser
 - Spesifikasjonslinjer skal bare bruke kjente spesifikasjoner
 - Spesifikasjonslinjer skal bare bruke kjente merknader på utvalgt merknad felt
-- Mva-meldingen skal bare bruke en kjent merknad på utvalgt merknad felt
+- Kompensasjonsmeldingen skal bare bruke en kjent merknad på utvalgt merknad felt
 
 To praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:
 
-- Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2023
-- Innsending og validering av mva-meldinger fra før 2023 er ikke tilgjengelig
+- Innsending og valideringstjenesten er ikke tilgjengelig før 1.1.2023
+- Innsending og validering av kompensasjonsmelding fra før 2023 er ikke tilgjengelig
 
 ## Detaljspesifikasjon av reglene:
 
