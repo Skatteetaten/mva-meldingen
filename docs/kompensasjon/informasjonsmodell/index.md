@@ -6,7 +6,7 @@ description: "XSD for kompensasjonsmelding
 - nedlastbare kodelister (XML)"
 ---
 
-# XSD for mva-meldingen
+# XSD for kompensasjonsmelding for merverdiavgift
 
 ### Endringslogg
 
