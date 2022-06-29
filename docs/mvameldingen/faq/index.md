@@ -66,9 +66,9 @@ Det er også mulig for advokater og rådgivere å tilegne seg Altinn-roller for 
 
 Det gjøres ikke endringer fra dagens praksis:
 
-Utfyller: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrett eller Revisormedarbeider.
+Utfyller: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrettighet eller Revisormedarbeider.
 
-Signering: Begrenset signeringsrett, Kontaktperson NUF eller Regnskapsfører med signeringsrett.
+Signering: Begrenset signeringsrettighet, Kontaktperson NUF eller Regnskapsfører med signeringsrettighet.
 
 ### Utvidet funksjonalitet
 
