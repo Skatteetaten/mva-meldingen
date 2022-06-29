@@ -32,7 +32,7 @@ Fra 1. januar 2023. Første frist vil være 10. april 2023. Meldinger og korrige
 
 ### Skal leveringen av kompensasjonsmelding for merverdiavgift skje via Altinn eller via Skatteetatens nettside?
 
-VVirksomheter og rådgivere oppfordres til å levere kompensasjonsmelding for merverdiavgift direkte fra regnskapssystemet. Skatteetaten jobber tett med systemleverandører for å tilrettelegge for dette. For de som ikke har regnskapssystem, eller av annen grunn ikke kan levere gjennom regnskapssystem, utvikler Skatteetaten en egen webbasert innlogget tjeneste som kan brukes for levering av kompensasjonsmelding for merverdiavgift. Altinn vil fortsatt brukes for identifisering og informasjonsutveksling.
+Virksomheter og rådgivere oppfordres til å levere kompensasjonsmelding for merverdiavgift direkte fra regnskapssystemet. Skatteetaten jobber tett med systemleverandører for å tilrettelegge for dette. For de som ikke har regnskapssystem, eller av annen grunn ikke kan levere gjennom regnskapssystem, utvikler Skatteetaten en egen webbasert innlogget tjeneste som kan brukes for levering av kompensasjonsmelding for merverdiavgift. Altinn vil fortsatt brukes for identifisering og informasjonsutveksling.
 
 ### Er levering i innlogget tjeneste en permanent løsning som er åpen for alle (hvis man ikke kan eller vil bruke system-system)?
 
@@ -40,10 +40,10 @@ Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
 
 ### Er det laget et utkast visuelt hvordan den nye meldingen skal se ut i regnskapssystemet?
 
-Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssystemet. Målet er at brukerne skal føre regnskap som normalt, og at systemet sammenstiller informasjonen fra regnskapet til mva-meldingen, slik at brukeren kan sende inn.
+Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssystemet. Målet er at brukerne skal føre regnskap som normalt, og at systemet sammenstiller informasjonen fra regnskapet til kompensasjonsmeldingen, slik at brukeren kan sende inn.
 
 Den nye rapporteringen vil være kodebasert og legge til rette for digital samhandling. Dagens nummererte poster erstattes av en dynamisk liste av spesifikasjonslinjer. Det vil bli mulig å gi merknader både samlet og per linje.
-Kodelisten for den nye mva-meldingen er tilgjengelig på Github, under [Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/kompensasjon/informasjonsmodell/#kodelister)
+Kodelisten for den nye kompensasjonsmeldingen er tilgjengelig på Github, under [Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/kompensasjon/informasjonsmodell/#kodelister)
 
 ### Kan man vedlegge dokumentasjon som filvedlegg til kompensasjonsmelding for merverdiavgift?
 
