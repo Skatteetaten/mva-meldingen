@@ -21,9 +21,9 @@ For kompensasjonsmelding for merverdiavgift vil det være mulig å manuelt fylle
 
 Det gjøres ikke endringer fra dagens praksis:
 
-Utfylling: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrett eller Revisormedarbeider.
+Utfylling: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrettighet eller Revisormedarbeider.
 
-Signering: Begrenset signeringsrett eller Regnskapsfører med signeringsrett. 
+Signering: Begrenset signeringsrettighet eller Regnskapsfører med signeringsrettighet. 
 
 Attestering: Ansvarlig revisor eller Revisorattesterer - MVA Kompensasjon.
 
