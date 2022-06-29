@@ -33,9 +33,9 @@ Eksempler på ny mva-melding i excel:
 
 Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/)
 
-## Feltbeskrivelse for mva-melding
+## Feltbeskrivelse for kompensasjonsmelding for merverdiavgift
 
-### MvaMelding
+### Kompensasjonsmelding for merverdiavgift
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
@@ -89,7 +89,7 @@ Kid oppgis bare dersom det er tilgodebeløp.
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr><td>skattleggingsperiode</td><td>Beskrivelse: den perioden skattefastsettingen gjelder for <br>
-  Periode angis i henhold til kodeverket for Skattleggingsperiode. For Skattemelding for merverdiavgiftskompensasjon gjelder 2-månedlig termin, men private kan ta med krav som omfatter et helt kalenderår i sjette terminskattleggingsperiode. Virksomheter som nevnt i merverdiavgiftskompensasjonsloven § 2 første ledd bokstav b til e og borettslag og boligsameier som nevnt i annet ledd kan fremsette krav som omfatter et helt kalenderår i skattemeldingen for sjette periode. <br>    
+  Periode angis i henhold til kodeverket for Skattleggingsperiode. For Skattemelding for merverdiavgiftskompensasjon gjelder 2-månedlig skattleggingsperiode. Virksomheter som nevnt i merverdiavgiftskompensasjonsloven § 2 første ledd bokstav b til e og borettslag og boligsameier som nevnt i annet ledd kan fremsette krav som omfatter et helt kalenderår i skattemeldingen for sjette periode. <br>    
   Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
@@ -111,20 +111,18 @@ Kid oppgis bare dersom det er tilgodebeløp.
 	Formål: formidling av hvilke mva-vurderinger som er utført
 	</td>
   </tr> 
-  <tr><td>mvaKodeRegnskapssystem</td><td>Beskrivelse: intern mva-kode i regnskapssystemet. Det kan være flere interne mva-koder for en mvaKode og evt spesifikasjon. I det tilfellet vil det bli flere rader i mva-meldingen pr mvaKode og spesifikasjon; en pr kombinasjon av mva-kode, spesifikasjon og mvaKodeRegnskapssystem.<br>
+  <tr><td>mvaKodeRegnskapssystem</td><td>Beskrivelse: intern mva-kode i regnskapssystemet. Det kan være flere interne mva-koder for en mvaKode og evt spesifikasjon. I det tilfellet vil det bli flere rader i kompensasjonsmeldingen pr mvaKode og spesifikasjon; en pr kombinasjon av mva-kode, spesifikasjon og mvaKodeRegnskapssystem.<br>
   Formål: To hensyn <br>
 Brukerne: gjenkjennelig i forhold til det de ser i regnskapet. <br>
 Systemleverandørene skal slippe å legge om mva-koder i systemene
 	</td>
   </tr>
-  <tr><td>grunnlag</td><td>Beskrivelse: det beløpet det er regnet utgående mva av.
-Feltet skal ikke fylles ut for inngående mva. <br>
+  <tr><td>grunnlag</td><td>Beskrivelse: det beløpet det er regnet merverdiavgiftskompensasjon av. <br>
 Formål: Grunnlag for kontroll ifra Skatteetaten
 	</td>
   </tr>
-  <tr><td>sats</td><td>Beskrivelse: Den mva-satsen som er benyttet ved beregning av utgående mva.
-Feltet skal ikke fylles ut for inngående mva. <br>
-	Formål: Å sikre at bare gyldige satser benyttes ved fakturering
+  <tr><td>sats</td><td>Beskrivelse: Den mva-satsen som er benyttet ved beregning av kompensasjonskrav. <br>
+	Formål: Å sikre at bare gyldige satser benyttes ved fremsetting av kompensasjonskrav
 	</td>
   </tr>
   <tr><td>merverdiavgift</td><td>Beskrivelse: fastsatt merverdiavgift <br>
@@ -189,7 +187,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
   </tr>
   <tr><td>foedselsnummer</td>
     <td>
-        Beskrivelse: unik identifikator for den skattepliktige som foretar egenfastsetting <br>
+        Beskrivelse: unik identifikator for den skattepliktige som foretar skattefastsetting <br>
         Formål: ivareta den skattepliktiges rettigheter og plikter
 	</td>
   </tr>
