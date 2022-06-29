@@ -12,7 +12,7 @@ Moderniseringen sørger for forenkling for næringslivet gjennom forbedringer so
 
 Fra 1. januar 2023. Første frist vil være 10. april 2023. Meldinger og korrigeringer som gjelder for terminer til og med 31. desember 2022 må leveres på gammelt format i Altinn, slik som tidligere.
 
-### Blir det en overgangsperioder fra gammel til ny tjeneste?
+### Blir det en overgangsperiode fra gammel til ny tjeneste?
 
 For kompensasjonsmelding for merverdiavgift er det ikke planlagt en overgangsperiode.
 
