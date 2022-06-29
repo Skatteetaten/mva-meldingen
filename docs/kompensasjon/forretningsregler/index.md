@@ -24,7 +24,7 @@ Følgende valideringsregler er foreløpig definert for kompensasjonsmelding for 
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
 - Merknad til beløp med motsatt fortegn som gjelder kompensasjon av inngående avgift mangler
 - Kompensasjonsmeldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig 
-- Inngående mva. skal føres uten grunnlag og sats
+- Kompensasjon av inngående avgift skal føres med grunnlag og sats
 - Kontonummer må være registrert for meldinger som kunne føre til en utbetaling
 - Merknader må være gyldig for brukt mva-kode (vanlig fortegn)
 - Merknader må være gyldig for brukt mva-kode (motsatt fortegn)
