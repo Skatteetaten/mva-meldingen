@@ -8,6 +8,9 @@ description: "Spørsmål og svar - kompensasjonsmelding"
 
 Moderniseringen sørger for forenkling for næringslivet gjennom forbedringer som felles informasjonsstruktur og regelsett for alle typer mva-meldinger; bedre brukeropplevelse og mer fleksibilitet i oppsettet; støttende digital veiledning og mindre feilkilder. Ny kompensasjonsmelding for merverdiavgift lanseres 01.01.23.
 
+### Når trer kompensasjonsmelding for merverdiavgift i kraft?
+
+Fra 1. januar 2023. Første frist vil være 10. april 2023. Meldinger og korrigeringer som gjelder for terminer til og med 31. desember 2022 må leveres på gammelt format i Altinn, slik som tidligere.
 
 ### Blir det en overgangsperioder fra gammel til ny tjeneste?
 
@@ -26,9 +29,6 @@ Utfylling: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeri
 Signering: Begrenset signeringsrettighet eller Regnskapsfører med signeringsrettighet. 
 
 Attestering: Ansvarlig revisor eller Revisorattesterer - MVA Kompensasjon.
-
-### Når trer kompensasjonsmelding for merverdiavgift i kraft?
-Fra 1. januar 2023. Første frist vil være 10. april 2023. Meldinger og korrigeringer som gjelder for terminer til og med 31. desember 2022 må leveres på gammelt format i Altinn, slik som tidligere.
 
 ### Skal leveringen av kompensasjonsmelding for merverdiavgift skje via Altinn eller via Skatteetatens nettside?
 
@@ -65,6 +65,9 @@ Vi ønsker å kunne tilby støtte for maskinporten, og ser på de juridiske og p
 
 Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/kompensasjon/informasjonsmodell/#kodelister)
 
+### Skal kodene angis med K ved rapportering til Skatteetaten?
+
+I SAF-T standard er mva-koder som kan være aktuelle for kompensasjon merket med K. Ved levering av kompensasjonsmelding for merverdiavgift fra regnskapssystem eller i innlogget tjeneste benyttes kun tallkode, uten K.
 
 ## Test
 
