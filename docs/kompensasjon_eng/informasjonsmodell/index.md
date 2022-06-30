@@ -30,7 +30,7 @@ Exapmles of the VAT return in excel:
 
 [Test cases VAT return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Testtilfeller%20mva-melding.xlsx?raw=true)
 
-Corresponding example files for VAT return in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/eksempler/melding/
+Corresponding example files for tax return for VAT compensation in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/eksempler/melding/
 
 ## Description of the fields in the tax return for VAT compensation
 
@@ -63,7 +63,7 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>regnskapssystemrefereanse</td><td>Description: The taxpayers unique reference for the submission <br>
-  Purpose: To ensure that the taxpayer and the tax office refer to the same message. 
+  Purpose: To ensure that the taxpayer and the tax office refer to the same return. 
 	</td>
   </tr>
     <tr><td>system</td><td>Description: Name and possible version of accounting system <br>
@@ -82,12 +82,14 @@ KID is only applicable if the business is to get VAT back from the Tax Authority
 Purpose: To be able to pay to the bank accounts that require KID 
 </table>
 
-### Skattegrunnlag og beregnet skatt
+### Tax basis and calculated tax
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>skattleggingsperiode</td><td>Description: the taxation period for which the tax return for VAT compensation applies <br>
-  Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
+  <tr><td>skattleggingsperiode</td><td>Description: The taxation period for which the tax return for VAT compensation applies <br>
+  Period is stated in accordance with the code list for the Skattleggingsperiode. 
+For the tax return for VAT compensation bi-monthly period applies. Businesses mentioned in the 
+VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subparagraph letters b to e and housing associations and condominiums as mentioned in the second subparagraph may make claims that include an entire calendar year in the tax return for VAT compensation in the sixth term. <br>
 Purpose: to ensure consistency between bookkeeping and VAT return period 
 	</td>
   </tr>
@@ -109,20 +111,18 @@ Purpose: dissemination of which VAT assessments have been carried out
 Purpose: dissemination of which VAT assessments have been carried out
 	</td>
   </tr> 
-  <tr><td>mvaKodeRegnskapssystem</td><td>Description: internal VAT code in the accounting system. There may be several internal VAT codes for a VAT code and possibly a specification. In that case, there will be several lines in the VAT message per VATCode and specification; one per combination of VAT code, specification and VAT CodeAccounting system. <br>
+  <tr><td>mvaKodeRegnskapssystem</td><td>Description: internal VAT code in the accounting system. There may be several internal VAT codes for a mvaKode and possibly a specification. In that case, there will be several lines in the tax return for VAT compensation per mvaKode and specification; one per combination of VAT code, specification and VAT CodeAccounting system. <br>
 Purpose: Two considerations <br>
 Users: recognizable in relation to what they see in the accounting system. <br>
 The system suppliers will not have to change VAT codes in the systems
 	</td>
   </tr>
-  <tr><td>grunnlag</td><td>Description: the amount of which VAT is calculated.
-The field must not be filled in for input VAT. <br>
+  <tr><td>grunnlag</td><td>Description: the amount of which VAT is calculated. <br>
 Purpose: Basis for control from the Tax Administration
 	</td>
   </tr>
-  <tr><td>sats</td><td>Description: The VAT rate used in calculating outgoing VAT. 
-The field must not be filled in for incoming VAT. <br>
-Purpose: To ensure that only valid rates are used for invoicing
+  <tr><td>sats</td><td>Description: The VAT rate used in calculating VAT compensation. <br>
+Purpose: To ensure that only valid rates are used for VAT compensation
 	</td>
   </tr>
   <tr><td>merverdiavgift</td><td>Description: fixed VAT <br>
@@ -135,7 +135,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 
 </table>
 
-## Description of the fields in the VAT return submission
+## Description of the fields in the tax return for VAT compensation submission
 
 ### MvaMeldingInnsending
 
@@ -143,14 +143,14 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr><td>meldingskategori</td>
     <td>
-        Description: the subtype of the VAT return <br>
+        Description: the subtype of the form which is submitted <br>
         Purpose: to ensure that the user can fulfill their VAT reporting obligations
 	</td>
   </tr>
   <tr><td>innsendingstype</td>
     <td>
-        Description: A VAT return with meldingskategori alminnelig og primær will always be <strong>komplett</strong> <br>
-        Purpose: The field is kept so at a later date it can be opened for auditors to comment/write notes on those vat returns (e.g. VAT compensation) that should be approved by an auditor before submission.
+        Description: A VAT return with meldingskategori alminnelig og primær will always be <strong>komplett</strong>. An initial tax return for VAT compensation will be complete when signed by the auditor. A corrected tax return for VAT compensation will be completed upon submission. <br>
+        Purpose: The field is kept so at a later date it can be opened for auditors to comment/write notes on returns (e.g. VAT compensation) that should be approved by an auditor before submission.
 </td>
   </tr>
   <tr><td>instansstatus</td>
@@ -174,7 +174,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 </table>
 
 <br>
-Identifikator (Either organisasjonsnummer or foedselsnummer)
+Identifier (Either organisasjonsnummer or foedselsnummer)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -199,28 +199,30 @@ Skattleggingsperiode
   <tr>
     <td>periode</td>
     <td>
-        Description: the taxation period for which the VAT return applies <br>
-		Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
+        Description: The taxation period for which the tax return for VAT compensation applies <br>
+  Period is stated in accordance with the code list for the Skattleggingsperiode. 
+For the tax return for VAT compensation bi-monthly period applies. Businesses mentioned in the 
+VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subparagraph letters b to e and housing associations and condominiums as mentioned in the second subparagraph may make claims that include an entire calendar year in the tax return for VAT compensation in the sixth term. <br>
         Purpose: to ensure consistency between book keeping and VAT return period.
 	</td>
   </tr>
   <tr><td>aar</td>
     <td>
-        Description: the taxation year for which the VAT return applies <br>
+        Description: the taxation year for which the  return applies <br>
         Purpose: to ensure consistency between book keeping and VAT return period.
 	</td>
   </tr>
 </table>
 
 <br>
-Vedlegg
+Attachments
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
     <td>vedleggstype</td>
     <td>
         Description: Type of attachments which is uploaded to the instance on Altinn.
-        Where you can either use <strong>mva-melding</strong> for the VAT return, or <strong>binaerVedlegg</strong> for general attachments.
+        Where you can either use <strong>mva-melding</strong> for the tax return for VAT compensation , or <strong>binaerVedlegg</strong> for general attachments.
 	</td>
   </tr>
   <tr><td>kildegruppe</td>
@@ -244,7 +246,7 @@ Vedlegg
 </table>
 
 <br>
-Vedleggsfil
+Attachment file
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
