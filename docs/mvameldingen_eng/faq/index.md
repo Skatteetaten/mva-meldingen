@@ -68,7 +68,7 @@ The Tax Administration have plans to develop functionality for delegating power 
 
 ### When will the new VAT-return be launched?
 
-The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. VAT-retunrs and corrections for terms up till and including December 31st 2021 must be submitted in the old format through Altinn, as before.
+The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. VAT-returns and corrections for terms up till and including December 31st 2021 must be submitted in the old format through Altinn, as before.
 
 ### How will the new VAT-return be submitted?
 
@@ -110,7 +110,7 @@ We will support the following file formats:
 
 Authentication will be carried out with personal login in ID-porten for both system-to-system and portal submissions, not by password and username like today. ERPs must offer ID-porten login window for their users, so they can log in using electronic ID from ID-porten. To avoid unnecessary logins user will stay logged in for 8 hours.
 
-We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. If Maskinporten is offered for VAT-returns, it will be later than Januart 1st 2022. ID-porten will be used until further notice.
+We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. If Maskinporten is offered for VAT-returns, it will be later than January 1st 2022. ID-porten will be used until further notice.
 
 ### Will it still be possible to submit a "Supplementary return"?
 
