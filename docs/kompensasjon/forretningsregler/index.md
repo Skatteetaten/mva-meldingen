@@ -82,28 +82,7 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKATTEMELDING
 
 ```kotlin
-    INNLEVERING_FØR_1_1_2022(
-        "Innsending og validering av mva-melding er ikke tilgjengelig enda." {
-            valideringsregel {
-                nå måVæreEtterEllerLik førsteJan2022
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { PLIKT }
-            regelnummer { R000 }
-        }
-    ),
-    
-    INNLEVERING_MELDING_FRA_FØR_2022(
-        "Det kan ikke sendes inn mva-melding for perioder før 01.01.2022. Denne må sendes via Altinn." {
-            valideringsregel {
-                skattleggingsperiodeår måVæreEtterEllerLik år2022
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { PLIKT }
-            regelnummer { R077 }
-        }
-    ),
-    
+   
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
