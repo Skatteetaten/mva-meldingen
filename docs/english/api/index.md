@@ -17,20 +17,20 @@ description: "API descriptions"
 | 2021.11.08 | Updated validation error list                             |
 | 2021.11.11 | Updated error messages when filing submission             |
 | 2021.12.08 | Updated valid content type for binaerVedlegg              |
+| 2022.06.30 | Changes in connection with the expansion of documentation for other return types| 
 
 ## Introduction
 
-VAT returns to be sent to Skatteetaten from an end-user
-system (SBS) should use these APIs:
+The APIs function for the following categories of tax return: VAT-return (RF-0002/0004), VAT-return for reverse liability (RF-0005) and tax return for VAT compensation (RF-0009). When these types of returns are submitted to the Tax Authority from an end-user system (SBS) these APIs should be used:
 
 1.  Skatteetaten VAT return Validation API
 2.  Skatteetaten Altinn3 VAT-Return-Submission API
 
-as described below.
+In the API description the VAT-return is used as a collective term for the various types of returns. The APIs are described below.
 
 ## Overall process for Submission and validating VAT return
 
-Submission of VAT returns are done with the Skatteetaten
+Submission of VAT-returns are done with the Skatteetaten
 Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
 covers the needed sequence for submitting VAT returns.
 
