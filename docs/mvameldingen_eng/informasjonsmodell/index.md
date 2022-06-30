@@ -48,11 +48,11 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>meldingskategori</td><td>Description: the subtype of the VAT return <br>
+  <tr><td>meldingskategori</td><td>The subtype of the VAT return <br>
 	Purpose: to ensure that the user can fulfill their VAT reporting obligations
 	</td>
   </tr>
-    <tr><td>merknad</td><td>Description: additional information about the content of the VAT return<br>
+    <tr><td>merknad</td><td>Additional information about the content of the VAT return<br>
 	Purpose: to ensure that the taxpayer have the possibility to explain their application of law when necessary
 	</td>
   </tr>
@@ -62,7 +62,7 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>organisasjonsnummer</td><td>Description: unique identifier for the taxable organisation  <br>
+  <tr><td>organisasjonsnummer</td><td>Unique identifier for the taxable organisation  <br>
   Purpose: to take care of the rights and obligations of the taxpayer
 	</td>
   </tr>	
@@ -72,36 +72,36 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>regnskapssystemrefereanse</td><td>Description: The taxpayers unique reference for the submission <br>
+  <tr><td>regnskapssystemrefereanse</td><td>The taxpayers unique reference for the submission <br>
   Purpose: To ensure that the taxpayer and the tax office refer to the same message. 
 	</td>
   </tr>
-    <tr><td>system</td><td>Description: Name and possible version of accounting system <br>
+    <tr><td>system</td><td>Name and possible version of accounting system <br>
 Purpose: To be able to follow up systematic errors with the system supplier instead of following up each individual taxpayer. 
 	</td>
   </tr>
 </table>
 
-### Betalingsinformasjon
+### Payment information
 
 KID oppgis bare dersom det er tilgodebeløp.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>KID</td><td>Description: The recipient's identification of a payment <br>
+  <tr><td>KID</td><td>The recipient's identification of a payment <br>
 Purpose: To be able to pay to the bank accounts that require KID 
 </table>
 
-### Skattegrunnlag og beregnet skatt
+### Tax basis and calculated tax
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>skattleggingsperiode</td><td>Description: the taxation period for which the VAT return applies <br>
+  <tr><td>skattleggingsperiode</td><td>The taxation period for which the VAT return applies <br>
   Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
 Purpose: to ensure consistency between bookkeeping and VAT return period 
 	</td>
   </tr>
-    <tr><td>fastsattMerverdiavgift</td><td>Description: sum to pay / sum to be refunded <br>
+    <tr><td>fastsattMerverdiavgift</td><td>Sum to pay / sum to be refunded <br>
 Purpose: to ensure that the correct amount is being paid
 	</td>
   </tr>
@@ -111,35 +111,35 @@ Purpose: to ensure that the correct amount is being paid
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>mvaKode</td><td>Description: Classification of incoming and outgoing VAT in accordance with the Norwegian SAF-T standard <br>
+  <tr><td>mvaKode</td><td>Classification of incoming and outgoing VAT in accordance with the Norwegian SAF-T standard <br>
 Purpose: dissemination of which VAT assessments have been carried out
 	</td>
   </tr>
-  <tr><td>spesifikasjon</td><td>Description: detailing some VAT conditions that are not included in the Norwegian SAF-T standard <br>
+  <tr><td>spesifikasjon</td><td>Detailing some VAT conditions that are not included in the Norwegian SAF-T standard <br>
 Purpose: dissemination of which VAT assessments have been carried out
 	</td>
   </tr> 
-  <tr><td>mvaKodeRegnskapssystem</td><td>Description: internal VAT code in the accounting system. There may be several internal VAT codes for a VAT code and possibly a specification. In that case, there will be several lines in the VAT message per VATCode and specification; one per combination of VAT code, specification and VAT CodeAccounting system. <br>
+  <tr><td>mvaKodeRegnskapssystem</td><td>Internal VAT code in the accounting system. There may be several internal VAT codes for a VAT code and possibly a specification. In that case, there will be several lines in the VAT message per VATCode and specification; one per combination of VAT code, specification and VAT CodeAccounting system. <br>
 Purpose: Two considerations <br>
 Users: recognizable in relation to what they see in the accounting system. <br>
 The system suppliers will not have to change VAT codes in the systems
 	</td>
   </tr>
-  <tr><td>grunnlag</td><td>Description: the amount of which VAT is calculated.
+  <tr><td>grunnlag</td><td>The amount of which VAT is calculated.
 The field must not be filled in for input VAT. <br>
 Purpose: Basis for control from the Tax Administration
 	</td>
   </tr>
-  <tr><td>sats</td><td>Description: The VAT rate used in calculating outgoing VAT. 
+  <tr><td>sats</td><td>The VAT rate used in calculating outgoing VAT. 
 The field must not be filled in for incoming VAT. <br>
 Purpose: To ensure that only valid rates are used for invoicing
 	</td>
   </tr>
-  <tr><td>merverdiavgift</td><td>Description: fixed VAT <br>
+  <tr><td>merverdiavgift</td><td>Fixed VAT <br>
 Purpose: to show calculated VAT per line
       </td>
   </tr>  
-  <tr><td>merknad</td><td>Description: information about the content of mvaKode <br>
+  <tr><td>merknad</td><td>Information about the content of mvaKode <br>
 Purpose: to ensure that the taxpayer can explain his own application of the law where necessary 
   </tr>
 
@@ -153,50 +153,50 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr><td>meldingskategori</td>
     <td>
-        Description: the subtype of the VAT return <br>
+        The subtype of the VAT return <br>
         Purpose: to ensure that the user can fulfill their VAT reporting obligations
 	</td>
   </tr>
   <tr><td>innsendingstype</td>
     <td>
-        Description: A VAT return with meldingskategori alminnelig og primær will always be <strong>komplett</strong> <br>
+        A VAT return with meldingskategori alminnelig og primær will always be <strong>komplett</strong> <br>
         Purpose: The field is kept so at a later date it can be opened for auditors to comment/write notes on those vat returns (e.g. VAT compensation) that should be approved by an auditor before submission.
 </td>
   </tr>
   <tr><td>instansstatus</td>
     <td>
-        Description: This field will be removed since we get the required information from the events on the instance. <br>
+        This field will be removed since we get the required information from the events on the instance. <br>
         This will be done by making the field optional in a transition and removed at a appropriate time.
 	</td>
   </tr>
   <tr><td>opprettetAv</td>
     <td>
-        Description: This field should contain the name of the logged in user. <br>
+        This field should contain the name of the logged in user. <br>
         Purpose: The content of this field will be displayed in Altinn.
 	</td>
   </tr>
   <tr><td>opprettingstidspunkt</td>
     <td>
-        Description: This field will be removed since we get the required information from the events on the instance. <br>
+        This field will be removed since we get the required information from the events on the instance. <br>
         This will be done by making the field optional in a transition and removed at a appropriate time.
 	</td>
   </tr>
 </table>
 
 <br>
-Identifikator (Either organisasjonsnummer or foedselsnummer)
+Identifier (Either organisasjonsnummer or foedselsnummer)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
     <td>organisasjonsnummer</td>
     <td>
-        Description: unique identifier for the taxable organisation <br>
+        Unique identifier for the taxable organisation <br>
         Purpose: to take care of the rights and obligations of the taxpayer
 	</td>
   </tr>
   <tr><td>foedselsnummer</td>
     <td>
-        Description: unique identifier for the taxable organisation <br>
+        Unique identifier for the taxable organisation <br>
         Purpose: to take care of the rights and obligations of the taxpayer
 	</td>
   </tr>
@@ -209,14 +209,14 @@ Skattleggingsperiode
   <tr>
     <td>periode</td>
     <td>
-        Description: the taxation period for which the VAT return applies <br>
-		Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
+        The taxation period for which the VAT return applies <br>
+	Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
         Purpose: to ensure consistency between book keeping and VAT return period.
 	</td>
   </tr>
   <tr><td>aar</td>
     <td>
-        Description: the taxation year for which the VAT return applies <br>
+        The taxation year for which the VAT return applies <br>
         Purpose: to ensure consistency between book keeping and VAT return period.
 	</td>
   </tr>
@@ -229,25 +229,25 @@ Vedlegg
   <tr>
     <td>vedleggstype</td>
     <td>
-        Description: Type of attachments which is uploaded to the instance on Altinn.
+        Type of attachments which is uploaded to the instance on Altinn.
         Where you can either use <strong>mva-melding</strong> for the VAT return, or <strong>binaerVedlegg</strong> for general attachments.
 	</td>
   </tr>
   <tr><td>kildegruppe</td>
     <td>
-        Description: Which group the submission comes from. <br>
+        Which group the submission comes from. <br>
         Options: <strong>etat</strong>, <strong>sluttbrukersystem</strong>, <strong>sluttbruker</strong> 
 	</td>
   </tr>
   <tr><td>opprettetAv</td>
     <td>
-        Description: This field should contain the name of the logged in user. <br>
+        This field should contain the name of the logged in user. <br>
         Purpose: The content of this field will be displayed in Altinn.
 	</td>
   </tr>
   <tr><td>opprettingstidspunkt</td>
     <td>
-        Description: This field will be removed since we get the required information from the events on the instance. <br>
+        This field will be removed since we get the required information from the events on the instance. <br>
         This will be done by making the field optional in a transition and removed at a appropriate time.
 	</td>
   </tr>
@@ -260,17 +260,17 @@ Vedleggsfil
   <tr>
     <td>filnavn</td>
     <td>
-        Description: Name of the file which is uploaded as attachment <br>
+        Name of the file which is uploaded as attachment <br>
 	</td>
   </tr>
   <tr><td>filekstensjon</td>
     <td>
-        Description: The file extension for the file which is uploaded as attachment <br>
+        The file extension for the file which is uploaded as attachment <br>
 	</td>
   </tr>
   <tr><td>filinnhold</td>
     <td>
-        Description: description of the contents of the file which is uploaded as attachment <br>
+        Description of the contents of the file which is uploaded as attachment <br>
 	</td>
   </tr>
 </table>
