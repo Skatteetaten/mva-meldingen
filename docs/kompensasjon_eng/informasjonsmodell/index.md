@@ -34,7 +34,7 @@ Example files for tax return for VAT compensation in XML format can be downloade
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>meldingskatergori</td><td>Description: the subtype of the return <br>
+  <tr><td>meldingskategori</td><td>Description: the subtype of the return <br>
 	Purpose: to ensure that the user can fulfill their VAT reporting obligations
 	</td>
   </tr>
