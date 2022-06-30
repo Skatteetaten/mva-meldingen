@@ -8,9 +8,8 @@ description: "Test and production information"
 
 | Date       | Changes                                                                                                     |
 | :--------- | :---------------------------------------------------------------------------------------------------------- |
-| 2022.03.09 | Updated documentation with [Production](#production-environment) and [Test](#test-environment) environments |
-| 2022.03.31 | Corrected typo for Altinn Instance API url in test environment                                              |
-| 2000.05.11 | Added information about testusers from Tenor test data search                                               |
+| 2022.06.30 | New page for compensation report for VAT                                                                    |
+
 
 ## Testing requirements
 
@@ -20,15 +19,16 @@ The project team will contribute with debugging, bug fixing, and following up of
 
 The project team is available via Slack for technical clarifications and for direct contact with developers and test managers. The project team can also be reached via mva-modernisering@skatteetaten.no. Contact us here to receive access to Slack.
 
+
 ## The test environment and test data
 
 System providers must have test environments which can make use of synthetic data
 
 Connection to the test environment occurs through ID-porten and for the purpose of testing, Skatteetaten's ID-porten integration can be used. It is recommended that the providers order their own integration against ID-porten as soon as possible because the process is partly manual and can be time consuming. See more in [implementation guide section 3. ID-porten integration.](https://skatteetaten.github.io/mva-meldingen/english/implementationguide/#3-id-porten-integration)
 
-The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test VAT-return. Ordinary Digdir test users will not work for this purpose.[Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/test/User_Guide_Tenor_testdata.pdf)
+The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test compensation report for VAT. Ordinary Digdir test users will not work for this purpose.[Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvamelding_eng/test/User_Guide_Tenor_testdata.pdf)
 
-Skatteetaten's test environment will be available as long as it is needed, after the new VAT-return is launched in January 2022.
+Skatteetaten's test environment will be available as long as it is needed, after the new compensation report for VAT is launched.
 
 ## Test planning
 
@@ -42,7 +42,7 @@ The system providers will, after the end of the test period and in advance of pr
 
 Some test applications has been written in jupyter notebook, for use when testing the solution from the Tax adminisatration:
 
-1. [Jupyter notebook demo for fetching and validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Downlaod the catalog 'test' and run the script demo.ipynb (The script will carry out all steps in the process: call ping service to check connection and validate VAT-return).
+1. [Jupyter notebook demo for fetching and validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Downlaod the catalog 'test' and run the script demo.ipynb (The script will carry out all steps in the process: call ping service to check connection and validate compensation report for VAT).
 
 2. [Jupyter notebook demo for fetching, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/file-vat-return.ipynb). run the script file-vat-return.ipynb. It will run all the steps in the process.
 
