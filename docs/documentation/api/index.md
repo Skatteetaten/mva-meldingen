@@ -215,7 +215,6 @@ Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsen
 _Respons 400 - Bad Request:_ <br>
 
 _Respons 403 - Forbidden:_ <br>
-Eksempel verdi
 
 ```JSON
 {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.3","title":"Forbidden","status":403,"traceId":"00-44eab35cb9ca2049b24de316f380a774-a724e045b09dfc44-00"}
@@ -225,7 +224,6 @@ Denne feilmeldingen kan en få hvis en prøver å lage en instanse hvor innlogge
 Dette vil da også gjelde hvis innlogget bruker ikke har tilstrekkelig roller for å opprette en instans.
 
 _Respons 404 - Not Found:_ <br>
-Eksempel verdi
 
 ```JSON
 "Cannot lookup party: Failed to lookup party by organisationNumber: 123456789. The exception was: 404 - Not Found - "
