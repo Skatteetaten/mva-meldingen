@@ -44,11 +44,11 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 
 ## Description of the fields in the VAT return
 
-### MvaMelding
+### VAT-return
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>meldingskatergori</td><td>Description: the subtype of the VAT return <br>
+  <tr><td>meldingskategori</td><td>Description: the subtype of the VAT return <br>
 	Purpose: to ensure that the user can fulfill their VAT reporting obligations
 	</td>
   </tr>
