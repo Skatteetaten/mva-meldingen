@@ -1,12 +1,12 @@
 ---
 icon: "cloud"
 title: "Information models, XSD and encoding"
-description: "XSD for VAT return (mva-melding)
+description: "XSD for tax return for VAT compensation (kompensasjonsmelding for merverdiavgift)
 - XSD for submission of metadata information 
 - encoding in XML-format"
 ---
 
-# XSD for the VAT return
+# XSD for the tax return for VAT compensation
 
 ### Change log
 
@@ -15,11 +15,12 @@ description: "XSD for VAT return (mva-melding)
 | 2022.06.30 | Initial version of documentation for compensation report for VAT |
 |            |
 
-## Version 1.0 of the XSD for the VAT return
+## Version 1.0 of the XSD for the tax return for VAT compensation
 
+The tax return for VAT compensation must be submitted in XML-format. It must be in accordance with the structure outlined for the VAT-return. The same XSD applies for both returns. 
 Version 1.0 of this XSD is found here [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
 
-Graphical representation of the XSD and encoding for the [VAT return](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
+Graphical representation of the XSD and encoding for the [tax return for VAT compensation](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
 
 ![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftKompensasjon.jpg)
 
@@ -31,17 +32,17 @@ Exapmles of the VAT return in excel:
 
 Corresponding example files for VAT return in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/eksempler/melding/
 
-## Description of the fields in the VAT return
+## Description of the fields in the tax return for VAT compensation
 
-### MvaMelding
+### Tax return for VAT compensation
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>meldingskatergori</td><td>Description: the subtype of the VAT return <br>
+  <tr><td>meldingskatergori</td><td>Description: the subtype of the return <br>
 	Purpose: to ensure that the user can fulfill their VAT reporting obligations
 	</td>
   </tr>
-    <tr><td>merknad</td><td>Description: additional information about the content of the VAT return<br>
+    <tr><td>merknad</td><td>Description: additional information about the content of the tax return for VAT compensation<br>
 	Purpose: to ensure that the taxpayer have the possibility to explain their application of law when necessary
 	</td>
   </tr>
@@ -71,9 +72,9 @@ Purpose: To be able to follow up systematic errors with the system supplier inst
   </tr>
 </table>
 
-### Betalingsinformasjon
+### Payment information
 
-KID oppgis bare dersom det er tilgodebeløp.
+KID is only applicable if the business is to get VAT back from the Tax Authority.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -85,7 +86,7 @@ Purpose: To be able to pay to the bank accounts that require KID
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>skattleggingsperiode</td><td>Description: the taxation period for which the VAT return applies <br>
+  <tr><td>skattleggingsperiode</td><td>Description: the taxation period for which the tax return for VAT compensation applies <br>
   Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
 Purpose: to ensure consistency between bookkeeping and VAT return period 
 	</td>
