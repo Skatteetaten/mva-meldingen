@@ -84,7 +84,7 @@ If this rule is not met, the validation will fail.
 ** Line 8 - Severity **: This is the severity if the validation fails.
 The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous VAT return), UGYLDIG_SKATTEMELDING (invalid vat return)
 
-##Detailed Specification of the rules
+## Detailed Specification of the rules - Under construction
 
 ```kotlin
     
