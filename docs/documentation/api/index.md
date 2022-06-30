@@ -21,6 +21,7 @@ description: "Api-beskrivelser"
 | 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                                             |
 | 2022.03.08 | Betalingsinformasjon kan [lastes ned](#tilbakemeldingsfiler) etter fullføring av innsending |
 | 2022.06.24 | Endringer i forbindelse med utvidelse av dokumentasjon for andre meldingstyper              |
+| 2022.06.30 | Lagt til ny valideringsfeil for duplikate filnavn                                           |
 
 ## Introduksjon
 
@@ -29,7 +30,7 @@ API'ene fungerer for følgende kategorier skattemeldinger for merverdiavgift: Or
 1. Skatteetatens MVA-Melding validerings API
 1. Skatteetatens Altinn3 MVA-Melding-Innsending's API
 
-I API-beskrivelsen brukes mva-melding som en samlebetegnelse på de ulike meldingstypene. API'ene beskrives under. 
+I API-beskrivelsen brukes mva-melding som en samlebetegnelse på de ulike meldingstypene. API'ene beskrives under.
 
 # Prosess innsending og validering
 
@@ -448,6 +449,12 @@ Hvis verdien i skattleggingsperiode feltet i MvaMeldingInnsending er tom vil en 
 ```
 
 Hvis verdien i instansstatus feltet i MvaMeldingInnsending er null vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+Hvis to eller flere filer er lastet opp til instansen med samme filnavn vil en få denne feilmeldingen.
 
 **Valideringstjenesten**
 

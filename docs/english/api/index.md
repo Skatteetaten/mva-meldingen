@@ -17,6 +17,7 @@ description: "API descriptions"
 | 2021.11.08 | Updated validation error list                             |
 | 2021.11.11 | Updated error messages when filing submission             |
 | 2021.12.08 | Updated valid content type for binaerVedlegg              |
+| 2022.06.30 | Added new conflict error message for duplicate file names |
 
 ## Introduction
 
@@ -483,6 +484,12 @@ This error message will occur if the value of the field skattleggingsperiode is 
 ```
 
 This error message will occur if the value of the field instansstatus is null.
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+This error message will occur if two or more uploaded files have the same name.
 
 **Validation Service**
 
