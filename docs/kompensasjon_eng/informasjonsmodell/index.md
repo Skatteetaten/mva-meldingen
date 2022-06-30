@@ -13,7 +13,7 @@ description: "XSD for VAT return (mva-melding)
 | Date       | What changed?                                                    |
 | :--------- | :--------------------------------------------------------------- |
 | 2022.06.30 | Initial version of documentation for compensation report for VAT |
-|  |
+|            |
 
 ## Version 1.0 of the XSD for the VAT return
 
@@ -29,7 +29,7 @@ Exapmles of the VAT return in excel:
 
 [Test cases VAT return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Testtilfeller%20mva-melding.xlsx?raw=true)
 
-Corresponding example files for VAT return in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
+Corresponding example files for VAT return in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/eksempler/melding/
 
 ## Description of the fields in the VAT return
 

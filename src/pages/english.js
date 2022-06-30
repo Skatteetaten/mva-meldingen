@@ -27,7 +27,7 @@ const EnglishPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <h1>Dokumentation</h1>
+          <h1>Common documentation</h1>
         </SingleColumnRow>
         <SingleColumnRow>
           <NavigationTile

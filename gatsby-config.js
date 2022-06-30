@@ -25,7 +25,7 @@ const gatsbyConfig = {
       //      },
       {
         href: "/english",
-        name: "English",
+        name: "Common",
       },
       {
         href: "/mvameldingen_eng",
