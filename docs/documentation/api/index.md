@@ -213,17 +213,6 @@ Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsen
 ### Feilmeldinger
 
 _Respons 400 - Bad Request:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 _Respons 403 - Forbidden:_ <br>
 Eksempel verdi
@@ -396,17 +385,6 @@ _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
 _Respons 409 - Conflict:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
@@ -578,33 +556,11 @@ Dette endepunktet vil returnere instansen når Skatteetaten har gitt tilbakemeld
 ### Feilmeldinger
 
 _Respons 400 - Bad Request:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å hente instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
 _Respons 404 - Not Found:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ### Tilbakemeldingsfiler
 

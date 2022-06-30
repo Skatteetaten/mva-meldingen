@@ -229,17 +229,6 @@ Example instanceUrl:
 ### Error messages
 
 _Response 400 - Bad Request:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 _Response 403 - Forbidden:_ <br>
 Example Value:
@@ -431,17 +420,6 @@ _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
 
 _Response 409 - Conflict:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
@@ -615,33 +593,10 @@ and it will contain data elements for all the feedback files from the Tax Admini
 ### Error Messages
 
 _Response 400 - Bad Request:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
-
 _Response 403 - Forbidden:_ <br>
 This error message will occur if the logged-in user attempt to retrieve the instance, but the person does not have the correct roles.
 
 _Response 404 - Not Found:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ### Feedback files
 
