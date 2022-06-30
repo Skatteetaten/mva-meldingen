@@ -553,6 +553,14 @@ The submission will now be in the feedback step.
 _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
 
+_Response 409 - Conflict:_ <br>
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+This error message will occur if two or more uploaded files have the same name. Unlikely during this step.
+
 ### Payment information available
 
 When the submission is completed and the instance is in the feedback step, the payment information will be available for download. It can be found by downloading the instance and downloading the file `betalingsinformasjon.xml`, and has the data type `payment information`. See [feedback files](#feedback-files).

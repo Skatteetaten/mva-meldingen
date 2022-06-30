@@ -517,6 +517,14 @@ Innsendingen vil nå være i tilbakemeldings-steget.
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
+_Response 409 - Conflict:_ <br>
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+Hvis to eller flere filer er lastet opp til instansen med samme filnavn vil en få denne feilmeldingen. Kan forekomme i feilsituasjoner for dette steget.
+
 ### Betalingsinformasjon tilgjengelig
 
 Når Innsendingen er fullført og instansen nå er i tilbakemeldings-steget, vil betalingsinformasjonen være tilgjengelig på instansen. Den kan finnes ved å hente instansen og laste ned fila `betalingsinformasjon.xml`, og har datatypen `betalingsinformasjon`. Se [tilbakemeldingsfiler](#tilbakemeldingsfiler).
