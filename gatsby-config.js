@@ -27,6 +27,14 @@ const gatsbyConfig = {
         href: "/english",
         name: "English",
       },
+      {
+        href: "/mvameldingen_eng",
+        name: "VAT report",
+      },
+      {
+        href: "/kompensasjon_eng",
+        name: "Compensation",
+      },
     ],
   },
   pathPrefix: "/mva-meldingen",
