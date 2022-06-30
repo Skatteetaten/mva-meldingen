@@ -252,17 +252,17 @@ Attachment file
   <tr>
     <td>filnavn</td>
     <td>
-        Description: Name of the file which is uploaded as attachment <br>
+        Name of the file which is uploaded as attachment <br>
 	</td>
   </tr>
   <tr><td>filekstensjon</td>
     <td>
-        Description: The file extension for the file which is uploaded as attachment <br>
+        The file extension for the file which is uploaded as attachment <br>
 	</td>
   </tr>
   <tr><td>filinnhold</td>
     <td>
-        Description: description of the contents of the file which is uploaded as attachment <br>
+        Description of the contents of the file which is uploaded as attachment <br>
 	</td>
   </tr>
 </table>
