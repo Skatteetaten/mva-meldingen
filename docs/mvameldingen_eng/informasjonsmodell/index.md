@@ -46,7 +46,7 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 
 ### VAT-return
 
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>meldingskategori</td><td>The subtype of the VAT return <br>
 	Purpose: to ensure that the user can fulfill their VAT reporting obligations
@@ -60,7 +60,7 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 
 ### Skattepliktig
 
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>organisasjonsnummer</td><td>Unique identifier for the taxable organisation  <br>
   Purpose: to take care of the rights and obligations of the taxpayer
@@ -70,7 +70,7 @@ Corresponding example files for VAT return in XML format can be downloaded from 
 
 ### Innsending
 
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>regnskapssystemrefereanse</td><td>The taxpayers unique reference for the submission <br>
   Purpose: To ensure that the taxpayer and the tax office refer to the same message. 
@@ -86,7 +86,7 @@ Purpose: To be able to follow up systematic errors with the system supplier inst
 
 KID oppgis bare dersom det er tilgodebeløp.
 
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>KID</td><td>The recipient's identification of a payment <br>
 Purpose: To be able to pay to the bank accounts that require KID 
@@ -94,7 +94,7 @@ Purpose: To be able to pay to the bank accounts that require KID
 
 ### Tax basis and calculated tax
 
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>skattleggingsperiode</td><td>The taxation period for which the VAT return applies <br>
   Period is stated in accordance with the code list for the Skattleggingsperiode. SkattleggingsperiodeUke follows the calendar's week numbering, for example week 1 in 2022 runs from 3 to 9 January. For SkattleggingsperiodeHalvmåndelig, the first half runs from the 1st to the 15th of the month and the second half runs from the 16th to the last of the month. <br>
@@ -109,7 +109,7 @@ Purpose: to ensure that the correct amount is being paid
 
 ### MvaSpesifikasjonslinje
 
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>mvaKode</td><td>Classification of incoming and outgoing VAT in accordance with the Norwegian SAF-T standard <br>
 Purpose: dissemination of which VAT assessments have been carried out
@@ -149,7 +149,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 
 ### MvaMeldingInnsending
 
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr><td>meldingskategori</td>
     <td>
@@ -185,7 +185,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 
 <br>
 Identifier (Either organisasjonsnummer or foedselsnummer)
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
     <td>organisasjonsnummer</td>
@@ -204,7 +204,7 @@ Identifier (Either organisasjonsnummer or foedselsnummer)
 
 <br>
 Skattleggingsperiode
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
     <td>periode</td>
@@ -224,7 +224,7 @@ Skattleggingsperiode
 
 <br>
 Vedlegg
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
     <td>vedleggstype</td>
@@ -255,7 +255,7 @@ Vedlegg
 
 <br>
 Vedleggsfil
-<table align=left>
+<table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
     <td>filnavn</td>
