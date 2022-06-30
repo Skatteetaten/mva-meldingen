@@ -135,7 +135,7 @@ The response will have the http status code 409 if the validation fails. It is p
 When the upload is complete, the submission can be completed. The user who completes the submission must be authorized for this for the relevant organization. The end user must have one of the following Altinn roles:
 
 - Begrenset signeringsrett
-- Kontaktperson NUF
+- Kontaktperson NUF (does not apply to tax return for VAT compensation)
 - Regnskapsfører med signeringsrett
 
 ### 7. Obtain the feedback of the submission from the Tax Administration's submission api
