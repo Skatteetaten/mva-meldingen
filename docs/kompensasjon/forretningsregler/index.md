@@ -48,7 +48,7 @@ To praktiske regler er også definert for å hindre feilaktige innsendinger til 
 - Innsending og valideringstjenesten er ikke tilgjengelig før 1.1.2023
 - Innsending og validering av kompensasjonsmelding fra før 2023 er ikke tilgjengelig
 
-## Detaljspesifikasjon av reglene:
+## Detaljspesifikasjon av reglene - under arbeid:
 
 Validering av kompensasjonsmelding for merverdiavgift er implementert med et sett av regler som kjøres maskinelt
 for å sjekke gyldigheten av meldingen.
