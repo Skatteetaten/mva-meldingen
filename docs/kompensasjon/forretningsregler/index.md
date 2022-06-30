@@ -23,7 +23,7 @@ Følgende valideringsregler er foreløpig definert for kompensasjonsmelding for 
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats
 - Merknad til beløp med motsatt fortegn som gjelder kompensasjon av inngående avgift mangler
-- Kompensasjonsmeldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig 
+- Kompensasjonsmeldingen skal ikke sendes inn før gjeldende skattleggingsperiode er ferdig
 - Kompensasjon av inngående avgift skal føres med grunnlag og sats
 - Kontonummer må være registrert for meldinger som kunne føre til en utbetaling
 - Merknader må være gyldig for brukt mva-kode (vanlig fortegn)
@@ -82,28 +82,7 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKATTEMELDING
 
 ```kotlin
-    INNLEVERING_FØR_1_1_2022(
-        "Innsending og validering av mva-melding er ikke tilgjengelig enda." {
-            valideringsregel {
-                nå måVæreEtterEllerLik førsteJan2022
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { PLIKT }
-            regelnummer { R000 }
-        }
-    ),
-    
-    INNLEVERING_MELDING_FRA_FØR_2022(
-        "Det kan ikke sendes inn mva-melding for perioder før 01.01.2022. Denne må sendes via Altinn." {
-            valideringsregel {
-                skattleggingsperiodeår måVæreEtterEllerLik år2022
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { PLIKT }
-            regelnummer { R077 }
-        }
-    ),
-    
+
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
@@ -129,7 +108,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R019 }
         }
     ),
-   
+
     MVA_MELDINGSINNHOLD_INNGÅENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER(
         "Det må fylles ut merknad som forklarer hvorfor det er benyttet motsatt fortegn for fradragsført merverdiavgift."
         {
@@ -158,7 +137,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R021 }
         }
     ),
-   
+
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
         "Spesifikasjonslinje som gjelder justering av merverdiavgift for kapitalvarer kan kun sendes inn på kode 1 og 81."
         {
@@ -172,7 +151,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R040 }
         }
     ),
-   
+
     MVA_PLIKT_SKATTLEGGINGSPERIODEN_FOR__MELDINGSKATEGORI_ALMINNELIG_NÆRING_MÅ_VÆRE_FERDIG(
         "Det kan ikke sendes inn mva-melding før terminen har utløpt."
         {
@@ -190,7 +169,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R059 }
         }
     ),
-  
+
     MVA_KODE_FOR_INNGÅENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS(
         "Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats."
         {
@@ -211,7 +190,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R065 }
         }
     ),
-  
+
     MVA_MELDINGSINNHOLD_MERKNAD_MANGLER(
         "Det må fylles ut gyldig merknad for denne spesifikasjonslinjen."
         {
