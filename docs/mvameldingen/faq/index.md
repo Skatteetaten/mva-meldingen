@@ -90,7 +90,7 @@ Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
 
 ### Kan vi allerede nå se hvordan den innloggede løsningen for manuell utfylling av mva-melding vil se ut?
 
-Man kan prøve ut den innloggede løsningen for manuell utfylling av mva-melding ved å logge seg inni testmiljøet her: https://skatt-sbstest.sits.no/web/mva/.For å logge inn må man bruke testbrukere fra Tenor testdatasøk. Brukerveileding for dette finnes her:https://skatteetaten.github.io/mva-meldingen/documentation/test/#testmilj%C3%B8-og-testdata
+Man kan prøve ut den innloggede løsningen for manuell utfylling av mva-melding ved å logge seg inni testmiljøet her: https://skatt-sbstest.sits.no/web/mva/.For å logge inn må man bruke testbrukere fra Tenor testdatasøk. Brukerveileding for dette finnes [her](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/#testmilj%C3%B8-og-testdata)
 
 ### Vil det være mulig å laste opp en XML-fil med grunnlagsdataene i innlogget løsning, slik at bruker da får utfylt dataene basert på innholdet i filen?
 
