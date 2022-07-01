@@ -94,7 +94,7 @@ Same level as before. For more information regarding the suggested reporting on 
 
 The tax authorities do not set requirements for what the report should look like in the accounting system. The goal is for users to keep accounts as normal, and for the system to compile the information from the accounts to the VAT-return, so that the user can submit the return.
 The new reporting will be code-based and will facilitate digital collaboration. Today's numbered fields will be replaced by a dynamic list of specification lines. It will also be possible to provide comments both for the entire report and per line.
-The code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
+The code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/informasjonsmodell/#encoding).
 
 ### Is it possible to attach files with documentation in the new VAT-return?
 
