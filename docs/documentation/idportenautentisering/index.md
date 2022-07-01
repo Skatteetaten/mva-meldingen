@@ -233,4 +233,4 @@ Vi benytter følgende testmiljø hos ID-porten:
 - /authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - /token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For detaljer rundt hvilken HTTP parametere som må sendes med i kallene, se filen [log_in_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py)
+For detaljer rundt hvilken HTTP parametere som må sendes med i kallene, se filen [log_in_idporten.py](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py)
