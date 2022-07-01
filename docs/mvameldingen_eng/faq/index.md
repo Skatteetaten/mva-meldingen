@@ -140,7 +140,7 @@ This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/mvame
 
 ### Is there an overview of how the old VAT-codes translate into SAF-T VAT-codes?
 
-Yes, it can be found [here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf)
+Yes, it can be found [here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf).
 
 ## Sales and purchase report
 
