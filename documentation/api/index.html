@@ -103,12 +103,12 @@
 <li>Skatteetatens MVA-Melding validerings API</li>
 <li>Skatteetatens Altinn3 MVA-Melding-Innsending&#x27;s API</li>
 </ol>
-<p>I API-beskrivelsen brukes mva-melding som en samlebetegnelse på de ulike meldingstypene. API&#x27;ene beskrives under. </p>
+<p>I API-beskrivelsen brukes mva-melding som en samlebetegnelse på de ulike meldingstypene. API&#x27;ene beskrives under.</p>
 <h1 id="prosess-innsending-og-validering" style="position:relative"><a href="#prosess-innsending-og-validering" aria-label="prosess innsending og validering permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prosess innsending og validering</h1>
 <p>Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Innsending. Detaljert beskrivelse av Altinn3&#x27;s Instans-API finnes her
 <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Altinn Studio Instans API</a>. Inngående kjennskap til dette API&#x27;et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.</p>
 <p>Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.</p>
-<p>I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a></p>
+<p>I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/" target="_blank">Test</a></p>
 <p>Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:</p>
 <ol>
 <li>
@@ -291,7 +291,7 @@ HEADERS:
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvaMeldingInnsending</span><span class="token punctuation">&gt;</span></span>
     ...
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mvaMeldingInnsending</span><span class="token punctuation">&gt;</span></span></code></pre></div>
-<p>Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/konvolutt" target="_blank">Test</a>.</p>
+<p>Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/konvolutt" target="_blank">Test</a>.</p>
 <h3 id="feilmeldinger-1" style="position:relative"><a href="#feilmeldinger-1" aria-label="feilmeldinger 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Feilmeldinger</h3>
 <p><em>Respons 403 - Forbidden:</em> <br/>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.</p>
@@ -402,7 +402,7 @@ vil det returneres feilmelding 409 og valideringsresultatet i xml som content.</
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsDetaljer</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsfeil</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span></code></pre></div>
-<p>For en liste over valideringsfeil, kan man finne under <a href="/mva-meldingen/documentation/forretningsregler/">Valideringsregler</a>.</p>
+<p>Liste over valideringsfeil for henholdsvis <a href="/mva-meldingen/mvameldingen/forretningsregler/">mva-meldingen</a> og <a href="/mva-meldingen/kompensasjon/forretningsregler/">kompensasjonsmeldingen</a>.</p>
 <p><strong>Validering av MvaMeldingInnsending opp mot xsd modellen</strong>
 <a href="/mva-meldingen/942b9cc1ed888d8f299e9346c24587df/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
 <p>Eksempel:</p>
@@ -476,7 +476,7 @@ Eksempel verdi</p>
 <h3 id="tilbakemeldingsfiler" style="position:relative"><a href="#tilbakemeldingsfiler" aria-label="tilbakemeldingsfiler permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tilbakemeldingsfiler</h3>
 <p>Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne lastes ned fra instansen.</p>
 <p>Betalingsinformasjonen vil kunne lastes etter <a href="#fullf%C3%B8r-mvameldinginnsending">innsendingen er fullført</a>, da den blir produsert under fullføringen.</p>
-<p>Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.</p>
+<p>Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.</p>
 <p>Filene som kan lastes ned vil ha <code class="language-text">dataType</code>:</p>
 <ul>
 <li>betalingsinformasjon</li>
