@@ -147,11 +147,11 @@ Ja, vi tar høyde for dette i valideringen og har lagt inn en toleranse på +/-1
 
 ### Vil det foreligge en kodeliste med beskrivelser for de ulike kodene?
 
-Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister)
+Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/mvameldingen/informasjonsmodell/#kodelister)
 
 ### Finnes det en oversikt som viser hva de gamle mva-kodene skal føres som i SAF-T koder i ny mva-melding?
 
-Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf)
+Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf)
 
 ## Salgs- og kjøpsmelding
 
