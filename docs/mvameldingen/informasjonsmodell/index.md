@@ -340,7 +340,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | 91                                                | Fradrag på kjøp av klimakvoter og gull                                                    |
 | 92                                                | Kjøp av klimakvoter og gull uten fradragsrett                                             |
 
-En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/informasjonsmodell/kodelister/)
+En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
 
 - Kodeliste for mva-kode: [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/informasjonsmodell/kodelister/mvaKodeSAFT.xml)
 - Kodeliste for mva-spesifikasjon: [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/informasjonsmodell/kodelister/mvaSpesifikasjon.xml)
