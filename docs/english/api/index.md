@@ -634,7 +634,7 @@ Once the Tax Administration has given feedback, the files for the feedback can b
 
 Payment information will be available when the submission is completed, it is being produced when [completing the vat return submission](#complete-vat-return-submission).
 
-Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
+Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
 
 The files that can be downloaded will have `dataType`:
 
