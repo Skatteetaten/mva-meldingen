@@ -48,7 +48,7 @@ Some test applications has been written in jupyter notebook, for use when testin
 
 3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py) and [postman script to validate return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/MeldingValidering.postman_collection.json). First log in to [ID-Porten](https://skatteetaten.github.io/mva-meldingen/english/idportenauthentication/), and save the token in the format "Bearer <em>hentet-token</em>" as the environment variablewith the name "test-bearer" in postman, and use the postman script to validate the return.
 
-4. [Example XML's](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/melding)
+4. [Example XML's](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/kompensasjon/test/eksempler/melding)
 
 ## Test environment
 
