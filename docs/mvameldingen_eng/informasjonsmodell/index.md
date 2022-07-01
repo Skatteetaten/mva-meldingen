@@ -38,9 +38,9 @@ The SAF-T standard also contains the codes 0 (No VAT treatment), 7 (No VAT treat
 
 Examples of new VAT-return in Excel:
 
-[Test cases VAT-return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Testtilfeller%20mva-melding.xlsx?raw=true)
+[Test cases VAT-return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Testtilfeller%20mva-melding.xlsx?raw=true)
 
-Corresponding example files for VAT return in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
+Corresponding example files for VAT return in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/eksempler/melding/
 
 ## Description of the fields in the VAT return
 
