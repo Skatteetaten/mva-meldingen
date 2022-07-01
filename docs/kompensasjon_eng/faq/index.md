@@ -58,7 +58,7 @@ We want to offer Maskinporten support for system-to-system submissions and we ar
 
 ### Will there be a code list of descriptions for the various codes?
 
-This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/ docs/kompensasjon_eng/informasjonsmodell/#encoding).
+This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/docs/kompensasjon_eng/informasjonsmodell/#encoding).
 
 ## Test
 
