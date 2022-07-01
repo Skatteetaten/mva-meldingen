@@ -105,7 +105,7 @@ På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om fo
 Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssystemet. Målet er at brukerne skal føre regnskap som normalt, og at systemet sammenstiller informasjonen fra regnskapet til mva-meldingen, slik at brukeren kan sende inn.
 
 Den nye rapporteringen vil være kodebasert og legge til rette for digital samhandling. Dagens nummererte poster erstattes av en dynamisk liste av spesifikasjonslinjer. Det vil bli mulig å gi merknader både samlet og per linje.
-Kodelisten for den nye mva-meldingen er tilgjengelig på Github, under [Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister)
+Kodelisten for den nye mva-meldingen er tilgjengelig på Github, under [Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/mvameldingen/informasjonsmodell/#kodelister)
 
 ### Kan man vedlegge dokumentasjon som filvedlegg til mva-meldingen?
 
