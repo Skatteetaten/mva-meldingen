@@ -4,7 +4,7 @@ title: "Spørsmål og svar"
 description: "Spørsmål og svar"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/english/faq/)
+[English](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/faq/)
 
 ## Generelt
 

@@ -18,6 +18,10 @@
                 <tekst>VAT adjustment for capital goods</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Justering av meirverdiavgift for kapitalvarer</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
         </beskrivelse>
     </kode>
     <kode>
@@ -30,6 +34,10 @@
             <spraakTekst>
                 <tekst>Losses on claims</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Tap på Krav</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
     </kode>
@@ -44,6 +52,10 @@
                 <tekst>Reversal of input value added tax for capital goods (only passenger vehicles and real estate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Tilbakeføring av meirverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom)</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
         </beskrivelse>
     </kode>
     <kode>
@@ -57,33 +69,31 @@
                 <tekst>Withdrawals</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
-        </beskrivelse>
-    </kode>
-    <kode>
-        <tekniskNavn>varer</tekniskNavn>
-        <beskrivelse>
             <spraakTekst>
-                <tekst>Varer</tekst>
-                <spraak>no</spraak>
-            </spraakTekst>
-            <spraakTekst>
-                <tekst>Goods</tekst>
-                <spraak>en</spraak>
+                <tekst>Uttak</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
     </kode>
     <kode>
-        <tekniskNavn>tjenester</tekniskNavn>
+        <tekniskNavn>justeringMerverdiavgiftskompensasjonFastEiendom</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Tjenester</tekst>
+                <tekst>Justering merverdiavgiftskompensasjon fast eiendom</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Services</tekst>
+                <tekst>Adjustment of VAT compensation for real property</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Justering meirverdiavgiftskompensasjon fast eigedom</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
         </beskrivelse>
+        <kodetillegg>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>

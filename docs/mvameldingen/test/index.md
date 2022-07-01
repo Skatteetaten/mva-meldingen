@@ -4,7 +4,7 @@ title: "Test & Produksjon"
 description: "Informasjon om testing og produksjon"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/english/test/)
+[English](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/)
 
 ## Endringslogg
 

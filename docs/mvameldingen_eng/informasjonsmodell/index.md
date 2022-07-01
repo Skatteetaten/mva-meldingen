@@ -6,6 +6,8 @@ description: "XSD for VAT return (mva-melding)
 - encoding in XML-format"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/mvameldingen/informasjonsmodell/)
+
 # XSD for the VAT return
 
 ### Change log

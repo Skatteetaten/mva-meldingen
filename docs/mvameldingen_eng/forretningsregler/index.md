@@ -4,6 +4,8 @@ title: "Validation rules"
 description: "Validation rules for the VAT tax return"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/mvameldingen/forretningsregler/)
+
 ### Change log
 
 <table align=center>

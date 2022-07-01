@@ -4,12 +4,13 @@ title: "Test & Production"
 description: "Test and production information"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/kompensasjon/test/)
+
 ## Changelog
 
-| Date       | Changes                                                                                                     |
-| :--------- | :---------------------------------------------------------------------------------------------------------- |
-| 2022.06.30 | New page for tax return for VAT compensation                                                                    |
-
+| Date       | Changes                                      |
+| :--------- | :------------------------------------------- |
+| 2022.06.30 | New page for tax return for VAT compensation |
 
 ## Testing requirements
 
@@ -18,7 +19,6 @@ System providers are responsible for carrying out tests themselves. Focus should
 The project team will contribute with debugging, bug fixing, and following up of cases that are sent into the test environment.
 
 The project team is available via Slack for technical clarifications and for direct contact with developers and test managers. The project team can also be reached via mva-modernisering@skatteetaten.no. Contact us here to receive access to Slack.
-
 
 ## The test environment and test data
 

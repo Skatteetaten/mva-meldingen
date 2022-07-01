@@ -4,7 +4,7 @@ title: "Valideringsregler"
 description: "Regler for utfylling av mva-melding "
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/english/forretningsregler/)
+[English](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/forretningsregler/)
 
 ### Endringslogg
 

@@ -27,6 +27,13 @@ const EnglishPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
+          <a href="https://skatteetaten.github.io/mva-meldingen/documentation/">
+            Norwegian
+          </a>
+          <h3>
+            We are updating our documentation with new structure and information
+            about tax return for VAT compensation.
+          </h3>
           <h1>Common documentation</h1>
         </SingleColumnRow>
         <SingleColumnRow>

@@ -4,6 +4,8 @@ title: "Valideringsregler - kompensasjonsmelding"
 description: "Regler for utfylling av kompensasjonsmeldingmelding "
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/forretningsregler/)
+
 ### Endringslogg
 
 <table align=center>

@@ -6,6 +6,8 @@ description: "XSD for kompensasjonsmelding
 - nedlastbare kodelister (XML)"
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/informasjonsmodell/)
+
 # XSD for kompensasjonsmelding for merverdiavgift
 
 ### Endringslogg

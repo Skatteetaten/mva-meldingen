@@ -6,7 +6,7 @@ description: "XSD for mva-melding
 - nedlastbare kodelister (XML)"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/)
+[English](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/informasjonsmodell/)
 
 # XSD for mva-meldingen
 

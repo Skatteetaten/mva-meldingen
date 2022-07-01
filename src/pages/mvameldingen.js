@@ -28,7 +28,7 @@ const MvameldingenPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <a href="https://skatteetaten.github.io/mva-meldingen/frontpage_eng/">
+          <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/">
             English
           </a>
           <h3>

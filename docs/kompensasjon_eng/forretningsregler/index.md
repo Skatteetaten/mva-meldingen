@@ -4,11 +4,13 @@ title: "Validation rules"
 description: "Validation rules for the VAT tax return"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/kompensasjon/forretningsregler/)
+
 ### Change log
 
-| Date       | Changes                                                                                                     |
-| :--------- | :---------------------------------------------------------------------------------------------------------- |
-| 2022.06.30 | Added page for validation rules for tax return for VAT compensation					   |
+| Date       | Changes                                                             |
+| :--------- | :------------------------------------------------------------------ |
+| 2022.06.30 | Added page for validation rules for tax return for VAT compensation |
 
 ## Validation rules
 
@@ -19,7 +21,7 @@ The following validation rules are definded for the tax return for VAT compensat
 - The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate
 - Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign
 - VAT returns must not be sent in before the related tax period has ended (general industry)
-- Compensation of input VAT must be declared with a VAT-basis and VAT-rate 
+- Compensation of input VAT must be declared with a VAT-basis and VAT-rate
 - VAT returns must not be sent in before the related tax period has ended (primary industry)
 - VAT returns for earlier tax periods should have been submitted
 - VAT returns for earlier tax periods should have been submitted and therefore repayments for this tax period will not be paid
@@ -34,9 +36,8 @@ The following validation rules are definded for the tax return for VAT compensat
 - The first tax return for VAT compensation in a calendar year must have a total of more than 20 000 NOK in VAT
 - The tax return for VAT compensationsubmitted
 - A tax return for VAT compensation submitted before deadline must have auditor attestation
-- The tax return for VAT compensation cannot be submitted after the deadline unless there is an approved return or taxation from the Tax Authority for the term. 
+- The tax return for VAT compensation cannot be submitted after the deadline unless there is an approved return or taxation from the Tax Authority for the term.
 - A tax return for VAT compensation submitted after deadline must have a lower credit amount than the last submitted return or taxation from the Tax Authority
-
 
 The following technical rules are defined for the purpose of validating the format and code lists:
 
@@ -87,7 +88,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
 ## Detailed Specification of the rules - Under construction
 
 ```kotlin
-    
+
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
@@ -113,7 +114,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         }
     ),
 
-   
+
     MVA_MELDINGSINNHOLD_INNGÅENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER(
         "Det må fylles ut merknad som forklarer hvorfor det er benyttet motsatt fortegn for fradragsført merverdiavgift."
         {

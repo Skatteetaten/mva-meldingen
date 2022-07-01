@@ -4,6 +4,8 @@ title: "Questions and answers"
 description: "Frequently asked questions"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/mvameldingen/faq/)
+
 ## General
 
 ### Which changes are coming in the modernisation of the VAT-domain?

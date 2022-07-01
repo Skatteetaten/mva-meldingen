@@ -4,11 +4,13 @@ title: "Test & Produksjon"
 description: "Informasjon om testing og produksjon"
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/test/)
+
 ## Endringslogg
 
-| Dato       | Hva ble endret?                                                                              |
-| :--------- | :------------------------------------------------------------------------------------------- |
-| 2022.06.11 | Opprettet side for test kompensasjonsmelding                                                 |
+| Dato       | Hva ble endret?                              |
+| :--------- | :------------------------------------------- |
+| 2022.06.11 | Opprettet side for test kompensasjonsmelding |
 
 ## Krav til testgjennomføring
 

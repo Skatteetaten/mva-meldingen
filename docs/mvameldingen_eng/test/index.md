@@ -4,6 +4,8 @@ title: "Test & Production"
 description: "Test and production information"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/)
+
 ## Changelog
 
 | Date       | Changes                                                                                                     |

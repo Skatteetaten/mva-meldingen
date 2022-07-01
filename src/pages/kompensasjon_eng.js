@@ -28,7 +28,14 @@ const CompVATPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <h1>Documentation compensation report VAT</h1>
+          <a href="https://skatteetaten.github.io/mva-meldingen/kompensasjon/">
+            Norwegian
+          </a>
+          <h3>
+            We are updating our documentation with new structure and information
+            about tax return for VAT compensation.
+          </h3>
+          <h1>Documentation tax return for VAT compensation</h1>
         </SingleColumnRow>
         <SingleColumnRow>
           <NavigationTile
