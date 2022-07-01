@@ -8,16 +8,16 @@ description: "API descriptions"
 
 ## Changelog
 
-| Dato       | Hva ble endret?                                           |
-| :--------- | :-------------------------------------------------------- |
-| 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback). |
-| 2021.07.05 | Corrected the datatype for when uploading attachments.    |
-| 2021.08.03 | Changed the URL for validation to the correct value       |
-| 2021.11.04 | Updated URL for validation service                        |
-| 2021.11.08 | Updated validation error list                             |
-| 2021.11.11 | Updated error messages when filing submission             |
-| 2021.12.08 | Updated valid content type for binaerVedlegg              |
-| 2022.06.30 | Changes in connection with the expansion of documentation for other return types| 
+| Dato       | Hva ble endret?                                                                  |
+| :--------- | :------------------------------------------------------------------------------- |
+| 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback).                        |
+| 2021.07.05 | Corrected the datatype for when uploading attachments.                           |
+| 2021.08.03 | Changed the URL for validation to the correct value                              |
+| 2021.11.04 | Updated URL for validation service                                               |
+| 2021.11.08 | Updated validation error list                                                    |
+| 2021.11.11 | Updated error messages when filing submission                                    |
+| 2021.12.08 | Updated valid content type for binaerVedlegg                                     |
+| 2022.06.30 | Changes in connection with the expansion of documentation for other return types |
 
 ## Introduction
 
@@ -512,7 +512,7 @@ Example value:
 </valideringsresultat>
 ```
 
-You can find an explanation for all the validation rules [here](/english/forretningsregler/).
+You can find an explanation for all the validation rules for respectively [VAT report](/mvameldingen_eng/forretningsregler/) and [Compensation report VAT](/kompensasjon_eng/forretningsregler/).
 
 **Validation of MvaMeldingInnsending against the xsd model**
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>

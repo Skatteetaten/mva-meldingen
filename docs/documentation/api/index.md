@@ -29,7 +29,7 @@ API'ene fungerer for følgende kategorier skattemeldinger for merverdiavgift: Or
 1. Skatteetatens MVA-Melding validerings API
 1. Skatteetatens Altinn3 MVA-Melding-Innsending's API
 
-I API-beskrivelsen brukes mva-melding som en samlebetegnelse på de ulike meldingstypene. API'ene beskrives under. 
+I API-beskrivelsen brukes mva-melding som en samlebetegnelse på de ulike meldingstypene. API'ene beskrives under.
 
 # Prosess innsending og validering
 
@@ -477,7 +477,7 @@ Eksempel verdi:
 </valideringsresultat>
 ```
 
-For en liste over valideringsfeil, kan man finne under [Valideringsregler](/documentation/forretningsregler/).
+Liste over valideringsfeil for henholdsvis [mva-meldingen](/mvameldingen/forretningsregler/) og [kompensasjonsmeldingen](/kompensasjon/forretningsregler/).
 
 **Validering av MvaMeldingInnsending opp mot xsd modellen**
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
