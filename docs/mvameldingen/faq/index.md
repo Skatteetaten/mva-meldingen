@@ -177,7 +177,7 @@ Salgs- og kjøpsmeldingen vil være noe annet enn SAF-T regnskap, men det er akt
 
 ### Vil testingen av mva-melding være åpen for alle?
 
-Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/documentation/test/).
+Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/).
 Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten er velkommen til å ta kontakt gjennom mva-modernisering@skatteetaten.no.
 
 ### Vil det komme en testversjon av portalen så man kan teste utfylling og de nye valideringene før første innlevering neste år?
