@@ -164,7 +164,7 @@ The sales and purchase report will be something other than SAF-T Financial, but 
 
 ### Will testing of the new VAT-report be open for everyone?
 
-Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/english/test/).
+Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/).
 If you are interested in participating in testing, please contact the Tax Administration at mva-modernisering@skatteetaten.no.
 
 ### Will there be a test version of the portal so you can test completion and the new validations before the first submission next year?
