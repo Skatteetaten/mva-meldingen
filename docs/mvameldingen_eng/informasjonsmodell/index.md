@@ -36,6 +36,10 @@ Graphical representation of the XSD and encoding for the [VAT return](Skattemeld
 
 The SAF-T standard also contains the codes 0 (No VAT treatment), 7 (No VAT treatment - no turnover according to the VAT legislation), 20 (No VAT treatment), 21 (Basis on import of goods, regular rate) and 22 (Basis on import of goods, reduced rate, middle). These should not be reported in the VAT return
 
+Examples of new VAT-return in Excel:
+
+[Test cases VAT-return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Testtilfeller%20mva-melding.xlsx?raw=true)
+
 Corresponding example files for VAT return in XML format can be downloaded from the test section: https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/
 
 ## Description of the fields in the VAT return
