@@ -597,7 +597,7 @@ Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne
 
 Betalingsinformasjonen vil kunne lastes etter [innsendingen er fullført](#fullf%C3%B8r-mvameldinginnsending), da den blir produsert under fullføringen.
 
-Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
+Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
 
 Filene som kan lastes ned vil ha `dataType`:
 
