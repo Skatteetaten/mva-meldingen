@@ -64,7 +64,7 @@ This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/kompe
 
 ### Will testing of the tax return for VAT compensation be open for everyone?
 
-Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/docs/kompensasjon_eng/test/).
+Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/test).
 If you are interested in participating in testing, please contact the Tax Administration at mva-modernisering@skatteetaten.no.
 
 
