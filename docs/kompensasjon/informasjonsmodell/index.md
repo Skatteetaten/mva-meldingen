@@ -220,7 +220,7 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
     <td>vedleggstype</td>
     <td>
         Beskrivelse: Type vedlegg som blir lastet opp på instansen i Altinn. 
-        Hvor en kan enten bruke <strong>mva-melding</strong> for selve mva-meldingen, 
+        Hvor en kan enten bruke <strong>mva-melding</strong> for selve kompensasjonsmeldingen, 
         eller <strong>binaerVedlegg</strong> for generelle vedlegg. <br>
 	</td>
   </tr>
