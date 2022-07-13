@@ -33,7 +33,7 @@ const gatsbyConfig = {
       },
       {
         href: "/kompensasjon_eng",
-        name: "Compensation",
+        name: "VAT Compensation",
       },
     ],
   },
