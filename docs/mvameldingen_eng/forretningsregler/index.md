@@ -10,70 +10,26 @@ description: "Validation rules for the VAT tax return"
 
 <table align=center>
 	<tr><th style="width:25%" align=left>Date</th><th align=left> What was changed? </th></tr>
-    <tr>
-      <td>2022.05.18</td>
+ <tr>
+      <td>2021.06.07</td>
       <td>
           <ul>
-            <li> R085 Check the value of the VAT basis does not exceed the allowed maximum value</li>
+            <li>VAT code 5 added as a valid VAT code for withdrawals. </li>
+            <li> VAT code 81 added as a valid VAT code for reversal of input VAT. </li>
+            <li> Severity level "mangelfull melding" has been removed and the rules which used this severity level now give the response "avvikende skattemelding". </li>
+            <li> Rules R023 - R027 now use the severity level "ugyldig skattemelding". </li>
+            <li> The description in rule R040 was corrected. </li>
           </ul>      
-      </td>
-    </tr>
-    <tr>
-      <td>2022.04.27</td>
-      <td>
-          <ul>
-            <li> R060 shipwreck exception added</li>
-            <li> R079 KID number must meet mod10 or mod11 requirements </li>
-            <li> R079 KID number can not be the same as account number </li>
-            <li> R084 check for VAT specification lines when declared VAT amount (fastsatt merverdiavgift) field has a non-zero value </li>
-          </ul>      
-      </td>
-    </tr>
-    <tr>
-      <td>2021.12.14</td>
-      <td>
-          <ul>
-            <li> Update response texts for all rules </li>
-            <li> R055 - R058 removed and R083 added in their place </li>
-          </ul>      
-      </td>
-    </tr>
+	</td>
+  </tr> 
 	<tr>
-      <td>2021.12.03</td>
+      <td>2021.06.28</td>
       <td>
           <ul>
-            <li> R039 removed VAT code 32 from valid values for 'uttak' specification </li>
-            <li> R040 added VAT code 81 as a valid value for 'justering' specification </li>
-            <li> R059 and R060 exceptional cases only apply to current tax periods </li>
+            <li> Rules R065-R068 added to the detailed description list. </li>
           </ul>      
-      </td>
-    </tr>
-  <tr>
-      <td>2021.11.18</td>
-      <td>
-          <ul>
-            <li> R020 and R021 now use the severity level "ugyldig skattemelding" </li>
-            <li> R022 removed (covered by R078) </li>
-            <li> R023 - R027 typo corrected </li>
-            <li> R023 - R027 now use the severity level "avvikende skattemelding" </li>
-            <li> R023 - R027 identify ingoing lines by checking the VAT-basis instead of the VAT amount </li>
-            <li> R028 - R032 check the number of outgoing lines is greater than the number of ingoing lines instead of just checking at least one outgoing line is sent </li>
-            <li> R059 and R060 exception for VAT registered that have reported bankruptcy </li>
-            <li> R067 and R068 removed. Outgoing codes now validated in R066. R081 added to validate codes that can be sent with both ingoing and outgoing lines </li>
-            <li> R082 check for decimals is added </li>
-          </ul>      
-      </td>
-  </tr>
-  <tr>
-      <td>2021.10.29</td>
-      <td>
-          <ul>
-            <li> R001 - R003 og R069 - R071 technical rules added </li>
-            <li> R000 og R077 logistical rules added </li>
-            <li> R060 og R061 VAT returns for earlier tax periods rules added </li>
-          </ul>      
-      </td>
-  </tr>
+	</td>
+  </tr>   
   <tr>
       <td>2021.10.12</td>
       <td>
@@ -93,27 +49,71 @@ description: "Validation rules for the VAT tax return"
             <li> R004 - R017 fixed rules replaced with R074 - R076 which use the code list merknadTilsvarendeMvaKode </li>
           </ul>      
       </td>
-  </tr>
+  </tr>   
   <tr>
-      <td>2021.06.07</td>
+      <td>2021.10.29</td>
       <td>
           <ul>
-            <li>VAT code 5 added as a valid VAT code for withdrawals. </li>
-            <li> VAT code 81 added as a valid VAT code for reversal of input VAT. </li>
-            <li> Severity level "mangelfull melding" has been removed and the rules which used this severity level now give the response "avvikende skattemelding". </li>
-            <li> Rules R023 - R027 now use the severity level "ugyldig skattemelding". </li>
-            <li> The description in rule R040 was corrected. </li>
+            <li> R001 - R003 og R069 - R071 technical rules added </li>
+            <li> R000 og R077 logistical rules added </li>
+            <li> R060 og R061 VAT returns for earlier tax periods rules added </li>
           </ul>      
-	</td>
+      </td>
   </tr>
-  <tr>
-      <td>2021.06.28</td>
+<tr>
+<tr>
+      <td>2021.11.18</td>
       <td>
           <ul>
-            <li> Rules R065-R068 added to the detailed description list. </li>
+            <li> R020 and R021 now use the severity level "ugyldig skattemelding" </li>
+            <li> R022 removed (covered by R078) </li>
+            <li> R023 - R027 typo corrected </li>
+            <li> R023 - R027 now use the severity level "avvikende skattemelding" </li>
+            <li> R023 - R027 identify ingoing lines by checking the VAT-basis instead of the VAT amount </li>
+            <li> R028 - R032 check the number of outgoing lines is greater than the number of ingoing lines instead of just checking at least one outgoing line is sent </li>
+            <li> R059 and R060 exception for VAT registered that have reported bankruptcy </li>
+            <li> R067 and R068 removed. Outgoing codes now validated in R066. R081 added to validate codes that can be sent with both ingoing and outgoing lines </li>
+            <li> R082 check for decimals is added </li>
           </ul>      
-	</td>
-  </tr>
+      </td>
+  </tr>	
+      <td>2021.12.03</td>
+      <td>
+          <ul>
+            <li> R039 removed VAT code 32 from valid values for 'uttak' specification </li>
+            <li> R040 added VAT code 81 as a valid value for 'justering' specification </li>
+            <li> R059 and R060 exceptional cases only apply to current tax periods </li>
+          </ul>      
+      </td>
+    </tr>
+ <tr>
+      <td>2021.12.14</td>
+      <td>
+          <ul>
+            <li> Update response texts for all rules </li>
+            <li> R055 - R058 removed and R083 added in their place </li>
+          </ul>      
+      </td>
+    </tr>
+ <tr>
+      <td>2022.04.27</td>
+      <td>
+          <ul>
+            <li> R060 shipwreck exception added</li>
+            <li> R079 KID number must meet mod10 or mod11 requirements </li>
+            <li> R079 KID number can not be the same as account number </li>
+            <li> R084 check for VAT specification lines when declared VAT amount (fastsatt merverdiavgift) field has a non-zero value </li>
+          </ul>      
+      </td>
+    </tr>
+<tr>
+      <td>2022.05.18</td>
+      <td>
+          <ul>
+            <li> R085 Check the value of the VAT basis does not exceed the allowed maximum value</li>
+          </ul>      
+      </td>
+    </tr>	
 </table>
 
 ## Validation rules
