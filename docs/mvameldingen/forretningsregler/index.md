@@ -10,90 +10,6 @@ description: "Regler for utfylling av mva-melding "
 
 <table align=center>
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
-    <tr>
-      <td>2022.05.18</td>
-      <td>
-          <ul>
-            <li> R085 sjekk at beløpet på grunnlaget er mindre enn maks verdi"</li>
-          </ul>      
-      </td>
-    </tr>
-    <tr>
-      <td>2022.04.27</td>
-      <td>
-          <ul>
-            <li> R060 forlis unntak lagt til</li>
-            <li> R079 KID nummer må oppfylle mod10 eller mod11 validering </li>
-            <li> R079 KID nummer kan ikke være lik kontonummeret </li>
-            <li> R084 sjekk at det er innsendt spesifikasjonslinjer når fastsatt merverdiavgift har et beløp som er ikke 0 </li>
-          </ul>      
-      </td>
-    </tr>
-    <tr>
-      <td>2021.12.14</td>
-      <td>
-          <ul>
-            <li> Oppdater avvik tekster for alle regler </li>
-            <li> R055 - R058 slettet og R083 lagt til for å erstatte dem </li>
-          </ul>      
-      </td>
-    </tr>
-    <tr>
-      <td>2021.12.03</td>
-      <td>
-          <ul>
-            <li> R039 tatt bort at 'uttak' spesifikasjon er gyldig på mva kode 32 </li>
-            <li> R040 lagt til at 'justering' spesifikasjon er gyldig på mva kode 81 </li>
-            <li> R059 og R060 unntak tilfeller skal kun gjelde for påbegynnte skatteleggingsperioder </li>
-          </ul>      
-      </td>
-    </tr>
-    <tr>
-      <td>2021.11.18</td>
-      <td>
-          <ul>
-            <li> R020 og R021 er nå satt til alvorlighetsgrad "ugyldig skattemelding" </li>
-            <li> R022 slettet (dekket av R078) </li>
-            <li> R023 - R027 typo korrigert </li>
-            <li> R023 - R027 er nå satt til alvorlighetsgrad "avvikende skattemelding" </li>
-            <li> R023 - R027 identifisere inngående linjer med sjekk på grunnlag istedenfor merverdiavgift </li>
-            <li> R028 - R032 sjekk antall utgående linjer er mer enn antall inngående linjer ikke bare at en utgående linjer finnes </li>
-            <li> R059 og R060 unntak for skattepliktig som har meldt konkurs </li>
-            <li> R067 og R068 slettet. utgående koder nå validert i R066. R081 lagt til for å validere mva-koder med både inn- og utgående linjer </li>
-            <li> R082 sjekk for desimaltall lagt til </li>
-          </ul>      
-      </td>
-  </tr>
-  <tr>
-      <td>2021.10.29</td>
-      <td>
-          <ul>
-            <li> R001 - R003 og R069 - R071 tekniske regler lagt til </li>
-            <li> R000 og R077 praktiske regler lagt til </li>
-            <li> R060 og R061 meldinger levert for tidligere terminer regler lagt til </li>
-          </ul>      
-      </td>
-  </tr>
-  <tr>
-      <td>2021.10.12</td>
-      <td>
-          <ul>
-            <li> Tekst for regel R018 var korrigert. </li>
-            <li> R020 - R022 sjekker både merknad felt </li>
-            <li> R028 - R032 er nå satt til alvorlighetsgrad "ugyldig skattemelding" </li>
-            <li> R028 - R037 korriger sjekk av inn- og utgående linjer </li>
-            <li> R047 - R058 skal ikke kjøre hvis register data utilgjengelig, tekst endret </li>
-            <li> R072 og R073 lagt til for bedre tilbakemelding hvis en feil oppstår med plikt </li>
-            <li> R059 og R060 unntak for skattepliktig som har meldt opphør, konkursbo eller dødsbo </li>
-            <li> R066 tekst endring </li>
-            <li> R067 og R068 oppdatert å håndtere kode 81 unntak </li>
-            <li> R078 lagt til (tilbakeføring spesifikasjon kreves merknad) </li>
-            <li> R079 lagt til (KID validering) </li>
-            <li> R080 lagt til (Kontonummer oppgitt for utbetalinger) </li>
-            <li> R004 - R017 fast merknadsregler erstattet med R074 - R076 som bruker kodeliste merknadTilsvarendeMvaKode </li>
-          </ul>      
-      </td>
-  </tr>
   <tr>
       <td>2021.06.07</td>
       <td>
@@ -114,6 +30,90 @@ description: "Regler for utfylling av mva-melding "
           </ul>      
       </td>
   </tr>
+   <tr>
+      <td>2021.10.12</td>
+      <td>
+          <ul>
+            <li> Tekst for regel R018 var korrigert. </li>
+            <li> R020 - R022 sjekker både merknad felt </li>
+            <li> R028 - R032 er nå satt til alvorlighetsgrad "ugyldig skattemelding" </li>
+            <li> R028 - R037 korriger sjekk av inn- og utgående linjer </li>
+            <li> R047 - R058 skal ikke kjøre hvis register data utilgjengelig, tekst endret </li>
+            <li> R072 og R073 lagt til for bedre tilbakemelding hvis en feil oppstår med plikt </li>
+            <li> R059 og R060 unntak for skattepliktig som har meldt opphør, konkursbo eller dødsbo </li>
+            <li> R066 tekst endring </li>
+            <li> R067 og R068 oppdatert å håndtere kode 81 unntak </li>
+            <li> R078 lagt til (tilbakeføring spesifikasjon kreves merknad) </li>
+            <li> R079 lagt til (KID validering) </li>
+            <li> R080 lagt til (Kontonummer oppgitt for utbetalinger) </li>
+            <li> R004 - R017 fast merknadsregler erstattet med R074 - R076 som bruker kodeliste merknadTilsvarendeMvaKode </li>
+          </ul>      
+      </td>
+  </tr>
+  <tr>
+      <td>2021.10.29</td>
+      <td>
+          <ul>
+            <li> R001 - R003 og R069 - R071 tekniske regler lagt til </li>
+            <li> R000 og R077 praktiske regler lagt til </li>
+            <li> R060 og R061 meldinger levert for tidligere terminer regler lagt til </li>
+          </ul>      
+      </td>
+  </tr>
+  <tr>
+      <td>2021.11.18</td>
+      <td>
+          <ul>
+            <li> R020 og R021 er nå satt til alvorlighetsgrad "ugyldig skattemelding" </li>
+            <li> R022 slettet (dekket av R078) </li>
+            <li> R023 - R027 typo korrigert </li>
+            <li> R023 - R027 er nå satt til alvorlighetsgrad "avvikende skattemelding" </li>
+            <li> R023 - R027 identifisere inngående linjer med sjekk på grunnlag istedenfor merverdiavgift </li>
+            <li> R028 - R032 sjekk antall utgående linjer er mer enn antall inngående linjer ikke bare at en utgående linjer finnes </li>
+            <li> R059 og R060 unntak for skattepliktig som har meldt konkurs </li>
+            <li> R067 og R068 slettet. utgående koder nå validert i R066. R081 lagt til for å validere mva-koder med både inn- og utgående linjer </li>
+            <li> R082 sjekk for desimaltall lagt til </li>
+          </ul>      
+      </td>
+  </tr>
+  <tr>
+      <td>2021.12.03</td>
+      <td>
+          <ul>
+            <li> R039 tatt bort at 'uttak' spesifikasjon er gyldig på mva kode 32 </li>
+            <li> R040 lagt til at 'justering' spesifikasjon er gyldig på mva kode 81 </li>
+            <li> R059 og R060 unntak tilfeller skal kun gjelde for påbegynnte skatteleggingsperioder </li>
+          </ul>      
+      </td>
+    </tr>
+   <tr>
+      <td>2021.12.14</td>
+      <td>
+          <ul>
+            <li> Oppdater avvik tekster for alle regler </li>
+            <li> R055 - R058 slettet og R083 lagt til for å erstatte dem </li>
+          </ul>      
+      </td>
+    </tr>
+  <tr>
+      <td>2022.04.27</td>
+      <td>
+          <ul>
+            <li> R060 forlis unntak lagt til</li>
+            <li> R079 KID nummer må oppfylle mod10 eller mod11 validering </li>
+            <li> R079 KID nummer kan ikke være lik kontonummeret </li>
+            <li> R084 sjekk at det er innsendt spesifikasjonslinjer når fastsatt merverdiavgift har et beløp som er ikke 0 </li>
+          </ul>      
+      </td>
+    </tr>
+  <tr>
+      <td>2022.05.18</td>
+      <td>
+          <ul>
+            <li> R085 sjekk at beløpet på grunnlaget er mindre enn maks verdi"</li>
+          </ul>      
+      </td>
+    </tr>
 </table>
 
 ## Valideringsregler
