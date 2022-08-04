@@ -49,7 +49,7 @@ Det er skrevet en testapplikasjon som kan brukes i forbindelse med test av løsn
 
 2. [Jupyter notebook demo for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/innsending-eksempel.ipynb). Kjør skriptet innsending.ipynb. Den vil kjøre alle stegene i prosessen.
 
-3. [Pyton skript å hent token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) og [postman skript å validere melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/MeldingValidering.postman_collection.json). Første logge inn hos [ID-Porten](https://skatteetaten.github.io/mva-meldingen/documentation/idportenautentisering/), og da lagre token i format "Bearer <em>hentet-token</em>" som miljø variabel med navn "test-bearer" i postman, og bruk postman skript å validere melding.
+3. [Pyton skript å hent token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py) og [postman skript å validere melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/MeldingValidering.postman_collection.json). Første logge inn hos [ID-Porten](https://skatteetaten.github.io/mva-meldingen/documentation/idportenautentisering/), og da lagre token i format "Bearer <em>hentet-token</em>" som miljø variabel med navn "test-bearer" i postman, og bruk postman skript å validere melding.
 
 4. [Eksempel XML-er](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/melding)
 
