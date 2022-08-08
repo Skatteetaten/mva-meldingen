@@ -84,4 +84,4 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKATTEMELDING
 
 
-Detaljspesifikasjon for hver enkelt regel vil bli lagt til etterhvert som kompensasjonsmeldingen blir utviklet.
+**Detaljspesifikasjon for hver enkelt regel vil bli lagt til etterhvert som kompensasjonsmeldingen blir utviklet.**
