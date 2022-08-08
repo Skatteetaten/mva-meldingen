@@ -431,12 +431,6 @@ You will get this error message if the organisation number used when creating th
 "Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
 ```
 
-You will get this error message if the organisation number defined in vat. return submission is different from the organisation number defined in vat-return.
-
-```
-"Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra listen med vedlegg som er lastet opp i instansen."
-```
-
 If the list of attachments defined in at-return submission is different from the attachments uploaded to the instance, you will get this error message.
 
 ```

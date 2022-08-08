@@ -11,7 +11,7 @@ description: "Api-beskrivelser"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                                             |
-| :--------- | :------------------------------------------------------------------------------------------ |
+|:-----------| :------------------------------------------------------------------------------------------ |
 | 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding).                       |
 | 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.                                    |
 | 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                                       |
@@ -21,7 +21,7 @@ description: "Api-beskrivelser"
 | 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                                             |
 | 2022.03.08 | Betalingsinformasjon kan [lastes ned](#tilbakemeldingsfiler) etter fullføring av innsending |
 | 2022.06.24 | Endringer i forbindelse med utvidelse av dokumentasjon for andre meldingstyper              |
-| 2022.06.30 | Lagt til ny valideringsfeil for duplikate filnavn                                           |
+| 2022.08.06 | Lagt til ny valideringsfeil for duplikate filnavn                                           |
 
 ## Introduksjon
 
@@ -392,12 +392,6 @@ Hvis organisasjonsnummeret som ble brukt til å lage instansen er forskjellig fr
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
-```
-
-Hvis organisasjonsnummeret som er definert i MvaMeldingInnsending er forskjellig fra organisjasnonsnummeret som er definert i mva-meldingen vil en få denne feilmeldingen.
-
-```
-"Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra listen med vedlegg som er lastet opp i instansen."
 ```
 
 Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig fra de som har blitt lastet opp instansen vil en få denne feilmeldingen.
