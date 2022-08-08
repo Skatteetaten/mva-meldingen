@@ -75,14 +75,14 @@ Example of rule:
 
 Each line can be translated to the following:
 
-** Line 1 - Identifier **: This is the reference for the rule. Each rule has a unique identifier.
+**Line 1 - Identifier**: This is the reference for the rule. Each rule has a unique identifier.
 
-** Line 2 - Error message **: This is the error message that will be returned in the validation API if The VAT return is not in accordance with the requirement in the rule.
+**Line 2 - Error message**: This is the error message that will be returned in the validation API if The VAT return is not in accordance with the requirement in the rule.
 
-** Line 3-7 - Validation Rule **: This is the rule that defines what a valid VAT return should be.
+**Line 3-7 - Validation Rule**: This is the rule that defines what a valid VAT return should be.
 If this rule is not met, the validation will fail.
 
-** Line 8 - Severity **: This is the severity if the validation fails.
+**Line 8 - Severity**: This is the severity if the validation fails.
 The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous VAT return), UGYLDIG_SKATTEMELDING (invalid vat return)
 
 **Detailed Specification of the rules will be addes a the development of the tax return for VAT compensation progresses**
