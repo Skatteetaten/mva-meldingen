@@ -373,10 +373,10 @@
             </spraakTekst>
         </beskrivelse>
         <kodetillegg>
-            <kortbeskrivelse_en>Purchases made before VAT registration</kortbeskrivelse_en>
+            <kortbeskrivelse_en>Purchases made before VAT registration (retrospective value added tax settlement)</kortbeskrivelse_en>
             <merknadGjelder>mva kode</merknadGjelder>
-            <kortbeskrivelse_no>Anskaffelser foretatt før mva registrering</kortbeskrivelse_no>
-            <kortbeskrivelse_nn>Anskaffingar gjort før mva-registrering</kortbeskrivelse_nn>
+            <kortbeskrivelse_no>Anskaffelser foretatt før mva registrering (tilbakegående avgiftsoppgjør)</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Anskaffingar gjort før mva-registrering (tilbakegåande avgiftsoppgjer)</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <kode>
@@ -513,6 +513,7 @@
         <kodetillegg>
             <kortbeskrivelse_en>Binding advance ruling</kortbeskrivelse_en>
             <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
             <kortbeskrivelse_no>Bindende forhåndsuttalelse</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Bindande førehandsfråsegn</kortbeskrivelse_nn>
         </kodetillegg>
@@ -521,21 +522,22 @@
         <tekniskNavn>virksomhet under avvikling</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Virksomheten skal slettes i Merverdiavgiftsregisteret</tekst>
+                <tekst>Virksomheten skal slettes i Merverdiavgiftsregisteret. Husk at du må søke om sletting fra registeret i Min merverdiavgift</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Verksemda skal slettast i Meirverdiavgiftsregisteret</tekst>
+                <tekst>Verksemda skal slettast i Meirverdiavgiftsregisteret. Hugs at du må søkje om sletting frå registeret i Mi meirverdiavgift</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>The enterprise will be deleted in the VAT register</tekst>
+                <tekst>The enterprise must be deregistered in the VAT Register. Remember that you must apply to be deregistered from the register in My Value Added Tax</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
         <kodetillegg>
             <kortbeskrivelse_en>Enterprise under liquidation</kortbeskrivelse_en>
             <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
             <kortbeskrivelse_no>Virksomhet under avvikling</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Verksemd under avvikling</kortbeskrivelse_nn>
         </kodetillegg>
@@ -559,6 +561,7 @@
         <kodetillegg>
             <kortbeskrivelse_en>The enterprise has changed legal structure</kortbeskrivelse_en>
             <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
             <kortbeskrivelse_no>Virksomheten har endret selskapsform</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Verksemda har endra selskapsform</kortbeskrivelse_nn>
         </kodetillegg>
@@ -630,6 +633,123 @@
             <merknadGjelder>mva kode</merknadGjelder>
             <kortbeskrivelse_no>Avgiftsfritt salg av fiskefartøy</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Avgiftsfritt sal av fiskefartøy</kortbeskrivelse_nn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>endring i bruken av bygg, anlegg eller annen fast eiendom</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Endring/korrigering som følge av ny vurdering av faktisk bruk av bygg, anlegg eller annen fast eiendom</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva kode</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>feil avgiftsområde brukt tidligere</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Korrigering pga. rapportering under feil ordning/feil avgiftsbehandling</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva kode</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>feil mva-kode for kompensasjon brukt tidligere</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Korrigering pga. rapportering under feil mva-kode for kompensasjon</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva kode</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>innførsel av varer</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Krav knyttet inngående mva, hvor utgående mva er fradragsført i ordinær melding for mva</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva kode</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>kjøp av tjenester</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Krav knyttet inngående mva, hvor utgående mva er fradragsført i ordinær melding for mva</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva kode</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>endring av bruksområde på bygg, anlegg eller annen fast eiendom</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Endring/korrigering som følge av ny vurdering av faktisk bruk i den kompensasjonsberettigede virksomheten</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>fordelingsnøkkel benyttet på kompensasjonsmeldingen for mva</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Det er benyttet en fordeling av faktisk bruk i den kompensasjonsberettigede virksomheten på hele eller deler av avgiftsbeløpet i meldingen</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>kompensasjonskravet gjelder flere terminer</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>I tillegg til gjeldene termin, inneholder meldingen krav for tidligere terminer  </tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>korrigering av tidligere kompensasjonskrav</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Korrigering av deler av tidligere kompensert merverdiavgift er inkludert i kompensasjonskravet</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>

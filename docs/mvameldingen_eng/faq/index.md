@@ -4,6 +4,8 @@ title: "Questions and answers"
 description: "Frequently asked questions"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/mvameldingen/faq/)
+
 ## General
 
 ### Which changes are coming in the modernisation of the VAT-domain?
@@ -68,7 +70,7 @@ The Tax Administration have plans to develop functionality for delegating power 
 
 ### When will the new VAT-return be launched?
 
-The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. VAT-retunrs and corrections for terms up till and including December 31st 2021 must be submitted in the old format through Altinn, as before.
+The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. VAT-returns and corrections for terms up till and including December 31st 2021 must be submitted in the old format through Altinn, as before.
 
 ### How will the new VAT-return be submitted?
 
@@ -80,7 +82,7 @@ Yes, the portal is a permanent solution that is open to everyone.
 
 ### Is it possible to see what the logged in solution for manual entry of VAT-report will look like?
 
-You can log in to the testenvironment here: https://skatt-sbstest.sits.no/web/mva/ to test the logged in solution. To use the testenvironment you must have Tenor testdata, user guide for obtaining these can be found here: https://skatteetaten.github.io/mva-meldingen/english/test/#the-test-environment-and-test-data
+You can log in to [the testenvironment here](https://skatt-sbstest.sits.no/web/mva/) to test the logged in solution. To use the testenvironment you must have Tenor testdata, user guide for obtaining these can be found [here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/#the-test-environment-and-test-data).
 
 ### Will it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
 
@@ -94,7 +96,7 @@ Same level as before. For more information regarding the suggested reporting on 
 
 The tax authorities do not set requirements for what the report should look like in the accounting system. The goal is for users to keep accounts as normal, and for the system to compile the information from the accounts to the VAT-return, so that the user can submit the return.
 The new reporting will be code-based and will facilitate digital collaboration. Today's numbered fields will be replaced by a dynamic list of specification lines. It will also be possible to provide comments both for the entire report and per line.
-The code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
+The code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/informasjonsmodell/#encoding).
 
 ### Is it possible to attach files with documentation in the new VAT-return?
 
@@ -110,7 +112,7 @@ We will support the following file formats:
 
 Authentication will be carried out with personal login in ID-porten for both system-to-system and portal submissions, not by password and username like today. ERPs must offer ID-porten login window for their users, so they can log in using electronic ID from ID-porten. To avoid unnecessary logins user will stay logged in for 8 hours.
 
-We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. If Maskinporten is offered for VAT-returns, it will be later than Januart 1st 2022. ID-porten will be used until further notice.
+We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. If Maskinporten is offered for VAT-returns, it will be later than January 1st 2022. ID-porten will be used until further notice.
 
 ### Will it still be possible to submit a "Supplementary return"?
 
@@ -136,11 +138,11 @@ Yes, we consider this in the validation, and have added a tolerance of +/-1kr x 
 
 ### Will there be a code list of descriptions for the various codes?
 
-This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/#encoding).
+This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/informasjonsmodell/#encoding).
 
 ### Is there an overview of how the old VAT-codes translate into SAF-T VAT-codes?
 
-Yes, it can be found [here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf)
+Yes, it can be found [here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf).
 
 ## Sales and purchase report
 
@@ -164,7 +166,7 @@ The sales and purchase report will be something other than SAF-T Financial, but 
 
 ### Will testing of the new VAT-report be open for everyone?
 
-Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/english/test/).
+Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/).
 If you are interested in participating in testing, please contact the Tax Administration at mva-modernisering@skatteetaten.no.
 
 ### Will there be a test version of the portal so you can test completion and the new validations before the first submission next year?

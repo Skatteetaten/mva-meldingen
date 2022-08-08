@@ -5,7 +5,7 @@ import SkeBasis from "@skatteetaten/frontend-components/SkeBasis";
 import { SingleColumnRow } from "../components/Columns";
 import { graphql, Link } from "gatsby";
 
-const MvameldingenPage = ({
+const CompVATPage = ({
   data: {
     allMarkdownRemark: { edges },
     site: { pathPrefix },
@@ -15,7 +15,7 @@ const MvameldingenPage = ({
   const contents = edges
     .filter(
       ({ node }) =>
-        node.fields && node.fields.slug.search("/mvameldingen/") >= 0
+        node.fields && node.fields.slug.search("/kompensasjon_eng/") >= 0
     )
     .map(({ node }) => ({
       to: `${prefix}${node.fields.slug}`,
@@ -28,14 +28,14 @@ const MvameldingenPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/">
-            English
+          <a href="https://skatteetaten.github.io/mva-meldingen/kompensasjon/">
+            Norwegian
           </a>
           <h3>
-            Vi oppdaterer dokumentasjonen med ny struktur og informasjon om
-            kompensasjonsmelding - feil og døde lenker kan forekomme
+            We are updating our documentation with new structure and information
+            about tax return for VAT compensation.
           </h3>
-          <h1>Dokumentasjon mva-meldingen</h1>
+          <h1>Documentation tax return for VAT compensation</h1>
         </SingleColumnRow>
         <SingleColumnRow>
           <NavigationTile
@@ -48,10 +48,10 @@ const MvameldingenPage = ({
   );
 };
 
-export default MvameldingenPage;
+export default CompVATPage;
 
 export const pageQuery = graphql`
-  query MvameldingenQuery {
+  query CompVATQuery {
     site {
       pathPrefix
     }

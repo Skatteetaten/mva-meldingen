@@ -28,13 +28,6 @@ export default function Template({ data }) {
     <Grid>
       <Grid.Row>
         <Grid.Col {...mainGrid}>
-          <a href="https://skatteetaten.github.io/mva-meldingen/frontpage_eng/">
-            English
-          </a>
-          <h3>
-            Vi oppdaterer dokumentasjonen med ny struktur og informasjon om
-            kompensasjonsmelding - feil og døde lenker kan forekomme
-          </h3>
           <h1>{frontmatter.title}</h1>
           {headings && (
             <TableOfContents

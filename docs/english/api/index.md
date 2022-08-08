@@ -8,36 +8,36 @@ description: "API descriptions"
 
 ## Changelog
 
-| Dato       | Hva ble endret?                                           |
-| :--------- | :-------------------------------------------------------- |
-| 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback). |
-| 2021.07.05 | Corrected the datatype for when uploading attachments.    |
-| 2021.08.03 | Changed the URL for validation to the correct value       |
-| 2021.11.04 | Updated URL for validation service                        |
-| 2021.11.08 | Updated validation error list                             |
-| 2021.11.11 | Updated error messages when filing submission             |
-| 2021.12.08 | Updated valid content type for binaerVedlegg              |
-| 2022.06.30 | Added new conflict error message for duplicate file names |
+| Dato       | Hva ble endret?                                                                  |
+|:-----------| :------------------------------------------------------------------------------- |
+| 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback).                        |
+| 2021.07.05 | Corrected the datatype for when uploading attachments.                           |
+| 2021.08.03 | Changed the URL for validation to the correct value                              |
+| 2021.11.04 | Updated URL for validation service                                               |
+| 2021.11.08 | Updated validation error list                                                    |
+| 2021.11.11 | Updated error messages when filing submission                                    |
+| 2021.12.08 | Updated valid content type for binaerVedlegg                                     |
+| 2022.06.30 | Changes in connection with the expansion of documentation for other return types |           |
+| 2022.08.06 | Added new conflict error message for duplicate file names |
 
 ## Introduction
 
-VAT returns to be sent to Skatteetaten from an end-user
-system (SBS) should use these APIs:
+The APIs function for the following categories of tax return: VAT-return (RF-0002/0004), VAT-return for reverse liability (RF-0005) and tax return for VAT compensation (RF-0009). When these types of returns are submitted to the Tax Authority from an end-user system (SBS) these APIs should be used:
 
 1.  Skatteetaten VAT return Validation API
 2.  Skatteetaten Altinn3 VAT-Return-Submission API
 
-as described below.
+In the API description the VAT-return is used as a collective term for the various types of returns. The APIs are described below.
 
 ## Overall process for Submission and validating VAT return
 
-Submission of VAT returns are done with the Skatteetaten
+Submission of VAT-returns are done with the Skatteetaten
 Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
 covers the needed sequence for submitting VAT returns.
 
 It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.
 
-In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/english/test/" target="_blank">Test</a>
+In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/" target="_blank">Test</a>
 
 The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram, and it is as follows:
 
@@ -302,7 +302,7 @@ Content:
     </mvameldinginnsending>
 ```
 
-Example of xml file for VAT return submission can be found under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/konvolutt" target="_blank">Test</a>.
+Example of xml file for VAT return submission can be found under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/konvolutt" target="_blank">Test</a>.
 
 ### Error Messages
 
@@ -497,7 +497,7 @@ Example value:
 </valideringsresultat>
 ```
 
-You can find an explanation for all the validation rules [here](/english/forretningsregler/).
+You can find an explanation for all the validation rules for respectively [VAT report](/mvameldingen_eng/forretningsregler/) and [Compensation report VAT](/kompensasjon_eng/forretningsregler/).
 
 **Validation of MvaMeldingInnsending against the xsd model**
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
@@ -604,7 +604,7 @@ Once the Tax Administration has given feedback, the files for the feedback can b
 
 Payment information will be available when the submission is completed, it is being produced when [completing the vat return submission](#complete-vat-return-submission).
 
-Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
+Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
 
 The files that can be downloaded will have `dataType`:
 

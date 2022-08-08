@@ -39,7 +39,7 @@ Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Inns
 
 Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.
 
-I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/documentation/test/" target="_blank">Test</a>
+I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/" target="_blank">Test</a>
 
 Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
 
@@ -271,7 +271,7 @@ Content:
 </mvaMeldingInnsending>
 ```
 
-Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/konvolutt" target="_blank">Test</a>.
+Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/konvolutt" target="_blank">Test</a>.
 
 ### Feilmeldinger
 
@@ -460,7 +460,7 @@ Eksempel verdi:
 </valideringsresultat>
 ```
 
-For en liste over valideringsfeil, kan man finne under [Valideringsregler](/documentation/forretningsregler/).
+Liste over valideringsfeil for henholdsvis [mva-meldingen](/mvameldingen/forretningsregler/) og [kompensasjonsmeldingen](/kompensasjon/forretningsregler/).
 
 **Validering av MvaMeldingInnsending opp mot xsd modellen**
 <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
@@ -566,7 +566,7 @@ Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne
 
 Betalingsinformasjonen vil kunne lastes etter [innsendingen er fullført](#fullf%C3%B8r-mvameldinginnsending), da den blir produsert under fullføringen.
 
-Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
+Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
 
 Filene som kan lastes ned vil ha `dataType`:
 

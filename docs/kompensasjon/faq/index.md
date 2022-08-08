@@ -4,6 +4,8 @@ title: "Spørsmål og svar - kompensasjonsmelding"
 description: "Spørsmål og svar - kompensasjonsmelding"
 ---
 
+[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/faq/)
+
 ## Ny kompensasjonsmelding for merverdiavgift
 
 Moderniseringen sørger for forenkling for næringslivet gjennom forbedringer som felles informasjonsstruktur og regelsett for alle typer mva-meldinger; bedre brukeropplevelse og mer fleksibilitet i oppsettet; støttende digital veiledning og mindre feilkilder. Ny kompensasjonsmelding for merverdiavgift lanseres 01.01.23.
@@ -26,7 +28,7 @@ Det gjøres ikke endringer fra dagens praksis:
 
 Utfylling: Ansvarlig revisor, Regnskapsmedarbeider, Regnskapsfører uten signeringsrettighet eller Revisormedarbeider.
 
-Signering: Begrenset signeringsrettighet eller Regnskapsfører med signeringsrettighet. 
+Signering: Begrenset signeringsrettighet eller Regnskapsfører med signeringsrettighet.
 
 Attestering: Ansvarlig revisor eller Revisorattesterer - MVA Kompensasjon.
 
@@ -75,4 +77,3 @@ I SAF-T standard er mva-koder som kan være aktuelle for kompensasjon merket med
 
 Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/kompensasjon/test/).
 Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten er velkommen til å ta kontakt gjennom mva-modernisering@skatteetaten.no.
-

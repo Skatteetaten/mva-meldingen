@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
+	<innsending>
+		<regnskapssystemsreferanse>1004</regnskapssystemsreferanse>
+		<regnskapssystem>
+			<systemnavn>zzx</systemnavn>
+			<systemversjon>4.34.3</systemversjon>
+		</regnskapssystem>-
+	</innsending>
+	<skattegrunnlagOgBeregnetSkatt>
+		<skattleggingsperiode>
+			<periode>
+				<skattleggingsperiodeToMaaneder>mars-april</skattleggingsperiodeToMaaneder>
+			</periode>
+			<aar>2022</aar>
+		</skattleggingsperiode>
+		<fastsattMerverdiavgift>100000</fastsattMerverdiavgift>
+		<mvaSpesifikasjonslinje>
+		<mvaKode>1</mvaKode>
+		<spesifikasjon>justeringMerverdiavgiftskompensasjonFastEiendom</spesifikasjon>
+			<merverdiavgift>100000</merverdiavgift>
+				<merknad>
+					<utvalgtMerknad>Overdragelse av bygg, anlegg eller annen fast eiendom</utvalgtMerknad>
+				</merknad>
+		</mvaSpesifikasjonslinje>
+	</skattegrunnlagOgBeregnetSkatt>
+	<betalingsinformasjon>
+		<kundeIdentifikasjonsnummer>3400000932456870</kundeIdentifikasjonsnummer>
+	</betalingsinformasjon>
+	<skattepliktig>
+		<organisasjonsnummer>913238254</organisasjonsnummer>
+	</skattepliktig>
+	<meldingskategori>merverdiavgift kompensasjon</meldingskategori>
+	<merknad>
+		<beskrivelse>eksempel justering på kode 1 i kompensasjonsmelding(K1)</beskrivelse>
+	</merknad>
+</mvaMeldingDto>

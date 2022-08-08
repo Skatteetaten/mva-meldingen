@@ -4,13 +4,13 @@ title: "Test & Production"
 description: "Test and production information"
 ---
 
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/kompensasjon/test/)
+
 ## Changelog
 
-| Date       | Changes                                                                                                     |
-| :--------- | :---------------------------------------------------------------------------------------------------------- |
-| 2022.03.09 | Updated documentation with [Production](#production-environment) and [Test](#test-environment) environments |
-| 2022.03.31 | Corrected typo for Altinn Instance API url in test environment                                              |
-| 2000.05.11 | Added information about testusers from Tenor test data search                                               |
+| Date       | Changes                                      |
+| :--------- | :------------------------------------------- |
+| 2022.06.30 | New page for tax return for VAT compensation |
 
 ## Testing requirements
 
@@ -26,9 +26,9 @@ System providers must have test environments which can make use of synthetic dat
 
 Connection to the test environment occurs through ID-porten and for the purpose of testing, Skatteetaten's ID-porten integration can be used. It is recommended that the providers order their own integration against ID-porten as soon as possible because the process is partly manual and can be time consuming. See more in [implementation guide section 3. ID-porten integration.](https://skatteetaten.github.io/mva-meldingen/english/implementationguide/#3-id-porten-integration)
 
-The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test VAT-return. Ordinary Digdir test users will not work for this purpose.[Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/test/User_Guide_Tenor_testdata.pdf)
+The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test the tax return for VAT compensation. Ordinary Digdir test users will not work for this purpose.[Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen_eng/test/User_Guide_Tenor_testdata.pdf).
 
-Skatteetaten's test environment will be available as long as it is needed, after the new VAT-return is launched in January 2022.
+Skatteetaten's test environment will be available as long as it is needed, after the new tax return for VAT compensation is launched.
 
 ## Test planning
 
@@ -42,13 +42,13 @@ The system providers will, after the end of the test period and in advance of pr
 
 Some test applications has been written in jupyter notebook, for use when testing the solution from the Tax adminisatration:
 
-1. [Jupyter notebook demo for fetching and validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/demo.ipynb). Downlaod the catalog 'test' and run the script demo.ipynb (The script will carry out all steps in the process: call ping service to check connection and validate VAT-return).
+1. [Jupyter notebook demo for fetching and validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/demo.ipynb). Downlaod the catalog 'test' and run the script demo.ipynb (The script will carry out all steps in the process: call ping service to check connection and validate compensation report for VAT).
 
-2. [Jupyter notebook demo for fetching, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/file-vat-return.ipynb). run the script file-vat-return.ipynb. It will run all the steps in the process.
+2. [Jupyter notebook demo for fetching, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/file-vat-return.ipynb). run the script file-vat-return.ipynb. It will run all the steps in the process.
 
-3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py) and [postman script to validate return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/MeldingValidering.postman_collection.json). First log in to [ID-Porten](https://skatteetaten.github.io/mva-meldingen/english/idportenauthentication/), and save the token in the format "Bearer <em>hentet-token</em>" as the environment variablewith the name "test-bearer" in postman, and use the postman script to validate the return.
+3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py) and [postman script to validate return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/MeldingValidering.postman_collection.json). First log in to [ID-Porten](https://skatteetaten.github.io/mva-meldingen/english/idportenauthentication/), and save the token in the format "Bearer <em>hentet-token</em>" as the environment variablewith the name "test-bearer" in postman, and use the postman script to validate the return.
 
-4. [Example XML's](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/test/eksempler/melding)
+4. [Example XML's](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/kompensasjon/test/eksempler/melding)
 
 ## Test environment
 

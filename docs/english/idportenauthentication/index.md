@@ -97,7 +97,7 @@ The scopes must be ordered by your organization by sending an e-mail to [mva-mod
 
 The tax authorities will provide access to the scopes and they can then be added to the integration. The scopes must also be added to the code that integrates with ID-Porten so that the scopes are included in the access token from ID-Porten.
 
-The sample code <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py#L105-L164" target="_blank">log_in_idporten.py</a> has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
+The sample code <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py#L105-L164" target="_blank">log_in_idporten.py</a> has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
 
 ### Kundens org.nr.
 
@@ -241,4 +241,4 @@ We use the following test environment at ID-Porten:
 - authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Steg/log_in_idporten.py" target="_blank">log\_in\_idporten.py</a>
+For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py" target="_blank">log\_in\_idporten.py</a>

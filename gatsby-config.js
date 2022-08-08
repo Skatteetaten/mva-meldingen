@@ -25,7 +25,15 @@ const gatsbyConfig = {
       //      },
       {
         href: "/english",
-        name: "English",
+        name: "Common",
+      },
+      {
+        href: "/mvameldingen_eng",
+        name: "VAT report",
+      },
+      {
+        href: "/kompensasjon_eng",
+        name: "VAT Compensation",
       },
     ],
   },

@@ -6,7 +6,7 @@ description: "XSD for mva-melding
 - nedlastbare kodelister (XML)"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/english/informasjonsmodell/)
+[English](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/informasjonsmodell/)
 
 # XSD for mva-meldingen
 
@@ -43,9 +43,9 @@ SAF-T standarden inneholder også kodene 0 (Ingen merverdiavgiftsbehandling (ans
 
 Eksempler på ny mva-melding i excel:
 
-[Testtilfeller mva-melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/Testtilfeller%20mva-melding.xlsx?raw=true)
+[Testtilfeller mva-melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Testtilfeller%20mva-melding.xlsx?raw=true)
 
-Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/test/eksempler/melding/)
+Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/eksempler/melding/)
 
 ## Feltbeskrivelse for mva-melding
 

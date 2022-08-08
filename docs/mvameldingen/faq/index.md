@@ -4,7 +4,7 @@ title: "Spørsmål og svar"
 description: "Spørsmål og svar"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/english/faq/)
+[English](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/faq/)
 
 ## Generelt
 
@@ -90,7 +90,7 @@ Ja, innlogget tjeneste er en permanent løsning som er åpen for alle.
 
 ### Kan vi allerede nå se hvordan den innloggede løsningen for manuell utfylling av mva-melding vil se ut?
 
-Man kan prøve ut den innloggede løsningen for manuell utfylling av mva-melding ved å logge seg inni testmiljøet her: https://skatt-sbstest.sits.no/web/mva/.For å logge inn må man bruke testbrukere fra Tenor testdatasøk. Brukerveileding for dette finnes her:https://skatteetaten.github.io/mva-meldingen/documentation/test/#testmilj%C3%B8-og-testdata
+Man kan prøve ut den innloggede løsningen for manuell utfylling av mva-melding ved å logge seg inni [testmiljøet her](https://skatt-sbstest.sits.no/web/mva/). For å logge inn må man bruke testbrukere fra Tenor testdatasøk. Brukerveileding for dette finnes [her](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/#testmilj%C3%B8-og-testdata).
 
 ### Vil det være mulig å laste opp en XML-fil med grunnlagsdataene i innlogget løsning, slik at bruker da får utfylt dataene basert på innholdet i filen?
 
@@ -105,7 +105,7 @@ På samme nivå som før. Se "salgs- og kjøpsmelding" for mer informasjon om fo
 Skatteetaten stiller ikke krav til hvordan meldingen skal se ut i regnskapssystemet. Målet er at brukerne skal føre regnskap som normalt, og at systemet sammenstiller informasjonen fra regnskapet til mva-meldingen, slik at brukeren kan sende inn.
 
 Den nye rapporteringen vil være kodebasert og legge til rette for digital samhandling. Dagens nummererte poster erstattes av en dynamisk liste av spesifikasjonslinjer. Det vil bli mulig å gi merknader både samlet og per linje.
-Kodelisten for den nye mva-meldingen er tilgjengelig på Github, under [Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister)
+Kodelisten for den nye mva-meldingen er tilgjengelig på Github, under [Informasjonsmodeller, XSD og kodelister.](https://skatteetaten.github.io/mva-meldingen/mvameldingen/informasjonsmodell/#kodelister)
 
 ### Kan man vedlegge dokumentasjon som filvedlegg til mva-meldingen?
 
@@ -147,11 +147,11 @@ Ja, vi tar høyde for dette i valideringen og har lagt inn en toleranse på +/-1
 
 ### Vil det foreligge en kodeliste med beskrivelser for de ulike kodene?
 
-Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/documentation/informasjonsmodell/#kodelister)
+Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/mvameldingen/informasjonsmodell/#kodelister)
 
 ### Finnes det en oversikt som viser hva de gamle mva-kodene skal føres som i SAF-T koder i ny mva-melding?
 
-Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf)
+Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nytt til gammelt som kan finnes [her](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf).
 
 ## Salgs- og kjøpsmelding
 
@@ -177,9 +177,9 @@ Salgs- og kjøpsmeldingen vil være noe annet enn SAF-T regnskap, men det er akt
 
 ### Vil testingen av mva-melding være åpen for alle?
 
-Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/documentation/test/).
+Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/).
 Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten er velkommen til å ta kontakt gjennom mva-modernisering@skatteetaten.no.
 
 ### Vil det komme en testversjon av portalen så man kan teste utfylling og de nye valideringene før første innlevering neste år?
 
-Testversjon av portalen finnes her: https://skatt-sbstest.sits.no/web/mva/. For å benytte seg av denne må man bruke Tenor Testdata, i henhold til [brukerveiledning](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/#testmilj%C3%B8-og-testdata).
+[Testversjon av portalen finnes her](https://skatt-sbstest.sits.no/web/mva/). For å benytte seg av denne må man bruke Tenor Testdata, i henhold til [brukerveiledning](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/#testmilj%C3%B8-og-testdata).
