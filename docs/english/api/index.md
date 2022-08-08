@@ -9,7 +9,7 @@ description: "API descriptions"
 ## Changelog
 
 | Dato       | Hva ble endret?                                                                  |
-| :--------- | :------------------------------------------------------------------------------- |
+|:-----------| :------------------------------------------------------------------------------- |
 | 2021.06.17 | Updated documentation for [feedback](#retrieve-feedback).                        |
 | 2021.07.05 | Corrected the datatype for when uploading attachments.                           |
 | 2021.08.03 | Changed the URL for validation to the correct value                              |
@@ -17,7 +17,8 @@ description: "API descriptions"
 | 2021.11.08 | Updated validation error list                                                    |
 | 2021.11.11 | Updated error messages when filing submission                                    |
 | 2021.12.08 | Updated valid content type for binaerVedlegg                                     |
-| 2022.06.30 | Changes in connection with the expansion of documentation for other return types |
+| 2022.06.30 | Changes in connection with the expansion of documentation for other return types |           |
+| 2022.08.06 | Added new conflict error message for duplicate file names |
 
 ## Introduction
 
@@ -228,17 +229,6 @@ Example instanceUrl:
 ### Error messages
 
 _Response 400 - Bad Request:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 _Response 403 - Forbidden:_ <br>
 Example Value:
@@ -430,17 +420,6 @@ _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
 
 _Response 409 - Conflict:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
@@ -450,12 +429,6 @@ You will get this error message if the organisation number used when creating th
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
-```
-
-You will get this error message if the organisation number defined in vat. return submission is different from the organisation number defined in vat-return.
-
-```
-"Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra listen med vedlegg som er lastet opp i instansen."
 ```
 
 If the list of attachments defined in at-return submission is different from the attachments uploaded to the instance, you will get this error message.
@@ -483,6 +456,12 @@ This error message will occur if the value of the field skattleggingsperiode is 
 ```
 
 This error message will occur if the value of the field instansstatus is null.
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+This error message will occur if two or more uploaded files have the same name.
 
 **Validation Service**
 
@@ -546,6 +525,14 @@ The submission will now be in the feedback step.
 _Response 403 - Forbidden:_ <br>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.
 
+_Response 409 - Conflict:_ <br>
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+This error message will occur if two or more uploaded files have the same name. Unlikely during this step.
+
 ### Payment information available
 
 When the submission is completed and the instance is in the feedback step, the payment information will be available for download. It can be found by downloading the instance and downloading the file `betalingsinformasjon.xml`, and has the data type `payment information`. See [feedback files](#feedback-files).
@@ -600,33 +587,10 @@ and it will contain data elements for all the feedback files from the Tax Admini
 ### Error Messages
 
 _Response 400 - Bad Request:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
-
 _Response 403 - Forbidden:_ <br>
 This error message will occur if the logged-in user attempt to retrieve the instance, but the person does not have the correct roles.
 
 _Response 404 - Not Found:_ <br>
-Example Value
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ### Feedback files
 

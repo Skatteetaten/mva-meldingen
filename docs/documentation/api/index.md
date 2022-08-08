@@ -11,7 +11,7 @@ description: "Api-beskrivelser"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                                             |
-| :--------- | :------------------------------------------------------------------------------------------ |
+|:-----------| :------------------------------------------------------------------------------------------ |
 | 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding).                       |
 | 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.                                    |
 | 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                                       |
@@ -21,6 +21,7 @@ description: "Api-beskrivelser"
 | 2021.12.08 | Oppdatert lovlig content type til binaerVedlegg                                             |
 | 2022.03.08 | Betalingsinformasjon kan [lastes ned](#tilbakemeldingsfiler) etter fullføring av innsending |
 | 2022.06.24 | Endringer i forbindelse med utvidelse av dokumentasjon for andre meldingstyper              |
+| 2022.08.06 | Lagt til ny valideringsfeil for duplikate filnavn                                           |
 
 ## Introduksjon
 
@@ -212,20 +213,8 @@ Eksempel på instansUrl: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsen
 ### Feilmeldinger
 
 _Respons 400 - Bad Request:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 _Respons 403 - Forbidden:_ <br>
-Eksempel verdi
 
 ```JSON
 {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.3","title":"Forbidden","status":403,"traceId":"00-44eab35cb9ca2049b24de316f380a774-a724e045b09dfc44-00"}
@@ -235,7 +224,6 @@ Denne feilmeldingen kan en få hvis en prøver å lage en instanse hvor innlogge
 Dette vil da også gjelde hvis innlogget bruker ikke har tilstrekkelig roller for å opprette en instans.
 
 _Respons 404 - Not Found:_ <br>
-Eksempel verdi
 
 ```JSON
 "Cannot lookup party: Failed to lookup party by organisationNumber: 123456789. The exception was: 404 - Not Found - "
@@ -395,17 +383,6 @@ _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
 _Respons 409 - Conflict:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\")"
@@ -415,12 +392,6 @@ Hvis organisasjonsnummeret som ble brukt til å lage instansen er forskjellig fr
 
 ```
 "Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra organisasjonsnummeret i {filnavn}"
-```
-
-Hvis organisasjonsnummeret som er definert i MvaMeldingInnsending er forskjellig fra organisjasnonsnummeret som er definert i mva-meldingen vil en få denne feilmeldingen.
-
-```
-"Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\"konvolutt\") er forskjellig fra listen med vedlegg som er lastet opp i instansen."
 ```
 
 Hvis listen over vedlegg som er definert i MvaMeldingInnsending er forskjellig fra de som har blitt lastet opp instansen vil en få denne feilmeldingen.
@@ -448,6 +419,12 @@ Hvis verdien i skattleggingsperiode feltet i MvaMeldingInnsending er tom vil en 
 ```
 
 Hvis verdien i instansstatus feltet i MvaMeldingInnsending er null vil en få denne feilmeldingen.
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+Hvis to eller flere filer er lastet opp til instansen med samme filnavn vil en få denne feilmeldingen.
 
 **Valideringstjenesten**
 
@@ -510,6 +487,14 @@ Innsendingen vil nå være i tilbakemeldings-steget.
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å bytte til neste steg i instansprossessen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
+_Response 409 - Conflict:_ <br>
+
+```
+"Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique."
+```
+
+Hvis to eller flere filer er lastet opp til instansen med samme filnavn vil en få denne feilmeldingen. Kan forekomme i feilsituasjoner for dette steget.
+
 ### Betalingsinformasjon tilgjengelig
 
 Når Innsendingen er fullført og instansen nå er i tilbakemeldings-steget, vil betalingsinformasjonen være tilgjengelig på instansen. Den kan finnes ved å hente instansen og laste ned fila `betalingsinformasjon.xml`, og har datatypen `betalingsinformasjon`. Se [tilbakemeldingsfiler](#tilbakemeldingsfiler).
@@ -563,33 +548,11 @@ Dette endepunktet vil returnere instansen når Skatteetaten har gitt tilbakemeld
 ### Feilmeldinger
 
 _Respons 400 - Bad Request:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 _Respons 403 - Forbidden:_ <br>
 Hvis innlogget bruker prøver å hente instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.
 
 _Respons 404 - Not Found:_ <br>
-Eksempel verdi
-
-```JSON
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string"
-}
-```
 
 ### Tilbakemeldingsfiler
 
