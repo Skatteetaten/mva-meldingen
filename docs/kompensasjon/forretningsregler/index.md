@@ -83,6 +83,5 @@ Dersom denne regelen ikke er oppfylt vil meldingsvalideringen feile.
 **Linje 8 - Alvorlighetsgrad**: Dette er alvorlighetsgraden dersom valideringen feiler.
 Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKATTEMELDING
 
-```kotlin
 
 Detaljspesifikasjon for hver enkelt regel vil bli lagt til etterhvert som kompensasjonsmeldingen blir utviklet.
