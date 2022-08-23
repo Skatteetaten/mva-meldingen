@@ -169,6 +169,6 @@ The sales and purchase report will be something other than SAF-T Financial, but 
 Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/).
 If you are interested in participating in testing, please contact the Tax Administration at mva-modernisering@skatteetaten.no.
 
-### Will there be a test version of the portal so you can test completion and the new validations before the first submission next year?
+### Will there be a test version of the portal so you can test completion and the new validations before submission?
 
 The portal will be user-tested by a selct group of users, but it will not be possible to log in to test for everyone.
