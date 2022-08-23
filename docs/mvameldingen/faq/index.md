@@ -180,6 +180,6 @@ Salgs- og kjøpsmeldingen vil være noe annet enn SAF-T regnskap, men det er akt
 Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/).
 Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten er velkommen til å ta kontakt gjennom mva-modernisering@skatteetaten.no.
 
-### Vil det komme en testversjon av portalen så man kan teste utfylling og de nye valideringene før første innlevering neste år?
+### Vil det komme en testversjon av portalen så man kan teste utfylling og de nye valideringene før innlevering?
 
 [Testversjon av portalen finnes her](https://skatt-sbstest.sits.no/web/mva/). For å benytte seg av denne må man bruke Tenor Testdata, i henhold til [brukerveiledning](https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/#testmilj%C3%B8-og-testdata).
