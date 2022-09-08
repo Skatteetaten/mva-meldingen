@@ -51,6 +51,13 @@ space
 SBS->Altinn3-App:Fullfør Innsending\nBearer: Altinn-Token\nPUT: /instances/<partyId>/<instanceGuid>/process/next
 Altinn3-App-->SBS:Oppdatert instans
 
+Altinn3-App->Altinn3-App:Generere betalingsinformasjon
+
+space 
+==Hent betalingsinformasjon==
+SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
+Altinn3-App-->SBS:Oppdatert instans
+
 space
 ==Hent tilbakemelding synkron mot Altinn3-App==
 SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback

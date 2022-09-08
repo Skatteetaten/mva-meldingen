@@ -28,7 +28,7 @@ Altinn3-App-->SBS:FeedbackStatus
 end
 
 space
-==Retrieve feedback synchronous towards Altinn3-App==
+==Retrieve feedback asynchronous towards Altinn3-App==
 SBS->Altinn3-App:Retrieve feedback\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
 Altinn3-App-->SBS:Updated instance
 deactivate Altinn3-App
