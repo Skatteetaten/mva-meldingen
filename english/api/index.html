@@ -91,7 +91,11 @@
 
 
 
-<table><thead><tr><th style="text-align:left">Dato</th><th style="text-align:left">Hva ble endret?</th></tr></thead><tbody><tr><td style="text-align:left">2021.06.17</td><td style="text-align:left">Updated documentation for <a href="#retrieve-feedback">feedback</a>.</td></tr><tr><td style="text-align:left">2021.07.05</td><td style="text-align:left">Corrected the datatype for when uploading attachments.</td></tr><tr><td style="text-align:left">2021.08.03</td><td style="text-align:left">Changed the URL for validation to the correct value</td></tr><tr><td style="text-align:left">2021.11.04</td><td style="text-align:left">Updated URL for validation service</td></tr><tr><td style="text-align:left">2021.11.08</td><td style="text-align:left">Updated validation error list</td></tr><tr><td style="text-align:left">2021.11.11</td><td style="text-align:left">Updated error messages when filing submission</td></tr><tr><td style="text-align:left">2021.12.08</td><td style="text-align:left">Updated valid content type for binaerVedlegg</td></tr><tr><td style="text-align:left">2022.06.30</td><td style="text-align:left">Changes in connection with the expansion of documentation for other return types</td></tr></tbody></table>
+
+
+
+
+<table><thead><tr><th style="text-align:left">Dato</th><th style="text-align:left">Hva ble endret?</th></tr></thead><tbody><tr><td style="text-align:left">2021.06.17</td><td style="text-align:left">Updated documentation for <a href="#retrieve-feedback">feedback</a>.</td></tr><tr><td style="text-align:left">2021.07.05</td><td style="text-align:left">Corrected the datatype for when uploading attachments.</td></tr><tr><td style="text-align:left">2021.08.03</td><td style="text-align:left">Changed the URL for validation to the correct value</td></tr><tr><td style="text-align:left">2021.11.04</td><td style="text-align:left">Updated URL for validation service</td></tr><tr><td style="text-align:left">2021.11.08</td><td style="text-align:left">Updated validation error list</td></tr><tr><td style="text-align:left">2021.11.11</td><td style="text-align:left">Updated error messages when filing submission</td></tr><tr><td style="text-align:left">2021.12.08</td><td style="text-align:left">Updated valid content type for binaerVedlegg</td></tr><tr><td style="text-align:left">2022.06.30</td><td style="text-align:left">Changes in connection with the expansion of documentation for other return types</td></tr><tr><td style="text-align:left">2022.08.06</td><td style="text-align:left">Added new conflict error message for duplicate file names</td></tr></tbody></table>
 <h2 id="introduction" style="position:relative"><a href="#introduction" aria-label="introduction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
 <p>The APIs function for the following categories of tax return: VAT-return (RF-0002/0004), VAT-return for reverse liability (RF-0005) and tax return for VAT compensation (RF-0009). When these types of returns are submitted to the Tax Authority from an end-user system (SBS) these APIs should be used:</p>
 <ol>
@@ -131,7 +135,7 @@ covers the needed sequence for submitting VAT returns.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">instanceApiUrl = &quot;https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances&quot;</code></pre></div>
 <p>In the following sequence diagram, the application URL will be hidden, so if <code class="language-text">POST: /intances/</code> is written it is
 implicitly <code class="language-text">POST: instanceApiUrl</code></p>
-<p><img src="/mva-meldingen/daf279f4e97594c00db6f8c6dd0b842f/Vat-Return-Submission-Sequence-Diagram.png"/></p>
+<p><img src="/mva-meldingen/e3870fa0e73d772575d798f81dd25c31/Vat-Return-Submission-Sequence-Diagram.png"/></p>
 <h2 id="authentication" style="position:relative"><a href="#authentication" aria-label="authentication permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authentication</h2>
 <h3 id="change-id-porten-token-to-the-altinn-token" style="position:relative"><a href="#change-id-porten-token-to-the-altinn-token" aria-label="change id porten token to the altinn token permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Change ID-Porten token to the Altinn token</h3>
 <p>To change ID-Porten token, make the following calls:</p>
@@ -256,15 +260,7 @@ found in the <code class="language-text">id</code> field in the returned instanc
 <p>Example instanceUrl:
 <code class="language-text">https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/3949387/abba061g-3abb-4bab-bab8-c9abbaf1ed50/data/28abba46-dea8-4ab7-ba90-433abba906df</code></p>
 <h3 id="error-messages" style="position:relative"><a href="#error-messages" aria-label="error messages permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error messages</h3>
-<p><em>Response 400 - Bad Request:</em> <br/>
-Example Value</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;detail&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
-<span class="token punctuation">}</span></code></pre></div>
+<p><em>Response 400 - Bad Request:</em> <br/></p>
 <p><em>Response 403 - Forbidden:</em> <br/>
 Example Value:</p>
 <div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;https://tools.ietf.org/html/rfc7231#section-6.5.3&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token string">&quot;Forbidden&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;status&quot;</span><span class="token operator">:</span><span class="token number">403</span><span class="token punctuation">,</span><span class="token property">&quot;traceId&quot;</span><span class="token operator">:</span><span class="token string">&quot;00-44eab35cb9ca2049b24de316f380a774-a724e045b09dfc44-00&quot;</span><span class="token punctuation">}</span></code></pre></div>
@@ -394,20 +390,10 @@ If the logged-in user attempt to upload a file to the instance, but the person d
 <h3 id="error-messages-4" style="position:relative"><a href="#error-messages-4" aria-label="error messages 4 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Messages</h3>
 <p><em>Response 403 - Forbidden:</em> <br/>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.</p>
-<p><em>Response 409 - Conflict:</em> <br/>
-Example Value</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;detail&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
-<span class="token punctuation">}</span></code></pre></div>
+<p><em>Response 409 - Conflict:</em> <br/></p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: Organisasjonsnummeret i instansen er forskjellig fra organisasjonsnummeret i MvaMeldingInnsending (\&quot;konvolutt\&quot;)&quot;</code></pre></div>
 <p>You will get this error message if the organisation number used when creating the instance is different from the organisation number defined in vat-return submission.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: Organisasjonsnummeret i MvaMeldingInnsending (\&quot;konvolutt\&quot;) er forskjellig fra organisasjonsnummeret i {filnavn}&quot;</code></pre></div>
-<p>You will get this error message if the organisation number defined in vat. return submission is different from the organisation number defined in vat-return.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: Liste med vedlegg definert i MvaMeldingInnsending (\&quot;konvolutt\&quot;) er forskjellig fra listen med vedlegg som er lastet opp i instansen.&quot;</code></pre></div>
 <p>If the list of attachments defined in at-return submission is different from the attachments uploaded to the instance, you will get this error message.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: Meldingskategorien i MvaMeldingInnsending (\&quot;konvolutt\&quot;) er forsjellig fra Meldingskategorien i {filnavn}&quot;</code></pre></div>
 <p>This error message will occur if the value of the field message category in vat-return submission is different from the message category in the vat-return.</p>
@@ -417,6 +403,8 @@ Example Value</p>
 <p>This error message will occur if the value of the field skattleggingsperiode is empty.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: instansstatus er påkrevd i MvaMeldingInnsending. Validation error: instansstatus is required in MvaMeldingInnsending&quot;</code></pre></div>
 <p>This error message will occur if the value of the field instansstatus is null.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique.&quot;</code></pre></div>
+<p>This error message will occur if two or more uploaded files have the same name.</p>
 <p><strong>Validation Service</strong></p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: Ugyldig mva-melding&quot;</code></pre></div>
 <p>The app will also call the validation service during the completion of the data filling step. If the vat-return is invalid,
@@ -455,6 +443,9 @@ HEADERS<span class="token operator">:</span>
 <h3 id="error-messages-5" style="position:relative"><a href="#error-messages-5" aria-label="error messages 5 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Messages</h3>
 <p><em>Response 403 - Forbidden:</em> <br/>
 If the logged-in user attempt to update to the next task in the instance process, but does not have the correct roles, you will get the response code 403 in return.</p>
+<p><em>Response 409 - Conflict:</em> <br/></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;Valideringsfeil: filnavnene i innsendingen må være unike. Validation error: file names in the submission must be unique.&quot;</code></pre></div>
+<p>This error message will occur if two or more uploaded files have the same name. Unlikely during this step.</p>
 <h3 id="payment-information-available" style="position:relative"><a href="#payment-information-available" aria-label="payment information available permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Payment information available</h3>
 <p>When the submission is completed and the instance is in the feedback step, the payment information will be available for download. It can be found by downloading the instance and downloading the file <code class="language-text">betalingsinformasjon.xml</code>, and has the data type <code class="language-text">payment information</code>. See <a href="#feedback-files">feedback files</a>.</p>
 <h2 id="retrieve-feedback" style="position:relative"><a href="#retrieve-feedback" aria-label="retrieve feedback permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve feedback</h2>
@@ -465,7 +456,7 @@ If the logged-in user attempt to update to the next task in the instance process
 </ul>
 <p>The following sequence diagram shows how to identify if the Tax Administration has provided feedback to a given instance,
 and how to retrieve it.
-<img src="/mva-meldingen/498cb6aa6186a66c00be2e7ede91aa08/Get-Feedback.png"/></p>
+<img src="/mva-meldingen/b82a685da7977dfef5105ba8c054b155/Get-Feedback.png"/></p>
 <p>You can get the status of the feedback by performing a request towards the feedback-api for the instance.</p>
 <div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json">GET <span class="token punctuation">{</span>instansUrl<span class="token punctuation">}</span>/<span class="token punctuation">{</span>partyId<span class="token punctuation">}</span>/<span class="token punctuation">{</span>instanceGuid<span class="token punctuation">}</span>/feedback/status
 HEADERS<span class="token operator">:</span>
@@ -490,25 +481,9 @@ and it will contain data elements for all the feedback files from the Tax Admini
 </ul>
 <h3 id="error-messages-6" style="position:relative"><a href="#error-messages-6" aria-label="error messages 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Messages</h3>
 <p><em>Response 400 - Bad Request:</em> <br/>
-Example Value</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;detail&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p><em>Response 403 - Forbidden:</em> <br/>
+<em>Response 403 - Forbidden:</em> <br/>
 This error message will occur if the logged-in user attempt to retrieve the instance, but the person does not have the correct roles.</p>
-<p><em>Response 404 - Not Found:</em> <br/>
-Example Value</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;detail&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
-<span class="token punctuation">}</span></code></pre></div>
+<p><em>Response 404 - Not Found:</em> <br/></p>
 <h3 id="feedback-files" style="position:relative"><a href="#feedback-files" aria-label="feedback files permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Feedback files</h3>
 <p>Once the Tax Administration has given feedback, the files for the feedback can be downloaded from the instance.</p>
 <p>Payment information will be available when the submission is completed, it is being produced when <a href="#complete-vat-return-submission">completing the vat return submission</a>.</p>
