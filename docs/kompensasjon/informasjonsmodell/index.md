@@ -271,23 +271,23 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
 
 | Gruppe og kode                                                              | Beskrivelse av Kode og Spesifikasjon                                          |
 | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Kompensasjon for merverdiavgift ved kjøp av varer og tjenester i Norge      |
-| 1                                                                           | Kompensasjon for merverdiavgift (høy sats)                                    |
+| Kjøp av varer og tjenester i Norge med kompensasjonsrett		      |
+| 1                                                                           | Kjøp av varer og tjenester med kompensasjonsrett (høy sats)                   |
 | Spesifikasjonslinje til kode 1                                              | Justering merverdiavgiftskompensasjon fast eiendom                            |
-| 11                                                                          | Kompensasjon for merverdiavgift (middel sats)                                 |
-| 13                                                                          | Kompensasjon for merverdiavgift (lav sats)                                    |
-| Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (import)     |
+| 11                                                                          | Kjøp av varer og tjenester med kompensasjonsrett (middels sats)               |
+| 13                                                                          | Kjøp av varer og tjenester med kompensasjonsrett (lav sats)                   |
+| Kjøp av varer fra utlandet med kompensasjonsrett (import)		      |
 | 14                                                                          | Kompensasjon for merverdiavgift betalt ved innførsel (høy sats)               |
 | Spesifikasjonslinje til kode 14                                             | Justering merverdiavgiftskompensasjon fast eiendom                            |
 | 15                                                                          | Kompensasjon for merverdiavgift betalt ved innførsel (middels sats)           |
-| 81                                                                          | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (høy sats)     |
+| 81                                                                          | Kjøp av varer fra utlandet med kompensasjonsrett (høy sats)		      |
 | Spesifikasjonslinje til kode 81                                             | Justering merverdiavgiftskompensasjon fast eiendom                            |
-| 83                                                                          | Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (middels sats) |
-| Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (import) |
-| 86                                                                          | Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (høy sats) |
-| 88                                                                          | Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (lav sats) |
+| 83                                                                          | Kjøp av varer fra utlandet med kompensasjonsrett (middels sats)		      |
+| Kjøp av tjenester fra utlandet med kompensasjonsrett (import) 	      |
+| 86                                                                          | Kjøp av tjenester fra utlandet med kompensasjonsrett (høy sats) 	      |
+| 88                                                                          | Kjøp av tjenester fra utlandet med kompensasjonsrett (lav sats) 	      |
 | Klimakvoter og gull                                                         |
-| 91                                                                          | Kompensasjon for merverdiavgift ved kjøp av klimakvoter eller gull (høy sats) |
+| 91                                                                          | Kjøp av klimakvoter eller gull med kompensasjonsrett (høy sats) 	      |
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
 
