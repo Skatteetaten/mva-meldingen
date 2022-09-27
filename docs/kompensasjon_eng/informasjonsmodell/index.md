@@ -268,21 +268,21 @@ Attachment file
 
 | Group and code                                                     | Description of code, deductions and specification                                 |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
-| Compensation for VAT on purchases of goods and services in Norway  |                                                                                   |
-| 1                                                                  | Compensation for VAT (standard rate)                                              |
+| Purchases of goods and services in Norway with compensation for VAT|                                                                                   |
+| 1                                                                  | Purchases of goods and services with compensation for VAT (standard rate)         |
 | Specification line for code 1                                      | Adjustment of VAT compensation for real property                                  |
-| 11                                                                 | Compensation for VAT (middle rate)                                                |
-| 13                                                                 | Compensation for VAT (low rate)                                                   |
-| Compensation for VAT on purchases of goods from abroad (import)    |                                                                                   |
+| 11                                                                 | Purchases of goods and services with compensation for VAT (middle rate)	         |
+| 13                                                                 | Purchases of goods and services with compensation for VAT (low rate)              |
+| Purchases of goods from abroad with compensation for VAT (import)  |                                                                                   |
 | 14                                                                 | Compensation for value added tax paid upon import (standard rate)                 |
 | Specification line for code 14                                     | Adjustment of VAT compensation for real property                                  |
 | 15                                                                 | Compensation for value added tax paid upon import (middle rate)                   |
-| 81                                                                 | Compensation for purchases of goods from abroad (standard rate)                   |
+| 81                                                                 | Purchases of goods from abroad with compensation for VAT (standard rate)          |
 | Specification line for code 81                                     | Adjustment of VAT compensation for real property                                  |
-| 83                                                                 | Compensation for purchases of goods from abroad (middle rate)                     |
-| Compensation for VAT on purchases of services from abroad (import) |                                                                                   |
-| 86                                                                 | Compensation for VAT on purchases of services from abroad (standard rate)         |
-| 88                                                                 | Compensation for VAT on purchases of services from abroad (low rate)              |
+| 83                                                                 | Purchases of goods from abroad with compensation for VAT (middle rate)            |
+| Purchases of services from abroad with compensation for VAT(import)|                                                                                   |
+| 86                                                                 | Purchases of services from abroad with compensation for VAT (standard rate)       |
+| 88                                                                 | Purchases of services from abroad with compensation for VAT (low rate)            |
 | Emission allowances and gold                                       |                                                                                   |
 | 91                                                                 | Compensation for VAT on purchases of emission allowances and gold (standard rate) |
 
