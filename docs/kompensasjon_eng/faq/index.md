@@ -60,6 +60,14 @@ We want to offer Maskinporten support for system-to-system submissions and we ar
 
 This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/informasjonsmodell/#encoding).
 
+### Should SAF-T codes be entered with K in the tax return for VAT compensation?
+
+No, the codes should not be entered with K in the tax return for VAT compensation.
+
+When delivering a tax return for VAT compensation from an ERP accounting system or in the logged-in solution, only a numerical code is used, without the letter K in front or behind. This is according to standard code list in the document "Norwegian SAF-T Standard - VAT/Tax codes".
+
+In the document, the letter K is only used in the description of the codes, so that the reader can more easily see that the VAT code and accompanying text are relevant for compensation purposes.
+
 ## Test
 
 ### Will testing of the tax return for VAT compensation be open for everyone?
