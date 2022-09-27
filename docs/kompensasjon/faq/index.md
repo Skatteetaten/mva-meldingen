@@ -67,9 +67,13 @@ Vi ønsker å kunne tilby støtte for maskinporten, og ser på de juridiske og p
 
 Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/kompensasjon/informasjonsmodell/#kodelister)
 
-### Skal kodene angis med K ved rapportering til Skatteetaten?
+### Skal kodene angis med K i kompensasjonsmeldingen?
 
-I SAF-T standard er mva-koder som kan være aktuelle for kompensasjon merket med K. Ved levering av kompensasjonsmelding for merverdiavgift fra regnskapssystem eller i innlogget tjeneste benyttes kun tallkode, uten K.
+Nei, kodene skal ikke angis med K i kompensasjonsmeldingen.
+
+Ved levering av kompensasjonsmelding for merverdiavgift fra regnskapssystem eller i innlogget tjeneste, benyttes kun tallkode, uten bokstaven K foran eller bak. Dette er iht. standard kodeliste i dokumentet «Norwegian SAF-T Standard - VAT/Tax codes».
+
+I dokumentet benyttes bokstaven K kun i beskrivelsen av kodene, for at leseren lettere skal kunne se at mva-koden med tilhørende tekst er relevant for kompensasjonsformål.
 
 ## Test
 
