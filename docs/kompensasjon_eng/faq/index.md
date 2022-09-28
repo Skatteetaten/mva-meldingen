@@ -60,7 +60,7 @@ We want to offer Maskinporten support for system-to-system submissions and we ar
 
 This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/informasjonsmodell/#encoding).
 
-### Should SAF-T codes be entered with K in the tax return for VAT compensation?
+### Should VAT codes be entered with K in the tax return for VAT compensation?
 
 No, the codes should not be entered with K in the tax return for VAT compensation.
 
