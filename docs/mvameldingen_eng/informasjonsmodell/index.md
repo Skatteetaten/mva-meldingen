@@ -295,18 +295,18 @@ Vedleggsfil
 | 52                                                       | Sales of goods and services exempt from value added tax to other countries                 |
 | Purchases of goods and services in Norway (Deductions)   |                                                                                            |
 | 1                                                        | Purchases of goods and services with deductions (standard rate)                            |
-| Specification line for code 1                            | losses on outstanding claims and cancellations                                             |
-| Specification line for code 1                            | adjustment of input VAT on capital goods                                                   |
-| Specification line for code 1                            | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
+| Specification line for code 1                            | Losses on outstanding claims and cancellations                                             |
+| Specification line for code 1                            | Adjustment of input VAT on capital goods                                                   |
+| Specification line for code 1                            | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | 11                                                       | Purchases of goods and services with deductions (middle rate)                              |
-| Specification line for code 11                           | losses on outstanding claims and cancellations                                             |
+| Specification line for code 11                           | Losses on outstanding claims and cancellations                                             |
 | 13                                                       | Purchases of goods and services with deduction entitlement (low rate)                      |
-| Specification line for code 13                           | losses on outstanding claims and cancellations                                             |
+| Specification line for code 13                           | Losses on outstanding claims and cancellations                                             |
 | Purchases of goods from abroad (import)                  |                                                                                            |
 | 81                                                       | Purchases of goods from abroad with deductions (standard rate)                             |
 | 81                                                       | Deductions on purchases of goods from abroad with deductions (standard rate)               |
-| Specification line for code 81                           | reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
-| Specification line for code 81                           | adjustment of input VAT on capital goods                                                   |
+| Specification line for code 81                           | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
+| Specification line for code 81                           | Adjustment of input VAT on capital goods                                                   |
 | 14                                                       | Purchases of goods from abroad, value added tax paid upon import (standard rate)           |
 | 82                                                       | Purchases of goods from abroad without deduction entitlement (standard rate)               |
 | 83                                                       | Purchases of goods from abroad with deductions (middle rate)                               |
@@ -327,7 +327,7 @@ Vedleggsfil
 | Specification line for code 12                           | Losses on outstanding claims and cancellations                                             |
 | Emission allowances and gold                             |                                                                                            |
 | 51                                                       | Sales of emission allowances and gold to businesses/self-employed persons                  |
-| 91                                                       | Purchases of emission allowances and gold                                                  |
+| 91                                                       | Purchases of emission allowances and gold                                                   |
 | 91                                                       | Deductions on purchases of emission allowances and gold                                    |
 | 92                                                       | Purchases of emission allowances and gold without deduction entitlement                    |
 
