@@ -266,7 +266,7 @@ Attachment file
 
 ## Encoding
 
-| Group and code                                                     | Description of code, deductions and specification                                 |
+| Group and code                                                     | Description of code and specification                                 |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
 | Purchases of goods and services in Norway with compensation for VAT|                                                                                   |
 | 1                                                                  | Purchases of goods and services with compensation for VAT (standard rate)         |
@@ -284,7 +284,7 @@ Attachment file
 | 86                                                                 | Purchases of services from abroad with compensation for VAT (standard rate)       |
 | 88                                                                 | Purchases of services from abroad with compensation for VAT (low rate)            |
 | Emission allowances and gold                                       |                                                                                   |
-| 91                                                                 | Compensation for VAT on purchases of emission allowances and gold (standard rate) |
+| 91                                                                 | Purchases of emission allowances or gold with compensation for VAT (standard rate)|
 
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/kodelister/)
 
