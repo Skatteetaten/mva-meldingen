@@ -287,7 +287,7 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
 | 86                                                                          | Kjøp av tjenester fra utlandet med kompensasjonsrett (høy sats) 	      |
 | 88                                                                          | Kjøp av tjenester fra utlandet med kompensasjonsrett (lav sats) 	      |
 | Klimakvoter og gull                                                         |
-| 91                                                                          | Kjøp av klimakvoter eller gull med kompensasjonsrett (høy sats) 	      |
+| 91                                                                          | Kjøp av klimakvoter og gull med kompensasjonsrett (høy sats) 	      |
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
 
