@@ -32,7 +32,11 @@ Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny kompensas
 
 ## Testplanlegging
 
-Prosjektet vil tilby egne møter med fokus på testplanlegging og gjennomføring av test. Her vil tema blant annet være testgjennomføringen, hvilke scenarier som bør testes og testdata.
+Fra 1. oktober kan dere i test sende inn mva-melding med meldingskategori "merverdiavgift kompensasjon". Merk at det foreløpig ikke gjøres noen validering eller mulighet for attestering.
+
+Vi vil legge på funksjonalitet i test etterhvert som den ferdigstilles. Vi gir beskjed om dette.
+
+Medio november skal all funksjonalitet være tilgjengelig i test.
 
 ## Oppsummering av test og oppstart i produksjon
 
