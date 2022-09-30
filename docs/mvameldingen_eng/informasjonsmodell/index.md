@@ -294,42 +294,42 @@ Vedleggsfil
 | Sales of goods and services to other countries (exports) |                                                                                            |
 | 52                                                       | Sales of goods and services exempt from value added tax to other countries                 |
 | Purchases of goods and services in Norway (Deductions)   |                                                                                            |
-| 1                                                        | Purchases of goods and services with deductions (standard rate)                            |
+| 1                                                        | Purchases of goods and services with deduction (standard rate)                             |
 | Specification line for code 1                            | Losses on outstanding claims and cancellations                                             |
 | Specification line for code 1                            | Adjustment of input VAT on capital goods                                                   |
 | Specification line for code 1                            | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
-| 11                                                       | Purchases of goods and services with deductions (middle rate)                              |
+| 11                                                       | Purchases of goods and services with deduction (middle rate)                               |
 | Specification line for code 11                           | Losses on outstanding claims and cancellations                                             |
-| 13                                                       | Purchases of goods and services with deduction entitlement (low rate)                      |
+| 13                                                       | Purchases of goods and services with deduction (low rate)                   	        |
 | Specification line for code 13                           | Losses on outstanding claims and cancellations                                             |
 | Purchases of goods from abroad (import)                  |                                                                                            |
-| 81                                                       | Purchases of goods from abroad with deductions (standard rate)                             |
-| 81                                                       | Deductions on purchases of goods from abroad with deductions (standard rate)               |
+| 81                                                       | Purchases of goods from abroad with deduction (standard rate)                              |
+| 81                                                       | Deductions on purchases of goods from abroad (standard rate)               		|
 | Specification line for code 81                           | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | Specification line for code 81                           | Adjustment of input VAT on capital goods                                                   |
-| 14                                                       | Purchases of goods from abroad, value added tax paid upon import (standard rate)           |
-| 82                                                       | Purchases of goods from abroad without deduction entitlement (standard rate)               |
-| 83                                                       | Purchases of goods from abroad with deductions (middle rate)                               |
-| 83                                                       | Deductions on purchases of goods from abroad with deductions (middle rate)                 |
+| 14                                                       | Deductions on purchases of goods from abroad, value added tax paid upon import (standard rate)
+| 82                                                       | Purchases of goods from abroad without deduction (standard rate)              		|
+| 83                                                       | Purchases of goods from abroad with deduction (middle rate)                                |
+| 83                                                       | Deductions on purchases of goods from abroad (middle rate)                 		|
 | 15                                                       | Purchases of goods from abroad, value added tax paid upon import (middle rate)             |
-| 84                                                       | Purchases of goods from abroad without deduction entitlement (middle rate)                 |
+| 84                                                       | Purchases of goods from abroad without deduction (middle rate)                 		|
 | 85                                                       | Purchases of goods from abroad with a zero-rate                                            |
 | Purchases of services from abroad (import)               |                                                                                            |
-| 86                                                       | Purchases of services from abroad with deductions (standard rate)                          |
-| 86                                                       | Deductions on purchases of services from abroad with deductions (standard rate)            |
-| 87                                                       | Purchases of services from abroad without deduction entitlement (standard rate)            |
-| 88                                                       | Purchases of services from abroad with deductions (low rate)                               |
-| 88                                                       | Deductions on purchases of services from abroad with deductions (low rate)                 |
-| 89                                                       | Purchases of services from abroad without deduction entitlement (low rate)                 |
+| 86                                                       | Purchases of services from abroad with deduction (standard rate)                           |
+| 86                                                       | Deductions on purchases of services from abroad (standard rate)            	 	|
+| 87                                                       | Purchases of services from abroad without deduction (standard rate)          		|
+| 88                                                       | Purchases of services from abroad with deduction (low rate)                                |
+| 88                                                       | Deductions on purchases of services from abroad (low rate)                 		|
+| 89                                                       | Purchases of services from abroad without deduction (low rate)                 		|
 | Fish etc.                                                |                                                                                            |
 | 32                                                       | Sales of fish and other marine wildlife resources                                          |
 | 12                                                       | Purchase of fish and other marine wildlife resources                                       |
 | Specification line for code 12                           | Losses on outstanding claims and cancellations                                             |
 | Emission allowances and gold                             |                                                                                            |
 | 51                                                       | Sales of emission allowances and gold to businesses/self-employed persons                  |
-| 91                                                       | Purchases of emission allowances and gold                                                   |
+| 91                                                       | Purchases of emission allowances and gold with deduction                                   |
 | 91                                                       | Deductions on purchases of emission allowances and gold                                    |
-| 92                                                       | Purchases of emission allowances and gold without deduction entitlement                    |
+| 92                                                       | Purchases of emission allowances and gold without deduction		                |
 
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/kodelister/)
 
