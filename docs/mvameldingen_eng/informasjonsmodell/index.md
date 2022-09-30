@@ -283,17 +283,17 @@ Vedleggsfil
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | Sales of goods and services in Norway                    |                                                                                            |
 | 3                                                        | Sales and withdrawals of goods and services (standard rate)                                |
-| Specification line for code 3                            | withdrawal                                                                                 |
+| Specification line for code 3                            | Withdrawal                                                                                 |
 | 31                                                       | Sales and withdrawals of goods and services (middle rate)                                  |
-| Specification line for code 31                           | withdrawal                                                                                 |
+| Specification line for code 31                           | Withdrawal                                                                                 |
 | 33                                                       | Sales and withdrawals of goods and services (low rate)                                     |
-| Specification line for code 33                           | withdrawal                                                                                 |
+| Specification line for code 33                           | Withdrawal                                                                                 |
 | 5                                                        | Sales and withdrawals of goods and services exempt from value added tax                    |
-| Specification line for code 5                            | withdrawal                                                                                 |
+| Specification line for code 5                            | Withdrawal                                                                                 |
 | 6                                                        | Sales and withdrawals of goods and services outside the scope of the Value Added Tax Act   |
 | Sales of goods and services to other countries (exports) |                                                                                            |
 | 52                                                       | Sales of goods and services exempt from value added tax to other countries                 |
-| Purchases of goods and services in Norway (Deductions)   |                                                                                            |
+| Purchases of goods and services in Norway (deduction)   |                                                                                            |
 | 1                                                        | Purchases of goods and services with deduction (standard rate)                             |
 | Specification line for code 1                            | Losses on outstanding claims and cancellations                                             |
 | Specification line for code 1                            | Adjustment of input VAT on capital goods                                                   |
@@ -307,7 +307,7 @@ Vedleggsfil
 | 81                                                       | Deductions on purchases of goods from abroad (standard rate)               		|
 | Specification line for code 81                           | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | Specification line for code 81                           | Adjustment of input VAT on capital goods                                                   |
-| 14                                                       | Deductions on purchases of goods from abroad, value added tax paid upon import (standard rate)
+| 14                                                       | Purchases of goods from abroad, value added tax paid upon import (standard rate)		|
 | 82                                                       | Purchases of goods from abroad without deduction (standard rate)              		|
 | 83                                                       | Purchases of goods from abroad with deduction (middle rate)                                |
 | 83                                                       | Deductions on purchases of goods from abroad (middle rate)                 		|
