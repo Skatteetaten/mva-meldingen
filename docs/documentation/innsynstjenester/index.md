@@ -96,7 +96,7 @@ Hvis token fra Maskinporten ikke stemmer overens med forespurt organisasjon.
 
 ## Informasjonsmodell
 
-Grafisk fremstilling av xsd for [innsynstjenesten](Informasjonsmodell_mvaInnsendingStatus.png):
+Grafisk fremstilling av xsd for [innsynstjenesten](Informasjonsmodell_mvaInnsendingStatus.PNG):
 
 ![](Informasjonsmodell_mvaInnsendingStatus.png)
 
