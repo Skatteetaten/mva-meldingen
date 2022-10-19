@@ -96,9 +96,9 @@ Hvis token fra Maskinporten ikke stemmer overens med forespurt organisasjon.
 
 ## Informasjonsmodell
 
-Grafisk fremstilling av xsd for [innsynstjenesten](Informasjonsmodell_mvaInnsendingStatus.png):
+Grafisk fremstilling av xsd for [innsynstjenesten](Informasjonsmodell mvaInnsendingStatus.png):
 
-![](Informasjonsmodell_mvaInnsendingStatus.png)
+![](Informasjonsmodell mvaMeldingInnsendingStatus.jpg)
 
 Versjon 0.9 av XSD for responsen ligger her:
 [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaen.fastsetting.avgift.mva.mvaMeldingInnsendingStatus.v1.xsd)
