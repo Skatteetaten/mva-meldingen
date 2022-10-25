@@ -82,7 +82,7 @@ Hvor `<env>` er miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 `GET https://mp-test.sits.no/api/mva/grensesnittstoette/innsyn/melding/innsending/status/v1/123456789`
 
-Heades:  
+Headers:  
 `Accept: application/xml`  
 `Authorization: Bearer <maskinportentoken>`
 
