@@ -17,7 +17,7 @@ description: "Description of the information services available through API"
 In order to authenticate with Maskinporten, some preparations must be made by the business that will make queries to the Tax Authority’s services
 
 ## Procedure for using Maskinporten
-1\. Contact Digdir to gain access to Maskinporten. This can be done via Digdirs's collaboration portal (https://samarbeid.digdir.no/maskinporten/konsument/119)
+1\. Contact Digdir to gain access to Maskinporten. This can be done via Digdirs Samarbeidsportalen (https://samarbeid.digdir.no/maskinporten/konsument/119)
 
 2\. Create a user in Samarbeidsportalen. When the agreement with Digdir has been established and access is in place in Altinn, you can log in to Samarbeidsportalen. If it is the first time you as a consumer log in to Samarbeidsportalen, you must create a user in Samarbeidsportalen.
 
@@ -54,7 +54,7 @@ Requests for information are made as HTTP GET calls to the Tax Authority's APIs 
 1. Authentication in Maskinporten.
 2. Submit calls to the Tax Authority
 
-![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/Sekvensdiagram%20innsyn%20SBS.png)
+![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/Sekvensdiagram innsyn SBS.png)
 
 ## Status for submission of VAT return
 The service provides status for the current term(s) and terms where the there are missing VAT-returns.
@@ -76,9 +76,9 @@ _Respons 401 - Unauthorized:_
 If the token from Maskinporten does not match the requested organization.
 
 ## Information model
-Graphic representation of the xsd for the [information service](Informasjonsmodell%20mvaInnsendingStatus.PNG) :
+Graphic representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingStatus.PNG) :
 
-![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/Informasjonsmodell%20mvaInnsendingStatus.PNG)
+![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/Informasjonsmodell mvaInnsendingStatus.PNG)
 
 
 Version 1.0 of the XSD for the response is located here: [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaen.fastsetting.avgift.mva.mvaMeldingInnsendingStatus.v1.xsd)
