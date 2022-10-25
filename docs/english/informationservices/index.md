@@ -31,7 +31,8 @@ NB! Digdir has its own help pages that can be used for troubleshooting when no t
 
 3\. Get access to the scope
 Access to the scope in Maskinporten is granted by the Tax Authority. The consumer can apply for access by the by sending an e-mail to mva-modernisering@skatteetaten.no with the organization number. The following scope have been created for the information services:
-- skatteetaten:mvameldinginnsendingsstatus 
+- skatteetaten:mvameldinginnsendingsstatus
+ 
 When the Norwegian Tax Authority approves the application for access to the scope, the business can create tokens from the machine port for the specified scopes.
 
 4\. Use the Tax Authority's api with a token from Maskinporten. To make calls to the api with a valid token, do the following:
