@@ -55,11 +55,11 @@ Og ved å klikke på Ny integrasjon kan man begynne å konfigurere Integrasjonen
 
 ![](BlankID-PortenIntegrasjon.png)
 
-I denne guiden vil det konfigureres en Difi-tjeneste at typen API-klient, som vist over.
+I denne guiden vil det konfigureres en Digdir-tjeneste at typen API-klient, som vist over.
 
 En gjennomgang av de forskjellige feltene i konfigurasjonen følger
 
-### Difi-tjeneste
+### Digdir-tjeneste
 
 Når man velger en verdi fra dette rullegardinet
 
