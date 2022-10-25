@@ -17,7 +17,7 @@ description: "Description of the information services available through API"
 In order to authenticate with Maskinporten, some preparations must be made by the business that will make queries to the Tax Authority’s services
 
 ## Procedure for using Maskinporten
-1\. Contact Digdir to gain access to Maskinporten. This can be done via Digdirs's collaboration portal (https://samaarbeid.digdir.no/maskinporten/konsument/119)
+1\. Contact Digdir to gain access to Maskinporten. This can be done via Digdirs's collaboration portal (https://samarbeid.digdir.no/maskinporten/konsument/119)
 
 2\. Create a user in Samarbeidsportalen. When the agreement with Digdir has been established and access is in place in Altinn, you can log in to Samarbeidsportalen. If it is the first time you as a consumer log in to Samarbeidsportalen, you must create a user in Samarbeidsportalen.
 
@@ -76,7 +76,7 @@ _Respons 401 - Unauthorized:_
 If the token from Maskinporten does not match the requested organization.
 
 ## Information model
-Graphic representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingStatus.PNG):
+Graphic representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingStatus.PNG) :
 
 ![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/InformasjonsmodellmvaInnsendingStatus.PNG)
 
