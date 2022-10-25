@@ -18,27 +18,27 @@ description: "Beskrivelser av innsynstjenester tilgjengelig som API"
 
 ## Introduksjon
 
-For å autentisere med Maskinporten må det gjøres noen forberedelser av virksomheten som skal gjøre spørringer mot Skatteetatens tjenester
+For å autentisere med Maskinporten må det gjøres noen forberedelser av virksomheten som skal gjøre spørringer mot Skatteetatens tjenester.
 
 ## Fremgangsmåte forå ta i bruk maskinporten
 
-1\. Ta kontakt med Digitaliseringsdirektoratet for å få tilgang til Maskinporten
-Dette kan gjøres via DIFIs samarbeidsportal (https://samarbeid.digdir.no/maskinporten/konsument/119)
+1\. Ta kontakt med Digitaliseringsdirektoratet for å få tilgang til Maskinporten.
+Dette kan gjøres via Digdirs samarbeidsportal (https://samarbeid.digdir.no/maskinporten/konsument/119).
 
 2\. Opprette bruker i Samarbeidsportalen
 Når avtale med Digdir er opprettet og tilgang er på plass i Altinn, kan du logge på Samarbeidsportalen. Hvis det er første gang du som konsument logger inn på Samarbeidsportalen, må du opprette en bruker i Samarbeidsportalen.
 
-- Gå til samarbeid.difi.no
+- Gå til samarbeid.digdir.no
 - Trykk på “Min profil” oppe i høyre hjørne.
 - Trykk på “Registrer deg” i påloggingsvinduet
 - Registrer bruker med din jobbadresse
 - Bekreft brukeren ved å trykke på lenken som kommer på epost. (NB! Sjekk søppelpost om ikke eposten kommer frem).
 
-NB! Digir har egne sider som kan benyttes ved feilsøking der man ikke får generert token, feks feilsøking. Hvis man fortsatt har problemer ber man at Servicedesk servicedesk@digdir.no kontaktes.
+NB! Digdir har egne sider som kan benyttes ved feilsøking der man ikke får generert token, feks feilsøking. Hvis man fortsatt har problemer skal Digdirs Servicedesk servicedesk@digdir.no kontaktes.
 
 3\. Få tilgang til rettighetspakke (scope)
 Tilgang til rettighetspakke (scope på Maskinporten) opprettes av Skatteetaten, og må søkes av konsument ved å sende en e-post til mva-modernisering@skatteetaten.no og oppgi organisasjonsnummer.
-Følgende scopes er opprettet for innsynstjenstene:
+Følgende scope er opprettet for innsynstjenstene:
 
 - skatteetaten:mvameldinginnsendingsstatus
 
@@ -47,7 +47,7 @@ Når Skatteetaten godkjenner søknaden om tilgang til tjenestene gis virksomhete
 4\. Bruke Skatteetatens api med token fra Maskinporten.
 For å gjøre kall til api med gyldig token gjøres følgende:
 
-1. Gjøre et kall til Maskinporten for å få et token som kan brukes mot Skatteetatens tjeneste. Fremgangsmåten er beskrevet på Difi sine sider for hvordan bruke maskinporten som konsument:
+1. Gjøre et kall til Maskinporten for å få et token som kan brukes mot Skatteetatens tjeneste. Fremgangsmåten er beskrevet på Digdir sine sider for hvordan bruke maskinporten som konsument:
 2. Tokenet legges i Authorization-header på alle kall til Skatteetatens tjeneste på formatet:
    ‘Authorization: Bearer <token>’
 3. Skatteetaten verifiserer tokenet mot Maskinporten som garanterer at tilbyder har tilgang til å opptre på vegne av angitt konsument på det angitte scopet.
@@ -56,7 +56,7 @@ For å gjøre kall til api med gyldig token gjøres følgende:
 # MVA Innsyn API
 
 ##Introduksjon
-API-ene for innsyn kan brukes av sluttbrukersystemer (SBS) for å innhente tilsvarende informasjon som tilbys via «Min Merverdiavgit».
+API-ene for innsyn kan brukes av sluttbrukersystemer (SBS) for å innhente tilsvarende informasjon som tilbys via «Min Merverdiavgift».
 
 ## Forespørsel om innsyn
 
@@ -101,5 +101,5 @@ Grafisk fremstilling av xsd for [innsynstjenesten](Informasjonsmodell mvaInnsend
 
 ![](Informasjonsmodell mvaInnsendingStatus.PNG)
 
-Versjon 0.9 av XSD for responsen ligger her:
+Versjon 1.0 av XSD for responsen ligger her:
 [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaen.fastsetting.avgift.mva.mvaMeldingInnsendingStatus.v1.xsd)
