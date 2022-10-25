@@ -54,7 +54,7 @@ Requests for information are made as HTTP GET calls to the Tax Authority's APIs 
 1. Authentication in Maskinporten.
 2. Submit calls to the Tax Authority
 
-![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/Sekvensdiagram innsyn SBS.png)
+![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/Sekvensdiagram%20innsyn%20SBS.png)
 
 ## Status for submission of VAT return
 The service provides status for the current term(s) and terms where the there are missing VAT-returns.
