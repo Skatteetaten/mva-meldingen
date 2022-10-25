@@ -76,7 +76,7 @@ _Respons 401 - Unauthorized:_
 If the token from Maskinporten does not match the requested organization.
 
 ## Information model
-Graphic representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingStatus.PNG) :
+Graphic representation of the xsd for the [information service](InformasjonsmodellmvaInnsendingStatus.PNG) :
 
 ![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/InformasjonsmodellmvaInnsendingStatus.PNG)
 
