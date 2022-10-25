@@ -78,7 +78,7 @@ If the token from Maskinporten does not match the requested organization.
 ## Information model
 Graphic representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingStatus.PNG):
 
-![](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/innsynstjenester/Informasjonsmodell%20mvaInnsendingStatus.PNG)
+![](InformasjonsmodellmvaInnsendingStatus.PNG)
 
 
 Version 1.0 of the XSD for the response is located here: [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaen.fastsetting.avgift.mva.mvaMeldingInnsendingStatus.v1.xsd)
