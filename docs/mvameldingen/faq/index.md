@@ -157,7 +157,7 @@ Vi har lagt ut en oversikt med speiling av koder fra gammelt til nytt og fra nyt
 
 ### Hva innebærer salgs- og kjøpsmelding og når kommer den?
 
-Salgs- og kjøpsmelding er sendt på høring og det tas sikte på at endringene trer i kraft i 2024. Det vil bli hensyntatt at virksomheter, leverandører av regnskapssystemer og Skatteetaten trenger tid til å tilpasse systemer. Forslaget gjelder å innføre en opplysningsplikt om salgs- og kjøpstransaksjoner for bokføringspliktige og offentlige virksomheter, med mulige unntak. Offentlig virksomhet er en betydelig innkjøper og foreslås omfattet av opplysningsplikten.
+Salgs- og kjøpsmelding har vært på høring og det er ikke aktuelt å sette igang arbeidet med denne meldingen på nåværende tidspunkt. Dersom det senere blir aktuelt å gjøre systemtilpassinger for slike regler vil det bli hensyntatt at virksomheter, leverandører av regnskapssystemer og Skatteetaten trenger tid til å tilpasse systemer. Forslaget som var på høring gjelder å innføre en opplysningsplikt om salgs- og kjøpstransaksjoner for bokføringspliktige og offentlige virksomheter, med mulige unntak. Offentlig virksomhet er en betydelig innkjøper og foreslås omfattet av opplysningsplikten.
 
 Opplysningsplikten gjelder den enkelte salgs- og kjøpstransaksjon med opplysninger om fakturanummer, dokumentasjonsdato, angivelse av partene i transaksjonen med navn og organisasjonsnummer, samt opplysninger om vederlag og merverdiavgift. Opplysningsplikten vil bidra til at transaksjoner kan ses i sammenheng. Dette er ikke mulig i dag. Det skal ikke rapporteres hva den enkelte transaksjon gjelder.
 
