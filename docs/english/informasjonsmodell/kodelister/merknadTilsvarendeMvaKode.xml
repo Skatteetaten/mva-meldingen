@@ -4851,6 +4851,27 @@
             <forventetFortegn>-</forventetFortegn>
         </kodetillegg>
     </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 84</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>84</mvaKode>
+            <mvaKodeBeskrivelse_no>Kjøp av varer fra utlandet uten fradragsrett (middels sats)</mvaKodeBeskrivelse_no>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
+            <merknad>anskaffelser foretatt før mva registrering</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <tema>Klimakvoter og gull</tema>
+            <fradrag>Fradrag på kjøp av klimakvoter og gull</fradrag>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+        </kodetillegg>
+    </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>
-
