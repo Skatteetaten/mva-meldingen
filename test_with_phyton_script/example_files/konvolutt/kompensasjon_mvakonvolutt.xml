@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingInnsending>
+  <norskIdentifikator>
+    <organisasjonsnummer>312972018</organisasjonsnummer>
+  </norskIdentifikator>
+  <skattleggingsperiode>
+    <periode>
+      <skattleggingsperiodeToMaaneder>september-oktober</skattleggingsperiodeToMaaneder>
+    </periode>
+    <aar>2022</aar>
+  </skattleggingsperiode>
+  <meldingskategori>merverdiavgift kompensasjon</meldingskategori>
+  <innsendingstype>komplett</innsendingstype>
+  <instansstatus>Deprecated</instansstatus>
+  <opprettetAv>DUK EMOSJONELL</opprettetAv>
+  <opprettingstidspunkt>2022-05-15T08:41:13+01:00</opprettingstidspunkt>
+  <endringstidspunkt>2022-05-15T08:41:13+01:00</endringstidspunkt>
+</mvaMeldingInnsending>

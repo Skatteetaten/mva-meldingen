@@ -12,16 +12,31 @@ description: "XSD for kompensasjonsmelding
 
 ### Endringslogg
 
-| Dato       | Hva ble endret?                         |
-| :--------- | :-------------------------------------- |
-| 2022.06.22 | Side opprettet for kompensasjonsmelding |  |
+| Dato       | Hva ble endret?                                                                |
+|:-----------|:-------------------------------------------------------------------------------|
+| 2022.06.22 | Side opprettet for kompensasjonsmelding                                        |
+| 2022.28.10 | Oppdatert kodelister relatert til kompensasjonsmelding og omvendt avgiftsplikt |
+| 2022.11.11 | Oppdatert beskrivelse for endrede kodelister                                   |
+
+## Endring i kodelister som en konsekvens av innføring av kompensasjonsmelding
+I kodelisten for merknad (merknad.xml) og SAFT-T (mvaKodeSAFT.xml) er følgende kodetillegg lagt til:
+
+    <kompensasjon>SANN</kompensasjon>
+og
+
+    <alminneligPrimær>SANN</alminneligPrimær> 
+
+Disse kodetilleggene skal benyttes til å avgjøre om den aktuelle koden gjelder alminnelig næring og/eller primærnæring eller om koden gjelder kompensasjonsmelding.
+
+Merk at når systemleverandør tar i bruk ny versjon av kodelistene så må det taes hensyn til disse to kodetilleggene. 
+Koder blir da valgt basert på om koden har kodetillegg kompensasjon=SANN eller alminneligPrimær=SANN.
 
 ## XSD for kompensasjonsmelding for merverdiavgift versjon 1.0
 
 Kompensasjonsmelding for merverdiavgift skal sendes inn i XML-format. Den må være i henhold til strukturen dokumentert i XSD for mva-melding. Det er altså samme XSD for begge meldingene.
 
 Versjon 1.0 av denne XSD'en ligger her:
-[no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
+[no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
 
 Grafisk fremstilling av xsd og kodelister for [mva-meldingen](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
 
@@ -289,25 +304,25 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
 | Klimakvoter og gull                                                         |
 | 91                                                                          | Kjøp av klimakvoter og gull med kompensasjonsrett (høy sats) 	      |
 
-En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/)
+En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/)
 
-- Kodeliste for mva-kode: [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaKodeSAFT.xml)
-- Kodeliste for mva-spesifikasjon: [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/mvaSpesifikasjon.xml)
-- Kodeliste for sats: [sats](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/sats.xml)
-- Kodeliste for merknader: [merknad](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknad.xml)
-- Kodeliste for merknader og tilsvarende mva-kode: [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/kodelister/merknadTilsvarendeMvaKode.xml)
+- Kodeliste for mva-kode: [mvaKodeSAFT](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/mvaKodeSAFT.xml)
+- Kodeliste for mva-spesifikasjon: [mvaSpesifikasjon](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/mvaSpesifikasjon.xml)
+- Kodeliste for sats: [sats](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/sats.xml)
+- Kodeliste for merknader: [merknad](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/merknad.xml)
+- Kodeliste for merknader og tilsvarende mva-kode: [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/merknadTilsvarendeMvaKode.xml)
 
 # XSD for innsending
 
 Innsendingen til Altinn må inneholde en XML-fil med innsendingsinformasjon. Denne må være i henhold til strukturen i XSD for innsending.
 
-[no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd)
+[no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd)
 
 # XSD for valideringsrespons og tilbakemelding
 
 XSD for validering dokumenterer strukturen for responsen fra valideringstjenesten. Tilbakemelding vil også være i henhold til denne XSD-en.
-[no.skatteetaten.fastsetting.avgift.mva.valideringsresultat.v1.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.valideringsresultat.v1.xsd)
+[no.skatteetaten.fastsetting.avgift.mva.valideringsresultat.v1.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.valideringsresultat.v1.xsd)
 
 # XSD for betalingsinformasjon
 
-[no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.betalingsinformasjon.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.betalingsinformasjon.v1.0.xsd)
+[no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.betalingsinformasjon.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.betalingsinformasjon.v1.0.xsd)

@@ -9,10 +9,11 @@ description: "Informasjon om testing og produksjon"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                                              |
-| :--------- | :------------------------------------------------------------------------------------------- |
+| :--------- |:---------------------------------------------------------------------------------------------|
 | 2022.03.09 | La til miljøinformasjon for [produksjon](#produksjonsmilj%C3%B8) og [test](#testmilj%C3%B8). |
 | 2022.03.31 | Rettet en skrivefeil på Altinn instans API for testmiljøet                                   |
 | 2022.05.11 | La til ny informasjon om testbrukere fra Tenor                                               |
+| 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Phyton script og dokumentasjon på egen side |
 
 ## Krav til testgjennomføring
 
@@ -41,17 +42,9 @@ Prosjektet vil tilby egne møter med fokus på testplanlegging og gjennomføring
 Systemleverandørene skal etter avsluttet testperiode og i forkant av produksjon oppsummere testen. Oppsummeringen skal vise hva som er testet, samt status etter gjennomført test inkludert oversikt over feil og mangler. Systemleverandørene skal på skatteetatens forespørsel fremlegge dokumentasjon på hvordan integrasjon er
 testet.
 
-## Testapplikasjon
-
-Det er skrevet en testapplikasjon som kan brukes i forbindelse med test av løsningen mot Skatteetaten. Den er skrevet i [jupyter notebook formatet](https://jupyter.org/):
-
-1. [Jupyter notebook demo for henting og validering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/demo.ipynb). Last ned katalogen 'test' og kjør skriptet demo.ipynb (skriptet vil utføre alle trinn som inngår i prosessen: kalle ping tjeneste å sjekke kobling og validere mva-melding)
-
-2. [Jupyter notebook demo for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/innsending-eksempel.ipynb). Kjør skriptet innsending.ipynb. Den vil kjøre alle stegene i prosessen.
-
-3. [Pyton skript å hent token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py) og [postman skript å validere melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/MeldingValidering.postman_collection.json). Første logge inn hos [ID-Porten](https://skatteetaten.github.io/mva-meldingen/documentation/idportenautentisering/), og da lagre token i format "Bearer <em>hentet-token</em>" som miljø variabel med navn "test-bearer" i postman, og bruk postman skript å validere melding.
-
-4. [Eksempel XML-er](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/melding)
+# Test av applikasjon ved hjelp av Phyton script
+Det er laget et Phyton script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
+[Test av applikasjon ved hjelp av Phyton script](https://skatteetaten.github.io/mva-meldingen/test_with_phyton_script/).
 
 ## Testmiljø
 

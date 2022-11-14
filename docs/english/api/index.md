@@ -102,7 +102,7 @@ e.g.`mp-test.sits.no`
 
 **Body** :
 
-- According to XSD:<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a>
+- According to XSD:<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a>
 
 **Example** : Submitting XML in invalid format
 
@@ -110,7 +110,7 @@ POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/val
 
 Header: `Content-Type: application/xml`
 
-With content (http body) that does not pass <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a> validation:
+With content (http body) that does not pass <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a> validation:
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
@@ -259,7 +259,7 @@ Since this object already exists when uploading VAT return submission,
 PUT is used to update the data element.
 
 The model for VAT return submission can be found here:
-<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a>
+<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a>
 
 Url to MvaMeldingInnsending has this structure:
 

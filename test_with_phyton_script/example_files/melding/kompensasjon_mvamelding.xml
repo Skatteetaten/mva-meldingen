@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
+  <innsending>
+    <regnskapssystemsreferanse>regnskapssystem_referanse</regnskapssystemsreferanse>
+    <regnskapssystem>
+      <systemnavn>python-script</systemnavn>
+      <systemversjon>0.0.1</systemversjon>
+    </regnskapssystem>
+  </innsending>
+  <skattegrunnlagOgBeregnetSkatt>
+    <skattleggingsperiode>
+      <periode>
+        <skattleggingsperiodeToMaaneder>september-oktober</skattleggingsperiodeToMaaneder>
+      </periode>
+      <aar>2022</aar>
+    </skattleggingsperiode>
+    <fastsattMerverdiavgift>-29000</fastsattMerverdiavgift>
+    <mvaSpesifikasjonslinje>
+      <mvaKode>1</mvaKode>
+      <mvaKodeRegnskapsystem>Inngående MVA, høy sats</mvaKodeRegnskapsystem>
+      <grunnlag>-100000</grunnlag>
+      <sats>25</sats>
+      <merverdiavgift>-25000</merverdiavgift>
+    </mvaSpesifikasjonslinje>
+    <mvaSpesifikasjonslinje>
+      <mvaKode>13</mvaKode>
+      <mvaKodeRegnskapsystem>Inngående MVA, lav sats</mvaKodeRegnskapsystem>
+      <grunnlag>-12500</grunnlag>
+      <sats>12</sats>
+      <merverdiavgift>-1500</merverdiavgift>
+    </mvaSpesifikasjonslinje>
+    <mvaSpesifikasjonslinje>
+      <mvaKode>14</mvaKode>
+      <mvaKodeRegnskapsystem>Innførsel MVA, høy sats</mvaKodeRegnskapsystem>
+      <grunnlag>-10000</grunnlag>
+      <sats>25</sats>
+      <merverdiavgift>-2500</merverdiavgift>
+      <merknad>
+        <beskrivelse>What do you call a fish wearing a bowtie? Sofishticated</beskrivelse>
+      </merknad>
+    </mvaSpesifikasjonslinje>
+  </skattegrunnlagOgBeregnetSkatt>
+  <betalingsinformasjon>
+    <kundeIdentifikasjonsnummer>34000009324568708</kundeIdentifikasjonsnummer>
+  </betalingsinformasjon>
+  <skattepliktig>
+    <organisasjonsnummer>313758109</organisasjonsnummer>
+  </skattepliktig>
+  <meldingskategori>merverdiavgift kompensasjon</meldingskategori>
+  <merknad>
+    <beskrivelse>BFU</beskrivelse>
+  </merknad>
+</mvaMeldingDto>
