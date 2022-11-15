@@ -21,7 +21,7 @@ skal_godkjenne_innsending = True
 skal_hente_tilbakemelding = False
 
 # Laster opp miljø fil for å definere skd-miljø. F.eks. for SIT1
-skal_laste_opp_miljø_fil = True
+skal_laste_opp_miljø_fil = False
 
 # Laster opp et pdf vedlegg i innsendingen.
 skal_laste_opp_vedlegg = False
@@ -38,8 +38,7 @@ mvaMelding_filnavn = "kompensasjon_mvamelding.xml"
 
 # Legg inn org_nummer du ønsker å sende inn for.
 # Merk at personen som skal sende inn må ha nødvendig roller/rettigheter i altinn for å få lov til å sende inn.
-org_nummer = "312972018"
-# fnr 03908198661
+org_nummer = "999999999"
 
 print("----- INSTILLINGER -----")
 print(f"Altinn Applikasjon Miljø: {altinn_app_miljø}")

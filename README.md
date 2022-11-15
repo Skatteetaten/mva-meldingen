@@ -1,10 +1,10 @@
 # Mva-meldingen
 
-This is the github project for the documentation "System submission of VAT-report". 
-Please visit the documentation at http://skatteetaten.github.io/mva-meldingen/
-
 If you visit this github prosject in order to manual test a submission of VAT-report with the Phyton script. 
 Please visit http://skatteetaten.github.io/mva-meldingen/test_with_phyton_script/
+
+This is the github project for the documentation "System submission of VAT-report".
+Please visit the documentation at http://skatteetaten.github.io/mva-meldingen/
 
 ## How to update the "System submission of VAT-report" documentation
 This documentation is generated using the Gatsby framework (https://www.gatsbyjs.com/)
