@@ -112,7 +112,7 @@
 <p>Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Innsending. Detaljert beskrivelse av Altinn3&#x27;s Instans-API finnes her
 <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Altinn Studio Instans API</a>. Inngående kjennskap til dette API&#x27;et er ikke nødvendig da denne dokumentasjonen dekker behovet for Mva Melding Innsending.</p>
 <p>Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.</p>
-<p>I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/" target="_blank">Test</a></p>
+<p>I tillegg finnes det et Python script som kan benyttes til manuell testing under <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/" target="_blank">Test</a></p>
 <p>Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:</p>
 <ol>
 <li>
@@ -160,12 +160,12 @@ vil bli godkjent ved innsending.</p>
 <p>Hvor <code class="language-text">&lt;env&gt;</code> er Miljøspesifikk adresse f.eks. <code class="language-text">mp-test.sits.no</code></p>
 <p><strong>Body</strong> :</p>
 <ul>
-<li>Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a></li>
+<li>Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a></li>
 </ul>
 <p><strong>Eksempel</strong> : Innsending av XML på ugyldig format</p>
 <p>POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a></p>
 <p>Header: <code class="language-text">Content-Type: application/xml</code></p>
-<p>Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a>:</p>
+<p>Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a>:</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvaMeldingDto</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 
@@ -255,7 +255,7 @@ Dette vil da også gjelde hvis innlogget bruker ikke har tilstrekkelig roller fo
 <p>Denne feilmeldingen kan en få hvis en setter organisasjonsnummeret i request headeren til noe ugyldig.</p>
 <h2 id="last-opp-mvameldinginnsending" style="position:relative"><a href="#last-opp-mvameldinginnsending" aria-label="last opp mvameldinginnsending permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Last Opp MvaMeldingInnsending</h2>
 <p>MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets <code class="language-text">data</code>-liste og har <code class="language-text">&quot;dataType&quot;: &quot;no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1&quot;</code>. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.</p>
-<p>Modellen for MvaMeldingInnsending finnes her: <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a></p>
+<p>Modellen for MvaMeldingInnsending finnes her: <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a></p>
 <p>Url til MvaMeldingInnsending har denne oppbygningen:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mvaMeldingInnsendingUrl = {instansApiUrl}/{partyId}/{instanceGuid}/data/{dataGuid}</code></pre></div>
 <p>hvor <code class="language-text">{dataGuid}</code> er id til data-objektet til instansen.</p>
@@ -290,7 +290,7 @@ HEADERS:
 <p><em>Respons 403 - Forbidden:</em> <br/>
 Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har ikke riktig roller vil en få response kode 403 tilbake.</p>
 <h2 id="last-opp-mvamelding" style="position:relative"><a href="#last-opp-mvamelding" aria-label="last opp mvamelding permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Last Opp MvaMelding</h2>
-<p>Modellen for <a href="/mva-meldingen/942b9cc1ed888d8f299e9346c24587df/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
+<p>Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
 <p>Url for opplasting av Mva Melding har denne oppbygningen:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{instansUrl}/data?datatype=mvamelding</code></pre></div>
 <p>Mva Melding lastes opp på med følgende request mot instansens data-api:</p>
@@ -390,7 +390,7 @@ vil det returneres feilmelding 409 og valideringsresultatet i xml som content.</
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span></code></pre></div>
 <p>Liste over valideringsfeil for henholdsvis <a href="/mva-meldingen/mvameldingen/forretningsregler/">mva-meldingen</a> og <a href="/mva-meldingen/kompensasjon/forretningsregler/">kompensasjonsmeldingen</a>.</p>
 <p><strong>Validering av MvaMeldingInnsending opp mot xsd modellen</strong>
-<a href="/mva-meldingen/942b9cc1ed888d8f299e9346c24587df/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
+<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
 <p>Eksempel:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Valideringsfeil / Validation error:
 The &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:skattleggingsperiodeToMaaneder&#x27; element is invalid - The value &#x27;juli-september&#x27; is invalid according to its datatype &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:SkattleggingsperiodeToMaaneder&#x27; - The Enumeration constraint failed.

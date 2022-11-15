@@ -108,7 +108,7 @@
 Altinn3 App Instance API. The Instance API is a generic Altinn Api and its detailed description can be found here <a href="https://docs.altinn.studio/teknologi/altinnstudio/altinn-api/app-api/instances/" target="_blank">Instance API</a>. In-depth knowledge of this API is not required as this documentation
 covers the needed sequence for submitting VAT returns.</p>
 <p>It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.</p>
-<p>In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/" target="_blank">Test</a></p>
+<p>In addition, there are a Python script examples of VAT return filing here: <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/" target="_blank">Test</a></p>
 <p>The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram, and it is as follows:</p>
 <ol>
 <li>
@@ -163,12 +163,12 @@ the VAT return will be approved upon submission.</p>
 e.g.<code class="language-text">mp-test.sits.no</code></p>
 <p><strong>Body</strong> :</p>
 <ul>
-<li>According to XSD:<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a></li>
+<li>According to XSD:<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a></li>
 </ul>
 <p><strong>Example</strong> : Submitting XML in invalid format</p>
 <p>POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a></p>
 <p>Header: <code class="language-text">Content-Type: application/xml</code></p>
-<p>With content (http body) that does not pass <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/english/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a> validation:</p>
+<p>With content (http body) that does not pass <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a> validation:</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvaMeldingDto</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 
@@ -278,7 +278,7 @@ be found in the instance object&#x27;s <code class="language-text">data</code> l
 Since this object already exists when uploading VAT return submission,
 PUT is used to update the data element.</p>
 <p>The model for VAT return submission can be found here:
-<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a></p>
+<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a></p>
 <p>Url to MvaMeldingInnsending has this structure:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">vatReturnSubmissionUrl = {instanceApiUrl}/{partyId}/{instanceGuid}/data/{dataGuid}</code></pre></div>
 <p>where <code class="language-text">{dataGuid}</code> is the ID of the data object of the
@@ -321,7 +321,7 @@ response in the previous step.</p>
 If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.</p>
 <h2 id="upload-vat-return" style="position:relative"><a href="#upload-vat-return" aria-label="upload vat return permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upload VAT return</h2>
 <p>The model is found here:
-<a href="/mva-meldingen/8b1b88433741fb3a8e1bd7474281ccef/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
+<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
 <p>The URL for uploading the VAT return has this structure:</p>
 <h3 id="error-messages-2" style="position:relative"><a href="#error-messages-2" aria-label="error messages 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Messages</h3>
 <p><em>Response 403 - Forbidden:</em> <br/>
@@ -426,7 +426,7 @@ it will return a 409 error message, and the validation result in xml as content.
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span></code></pre></div>
 <p>You can find an explanation for all the validation rules for respectively <a href="/mva-meldingen/mvameldingen_eng/forretningsregler/">VAT report</a> and <a href="/mva-meldingen/kompensasjon_eng/forretningsregler/">Compensation report VAT</a>.</p>
 <p><strong>Validation of MvaMeldingInnsending against the xsd model</strong>
-<a href="/mva-meldingen/8b1b88433741fb3a8e1bd7474281ccef/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
+<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
 <p>Example:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Valideringsfeil / Validation error:
 The &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:skattleggingsperiodeToMaaneder&#x27; element is invalid - The value &#x27;juli-september&#x27; is invalid according to its datatype &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:SkattleggingsperiodeToMaaneder&#x27; - The Enumeration constraint failed.
