@@ -41,9 +41,9 @@ The project team will offer meetings with a focus on test planning and carrying 
 
 The system providers will, after the end of the test period and in advance of production, summarise their tests. The summary will show what has been tested, along with the status of the carried out tests, including a summary of bugs and inadequacies. The providers will, at Skatteetatens request, provide documentation on how the integration has been tested.
 
-# Test application - Python script
+## Test application - Python script
 A Python script has been written in order to test the appliaction manually. For more information, please visit:
-[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_Python_script/).
+[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script/).
 
 ## Test environment
 

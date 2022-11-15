@@ -37,7 +37,7 @@ covers the needed sequence for submitting VAT returns.
 
 It is recommended to use the <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger documentation</a> along with this API description.
 
-In addition, there are running examples of VAT return filing that use Jupyter Notebook and Python here: <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/" target="_blank">Test</a>
+In addition, there are a Python script examples of VAT return filing here: <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/" target="_blank">Test</a>
 
 The submission process is performed with a sequence of calls to the Instance API and is described in detail below the sequence diagram, and it is as follows:
 

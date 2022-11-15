@@ -67,7 +67,7 @@ testet.
 
 # Test av applikasjon ved hjelp av Python script
 Det er laget et Python script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
-[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_Python_script/).
+[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script/).
 
 ## Testmiljø
 

@@ -9,14 +9,12 @@ Please visit the documentation at http://skatteetaten.github.io/mva-meldingen/
 This documentation is generated using the Gatsby framework (https://www.gatsbyjs.com/)
 
 ### Initial setup
-
 Getting the gatsby-starter-skatteetaten module (TODO: Add more docs)
 
     git submodule init
     git submodule update
 
 ### How to build
-
 The project is built using npm from the current Node LTS. Install with [nvm](https://github.com/creationix/nvm);
 
     nvm install --lts
@@ -31,6 +29,11 @@ to install the dependencies.
 
 will start a local web server and continuously build the documentation as you make changes.
 
+### Deploy
+    npm run build 
+    npm run deploy
+
+### Q&A
 If you get the following error,
 
     ERROR #11329

@@ -13,8 +13,10 @@ description: "Informasjon om testing og produksjon"
 # Test av applikasjon ved hjelp av Phyton script
 
 Det er skrevet et Phyton script som kan brukes i forbindelse med test av løsningen mot Skatteetaten.
-[Phyton script for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/test_with_phyton_script/mva_melding_innnsending.py).
-Last ned katalogen 'test_with_phyton_script'
+[Phyton script for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py).
+Klon hele repositoriet eller last ned katalogen under:
+
+    /test_with_phyton_script_files
 
 Før du kjører scriptet må du installere Phyton og noen biblioteker.
 
