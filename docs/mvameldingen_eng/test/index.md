@@ -9,10 +9,11 @@ description: "Test and production information"
 ## Changelog
 
 | Date       | Changes                                                                                                     |
-| :--------- | :---------------------------------------------------------------------------------------------------------- |
+| :--------- |:------------------------------------------------------------------------------------------------------------|
 | 2022.03.09 | Updated documentation with [Production](#production-environment) and [Test](#test-environment) environments |
 | 2022.03.31 | Corrected typo for Altinn Instance API url in test environment                                              |
 | 2022.05.11 | Added information about testusers from Tenor test data search                                               |
+| 2022.15.11 | Removed Jupyter notebook demo, added reference to Python script                                             |
 
 ## Testing requirements
 
@@ -40,17 +41,9 @@ The project team will offer meetings with a focus on test planning and carrying 
 
 The system providers will, after the end of the test period and in advance of production, summarise their tests. The summary will show what has been tested, along with the status of the carried out tests, including a summary of bugs and inadequacies. The providers will, at Skatteetatens request, provide documentation on how the integration has been tested.
 
-## Test applications
-
-Some test applications has been written in jupyter notebook, for use when testing the solution from the Tax adminisatration:
-
-1. [Jupyter notebook demo for fetching and validation](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/demo.ipynb). Downlaod the catalog 'test' and run the script demo.ipynb (The script will carry out all steps in the process: call ping service to check connection and validate VAT-return).
-
-2. [Jupyter notebook demo for fetching, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/file-vat-return.ipynb). run the script file-vat-return.ipynb. It will run all the steps in the process.
-
-3. [Pyton script to fetch token](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py) and [postman script to validate return](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/MeldingValidering.postman_collection.json). First log in to [ID-Porten](https://skatteetaten.github.io/mva-meldingen/english/idportenauthentication/), and save the token in the format "Bearer <em>hentet-token</em>" as the environment variablewith the name "test-bearer" in postman, and use the postman script to validate the return.
-
-4. [Example XML's](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/melding)
+## Test application - Python script
+A Python script has been written in order to test the appliaction manually. For more information, please visit:
+[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script/).
 
 ## Test environment
 

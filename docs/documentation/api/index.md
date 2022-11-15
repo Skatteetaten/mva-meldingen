@@ -39,7 +39,7 @@ Innsending av Mva Melding gjøres mot Skatteetatens Altinn3 Instans API for Inns
 
 Det anbefales å benytte <a href="https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/swagger/index.html" target="_blank">swagger dokumentasjonen</a> sammen med denne API-beskrivelsen.
 
-I tillegg finnes det kjørende eksempel på innsending som bruker Jupyter Notebook og python under <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/" target="_blank">Test</a>
+I tillegg finnes det et Python script som kan benyttes til manuell testing under <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen/test/" target="_blank">Test</a>
 
 Prosessen gjennomføres med en sekvens av kall mot Instans-API´et og beskrives i detalj under sekvensdiagrammet og er som følger:
 
@@ -97,7 +97,7 @@ Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 **Body** :
 
-- Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a>
+- Iht. XSD: <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a>
 
 **Eksempel** : Innsending av XML på ugyldig format
 
@@ -105,7 +105,7 @@ POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/val
 
 Header: `Content-Type: application/xml`
 
-Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a>:
+Med innhold (http body)som ikke passerer XML-validering basert på <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a>:
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
@@ -235,7 +235,7 @@ Denne feilmeldingen kan en få hvis en setter organisasjonsnummeret i request he
 
 MvaMeldingInnsending er en datatype for metadata for innsendingen. Objektet man skal fylle ut blir skapt under instansieringen og vil kunne finnes i instans-objektets `data`-liste og har `"dataType": "no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v0.1"`. Siden dette objektet allerede finnes når man skal laste opp MvaMeldingInnsending, benyttes PUT for å oppdatere data-elementet.
 
-Modellen for MvaMeldingInnsending finnes her: <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/documentation/informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a>
+Modellen for MvaMeldingInnsending finnes her: <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd</a>
 
 Url til MvaMeldingInnsending har denne oppbygningen:
 
