@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
+	<innsending>
+		<regnskapssystemsreferanse>51</regnskapssystemsreferanse>
+		<regnskapssystem>
+			<systemnavn>zzx</systemnavn>
+			<systemversjon>4.34.3</systemversjon>
+		</regnskapssystem>
+	</innsending>
+	<skattegrunnlagOgBeregnetSkatt>
+		<skattleggingsperiode>
+			<periode>
+				<skattleggingsperiodeToMaaneder>mars-april</skattleggingsperiodeToMaaneder>
+			</periode>
+			<aar>2021</aar>
+		</skattleggingsperiode>
+		<fastsattMerverdiavgift>0</fastsattMerverdiavgift>
+		<mvaSpesifikasjonslinje>
+			<mvaKode>51</mvaKode>
+			<mvaKodeRegnskapsystem>omsetning omvendt avgiftsplikt</mvaKodeRegnskapsystem>
+			<grunnlag>20000</grunnlag>
+			<sats>0</sats>
+			<merverdiavgift>0</merverdiavgift>
+		</mvaSpesifikasjonslinje>
+	</skattegrunnlagOgBeregnetSkatt>
+	<betalingsinformasjon>
+		<kundeIdentifikasjonsnummer>34000009324568708</kundeIdentifikasjonsnummer>
+	</betalingsinformasjon>
+	<skattepliktig>
+		<organisasjonsnummer>913238254</organisasjonsnummer>
+	</skattepliktig>
+	<meldingskategori>alminnelig</meldingskategori>
+	<merknad>
+		<beskrivelse>eksempel mvakode51</beskrivelse>
+	</merknad>
+</mvaMeldingDto>
