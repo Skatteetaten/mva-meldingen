@@ -1,7 +1,6 @@
 # Mva-meldingen
-
-If you visit this github prosject in order to manual test a submission of VAT-report with the Phyton script. 
-Please visit http://skatteetaten.github.io/mva-meldingen/test_with_phyton_script/
+If you are visiting this github project in order to manually test a submission of the VAT-report with the Python script,
+please visit http://skatteetaten.github.io/mva-meldingen/test_with_python_script/
 
 This is the github project for the documentation "System submission of VAT-report".
 Please visit the documentation at http://skatteetaten.github.io/mva-meldingen/

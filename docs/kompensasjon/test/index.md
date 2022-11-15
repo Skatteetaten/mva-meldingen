@@ -11,7 +11,7 @@ description: "Informasjon om testing og produksjon"
 | Dato       | Hva ble endret?                                                      |
 |:-----------|:---------------------------------------------------------------------|
 | 2022.06.11 | Opprettet side for test kompensasjonsmelding                         |
-| 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Phyton script       |
+| 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Python script       |
 | 2022.15.11 | Informasjon angående test av kompensasjonsmelding etter 15. november |
 
 ## Krav til testgjennomføring
@@ -65,9 +65,9 @@ Roller i Altinn for kompensasjonsmelding:
 Systemleverandørene skal etter avsluttet testperiode og i forkant av produksjon oppsummere testen. Oppsummeringen skal vise hva som er testet, samt status etter gjennomført test inkludert oversikt over feil og mangler. Systemleverandørene skal på skatteetatens forespørsel fremlegge dokumentasjon på hvordan integrasjon er
 testet.
 
-# Test av applikasjon ved hjelp av Phyton script
-Det er laget et Phyton script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
-[Test av applikasjon ved hjelp av Phyton script](https://skatteetaten.github.io/mva-meldingen/test_with_phyton_script/).
+# Test av applikasjon ved hjelp av Python script
+Det er laget et Python script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
+[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_Python_script/).
 
 ## Testmiljø
 

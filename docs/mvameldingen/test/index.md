@@ -13,7 +13,7 @@ description: "Informasjon om testing og produksjon"
 | 2022.03.09 | La til miljøinformasjon for [produksjon](#produksjonsmilj%C3%B8) og [test](#testmilj%C3%B8). |
 | 2022.03.31 | Rettet en skrivefeil på Altinn instans API for testmiljøet                                   |
 | 2022.05.11 | La til ny informasjon om testbrukere fra Tenor                                               |
-| 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Phyton script og dokumentasjon på egen side |
+| 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Python script og dokumentasjon på egen side |
 
 ## Krav til testgjennomføring
 
@@ -42,9 +42,9 @@ Prosjektet vil tilby egne møter med fokus på testplanlegging og gjennomføring
 Systemleverandørene skal etter avsluttet testperiode og i forkant av produksjon oppsummere testen. Oppsummeringen skal vise hva som er testet, samt status etter gjennomført test inkludert oversikt over feil og mangler. Systemleverandørene skal på skatteetatens forespørsel fremlegge dokumentasjon på hvordan integrasjon er
 testet.
 
-# Test av applikasjon ved hjelp av Phyton script
-Det er laget et Phyton script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
-[Test av applikasjon ved hjelp av Phyton script](https://skatteetaten.github.io/mva-meldingen/test_with_phyton_script/).
+# Test av applikasjon ved hjelp av Python script
+Det er laget et Python script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
+[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_Python_script/).
 
 ## Testmiljø
 

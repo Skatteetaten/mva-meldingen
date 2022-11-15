@@ -1,7 +1,7 @@
 import requests
 import urllib3
 from Steg.hent_idporten_token import get_idtoken
-from test_with_phyton_script.config import altinn3_app
+from test_with_python_script.config import altinn3_app
 
 # Turn off certificate verification in test.
 urllib3.disable_warnings()

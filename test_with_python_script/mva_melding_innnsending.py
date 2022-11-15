@@ -2,7 +2,7 @@
 from Steg import hent_idporten_token, hent_altinn_token
 from Steg import instans, instans_dataelement
 from Steg import hent_eksempel_filer
-from test_with_phyton_script import config
+from test_with_python_script import config
 from Steg.validering import valider_mva_melding
 
 

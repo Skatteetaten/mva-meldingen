@@ -11,7 +11,7 @@ description: "Test and production information"
 | Date       | Changes                                                           |
 | :--------- |:------------------------------------------------------------------|
 | 2022.06.30 | New page for tax return for VAT compensation                      |
-| 2022.15.11 | Removed Jupyter notebook demo, added reference to Phyton script   |
+| 2022.15.11 | Removed Jupyter notebook demo, added reference to Python script   |
 
 ## Testing requirements
 
@@ -39,9 +39,9 @@ The project team will offer meetings with a focus on test planning and carrying 
 
 The system providers will, after the end of the test period and in advance of production, summarise their tests. The summary will show what has been tested, along with the status of the carried out tests, including a summary of bugs and inadequacies. The providers will, at Skatteetatens request, provide documentation on how the integration has been tested.
 
-# Test application - Phyton script
-A Phyton script has been written in order to test the appliaction manually. For more information, please visit:
-[Test av applikasjon ved hjelp av Phyton script](https://skatteetaten.github.io/mva-meldingen/test_with_phyton_script/).
+# Test application - Python script
+A Python script has been written in order to test the appliaction manually. For more information, please visit:
+[Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script/).
 
 ## Test environment
 
