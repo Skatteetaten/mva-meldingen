@@ -44,6 +44,9 @@ Etter at kompensasjonsmeldingen er sendt inn fra regnskapssystemet vil virksomhe
 I varselet er det en lenke til "Min Merverdiavgift". Velg denne lenken og logg på med en bruker som har rollen for å attestere kompensasjonsmeldingen.
 
 ## Testplanlegging - Roller
+For å legge til rettigheter for attestering, vennligst se
+[Brukerveiledning - Gi rettighet til attestering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/Bruksveiledning_rettighet_til_attestering_i_komp.pdf).
+
 Roller i Altinn for kompensasjonsmelding:
 
 * Du kan fylle ut og sende inn kompensasjonsmeldingen med en av disse rollene (Godkjenne):
