@@ -12,6 +12,7 @@ description: "Test and production information"
 | :--------- |:------------------------------------------------------------------|
 | 2022.06.30 | New page for tax return for VAT compensation                      |
 | 2022.15.11 | Removed Jupyter notebook demo, added reference to Python script   |
+| 2022.16.11 | Added information about testing the VAT-report for VAT compensation | 
 
 ## Testing requirements
 
@@ -33,7 +34,33 @@ Skatteetaten's test environment will be available as long as it is needed, after
 
 ## Test planning
 
-The project team will offer meetings with a focus on test planning and carrying out the tests. Here the agendae will cover, amongst other things, carrying out the tests, which scenarios should be tested and the test data.
+From november 15th you can test:
+
+* Validation of a VAT-report in the "merverdiavgift kompensasjon" category, a VAT-report for VAT compensation. 
+* Submit a VAT-report for VAT compensation directly from the ERP accounting system. 
+* Make a auditors attestation of the VAT-report for VAT compensation in the portal "Min Merverdiavgift"
+
+After the VAT-report for VAT compensation is submitted from the ERP accounting system the submitting business will get a notification in Altinn (https://tt02.altinn.no/ in test). The notification will contain a link to the portal "Min Merverdiavgift". Click on the link and log in with a user that has the correct role to carry out an auditors attestation of the VAT-report for VAT compensation.
+
+## Test planning - Roles
+To add the right to carry out an auditors attestation of the VAT-report for VAT compensation, please use this guide: 
+[Brukerveiledning - Gi rettighet til attestering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/Bruksveiledning_rettighet_til_attestering_i_komp.pdf).
+
+Altinn roles for the VAT-report for VAT compensation: 
+* You can fill out and submit the the VAT-report for VAT compensation with these roles:
+  - Limited signing rights/Begrenset signeringsrettighet 
+  - Accountant with signing rights/Regnskapsfører med signeringsrettighet. 
+
+* You can fill out the VAT-report for VAT compensation:
+  - Auditor in charge/Ansvarlig revisor
+  - Accounting employee/Regnskapsmedarbeider
+  - Accountant without signing rights/Regnskapsfører uten signeringsrettighet 
+  - Assistant auditor/Revisormedarbeider
+
+* You can carry out an auditors attestation of the VAT-report for VAT compensation in the portal "Min Merverdiavgift" with these roles
+  - Auditor in charge/Ansvarlig revisor
+  - Auditor Attestor - VAT compensation/Revisorattesterer - MVA Kompensasjon.
+
 
 ## Summary of tests and moving into production
 
