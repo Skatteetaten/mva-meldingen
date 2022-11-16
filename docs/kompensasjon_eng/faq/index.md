@@ -27,9 +27,10 @@ For the tax return for VAT compensation, it will be possible to file and submit 
 ### Who can fill out the tax return for VAT compensation, and who can submit?
 
 To fill out and submit tax return for VAT compensation, the same Altinn-roles as today are needed:
-Fill out: Auditor in charge/Ansvarlig revisor, Accounting employee/Regnskapsmedarbeider, Accountant without signing rights/Regnskapsfører uten signeringsrettighet or Assistant auditor/Revisormedarbeider.
+Fill out:
+Responsible auditor/Ansvarlig revisor, Accounting employee/Regnskapsmedarbeider, Accountant without signing rights/Regnskapsfører uten signeringsrettighet or Assistant auditor/Revisormedarbeider.
 Submit: Limited signing rights/Begrenset signeringsrettighet or Accountant with signing rights/Regnskapsfører med signeringsrettighet.
-Attestation: Auditor in charge/Ansvarlig revisor or Auditor Attestor - VAT compensation/Revisorattesterer - MVA Kompensasjon.
+Attestation: Responsible auditor/Ansvarlig revisor or Auditor certifies validity of VAT compensation/Revisorattesterer - MVA Kompensasjon.
 
 ### How will the new tax return for VAT compensation be submitted?
 
