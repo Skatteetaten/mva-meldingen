@@ -52,14 +52,14 @@ Altinn roles for the VAT-report for VAT compensation:
   - Accountant with signing rights/Regnskapsfører med signeringsrettighet. 
 
 * You can fill out the VAT-report for VAT compensation:
-  - Auditor in charge/Ansvarlig revisor
+  - Responsible auditor/Ansvarlig revisor
   - Accounting employee/Regnskapsmedarbeider
   - Accountant without signing rights/Regnskapsfører uten signeringsrettighet 
   - Assistant auditor/Revisormedarbeider
 
 * You can carry out an auditors attestation of the VAT-report for VAT compensation in the portal "Min Merverdiavgift" with these roles
-  - Auditor in charge/Ansvarlig revisor
-  - Auditor Attestor - VAT compensation/Revisorattesterer - MVA Kompensasjon.
+  - Responsible auditor/Ansvarlig revisor
+  - Auditor certifies validity of VAT compensation/Revisorattesterer - MVA Kompensasjon.
 
 
 ## Summary of tests and moving into production
