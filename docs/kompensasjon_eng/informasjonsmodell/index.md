@@ -16,6 +16,19 @@ description: "XSD for tax return for VAT compensation (kompensasjonsmelding for 
 | :--------- |:----------------------------------------------------------------------------------|
 | 2022.06.30 | Initial version of documentation for compensation report for VAT                  |
 | 2022.28.10 | Code lists updated related to introduction of compensation and reverse liability. |
+| 2022.16.11 | Updated description for changes in code lists					 |
+
+## Change in the code list for as a consequence of the VAT-report for VAT compensation
+In the  code list for remarks (merknad.xml) and SAFT-T (mvaKodeSAFT.xml) the following has been added:
+
+    <kompensasjon>SANN</kompensasjon>
+and
+    <alminneligPrimær>SANN</alminneligPrimær> 
+
+These additions shal be used to decide if the code pertains to ordinary/primary business or compensation. 
+
+Notice that when the ERP suppliers start using the new version of the code list they will have to adapt to these code list additions. 
+Codes will then be chosen based on whether or not the code has the code addition (kodetillegg) kompensasjon=SANN or alminneligPrimær=SANN.
 
 ## Version 1.0 of the XSD for the tax return for VAT compensation
 
