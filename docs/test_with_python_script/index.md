@@ -13,10 +13,10 @@ description: "Informasjon om testing og produksjon"
 # Test av applikasjon ved hjelp av Python script
 
 Det er skrevet et Python script som kan brukes i forbindelse med test av løsningen mot Skatteetaten.
-[Python script for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py).
+[Python script for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/test_with_phyton_script/mva_melding_innnsending.py).
 Klon hele repositoriet eller last ned katalogen under:
 
-    /test_with_python_script_files
+    docs/test_with_python_script
 
 Før du kjører scriptet må du installere Python og noen biblioteker.
 

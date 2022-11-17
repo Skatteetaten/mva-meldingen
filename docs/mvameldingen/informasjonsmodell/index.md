@@ -45,7 +45,8 @@ Eksempler på ny mva-melding i excel:
 
 [Testtilfeller mva-melding](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Testtilfeller%20mva-melding.xlsx?raw=true)
 
-Tilsvarende eksempler på mva-meldinger i XML-format finnes under [test](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/eksempler/melding/)
+Tilsvarende eksempler på mva-meldinger i XML-format finnes under 
+[test](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/test_with_python_script/example_files/melding/)
 
 ## Feltbeskrivelse for mva-melding
 

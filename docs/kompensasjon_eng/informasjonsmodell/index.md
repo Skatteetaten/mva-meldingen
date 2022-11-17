@@ -35,12 +35,12 @@ Codes will then be chosen based on whether or not the code has the code addition
 The tax return for VAT compensation must be submitted in XML-format. It must be in accordance with the structure outlined for the VAT-return. The same XSD applies for both returns.
 Version 1.0 of this XSD is found here [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
 
+Example files for tax return for VAT compensation in XML format can be downloaded from the
+[test section](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/test_with_python_script/example_files/melding/)
+
 Graphical representation of the XSD and encoding for the [tax return for VAT compensation](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
 
 ![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftKompensasjon.jpg)
-
-
-Example files for tax return for VAT compensation in XML format can be downloaded from the [test section](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/eksempler/melding/)
 
 ## Description of the fields in the tax return for VAT compensation
 
