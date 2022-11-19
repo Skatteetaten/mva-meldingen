@@ -58,13 +58,13 @@ les mer her: <a href="https://docs.python.org/3/library/venv.html" target="_blan
 2. Du må søke opp en testbruker med en tilhørende virksomhet som beskrevet i [Bruksveiledning for Tenor Testdatasøk](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Bruksveiledning_Tenor.pdf).
 3. Noter deg fødselsnummer til testbruker og organisasjonsnummer til den virksomheten denne testbrukeren kan sende inn for
 4. Gjør endringer i følgende filer
-   1. organisasjonsnummer i filen mva_melding_innnsending.py (Se under kommentaren "# Legg inn org_nummer du ønsker å sende inn for"), er nå hardkodet til 999999999
+   1. organisasjonsnummer i filen `mva_melding_innnsending.py` (Se under kommentaren "# Legg inn org_nummer du ønsker å sende inn for"), er nå hardkodet til 999999999
    2. organisasjonsnummer i konvolutt filen du ønsker å sende inn (example_files/konvolutt)
    3. organisasjonsnummer i mva-melding filen du ønsker å sende inn (example_files/melding)
    4. eventuelt andre testdata som feks skattleggingsperiode, meldingskategori etc
-   5. Oppdater filnavnene i filen mva_melding_innnsending.py til de filene du ønsker å benytte: 
-      1. mvaMeldingInnsending_filnavn = "kompensasjon_mvakonvolutt.xml"
-      2. mvaMelding_filnavn = "kompensasjon_mvamelding.xml"
+   5. Oppdater filnavnene i filen mva_melding_innnsending.py` til de filene du ønsker å benytte: 
+      1. `mvaMeldingInnsending_filnavn` = "kompensasjon_mvakonvolutt.xml"
+      2. `mvaMelding_filnavn` = "`kompensasjon_mvamelding.xml`"
    6. NB! Husk å sørg for at konvolutt og mva-melding stemmer overens i forhold til testdataene
 5. Kjør Python scriptet
 6. Etter at scriptet er startet så åpnes en nettleser. Trykk på "TestID" og benytt det fødselsnummer du noterte deg i steg 3)
