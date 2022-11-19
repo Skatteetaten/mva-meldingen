@@ -64,7 +64,7 @@ les mer her: <a href="https://docs.python.org/3/library/venv.html" target="_blan
    4. eventuelt andre testdata som feks skattleggingsperiode, meldingskategori etc
    5. Oppdater filnavnene i filen mva_melding_innnsending.py` til de filene du ønsker å benytte: 
       1. `mvaMeldingInnsending_filnavn` = "kompensasjon_mvakonvolutt.xml"
-      2. `mvaMelding_filnavn` = "`kompensasjon_mvamelding.xml`"
+      2. `mvaMelding_filnavn` = "kompensasjon_mvamelding.xml"
    6. NB! Husk å sørg for at konvolutt og mva-melding stemmer overens i forhold til testdataene
 5. Kjør Python scriptet
 6. Etter at scriptet er startet så åpnes en nettleser. Trykk på "TestID" og benytt det fødselsnummer du noterte deg i steg 3)
