@@ -62,7 +62,7 @@ les mer her: <a href="https://docs.python.org/3/library/venv.html" target="_blan
    2. organisasjonsnummer i konvolutt filen du ønsker å sende inn (example_files/konvolutt)
    3. organisasjonsnummer i mva-melding filen du ønsker å sende inn (example_files/melding)
    4. eventuelt andre testdata som feks skattleggingsperiode, meldingskategori etc
-   5. Oppdater filnavnene i filen mva_melding_innnsending.py` til de filene du ønsker å benytte: 
+   5. Oppdater filnavnene i filen `mva_melding_innnsending.py` til de filene du ønsker å benytte: 
       1. `mvaMeldingInnsending_filnavn` = "kompensasjon_mvakonvolutt.xml"
       2. `mvaMelding_filnavn` = "kompensasjon_mvamelding.xml"
    6. NB! Husk å sørg for at konvolutt og mva-melding stemmer overens i forhold til testdataene
