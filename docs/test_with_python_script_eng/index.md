@@ -4,13 +4,13 @@ title: "Test & Production"
 description: "Information regarding testing and production"
 ---
 
-##Change log
+## Change log
 
 | Date       | What changed?                                       |
 | :--------- |:----------------------------------------------------|
 | 2022.22.11 | Created page about how to run a python script       |
 
-#Test of application using Python script
+# Test of application using Python script
 
 There is a Python script that can be used for testing the solution against the Tax Authority. 
 [Python script for retrieval, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py).
@@ -20,7 +20,7 @@ Clone the entire repository or download the directory below:
 
 Before running the script you need to install Python and some libraries.
 
-##Check if python and pip are installed (Minimum python3 version 3.6.X)
+## Check if python and pip are installed (Minimum python3 version 3.6.X)
   
     python3 --version
 
