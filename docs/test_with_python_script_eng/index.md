@@ -65,8 +65,8 @@ You can also use a venv instead of installing globally, read more here: https://
   * Organization number in the VAT report file you wish to submit (example_files/melding)
   * Other test data such as taxation period (Skatteleggingsperiode), report category (meldingskategori) etc
   * Update the file names in the file `mva_melding_innnsending.py` for the files you wish to use:
-    a.	`mvaMeldingInnsending_filnavn = "kompensasjon_mvakonvolutt.xml`
-    b.	`mvaMelding_filnavn` = "kompensasjon_mvamelding.xml`
+    1.	`mvaMeldingInnsending_filnavn = "kompensasjon_mvakonvolutt.xml`
+    2.	`mvaMelding_filnavn` = "kompensasjon_mvamelding.xml`
 6. Note! Remember to make sure that the envelope and VAT report match the test data
 5. Run the Python script
 6. After the script has started, a browser is opened. Press "TestID" and use the national ID number you noted in step 3.	
