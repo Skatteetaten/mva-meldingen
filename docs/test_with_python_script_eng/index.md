@@ -46,7 +46,8 @@ https://docs.brew.sh/Homebrew-and-Python
 
 ## Install python libraries
 Open the terminal in the project folder and navigate to the 
-    /test_with_python_script folder.<br>
+    
+    `/test_with_python_script` folder.<br>
 Then install all necessary libraries.<br>
 You can also use a venv instead of installing globally, read more here: https://docs.python.org/3/library/venv.html
 
@@ -59,13 +60,13 @@ You can also use a venv instead of installing globally, read more here: https://
 2. Find a test user with an associated business as described in the User Guide for Tenor Test Data Search.
 3. Note national identity number of the test user and the organization number of the business for which this test user can submit
 4. Make changes to the following files
-  6.  Organization number in the file `mva_melding_innnsending.py` (See under the comment "# Enter the org_number you want to submit for"). This is currently hardcoded to 999999999
-  7.  Organization number in the envelope file you wish to submit (example_files/envelope)
-  8.  Organization number in the VAT report file you wish to submit (example_files/melding)
-  9. Other test data such as taxation period (Skatteleggingsperiode), report category (meldingskategori) etc
-  10. Update the file names in the file `mva_melding_innnsending.py` for the files you wish to use:
-    a.	`mvaMeldingInnsending_filnavn` = "kompensasjon_mvakonvolutt.xml"
-    b.	`mvaMelding_filnavn` = "kompensasjon_mvamelding.xml"
+  * Organization number in the file `mva_melding_innnsending.py` (See under the comment "# Enter the org_number you want to submit for"). This is currently hardcoded to 999999999
+  * Organization number in the envelope file you wish to submit (example_files/envelope)
+  * Organization number in the VAT report file you wish to submit (example_files/melding)
+  * Other test data such as taxation period (Skatteleggingsperiode), report category (meldingskategori) etc
+  * Update the file names in the file `mva_melding_innnsending.py` for the files you wish to use:
+    a.	`mvaMeldingInnsending_filnavn = "kompensasjon_mvakonvolutt.xml`
+    b.	`mvaMelding_filnavn` = "kompensasjon_mvamelding.xml`
 6. Note! Remember to make sure that the envelope and VAT report match the test data
 5. Run the Python script
 6. After the script has started, a browser is opened. Press "TestID" and use the national ID number you noted in step 3.	
