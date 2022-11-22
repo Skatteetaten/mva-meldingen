@@ -44,7 +44,7 @@ After the VAT-report for VAT compensation is submitted from the ERP accounting s
 
 ## Test planning - Roles
 To add the right to carry out an auditors attestation of the VAT-report for VAT compensation, please use this guide: 
-[Brukerveiledning - Gi rettighet til attestering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/Bruksveiledning_rettighet_til_attestering_i_komp.pdf).
+[User Guide - give attestation rights](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon_eng/test/User%20Guide%20-%20give%20attestation%20rights.pdf).
 
 Altinn roles for the VAT-report for VAT compensation: 
 * You can fill out and submit the the VAT-report for VAT compensation with these roles:
