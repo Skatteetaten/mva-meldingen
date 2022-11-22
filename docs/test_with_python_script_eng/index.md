@@ -47,7 +47,7 @@ https://docs.brew.sh/Homebrew-and-Python
 ## Install python libraries
 Open the terminal in the project folder and navigate to the 
     
-    `/test_with_python_script` folder.<br>
+    `/test_with_python_script` folder.
 Then install all necessary libraries.<br>
 You can also use a venv instead of installing globally, read more here: https://docs.python.org/3/library/venv.html
 
