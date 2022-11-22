@@ -13,7 +13,7 @@ description: "Information regarding testing and production"
 # Test of application using Python script
 
 There is a Python script that can be used for testing the solution against the Tax Authority. 
-[Python script for retrieval, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py).
+[Python script for retrieval, validation and submission](https://github.com/Skatteetaten/mva-meldingen/tree/master/test_with_python_script_files).
 Clone the entire repository or download the directory below:
 
     /test_with_Python_script_files
