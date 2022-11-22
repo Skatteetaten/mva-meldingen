@@ -1,5 +1,5 @@
 def hent(mva_melding_filnavn, konvolutt_filnavn, skal_printes_ut=False):
-    with open("./example_files/melding/" + mva_melding_filnavn, "r") as file:
+    with open("./files/melding/" + mva_melding_filnavn, "r") as file:
         mva_melding_xml = file.read()
 
         if skal_printes_ut:
@@ -9,7 +9,7 @@ def hent(mva_melding_filnavn, konvolutt_filnavn, skal_printes_ut=False):
 
     file.close()
 
-    with open("./example_files/konvolutt/" + konvolutt_filnavn, "r") as file:
+    with open("./files/konvolutt/" + konvolutt_filnavn, "r") as file:
         konvolutt_xml = file.read()
 
         if skal_printes_ut:

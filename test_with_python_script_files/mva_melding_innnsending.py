@@ -32,7 +32,7 @@ skatteetaten_miljø = config.skatteetaten_miljø.ETM2.value  # Endre hvilket mil
 altinn3_app = config.altinn3_app.ETM2.value  # Endre hvilken altinn3-applikasjon python skriptet skal gå mot
 
 # Fil navn på MvaMeldingInnsending  ("konvolutt") mvamelding som ønskes å lastes opp.
-# Må ligge i ./example_files/konvolutt/ og ./example_files/melding/
+# Må ligge i ./files/konvolutt/ og ./files/melding/
 mvaMeldingInnsending_filnavn = "kompensasjon_mvakonvolutt.xml"
 mvaMelding_filnavn = "kompensasjon_mvamelding.xml"
 

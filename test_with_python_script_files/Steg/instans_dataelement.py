@@ -19,7 +19,7 @@ def hent_dataelement(altinn_app_miljø, altinn3_app, instans_id, data_element_id
 
 def last_opp_vedlegg(altinn_app_miljø, altinn3_app, instans_id, altinn_token, content_type, filnavn, vedlegg):
     url = f"{altinn_app_miljø}/{altinn3_app}/instances/{instans_id}/data?dataType=binaerVedlegg"
-    with open(f"./example_files/vedlegg/{vedlegg}", 'rb') as file:
+    with open(f"./files/vedlegg/{vedlegg}", 'rb') as file:
         payload = file.read()
     file.close()
     header = {'Authorization': f'Bearer {altinn_token}', 'content-type': f'{content_type}',
