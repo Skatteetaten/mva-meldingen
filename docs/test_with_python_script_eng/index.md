@@ -13,7 +13,7 @@ description: "Information regarding testing and production"
 # Test of application using Python script
 
 There is a Python script that can be used for testing the solution against the Tax Authority. 
-[Python script for retrieval, validation and submission](https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py).
+[Python script for retrieval, validation and submission](https://github.com/Skatteetaten/mva-meldingen/tree/master/test_with_python_script_files).
 Clone the entire repository or download the directory below:
 
     /test_with_Python_script_files
@@ -60,11 +60,11 @@ You can also use a venv instead of installing globally, read more here: https://
 2. Find a test user with an associated business as described in the User [Guide for Tenor Test Data Search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen_eng/test/User_Guide_Tenor_testdata.pdf).
 3. Note national identity number of the test user and the organization number of the business for which this test user can submit
 4. Make changes to the following files:
-  * Organization number in the file `mva_melding_innnsending.py` (See under the comment "# Enter the org_number you want to submit for"). This is currently hardcoded to 999999999
+  * Organization number in the file `mva_melding_innsending.py` (See under the comment "# Enter the org_number you want to submit for"). This is currently hardcoded to 999999999
   * Organization number in the envelope file you wish to submit (example_files/envelope)
   * Organization number in the VAT report file you wish to submit (example_files/melding)
   * Other test data such as taxation period (Skatteleggingsperiode), report category (meldingskategori) etc
-  * Update the file names in the file `mva_melding_innnsending.py` for the files you wish to use:
+  * Update the file names in the file `mva_melding_innsending.py` for the files you wish to use:
     1.	`mvaMeldingInnsending_filnavn = "kompensasjon_mvakonvolutt.xml`
     2.	`mvaMelding_filnavn = "kompensasjon_mvamelding.xml`
 6. Note! Remember to make sure that the envelope and VAT report match the test data

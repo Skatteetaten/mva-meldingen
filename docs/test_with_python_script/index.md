@@ -13,7 +13,8 @@ description: "Informasjon om testing og produksjon"
 # Test av applikasjon ved hjelp av Python script
 
 Det er skrevet et Python script som kan brukes i forbindelse med test av løsningen mot Skatteetaten.
-[Python script for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py).
+[Python script for henting, validering og innsending](https://github.com/Skatteetaten/mva-meldingen/tree/master/test_with_python_script_files).
+
 Klon hele repositoriet eller last ned katalogen under:
 
     /test_with_python_script_files
@@ -59,11 +60,11 @@ les mer her: https://docs.python.org/3/library/venv.html
 2. Du må søke opp en testbruker med en tilhørende virksomhet som beskrevet i [Bruksveiledning for Tenor Testdatasøk](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Bruksveiledning_Tenor.pdf).
 3. Noter deg fødselsnummer til testbruker og organisasjonsnummer til den virksomheten denne testbrukeren kan sende inn for
 4. Gjør endringer i følgende filer:
-   1. organisasjonsnummer i filen `mva_melding_innnsending.py` (Se under kommentaren "# Legg inn org_nummer du ønsker å sende inn for"), er nå hardkodet til 999999999
+   1. organisasjonsnummer i filen `mva_melding_innsending.py` (Se under kommentaren "# Legg inn org_nummer du ønsker å sende inn for"), er nå hardkodet til 999999999
    2. organisasjonsnummer i konvolutt filen du ønsker å sende inn (example_files/konvolutt)
    3. organisasjonsnummer i mva-melding filen du ønsker å sende inn (example_files/melding)
    4. eventuelt andre testdata som feks skattleggingsperiode, meldingskategori etc
-   5. Oppdater filnavnene i filen `mva_melding_innnsending.py` til de filene du ønsker å benytte: 
+   5. Oppdater filnavnene i filen `mva_melding_innsending.py` til de filene du ønsker å benytte: 
       1. `mvaMeldingInnsending_filnavn` = "kompensasjon_mvakonvolutt.xml"
       2. `mvaMelding_filnavn` = "kompensasjon_mvamelding.xml"
    6. NB! Husk å sørg for at konvolutt og mva-melding stemmer overens i forhold til testdataene
