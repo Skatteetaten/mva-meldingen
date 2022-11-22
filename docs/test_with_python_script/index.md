@@ -54,8 +54,9 @@ les mer her: https://docs.python.org/3/library/venv.html
     pip3 install -r requirements.txt
 
 ## Kjøre Python scriptet
+    
 1. Last ned katalogen `test_with_python_script` under https://github.com/Skatteetaten/mva-meldingen/tree/master/docs
-2. Du må søke opp en testbruker med en tilhørende virksomhet som beskrevet i [Bruksveiledning for Tenor Testdatasøk](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Bruksveiledning_Tenor.pdf) .
+2. Du må søke opp en testbruker med en tilhørende virksomhet som beskrevet i Bruksveiledning for Tenor Testdatasøk.
 3. Noter deg fødselsnummer til testbruker og organisasjonsnummer til den virksomheten denne testbrukeren kan sende inn for
 4. Gjør endringer i følgende filer:
    1. organisasjonsnummer i filen `mva_melding_innnsending.py` (Se under kommentaren "# Legg inn org_nummer du ønsker å sende inn for"), er nå hardkodet til 999999999
