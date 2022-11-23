@@ -93,7 +93,7 @@ vil bli godkjent ved innsending.
 
 **URL** : `POST https://<env>/api/mva/grensesnittstoette/mva-melding/valider`
 
-Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
+Hvor `<env>` er Miljøspesifikk adresse f.eks. `idporten-api-sbstest.sits.no`
 
 **Body** :
 
