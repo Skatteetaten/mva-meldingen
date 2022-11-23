@@ -44,7 +44,7 @@ Example files for tax return for VAT compensation in XML format can be downloade
 
 ## Description of the fields in the tax return for VAT compensation
 
-### Tax return for VAT compensation
+### Kompensasjonsmelding for merverdiavgift (Tax return for VAT compensation)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -58,7 +58,7 @@ Example files for tax return for VAT compensation in XML format can be downloade
   </tr>
 </table>
 
-### Skattepliktig
+### Skattepliktig (Taxable organization)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -68,7 +68,7 @@ Example files for tax return for VAT compensation in XML format can be downloade
   </tr>	
 </table>
 
-### Innsending
+### Innsending (Submission)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -82,7 +82,7 @@ Purpose: To be able to follow up systematic errors with the system supplier inst
   </tr>
 </table>
 
-### Payment information
+### Betalingsinformasjon (Payment information)
 
 KID is only applicable if the business is to get VAT back from the Tax Authority.
 
@@ -92,7 +92,7 @@ KID is only applicable if the business is to get VAT back from the Tax Authority
 Purpose: To be able to pay to the bank accounts that require KID 
 </table>
 
-### Tax basis and calculated tax
+### Skattegrunnlag og beregnet skatt (Tax basis and calculated tax)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -109,8 +109,7 @@ Purpose: to ensure that the correct amount is being paid
   </tr>
 </table>
 
-### MvaSpesifikasjonslinje
-
+### MvaSpesifikasjonslinje (VAT-specification line)
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>mvaKode</td><td>Classification of incoming and outgoing VAT in accordance with the Norwegian SAF-T standard <br>
@@ -147,7 +146,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 
 ## Description of the fields in the tax return for VAT compensation submission
 
-### MvaMeldingInnsending
+### MvaMeldingInnsending (VAT return submission)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -184,7 +183,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 </table>
 
 <br>
-Identifier (Either organisasjonsnummer or foedselsnummer)
+### Identifikator (Identifier, Either organisasjonsnummer or foedselsnummer)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -203,7 +202,7 @@ Identifier (Either organisasjonsnummer or foedselsnummer)
 </table>
 
 <br>
-Skattleggingsperiode
+### Skattleggingsperiode (taxation period)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -225,7 +224,7 @@ VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subp
 </table>
 
 <br>
-Attachments
+### Vedlegg (Attachment)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -256,7 +255,7 @@ Attachments
 </table>
 
 <br>
-Attachment file
+### Vedleggsfil (Attachment file)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -277,7 +276,7 @@ Attachment file
   </tr>
 </table>
 
-## Encoding
+## Encoding (code List)
 
 | Group and code                                                     | Description of code and specification                                 		 |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
