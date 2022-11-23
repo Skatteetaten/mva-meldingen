@@ -160,13 +160,13 @@ has the correct format, content and increases the probability that
 the VAT return will be approved upon submission.</p>
 <p><strong>URL</strong> : <code class="language-text">POST https://&lt;env&gt;/api/mva/grensesnittstoette/mva-melding/valider</code></p>
 <p>Where <code class="language-text">&lt;env&gt;</code>is an environment-specific address
-e.g.<code class="language-text">mp-test.sits.no</code></p>
+e.g.<code class="language-text">idporten-api-sbstest.sits.no</code></p>
 <p><strong>Body</strong> :</p>
 <ul>
 <li>According to XSD:<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">Skattemeldingformerverdiavgift.v1.0</a></li>
 </ul>
 <p><strong>Example</strong> : Submitting XML in invalid format</p>
-<p>POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a></p>
+<p>POST <a href="https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider">https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider</a></p>
 <p>Header: <code class="language-text">Content-Type: application/xml</code></p>
 <p>With content (http body) that does not pass <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">XSD</a> validation:</p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;</span>
@@ -315,7 +315,7 @@ response in the previous step.</p>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mvameldinginnsending</span><span class="token punctuation">&gt;</span></span>
         ...
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mvameldinginnsending</span><span class="token punctuation">&gt;</span></span></code></pre></div>
-<p>Example of xml file for VAT return submission can be found under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/konvolutt" target="_blank">Test</a>.</p>
+<p>Example of xml file for VAT return submission can be found under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/konvolutt">https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/konvolutt</a>.</p>
 <h3 id="error-messages-1" style="position:relative"><a href="#error-messages-1" aria-label="error messages 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Messages</h3>
 <p><em>Response 403 - Forbidden:</em> <br/>
 If the logged-in user attempt to upload a file to the instance, but the person does not have the correct roles, you will get the response code 403 in return.</p>
@@ -426,7 +426,7 @@ it will return a 409 error message, and the validation result in xml as content.
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>valideringsresultat</span><span class="token punctuation">&gt;</span></span></code></pre></div>
 <p>You can find an explanation for all the validation rules for respectively <a href="/mva-meldingen/mvameldingen_eng/forretningsregler/">VAT report</a> and <a href="/mva-meldingen/kompensasjon_eng/forretningsregler/">Compensation report VAT</a>.</p>
 <p><strong>Validation of MvaMeldingInnsending against the xsd model</strong>
-<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
+<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a></p>
 <p>Example:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Valideringsfeil / Validation error:
 The &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:skattleggingsperiodeToMaaneder&#x27; element is invalid - The value &#x27;juli-september&#x27; is invalid according to its datatype &#x27;no:skatteetaten:fastsetting:avgift:mva:mvameldinginnsending:v1.0:SkattleggingsperiodeToMaaneder&#x27; - The Enumeration constraint failed.
@@ -487,7 +487,7 @@ This error message will occur if the logged-in user attempt to retrieve the inst
 <h3 id="feedback-files" style="position:relative"><a href="#feedback-files" aria-label="feedback files permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Feedback files</h3>
 <p>Once the Tax Administration has given feedback, the files for the feedback can be downloaded from the instance.</p>
 <p>Payment information will be available when the submission is completed, it is being produced when <a href="#complete-vat-return-submission">completing the vat return submission</a>.</p>
-<p>Example of feedback files given for a submission on the 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.</p>
+<p>Example of feedback files given for a submission on the 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/feedback/exampleSuccessfulFeedback17062021" target="_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.</p>
 <p>The files that can be downloaded will have <code class="language-text">dataType</code>:</p>
 <ul>
 <li>betalingsinformasjon</li>
