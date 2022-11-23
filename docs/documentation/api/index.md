@@ -271,7 +271,7 @@ Content:
 </mvaMeldingInnsending>
 ```
 
-Eksempel på xml-fil for mvaMeldingInnsending finnes under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/konvolutt" target="_blank">Test</a>.
+Eksempel på xml-fil for mvaMeldingInnsending finnes under https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/konvolutt.
 
 ### Feilmeldinger
 
