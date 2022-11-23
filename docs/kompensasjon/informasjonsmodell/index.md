@@ -43,7 +43,8 @@ Grafisk fremstilling av xsd og kodelister for [mva-meldingen](SkattemeldingForMe
 ![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftKompensasjon.jpg)
 
 
-Eksempler på kompensasjonsmelding for merverdiavgift i XML-format finnes under [test](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/eksempler/melding/)
+Eksempler på kompensasjonsmelding for merverdiavgift i XML-format finnes under [her](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
+
 
 ## Feltbeskrivelse for kompensasjonsmelding for merverdiavgift
 
