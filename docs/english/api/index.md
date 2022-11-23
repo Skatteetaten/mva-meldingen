@@ -311,8 +311,8 @@ If the logged-in user attempt to upload a file to the instance, but the person d
 
 ## Upload VAT return
 
-The model is found here:
-<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
+The model is found here:https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd
+
 
 The URL for uploading the VAT return has this structure:
 
