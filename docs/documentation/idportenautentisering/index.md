@@ -97,7 +97,7 @@ Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modern
 
 Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
 
-Eksempelkoden <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">'hent_idporten_token.py'</a> er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
+Eksempelkoden <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">`hent_idporten_token.py`</a> er oppdatert til å reflektere endringene som behøves i ID-Porten-integrasjonen når scopene er lagt til i integrasjonen i selvbetjeningsportalen.
 
 ### Kundens org.nr.
 
@@ -121,21 +121,21 @@ Her kan det velges:
 
 - refresh_token
 
-I tilfeller hvor det ikke er helt sikkert at tokens eller hemmeligheter er beskyttet fra røvere, anbefales ikke bruken. Refresh-tokens kan derfor ikke brukes i for eksempel en SPA, hvor nettleseren ikke helt sikkert kan beskytte hemmeligheter eller tokens over lang tid. Det anbefales derfor å ikke bruke 'refresh_tokens' i JS/SPA-applikasjoner eller i frittstående applikasjoner som installeres på sluttbrukerens personlige datamaskin. ID-porten har derfor begrensninger på refresh_token-bruk utenfor web-applikasjoner, hvor tokens og hemmeligheter kan beskyttes på tjeneren.
+I tilfeller hvor det ikke er helt sikkert at tokens eller hemmeligheter er beskyttet fra røvere, anbefales ikke bruken. Refresh-tokens kan derfor ikke brukes i for eksempel en SPA, hvor nettleseren ikke helt sikkert kan beskytte hemmeligheter eller tokens over lang tid. Det anbefales derfor å ikke bruke `refresh_tokens` i JS/SPA-applikasjoner eller i frittstående applikasjoner som installeres på sluttbrukerens personlige datamaskin. ID-porten har derfor begrensninger på `refresh_token` bruk utenfor web-applikasjoner, hvor tokens og hemmeligheter kan beskyttes på tjeneren.
 
-Et refresh_token kan ha veldig lang levetid og brukes til å utstede nye access_tokens.
+Et `refresh_token` kan ha veldig lang levetid og brukes til å utstede nye `access_tokens`.
 
 ### Klientautentiseringsmetode
 
 Bestemmer hvilken autentiseringsmetode integrasjonen bruker for å autentisere seg (ikke slutt-brukeren).
 
-Velg none dersom det ikke brukes refresh_token.
+Velg none dersom det ikke brukes `refresh_token`.
 
 ### Applikasjonstype
 
-Det er i dette valget at omtalte refresh_token vil kunne bli tilgjengelig dersom web velges.
+Det er i dette valget at omtalte `refresh_token` vil kunne bli tilgjengelig dersom web velges.
 
-Applikasjonstypen bestemmer om applikasjonen til integrasjonen er å anse som public eller private, som igjen bestemmer om man kan bruke refresh_tokens.
+Applikasjonstypen bestemmer om applikasjonen til integrasjonen er å anse som public eller private, som igjen bestemmer om man kan bruke `refresh_tokens`.
 
 public:
 
@@ -146,7 +146,7 @@ private:
 
 - web
 
-Men dette betyr ikke at en web-applikasjon må være privat. Man kan trygt bruke browser for web-applikasjoner som ikke bruker refresh-tokens.
+Men dette betyr ikke at en web-applikasjon må være privat. Man kan trygt bruke browser for web-applikasjoner som ikke bruker `refresh_tokens`.
 
 ### Gyldig(e) redirect uri-er
 
@@ -154,7 +154,7 @@ Når autentiseringsprosessen starter skal brukeren føres fra applikasjonen til 
 
 Dette oppnås ved å inkludere `redirect_uri` i parameterene som brukes for å åpne nettleservinduet hos ID-Porten. `redirect_uri` som sendes som parameter **MÅ** være tilstede i listen over Gyldig(e) redirect uri-er i Integrasjonen.
 
-Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen til redirect_uri.
+Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen til `redirect_uri`.
 
 #### Svært mange redirect_uri
 
@@ -232,4 +232,4 @@ Vi benytter følgende testmiljø hos ID-porten:
 - /authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - /token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For detaljer rundt hvilken HTTP parametere som må sendes med i kallene, se filen <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">'hent_idporten_token.py'</a>
+For detaljer rundt hvilken HTTP parametere som må sendes med i kallene, se filen <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">`hent_idporten_token.py`</a>
