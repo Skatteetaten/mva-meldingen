@@ -101,7 +101,7 @@ Hvor `<env>` er Miljøspesifikk adresse f.eks. `mp-test.sits.no`
 
 **Eksempel** : Innsending av XML på ugyldig format
 
-POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a>
+POST https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider
 
 Header: `Content-Type: application/xml`
 
@@ -280,7 +280,7 @@ Hvis innlogget bruker prøver å laste opp fil til instansen, men personen har i
 
 ## Last Opp MvaMelding
 
-Modellen for <a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
+Modellen for <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
 
 Url for opplasting av Mva Melding har denne oppbygningen:
 
@@ -457,7 +457,7 @@ Eksempel verdi:
 Liste over valideringsfeil for henholdsvis [mva-meldingen](/mvameldingen/forretningsregler/) og [kompensasjonsmeldingen](/kompensasjon/forretningsregler/).
 
 **Validering av MvaMeldingInnsending opp mot xsd modellen**
-<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
+<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
 
 Eksempel:
 
@@ -560,7 +560,7 @@ Når Skatteetaten har gitt tilbakemelding, vil filene til tilbakemeldingen kunne
 
 Betalingsinformasjonen vil kunne lastes etter [innsendingen er fullført](#fullf%C3%B8r-mvameldinginnsending), da den blir produsert under fullføringen.
 
-Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
+Eksempler på tilbakemeldingsfiler som er gitt for en innsending den 17.06.2021 <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/feedback/exampleSuccessfulFeedback17062021" target="_blank">finnes her</a>. Disse filene ble lastet ned fra instansen for innsendingen.
 
 Filene som kan lastes ned vil ha `dataType`:
 
