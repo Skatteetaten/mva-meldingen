@@ -86,7 +86,7 @@ Purpose: To be able to follow up systematic errors with the system supplier inst
 
 ### Betalingsinformasjon (Payment information)
 
-KID should only be submitted if there is a credit amount.
+KID is only applicable if the business is to get VAT back from the Tax Authority.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
