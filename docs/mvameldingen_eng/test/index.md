@@ -43,7 +43,7 @@ The system providers will, after the end of the test period and in advance of pr
 
 ## Test application - Python script
 A Python script has been written in order to test the appliaction manually. For more information, please visit:
-[Test application with Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script/).
+[Test application with Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script_eng/).
 
 ## Test environment
 
