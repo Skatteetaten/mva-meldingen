@@ -40,7 +40,7 @@ Graphical representation of the XSD and encoding for the [tax return for VAT com
 ![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftKompensasjon.jpg)
 
 
-Example files for tax return for VAT compensation in XML format can be downloaded from the [test section](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/eksempler/melding/)
+Example files for tax return for VAT compensation in XML format can be downloaded [here](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
 
 ## Description of the fields in the tax return for VAT compensation
 
