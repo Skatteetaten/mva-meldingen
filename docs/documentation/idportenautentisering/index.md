@@ -160,8 +160,7 @@ Applikasjonen er avhengig av å ha et endepunkt som kan håndtere redirigeringen
 
 Dersom sluttbrukersystemet sin portefølje har veldig mange installasjoner som ikke deler domene kan de heller ikke dele `redirect_uri`. Installasjonene kan være både on-premise eller i skyen. Siden det er et krav at hvert domene må ha sin egen `redirect_uri` kan det bli utfordrende å administrere disse i selvbetjeningsportalen.
 
-Digitaliseringsetaten har nylig publisert informasjon som kan være nyttig i dette tilfellet:
-<a href="https://docs.digdir.no/docs/idporten/oidc/oidc_api_admin" target="_blank"> https://docs.digdir.no/docs/idporten/oidc/oidc_api_admin</a>
+Digitaliseringsetaten har nylig publisert informasjon som kan være nyttig i dette tilfellet: https://docs.digdir.no/docs/idporten/oidc/oidc_api_admin
 Systemleverandøren vil være eieren av integrasjonen(e) knyttet til automatiske dynamiske løsninger.
 
 #### Alternativ løsning
@@ -224,9 +223,9 @@ under forutsetning av at applikasjonen kan åpne en URL i en nettleser hvor logi
 
 Sluttbrukersystemet må gjøre følgende:
 
-- Starte system browser og gjøre autorisasjonskall mot ID-porten. Les mer om det her: <a href="https://docs.digdir.no/oidc_protocol_authorize.html" target="_blank">https://docs.digdir.no/oidc_protocol_authorize.html</a>, Brukeren blir da sendt til ID-porten for innlogging.
+- Starte system browser og gjøre autorisasjonskall mot ID-porten. Les mer om det her: https://docs.digdir.no/oidc_protocol_authorize.html, Brukeren blir da sendt til ID-porten for innlogging.
 - Sette opp en webserver som kan motta en requests til en av uri'ene Integrasjonens [gyldige redirect uri-er](#gyldige-redirect-uri-er). Etter vellykket pålogging i ID-porten vil browseren redirigeres til denne webserveren. I tilfelle applikasjonen er en SPA, må det settes opp en rute for en av disse uri-ene i stedet for en webserver.
-- Gjøre et tokenforespørsel. Les mer om det her: <a href="https://docs.digdir.no/oidc_protocol_token.html" target="_blank">https://docs.digdir.no/oidc_protocol_token.html</a>
+- Gjøre et tokenforespørsel. Les mer om det her: https://docs.digdir.no/oidc_protocol_token.html
 
 Vi benytter følgende testmiljø hos ID-porten:
 
