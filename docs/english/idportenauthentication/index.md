@@ -97,7 +97,7 @@ The scopes must be ordered by your organization by sending an e-mail to [mva-mod
 
 The tax authorities will provide access to the scopes and they can then be added to the integration. The scopes must also be added to the code that integrates with ID-Porten so that the scopes are included in the access token from ID-Porten.
 
-The sample code <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">'hent_idporten_token.py'</a> has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
+The sample code <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">`hent_idporten_token.py`</a> has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
 
 ### Kundens org.nr. (Customer org number)
 
@@ -121,21 +121,21 @@ You can choose:
 
 - refresh_token
 
-in cases where it is entirely certain that tokens or secrets are protected from robbers. In cases where protection is not certain it is not recommended to use them, thus refresh tokens can for example not be used in an SPA, where the browser is not trusted to protect secrets or tokens. It is therefore recommended not to use refresh_tokens in JS / SPA applications or in standalone applications installed on end users personal computers. ID-Porten therefore has restrictions on refresh_token use outside of a web applications, where tokens and secrets can be protected server side.
+in cases where it is entirely certain that tokens or secrets are protected from robbers. In cases where protection is not certain it is not recommended to use them, thus refresh tokens can for example not be used in an SPA, where the browser is not trusted to protect secrets or tokens. It is therefore recommended not to use `refresh_tokens` in JS / SPA applications or in standalone applications installed on end users personal computers. ID-Porten therefore has restrictions on `refresh_token` use outside of a web applications, where tokens and secrets can be protected server side.
 
-A refresh_token can have a very long lifespan and is used to issue new access_tokens.
+A `refresh_token` can have a very long lifespan and is used to issue new `access_tokens`.
 
 ### Klientautentiseringsmetode (Client authentication method)
 
 Determines what authentication method your integration will be using to authenticate itself (not the end user)
 
-Select none if refresh_token is not used.
+Select none if `refresh_token` is not used.
 
 ### Applikasjonstype (Application type)
 
-It is in this selection that the mentioned refresh_token will be available if web is selected.
+It is in this selection that the mentioned `refresh_token` will be available if web is selected.
 
-The application type determines whether the application for the integration is considered public or private, which in turn determines whether you can use refresh_tokens.
+The application type determines whether the application for the integration is considered public or private, which in turn determines whether you can use `refresh_tokens`.
 
 public:
 
@@ -146,7 +146,7 @@ private:
 
 - web
 
-But this does not mean that web applications have to be private. One can safely use browser for web applications that do not use refresh tokens.
+But this does not mean that web applications have to be private. One can safely use browser for web applications that do not use `refresh_tokens`.
 
 ### Gyldig(e) redirect uri-er (Valid redirect uri's)
 
@@ -156,7 +156,7 @@ When the authentication process starts, the user must be taken from the applicat
 
 This is accomplished by including `redirect_uri` in the parameters used to open a browser with ID-porten login. The `redirect_uri` is sent as parameter **MUST** be present in the list of Gyldig(e) redirect uri-er in the Integration.
 
-The application depends on having an endpoint that can process requests to the redirect_uri.
+The application depends on having an endpoint that can process requests to the `redirect_uri`.
 
 #### Administration of an unmanageable amount of redirect URIs
 
@@ -231,14 +231,15 @@ provided that the application can open a URL in a browser where login is perform
 
 The end user system must do the following:
 
-Launch system browser and make authorization calls against ID-Porten. Read more about it here: <a href="https://docs.digdir.no/oidc_protocol_authorize.html" target="_blank"> https://docs.digdir.no/oidc_protocol_authorize.html</a>. The user is then sent to the ID-Porten login.
+Launch system browser and make authorization calls against ID-Porten. Read more about it here: https://docs.digdir.no/oidc_protocol_authorize.html
+The user is then sent to the ID-Porten login.
 Set up a web server that can process requests for one of the [Gyldig(e) redirect uri-er](#gyldige-redirect-uri-er). After successfully logging in to ID-Porten, the browser will be redirected to the web server. In case the application is a SPA, a route must be set up and processed by the SPA for one of these uris.
 
-- Make a token request. Read more about it here: <a href="https://docs.digdir.no/oidc_protocol_token.html" target="_blank"> https://docs.digdir.no/oidc_protocol_token.html</a>
+- Make a token request. Read more about it here: https://docs.digdir.no/oidc_protocol_token.html
 
 We use the following test environment at ID-Porten:
 
 - authorize endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/authorize
 - token endpoint: https://oidc-ver2.difi.no/idporten-oidc-provider/token
 
-For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">'hent_idporten_token.py'</a>
+For details about which HTTP parameters must be sent in the calls, see the file <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_python_script_files/Steg/hent_idporten_token.py" target="_blank">`hent_idporten_token.py`</a>
