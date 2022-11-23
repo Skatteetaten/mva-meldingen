@@ -65,7 +65,7 @@
 <table><thead><tr><th style="text-align:left">Date</th><th style="text-align:left">What changed?</th></tr></thead><tbody><tr><td style="text-align:left">2022.22.11</td><td style="text-align:left">Created page about how to run a python script</td></tr></tbody></table>
 <h1 id="test-of-application-using-python-script" style="position:relative"><a href="#test-of-application-using-python-script" aria-label="test of application using python script permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test of application using Python script</h1>
 <p>There is a Python script that can be used for testing the solution against the Tax Authority.
-<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py">Python script for retrieval, validation and submission</a>.
+<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/test_with_python_script_files">Python script for retrieval, validation and submission</a>.
 Clone the entire repository or download the directory below:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">/test_with_Python_script_files</code></pre></div>
 <p>Before running the script you need to install Python and some libraries.</p>
@@ -96,15 +96,15 @@ pip3 install -r requirements.txt</code></pre></div>
 <h2 id="run-the-python-script" style="position:relative"><a href="#run-the-python-script" aria-label="run the python script permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run the Python script</h2>
 <ol>
 <li>Download the directory <code class="language-text">test_with_Python_script</code> under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs">https://github.com/Skatteetaten/mva-meldingen/tree/master/docs</a></li>
-<li>Find a test user with an associated business as described in the User Guide for Tenor Test Data Search.</li>
+<li>Find a test user with an associated business as described in the User <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen_eng/test/User_Guide_Tenor_testdata.pdf">Guide for Tenor Test Data Search</a>.</li>
 <li>Note national identity number of the test user and the organization number of the business for which this test user can submit</li>
 <li>Make changes to the following files:</li>
-<li>Organization number in the file <code class="language-text">mva_melding_innnsending.py</code> (See under the comment &quot;# Enter the org_number you want to submit for&quot;). This is currently hardcoded to 999999999</li>
+<li>Organization number in the file <code class="language-text">mva_melding_innsending.py</code> (See under the comment &quot;# Enter the org_number you want to submit for&quot;). This is currently hardcoded to 999999999</li>
 <li>Organization number in the envelope file you wish to submit (example_files/envelope)</li>
 <li>Organization number in the VAT report file you wish to submit (example_files/melding)</li>
 <li>Other test data such as taxation period (Skatteleggingsperiode), report category (meldingskategori) etc</li>
 <li>
-<p>Update the file names in the file <code class="language-text">mva_melding_innnsending.py</code> for the files you wish to use:</p>
+<p>Update the file names in the file <code class="language-text">mva_melding_innsending.py</code> for the files you wish to use:</p>
 <ol>
 <li><code class="language-text">mvaMeldingInnsending_filnavn = &quot;kompensasjon_mvakonvolutt.xml</code></li>
 <li><code class="language-text">mvaMelding_filnavn = &quot;kompensasjon_mvamelding.xml</code></li>

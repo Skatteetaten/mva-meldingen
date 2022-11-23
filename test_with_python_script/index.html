@@ -65,8 +65,8 @@
 <table><thead><tr><th style="text-align:left">Dato</th><th style="text-align:left">Hva ble endret?</th></tr></thead><tbody><tr><td style="text-align:left">2022.15.11</td><td style="text-align:left">Opprettet egen side for hvordan kjøre python script</td></tr></tbody></table>
 <h1 id="test-av-applikasjon-ved-hjelp-av-python-script" style="position:relative"><a href="#test-av-applikasjon-ved-hjelp-av-python-script" aria-label="test av applikasjon ved hjelp av python script permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test av applikasjon ved hjelp av Python script</h1>
 <p>Det er skrevet et Python script som kan brukes i forbindelse med test av løsningen mot Skatteetaten.
-<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/test_with_phyton_script_files/mva_melding_innnsending.py">Python script for henting, validering og innsending</a>.
-Klon hele repositoriet eller last ned katalogen under:</p>
+<a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/test_with_python_script_files">Python script for henting, validering og innsending</a>.</p>
+<p>Klon hele repositoriet eller last ned katalogen under:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">/test_with_python_script_files</code></pre></div>
 <p>Før du kjører scriptet må du installere Python og noen biblioteker.</p>
 <h2 id="sjekk-om-python-og-pip-er-installert-minimum-python3-versjon-36x" style="position:relative"><a href="#sjekk-om-python-og-pip-er-installert-minimum-python3-versjon-36x" aria-label="sjekk om python og pip er installert minimum python3 versjon 36x permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sjekk om python og pip er installert (Minimum python3 versjon 3.6.X)</h2>
@@ -98,16 +98,16 @@ pip3 install -r requirements.txt</code></pre></div>
 <h2 id="kjøre-python-scriptet" style="position:relative"><a href="#kj%C3%B8re-python-scriptet" aria-label="kjøre python scriptet permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kjøre Python scriptet</h2>
 <ol>
 <li>Last ned katalogen <code class="language-text">test_with_python_script</code> under https://github.com/Skatteetaten/mva-meldingen/tree/master/docs</li>
-<li>Du må søke opp en testbruker med en tilhørende virksomhet som beskrevet i [Bruksveiledning for Tenor Testdatasøk](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Bruksveiledning_Tenor.pdf) .</li>
+<li>Du må søke opp en testbruker med en tilhørende virksomhet som beskrevet i [Bruksveiledning for Tenor Testdatasøk](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Bruksveiledning_Tenor.pdf).</li>
 <li>Noter deg fødselsnummer til testbruker og organisasjonsnummer til den virksomheten denne testbrukeren kan sende inn for</li>
 <li>
 <p>Gjør endringer i følgende filer:</p>
 <ol>
-<li>organisasjonsnummer i filen <code class="language-text">mva_melding_innnsending.py</code> (Se under kommentaren &quot;# Legg inn org_nummer du ønsker å sende inn for&quot;), er nå hardkodet til 999999999</li>
+<li>organisasjonsnummer i filen <code class="language-text">mva_melding_innsending.py</code> (Se under kommentaren &quot;# Legg inn org_nummer du ønsker å sende inn for&quot;), er nå hardkodet til 999999999</li>
 <li>organisasjonsnummer i konvolutt filen du ønsker å sende inn (example_files/konvolutt)</li>
 <li>organisasjonsnummer i mva-melding filen du ønsker å sende inn (example_files/melding)</li>
 <li>eventuelt andre testdata som feks skattleggingsperiode, meldingskategori etc</li>
-<li>Oppdater filnavnene i filen <code class="language-text">mva_melding_innnsending.py</code> til de filene du ønsker å benytte: </li>
+<li>Oppdater filnavnene i filen <code class="language-text">mva_melding_innsending.py</code> til de filene du ønsker å benytte: </li>
 <li><code class="language-text">mvaMeldingInnsending_filnavn</code> = &quot;kompensasjon_mvakonvolutt.xml&quot;</li>
 <li><code class="language-text">mvaMelding_filnavn</code> = &quot;kompensasjon_mvamelding.xml&quot;</li>
 <li>NB! Husk å sørg for at konvolutt og mva-melding stemmer overens i forhold til testdataene</li>
