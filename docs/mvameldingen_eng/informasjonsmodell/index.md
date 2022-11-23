@@ -46,7 +46,7 @@ Corresponding example files for [VAT return in XML format](https://github.com/Sk
 
 ## Description of the fields in the VAT return
 
-### VAT-return
+### MvaMelding (VAT-return)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -60,7 +60,7 @@ Corresponding example files for [VAT return in XML format](https://github.com/Sk
   </tr>
 </table>
 
-### Skattepliktig
+### Skattepliktig (Taxable organization)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -70,7 +70,7 @@ Corresponding example files for [VAT return in XML format](https://github.com/Sk
   </tr>	
 </table>
 
-### Innsending
+### Innsending (Submission)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -84,9 +84,9 @@ Purpose: To be able to follow up systematic errors with the system supplier inst
   </tr>
 </table>
 
-### Payment information
+### Betalingsinformasjon (Payment information)
 
-KID oppgis bare dersom det er tilgodebeløp.
+KID should only be submitted if there is a credit amount.
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -94,7 +94,7 @@ KID oppgis bare dersom det er tilgodebeløp.
 Purpose: To be able to pay to the bank accounts that require KID 
 </table>
 
-### Tax basis and calculated tax
+### Skattegrunnlag og beregnet skatt (Tax basis and calculated tax)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -109,7 +109,7 @@ Purpose: to ensure that the correct amount is being paid
   </tr>
 </table>
 
-### MvaSpesifikasjonslinje
+### MvaSpesifikasjonslinje (VAT-specification line)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -149,7 +149,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 
 ## Description of the fields in the VAT return submission
 
-### MvaMeldingInnsending
+### MvaMeldingInnsending (VAT return submission)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -186,7 +186,8 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 </table>
 
 <br>
-Identifier (Either organisasjonsnummer or foedselsnummer)
+
+### Identifikator (Identifier, Either organisasjonsnummer or foedselsnummer)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -205,7 +206,8 @@ Identifier (Either organisasjonsnummer or foedselsnummer)
 </table>
 
 <br>
-Skattleggingsperiode
+
+### Skattleggingsperiode (taxation period)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -225,7 +227,8 @@ Skattleggingsperiode
 </table>
 
 <br>
-Vedlegg
+
+### Vedlegg (Attachment)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -256,7 +259,8 @@ Vedlegg
 </table>
 
 <br>
-Vedleggsfil
+
+### Vedleggsfil (Attachment file)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
   <tr>
@@ -277,7 +281,7 @@ Vedleggsfil
   </tr>
 </table>
 
-## Encoding
+## Encoding (code List)
 
 | Group and code                                           | Description of code, deductions and specification                                          |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------ |

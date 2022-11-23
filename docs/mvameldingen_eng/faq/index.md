@@ -82,7 +82,7 @@ Yes, the portal is a permanent solution that is open to everyone.
 
 ### Is it possible to see what the logged in solution for manual entry of VAT-report will look like?
 
-You can log in to [the testenvironment here](https://skatt-sbstest.sits.no/web/mva/) to test the logged in solution. To use the testenvironment you must have Tenor testdata, user guide for obtaining these can be found [here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/#the-test-environment-and-test-data).
+You can log in to [the test environment here](https://skatt-sbstest.sits.no/web/mva/) to test the logged in solution. To use the testenvironment you must have Tenor testdata, user guide for obtaining these can be found [here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/#the-test-environment-and-test-data).
 
 ### Will it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
 
@@ -172,3 +172,4 @@ If you are interested in participating in testing, please contact the Tax Admini
 ### Will there be a test version of the portal so you can test completion and the new validations before submission?
 
 The portal will be user-tested by a selct group of users, but it will not be possible to log in to test for everyone.
+[A test version of the portal can be found here](https://skatt-sbstest.sits.no/web/mva/). It requires Tenor test data to be used, [user guide can be found here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/#the-test-environment-and-test-data).
