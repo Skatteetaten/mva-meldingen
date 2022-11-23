@@ -1,7 +1,7 @@
 import requests
 import urllib3
 from Steg.hent_idporten_token import get_idtoken
-from test_with_python_script.config import altinn3_app
+from test_with_python_script_files.config import altinn3_app
 
 # Turn off certificate verification in test.
 urllib3.disable_warnings()
@@ -9,10 +9,8 @@ urllib3.disable_warnings()
 
 def valider_mva_melding(app, token: dict, xml: str = None):
     url = "https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider"
-    if app == altinn3_app.SIT.value:
+    if app == altinn3_app.ETM2.value:
         url = "https://skatt-utv3.sits.no/api/mva/mva-melding/valider"
-    if app == altinn3_app.YT.value:
-        url = "https://skatt-yt.sits.no/api/mva/grensesnittstoette/mva-melding/valider"
 
     token["content-type"] = "application/xml"
     r = requests.post(url, data=xml, headers=token, verify=False)
@@ -22,10 +20,8 @@ def valider_mva_melding(app, token: dict, xml: str = None):
 
 def valider_eksempel_fil(app, token: dict, filnavn: str) -> str:
     url = "https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider"
-    if app == altinn3_app.SIT.value:
+    if app == altinn3_app.ETM2.value:
         url = "https://skatt-utv3.sits.no/api/mva/mva-melding/valider"
-    if app == altinn3_app.YT.value:
-        url = "https://skatt-yt.sits.no/api/mva/grensesnittstoette/mva-melding/valider"
 
     token["content-type"] = "application/xml"
     file_path = 'Resources/melding/' + filnavn

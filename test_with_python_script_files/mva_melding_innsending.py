@@ -2,14 +2,14 @@
 from Steg import hent_idporten_token, hent_altinn_token
 from Steg import instans, instans_dataelement
 from Steg import hent_eksempel_filer
-from test_with_python_script import config
+from test_with_python_script_files import config
 from Steg.validering import valider_mva_melding
 
 
 # INSTILLINGER #
 
 # Kalle valideringstjenesten før man starter innsendingen.
-skal_validere_før_innsending = True
+skal_validere_før_innsending = False
 
 # Ferdiggjøre utfylling og sende inn
 skal_sende_inn_innsending = True
@@ -20,7 +20,7 @@ skal_godkjenne_innsending = True
 # Gjør ingenting akkurat nå
 skal_hente_tilbakemelding = False
 
-# Laster opp miljø fil for å definere skd-miljø. F.eks. for SIT1
+# Laster opp miljø fil for å definere skd-miljø.
 skal_laste_opp_miljø_fil = False
 
 # Laster opp et pdf vedlegg i innsendingen.
@@ -38,7 +38,7 @@ mvaMelding_filnavn = "kompensasjon_mvamelding.xml"
 
 # Legg inn org_nummer du ønsker å sende inn for.
 # Merk at personen som skal sende inn må ha nødvendig roller/rettigheter i altinn for å få lov til å sende inn.
-org_nummer = "999999999"
+org_nummer = "214013002"
 
 print("----- INSTILLINGER -----")
 print(f"Altinn Applikasjon Miljø: {altinn_app_miljø}")
