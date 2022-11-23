@@ -98,7 +98,7 @@ the VAT return will be approved upon submission.
 **URL** : `POST https://<env>/api/mva/grensesnittstoette/mva-melding/valider`
 
 Where `<env>`is an environment-specific address
-e.g.`mp-test.sits.no`
+e.g.`idporten-api-sbstest.sits.no`
 
 **Body** :
 
@@ -106,7 +106,7 @@ e.g.`mp-test.sits.no`
 
 **Example** : Submitting XML in invalid format
 
-POST <a href="https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider" target="_blank">https://mp-test.sits.no/api/mva/grensesnittstoette/mva-melding/valider </a>
+POST https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider
 
 Header: `Content-Type: application/xml`
 
@@ -302,7 +302,7 @@ Content:
     </mvameldinginnsending>
 ```
 
-Example of xml file for VAT return submission can be found under <a href="https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/konvolutt" target="_blank">Test</a>.
+Example of xml file for VAT return submission can be found under https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/konvolutt.
 
 ### Error Messages
 
@@ -494,7 +494,7 @@ Example value:
 You can find an explanation for all the validation rules for respectively [VAT report](/mvameldingen_eng/forretningsregler/) and [Compensation report VAT](/kompensasjon_eng/forretningsregler/).
 
 **Validation of MvaMeldingInnsending against the xsd model**
-<a href="../informasjonsmodell/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
+<a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd" target="_blank">no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd</a>
 
 Example:
 
@@ -598,7 +598,7 @@ Once the Tax Administration has given feedback, the files for the feedback can b
 
 Payment information will be available when the submission is completed, it is being produced when [completing the vat return submission](#complete-vat-return-submission).
 
-Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen/test/eksempler/feedback/exampleSuccessfulFeedback17062021" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
+Example of feedback files given for a submission on the 17.06.2021 <a href = "https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/feedback/exampleSuccessfulFeedback17062021" target = "_ blank ">are located here </a>. These files were downloaded from an instance where the Tax Authorities had given feedback.
 
 The files that can be downloaded will have `dataType`:
 
