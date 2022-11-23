@@ -99,19 +99,19 @@ The tax authorities will provide access to the scopes and they can then be added
 
 The sample code <a href="https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Steg/log_in_idporten.py#L105-L164" target="_blank">log_in_idporten.py</a> has been updated to reflect the changes needed to the integration after the scopes are added to the integration in the Samarbeidsportalen.
 
-### Kundens org.nr.
+### Kundens org.nr. (Customer org number)
 
 This should be the organization number of your organization.
 
-### Integrasjonens identifikator
+### Integrasjonens identifikator (Integration identifier)
 
 When the integration is created, a Guide appears here. This is the `client_id`
 
-### Navn på integrasjonen & Beskrivelse
+### Navn på integrasjonen & Beskrivelse (integration name and description)
 
 Texts for the name and description for the integration. The name of the integration will appear in the list of integrations, so give them sensible names.
 
-### Tillatte grant types
+### Tillatte grant types (Allowed grant types)
 
 This is required:
 
@@ -125,13 +125,13 @@ in cases where it is entirely certain that tokens or secrets are protected from 
 
 A refresh_token can have a very long lifespan and is used to issue new access_tokens.
 
-### Klientautentiseringsmetode
+### Klientautentiseringsmetode (Client authentication method)
 
 Determines what authentication method your integration will be using to authenticate itself (not the end user)
 
 Select none if refresh_token is not used.
 
-### Applicationstype
+### Applikasjonstype (Application type)
 
 It is in this selection that the mentioned refresh_token will be available if web is selected.
 
@@ -148,9 +148,9 @@ private:
 
 But this does not mean that web applications have to be private. One can safely use browser for web applications that do not use refresh tokens.
 
-### Gyldig(e) redirect uri-er
+### Gyldig(e) redirect uri-er (Valid redirect uri's)
 
-Determines which uris are valid to use as redirect uri's after successful login.
+Determines which uri's are valid to use as redirect uri's after successful login.
 
 When the authentication process starts, the user must be taken from the application to the login page at ID-Porten. And when the login is successful, the user is redirected back to the application.
 
@@ -174,21 +174,21 @@ System suppliers who wish to use the alternative solution should contact The Nor
 
 **The Norwegian Tax Administration still recommend solutions where the system supplier manages and owns the integrations in ID-porten.**
 
-### Gyldig(e) post logout redirect uri-er
+### Gyldig(e) post logout redirect uri-er (Valid post logout redirect uri-er)
 
 Determines which uris are valid to use as redirect uri's after successful log out.
 
 Like Gyldig(e) redirect uri-er, except that this redirection will occur if the application has asked ID-Porten to log out the user in the same way as when logging in.
 
-### Frontchannel logout uri & Frontchannel logout krever sesjons-id
+### Frontchannel logout uri & Frontchannel logout krever sesjons-id (..Frontchannel logout demands session-id)
 
 This is related to single logout and outside of the scope of this guide.
 
-### Tilbake-uri
+### Tilbake-uri (Return-uri)
 
 If the user cancels the login in ID-Porten, the user will be taken to this address. Note that this is only 1 uri.
 
-### Levetider
+### Levetider (Token Lifetimes)
 
 It is possible to set the lifetime of
 
