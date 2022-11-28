@@ -27,7 +27,8 @@ description: "XSD for mva-melding
 | 2021.11.29 | Oppdaterte kodelister, oppdatering til kode 81 i [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                                                             |
 | 2021.12.03 | Oppdaterte kodeliste oversikt, lagt til justering spesifikasjonslinje til kode 81.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | 2021.12.07 | Mindre oppdateringer til spraakTekst i mvaKodeSAFT.xml                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-
+| 2022.1128  | Lagt til infomasjon om kompensasjon i alminnelig mva-melding
+							   |	
 ## XSD for mva-meldingen versjon 1.0
 
 Mva-meldingen sendes inn i XML-format. Den må være i henhold til strukturen dokumentert i XSD for mva-melding.
@@ -41,7 +42,11 @@ Grafisk fremstilling av xsd og kodelister for [mva-meldingen](SkattemeldingForMe
 
 SAF-T standarden inneholder også kodene 0 (Ingen merverdiavgiftsbehandling (anskaffelser)), 7 (Ingen merverdiavgiftsbehandling (inntekter)), 20 (Kostnad ved innførsel av varer, ingen merverdiavgiftsbehandling), 21 (Kostnader ved innførsel av varer, alminnelig sats) og 22 (Kostnader ved innførsel av varer, redusert sats, middels). Disse skal ikke rapporteres i mva-meldingen.
 
-## Eksmepler på mva-meldinger
+### Kompensasjon i alminnelig mva-melding
+
+Fra 01.01.2023 vil spesifikasjonen «Kjøp med kompensasjonsrett» bli lagt til på 5 koder i mva-melding, i tillegg til de eksisterende spesifikasjonene. De berørte kodene med ny spesifikasjon er 81, 83, 86, 88 og 91. Felles for disse kodene er at innførsel av varer og tjenester (pluss innenlands kjøp av klimakvoter og gull) utløser utgående innførselsmerverdiavgift og at en har enten kompensasjonsrett for inngående mva eller direkte fradragsrett for inngående mva. Virksomheter som bruker disse kodene i ordinær mva-melding kan kreve kompensasjon ved å levere kompensasjonsmelding i tillegg.
+
+## Eksempler på mva-meldinger
 
 Eksempler på ny [mva-melding i excel](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Testtilfeller%20mva-melding.xlsx?raw=true)
 
