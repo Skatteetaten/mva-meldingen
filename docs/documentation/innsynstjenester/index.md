@@ -10,9 +10,10 @@ description: "Beskrivelser av innsynstjenester tilgjengelig som API"
 
 ## Endringslogg
 
-| Dato       | Hva ble endret?                     |
-| :--------- | :---------------------------------- |
-| 2022.10.04 | Side for innsynstjenester opprettet |
+| Dato       | Hva ble endret?                                    |
+| :--------- | :----------------------------------                |
+| 2022.10.04 | Side for innsynstjenester opprettet                |
+| 2022.12.02 | La til beskrivelse av tjeneste innsendte meldinger |
 
 # Maskinporten og autentisering
 
@@ -136,6 +137,6 @@ Hvis token fra Maskinporten ikke stemmer overens med forespurt organisasjon.
 ### Informasjonsmodell
 Grafisk fremstilling av xsd for innsynstjenesten:
 
-![](Informasjonsmodell mvaInnsendingMelding.PNG)
+![](Informasjonsmodell mvaInnsendingMelding.png)
 
 Versjon 1.0 av XSD for responsen ligger her: https://git.aurora.skead.no/projects/INMO/repos/xsd_for_merverdiavgift/browse/deling/Innsyn/no.skatteetaten.fastsetting.avgift.mva.innsendtemeldinger.v1.xsd
