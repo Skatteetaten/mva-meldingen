@@ -97,10 +97,10 @@ The service provides a list of submitted VAT returns. Calls without a reference 
 
 Where `<env>` is an environment specific adress e.g. `api-sbstest.sits.no`
 
-**Example** : Request status for submissions for organiztion number 123456789 first page
+**Example** : Request status for submissions for organization number 123456789 first page
 `GET https://mp-test.sits.no/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/123456789`
    
-**Example** : Request status for submissions for organiztion number 123456789 page from sequence number 1699575
+**Example** : Request status for submissions for organization number 123456789 page from sequence number 1699575
 `GET https://mp-test.sits.no/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/123456789?sekvensnummer=1699575`
 
 
