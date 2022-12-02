@@ -82,15 +82,15 @@ Headers:
  If the token from Maskinporten does not match the requested organization.
 
 ## Information model
-Graphic representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingStatus.PNG) :
+Graphical representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingStatus.PNG) :
 
 ![](Informasjonsmodell mvaInnsendingStatus.PNG)
 
 
 Version 1.0 of the XSD for the response is located here: [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaen.fastsetting.avgift.mva.mvaMeldingInnsendingStatus.v1.xsd)
  
-### Submitted reports
-The service provides a list of submitted reports. Calls without a reference gives the first page of the last 10 terms, while previous terms can be retrieved with a reference from the last report in the result from the received page.
+### submitted VAT returns
+The service provides a list of submitted VAT returns. Calls without a reference gives the first page of the latest 10 terms, while previous terms can be retrieved with a reference from the last report in the result from the received page.
  
  **URL** : `GET https://<env>/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/{organisasjonsnummer}`
 `GET https://<env>/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/{organisasjonsnummer} ?sekvensnummer=<sekvensnummer>`
@@ -116,11 +116,7 @@ _Respons 401 - Unauthorized:_
 If the token from Maskinporten does not match the requested organization.
 
 ### Information model
-Graphic representation of the xsd for the information service:
-
-![](Informasjonsmodell mvaInnsendingStatus.PNG)
-## Information model
-Graphic representation of the xsd for the [information service](Informasjonsmodell mvaInnsendingMelding.PNG) :
+Graphical representation of the xsd for the information service:
 
 ![](Informasjonsmodell mvaInnsendingMelding.PNG)
 
