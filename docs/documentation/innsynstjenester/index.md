@@ -70,13 +70,15 @@ Sekvens for forespørsler om innsyn:
 
 ![](Sekvensdiagram innsyn SBS.png)
 
-## Status for innsending av mva-melding
+## Tjenester
+   
+### Status for innsending av mva-melding
 
 Tjenesten gir status for inneværende termin(er) og terminer med manglende innsendt mva-melding.
 
 **URL** : `GET https://<env>/api/mva/grensesnittstoette/innsyn/melding/innsending/status/v1/{organisasjonsnummer}`
 
-Hvor `<env>` er miljøspesifikk adresse f.eks. `mp-test.sits.no`
+Hvor `<env>` er miljøspesifikk adresse f.eks. `api-sbstest.sits.no`
 
 **Eksempel** : Forespørsel om status for innsending for organisasjonsnummer 123456789
 
@@ -95,7 +97,7 @@ Headers:
 _Respons 401 - Unauthorized:_  
 Hvis token fra Maskinporten ikke stemmer overens med forespurt organisasjon.
 
-## Informasjonsmodell
+### Informasjonsmodell
 
 Grafisk fremstilling av xsd for [innsynstjenesten](Informasjonsmodell mvaInnsendingStatus.PNG):
 
@@ -103,3 +105,37 @@ Grafisk fremstilling av xsd for [innsynstjenesten](Informasjonsmodell mvaInnsend
 
 Versjon 1.0 av XSD for responsen ligger her:
 [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaen.fastsetting.avgift.mva.mvaMeldingInnsendingStatus.v1.xsd)
+   
+   
+### Innsendte meldinger
+Tjenesten gir liste over innsendte meldinger med eventuelt fastsatt avgift. Kall uten referanse gir første side på 10 siste terminer, mens tidligere terminer kan hentes ut med referanse fra siste melding i resultat fra mottatt side.
+
+**URL** : `GET https://<env>/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/{organisasjonsnummer}`
+`GET https://<env>/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/{organisasjonsnummer} ?sekvensnummer=<sekvensnummer>`
+
+Hvor `<env>` er miljøspesifikk adresse f.eks. `api-sbstest.sits.no`
+
+**Eksempel** : Forespørsel om status for innsending for organisasjonsnummer 123456789 første side
+`GET https://mp-test.sits.no/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/123456789`
+   
+**Eksempel** : Forespørsel om status for innsending for organisasjonsnummer 123456789 side fra sekvensnummer 1699575
+`GET https://mp-test.sits.no/api/mva/grensesnittstoette/innsyn/melding/innsending/melding/v1/123456789?sekvensnummer=1699575`
+
+
+Headers:
+`Accept: application/xml`
+`Authorization: Bearer <maskinportentoken>`
+
+**Response**
+`status: 200 Innhold (body)`
+
+**Feilmeldinger**
+_Respons 401 - Unauthorized:_
+Hvis token fra Maskinporten ikke stemmer overens med forespurt organisasjon.
+
+### Informasjonsmodell
+Grafisk fremstilling av xsd for innsynstjenesten:
+
+![](Informasjonsmodell mvaInnsendingMelding.PNG)
+
+Versjon 1.0 av XSD for responsen ligger her: https://git.aurora.skead.no/projects/INMO/repos/xsd_for_merverdiavgift/browse/deling/Innsyn/no.skatteetaten.fastsetting.avgift.mva.innsendtemeldinger.v1.xsd
