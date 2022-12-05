@@ -38,6 +38,11 @@ Graphical representation of the XSD and encoding for the [VAT return](Skattemeld
 
 The SAF-T standard also contains the codes 0 (No VAT treatment), 7 (No VAT treatment - no turnover according to the VAT legislation), 20 (No VAT treatment), 21 (Basis on import of goods, regular rate) and 22 (Basis on import of goods, reduced rate, middle). These should not be reported in the VAT return
 
+
+## Compensation in the general VAT-report
+From 01.01.2023, the specification " Purchase with right to VAT compensation" will be added to 5 codes in the VAT report, in addition to the existing specifications. The affected codes with the new specification are 81, 83, 86, 88 and 91. What these codes have in common is that the import of goods and services (plus the domestic purchase of climate quotas and gold) triggers outgoing import value added tax. This means that businesses using these codes are either entitled to compensation for input VAT or direct right of deduction for input VAT. Businesses that use these codes in their ordinary VAT declaration can claim compensation by submitting the tax return for VAT compensation in addition to the general VAT-report.
+
+
 ## Examples of VAT-returns
 
 Examples of [VAT-return in Excel](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Testtilfeller%20mva-melding.xlsx?raw=true)
