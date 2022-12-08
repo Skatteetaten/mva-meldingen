@@ -24,7 +24,9 @@
             <tildato>2020-03-31</tildato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>redusert sats</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -43,7 +45,9 @@
             <fradato>2021-10-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>redusert sats</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -63,7 +67,9 @@
             <tildato>2021-09-30</tildato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>redusert sats</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -82,7 +88,9 @@
             <fradato>2012-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>redusert sats, næringsmiddel</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -101,7 +109,9 @@
             <fradato>2005-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>alminnelig sats</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -117,7 +127,9 @@
             </spraakTekst>
         </beskrivelse>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>nullsats</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -136,7 +148,9 @@
             <fradato>1970-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>redusert sats, råfisk</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -156,7 +170,9 @@
             <tildato>2015-12-31</tildato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>redusert sats</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <kode>
@@ -176,7 +192,9 @@
             <tildato>2017-12-31</tildato>
         </gyldigForBehandling>
         <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <satstype>redusert sats</satstype>
+            <kompensasjon>SANN</kompensasjon>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>

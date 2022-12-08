@@ -38,7 +38,7 @@
         </kodetillegg>
     </kode>
     <kode>
-        <tekniskNavn>merverdiavgift kompensasjon</tekniskNavn>
+        <tekniskNavn>kompensasjon</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
                 <tekst>kompensasjon for merverdiavgift</tekst>
@@ -49,11 +49,11 @@
             <fradato>1970-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tekniskNavnUtenNorskeTegn>merverdiavgift kompensasjon</tekniskNavnUtenNorskeTegn>
+            <tekniskNavnUtenNorskeTegn>kompensasjon</tekniskNavnUtenNorskeTegn>
         </kodetillegg>
     </kode>
     <kode>
-        <tekniskNavn>omvendt avgiftsplikt</tekniskNavn>
+        <tekniskNavn>omvendtAvgiftsplikt</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
                 <tekst>mva-melding for omvendt avgiftsplikt</tekst>
@@ -64,7 +64,22 @@
             <fradato>1970-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tekniskNavnUtenNorskeTegn>omvendt avgiftsplikt</tekniskNavnUtenNorskeTegn>
+            <tekniskNavnUtenNorskeTegn>omvendtAvgiftsplikt</tekniskNavnUtenNorskeTegn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>eHandel</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>mva-melding for utenlandske leverandører av fjernleverbare tjenester og/eller varer med lav verdi (under 3000 kroner) til norske forbrukere</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-04-01</fradato>
+        </gyldigForBehandling>
+        <kodetillegg>
+            <tekniskNavnUtenNorskeTegn>eHandel</tekniskNavnUtenNorskeTegn>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>

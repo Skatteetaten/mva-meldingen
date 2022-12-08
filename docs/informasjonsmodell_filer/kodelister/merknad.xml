@@ -27,6 +27,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Non-standard invoicing</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -51,6 +54,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Accruals</kortbeskrivelse_en>
@@ -76,6 +82,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Previously used VAT code is incorrect</kortbeskrivelse_en>
@@ -101,6 +110,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Errors in accounting software</kortbeskrivelse_en>
@@ -127,6 +139,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Insurance settlement</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -151,6 +166,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Turnover before registration</kortbeskrivelse_en>
@@ -176,6 +194,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Recalculation or returns</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -200,6 +221,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Temporary import</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -224,6 +248,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Re-import</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -248,6 +275,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Customs declaration made under an incorrect organisation number</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -272,6 +302,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Re-export or returns</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -296,6 +329,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Temporary export</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -320,6 +356,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Export of services</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -344,6 +383,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Large purchases</kortbeskrivelse_en>
@@ -369,6 +411,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Credit notes</kortbeskrivelse_en>
@@ -395,6 +440,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Purchases made before VAT registration (retrospective value added tax settlement)</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -419,6 +467,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Building for own expense and risk</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -443,6 +494,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Withdrawal of goods after cessation</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -467,6 +521,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Real property</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -491,6 +548,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Passenger vehicles</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -515,6 +575,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Demonstration car</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -539,6 +602,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Binding advance ruling</kortbeskrivelse_en>
@@ -565,11 +631,13 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Enterprise under liquidation</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
             <merknadGjelder>mva-melding</merknadGjelder>
-            <kompensasjon>SANN</kompensasjon>
             <kortbeskrivelse_no>Virksomhet under avvikling</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Verksemd under avvikling</kortbeskrivelse_nn>
         </kodetillegg>
@@ -590,11 +658,13 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>The enterprise has changed legal structure</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
             <merknadGjelder>mva-melding</merknadGjelder>
-            <kompensasjon>SANN</kompensasjon>
             <kortbeskrivelse_no>Virksomheten har endret selskapsform</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Verksemda har endra selskapsform</kortbeskrivelse_nn>
         </kodetillegg>
@@ -615,6 +685,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Drop in revenue due to extraordinary circumstances</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -639,6 +712,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>Shipwreck</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -663,6 +739,9 @@
                 <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <kortbeskrivelse_en>VAT-free sale of fishing vessel</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
@@ -675,78 +754,135 @@
         <tekniskNavn>endring i bruken av bygg, anlegg eller annen fast eiendom</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Endring/korrigering som følge av ny vurdering av faktisk bruk av bygg, anlegg eller annen fast eiendom</tekst>
+                <tekst>Justering som følge av ny vurdering av faktisk bruk eller salg av fast eiendom</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
-        </beskrivelse>
-        <kodetillegg>
-            <merknadGjelder>mva kode</merknadGjelder>
-            <kompensasjon>SANN</kompensasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>feil avgiftsområde brukt tidligere</tekniskNavn>
-        <beskrivelse>
             <spraakTekst>
-                <tekst>Korrigering pga. rapportering under feil ordning/feil avgiftsbehandling</tekst>
-                <spraak>no</spraak>
+                <tekst>Justering som følgje av ny vurdering av faktisk bruk eller sal av fast eigedom</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Adjustment due to a new assessment of actual use or sale of real property</tekst>
+                <spraak>en</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
+            <kortbeskrivelse_en>A change in the use of buildings, facilities or other real property</kortbeskrivelse_en>
             <merknadGjelder>mva kode</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Endring i bruken av bygg, anlegg eller annen fast eiendom</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Endring i bruken av bygg, anlegg eller annan fast eigedom</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>feil mva-kode for kompensasjon brukt tidligere</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Korrigering pga. rapportering under feil mva-kode for kompensasjon</tekst>
+                <tekst>Korrigering på grunn av rapportering under feil mva-kode for kompensasjon</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Korrigering på grunn av rapportering under feil mva-kode for kompensasjon</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Correction due to reporting under an incorrect VAT code for compensation</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
+            <kortbeskrivelse_en>Previously used VAT code for compensation is incorrect</kortbeskrivelse_en>
             <merknadGjelder>mva kode</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Feil mva-kode for kompensasjon brukt tidligere</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Feil mva-kode for kompensasjon brukt tidlegare</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>innførsel av varer</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Krav knyttet inngående mva, hvor utgående mva er fradragsført i ordinær melding for mva</tekst>
+                <tekst>Krav knyttet til inngående merverdiavgift, hvor utgående merverdiavgift er fradragsført i ordinær mva-melding</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Krav knytt til inngåande meirverdiavgift, der utgåande meirverdiavgift er frådragsført i ordinær mva-melding</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Claims related to input VAT, where output VAT has been deducted in the ordinary VAT return</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
+            <kortbeskrivelse_en>Importation of goods</kortbeskrivelse_en>
             <merknadGjelder>mva kode</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Innførsel av varer</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Innførsel av varer</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>kjøp av tjenester</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Krav knyttet inngående mva, hvor utgående mva er fradragsført i ordinær melding for mva</tekst>
+                <tekst>Krav knyttet til inngående merverdiavgift, hvor utgående merverdiavgift er fradragsført i ordinær mva-melding</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Krav knytt til inngåande meirverdiavgift, der utgåande meirverdiavgift er frådragsført i ordinær mva-melding</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Claims related to input VAT, where output VAT has been deducted in the ordinary VAT return</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
+            <kortbeskrivelse_en>Purchases of services</kortbeskrivelse_en>
             <merknadGjelder>mva kode</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Kjøp av tjenester</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Kjøp av tenester</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>endring av bruksområde på bygg, anlegg eller annen fast eiendom</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Endring/korrigering som følge av ny vurdering av faktisk bruk i den kompensasjonsberettigede virksomheten</tekst>
+                <tekst>Endring eller korrigering som følge av ny vurdering av faktisk bruk i den kompensasjonsberettigede virksomheten</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Endring eller korrigering som følgje av ny vurdering av faktisk bruk i verksemd som har rett til kompensasjon</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Change or correction due to a new assessment of actual use in the enterprise that is entitled to reimbursement</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
+            <kortbeskrivelse_en>A change in the use of buildings, facilities or other real property</kortbeskrivelse_en>
             <merknadGjelder>mva-melding</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Endring i bruken av bygg, anlegg eller annen fast eiendom</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Endring i bruken av bygg, anlegg eller annan fast eigedom</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <kode>
@@ -757,6 +893,9 @@
                 <spraak>no</spraak>
             </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
             <merknadGjelder>mva-melding</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
@@ -766,26 +905,189 @@
         <tekniskNavn>kompensasjonskravet gjelder flere terminer</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>I tillegg til gjeldene termin, inneholder meldingen krav for tidligere terminer  </tekst>
+                <tekst>I tillegg til gjeldende termin, inneholder meldingen krav for terminer tilbake i tid</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>I tillegg til gjeldande termin inneheld meldinga krav for terminar tilbake i tid</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>In addition to the current period, the return includes claims for previous periods</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
+            <kortbeskrivelse_en>The compensation claims applies to more than one period</kortbeskrivelse_en>
             <merknadGjelder>mva-melding</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Kompensasjonskravet gjelder flere terminer</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Kompensasjonskravet gjeld fleire terminar</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>korrigering av tidligere kompensasjonskrav</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Korrigering av deler av tidligere kompensert merverdiavgift er inkludert i kompensasjonskravet</tekst>
+                <tekst>Korrigering av hele eller deler av tidligere kompensert merverdiavgift er inkludert i kompensasjonskravet</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
+            <spraakTekst>
+                <tekst>Korrigering av heile eller deler av tidlegare kompensert meirverdiavgift er inkludert i kompensasjonskravet</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Correction of all or parts of previously compensated value added tax is included in the compensation claim</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
         </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
         <kodetillegg>
+            <kortbeskrivelse_en>Correction of previously submitted compensation claims</kortbeskrivelse_en>
             <merknadGjelder>mva-melding</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Korrigering av tidligere kompensasjonskrav</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Korrigering av tidlegare kompensasjonskrav</kortbeskrivelse_nn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>virksomheten er fusjonert eller fisjonert</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Virksomhet er fusjonert eller fisjonert til et overtakende selskap i terminen det kreves kompensasjon for</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda er fusjonert eller fisjonert til eit overtakande selskap i terminen som kompensasjonskravet gjeld for</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>The enterprise has been merged or demerged to an acquiring company in the period for which you are claiming compensation</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
+        <kodetillegg>
+            <kortbeskrivelse_en>The enterprise has been merged or demerged</kortbeskrivelse_en>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Virksomheten er fusjonert eller fisjonert</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Verksemda er fusjonert eller fisjonert</kortbeskrivelse_nn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>overdragelse av bygg, anlegg eller annen fast eiendom</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Justering som følge av overdragelse av bygg, anlegg eller annen fast eiendom etter anskaffelsen, fremstillingen eller utførelsen</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Justering som følgje av overdraging av bygg, anlegg eller annan fast eigedom etter anskaffinga, framstillinga eller utføringa</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Adjustment due to change of ownership of buildings, facilities or other real property following the acquisition, production or execution</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
+        <kodetillegg>
+            <kortbeskrivelse_en>Change of ownership of buildings, facilities or other real property</kortbeskrivelse_en>
+            <merknadGjelder>mva kode</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Overdragelse av bygg, anlegg eller annen fast eiendom</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Overdraging av bygg, anlegg eller annan fast eigedom</kortbeskrivelse_nn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>forholdsmessig kompensasjon</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Det er benyttet forholdsmessig fordeling av merverdiavgift på fellesanskaffelser som brukes i både kompensasjonsberettiget virksomhet og til formål som ikke gir rett til kompensasjon</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Det er brukt forholdsmessig fordeling av meirverdiavgift på fellesanskaffingar som blir brukt både i verksemd som gir rett til kompensasjon og til føremål som ikkje gir rett til kompensasjon.</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Value added tax has been divided proportionally between joint purchases that are used both for activity that entitles you to compensation and for purposes that do not.</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
+        <kodetillegg>
+            <kortbeskrivelse_en>Proportional compensation</kortbeskrivelse_en>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Forholdsmessig kompensasjon</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Forholdsmessig kompensasjon</kortbeskrivelse_nn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>virksomhet under avvikling kompensasjon</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Virksomhet har iverksatt avviklingsperioden eller er blitt avviklet</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda har starta avviklingsperioden eller har blitt avvikla</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>The enterprise has initiated the liquidation period or has been liquidated</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
+        <kodetillegg>
+            <kortbeskrivelse_en>Enterprise under liquidation</kortbeskrivelse_en>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kompensasjon>SANN</kompensasjon>
+            <kortbeskrivelse_no>Virksomhet under avvikling</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Verksemd under avvikling</kortbeskrivelse_nn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>fradrag føres i kompensasjonsmelding</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Virksomheten vil sende inn kompensasjonsmelding for merverdiavgift med krav om kompensasjon for utgående merverdiavgift.</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda vil sende inn kompensasjonsmelding for meirverdiavgift med krav om kompensasjon for utgåande meirverdiavgift.</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>The enterprise will submit a tax return for VAT compensation with a claim for compensation for output value added tax.</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
+        <kodetillegg>
+            <kortbeskrivelse_en>Deductions will be entered  in the tax return for VAT compensation</kortbeskrivelse_en>
+            <alminneligPrimær>SANN</alminneligPrimær>
+            <merknadGjelder>mva kode</merknadGjelder>
+            <kortbeskrivelse_no>Fradrag føres i kompensasjonsmelding</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Frådrag førast i kompensasjonsmelding</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>

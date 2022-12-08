@@ -29,17 +29,17 @@
         <kodetillegg>
             <tema_nn>Kjøp av varer og tenester i Noreg</tema_nn>
             <beskrivelseIStandard_en>Deductible domestic input value added tax, standard rate</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of goods and services in Norway</kompensasjonTema_en>
+            <kompensasjonTema_en>Purchases of goods and services in Norway eligible for compensation</kompensasjonTema_en>
             <tapPaaKrav>SANN</tapPaaKrav>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <kompensasjonJustering>SANN</kompensasjonJustering>
             <justering>SANN</justering>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av varer og tenester i Noreg</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av varer og tjenester i Norge</kompensasjonTema_no>
+            <kompensasjonTema_nn>Kjøp av varer og tenester i Noreg med kompensasjonsrett</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av varer og tjenester i Norge med kompensasjonsrett</kompensasjonTema_no>
             <tema>Kjøp av varer og tjenester i Norge</tema>
             <temaRekkefoelge>3</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av varer og tenester med kompensasjonsrett (høg sats)</kompensasjonBeskrivelse_nn>
             <tilbakefoeringAvInngaaendeMerverdiavgift>SANN</tilbakefoeringAvInngaaendeMerverdiavgift>
             <kompensasjonBeskrivelse_no>Kjøp av varer og tjenester med kompensasjonsrett (høy sats)</kompensasjonBeskrivelse_no>
@@ -70,9 +70,10 @@
             <fradato>1970-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Salg av varer og tjenester i Norge</tema>
             <tema_nn>Sal av varer og tenester i Noreg</tema_nn>
+            <tema>Salg av varer og tjenester i Norge</tema>
             <temaRekkefoelge>1</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Output value added tax, standard rate</beskrivelseIStandard_en>
             <satstype>alminnelig sats</satstype>
             <uttak>SANN</uttak>
@@ -102,9 +103,10 @@
             <fradato>1970-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Salg av varer og tjenester i Norge</tema>
             <tema_nn>Sal av varer og tenester i Noreg</tema_nn>
+            <tema>Salg av varer og tjenester i Norge</tema>
             <temaRekkefoelge>1</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Domestic turnover and withdrawals exempt from value added tax, exemption</beskrivelseIStandard_en>
             <satstype>nullsats</satstype>
             <uttak>SANN</uttak>
@@ -134,9 +136,10 @@
             <fradato>1970-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Salg av varer og tjenester i Norge</tema>
             <tema_nn>Sal av varer og tenester i Noreg</tema_nn>
+            <tema>Salg av varer og tjenester i Norge</tema>
             <temaRekkefoelge>1</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Turnover outside the scope of the Value Added Tax Act</beskrivelseIStandard_en>
             <kodeRekkefoelgeITema>5</kodeRekkefoelgeITema>
             <tema_en>Sales of goods and services in Norway</tema_en>
@@ -166,15 +169,15 @@
         <kodetillegg>
             <tema_nn>Kjøp av varer og tenester i Noreg</tema_nn>
             <beskrivelseIStandard_en>Deductible domestic input value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of goods and services in Norway</kompensasjonTema_en>
+            <kompensasjonTema_en>Purchases of goods and services in Norway eligible for compensation</kompensasjonTema_en>
             <tapPaaKrav>SANN</tapPaaKrav>
             <satstype>redusert sats, næringsmiddel</satstype>
             <kodeRekkefoelgeITema>2</kodeRekkefoelgeITema>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av varer og tenester i Noreg</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av varer og tjenester i Norge</kompensasjonTema_no>
+            <kompensasjonTema_nn>Kjøp av varer og tenester i Noreg med kompensasjonsrett</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av varer og tjenester i Norge med kompensasjonsrett</kompensasjonTema_no>
             <tema>Kjøp av varer og tjenester i Norge</tema>
             <temaRekkefoelge>3</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av varer og tenester med kompensasjonsrett (middels sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kjøp av varer og tjenester med kompensasjonsrett (middel sats)</kompensasjonBeskrivelse_no>
             <kompensasjon>SANN</kompensasjon>
@@ -201,9 +204,10 @@
             </spraakTekst>
         </beskrivelse>
         <kodetillegg>
-            <tema>Fisk m.m.</tema>
             <tema_nn>Fisk med meir</tema_nn>
+            <tema>Fisk m.m.</tema>
             <temaRekkefoelge>6</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Deductible domestic input value added tax, reduced rate, fish</beskrivelseIStandard_en>
             <tapPaaKrav>SANN</tapPaaKrav>
             <satstype>redusert sats, råfisk</satstype>
@@ -235,15 +239,15 @@
         <kodetillegg>
             <tema_nn>Kjøp av varer og tenester i Noreg</tema_nn>
             <beskrivelseIStandard_en>Deductible domestic input value added tax, reduced rate, low</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of goods and services in Norway</kompensasjonTema_en>
+            <kompensasjonTema_en>Purchases of goods and services in Norway eligible for compensation</kompensasjonTema_en>
             <tapPaaKrav>SANN</tapPaaKrav>
             <satstype>redusert sats</satstype>
             <kodeRekkefoelgeITema>3</kodeRekkefoelgeITema>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av varer og tenester i Noreg</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av varer og tjenester i Norge</kompensasjonTema_no>
+            <kompensasjonTema_nn>Kjøp av varer og tenester i Noreg med kompensasjonsrett</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av varer og tjenester i Norge med kompensasjonsrett</kompensasjonTema_no>
             <tema>Kjøp av varer og tjenester i Norge</tema>
             <temaRekkefoelge>3</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av varer og tenester med kompensasjonsrett (låg sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kjøp av varer og tjenester med kompensasjonsrett (lav sats)</kompensasjonBeskrivelse_no>
             <kompensasjon>SANN</kompensasjon>
@@ -275,15 +279,15 @@
         <kodetillegg>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
             <beskrivelseIStandard_en>Deductible import value added tax, standard rate</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of goods from abroad (import)</kompensasjonTema_en>
+            <kompensasjonTema_en>Purchases of goods from abroad eligible for compensation (import)</kompensasjonTema_en>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>2</kodeRekkefoelgeITema>
             <kompensasjonJustering>SANN</kompensasjonJustering>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av varer frå utlandet (import)</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (import)</kompensasjonTema_no>
+            <kompensasjonTema_nn>Kjøp av varer frå utlandet med kompensasjonsrett (import)</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av varer fra utlandet med kompensasjonsrett (import)</kompensasjonTema_no>
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kompensasjon for meirverdiavgift betalt ved innførsel (høg sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kompensasjon for merverdiavgift betalt ved innførsel (høy sats)</kompensasjonBeskrivelse_no>
             <kompensasjon>SANN</kompensasjon>
@@ -315,14 +319,14 @@
         <kodetillegg>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
             <beskrivelseIStandard_en>Deductible import value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of goods from abroad (import)</kompensasjonTema_en>
+            <kompensasjonTema_en>Purchases of goods from abroad eligible for compensation (import)</kompensasjonTema_en>
             <satstype>redusert sats, næringsmiddel</satstype>
             <kodeRekkefoelgeITema>4</kodeRekkefoelgeITema>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av varer frå utlandet (import)</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (import)</kompensasjonTema_no>
+            <kompensasjonTema_nn>Kjøp av varer frå utlandet med kompensasjonsrett (import)</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av varer fra utlandet med kompensasjonsrett (import)</kompensasjonTema_no>
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kompensasjon for meirverdiavgift betalt ved innførsel (middels sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kompensasjon for merverdiavgift betalt ved innførsel (middels sats)</kompensasjonBeskrivelse_no>
             <kompensasjon>SANN</kompensasjon>
@@ -352,9 +356,10 @@
             <fradato>2001-07-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Salg av varer og tjenester i Norge</tema>
             <tema_nn>Sal av varer og tenester i Noreg</tema_nn>
+            <tema>Salg av varer og tjenester i Norge</tema>
             <temaRekkefoelge>1</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Output value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
             <satstype>redusert sats, næringsmiddel</satstype>
             <uttak>SANN</uttak>
@@ -384,9 +389,10 @@
             <fradato>1970-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Fisk m.m.</tema>
             <tema_nn>Fisk med meir</tema_nn>
+            <tema>Fisk m.m.</tema>
             <temaRekkefoelge>6</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Output value added tax, reduced rate, fish</beskrivelseIStandard_en>
             <satstype>redusert sats, råfisk</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
@@ -415,9 +421,10 @@
             <fradato>2004-03-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Salg av varer og tjenester i Norge</tema>
             <tema_nn>Sal av varer og tenester i Noreg</tema_nn>
+            <tema>Salg av varer og tjenester i Norge</tema>
             <temaRekkefoelge>1</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Output value added tax, reduced rate, low</beskrivelseIStandard_en>
             <satstype>redusert sats</satstype>
             <uttak>SANN</uttak>
@@ -447,9 +454,10 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Klimakvoter og gull</tema>
             <tema_nn>Klimakvoter og gull</tema_nn>
+            <tema>Klimakvoter og gull</tema>
             <temaRekkefoelge>7</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Domestic turnover with reverse tax liability, exemption</beskrivelseIStandard_en>
             <satstype>nullsats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
@@ -478,9 +486,10 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Salg av varer og tjenester til utlandet (eksport)</tema>
             <tema_nn>Sal av varer og tenester til utlandet (eksport)</tema_nn>
+            <tema>Salg av varer og tjenester til utlandet (eksport)</tema>
             <temaRekkefoelge>2</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Export of goods and services, outside the tax area</beskrivelseIStandard_en>
             <satstype>nullsats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
@@ -509,20 +518,21 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (høy sats)</fradrag>
             <beskrivelseIStandard_en>Basis, import of goods with deduction entitlement for import value added tax, standard rate</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of goods from abroad (import)</kompensasjonTema_en>
+            <kompensasjonTema_en>Purchases of goods from abroad eligible for compensation (import)</kompensasjonTema_en>
+            <kompensasjonsrett>SANN</kompensasjonsrett>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
             <kompensasjonJustering>SANN</kompensasjonJustering>
             <justering>SANN</justering>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av varer frå utlandet (import)</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (import)</kompensasjonTema_no>
+            <kompensasjonTema_nn>Kjøp av varer frå utlandet med kompensasjonsrett (import)</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av varer fra utlandet med kompensasjonsrett (import)</kompensasjonTema_no>
             <fradrag_en>Deductions (value added tax not paid upon import)</fradrag_en>
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av varer frå utlandet med kompensasjonsrett (høg sats)</kompensasjonBeskrivelse_nn>
             <tilbakefoeringAvInngaaendeMerverdiavgift>SANN</tilbakefoeringAvInngaaendeMerverdiavgift>
             <kompensasjonBeskrivelse_no>Kjøp av varer fra utlandet med kompensasjonsrett (høy sats)</kompensasjonBeskrivelse_no>
@@ -554,9 +564,10 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Basis, import of goods without deduction entitlement for import value added tax, standard rate</beskrivelseIStandard_en>
             <satstype>alminnelig sats</satstype>
             <kodeRekkefoelgeITema>3</kodeRekkefoelgeITema>
@@ -585,18 +596,19 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
+            <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
             <beskrivelseIStandard_en>Basis, import of goods with deduction entitlement for import value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of goods from abroad (import)</kompensasjonTema_en>
+            <kompensasjonTema_en>Purchases of goods from abroad eligible for compensation (import)</kompensasjonTema_en>
+            <kompensasjonsrett>SANN</kompensasjonsrett>
             <satstype>redusert sats, næringsmiddel</satstype>
             <kodeRekkefoelgeITema>5</kodeRekkefoelgeITema>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av varer frå utlandet (import)</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av varer fra utlandet (import)</kompensasjonTema_no>
+            <kompensasjonTema_nn>Kjøp av varer frå utlandet med kompensasjonsrett (import)</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av varer fra utlandet med kompensasjonsrett (import)</kompensasjonTema_no>
             <fradrag_en>Deductions (value added tax not paid upon import)</fradrag_en>
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av varer frå utlandet med kompensasjonsrett (middels sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kjøp av varer fra utlandet med kompensasjonsrett (middels sats)</kompensasjonBeskrivelse_no>
             <kompensasjon>SANN</kompensasjon>
@@ -627,9 +639,10 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Basis, import of goods without deduction entitlement for import value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
             <satstype>redusert sats, næringsmiddel</satstype>
             <kodeRekkefoelgeITema>6</kodeRekkefoelgeITema>
@@ -658,9 +671,10 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Kjøp av varer fra utlandet (import)</tema>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
+            <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <beskrivelseIStandard_en>Basis, import of goods on which value added tax is not to be calculated, none</beskrivelseIStandard_en>
             <satstype>nullsats</satstype>
             <kodeRekkefoelgeITema>7</kodeRekkefoelgeITema>
@@ -690,25 +704,35 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag>Fradrag på kjøp av tjenester fra utlandet (høy sats)</fradrag>
-            <tema_nn>Kjøp av tenester frå utlandet (import)</tema_nn>
             <beskrivelseIStandard_en>Services purchased from abroad with deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of services from abroad (import)</kompensasjonTema_en>
-            <satstype>alminnelig sats</satstype>
+            <kompensasjonTema_en>Purchases of services from abroad eligible for compensation (import)</kompensasjonTema_en>
+            <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad eligible for compensation (high rate)</omvendtAvgiftspliktBeskrivelse_en>
+            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet med kompensasjonsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av tenester frå utlandet (import)</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (import)</kompensasjonTema_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet med kompensasjonsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
             <fradrag_en>Deductions related to purchases (the value added tax)</fradrag_en>
-            <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <temaRekkefoelge>5</temaRekkefoelge>
+            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktTema_en>Purchases eligible for compensation</omvendtAvgiftspliktTema_en>
+            <kompensasjon>SANN</kompensasjon>
+            <kompensasjonBeskrivelse_en>Purchases of services from abroad eligible for compensation (high rate)</kompensasjonBeskrivelse_en>
+            <tema_nn>Kjøp av tenester frå utlandet (import)</tema_nn>
+            <kompensasjonsrett>SANN</kompensasjonsrett>
+            <satstype>alminnelig sats</satstype>
+            <kompensasjonTema_nn>Kjøp av tenester frå utlandet med kompensasjonsrett (import)</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av tjenester fra utlandet med kompensasjonsrett (import)</kompensasjonTema_no>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <tema>Kjøp av tjenester fra utlandet (import)</tema>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av tenester frå utlandet med kompensasjonsrett (høg sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kjøp av tjenester fra utlandet med kompensasjonsrett (høy sats)</kompensasjonBeskrivelse_no>
-            <kompensasjon>SANN</kompensasjon>
             <tema_en>Purchases of services from abroad (import)</tema_en>
             <fradrag_nn>Frådrag på kjøp av tenester frå utlandet (høg sats)</fradrag_nn>
+            <omvendtAvgiftspliktTema_nn>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_nn>
+            <omvendtAvgiftspliktKoderekkefølgeITema>2</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Tjenester kjøpt fra utlandet med fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
-            <kompensasjonBeskrivelse_en>Purchases of services from abroad eligible for compensation (high rate)</kompensasjonBeskrivelse_en>
             <kodeBrukesTilSpesifiseringAv>Inngående og utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
+            <omvendtAvgiftspliktTema_no>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_no>
         </kodetillegg>
     </kode>
     <kode>
@@ -731,15 +755,25 @@
             <fradato>2001-07-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <tema_nn>Kjøp av tenester frå utlandet (import)</tema_nn>
-            <temaRekkefoelge>5</temaRekkefoelge>
             <beskrivelseIStandard_en>Services purchased from abroad without deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
             <satstype>alminnelig sats</satstype>
+            <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad without deduction entitlement (standard rate)</omvendtAvgiftspliktBeskrivelse_en>
+            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet uten fradragsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>2</kodeRekkefoelgeITema>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet som er utan frådragsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <tema>Kjøp av tjenester fra utlandet (import)</tema>
+            <temaRekkefoelge>5</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
+            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktTema_en>Purchases without deduction entitlement</omvendtAvgiftspliktTema_en>
             <tema_en>Purchases of services from abroad (import)</tema_en>
+            <omvendtAvgiftspliktTema_nn>Kjøp uten frådragsrett</omvendtAvgiftspliktTema_nn>
+            <omvendtAvgiftspliktKoderekkefølgeITema>1</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Tjenester kjøpt fra utlandet uten fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
+            <omvendtAvgiftspliktTema_no>Kjøp uten fradragsrett</omvendtAvgiftspliktTema_no>
         </kodetillegg>
     </kode>
     <kode>
@@ -763,25 +797,35 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag>Fradrag på kjøp av tjenester fra utlandet (lav sats)</fradrag>
-            <tema_nn>Kjøp av tenester frå utlandet (import)</tema_nn>
             <beskrivelseIStandard_en>Services purchased from abroad with deduction entitlement for value added tax, reduced rate, low</beskrivelseIStandard_en>
-            <kompensasjonTema_en>VAT compensation for purchases of services from abroad (import)</kompensasjonTema_en>
-            <satstype>redusert sats</satstype>
+            <kompensasjonTema_en>Purchases of services from abroad eligible for compensation (import)</kompensasjonTema_en>
+            <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad eligible for compensation (low rate)</omvendtAvgiftspliktBeskrivelse_en>
+            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet med kompensasjonsrett (lav sats)</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>3</kodeRekkefoelgeITema>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
-            <kompensasjonTema_nn>Kompensasjon for meirverdiavgift ved kjøp av tenester frå utlandet (import)</kompensasjonTema_nn>
-            <kompensasjonTema_no>Kompensasjon for merverdiavgift ved kjøp av tjenester fra utlandet (import)</kompensasjonTema_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet med kompensasjonsrett (låg sats)</omvendtAvgiftspliktBeskrivelse_no>
             <fradrag_en>Deductions related to purchases (the value added tax)</fradrag_en>
-            <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <temaRekkefoelge>5</temaRekkefoelge>
+            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktTema_en>Purchases eligible for compensation</omvendtAvgiftspliktTema_en>
+            <kompensasjon>SANN</kompensasjon>
+            <kompensasjonBeskrivelse_en>Purchases of services from abroad eligible for compensation (low rate)</kompensasjonBeskrivelse_en>
+            <tema_nn>Kjøp av tenester frå utlandet (import)</tema_nn>
+            <kompensasjonsrett>SANN</kompensasjonsrett>
+            <satstype>redusert sats</satstype>
+            <kompensasjonTema_nn>Kjøp av tenester frå utlandet med kompensasjonsrett (import)</kompensasjonTema_nn>
+            <kompensasjonTema_no>Kjøp av tjenester fra utlandet med kompensasjonsrett (import)</kompensasjonTema_no>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <tema>Kjøp av tjenester fra utlandet (import)</tema>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av tenester frå utlandet med kompensasjonsrett (låg sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kjøp av tjenester fra utlandet med kompensasjonsrett (lav sats)</kompensasjonBeskrivelse_no>
-            <kompensasjon>SANN</kompensasjon>
             <tema_en>Purchases of services from abroad (import)</tema_en>
             <fradrag_nn>Frådrag på kjøp av tenester frå utlandet (låg sats)</fradrag_nn>
+            <omvendtAvgiftspliktTema_nn>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_nn>
+            <omvendtAvgiftspliktKoderekkefølgeITema>2</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Tjenester kjøpt fra utlandet med fradragsrett for merverdiavgift, redusert sats, lav</beskrivelseIStandard>
-            <kompensasjonBeskrivelse_en>Purchases of services from abroad eligible for compensation (low rate)</kompensasjonBeskrivelse_en>
             <kodeBrukesTilSpesifiseringAv>Inngående og utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
+            <omvendtAvgiftspliktTema_no>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_no>
         </kodetillegg>
     </kode>
     <kode>
@@ -804,15 +848,25 @@
             <fradato>2001-07-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <tema_nn>Kjøp av tenester frå utlandet (import)</tema_nn>
-            <temaRekkefoelge>5</temaRekkefoelge>
             <beskrivelseIStandard_en>Services purchased from abroad without deduction entitlement for value added tax, reduced rate, low</beskrivelseIStandard_en>
             <satstype>redusert sats</satstype>
+            <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad without deduction entitlement (low rate)</omvendtAvgiftspliktBeskrivelse_en>
+            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>4</kodeRekkefoelgeITema>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet som er utan frådragsrett (låg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <tema>Kjøp av tjenester fra utlandet (import)</tema>
+            <temaRekkefoelge>5</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
+            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktTema_en>Purchases without deduction entitlement</omvendtAvgiftspliktTema_en>
             <tema_en>Purchases of services from abroad (import)</tema_en>
+            <omvendtAvgiftspliktTema_nn>Kjøp uten frådragsrett</omvendtAvgiftspliktTema_nn>
+            <omvendtAvgiftspliktKoderekkefølgeITema>1</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Tjenester kjøpt fra utlandet uten fradragsrett for merverdiavgift, redusert sats, lav</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
+            <omvendtAvgiftspliktTema_no>Kjøp uten fradragsrett</omvendtAvgiftspliktTema_no>
         </kodetillegg>
     </kode>
     <kode>
@@ -836,25 +890,35 @@
         </gyldigForBehandling>
         <kodetillegg>
             <fradrag>Fradrag på kjøp av klimakvoter og gull med fradragsrett</fradrag>
-            <tema_nn>Klimakvoter og gull</tema_nn>
-            <beskrivelseIStandard_en>Purchased emission allowances or gold with deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
+            <beskrivelseIStandard_en>Purchased emission allowances and gold with deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
             <kompensasjonTema_en>Emission allowances and gold</kompensasjonTema_en>
-            <satstype>alminnelig sats</satstype>
+            <omvendtAvgiftspliktBeskrivelse_en>Purchases of emission allowances and gold eligible for compensation (high rate)</omvendtAvgiftspliktBeskrivelse_en>
+            <omvendtAvgiftspliktTemarekkefølge>Kjøp av klimakvoter og gull med kompensasjonsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>2</kodeRekkefoelgeITema>
-            <kompensasjonKodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kompensasjonKodeBrukesTilSpesifiseringAv>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av klimakvotar og gull med kompensasjonsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <fradrag_en>Deductions</fradrag_en>
+            <temaRekkefoelge>7</temaRekkefoelge>
+            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktTema_en>Purchases eligible for compensation</omvendtAvgiftspliktTema_en>
+            <kompensasjon>SANN</kompensasjon>
+            <kompensasjonBeskrivelse_en>Purchases of emission allowances and gold eligible for compensation (high rate)</kompensasjonBeskrivelse_en>
+            <tema_nn>Klimakvoter og gull</tema_nn>
+            <kompensasjonsrett>SANN</kompensasjonsrett>
+            <satstype>alminnelig sats</satstype>
             <kompensasjonTema_nn>Klimakvotar og gull</kompensasjonTema_nn>
             <kompensasjonTema_no>Klimakvoter og gull</kompensasjonTema_no>
-            <fradrag_en>Deductions</fradrag_en>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <tema>Klimakvoter og gull</tema>
-            <temaRekkefoelge>7</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <kompensasjonBeskrivelse_nn>Kjøp av klimakvotar og gull med kompensasjonsrett (høg sats)</kompensasjonBeskrivelse_nn>
             <kompensasjonBeskrivelse_no>Kjøp av klimakvoter og gull med kompensasjonsrett (høy sats)</kompensasjonBeskrivelse_no>
-            <kompensasjon>SANN</kompensasjon>
             <tema_en>Emission allowances and gold</tema_en>
             <fradrag_nn>Frådrag på kjøp av klimakvoter og gull</fradrag_nn>
-            <beskrivelseIStandard>Kjøp av klimakvoter eller gull med fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
-            <kompensasjonBeskrivelse_en>Purchases of emission allowances and gold eligible for compensation (high rate)</kompensasjonBeskrivelse_en>
+            <omvendtAvgiftspliktTema_nn>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_nn>
+            <omvendtAvgiftspliktKoderekkefølgeITema>2</omvendtAvgiftspliktKoderekkefølgeITema>
+            <beskrivelseIStandard>Kjøp av klimakvoter og gull med fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Inngående og utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
+            <omvendtAvgiftspliktTema_no>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_no>
         </kodetillegg>
     </kode>
     <kode>
@@ -877,15 +941,25 @@
             <fradato>2017-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
-            <tema>Klimakvoter og gull</tema>
             <tema_nn>Klimakvoter og gull</tema_nn>
-            <temaRekkefoelge>7</temaRekkefoelge>
-            <beskrivelseIStandard_en>Purchased emission allowances or gold without deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
+            <beskrivelseIStandard_en>Purchased emission allowances and gold without deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
             <satstype>alminnelig sats</satstype>
+            <omvendtAvgiftspliktBeskrivelse_en>Purchases of emission allowances and gold without deductions (high rate)</omvendtAvgiftspliktBeskrivelse_en>
+            <omvendtAvgiftspliktTemarekkefølge>Kjøp av klimakvoter og gull uten fradragsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>3</kodeRekkefoelgeITema>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av klimakvoter og gull som er utan frådragsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <tema>Klimakvoter og gull</tema>
+            <temaRekkefoelge>7</temaRekkefoelge>
+            <alminneligPrimær>SANN</alminneligPrimær>
+            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktTema_en>Purchases without deduction entitlement</omvendtAvgiftspliktTema_en>
             <tema_en>Emission allowances and gold</tema_en>
-            <beskrivelseIStandard>Kjøp av klimakvoter eller gull uten fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
+            <omvendtAvgiftspliktTema_nn>Kjøp uten frådragsrett</omvendtAvgiftspliktTema_nn>
+            <omvendtAvgiftspliktKoderekkefølgeITema>1</omvendtAvgiftspliktKoderekkefølgeITema>
+            <beskrivelseIStandard>Kjøp av klimakvoter og gull uten fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
+            <omvendtAvgiftspliktTema_no>Kjøp uten fradragsrett</omvendtAvgiftspliktTema_no>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>

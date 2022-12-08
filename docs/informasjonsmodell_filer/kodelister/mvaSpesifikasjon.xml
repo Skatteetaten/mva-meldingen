@@ -23,6 +23,9 @@
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
+        <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
+        </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>tapPåKrav</tekniskNavn>
@@ -40,6 +43,9 @@
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
+        <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
+        </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>tilbakeføringAvInngåendeMerverdiavgift</tekniskNavn>
@@ -57,6 +63,9 @@
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
+        <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
+        </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>uttak</tekniskNavn>
@@ -74,12 +83,15 @@
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
+        <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
+        </kodetillegg>
     </kode>
     <kode>
         <tekniskNavn>justeringMerverdiavgiftskompensasjonFastEiendom</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Justering merverdiavgiftskompensasjon fast eiendom</tekst>
+                <tekst>Justering av merverdiavgiftskompensasjon for fast eiendom</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -87,12 +99,32 @@
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Justering meirverdiavgiftskompensasjon fast eigedom</tekst>
+                <tekst>Justering av meirverdiavgiftskompensasjon for fast eigedom</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <kodetillegg>
             <kompensasjon>SANN</kompensasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>kompensasjonsrett</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Kjøp med kompensasjonsrett</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Purchases eligible for compensation</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Kjøp med kompensasjonsrett</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <kodetillegg>
+            <alminneligPrimær>SANN</alminneligPrimær>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
