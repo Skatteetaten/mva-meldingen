@@ -351,7 +351,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | Spesifikasjonslinje til kode 91                   | Kjøp med kompensasjonsrett*				                                |
 | 92                                                | Kjøp av klimakvoter og gull uten fradragsrett                                             |
 
-* Spesifikasjonen kjøp med kompensasjonsrett skal kun brukes i terminer fra og med 2023
+`* Spesifikasjonen kjøp med kompensasjonsrett skal kun brukes i terminer fra og med 2023`
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/)
 
