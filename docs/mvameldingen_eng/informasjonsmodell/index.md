@@ -27,6 +27,7 @@ description: "XSD for VAT return (mva-melding)
 | 2021.11.29 | Updated code lists, corrections to code 81 in [merknadTilsvarendeMvaKode](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/merknadTilsvarendeMvaKode.xml).                                                                                                                                                                                                                                                                                                                                        |
 | 2021.12.03 | Updated code list summary, added adjustment specification for code 81.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | 2021.12.07 | Minor updates to description of spraakTekst in mvaKodeSAFT.xml                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+1 2022.12.08 | Added specifications for compensation that can be used in the VAT-report after 2022. |
 
 ## Version 1.0 of the XSD for the VAT return
 
@@ -302,34 +303,38 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | 6                                                        | Sales and withdrawals of goods and services outside the scope of the Value Added Tax Act   |
 | Sales of goods and services to other countries (exports) |                                                                                            |
 | 52                                                       | Sales of goods and services exempt from value added tax to other countries                 |
-| Purchases of goods and services in Norway (deduction)   |                                                                                            |
+| Purchases of goods and services in Norway (deduction)   |                                                                                             |
 | 1                                                        | Purchases of goods and services with deduction (standard rate)                             |
 | Specification line for code 1                            | Losses on outstanding claims and cancellations                                             |
 | Specification line for code 1                            | Adjustment of input VAT on capital goods                                                   |
 | Specification line for code 1                            | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | 11                                                       | Purchases of goods and services with deduction (middle rate)                               |
 | Specification line for code 11                           | Losses on outstanding claims and cancellations                                             |
-| 13                                                       | Purchases of goods and services with deduction (low rate)                   	        |
+| 13                                                       | Purchases of goods and services with deduction (low rate)                  	        |
 | Specification line for code 13                           | Losses on outstanding claims and cancellations                                             |
 | Purchases of goods from abroad (import)                  |                                                                                            |
 | 81                                                       | Purchases of goods from abroad with deduction (standard rate)                              |
-| 81                                                       | Deductions on purchases of goods from abroad (standard rate)               		|
+| 81                                                       | Deductions on purchases of goods from abroad (standard rate)				|
 | Specification line for code 81                           | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | Specification line for code 81                           | Adjustment of input VAT on capital goods                                                   |
+| Specification line for code 81                           | Purchases with compensation for VAT*                                              		|
 | 14                                                       | Purchases of goods from abroad, value added tax paid upon import (standard rate)		|
-| 82                                                       | Purchases of goods from abroad without deduction (standard rate)              		|
+| 82                                                       | Purchases of goods from abroad without deduction (standard rate)  				|
 | 83                                                       | Purchases of goods from abroad with deduction (middle rate)                                |
-| 83                                                       | Deductions on purchases of goods from abroad (middle rate)                 		|
+| 83                                                       | Deductions on purchases of goods from abroad (middle rate)        				|
+| Specification line for code 81                           | Purchases with compensation for VAT*                                              		|
 | 15                                                       | Purchases of goods from abroad, value added tax paid upon import (middle rate)             |
-| 84                                                       | Purchases of goods from abroad without deduction (middle rate)                 		|
+| 84                                                       | Purchases of goods from abroad without deduction (middle rate)            			|
 | 85                                                       | Purchases of goods from abroad with a zero-rate                                            |
 | Purchases of services from abroad (import)               |                                                                                            |
 | 86                                                       | Purchases of services from abroad with deduction (standard rate)                           |
-| 86                                                       | Deductions on purchases of services from abroad (standard rate)            	 	|
-| 87                                                       | Purchases of services from abroad without deduction (standard rate)          		|
+| 86                                                       | Deductions on purchases of services from abroad (standard rate)  	 			|
+| Specification line for code 86                           | Purchases with compensation for VAT                                              		|
+| 87                                                       | Purchases of services from abroad without deduction (standard rate)			|
 | 88                                                       | Purchases of services from abroad with deduction (low rate)                                |
-| 88                                                       | Deductions on purchases of services from abroad (low rate)                 		|
-| 89                                                       | Purchases of services from abroad without deduction (low rate)                 		|
+| 88                                                       | Deductions on purchases of services from abroad (low rate)					|
+| Specification line for code 88                           | Purchases with compensation for VAT*	                                      		|
+| 89                                                       | Purchases of services from abroad without deduction (low rate)	    			|
 | Fish etc.                                                |                                                                                            |
 | 32                                                       | Sales of fish and other marine wildlife resources                                          |
 | 12                                                       | Purchase of fish and other marine wildlife resources                                       |
@@ -338,7 +343,9 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | 51                                                       | Sales of emission allowances and gold to businesses/self-employed persons                  |
 | 91                                                       | Purchases of emission allowances and gold with deduction                                   |
 | 91                                                       | Deductions on purchases of emission allowances and gold                                    |
-| 92                                                       | Purchases of emission allowances and gold without deduction		                |
+| Specification line for code 81                           | Purchases with compensation for VAT*                                                   	|
+| 92                                                       | Purchases of emission allowances and gold without deduction	      			|
+* The specification "Purchases with compensation for VAT" can only be used in VAT-terms after 2022. 
 
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/kodelister/)
 
