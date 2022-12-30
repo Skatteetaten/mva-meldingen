@@ -141,70 +141,100 @@ description: "Validation rules for the VAT tax return"
 ## Validation rules
 
 The validation rules are under development an new validation rules will be added.
-The following validation rules are definded for the VAT return listing:
 
-- The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return
-- The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate
-- Additional information is lacking for output VAT amounts with opposite +/- sign
-- Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign
-- Additional information for specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7
-- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 81)
-- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 83)
-- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 86)
-- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 88)
-- Input VAT that has been claimed deductable on climate quotas and gold must be less than or equal to output VAT
-- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 81)
-- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 83)
-- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 86)
-- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 88)
-- There must be output VAT if input VAT has been deducted for deductable climate quotas and gold
-- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 81)
-- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 83)
-- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 86)
-- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88)
-- There must be deductable input VAT if there is output VAT on deductable climate quotas and gold
-- Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13
-- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 5, 31 or 33
-- Specification lines that apply to adjustment can only be submitted on VAT code 1 or 81
-- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1 or 81
-- The specified category for the VAT return does not match the details in the VAT register (general industry)
-- The specified category for the VAT return does not match the details in the VAT register (primary industry)
-- The specified tax period type does not match the details in the VAT register (general industry)
-- The specified tax period type does not match the details in the VAT register (primary industry)
-- The reporting body for a joint registration must be registered for VAT
-- Total revnue in the VAT return must be under one million for yearly general industry returns
-- Specification lines must have valid VAT codes for returns relating to general industry registrations
-- Specification lines must have valid VAT codes for returns relating to primary industry registrations
-- Deductions for input VAT must not be declared without a registration in the VAT register (general industry)
-- Deductions for input VAT must not be declared without a registration in the VAT register (primary industry)
-- Deductions for input and output VAT must not be declared without a registration in the VAT register (general industry)
-- Deductions for input and output VAT must not be declared without a registration in the VAT register (primary industry)
-- VAT returns must not be sent in before the related tax period has ended (general industry)
-- VAT returns must not be sent in before the related tax period has ended (primary industry)
-- VAT returns for earlier tax periods should have been submitted
-- VAT returns for earlier tax periods should have been submitted and therefore repayments for this tax period will not be paid
-- Input VAT must be declared without a VAT-basis or VAT-rate
-- Output VAT must be declared with a VAT-basis and VAT-rate
-- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 require a remark
-- Account number must be registered for VAT returns that require a repayment
-- Deductions for input VAT would not normally be declared for VAT returns relating to one-off registrations
-- Remarks must be valid for the given VAT code (expected VAT direction)
-- Remarks must be valid for the given VAT code (opposite VAT direction)
-- Remarks must be valid for the given VAT code (lines with a specification)
+The following validation rules are defined for all VAT returns:
+- The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return (R018)
+- The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate (R019)
+- The tax return must be an ordinary (general or primary industry) VAT return, claim for compensation or reverse tax liability VAT return (R104)
+- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 require a remark (R078)
+- KID numbers must be valid (R079)
+- Values must not contain decimals (R082)
+- Values in the basis field must be under a maximum value (R085)
+- Remarks must be valid for the given VAT code (expected VAT direction) (R074)
+- Remarks must be valid for the given VAT code (opposite VAT direction) (R075)
+- Remarks must be valid for the given VAT code (lines with a specification) (R076)
+
+The following validation rules are defined for ordinary (general and primary industry) VAT returns:
+- Additional information is lacking for output VAT amounts with opposite +/- sign (R020)
+- Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign (R021)
+- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 81) (R023)
+- Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 83) (R024)
+- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 86) (R025)
+- Input VAT that has been claimed deductable on services purchased from abroad must be less than or equal to output VAT (code 88) (R026)
+- Input VAT that has been claimed deductable on climate quotas and gold must be less than or equal to output VAT (R027)
+- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 81) (R028)
+- There must be output VAT if input VAT has been deducted for deductable goods purchased from abroad (code 83) (R029)
+- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 86) (R030)
+- There must be output VAT if input VAT has been deducted for deductable services purchased from abroad (code 88) (R031)
+- There must be output VAT if input VAT has been deducted for deductable climate quotas and gold (R032)
+- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 81) (R033)
+- There must be deductable input VAT if there is output VAT on goods purchased from abroad (code 83) (R034)
+- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 86) (R035)
+- There must be deductable input VAT if there is output VAT on services purchased from abroad (code 88) (R036)
+- There must be deductable input VAT if there is output VAT on deductable climate quotas and gold (R037)
+- Total revenue in the VAT return must be under one million for yearly general industry returns (R052)
+- Specification lines must have valid VAT codes for returns relating to general industry registrations (R053)
+- Specification lines must have valid VAT codes for returns relating to primary industry registrations (R054)
+- Input VAT must be declared without a VAT-basis or VAT-rate (R065, R081)
+- Output VAT must be declared with a VAT-basis and VAT-rate (R066, R081)
+- Deductions for input VAT would not normally be declared for VAT returns relating to one-off registrations (R083)
+- The VAT return must contain code lines when an amount has been specified in the 'fastsatt merverdiavgift' field (R084)
+- Specification lines that apply to losses on outstanding claims can only be submitted on VAT codes 1, 11, 12 or 13 (R038)
+- Specification lines that apply to withdrawals can only be submitted on VAT codes 3, 5, 31 or 33 (R039)
+- Specification lines that apply to adjustment can only be submitted on VAT code 1 or 81 (R040)
+- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1 or 81 (R041)
+- The specified category for the VAT return does not match the details in the VAT register (general industry) (R047)
+- The specified category for the VAT return does not match the details in the VAT register (primary industry) (R048)
+- The specified tax period type does not match the details in the VAT register (general industry) (R049)
+- The specified tax period type does not match the details in the VAT register (primary industry) (R050)
+- The specified tax period does not match the details in the VAT register (general industry) (R072)
+- The specified tax period does not match the details in the VAT register (primary industry) (R073)
+- VAT returns must not be sent in before the related tax period has ended (general industry) (R059)
+- VAT returns must not be sent in before the related tax period has ended (primary industry) (R060)
+- The reporting body for a joint registration must be registered for VAT (R051)
+- VAT returns for earlier tax periods should have been submitted (R061)
+- VAT returns for earlier tax periods should have been submitted and therefore repayments for this tax period will not be paid (R061)
+- Account number must be registered for VAT returns that require a repayment (R080)
+
+The following validation rules are defined for claim for compensation VAT returns:
+- VAT returns must not be sent in before the related tax period has ended (R089)
+- The tax periode length must be 2 months (R095)
+- Additional information is required to explain why opposite prefixes are used (R086)
+- Specification lines must have valid VAT codes (R088)
+- Specification lines must be declared with a VAT-basis and VAT-rate (R093)
+- The VAT return must contain code lines when an amount has been specified in the 'fastsatt merverdiavgift' field (R100)
+- Businesses registered as municipal undertakings cannot submit claims for compensastion (R094)
+- Claims for compensation must be sent in before the deadline for the tax period (R096)
+- Changes to claims for compensation sent in after the deadline for the tax period can not increase the amount for repayment (R097)
+- The first claim for compensation for a tax period cannot be 0 krone (R098)
+- The first claim for compensation for the year must be at least a 20 000 krone repayment (R099)
+- VAT codes 81 and 83 can only be used by businesses registered in the VAT register (R101)
+- Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1, 14 or 81 (R087)
+- Specification lines that apply to losses on outstanding claims, withdrawals or reversal of input VAT are not valid (R091)
+
+The following validation rules are defined for reverse tax liability VAT returns:
+- The tax periode length must be 3 months (R106)
+- Additional information is lacking for output VAT amounts with opposite +/- sign (R108)
+- Specification lines must have valid VAT codes (R113)
+- The VAT return must contain code lines when an amount has been specified in the 'fastsatt merverdiavgift' field (R107)
 
 The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
 
-- The VAT return should be in a valid format
-- The specification lines should only use valid VAT codes
-- The specification lines should only use valid VAT-rates
-- The specification lines should only use valid specifications
-- The specification lines should only use valid remarks in the 'utvalgt merknad' field
-- The VAT return should only use a valid remark in the 'utvalgt merknad' field
+- The VAT return should be in a valid format (R001)
+- The specification lines should only use valid VAT codes (R002)
+- The specification lines should only use valid VAT-rates (R003)
+- The specification lines should only use valid specifications (R069)
+- The specification lines should only use valid remarks in the 'utvalgt merknad' field (R070)
+- The VAT return should only use a valid remark in the 'utvalgt merknad' field (R071)
 
 Two logistical rules are also defined for the purpose of preventing early submission to the new system or submission of earlier VAT returns:
 
-- The submission and validation service is not available before 01.01.2022
-- The submission and validation of VAT returns from before 2022 is not available
+- The submission and validation service is not available before 01.01.2022 for ordinary (general and primary industry) VAT returns (R000)
+- The submission and validation service is not available before 01.01.2023 for claim for compensation VAT returns (R090)
+- The submission and validation service is not available before 01.02.2023 for reverse tax liability VAT returns (R105)
+- The submission and validation of ordinary (general and primary industry) VAT returns from before 2022 is not available (R077)
+- The submission and validation of claim for compensation VAT returns from before 2023 is not available (R092)
+- The submission and validation of reverse tax liability VAT returns from before 2023 is not available (R103)
 
 ## Detailed description of the validation rules
 
