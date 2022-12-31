@@ -68,12 +68,8 @@ Følgende tekniske regler er også spesifisert som validerer xsd format og kodel
 
 Følgende praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:
 
-- Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2022 for ordinær (aliminnelig eller primærnæring) mva-meldinger (R000)
 - Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2023 for krav om kompensasjon mva-meldinger (R090)
-- Innsending og validering tjeneste er ikke tilgjengelig før 01.02.2023 for omvendt avgiftsplikt mva-meldinger (R105)
-- Innsending og validering av ordinær (alminnelig eller primærnæring) mva-meldinger fra før 2022 er ikke tilgjengelig (R077)
 - Innsending og validering av krav om kompensasjon mva-meldinger fra før 2023 er ikke tilgjengelig (R092)
-- Innsending og validering av omvendt avgiftsplikt mva-meldinger fra før 2023 er ikke tilgjengelig (R103)
 
 
 ## Detaljspesifikasjon av reglene:
@@ -120,16 +116,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R104 }
         }
     ),
-    INNLEVERING_FØR_1_1_2022(
-        "Innsending og validering av mva-melding er ikke tilgjengelig enda." {
-            valideringsregel {
-                nå måVæreEtterEllerLik førsteJan2022
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSKATEGORI }
-            regelnummer { R000 }
-        }
-    ),
     MVA_KOMPENSASJON_INNLEVERING_FØR_1_1_2023(
         "Innsending og validering av krav om kompensasjon er ikke tilgjengelig enda." {
             valideringsregel {
@@ -142,30 +128,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R090 }
         }
     ),
-    MVA_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_INNLEVERING_FØR_1_2_2023(
-        "Innsending og validering av mva-melding for omvendt avgiftsplikt er ikke tilgjengelig enda." {
-            valideringsregel {
-                meldingskategori er omvendtAvgiftsplikt såSkal {
-                    nå væreEtterEllerLik førsteFeb2023
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSKATEGORI }
-            regelnummer { R105 }
-        }
-    ),
-    INNLEVERING_MELDING_FRA_FØR_2022(
-        "Det kan ikke sendes inn mva-melding for perioder før 01.01.2022. Denne må sendes via Altinn." {
-            valideringsregel {
-                ((meldingskategori er alminnelig) eller (meldingskategori er primærnæring)) såSkal {
-                    skattleggingsperiodeår måVæreEtterEllerLik år2022
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSKATEGORI }
-            regelnummer { R077 }
-        }
-    ),
     MVA_KOMPENSASJON_INNLEVERING_MELDING_FRA_FØR_2023(
         "Krav om kompensasjon kan ikke sendes inn for terminer før 01.01.2023. Det må sendes inn via Altinn." {
             valideringsregel {
@@ -176,18 +138,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
             regelnummer { R092 }
-        }
-    ),
-    MVA_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_INNLEVERING_MELDING_FRA_FØR_2023(
-        "Mva-melding for omvendt avgiftsplikt kan ikke sendes inn for terminer før 01.01.2023. Det må sendes inn via Altinn." {
-            valideringsregel {
-                meldingskategori er omvendtAvgiftsplikt såSkal {
-                    skattleggingsperiodeår måVæreEtterEllerLik år2023
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSKATEGORI }
-            regelnummer { R103 }
         }
     ),
     MVA_KOMPENSASJON_SKATTLEGGINGSPERIODEN_FOR__MELDINGSKATEGORI_KOMPENSASJON_MÅ_VÆRE_FERDIG(
