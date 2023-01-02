@@ -1,68 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="no:skatteetaten:fastsetting:avgift:mva:valideringsresultat:v1" xmlns:skatt="http://www.skatteetaten.no/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="no:skatteetaten:fastsetting:avgift:mva:valideringsresultat:v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xsd:annotation>
-		<xsd:documentation>
-			<xsd:attribute fixed="2021-05-06T15:13:08.808+0200" name="generertDato"/>
-			<xsd:attribute fixed="1.0" name="versjon"/>
-			<xsd:attribute fixed="xsd som inneholder informasjon om validering av mva-melding." name="beskrivelse"/>
-			<xsd:attribute fixed="Valideringsresultat" name="modellnavn"/>
-			<xsd:attribute fixed="no:skatteetaten:fastsetting:avgift:mva:valideringsresultat:v1" name="navnerom"/>
-			<xsd:attribute fixed="true" name="begrepsreferanse"/>
-			<xsd:attribute fixed="true" name="dokumentasjon"/>
-			<xsd:attribute fixed="false" name="nillable"/>
-			<xsd:attribute fixed="false" name="modellelement"/>
-			<xsd:attribute fixed="false" name="norskeTegn"/>
-		</xsd:documentation>
-	</xsd:annotation>
-	<xsd:element name="valideringsresultat" type="Valideringsresultat"/>
-	<xsd:complexType name="Valideringsresultat">
-		<xsd:sequence>
-			<xsd:element name="avvikVedMeldingslevering" type="Avvikstype"/>
-			<xsd:element name="avvik" type="Avvik" minOccurs="0" maxOccurs="unbounded"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="Avvik">
-		<xsd:sequence>
-			<xsd:element name="stiTilAvvik" type="Tekst"/>
-			<xsd:element name="mvaKode" type="Tekst" minOccurs="0"/>
-			<xsd:element name="xmlLinjenummer" type="Heltall" minOccurs="0"/>
-			<xsd:element name="xmlPosisjonPaaLinje" type="Heltall" minOccurs="0"/>
-			<xsd:element name="avviksinformasjon" type="Avviksinformasjon" maxOccurs="unbounded"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="Avviksinformasjon">
-		<xsd:sequence>
-			<xsd:element name="begrunnelse" type="MvameldingAvvik"/>
-			<xsd:element name="avvikstype" type="Avvikstype"/>
-			<xsd:element name="avvikKode" type="Tekst"/>
-			<xsd:element name="regelDefinisjon" type="Tekst"/>
-			<xsd:element name="detaljer" type="Tekst" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:simpleType name="Avvikstype">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="ingen avvik"/>
-			<xsd:enumeration value="avvikende skattemelding"/>
-			<xsd:enumeration value="mangelfull skattemelding"/>
-			<xsd:enumeration value="ugyldig skattemelding"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Tekst" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b52af3-9fe1-11e5-a9f8-e4115b280940">
-		<xsd:annotation>
-			<xsd:documentation>vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett 
-</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="4000"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Heltall" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b52af0-9fe1-11e5-a9f8-e4115b280940">
-		<xsd:annotation>
-			<xsd:documentation>hele tall, dvs. hele tall i mengden {..., -2, -1, 0, 1, 2, ...}</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:long"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="MvameldingAvvik" skatt:eksternKodeliste="http://kodelistekatalog/kodeliste/merverdiavgift/mvameldingAvvik">
-		<xsd:restriction base="xsd:string"/>
-	</xsd:simpleType>
+<xsd:schema xmlns="no:skatteetaten:fastsetting:avgift:mva:valideringsresultat:v1" xmlns:skatt="http://www.skatteetaten.no/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="no:skatteetaten:fastsetting:avgift:mva:valideringsresultat:v1">
+    <xsd:annotation>
+        <xsd:documentation>
+            <xsd:attribute fixed="2022-11-18T11:39:38.181+0100" name="generertDato"/>
+            <xsd:attribute fixed="v1.0" name="versjon"/>
+            <xsd:attribute fixed="xsd som inneholder informasjon om validering av mva-melding." name="beskrivelse"/>
+            <xsd:attribute fixed="2. Valideringsresultat" name="modellnavn"/>
+            <xsd:attribute fixed="no:skatteetaten:fastsetting:avgift:mva:valideringsresultat:v1" name="navnerom"/>
+            <xsd:attribute fixed="true" name="begrepsreferanse"/>
+            <xsd:attribute fixed="true" name="dokumentasjon"/>
+            <xsd:attribute fixed="false" name="nillable"/>
+            <xsd:attribute fixed="false" name="modellelement"/>
+            <xsd:attribute fixed="false" name="norskeTegn"/>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="valideringsresultat" type="Valideringsresultat"/>
+    <xsd:complexType name="Valideringsresultat">
+        <xsd:sequence>
+            <xsd:element name="avvikVedMeldingslevering" type="Avvikstype"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="avvik" type="Avvik"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Avvik">
+        <xsd:sequence>
+            <xsd:element name="stiTilAvvik" type="Tekst"/>
+            <xsd:element minOccurs="0" name="mvaKode" type="Tekst"/>
+            <xsd:element minOccurs="0" name="xmlLinjenummer" type="Heltall"/>
+            <xsd:element minOccurs="0" name="xmlPosisjonPaaLinje" type="Heltall"/>
+            <xsd:element maxOccurs="unbounded" name="avviksinformasjon" type="Avviksinformasjon"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Avviksinformasjon">
+        <xsd:sequence>
+            <xsd:element name="begrunnelse" type="MvameldingAvvik"/>
+            <xsd:element name="avvikstype" type="Avvikstype"/>
+            <xsd:element name="avvikKode" type="Tekst"/>
+            <xsd:element name="regelDefinisjon" type="Tekst"/>
+            <xsd:element minOccurs="0" name="detaljer" type="Tekst"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="Avvikstype">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ingen avvik"/>
+            <xsd:enumeration value="avvikende skattemelding"/>
+            <xsd:enumeration value="mangelfull skattemelding"/>
+            <xsd:enumeration value="ugyldig skattemelding"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Tekst" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b52af3-9fe1-11e5-a9f8-e4115b280940">
+        <xsd:annotation>
+            <xsd:documentation>vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4000"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Heltall" skatt:begrepsreferanse="https://data.skatteetaten.no/begrep/20b52af0-9fe1-11e5-a9f8-e4115b280940">
+        <xsd:annotation>
+            <xsd:documentation>hele tall, dvs. hele tall i mengden {..., -2, -1, 0, 1, 2, ...}</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:long"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="MvameldingAvvik" skatt:eksternKodeliste="http://kodelistekatalog/kodeliste/merverdiavgift/mvameldingAvvik">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
 </xsd:schema>
