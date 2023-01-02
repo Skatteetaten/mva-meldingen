@@ -124,6 +124,7 @@
             </spraakTekst>
         </beskrivelse>
         <kodetillegg>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <alminneligPrimær>SANN</alminneligPrimær>
         </kodetillegg>
     </kode>

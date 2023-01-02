@@ -6458,5 +6458,236 @@
             <forventetFortegn>-</forventetFortegn>
         </kodetillegg>
     </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil i regnskapsprogram</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil mva-kode for kompensasjon brukt tidligere</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>kreditnota</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil i regnskapsprogram</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil mva-kode for kompensasjon brukt tidligere</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>kreditnota</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fradrag føres i kompensasjonsmelding</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil i regnskapsprogram</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil mva-kode for kompensasjon brukt tidligere</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>kreditnota</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil i regnskapsprogram</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil mva-kode for kompensasjon brukt tidligere</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>kreditnota</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fradrag føres i kompensasjonsmelding</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil i regnskapsprogram</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil mva-kode for kompensasjon brukt tidligere</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>kreditnota</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil i regnskapsprogram</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>Feil mva-kode for kompensasjon brukt tidligere</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>kreditnota</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fradrag føres i kompensasjonsmelding</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>

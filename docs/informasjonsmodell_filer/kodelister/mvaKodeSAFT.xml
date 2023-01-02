@@ -707,12 +707,12 @@
             <beskrivelseIStandard_en>Services purchased from abroad with deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
             <kompensasjonTema_en>Purchases of services from abroad eligible for compensation (import)</kompensasjonTema_en>
             <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad eligible for compensation (high rate)</omvendtAvgiftspliktBeskrivelse_en>
-            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet med kompensasjonsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
+            <omvendtAvgiftspliktTemarekkefølge>2</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>1</kodeRekkefoelgeITema>
-            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet med kompensasjonsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tjenester fra utlandet med kompensasjonsrett (høy sats)</omvendtAvgiftspliktBeskrivelse_no>
             <fradrag_en>Deductions related to purchases (the value added tax)</fradrag_en>
             <temaRekkefoelge>5</temaRekkefoelge>
-            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktBeskrivelse_nn>Kjøp av tenester frå utlandet med kompensasjonsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_nn>
             <omvendtAvgiftspliktTema_en>Purchases eligible for compensation</omvendtAvgiftspliktTema_en>
             <kompensasjon>SANN</kompensasjon>
             <kompensasjonBeskrivelse_en>Purchases of services from abroad eligible for compensation (high rate)</kompensasjonBeskrivelse_en>
@@ -729,7 +729,7 @@
             <tema_en>Purchases of services from abroad (import)</tema_en>
             <fradrag_nn>Frådrag på kjøp av tenester frå utlandet (høg sats)</fradrag_nn>
             <omvendtAvgiftspliktTema_nn>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_nn>
-            <omvendtAvgiftspliktKoderekkefølgeITema>2</omvendtAvgiftspliktKoderekkefølgeITema>
+            <omvendtAvgiftspliktKoderekkefølgeITema>1</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Tjenester kjøpt fra utlandet med fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Inngående og utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
             <omvendtAvgiftspliktTema_no>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_no>
@@ -759,14 +759,14 @@
             <beskrivelseIStandard_en>Services purchased from abroad without deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
             <satstype>alminnelig sats</satstype>
             <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad without deduction entitlement (standard rate)</omvendtAvgiftspliktBeskrivelse_en>
-            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet uten fradragsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
+            <omvendtAvgiftspliktTemarekkefølge>1</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>2</kodeRekkefoelgeITema>
-            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet som er utan frådragsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tjenester fra utlandet uten fradragsrett (høy sats)</omvendtAvgiftspliktBeskrivelse_no>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <temaRekkefoelge>5</temaRekkefoelge>
             <alminneligPrimær>SANN</alminneligPrimær>
-            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktBeskrivelse_nn>Kjøp av tenester frå utlandet som er utan frådragsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_nn>
             <omvendtAvgiftspliktTema_en>Purchases without deduction entitlement</omvendtAvgiftspliktTema_en>
             <tema_en>Purchases of services from abroad (import)</tema_en>
             <omvendtAvgiftspliktTema_nn>Kjøp uten frådragsrett</omvendtAvgiftspliktTema_nn>
@@ -800,12 +800,12 @@
             <beskrivelseIStandard_en>Services purchased from abroad with deduction entitlement for value added tax, reduced rate, low</beskrivelseIStandard_en>
             <kompensasjonTema_en>Purchases of services from abroad eligible for compensation (import)</kompensasjonTema_en>
             <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad eligible for compensation (low rate)</omvendtAvgiftspliktBeskrivelse_en>
-            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet med kompensasjonsrett (lav sats)</omvendtAvgiftspliktTemarekkefølge>
+            <omvendtAvgiftspliktTemarekkefølge>2</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>3</kodeRekkefoelgeITema>
-            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet med kompensasjonsrett (låg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tjenester fra utlandet med kompensasjonsrett (lav sats)</omvendtAvgiftspliktBeskrivelse_no>
             <fradrag_en>Deductions related to purchases (the value added tax)</fradrag_en>
             <temaRekkefoelge>5</temaRekkefoelge>
-            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktBeskrivelse_nn>Kjøp av tenester frå utlandet med kompensasjonsrett (låg sats)</omvendtAvgiftspliktBeskrivelse_nn>
             <omvendtAvgiftspliktTema_en>Purchases eligible for compensation</omvendtAvgiftspliktTema_en>
             <kompensasjon>SANN</kompensasjon>
             <kompensasjonBeskrivelse_en>Purchases of services from abroad eligible for compensation (low rate)</kompensasjonBeskrivelse_en>
@@ -852,18 +852,18 @@
             <beskrivelseIStandard_en>Services purchased from abroad without deduction entitlement for value added tax, reduced rate, low</beskrivelseIStandard_en>
             <satstype>redusert sats</satstype>
             <omvendtAvgiftspliktBeskrivelse_en>Purchases of services from abroad without deduction entitlement (low rate)</omvendtAvgiftspliktBeskrivelse_en>
-            <omvendtAvgiftspliktTemarekkefølge>Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)</omvendtAvgiftspliktTemarekkefølge>
+            <omvendtAvgiftspliktTemarekkefølge>1</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>4</kodeRekkefoelgeITema>
-            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tenester frå utlandet som er utan frådragsrett (låg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)</omvendtAvgiftspliktBeskrivelse_no>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <tema>Kjøp av tjenester fra utlandet (import)</tema>
             <temaRekkefoelge>5</temaRekkefoelge>
             <alminneligPrimær>SANN</alminneligPrimær>
-            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktBeskrivelse_nn>Kjøp av tenester frå utlandet som er utan frådragsrett (låg sats)</omvendtAvgiftspliktBeskrivelse_nn>
             <omvendtAvgiftspliktTema_en>Purchases without deduction entitlement</omvendtAvgiftspliktTema_en>
             <tema_en>Purchases of services from abroad (import)</tema_en>
             <omvendtAvgiftspliktTema_nn>Kjøp uten frådragsrett</omvendtAvgiftspliktTema_nn>
-            <omvendtAvgiftspliktKoderekkefølgeITema>1</omvendtAvgiftspliktKoderekkefølgeITema>
+            <omvendtAvgiftspliktKoderekkefølgeITema>2</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Tjenester kjøpt fra utlandet uten fradragsrett for merverdiavgift, redusert sats, lav</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
             <omvendtAvgiftspliktTema_no>Kjøp uten fradragsrett</omvendtAvgiftspliktTema_no>
@@ -893,12 +893,12 @@
             <beskrivelseIStandard_en>Purchased emission allowances and gold with deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
             <kompensasjonTema_en>Emission allowances and gold</kompensasjonTema_en>
             <omvendtAvgiftspliktBeskrivelse_en>Purchases of emission allowances and gold eligible for compensation (high rate)</omvendtAvgiftspliktBeskrivelse_en>
-            <omvendtAvgiftspliktTemarekkefølge>Kjøp av klimakvoter og gull med kompensasjonsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
+            <omvendtAvgiftspliktTemarekkefølge>2</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>2</kodeRekkefoelgeITema>
-            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av klimakvotar og gull med kompensasjonsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av klimakvoter og gull med kompensasjonsrett (høy sats)</omvendtAvgiftspliktBeskrivelse_no>
             <fradrag_en>Deductions</fradrag_en>
             <temaRekkefoelge>7</temaRekkefoelge>
-            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktBeskrivelse_nn>Kjøp av klimakvotar og gull med kompensasjonsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_nn>
             <omvendtAvgiftspliktTema_en>Purchases eligible for compensation</omvendtAvgiftspliktTema_en>
             <kompensasjon>SANN</kompensasjon>
             <kompensasjonBeskrivelse_en>Purchases of emission allowances and gold eligible for compensation (high rate)</kompensasjonBeskrivelse_en>
@@ -915,7 +915,7 @@
             <tema_en>Emission allowances and gold</tema_en>
             <fradrag_nn>Frådrag på kjøp av klimakvoter og gull</fradrag_nn>
             <omvendtAvgiftspliktTema_nn>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_nn>
-            <omvendtAvgiftspliktKoderekkefølgeITema>2</omvendtAvgiftspliktKoderekkefølgeITema>
+            <omvendtAvgiftspliktKoderekkefølgeITema>3</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Kjøp av klimakvoter og gull med fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Inngående og utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
             <omvendtAvgiftspliktTema_no>Kjøp med kompensasjonsrett</omvendtAvgiftspliktTema_no>
@@ -945,18 +945,18 @@
             <beskrivelseIStandard_en>Purchased emission allowances and gold without deduction entitlement for value added tax, standard rate</beskrivelseIStandard_en>
             <satstype>alminnelig sats</satstype>
             <omvendtAvgiftspliktBeskrivelse_en>Purchases of emission allowances and gold without deductions (high rate)</omvendtAvgiftspliktBeskrivelse_en>
-            <omvendtAvgiftspliktTemarekkefølge>Kjøp av klimakvoter og gull uten fradragsrett (høy sats)</omvendtAvgiftspliktTemarekkefølge>
+            <omvendtAvgiftspliktTemarekkefølge>1</omvendtAvgiftspliktTemarekkefølge>
             <kodeRekkefoelgeITema>3</kodeRekkefoelgeITema>
-            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av klimakvoter og gull som er utan frådragsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_no>
+            <omvendtAvgiftspliktBeskrivelse_no>Kjøp av klimakvoter og gull uten fradragsrett (høy sats)</omvendtAvgiftspliktBeskrivelse_no>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <tema>Klimakvoter og gull</tema>
             <temaRekkefoelge>7</temaRekkefoelge>
             <alminneligPrimær>SANN</alminneligPrimær>
-            <omvendtAvgiftspliktBeskrivelse_nn>SANN</omvendtAvgiftspliktBeskrivelse_nn>
+            <omvendtAvgiftspliktBeskrivelse_nn>Kjøp av klimakvoter og gull som er utan frådragsrett (høg sats)</omvendtAvgiftspliktBeskrivelse_nn>
             <omvendtAvgiftspliktTema_en>Purchases without deduction entitlement</omvendtAvgiftspliktTema_en>
             <tema_en>Emission allowances and gold</tema_en>
             <omvendtAvgiftspliktTema_nn>Kjøp uten frådragsrett</omvendtAvgiftspliktTema_nn>
-            <omvendtAvgiftspliktKoderekkefølgeITema>1</omvendtAvgiftspliktKoderekkefølgeITema>
+            <omvendtAvgiftspliktKoderekkefølgeITema>3</omvendtAvgiftspliktKoderekkefølgeITema>
             <beskrivelseIStandard>Kjøp av klimakvoter og gull uten fradragsrett for merverdiavgift, alminnelig sats</beskrivelseIStandard>
             <kodeBrukesTilSpesifiseringAv>Utgående merverdiavgift</kodeBrukesTilSpesifiseringAv>
             <omvendtAvgiftspliktTema_no>Kjøp uten fradragsrett</omvendtAvgiftspliktTema_no>

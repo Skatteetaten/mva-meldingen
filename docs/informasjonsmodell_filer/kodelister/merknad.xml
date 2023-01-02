@@ -19,12 +19,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Husleige som blir fakturert kvartalsvis, halvårleg eller årleg, eller dersom det er sesongvariasjonar i verksemda</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Rent that is invoiced quarterly, half-yearly or yearly or seasonal variations in the business</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Husleige som blir fakturert kvartalsvis, halvårleg eller årleg, eller dersom det er sesongvariasjonar i verksemda</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -46,12 +46,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Korrigering på grunn av etterfakturering, tidlegare utelaten eller gløymd faktura eller årsoppgjersdisposisjonar</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Corrections due to post-payment invoicing, previously omitted or forgotten invoices, or annual account dispositions</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Korrigering på grunn av etterfakturering, tidlegare utelaten eller gløymd faktura eller årsoppgjersdisposisjonar</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -74,12 +74,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Korrigering på grunn av rapportering under feil kode</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Correction due to reporting under an incorrect VAT code</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Korrigering på grunn av rapportering under feil kode</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -102,12 +102,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Omsetninga er korrigert på grunn av tidlegare feil i rekneskapsprogram </tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Correction of turnover due to previous errors in accounting software </tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Omsetninga er korrigert på grunn av tidlegare feil i rekneskapsprogram </tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -131,12 +131,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Det er frådragsført meirverdiavgift i samband med eit forsikringsoppgjer som gjeld verksemda</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>VAT has been deducted in relation to an insurance settlement concerning the business</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Det er frådragsført meirverdiavgift i samband med eit forsikringsoppgjer som gjeld verksemda</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -158,12 +158,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Omsetning før registrering i Meirverdiavgiftsregisteret </tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Turnover before registration in the Value Added Tax Register</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Omsetning før registrering i Meirverdiavgiftsregisteret </tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -186,12 +186,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of differences between reports from Customs (customs declarations) and the tax return for VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -213,12 +213,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of differences between reports from Customs (customs declarations) and the tax return for VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -240,12 +240,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of differences between reports from Customs (customs declarations) and the tax return for VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -267,12 +267,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of differences between reports from Customs (customs declarations) and the tax return for VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -294,12 +294,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of differences between reports from Customs (customs declarations) and the tax return for VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -321,12 +321,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of differences between reports from Customs (customs declarations) and the tax return for VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -348,12 +348,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of differences between reports from Customs (customs declarations) and the tax return for VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på differanse mellom rapport frå Toll (tolldeklarasjonar) og skattemeldinga for meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -375,12 +375,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Forklaring på store frådrag for inngåande meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Explanation of large deductions for input VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Forklaring på store frådrag for inngåande meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -403,12 +403,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Faktura er brukt til å endre heile eller delar av ein tidlegare faktura</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Invoice is used to change all or parts of a previous invoice</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Faktura er brukt til å endre heile eller delar av ein tidlegare faktura</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -432,12 +432,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Anskaffingar som er gjort før registrering i Meirverdiavgiftsregisteret, avgiftsoppgjer tilbake i tid eller forklaring på store frådrag for inngåande meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Purchases made before registration in the VAT register, retrospective VAT refunds or explanation of large deductions for input VAT</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Anskaffingar som er gjort før registrering i Meirverdiavgiftsregisteret, avgiftsoppgjer tilbake i tid eller forklaring på store frådrag for inngåande meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -459,12 +459,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Varer og tenester som er tatt ut frå verksemda før bygget blir selt</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Goods and services withdrawn from the enterprise before the building is sold</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Varer og tenester som er tatt ut frå verksemda før bygget blir selt</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -486,12 +486,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Uttak av varer ved opphøyr av verksemda</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Withdrawal of goods after cessation of the enterprise</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Uttak av varer ved opphøyr av verksemda</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -513,12 +513,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Tilbakeføring av meirverdiavgift på kapitalvarer som gjeld fast eigedom</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Reversal of VAT on assets related to real property</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Tilbakeføring av meirverdiavgift på kapitalvarer som gjeld fast eigedom</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -540,12 +540,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Tilbakeføring av meirverdiavgift på kapitalvarer som gjeld fast personkøyretøy  </tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Reversal of VAT on assets related to passenger vehicles  </tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Tilbakeføring av meirverdiavgift på kapitalvarer som gjeld fast personkøyretøy  </tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -567,12 +567,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Berekning av utgåande avgift på bil som er frådragsført og registrert i verksemda</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Calculation of output tax on car that is deducted and registered in the enterprise</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Berekning av utgåande avgift på bil som er frådragsført og registrert i verksemda</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -594,12 +594,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Skatteetaten si bindande førehandsfråsegn (BFU) skal leggjast til grunn</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>The Tax Administration’s binding advance ruling (BFU) will be used as the basis</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Skatteetaten si bindande førehandsfråsegn (BFU) skal leggjast til grunn</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -623,12 +623,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Verksemda skal slettast i Meirverdiavgiftsregisteret. Hugs at du må søkje om sletting frå registeret i Mi meirverdiavgift</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>The enterprise must be deregistered in the VAT Register. Remember that you must apply to be deregistered from the register in My Value Added Tax</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda skal slettast i Meirverdiavgiftsregisteret. Hugs at du må søkje om sletting frå registeret i Mi meirverdiavgift</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -650,12 +650,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Verksemda er overført til eller frå eit anna organisasjonsnummer</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>The enterprise is transferred to/from another organisation number</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda er overført til eller frå eit anna organisasjonsnummer</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -677,12 +677,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Mindre omsetning enn det som er vanleg for verksemda </tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Lower revenue than is usual for the enterprise </tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Mindre omsetning enn det som er vanleg for verksemda </tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -704,12 +704,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Utbetaling ved forlis mv.</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Payment in the event of shipwreck, etc.</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Utbetaling ved forlis mv.</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -731,12 +731,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Avgiftsfritt sal av fiskefartøy </tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>VAT-free sale of fishing vessel </tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Avgiftsfritt sal av fiskefartøy </tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -758,12 +758,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Justering som følgje av ny vurdering av faktisk bruk eller sal av fast eigedom</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Adjustment due to a new assessment of actual use or sale of real property</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Justering som følgje av ny vurdering av faktisk bruk eller sal av fast eigedom</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -785,12 +785,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Korrigering på grunn av rapportering under feil mva-kode for kompensasjon</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Correction due to reporting under an incorrect VAT code for compensation</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Korrigering på grunn av rapportering under feil mva-kode for kompensasjon</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -812,12 +812,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Krav knytt til inngåande meirverdiavgift, der utgåande meirverdiavgift er frådragsført i ordinær mva-melding</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Claims related to input VAT, where output VAT has been deducted in the ordinary VAT return</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Krav knytt til inngåande meirverdiavgift, der utgåande meirverdiavgift er frådragsført i ordinær mva-melding</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -839,12 +839,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Krav knytt til inngåande meirverdiavgift, der utgåande meirverdiavgift er frådragsført i ordinær mva-melding</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Claims related to input VAT, where output VAT has been deducted in the ordinary VAT return</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Krav knytt til inngåande meirverdiavgift, der utgåande meirverdiavgift er frådragsført i ordinær mva-melding</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -866,12 +866,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Endring eller korrigering som følgje av ny vurdering av faktisk bruk i verksemd som har rett til kompensasjon</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Change or correction due to a new assessment of actual use in the enterprise that is entitled to reimbursement</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Endring eller korrigering som følgje av ny vurdering av faktisk bruk i verksemd som har rett til kompensasjon</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -886,22 +886,6 @@
         </kodetillegg>
     </kode>
     <kode>
-        <tekniskNavn>fordelingsnøkkel benyttet på kompensasjonsmeldingen for mva</tekniskNavn>
-        <beskrivelse>
-            <spraakTekst>
-                <tekst>Det er benyttet en fordeling av faktisk bruk i den kompensasjonsberettigede virksomheten på hele eller deler av avgiftsbeløpet i meldingen</tekst>
-                <spraak>no</spraak>
-            </spraakTekst>
-        </beskrivelse>
-        <gyldigForBehandling>
-            <fradato>2020-01-01</fradato>
-        </gyldigForBehandling>
-        <kodetillegg>
-            <merknadGjelder>mva-melding</merknadGjelder>
-            <kompensasjon>SANN</kompensasjon>
-        </kodetillegg>
-    </kode>
-    <kode>
         <tekniskNavn>kompensasjonskravet gjelder flere terminer</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
@@ -909,12 +893,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>I tillegg til gjeldande termin inneheld meldinga krav for terminar tilbake i tid</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>In addition to the current period, the return includes claims for previous periods</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>I tillegg til gjeldande termin inneheld meldinga krav for terminar tilbake i tid</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -936,12 +920,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Korrigering av heile eller deler av tidlegare kompensert meirverdiavgift er inkludert i kompensasjonskravet</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Correction of all or parts of previously compensated value added tax is included in the compensation claim</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Korrigering av heile eller deler av tidlegare kompensert meirverdiavgift er inkludert i kompensasjonskravet</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -963,12 +947,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Verksemda er fusjonert eller fisjonert til eit overtakande selskap i terminen som kompensasjonskravet gjeld for</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>The enterprise has been merged or demerged to an acquiring company in the period for which you are claiming compensation</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda er fusjonert eller fisjonert til eit overtakande selskap i terminen som kompensasjonskravet gjeld for</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -990,12 +974,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Justering som følgje av overdraging av bygg, anlegg eller annan fast eigedom etter anskaffinga, framstillinga eller utføringa</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Adjustment due to change of ownership of buildings, facilities or other real property following the acquisition, production or execution</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Justering som følgje av overdraging av bygg, anlegg eller annan fast eigedom etter anskaffinga, framstillinga eller utføringa</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -1017,12 +1001,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Det er brukt forholdsmessig fordeling av meirverdiavgift på fellesanskaffingar som blir brukt både i verksemd som gir rett til kompensasjon og til føremål som ikkje gir rett til kompensasjon.</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>Value added tax has been divided proportionally between joint purchases that are used both for activity that entitles you to compensation and for purposes that do not.</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Det er brukt forholdsmessig fordeling av meirverdiavgift på fellesanskaffingar som blir brukt både i verksemd som gir rett til kompensasjon og til føremål som ikkje gir rett til kompensasjon.</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -1044,12 +1028,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Verksemda har starta avviklingsperioden eller har blitt avvikla</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>The enterprise has initiated the liquidation period or has been liquidated</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda har starta avviklingsperioden eller har blitt avvikla</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -1071,12 +1055,12 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Verksemda vil sende inn kompensasjonsmelding for meirverdiavgift med krav om kompensasjon for utgåande meirverdiavgift.</tekst>
-                <spraak>nn</spraak>
-            </spraakTekst>
-            <spraakTekst>
                 <tekst>The enterprise will submit a tax return for VAT compensation with a claim for compensation for output value added tax.</tekst>
                 <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Verksemda vil sende inn kompensasjonsmelding for meirverdiavgift med krav om kompensasjon for utgåande meirverdiavgift.</tekst>
+                <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
         <gyldigForBehandling>
@@ -1088,6 +1072,33 @@
             <merknadGjelder>mva kode</merknadGjelder>
             <kortbeskrivelse_no>Fradrag føres i kompensasjonsmelding</kortbeskrivelse_no>
             <kortbeskrivelse_nn>Frådrag førast i kompensasjonsmelding</kortbeskrivelse_nn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>avvikende fakturering</tekniskNavn>
+        <beskrivelse>
+            <spraakTekst>
+                <tekst>Husleie som faktureres kvartalsvis, halvårlig eller årlig eller sesongvariasjoner i virksomheten</tekst>
+                <spraak>no</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Rent that is invoiced quarterly, half-yearly or yearly or seasonal variations in the business</tekst>
+                <spraak>en</spraak>
+            </spraakTekst>
+            <spraakTekst>
+                <tekst>Husleige som blir fakturert kvartalsvis, halvårleg eller årleg, eller dersom det er sesongvariasjonar i verksemda</tekst>
+                <spraak>nn</spraak>
+            </spraakTekst>
+        </beskrivelse>
+        <gyldigForBehandling>
+            <fradato>2020-01-01</fradato>
+        </gyldigForBehandling>
+        <kodetillegg>
+            <kortbeskrivelse_en>Non-standard invoicing</kortbeskrivelse_en>
+            <alminneligPrimær>SANN</alminneligPrimær>
+            <merknadGjelder>mva-melding</merknadGjelder>
+            <kortbeskrivelse_no>Avvikende fakturering</kortbeskrivelse_no>
+            <kortbeskrivelse_nn>Avvikande fakturering</kortbeskrivelse_nn>
         </kodetillegg>
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
