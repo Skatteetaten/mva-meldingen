@@ -322,23 +322,23 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | 81                                                | Fradrag på kjøp av varer fra utlandet (høy sats)                                          |
 | Spesifikasjonslinje til kode 81                   | Tilbakeføring av merverdiavgift for kapitalvarer (kun personkjøretøy og fast eiendom)     |
 | Spesifikasjonslinje til kode 81                   | Justering av merverdiavgift for kapitalvarer                                              |
-| Spesifikasjonslinje til kode 81                   | Kjøp med kompensasjonsrett*		                                                |
+| Spesifikasjonslinje til kode 81                   | Kjøp med kompensasjonsrett		                                                |
 | 14                                                | Fradrag på kjøp av varer fra utlandet (merverdiavgift betalt ved innførsel, høy sats)     |
 | 82                                                | Kjøp av varer fra utlandet uten fradragsrett (høy sats)                                   |
 | 83                                                | Kjøp av varer fra utlandet med fradragsrett (middels sats)                                |
 | 83                                                | Fradrag på kjøp av varer fra utlandet (middels sats)                                      |
-| Spesifikasjonslinje til kode 83                   | Kjøp med kompensasjonsrett*		                                                |
+| Spesifikasjonslinje til kode 83                   | Kjøp med kompensasjonsrett		                                                |
 | 15                                                | Fradrag på kjøp av varer fra utlandet (merverdiavgift betalt ved innførsel, middels sats) |
 | 84                                                | Kjøp av varer fra utlandet uten fradragsrett (middels sats)                               |
 | 85                                                | Kjøp av varer fra utlandet som det ikke skal beregnes merverdiavgift på (nullsats)        |
 | Kjøp av tjenester fra utlandet (import)           |                                                                                           |
 | 86                                                | Kjøp av tjenester fra utlandet med fradragsrett (høy sats)                                |
 | 86                                                | Fradrag på kjøp av tjenester fra utlandet (høy sats)                                      |
-| Spesifikasjonslinje til kode 86                   | Kjøp med kompensasjonsrett*		                                                |
+| Spesifikasjonslinje til kode 86                   | Kjøp med kompensasjonsrett		                                                |
 | 87                                                | Kjøp av tjenester fra utlandet uten fradragsrett (høy sats)                               |
 | 88                                                | Kjøp av tjenester fra utlandet med fradragsrett (lav sats)                                |
 | 88                                                | Fradrag på kjøp av tjenester fra utlandet (lav sats)                                      |
-| Spesifikasjonslinje til kode 88                   | Kjøp med kompensasjonsrett*		                                                |
+| Spesifikasjonslinje til kode 88                   | Kjøp med kompensasjonsrett		                                                |
 | 89                                                | Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)                               |
 | Fisk m.m.                                         |                                                                                           |
 | 32                                                | Salg av fisk og andre marine viltlevende ressurser                                        |
@@ -348,10 +348,10 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | 51                                                | Salg av klimakvoter og gull til næringsdrivende                                           |
 | 91                                                | Kjøp av klimakvoter og gull med fradragsrett                                              |
 | 91                                                | Fradrag på kjøp av klimakvoter og gull                                                    |
-| Spesifikasjonslinje til kode 91                   | Kjøp med kompensasjonsrett*				                                |
+| Spesifikasjonslinje til kode 91                   | Kjøp med kompensasjonsrett				                                |
 | 92                                                | Kjøp av klimakvoter og gull uten fradragsrett                                             |
 
-`* Spesifikasjonen kjøp med kompensasjonsrett skal kun brukes i terminer fra og med 2023`
+
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/)
 
