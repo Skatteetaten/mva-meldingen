@@ -317,12 +317,12 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | 81                                                       | Deductions on purchases of goods from abroad (standard rate)				|
 | Specification line for code 81                           | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | Specification line for code 81                           | Adjustment of input VAT on capital goods                                                   |
-| Specification line for code 81                           | Purchases with compensation for VAT*                                              		|
+| Specification line for code 81                           | Purchases with compensation for VAT                                              		|
 | 14                                                       | Purchases of goods from abroad, value added tax paid upon import (standard rate)		|
 | 82                                                       | Purchases of goods from abroad without deduction (standard rate)  				|
 | 83                                                       | Purchases of goods from abroad with deduction (middle rate)                                |
 | 83                                                       | Deductions on purchases of goods from abroad (middle rate)        				|
-| Specification line for code 81                           | Purchases with compensation for VAT*                                              		|
+| Specification line for code 83                           | Purchases with compensation for VAT                                              		|
 | 15                                                       | Purchases of goods from abroad, value added tax paid upon import (middle rate)             |
 | 84                                                       | Purchases of goods from abroad without deduction (middle rate)            			|
 | 85                                                       | Purchases of goods from abroad with a zero-rate                                            |
@@ -333,7 +333,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | 87                                                       | Purchases of services from abroad without deduction (standard rate)			|
 | 88                                                       | Purchases of services from abroad with deduction (low rate)                                |
 | 88                                                       | Deductions on purchases of services from abroad (low rate)					|
-| Specification line for code 88                           | Purchases with compensation for VAT*	                                      		|
+| Specification line for code 88                           | Purchases with compensation for VAT	                                      		|
 | 89                                                       | Purchases of services from abroad without deduction (low rate)	    			|
 | Fish etc.                                                |                                                                                            |
 | 32                                                       | Sales of fish and other marine wildlife resources                                          |
@@ -343,9 +343,9 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | 51                                                       | Sales of emission allowances and gold to businesses/self-employed persons                  |
 | 91                                                       | Purchases of emission allowances and gold with deduction                                   |
 | 91                                                       | Deductions on purchases of emission allowances and gold                                    |
-| Specification line for code 81                           | Purchases with compensation for VAT*                                                   	|
+| Specification line for code 81                           | Purchases with compensation for VAT                                                  	|
 | 92                                                       | Purchases of emission allowances and gold without deduction	      			|
-* The specification "Purchases with compensation for VAT" can only be used in VAT-terms after 2022. 
+
 
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/kodelister/)
 
