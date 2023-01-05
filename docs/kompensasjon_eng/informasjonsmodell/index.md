@@ -183,6 +183,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 </table>
 
 <br>
+	
 ### Identifikator (Identifier, Either organisasjonsnummer or foedselsnummer)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -202,6 +203,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 </table>
 
 <br>
+	
 ### Skattleggingsperiode (taxation period)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -224,6 +226,7 @@ VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subp
 </table>
 
 <br>
+	
 ### Vedlegg (Attachment)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -255,6 +258,7 @@ VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subp
 </table>
 
 <br>
+	
 ### Vedleggsfil (Attachment file)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
