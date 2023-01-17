@@ -13,21 +13,23 @@ description: "XSD for tax return for VAT compensation (kompensasjonsmelding for 
 ### Change log
 
 | Date       | What changed?                                                                     |
-| :--------- |:----------------------------------------------------------------------------------|
+| :--------- | :-------------------------------------------------------------------------------- |
 | 2022.06.30 | Initial version of documentation for compensation report for VAT                  |
 | 2022.28.10 | Code lists updated related to introduction of compensation and reverse liability. |
-| 2022.16.11 | Updated description for changes in code lists					 |
+| 2022.16.11 | Updated description for changes in code lists                                     |
 
 ## Change in the code list for as a consequence of the VAT-report for VAT compensation
-In the  code list for remarks (merknad.xml) and SAFT-T (mvaKodeSAFT.xml) the following has been added:
+
+In the code list for remarks (merknad.xml) and SAFT-T (mvaKodeSAFT.xml) the following has been added:
 
     <kompensasjon>SANN</kompensasjon>
+
 and
-    <alminneligPrimær>SANN</alminneligPrimær> 
+<alminneligPrimær>SANN</alminneligPrimær>
 
-These additions shal be used to decide if the code pertains to ordinary/primary business or compensation. 
+These additions shal be used to decide if the code pertains to ordinary/primary business or compensation.
 
-Notice that when the ERP suppliers start using the new version of the code list they will have to adapt to these code list additions. 
+Notice that when the ERP suppliers start using the new version of the code list they will have to adapt to these code list additions.
 Codes will then be chosen based on whether or not the code has the code addition (kodetillegg) kompensasjon=SANN or alminneligPrimær=SANN.
 
 ## Version 1.0 of the XSD for the tax return for VAT compensation
@@ -38,7 +40,6 @@ Version 1.0 of this XSD is found here [no.skatteetaten.fastsetting.avgift.mva.sk
 Graphical representation of the XSD and encoding for the [tax return for VAT compensation](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
 
 ![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftKompensasjon.jpg)
-
 
 Example files for tax return for VAT compensation in XML format can be downloaded [here](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
 
@@ -110,6 +111,7 @@ Purpose: to ensure that the correct amount is being paid
 </table>
 
 ### MvaSpesifikasjonslinje (VAT-specification line)
+
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
   <tr><td>mvaKode</td><td>Classification of incoming and outgoing VAT in accordance with the Norwegian SAF-T standard <br>
@@ -183,6 +185,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 </table>
 
 <br>
+	
 ### Identifikator (Identifier, Either organisasjonsnummer or foedselsnummer)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -202,6 +205,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 </table>
 
 <br>
+	
 ### Skattleggingsperiode (taxation period)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -224,6 +228,7 @@ VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subp
 </table>
 
 <br>
+	
 ### Vedlegg (Attachment)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -255,6 +260,7 @@ VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subp
 </table>
 
 <br>
+	
 ### Vedleggsfil (Attachment file)
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Description</th></tr>
@@ -278,25 +284,25 @@ VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subp
 
 ## Encoding (code List)
 
-| Group and code                                                     | Description of code and specification                                 		 |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
-| Purchases of goods and services in Norway with compensation for VAT|                                                                                   |
-| 1                                                                  | Purchases of goods and services with compensation for VAT (standard rate)         |
-| Specification line for code 1                                      | Adjustment of VAT compensation for real property                                  |
-| 11                                                                 | Purchases of goods and services with compensation for VAT (middle rate)	         |
-| 13                                                                 | Purchases of goods and services with compensation for VAT (low rate)              |
-| Purchases of goods from abroad with compensation for VAT (import)  |                                                                                   |
-| 14                                                                 | Compensation for value added tax paid upon import (standard rate)                 |
-| Specification line for code 14                                     | Adjustment of VAT compensation for real property                                  |
-| 15                                                                 | Compensation for value added tax paid upon import (middle rate)                   |
-| 81                                                                 | Purchases of goods from abroad with compensation for VAT (standard rate)          |
-| Specification line for code 81                                     | Adjustment of VAT compensation for real property                                  |
-| 83                                                                 | Purchases of goods from abroad with compensation for VAT (middle rate)            |
-| Purchases of services from abroad with compensation for VAT(import)|                                                                                   |
-| 86                                                                 | Purchases of services from abroad with compensation for VAT (standard rate)       |
-| 88                                                                 | Purchases of services from abroad with compensation for VAT (low rate)            |
-| Emission allowances and gold                                       |                                                                                   |
-| 91                                                                 | Purchases of emission allowances and gold with compensation for VAT (standard rate)|
+| Group and code                                                      | Description of code and specification                                               |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Purchases of goods and services in Norway with compensation for VAT |                                                                                     |
+| 1                                                                   | Purchases of goods and services with compensation for VAT (standard rate)           |
+| Specification line for code 1                                       | Adjustment of VAT compensation for real property                                    |
+| 11                                                                  | Purchases of goods and services with compensation for VAT (middle rate)             |
+| 13                                                                  | Purchases of goods and services with compensation for VAT (low rate)                |
+| Purchases of goods from abroad with compensation for VAT (import)   |                                                                                     |
+| 14                                                                  | Compensation for value added tax paid upon import (standard rate)                   |
+| Specification line for code 14                                      | Adjustment of VAT compensation for real property                                    |
+| 15                                                                  | Compensation for value added tax paid upon import (middle rate)                     |
+| 81                                                                  | Purchases of goods from abroad with compensation for VAT (standard rate)            |
+| Specification line for code 81                                      | Adjustment of VAT compensation for real property                                    |
+| 83                                                                  | Purchases of goods from abroad with compensation for VAT (middle rate)              |
+| Purchases of services from abroad with compensation for VAT(import) |                                                                                     |
+| 86                                                                  | Purchases of services from abroad with compensation for VAT (standard rate)         |
+| 88                                                                  | Purchases of services from abroad with compensation for VAT (low rate)              |
+| Emission allowances and gold                                        |                                                                                     |
+| 91                                                                  | Purchases of emission allowances and gold with compensation for VAT (standard rate) |
 
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/kodelister/)
 
