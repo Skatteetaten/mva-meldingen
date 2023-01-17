@@ -155,7 +155,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods and services with deductions (middle rate)</tekst>
+                <tekst>Purchases of goods and services with deductions (medium rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -168,7 +168,7 @@
         </gyldigForBehandling>
         <kodetillegg>
             <tema_nn>Kjøp av varer og tenester i Noreg</tema_nn>
-            <beskrivelseIStandard_en>Deductible domestic input value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
+            <beskrivelseIStandard_en>Deductible domestic input value added tax, reduced rate, medium rate</beskrivelseIStandard_en>
             <kompensasjonTema_en>Purchases of goods and services in Norway eligible for compensation</kompensasjonTema_en>
             <tapPaaKrav>SANN</tapPaaKrav>
             <satstype>redusert sats, næringsmiddel</satstype>
@@ -305,7 +305,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Deductions on purchases of goods from abroad, value added tax paid upon import (middle rate)</tekst>
+                <tekst>Deductions on purchases of goods from abroad, value added tax paid upon import (medium rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -318,7 +318,7 @@
         </gyldigForBehandling>
         <kodetillegg>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
-            <beskrivelseIStandard_en>Deductible import value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
+            <beskrivelseIStandard_en>Deductible import value added tax, reduced rate, medium rate</beskrivelseIStandard_en>
             <kompensasjonTema_en>Purchases of goods from abroad eligible for compensation (import)</kompensasjonTema_en>
             <satstype>redusert sats, næringsmiddel</satstype>
             <kodeRekkefoelgeITema>4</kodeRekkefoelgeITema>
@@ -344,7 +344,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sales and withdrawals of goods and services (middle rate)</tekst>
+                <tekst>Sales and withdrawals of goods and services (medium rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -360,7 +360,7 @@
             <tema>Salg av varer og tjenester i Norge</tema>
             <temaRekkefoelge>1</temaRekkefoelge>
             <alminneligPrimær>SANN</alminneligPrimær>
-            <beskrivelseIStandard_en>Output value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
+            <beskrivelseIStandard_en>Output value added tax, reduced rate, medium rate</beskrivelseIStandard_en>
             <satstype>redusert sats, næringsmiddel</satstype>
             <uttak>SANN</uttak>
             <kodeRekkefoelgeITema>2</kodeRekkefoelgeITema>
@@ -584,7 +584,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods from abroad with deductions (middle rate)</tekst>
+                <tekst>Purchases of goods from abroad with deductions (medium rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -598,7 +598,7 @@
         <kodetillegg>
             <tema_nn>Kjøp av varer frå utlandet (import)</tema_nn>
             <fradrag>Fradrag på kjøp av varer fra utlandet (middels sats)</fradrag>
-            <beskrivelseIStandard_en>Basis, import of goods with deduction entitlement for import value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
+            <beskrivelseIStandard_en>Basis, import of goods with deduction entitlement for import value added tax, reduced rate, medium rate</beskrivelseIStandard_en>
             <kompensasjonTema_en>Purchases of goods from abroad eligible for compensation (import)</kompensasjonTema_en>
             <kompensasjonsrett>SANN</kompensasjonsrett>
             <satstype>redusert sats, næringsmiddel</satstype>
@@ -627,7 +627,7 @@
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of goods from abroad without deduction entitlement (middle rate)</tekst>
+                <tekst>Purchases of goods from abroad without deduction entitlement (medium rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -643,7 +643,7 @@
             <tema>Kjøp av varer fra utlandet (import)</tema>
             <temaRekkefoelge>4</temaRekkefoelge>
             <alminneligPrimær>SANN</alminneligPrimær>
-            <beskrivelseIStandard_en>Basis, import of goods without deduction entitlement for import value added tax, reduced rate, middle rate</beskrivelseIStandard_en>
+            <beskrivelseIStandard_en>Basis, import of goods without deduction entitlement for import value added tax, reduced rate, medium rate</beskrivelseIStandard_en>
             <satstype>redusert sats, næringsmiddel</satstype>
             <kodeRekkefoelgeITema>6</kodeRekkefoelgeITema>
             <tema_en>Purchases of goods from abroad (import)</tema_en>
