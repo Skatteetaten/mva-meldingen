@@ -162,7 +162,7 @@ Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
 - Merknader må være gyldig for brukt mva-kode (motsatt fortegn) (R075)
 - Merknader må være gyldig for brukt mva-kode (linje med spesifikasjon) (R076)
 - Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett må ha med grunnlag og sats (R116)
-- Merverdiavgift i kodelinjer skulle ha lavere beløp enn grunnlaget (R122)
+- Merverdiavgift i kodelinjer skal ha lavere beløp enn grunnlaget (R122)
 
 Følgende valideringsregler er foreløpig definert for ordinær (alminnelig og primærnæring) mva-meldinger:
 - Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler (R020)
@@ -206,7 +206,7 @@ Følgende valideringsregler er foreløpig definert for ordinær (alminnelig og p
 - Mva-meldinger for tidligere terminer skulle vært levert (R061)
 - Mva-meldinger for tidligere terminer skulle vært levert og derfor vil avgift til gode for denne terminen ikke bli utbetalt (R062)
 - Kontonummer må være registrert for meldinger som kunne føre til en utbetaling (R080)
-- Beløpet på koden og spesifikasjonslinje som gjelder kjøp med kompensasjonsrett skulle ikke være like (R115)
+- Beløpet på koden og spesifikasjonslinje som gjelder kjøp med kompensasjonsrett skal ikke være like (R115)
 
 Følgende valideringsregler er foreløpig definert for omvendt avgiftsplikt mva-meldinger:
 - Terminlengde må være 3-månedlig (R106)
