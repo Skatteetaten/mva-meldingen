@@ -19,22 +19,30 @@ const gatsbyConfig = {
         href: "/kompensasjon",
         name: "Kompensasjonsmeldingen",
       },
+      {
+        href: "/omvendt",
+        name: "Omvendt avgiftsplikt",
+      },
       //      {
       //        href: "/frontpage_eng",
       //        name: "Frontpage in English",
       //      },
       {
         href: "/english",
-        name: "Common",
+        name: "Documentation in English",
       },
-      {
-        href: "/mvameldingen_eng",
-        name: "VAT report",
-      },
-      {
-        href: "/kompensasjon_eng",
-        name: "VAT Compensation",
-      },
+      //      {
+      //        href: "/mvameldingen_eng",
+      //        name: "VAT report",
+      //      },
+      //      {
+      //        href: "/kompensasjon_eng",
+      //        name: "VAT Compensation",
+      //      },
+      //      {
+      //        href: "/omvendt_eng",
+      //        name: "Reverse Tax Liability",
+      //      },
     ],
   },
   pathPrefix: "/mva-meldingen",

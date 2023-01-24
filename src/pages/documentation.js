@@ -31,10 +31,6 @@ const DocumentationPage = ({
           <a href="https://skatteetaten.github.io/mva-meldingen/english/">
             English
           </a>
-          <h3>
-            Vi oppdaterer dokumentasjonen med ny struktur og informasjon om
-            kompensasjonsmelding - feil og døde lenker kan forekomme
-          </h3>
           <h1>Dokumentasjon felles</h1>
         </SingleColumnRow>
         <SingleColumnRow>

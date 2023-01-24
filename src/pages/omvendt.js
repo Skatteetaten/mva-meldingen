@@ -5,7 +5,7 @@ import SkeBasis from "@skatteetaten/frontend-components/SkeBasis";
 import { SingleColumnRow } from "../components/Columns";
 import { graphql, Link } from "gatsby";
 
-const KompensasjonPage = ({
+const OmvendtPage = ({
   data: {
     allMarkdownRemark: { edges },
     site: { pathPrefix },
@@ -14,8 +14,7 @@ const KompensasjonPage = ({
   const prefix = process.env.NODE_ENV !== "production" ? "" : pathPrefix;
   const contents = edges
     .filter(
-      ({ node }) =>
-        node.fields && node.fields.slug.search("/kompensasjon/") >= 0
+      ({ node }) => node.fields && node.fields.slug.search("/omvendt/") >= 0
     )
     .map(({ node }) => ({
       to: `${prefix}${node.fields.slug}`,
@@ -28,11 +27,14 @@ const KompensasjonPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <a href="https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/">
+          <a href="https://skatteetaten.github.io/mva-meldingen/omvendt_eng/">
             English
           </a>
-
-          <h1>Dokumentasjon kompensasjonsmeldingen</h1>
+          <h3>
+            Vi oppdaterer dokumentasjonen med ny struktur og informasjon om
+            omvendt avgiftsplikt - feil og døde lenker kan forekomme
+          </h3>
+          <h1>Dokumentasjon omvendt avgiftsplikt</h1>
         </SingleColumnRow>
         <SingleColumnRow>
           <NavigationTile
@@ -45,10 +47,10 @@ const KompensasjonPage = ({
   );
 };
 
-export default KompensasjonPage;
+export default OmvendtPage;
 
 export const pageQuery = graphql`
-  query KompensasjonQuery {
+  query OmvendtQuery {
     site {
       pathPrefix
     }

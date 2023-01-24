@@ -31,10 +31,6 @@ const VATVATPage = ({
           <a href="https://skatteetaten.github.io/mva-meldingen/mvameldingen/">
             Norwegian
           </a>
-          <h3>
-            We are updating our documentation with new structure and information
-            about tax return for VAT compensation.
-          </h3>
           <h1>Documentation VAT report</h1>
         </SingleColumnRow>
         <SingleColumnRow>
