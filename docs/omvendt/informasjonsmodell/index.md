@@ -14,24 +14,20 @@ description: "XSD for kompensasjonsmelding
 
 | Dato       | Hva ble endret?                                                                |
 | :--------- | :----------------------------------------------------------------------------- |
-| 2022.06.22 | Side opprettet for kompensasjonsmelding                                        |
-| 2022.28.10 | Oppdatert kodelister relatert til kompensasjonsmelding og omvendt avgiftsplikt |
-| 2022.11.11 | Oppdatert beskrivelse for endrede kodelister                                   |
+| 2022.06.22 | Side opprettet for omvendt avgiftsplikt                                        |
 
-## Endring i kodelister som en konsekvens av innføring av kompensasjonsmelding
+
+## Endring i kodelister som en konsekvens av innføring av mva-melding for omvendt avgiftsplikt: 
 
 I kodelisten for merknad (merknad.xml) og SAFT-T (mvaKodeSAFT.xml) er følgende kodetillegg lagt til:
 
-    <kompensasjon>SANN</kompensasjon>
+    <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
 
-og
 
-    <alminneligPrimær>SANN</alminneligPrimær>
+Dette kodetillegget skal benyttes til å vise at den aktuelle koden gjelder omvendt avgiftsplikt.
 
-Disse kodetilleggene skal benyttes til å avgjøre om den aktuelle koden gjelder alminnelig næring og/eller primærnæring eller om koden gjelder kompensasjonsmelding.
-
-Merk at når systemleverandør tar i bruk ny versjon av kodelistene så må det taes hensyn til disse to kodetilleggene.
-Koder blir da valgt basert på om koden har kodetillegg kompensasjon=SANN eller alminneligPrimær=SANN.
+Merk at når systemleverandør tar i bruk ny versjon av kodelistene så må det taes hensyn til kodetillegget.
+Koder blir da valgt basert på om koden har kodetillegg omvendtAvgiftsplikt=SANN, kompensasjon=SANN eller alminneligPrimær=SANN.
 
 ## XSD for kompensasjonsmelding for merverdiavgift versjon 1.0
 
