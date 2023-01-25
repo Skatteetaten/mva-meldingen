@@ -147,7 +147,9 @@ description: "Regler for utfylling av mva-melding "
   <tr>
     <td>2023.01.26</td>
     <ul>
-      <li> Flytt omvendt avgiftsplikt regler [hit](https://skatteetaten.github.io/mva-meldingen/omvendt/forretningsregler/)
+      <li> Flytt omvendt avgiftsplikt regler [hit](https://skatteetaten.github.io/mva-meldingen/omvendt/forretningsregler/)</li>
+    </ul>
+  </tr>
 </table>
 
 ## Valideringsregler
