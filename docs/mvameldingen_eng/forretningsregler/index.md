@@ -148,7 +148,7 @@ description: "Validation rules for the VAT tax return"
 	<td>2023.01.26</td>
 	<td>
 		<ul>
-			<li> Move reverse tax liability rules to https://skatteetaten.github.io/mva-meldingen/omvendt-eng/forretningsregler/ </li>
+			<li> Move reverse tax liability rules to https://skatteetaten.github.io/mva-meldingen/omvendt_eng/forretningsregler/</li>
 		</ul>
 	</td>
     </tr>
