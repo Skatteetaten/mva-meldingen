@@ -1,10 +1,10 @@
 ---
 icon: "cloud"
-title: "Validation rules"
-description: "Validation rules for the VAT tax return"
+title: "Validation rules - reverse tax liability return"
+description: "Validation rules for the reverse tax liability VAT return"
 ---
 
-[Norwegian](https://skatteetaten.github.io/mva-meldingen/kompensasjon/forretningsregler/)
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/omvendt/forretningsregler/)
 
 ### Change log
 
