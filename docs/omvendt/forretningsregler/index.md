@@ -11,7 +11,7 @@ description: "Regler for utfylling av omvendt avgiftsplikt melding "
 <table align=center>
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
     <tr>
-      <td>2022.01.26</td>
+      <td>2023.01.26</td>
       <td>Lagt til side for valideringsregler omvendt avgiftsplikt</td>
     </tr>
 </table>
