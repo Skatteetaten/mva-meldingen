@@ -1,26 +1,18 @@
 ---
 icon: "cloud"
-title: "Valideringsregler - kompensasjonsmelding"
-description: "Regler for utfylling av kompensasjonsmeldingmelding "
+title: "Valideringsregler - omvendt avgiftsplikt melding"
+description: "Regler for utfylling av omvendt avgiftsplikt melding "
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/forretningsregler/)
+[English](https://skatteetaten.github.io/mva-meldingen/omvendt_eng/forretningsregler/)
 
 ### Endringslogg
 
 <table align=center>
   <tr><th style="width:25%" align=left>Dato</th><th align=left> Hva ble endret? </th></tr>
     <tr>
-      <td>2022.06.26</td>
-      <td>Lagt til side for valideringsregler kompensasjonsmelding</td>
-    </tr>
-  <tr>
-      <td>2023.01.01</td>
-      <td>
-          <ul>
-            <li> Informasjon om forretningsregler for krav om kompensasjon lagt til </li>
-          </ul>      
-      </td>
+      <td>2022.01.26</td>
+      <td>Lagt til side for valideringsregler omvendt avgiftsplikt</td>
     </tr>
 </table>
 
@@ -29,7 +21,6 @@ description: "Regler for utfylling av kompensasjonsmeldingmelding "
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.
 
 Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
-
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift (R018)
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats (R019)
 - Meldingen må være en ordinær (aliminnelig eller primærnæring) melding, krav om kompensasjon eller omvendt avgiftsplikt mva-melding (R104)
@@ -40,23 +31,21 @@ Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
 - Merknader må være gyldig for brukt mva-kode (vanlig fortegn) (R074)
 - Merknader må være gyldig for brukt mva-kode (motsatt fortegn) (R075)
 - Merknader må være gyldig for brukt mva-kode (linje med spesifikasjon) (R076)
+- Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett må ha med grunnlag og sats (R116)
+- Merverdiavgift i kodelinjer skal ha lavere beløp enn grunnlaget (R122)
 
-Følgende valideringsregler er foreløpig definert for krav om kompensasjon mva-meldinger:
-
-- Mva-meldingen kan ikke sendes inn før terminen har utløpt (R089)
-- Terminlengde må være 2-månedlig (R095)
-- Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler (R086)
-- Spesifikasjonslinjer skal ha en gyldig mva-kode i krav om kompensasjon mva-meldinger (R088)
-- Kodelinjer skal føres med grunnlag og sats (R093)
-- Det må sendes inn spesifikasjonslinjer når det er oppgitt beløp i 'fastsatt merverdiavgift' feltet (R100)
-- Virksomheter som er registrert som et kommunalt foretak kan ikke sende inn mva-meldingen (R094)
-- Mva-meldingen må sendes inn før innleveringsfristen for terminen (R096)
-- Endring av krav om kompensasjon innsendt etter innleveringsfristen kan ikke være mer til gode enn det som allerede er sendt inn (R097)
-- Første krav om kompensasjon for terminen kan ikke være 0 kroner (R098)
-- Første krav om kompensasjon til utbetalig for året må være på minst 20 000 kroner (R099)
-- Koder 81 og 83 kan kun brukes av registrerte virksomheter (R101)
-- Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1, 14 eller 81 (R087)
-- Spesifikasjonslinje som gjelder tap på krav, uttak eller tilbakeføring av inngående mva. er ugyldig (R091)
+Følgende valideringsregler er foreløpig definert for omvendt avgiftsplikt mva-meldinger:
+- Terminlengde må være 3-månedlig (R106)
+- Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler (R108)
+- Spesifikasjonslinjer skal ha en gyldig mva-kode i omvendt avgiftsplikt mva-meldinger (R113)
+- Det må sendes inn spesifikasjonslinjer når det er oppgitt beløp i 'fastsatt merverdiavgift' feltet (R107)
+- Utgående mva. skal føres med grunnlag og sats (R109)
+- Det skal ikke føres beløp både for koden og tilhørende spesifikasjon (R112)
+- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva., tap på krav og uttak kan ikke sendes inn på omvendt avgiftsplikt mva-meldinger (R110)
+- Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett kan kun sendes inn på mva-kode 86, 88 og 91 (R111)
+- Innsendte koder stemmer ikke med beløpet oppgitt i 'fastsatt merverdiavgift' felt (R119)
+- 'fastsatt merverdiavgift' beløpet skal ikke være kr 0 (R118)
+- Summert grunnlag må være over kr 2 000 (R117)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -69,8 +58,9 @@ Følgende tekniske regler er også spesifisert som validerer xsd format og kodel
 
 Følgende praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:
 
-- Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2023 for krav om kompensasjon mva-meldinger (R090)
-- Innsending og validering av krav om kompensasjon mva-meldinger fra før 2023 er ikke tilgjengelig (R092)
+- Innsending og validering tjeneste er ikke tilgjengelig før 01.02.2023 for omvendt avgiftsplikt mva-meldinger (R105)
+- Innsending og validering av omvendt avgiftsplikt mva-meldinger fra før 2023 er ikke tilgjengelig (R103)
+
 
 ## Detaljspesifikasjon av reglene:
 
@@ -116,56 +106,73 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R104 }
         }
     ),
-    MVA_KOMPENSASJON_INNLEVERING_FØR_1_1_2023(
-        "Innsending og validering av krav om kompensasjon er ikke tilgjengelig enda." {
+    MVA_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_INNLEVERING_FØR_1_2_2023(
+        "Innsending og validering av mva-melding for omvendt avgiftsplikt er ikke tilgjengelig enda." {
             valideringsregel {
-                meldingskategori er kompensasjon såSkal {
-                    nå væreEtterEllerLik førsteJan2023
+                meldingskategori er omvendtAvgiftsplikt såSkal {
+                    nå væreEtterEllerLik førsteFeb2023
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
-            regelnummer { R090 }
+            regelnummer { R105 }
         }
     ),
-    MVA_KOMPENSASJON_INNLEVERING_MELDING_FRA_FØR_2023(
-        "Krav om kompensasjon kan ikke sendes inn for terminer før 01.01.2023. Det må sendes inn via Altinn." {
+    MVA_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_INNLEVERING_MELDING_FRA_FØR_2023(
+        "Mva-melding for omvendt avgiftsplikt kan ikke sendes inn for terminer før 01.01.2023. Det må sendes inn via Altinn." {
             valideringsregel {
-                meldingskategori er kompensasjon såSkal {
+                meldingskategori er omvendtAvgiftsplikt såSkal {
                     skattleggingsperiodeår måVæreEtterEllerLik år2023
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
-            regelnummer { R092 }
+            regelnummer { R103 }
         }
     ),
-    MVA_KOMPENSASJON_SKATTLEGGINGSPERIODEN_FOR__MELDINGSKATEGORI_KOMPENSASJON_MÅ_VÆRE_FERDIG(
-        "Krav om kompensasjon kan ikke sendes inn før terminen har utløpt."
+    MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT(
+        "Det skal ikke føres beløp både for koden og tilhørende spesifikasjon."
         {
             valideringsregel {
-                meldingskategori er kompensasjon såSkal {
-                    (nå væreEtter skatteleggingsperiodeSluttdato)
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    mvaSpesifikasjonslinje.detIkkeFinnesEnKodeBådeMedOgUtenSpesifikasjon()
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
-            regelnummer { R089 }
+            regelnummer { R112 }
         }
     ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_UGYLDIG_TERMINKATEGORI(
-        "Kompensasjonsmelding kan kun sendes inn med terminlengde 2-månedlig."
+    MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_TERMINKATEGORI(
+        "Mva-meldinger for omvendt avgiftsplikt kan kun sendes inn med terminlengde 3-månedlig."
         {
             valideringsregel {
-                meldingskategori er kompensasjon såSkal {
-                    skattleggingsperiodetype være toMånedlig
+                meldingskategori er omvendtAvgiftsplikt såSkal {
+                    skattleggingsperiodetype være treMånedlig
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
-            regelnummer { R095 }
+            regelnummer { R106 }
         }
     ),
+    MVA_MELDINGSINNHOLD_GRUNNLAG_ER_LAVERE_ENN_BEREGNET_AVGIFT(
+        "Beregnet merverdiavgift i kodelinjen har høyere beløp enn oppgitt grunnlag." {
+            valideringsregel {
+                (
+                    (meldingskategori er alminnelig) eller (meldingskategori er primærnæring) eller (meldingskategori er omvendtAvgiftsplikt)
+                    ) såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje -> linje.grunnlag erStørreEnn 0.0 }
+                        .skal { linje -> linje.grunnlag erStørreEnn linje.merverdiavgift }
+                }
+            }
+            alvorlighetsgrad { Avvikstype.UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R122 }
+        }
+    ),
+    
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
@@ -190,62 +197,91 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R019 }
         }
     ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_INNGÅENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER(
-        "Merknad må legges ved som forklaring på hvorfor det er benyttet motsatt fortegn."
+    MVA_OMVENDT_AVGIFTSPLIKT_KODER_FINNES_FASTSATT_MERVERDIAVGIFT_KR_0(
+        "Innsendte koder stemmer ikke med beløpet oppgitt i 'Fastsatt merverdiavgift'." {
+            valideringsregel {
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje -> (linje.grunnlag ikkeEr tomt) og (fastsattmerverdiavgift er (0.0)) og       (erFørsteMvaMeldingForTerminOmvendtAvgiftsplikt) }
+                        .skal { linje -> linje.grunnlag * linje.sats væreRundetNedTil fastsattmerverdiavgift }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R119 }
+        }
+    ),
+
+    MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UTGÅENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER(
+        "Merknad må legges ved som forklaring på hvorfor det er benyttet motsatt fortegn for grunnlag og utgående merverdiavgift."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) såSkal {
-                    kodene(1, 11, 13, 14, 15, 81, 83, 86, 88, 91)
-                        .hvor { linje -> linje.merverdiavgift erStørreEnn 0.0 }
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    kodene(86, 87, 88, 89, 91, 92)
+                        .hvor { linje -> linje.grunnlag erMindreEnn 0.0 }
                         .skal { linje ->
-                            ((linje.merknad?.beskrivelse har innhold) eller (linje.merknad?.utvalgtMerknad har innhold)) medmindre (
-                                (
-                                    linje.mvaKode væreMedI mvaKodene(
-                                        1,
-                                        14,
-                                        81
-                                    ) og (linje.spesifikasjon er JUSTERING_KOMPENSASJON.spesifikasjon.kode)
-                                    )
-                                )
+                            (linje.merknad?.beskrivelse har innhold) eller
+                                (linje.merknad?.utvalgtMerknad har innhold)
                         }
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
-            regelnummer { R086 }
+            regelnummer { R108 }
         }
     ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_UGYLDIG_MVA_KODE_FOR_OPPGITT_MELDINGSKATEGORI(
-        "Koden kan ikke brukes i kompensasjonsmelding for merverdiavgift."
+    MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_MVA_KODE_FOR_OPPGITT_MELDINGSKATEGORI(
+        "Koden kan ikke brukes i mva-meldingen for omvendt avgiftsplikt."
         {
-            valideringsregel {
-                (meldingskategori er kompensasjon) såSkal {
-                    mvaSpesifikasjonslinje.skal { linje ->
-                        linje.mvaKode væreMedI mvaKodene(1, 11, 13, 14, 15, 81, 83, 86, 88, 91)
-                    }
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
-            regelnummer { R088 }
-        }
-    ),
-    MVA_KOMPENSASJON_KODE_INNGÅENDE_AVGIFT_MANGLER_GRUNNLAG_OG_SATS(
-        "Kodelinjen må ha grunnlag og sats."
-        {
-            valideringsregel {
-                meldingskategori er kompensasjon såSkal {
-                    mvaSpesifikasjonslinje.skal { linje ->
-                        (linje.sats ha innhold) og (linje.grunnlag ha innhold)
-                    }
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
-            regelnummer { R093 }
-        }
-    ),
 
+            valideringsregel {
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    mvaSpesifikasjonslinje.skal { linje ->
+                        linje.mvaKode væreMedI mvaKodene(86, 87, 88, 89, 91, 92)
+                    }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R113 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_MANGLER_GRUNNLAG_OG_SATS(
+        "Beløp som gjelder utgående avgift skal ha med grunnlag og sats."
+        {
+            valideringsregel {
+                meldingskategori er omvendtAvgiftsplikt såSkal {
+                    mvaSpesifikasjonslinje.hvor { linje ->
+                        linje.mvaKode væreMedI mvaKodene(86, 87, 88, 89, 91, 92)
+                    }
+                        .skal { linje -> linje.sats ha innhold og (linje.grunnlag ha innhold) }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R109 }
+        }
+    ),
+    MVA_SPESIFIKASJONSLINJEN_KJØP_MED_KOMPENSASJONSRETT_MANGLER_GRUNNLAG_OG_SATS(
+        "Beløp som gjelder utgående avgift skal ha med grunnlag og sats."
+        {
+            valideringsregel {
+                (
+                    (meldingskategori er alminnelig) eller (meldingskategori er primærnæring) eller (meldingskategori er omvendtAvgiftsplikt)
+                    ) såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje -> linje.spesifikasjon er KOMPENSASJONSRETT.spesifikasjon.kode }
+                        .skal { linje ->
+                            (linje.mvaKode væreMedI mvaKodene(81, 83, 86, 88, 91)) og
+                                (linje.sats ha innhold) og (linje.grunnlag ha innhold)
+                        }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R116 }
+        }
+    ),
     MVA_MELDINGSINNHOLD_MERKNAD_MANGLER(
         "Det må fylles ut gyldig merknad for denne spesifikasjonslinjen."
         {
@@ -294,19 +330,18 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R082 }
         }
     ),
-
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_BELØP_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER(
-        "Kompensasjonsmeldingen må inneholde kodelinjer når det er oppgitt beløp i 'fastsatt merverdiavgift'."
+    MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_BELØP_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER(
+        "Meldingen må inneholde kodelinjer når det er oppgitt et beløp i 'fastsatt merverdiavgift'."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) og
+                (meldingskategori er omvendtAvgiftsplikt) og
                     skattegrunnlagOgBeregnetSkatt.fastsattMerverdiavgift.ikkeEr(0.0) såSkal {
                     mvaSpesifikasjonslinje.ikkeVæreEnTomListe()
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
-            regelnummer { R100 }
+            regelnummer { R107 }
         }
     ),
     MVA_MELDINGSINNHOLD_GRUNNLAG_OVERSTIGER_MAKS_VERDI(
@@ -322,105 +357,39 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R085 }
         }
     ),
-    MVA_KOMPENSASJON_ORG_FORM_KF(
-        "Virksomheter som er registrert som et kommunalt foretak kan ikke selv sende inn krav om kompensasjon, dette må gjøres av kommunen."
+    MVA_OMVENDT_AVGIFTSPLIKT_FASTSATT_MERVERDIAVGIFT_KR_0(
+        "Det skal ikke sendes inn mva-melding for omvendt avgiftsplikt når beløpet i 'Fastsatt merverdiavgift' er kr 0."
         {
             valideringsregel {
-                meldingskategori er kompensasjon såSkal {
-                    virksomhetIkkeVæreKommunaltForetak
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
-            regelnummer { R094 }
-        }
-    ),
-    MVA_KOMPENSASJON_LEVERT_ETTER_INNLEVERINGSFRIST(
-        "Krav om kompensasjon er sendt inn etter innleveringsfristen for terminen."
-        {
-            valideringsregel {
-                (meldingskategori er kompensasjon) og erFørsteKompensasjonsmeldingForTermin såSkal {
-                    nå væreFørEllerLik innleveringsfrist
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
-            regelnummer { R096 }
-        }
-    ),
-    MVA_KOMPENSASJON_ENDRING_LEVERT_ETTER_INNLEVERINGSFRIST(
-        "Endring av krav om kompensasjon sendt inn etter innleveringsfristen for terminen, kan ikke være mer til gode enn det som allerede er sendt inn."
-        {
-            valideringsregel {
-                (meldingskategori er kompensasjon) og erIkkeFørsteKompensasjonsmeldingForTermin såSkal {
-                    (nå væreFørEllerLik innleveringsfrist) eller (fastsattmerverdiavgift væreStørreEllerLik tidligereFastsattBeløpForTermin)
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
-            regelnummer { R097 }
-        }
-    ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_BELØP_I_FASTSATT_MERVERDIAVGIFT_IKKE_VÆRE_NULL(
-        "Første krav om kompensasjon for terminen kan ikke være 0 kroner."
-        {
-            valideringsregel {
-                (meldingskategori er kompensasjon) og erFørsteKompensasjonsmeldingForTermin såSkal {
+                (meldingskategori er omvendtAvgiftsplikt) og erFørsteMvaMeldingForTerminOmvendtAvgiftsplikt såSkal {
                     fastsattmerverdiavgift ikkeVæreLik kr0
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
-            regelnummer { R098 }
+            regelnummer { R118 }
         }
     ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_KRAV_UNDER_MINSTEBELØP(
-        "Første krav om kompensasjon til utbetaling for året må være på minst 20 000 kroner."
-        {
+    MVA_OMVENDT_AVGIFTSPLIKT_SUM_OMSETNING_UNDER_MINSTEBELØP(
+        "Summert grunnlag er under minstegrensen på kr 2 000 og skal ikke innberettes." {
             valideringsregel {
-                (meldingskategori er kompensasjon) og
-                    detFinnesIkkeEnKompensasjonsmeldingTidligereIÅretOver20000krTilgode såSkal {
-                    fastsattmerverdiavgift væreLikEllerMindreEnn -20000.0
-                }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
-            regelnummer { R099 }
-        }
-    ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_UGYLDIG_MVA_KODE_BRUKT_FOR_IMPORT(
-        "Virksomheten er ikke registrert i Merverdiavgiftsregisteret, og kan ikke bruke koder for innførselsmerverdiavgift innberettet på mva-meldingen. Kodene 14 eller 15 må brukes."
-        {
-            valideringsregel {
-                (meldingskategori er kompensasjon) og virksomhetenErIkkeRegistrertMedEnPliktForPerioden såSkal {
-                    mvaSpesifikasjonslinje.detIkkeFinner { linje -> (linje.mvaKode er 81) eller (linje.mvaKode er 83) }
+                (meldingskategori er omvendtAvgiftsplikt) og detFinnesIkkeEnMvaMeldingTidligereIÅretUnderBeløpsgrenseOmvendtAvgiftsplikt såSkal {
+                    mvaSpesifikasjonslinje.summenAv { linje ->
+                        linje.grunnlag!!
+                    }.væreStørreEllerLik(2000) eller mvaSpesifikasjonslinje.summenAv { linje -> linje.grunnlag!! }
+                        .væreLikEllerMindreEnn(0.0)
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
-            regelnummer { R101 }
+            regelnummer { R117 }
         }
     ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_JUSTERING_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjon som gjelder justering av krav om kompensasjon på fast eiendom kan kun sendes inn på kode 1, 14 og 81."
+    MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_SPESIFIKASJONSLINJE(
+        "Spesifikasjonen som er brukt kan ikke brukes i mva-meldingen for omvendt avgiftsplikt."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) såSkal {
-                    mvaSpesifikasjonslinje
-                        .hvor { linje -> linje.spesifikasjon er JUSTERING_KOMPENSASJON.spesifikasjon.kode }
-                        .skal { linje -> linje.mvaKode væreMedI mvaKodene(1, 14, 81) }
-                }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
-            regelnummer { R087 }
-        }
-    ),
-    MVA_KOMPENSASJON_MELDINGSINNHOLD_UGYLDIG_SPESIFIKASJONSLINJE(
-        "Spesifikasjonen som er brukt kan ikke brukes i kompensasjonsmelding for merverdiavgift."
-        {
-            valideringsregel {
-                (meldingskategori er kompensasjon) såSkal {
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
                     mvaSpesifikasjonslinje
                         .inneholderIkke { linje ->
                             (linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode) eller
@@ -431,7 +400,22 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
-            regelnummer { R091 }
+            regelnummer { R110 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ_FEIL_KODE(
+        "Spesifikasjonen som gjelder kjøp med kompensasjonsrett kan kun sendes inn på kode 86, 88 og 91."
+        {
+            valideringsregel {
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje -> linje.spesifikasjon er KOMPENSASJONSRETT.spesifikasjon.kode }
+                        .skal { linje -> linje.mvaKode væreMedI mvaKodene(86, 88, 91) }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
+            regelnummer { R111 }
         }
     ),
     MVA_KODE_MERKNAD_FORTEGN_GYLDIG_VANLIG_FORTEGN(
