@@ -1,14 +1,14 @@
 ---
 icon: "cloud"
 title: "Informasjonsmodeller, XSD og kodelister"
-description: "XSD for kompensasjonsmelding
+description: "XSD for mva-melding for omvendt avgiftsplikt
 - XSD for innsending 
 - nedlastbare kodelister (XML)"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/informasjonsmodell/)
+[English](https://skatteetaten.github.io/mva-meldingen/omvendt_eng/informasjonsmodell/)
 
-# XSD for kompensasjonsmelding for merverdiavgift
+# XSD for mva-melding for omvendt avgiftsplikt
 
 ### Endringslogg
 
@@ -29,9 +29,9 @@ Dette kodetillegget skal benyttes til å vise at den aktuelle koden gjelder omve
 Merk at når systemleverandør tar i bruk ny versjon av kodelistene så må det taes hensyn til kodetillegget.
 Koder blir da valgt basert på om koden har kodetillegg omvendtAvgiftsplikt=SANN, kompensasjon=SANN eller alminneligPrimær=SANN.
 
-## XSD for kompensasjonsmelding for merverdiavgift versjon 1.0
+## XSD for mva-melding for omvendt avgiftsplikt versjon 1.0
 
-Kompensasjonsmelding for merverdiavgift skal sendes inn i XML-format. Den må være i henhold til strukturen dokumentert i XSD for mva-melding. Det er altså samme XSD for begge meldingene.
+Mva-melding for omvendt avgiftsplikt skal sendes inn i XML-format. Den må være i henhold til strukturen dokumentert i XSD for mva-melding. Det er altså samme XSD for begge meldingene.
 
 Versjon 1.0 av denne XSD'en ligger her:
 [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
@@ -40,11 +40,11 @@ Grafisk fremstilling av xsd og kodelister for [mva-meldingen](SkattemeldingForMe
 
 ![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftKompensasjon.jpg)
 
-Eksempler på kompensasjonsmelding for merverdiavgift i XML-format finnes [her](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
+Eksempler på mva-melding for omvendt avgiftsplikt i XML-format finnes [her](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
 
-## Feltbeskrivelse for kompensasjonsmelding for merverdiavgift
+## Feltbeskrivelse for mva-melding for omvendt avgiftsplikt
 
-### Kompensasjonsmelding for merverdiavgift
+### Mva-melding for omvendt avgiftsplikt
 
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
@@ -52,7 +52,7 @@ Eksempler på kompensasjonsmelding for merverdiavgift i XML-format finnes [her](
 	Formål: å sikre at brukeren dekker sin plikt for egenfastsetting
 	</td>
   </tr>
-    <tr><td>merknad</td><td>Beskrivelse: informasjon om innholdet i kompensasjonsmelding for merverdiavgift <br>
+    <tr><td>merknad</td><td>Beskrivelse: informasjon om innholdet i mva-melding for omvendt avgiftsplikt <br>
 	Formål: å sikre at skattepliktig kan forklare egen rettsanvendelse der det er nødvendig
 	</td>
   </tr>
@@ -98,7 +98,7 @@ Kid oppgis bare dersom det er tilgodebeløp.
 <table align=center>
   <tr><th style="width:25%" align=left>Felt</th><th align=left>Beskrivelse</th></tr>
   <tr><td>skattleggingsperiode</td><td>Beskrivelse: den perioden skattefastsettingen gjelder for <br>
-  Periode angis i henhold til kodeverket for Skattleggingsperiode. For Skattemelding for merverdiavgiftskompensasjon gjelder 2-månedlig skattleggingsperiode. Virksomheter som nevnt i merverdiavgiftskompensasjonsloven § 2 første ledd bokstav b til e og borettslag og boligsameier som nevnt i annet ledd kan fremsette krav som omfatter et helt kalenderår i skattemeldingen for sjette periode. <br>    
+  Periode angis i henhold til kodeverket for Skattleggingsperiode. For mva-melding for omvendt avgiftsplikt gjelder kvartalsvis skattleggingsperiode.<br>    
   Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
@@ -120,18 +120,18 @@ Kid oppgis bare dersom det er tilgodebeløp.
 	Formål: formidling av hvilke mva-vurderinger som er utført
 	</td>
   </tr> 
-  <tr><td>mvaKodeRegnskapssystem</td><td>Beskrivelse: intern mva-kode i regnskapssystemet. Det kan være flere interne mva-koder for en mvaKode og evt spesifikasjon. I det tilfellet vil det bli flere rader i kompensasjonsmeldingen pr mvaKode og spesifikasjon; en pr kombinasjon av mva-kode, spesifikasjon og mvaKodeRegnskapssystem.<br>
+  <tr><td>mvaKodeRegnskapssystem</td><td>Beskrivelse: intern mva-kode i regnskapssystemet. Det kan være flere interne mva-koder for en mvaKode og evt spesifikasjon. I det tilfellet vil det bli flere rader i mva-melding for omvendt avgiftsplikt pr mvaKode og spesifikasjon; en pr kombinasjon av mva-kode, spesifikasjon og mvaKodeRegnskapssystem.<br>
   Formål: To hensyn <br>
 Brukerne: gjenkjennelig i forhold til det de ser i regnskapet. <br>
 Systemleverandørene skal slippe å legge om mva-koder i systemene
 	</td>
   </tr>
-  <tr><td>grunnlag</td><td>Beskrivelse: det beløpet det er regnet merverdiavgiftskompensasjon av. <br>
+  <tr><td>grunnlag</td><td>Beskrivelse: Det beløpet det er regnet utgående mva av.  Feltet skal ikke fylles ut for inngående mva.<br>
 Formål: Grunnlag for kontroll ifra Skatteetaten
 	</td>
   </tr>
-  <tr><td>sats</td><td>Beskrivelse: Den mva-satsen som er benyttet ved beregning av kompensasjonskrav. <br>
-	Formål: Å sikre at bare gyldige satser benyttes ved fremsetting av kompensasjonskrav
+  <tr><td>sats</td><td>Beskrivelse: Den mva-satsen som er benyttet ved beregning av utgående mva. Feltet skal ikke fylles ut for inngående mva. <br>
+	Formål:  Å sikre at bare gyldige satser benyttes ved fakturering
 	</td>
   </tr>
   <tr><td>merverdiavgift</td><td>Beskrivelse: fastsatt merverdiavgift <br>
@@ -159,8 +159,8 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
   </tr>
   <tr><td>innsendingstype</td>
     <td>
-        Beskrivelse: En mva-melding av meldingskategori alminnelig og primær vil alltid være <strong>komplett</strong>. En hovedmelding av typen kompensasjonsmelding vil være komplett ved revisors signering. En korrigert kompensasjonsmelding etter frist er komplett når den sendes inn av virksomhet. <br>
-        Formål: Feltet beholdes for på et senere tidspunkt kunne åpne for at revisor kommenterer/ skriver merknad på de mva-meldingene (f. eks. merverdiavgift kompensasjon) som skal godkjennes av revisor før innsending.
+        Beskrivelse: En mva-melding av meldingskategori alminnelig, primær og omvendt vil alltid være <strong>komplett</strong>. <br>
+        Formål: Feltet beholdes for på et senere tidspunkt kunne åpne for at revisor kommenterer/ skriver merknad på de mva-meldingene som skal godkjennes av revisor før innsending.
 	</td>
   </tr>
   <tr><td>instansstatus</td>
@@ -211,7 +211,7 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
     <td>periode</td>
     <td>
         Beskrivelse: den perioden skattefastsettingen gjelder for <br>
-		Periode angis i henhold til kodeverket for Skattleggingsperiode. For Skattemelding for merverdiavgiftskompensasjon gjelder 2-månedlig skattleggingsperiode. Virksomheter som nevnt i merverdiavgiftskompensasjonsloven § 2 første ledd bokstav b til e og borettslag og boligsameier som nevnt i annet ledd kan fremsette krav som omfatter et helt kalenderår i skattemeldingen for sjette periode. <br>   
+		Periode angis i henhold til kodeverket for Skattleggingsperiode. For mva-melding for omvendt avgiftsplikt gjelder kvartalsvis skattleggingsperiode. <br>   
         Formål: sikre samsvar mellom bokføring og egenfastsetting
 	</td>
   </tr>
@@ -232,7 +232,7 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
     <td>vedleggstype</td>
     <td>
         Beskrivelse: Type vedlegg som blir lastet opp på instansen i Altinn. 
-        Hvor en kan enten bruke <strong>mva-melding</strong> for selve kompensasjonsmeldingen, 
+        Hvor en kan enten bruke <strong>mva-melding</strong> for selve mva-melding for omvendt avgiftsplikt, 
         eller <strong>binaerVedlegg</strong> for generelle vedlegg. <br>
 	</td>
   </tr>
