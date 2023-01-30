@@ -283,22 +283,13 @@ Formål: Grunnlag for kontroll ifra Skatteetaten
 
 | Gruppe og kode                                                | Beskrivelse av Kode og Spesifikasjon                                |
 | ------------------------------------------------------------- | ------------------------------------------------------------------- |
-| Kjøp av varer og tjenester i Norge med kompensasjonsrett      |
-| 1                                                             | Kjøp av varer og tjenester med kompensasjonsrett (høy sats)         |
-| Spesifikasjonslinje til kode 1                                | Justering merverdiavgiftskompensasjon fast eiendom                  |
-| 11                                                            | Kjøp av varer og tjenester med kompensasjonsrett (middels sats)     |
-| 13                                                            | Kjøp av varer og tjenester med kompensasjonsrett (lav sats)         |
-| Kjøp av varer fra utlandet med kompensasjonsrett (import)     |
-| 14                                                            | Kompensasjon for merverdiavgift betalt ved innførsel (høy sats)     |
-| Spesifikasjonslinje til kode 14                               | Justering merverdiavgiftskompensasjon fast eiendom                  |
-| 15                                                            | Kompensasjon for merverdiavgift betalt ved innførsel (middels sats) |
-| 81                                                            | Kjøp av varer fra utlandet med kompensasjonsrett (høy sats)         |
-| Spesifikasjonslinje til kode 81                               | Justering merverdiavgiftskompensasjon fast eiendom                  |
-| 83                                                            | Kjøp av varer fra utlandet med kompensasjonsrett (middels sats)     |
-| Kjøp av tjenester fra utlandet med kompensasjonsrett (import) |
+| Kjøp uten fradragsrett					|								      |
+| 87                                                            | Kjøp av varer fra utlandet uten fradragsrett (høy sats)	      |
+| 89                                                            | Kjøp av varer fra utlandet uten fradragsrett (lav sats)	      |
+| 92								| Kjøp av klimakvoter og gull uten fradragsrett (høy sats)	      |
+| Kjøp med kompensasjonsrett					|								      |
 | 86                                                            | Kjøp av tjenester fra utlandet med kompensasjonsrett (høy sats)     |
 | 88                                                            | Kjøp av tjenester fra utlandet med kompensasjonsrett (lav sats)     |
-| Klimakvoter og gull                                           |
 | 91                                                            | Kjøp av klimakvoter og gull med kompensasjonsrett (høy sats)        |
 
 En oversikt over kodelistene finnes i [Oversikten over kodelister](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/kodelister/)
