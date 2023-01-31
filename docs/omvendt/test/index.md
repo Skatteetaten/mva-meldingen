@@ -4,15 +4,13 @@ title: "Test & Produksjon"
 description: "Informasjon om testing og produksjon"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/test/)
+[English](https://skatteetaten.github.io/mva-meldingen/omvendt_eng/test/)
 
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                      |
 | :--------- | :------------------------------------------------------------------- |
-| 2022.06.11 | Opprettet side for test kompensasjonsmelding                         |
-| 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Python script       |
-| 2022.15.11 | Informasjon angående test av kompensasjonsmelding etter 15. november |
+| 2023.01.26 | Opprettet side for test av mva-melding for omvendt avgiftsplikt         |
 
 ## Krav til testgjennomføring
 
@@ -30,7 +28,7 @@ Oppkobling mot testmiljøet skjer via ID-porten og i forbindelse med test kan Sk
 
 Systemutviklere skal bruke testbrukere fra Tenor Testdatasøk. Dette er syntetisk testbruker som også skal brukes for pålogging i ID-porten og Altinn. Det vil kun være disse testbrukeren som kan benyttes for å få testet. Testbrukere som ligger tilgjengelig på Digdir sine sider vil ikke kunne brukes. [Her finnes en bruksveiledning for Tenor Testdatasøk](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Bruksveiledning_Tenor.pdf)
 
-Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny kompensasjonsmelding er lansert, så lenge det er behov for det.
+Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny mva-melding for omvendt avgiftsplikt er lansert, så lenge det er behov for det.
 
 ## Testplanlegging
 
@@ -45,26 +43,19 @@ I varselet er det en lenke til "Min Merverdiavgift". Velg denne lenken og logg p
 
 ## Testplanlegging - Roller
 
-For å legge til rettigheter for attestering, vennligst se
-[Brukerveiledning - Gi rettighet til attestering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/Bruksveiledning_rettighet_til_attestering_i_komp.pdf).
+Roller i Altinn for mva-melding for omvendt avgiftsplikt:
 
-Roller i Altinn for kompensasjonsmelding:
-
-- Du kan fylle ut og sende inn kompensasjonsmeldingen med en av disse rollene (Godkjenne):
+- Du kan fylle ut og sende inn mva-melding for omvendt avgiftsplikt med en av disse rollene (Godkjenne):
 
   - Regnskapsfører med signeringsrettighet
   - Begrenset signeringsrettighet
 
-- Dersom du har en av disse rollene kan du fylle ut kompensasjonsmeldingen, men ikke sende inn (Utfyller)
+- Dersom du har en av disse rollene kan du fylle ut mva-melding for omvendt avgiftsplikt, men ikke sende inn (Utfyller)
 
   - Ansvarlig revisor
   - Regnskapsmedarbeider
   - Regnskapsfører uten signeringsrettighet
   - Revisormedarbeider
-
-- Attestere i portalen "Min Merverdiavgift" (Attestant):
-  - Revisorattesterer - MVA Kompensasjon
-  - Ansvarlig revisor (NB! Denne rollen fungerer ikke i test foreløpig)
 
 ## Oppsummering av test og oppstart i produksjon
 
