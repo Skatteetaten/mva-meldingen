@@ -1,10 +1,10 @@
 ---
 icon: "cloud"
-title: "Spørsmål og svar - kompensasjonsmelding"
-description: "Spørsmål og svar - kompensasjonsmelding"
+title: "Spørsmål og svar - omvendt avgiftsplikt"
+description: "Spørsmål og svar - omvendt avgiftsplikt"
 ---
 
-[English](https://skatteetaten.github.io/mva-meldingen/kompensasjon_eng/faq/)
+[English](https://skatteetaten.github.io/mva-meldingen/omvendt_eng/faq/)
 
 ## Ny mva-melding for omvendt avgiftsplikt
 
