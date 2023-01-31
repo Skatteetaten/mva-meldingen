@@ -67,7 +67,7 @@ Den kan finnes på [Github.](https://skatteetaten.github.io/mva-meldingen/omvend
 
 ## Test
 
-### Vil testingen av kompensasjonsmelding for merverdiavgift være åpen for alle?
+### Vil testingen av mva-melding for omvendt avgiftsplikt være åpen for alle?
 
 Informasjon rundt testing er åpent for alle gjennom [Github](https://skatteetaten.github.io/mva-meldingen/omvendt/test/).
 Den som er interessert i å delta på test-løpet i samarbeid med Skatteetaten er velkommen til å ta kontakt gjennom mva-modernisering@skatteetaten.no.
