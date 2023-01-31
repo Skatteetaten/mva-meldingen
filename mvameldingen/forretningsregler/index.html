@@ -186,6 +186,14 @@
       </ul>
     </td>
   </tr>
+  <tr>
+    <td>2023.01.26</td>
+    <td>
+    <ul>
+      <li> Flytt omvendt avgiftsplikt regler til https://skatteetaten.github.io/mva-meldingen/omvendt/forretningsregler/</li>
+    </ul>
+    </td>
+  </tr>
 </tbody></table>
 <h2 id="valideringsregler" style="position:relative"><a href="#valideringsregler" aria-label="valideringsregler permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Valideringsregler</h2>
 <p>Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.</p>
@@ -249,20 +257,6 @@
 <li>Kontonummer må være registrert for meldinger som kunne føre til en utbetaling (R080)</li>
 <li>Beløpet på koden og spesifikasjonslinje som gjelder kjøp med kompensasjonsrett skal ikke være like (R115)</li>
 </ul>
-<p>Følgende valideringsregler er foreløpig definert for omvendt avgiftsplikt mva-meldinger:</p>
-<ul>
-<li>Terminlengde må være 3-månedlig (R106)</li>
-<li>Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler (R108)</li>
-<li>Spesifikasjonslinjer skal ha en gyldig mva-kode i omvendt avgiftsplikt mva-meldinger (R113)</li>
-<li>Det må sendes inn spesifikasjonslinjer når det er oppgitt beløp i &#x27;fastsatt merverdiavgift&#x27; feltet (R107)</li>
-<li>Utgående mva. skal føres med grunnlag og sats (R109)</li>
-<li>Det skal ikke føres beløp både for koden og tilhørende spesifikasjon (R112)</li>
-<li>Spesifikasjonslinje som gjelder tilbakeføring av inngående mva., tap på krav og uttak kan ikke sendes inn på omvendt avgiftsplikt mva-meldinger (R110)</li>
-<li>Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett kan kun sendes inn på mva-kode 86, 88 og 91 (R111)</li>
-<li>Innsendte koder stemmer ikke med beløpet oppgitt i &#x27;fastsatt merverdiavgift&#x27; felt (R119)</li>
-<li>&#x27;fastsatt merverdiavgift&#x27; beløpet skal ikke være kr 0 (R118)</li>
-<li>Summert grunnlag må være over kr 2 000 (R117)</li>
-</ul>
 <p>Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:</p>
 <ul>
 <li>Mva-meldingen skal være på gyldig format (R001)</li>
@@ -275,9 +269,7 @@
 <p>Følgende praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:</p>
 <ul>
 <li>Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2022 for ordinær (aliminnelig eller primærnæring) mva-meldinger (R000)</li>
-<li>Innsending og validering tjeneste er ikke tilgjengelig før 01.02.2023 for omvendt avgiftsplikt mva-meldinger (R105)</li>
 <li>Innsending og validering av ordinær (alminnelig eller primærnæring) mva-meldinger fra før 2022 er ikke tilgjengelig (R077)</li>
-<li>Innsending og validering av omvendt avgiftsplikt mva-meldinger fra før 2023 er ikke tilgjengelig (R103)</li>
 </ul>
 <h2 id="detaljspesifikasjon-av-reglene" style="position:relative"><a href="#detaljspesifikasjon-av-reglene" aria-label="detaljspesifikasjon av reglene permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detaljspesifikasjon av reglene:</h2>
 <p>Validering av mva-meldingen er implementert med et sett av regler som kjøres maskinelt
@@ -322,18 +314,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             regelnummer <span class="token punctuation">{</span> R000 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    MVA_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_INNLEVERING_FØ<span class="token function">R_1_2_2023</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Innsending og validering av mva-melding for omvendt avgiftsplikt er ikke tilgjengelig enda.&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er omvendtAvgiftsplikt såSkal <span class="token punctuation">{</span>
-                    nå væreEtterEllerLik førsteFeb2023
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSKATEGORI <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R105 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
     INNLEVERING_MELDING_FRA_FØ<span class="token function">R_2022</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Det kan ikke sendes inn mva-melding for perioder før 01.01.2022. Denne må sendes via Altinn.&quot;</span> <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
@@ -344,44 +324,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSKATEGORI <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R077 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    MVA_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_INNLEVERING_MELDING_FRA_FØ<span class="token function">R_2023</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Mva-melding for omvendt avgiftsplikt kan ikke sendes inn for terminer før 01.01.2023. Det må sendes inn via Altinn.&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er omvendtAvgiftsplikt såSkal <span class="token punctuation">{</span>
-                    skattleggingsperiodeår måVæreEtterEllerLik år2023
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSKATEGORI <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R103 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJONSLINJE_KJØ<span class="token function">P_MED_KOMPENSASJONSRETT</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Det skal ikke føres beløp både for koden og tilhørende spesifikasjon.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span>detIkkeFinnesEnKodeBå<span class="token function">deMedOgUtenSpesifikasjon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSKATEGORI <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R112 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token function">MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_TERMINKATEGORI</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Mva-meldinger for omvendt avgiftsplikt kan kun sendes inn med terminlengde 3-månedlig.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er omvendtAvgiftsplikt såSkal <span class="token punctuation">{</span>
-                    skattleggingsperiodetype være treMånedlig
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSKATEGORI <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R106 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token function">MVA_MELDINGSINNHOLD_GRUNNLAG_ER_LAVERE_ENN_BEREGNET_AVGIFT</span><span class="token punctuation">(</span>
@@ -425,20 +367,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             regelnummer <span class="token punctuation">{</span> R019 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token function">MVA_OMVENDT_AVGIFTSPLIKT_KODER_FINNES_FASTSATT_MERVERDIAVGIFT_KR_0</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Innsendte koder stemmer ikke med beløpet oppgitt i &#x27;Fastsatt merverdiavgift&#x27;.&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje
-                        <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag ikkeEr tomt<span class="token punctuation">)</span> <span class="token function">og</span> <span class="token punctuation">(</span>fastsattmerverdiavgift <span class="token function">er</span> <span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">og</span>       <span class="token punctuation">(</span>erFørsteMvaMeldingForTerminOmvendtAvgiftsplikt<span class="token punctuation">)</span> <span class="token punctuation">}</span>
-                        <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>grunnlag <span class="token operator">*</span> linje<span class="token punctuation">.</span>sats væreRundetNedTil fastsattmerverdiavgift <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R119 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
     MVA_MELDINGSINNHOLD_UTGÅ<span class="token function">ENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Det må fylles ut merknad som forklarer hvorfor det er benyttet motsatt fortegn for grunnlag og utgående merverdiavgift.&quot;</span>
@@ -458,25 +386,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             regelnummer <span class="token punctuation">{</span> R020 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UTGÅ<span class="token function">ENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Merknad må legges ved som forklaring på hvorfor det er benyttet motsatt fortegn for grunnlag og utgående merverdiavgift.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    <span class="token function">kodene</span><span class="token punctuation">(</span><span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span>
-                        <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>grunnlag erMindreEnn <span class="token number">0.0</span> <span class="token punctuation">}</span>
-                        <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                            <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>beskrivelse har innhold<span class="token punctuation">)</span> <span class="token function">eller</span>
-                                <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>merknad<span class="token operator">?</span><span class="token punctuation">.</span>utvalgtMerknad har innhold<span class="token punctuation">)</span>
-                        <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R108 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-
     MVA_MELDINGSINNHOLD_INNGÅ<span class="token function">ENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Det må fylles ut merknad som forklarer hvorfor det er benyttet motsatt fortegn for fradragsført merverdiavgift.&quot;</span>
         <span class="token punctuation">{</span>
@@ -878,22 +787,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             regelnummer <span class="token punctuation">{</span> R054 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token function">MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_MVA_KODE_FOR_OPPGITT_MELDINGSKATEGORI</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Koden kan ikke brukes i mva-meldingen for omvendt avgiftsplikt.&quot;</span>
-        <span class="token punctuation">{</span>
-
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R113 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
     MVA_KODE_FOR_INNGÅ<span class="token function">ENDE_AVGIFT_HAR_FEILAKTIG_GRUNNLAG_OG_SATS</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Beløp som gjelder inngående avgift skal ikke ha med grunnlag og sats.&quot;</span>
         <span class="token punctuation">{</span>
@@ -939,22 +832,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R066 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token function">MVA_OMVENDT_AVGIFTSPLIKT_MANGLER_GRUNNLAG_OG_SATS</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Beløp som gjelder utgående avgift skal ha med grunnlag og sats.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                meldingskategori er omvendtAvgiftsplikt såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">}</span>
-                        <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>sats ha innhold <span class="token function">og</span> <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>grunnlag ha innhold<span class="token punctuation">)</span> <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R109 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
     MVA_KODE_FOR_INNGÅENDE_ELLER_UTGÅ<span class="token function">ENDE_FEIL_GRUNNLAG_ELLER_SATS</span><span class="token punctuation">(</span>
@@ -1082,20 +959,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             regelnummer <span class="token punctuation">{</span> R084 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>    
-    MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_BELØ<span class="token function">P_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Meldingen må inneholde kodelinjer når det er oppgitt et beløp i &#x27;fastsatt merverdiavgift&#x27;.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> og
-                    skattegrunnlagOgBeregnetSkatt<span class="token punctuation">.</span>fastsattMerverdiavgift<span class="token punctuation">.</span><span class="token function">ikkeEr</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span>ikkeVæ<span class="token function">reEnTomListe</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R107 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token function">MVA_MELDINGSINNHOLD_GRUNNLAG_OVERSTIGER_MAKS_VERDI</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Beløpet på grunnlaget overstiger maks verdi.&quot;</span>
         <span class="token punctuation">{</span>
@@ -1107,34 +970,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
             kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
             regelnummer <span class="token punctuation">{</span> R085 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token function">MVA_OMVENDT_AVGIFTSPLIKT_FASTSATT_MERVERDIAVGIFT_KR_0</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Det skal ikke sendes inn mva-melding for omvendt avgiftsplikt når beløpet i &#x27;Fastsatt merverdiavgift&#x27; er kr 0.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> og erFørsteMvaMeldingForTerminOmvendtAvgiftsplikt såSkal <span class="token punctuation">{</span>
-                    fastsattmerverdiavgift ikkeVæreLik kr0
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R118 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    MVA_OMVENDT_AVGIFTSPLIKT_SUM_OMSETNING_UNDER_MINSTEBELØ<span class="token function">P</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Summert grunnlag er under minstegrensen på kr 2 000 og skal ikke innberettes.&quot;</span> <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> og detFinnesIkkeEnMvaMeldingTidligereIÅretUnderBeløpsgrenseOmvendtAvgiftsplikt såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">summenAv</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                        linje<span class="token punctuation">.</span>grunnlag<span class="token operator">!!</span>
-                    <span class="token punctuation">}</span><span class="token punctuation">.</span>væreStø<span class="token function">rreEllerLik</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span> eller mvaSpesifikasjonslinje<span class="token punctuation">.</span><span class="token function">summenAv</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>grunnlag<span class="token operator">!!</span> <span class="token punctuation">}</span>
-                        <span class="token punctuation">.</span>væ<span class="token function">reLikEllerMindreEnn</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> MELDINGSINNHOLD <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R117 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØ<span class="token function">P_MED_KOMPENSASJONSRETT</span><span class="token punctuation">(</span>
@@ -1215,39 +1050,6 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
             regelnummer <span class="token punctuation">{</span> R041 <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>    
-    <span class="token function">MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_SPESIFIKASJONSLINJE</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Spesifikasjonen som er brukt kan ikke brukes i mva-meldingen for omvendt avgiftsplikt.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje
-                        <span class="token punctuation">.</span><span class="token function">inneholderIkke</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span>
-                            <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er TILBAKEFØRING<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode<span class="token punctuation">)</span> <span class="token function">eller</span>
-                                <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er TAPPÅKRAV<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode<span class="token punctuation">)</span> <span class="token function">eller</span>
-                                <span class="token punctuation">(</span>linje<span class="token punctuation">.</span>spesifikasjon er UTTAK<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode<span class="token punctuation">)</span>
-                        <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R110 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ<span class="token function">_FEIL_KODE</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Spesifikasjonen som gjelder kjøp med kompensasjonsrett kan kun sendes inn på kode 86, 88 og 91.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>meldingskategori er omvendtAvgiftsplikt<span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    mvaSpesifikasjonslinje
-                        <span class="token punctuation">.</span><span class="token function">hvor</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>spesifikasjon er KOMPENSASJONSRETT<span class="token punctuation">.</span>spesifikasjon<span class="token punctuation">.</span>kode <span class="token punctuation">}</span>
-                        <span class="token punctuation">.</span><span class="token function">skal</span> <span class="token punctuation">{</span> linje <span class="token operator">-&gt;</span> linje<span class="token punctuation">.</span>mvaKode væreMedI <span class="token function">mvaKodene</span><span class="token punctuation">(</span><span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> UGYLDIG_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> XSD_FORMAT_OG_LOVLIGE_VERDIER <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R111 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ<span class="token function">_FEIL_MVA_KODE</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett kan kun sendes inn på kode 81, 83, 86, 88 eller 91.&quot;</span>
         <span class="token punctuation">{</span>
