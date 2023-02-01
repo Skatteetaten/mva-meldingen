@@ -32,14 +32,11 @@ Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny mva-meldi
 
 ## Testplanlegging
 
-Fra 15. november kan dere i test:
-
-- Validere en mva-melding med meldingskategori "merverdiavgift kompensasjon" - kompensasjonsmelding.
-- Sende inn en kompensasjonsmelding fra regnskapssystemet
-- Attestere en kompensasjonsmelding i portalen "Min Merverdiavgift"
-
-Etter at kompensasjonsmeldingen er sendt inn fra regnskapssystemet vil virksomheten som sender inn motta et varsel i Altinn (https://tt02.altinn.no/ i test).
-I varselet er det en lenke til "Min Merverdiavgift". Velg denne lenken og logg på med en bruker som har rollen for å attestere kompensasjonsmeldingen.
+Fra 10. februar kan dere i test:
+Validere en mva-melding med meldingskategori "omvendt_avgiftsplikt" - mva-melding for omvendt avgiftsplikt.
+Sende inn en mva-melding for omvendt avgiftsplikt fra regnskapssystemet.
+Fullføre innsending i portalen.
+Etter at mva-melding for omvendt avgiftsplikt er sendt inn fra regnskapssystemet vil virksomheten motta en kvittering i Altinn (https://tt02.altinn.no/ i test).
 
 ## Testplanlegging - Roller
 
