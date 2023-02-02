@@ -46,6 +46,8 @@ Følgende valideringsregler er foreløpig definert for omvendt avgiftsplikt mva-
 - Innsendte koder stemmer ikke med beløpet oppgitt i 'fastsatt merverdiavgift' felt (R119)
 - 'fastsatt merverdiavgift' beløpet skal ikke være kr 0 (R118)
 - Summert grunnlag må være over kr 2 000 (R117)
+- Det finnes en aktiv plikt i mva-registeret for deler av perioden mva-meldingen for omvendt avgiftsplikt gjelder for (R123)
+- Koden må inneholde spesifikasjon 'Kjøp med kompensasjonsrett (R124)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -383,6 +385,32 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R117 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_AKTIV_MVA_PLIKT_FOR_DELER_AV_PERIODEN(
+        "Det finnes en aktiv plikt i mva-registeret for deler av perioden mva-meldingen for omvendt avgiftsplikt gjelder for."
+        {
+            valideringsregel {
+                meldingskategori er omvendtAvgiftsplikt såSkal { virksomhetenErIkkeRegistrertMedEnPliktForDelerAvPerioden }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R123 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJON_MANGLER(
+        "Koden må inneholde spesifikasjon 'Kjøp med kompensasjonsrett."
+        {
+            valideringsregel {
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje -> linje.mvaKode væreMedI mvaKodene(86, 88, 91) }
+                        .skal { linje -> linje.spesifikasjon ha innhold og (linje.spesifikasjon er KOMPENSASJONSRETT.spesifikasjon.kode) }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R124 }
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_SPESIFIKASJONSLINJE(
