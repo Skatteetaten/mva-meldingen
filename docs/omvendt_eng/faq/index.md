@@ -4,17 +4,17 @@ title: "Questions and answers"
 description: "Frequently asked questions"
 ---
 
-[Norwegian](https://skatteetaten.github.io/mva-meldingen/kompensasjon/faq/)
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/omvendt/faq/)
 
 ## General
 
-### New tax return for VAT compensation
+### New VAT return for reverse tax liability
 
 The goal of the project is to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system.
 
-#### When will the new tax return for VAT compensation be launched?
+#### When will the new VAT return for reverse tax liability be launched?
 
-The new tax return for VAT compensation will be launched on January 1st 2023. The first deadline will April 10th 2023. Reports and corrections for terms up till and including December 31st 2022 must be submitted in the old format through Altinn, as before.
+The new VAT return for reverse tax liability will be used in the first 2023. The first deadline will April 10th 2023. Reports and corrections for terms up till and including December 31st 2022 must be submitted in the old format through Altinn, as before.
 
 ### Will there be a transition period from the old to the new services?
 
