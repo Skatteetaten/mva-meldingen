@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvaMeldingDto xmlns="no:skatteetaten:fastsetting:avgift:mva:skattemeldingformerverdiavgift:v1.0">
+	<innsending>
+		<regnskapssystemsreferanse>14</regnskapssystemsreferanse>
+		<regnskapssystem>
+			<systemnavn>zzx</systemnavn>
+			<systemversjon>4.34.3</systemversjon>
+		</regnskapssystem>
+	</innsending>
+	<skattegrunnlagOgBeregnetSkatt>
+		<skattleggingsperiode>
+			<periode>
+			<skattleggingsperiodeToMaaneder>mars-april</skattleggingsperiodeToMaaneder>
+			</periode>
+			<aar>2022</aar>
+		</skattleggingsperiode>
+		<fastsattMerverdiavgift>12000</fastsattMerverdiavgift>
+		<mvaSpesifikasjonslinje>
+            		<mvaKode>87</mvaKode>
+            		<mvaKodeRegnskapsystem>Utgående MVA, høy sats</mvaKodeRegnskapsystem>
+            		<grunnlag>10000</grunnlag>
+            		<sats>25</sats>
+            		<merverdiavgift>2500</merverdiavgift>
+        	</mvaSpesifikasjonslinje>
+		<mvaSpesifikasjonslinje>
+            		<mvaKode>86</mvaKode>
+            		<spesifikasjon>kompensasjonsrett</spesifikasjon>
+            		<grunnlag>8000</grunnlag>
+            		<sats>25</sats>
+            		<merverdiavgift>2000</merverdiavgift>
+        	</mvaSpesifikasjonslinje>	
+	</skattegrunnlagOgBeregnetSkatt>
+		<betalingsinformasjon>
+		<kundeIdentifikasjonsnummer></kundeIdentifikasjonsnummer>
+	</betalingsinformasjon>
+	<skattepliktig>
+		<organisasjonsnummer>312430622</organisasjonsnummer>
+	</skattepliktig>
+		<meldingskategori>omvendtAavgiftsplikt</meldingskategori>
+		<merknad>
+			<beskrivelse>eksempel omvendt avgiftsplikt</beskrivelse>
+		</merknad>
+</mvaMeldingDto>
