@@ -1,7 +1,7 @@
 ---
 icon: "cloud"
-title: "Valideringsregler - omvendt avgiftsplikt melding"
-description: "Regler for utfylling av omvendt avgiftsplikt melding "
+title: "Valideringsregler - mva-melding for omvendt avgiftsplikt"
+description: "Regler for utfylling av mva-melding for omvendt avgiftsplikt"
 ---
 
 [English](https://skatteetaten.github.io/mva-meldingen/omvendt_eng/forretningsregler/)
@@ -34,14 +34,14 @@ Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
 - Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett må ha med grunnlag og sats (R116)
 - Merverdiavgift i kodelinjer skal ha lavere beløp enn grunnlaget (R122)
 
-Følgende valideringsregler er foreløpig definert for omvendt avgiftsplikt mva-meldinger:
+Følgende valideringsregler er foreløpig definert for mva-meldinger for omvendt avgiftsplikt:
 - Terminlengde må være 3-månedlig (R106)
 - Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler (R108)
-- Spesifikasjonslinjer skal ha en gyldig mva-kode i omvendt avgiftsplikt mva-meldinger (R113)
+- Spesifikasjonslinjer skal ha en gyldig mva-kode i mva-meldinger for omvendt avgiftsplikt (R113)
 - Det må sendes inn spesifikasjonslinjer når det er oppgitt beløp i 'fastsatt merverdiavgift' feltet (R107)
 - Utgående mva. skal føres med grunnlag og sats (R109)
 - Det skal ikke føres beløp både for koden og tilhørende spesifikasjon (R112)
-- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva., tap på krav og uttak kan ikke sendes inn på omvendt avgiftsplikt mva-meldinger (R110)
+- Spesifikasjonslinje som gjelder tilbakeføring av inngående mva., tap på krav og uttak kan ikke sendes inn på mva-meldinger for omvendt avgiftsplikt (R110)
 - Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett kan kun sendes inn på mva-kode 86, 88 og 91 (R111)
 - Innsendte koder stemmer ikke med beløpet oppgitt i 'fastsatt merverdiavgift' felt (R119)
 - 'fastsatt merverdiavgift' beløpet skal ikke være kr 0 (R118)
@@ -58,8 +58,8 @@ Følgende tekniske regler er også spesifisert som validerer xsd format og kodel
 
 Følgende praktiske regler er også definert for å hindre feilaktige innsendinger til det nye systemet:
 
-- Innsending og validering tjeneste er ikke tilgjengelig før 01.02.2023 for omvendt avgiftsplikt mva-meldinger (R105)
-- Innsending og validering av omvendt avgiftsplikt mva-meldinger fra før 2023 er ikke tilgjengelig (R103)
+- Innsending og validering tjeneste er ikke tilgjengelig før 01.02.2023 for mva-meldinger for omvendt avgiftsplikt (R105)
+- Innsending og validering av mva-melding for omvendt avgiftsplikt fra før 2023 er ikke tilgjengelig (R103)
 
 
 ## Detaljspesifikasjon av reglene:
