@@ -23,7 +23,7 @@ Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til 
 Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift (R018)
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats (R019)
-- Meldingen må være en ordinær (aliminnelig eller primærnæring) melding, krav om kompensasjon eller omvendt avgiftsplikt mva-melding (R104)
+- Meldingen må være en ordinær (aliminnelig eller primærnæring) melding, krav om kompensasjon eller mva-melding for omvendt avgiftsplikt  (R104)
 - Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 må sendes med en merknad (R078)
 - KID-nummeret må være gyldig (R079)
 - Innsendte beløp skal ikke inneholde desimaler (R082)
