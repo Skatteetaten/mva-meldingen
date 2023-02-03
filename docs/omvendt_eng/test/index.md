@@ -26,7 +26,7 @@ System providers must have test environments which can make use of synthetic dat
 
 Connection to the test environment occurs through ID-porten and for the purpose of testing, Skatteetaten's ID-porten integration can be used. It is recommended that the providers order their own integration against ID-porten as soon as possible because the process is partly manual and can be time consuming. See more in [implementation guide section 3. ID-porten integration.](https://skatteetaten.github.io/mva-meldingen/english/implementationguide/#3-id-porten-integration)
 
-The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test the tax return for VAT compensation. Ordinary Digdir test users will not work for this purpose.[Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen_eng/test/User_Guide_Tenor_testdata.pdf).
+The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test the VAT return for reverse tax liability. Ordinary Digdir test users will not work for this purpose.[Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen_eng/test/User_Guide_Tenor_testdata.pdf).
 
 Skatteetaten's test environment will be available as long as it is needed, after the VAT return for reverse tax liability is launched.
 
