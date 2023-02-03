@@ -50,6 +50,8 @@ The following validation rules are defined for reverse tax liability VAT returns
 - Declared VAT amounts on code lines do not tally with the total declared VAT amount in the 'fastsatt merverdiavgift' field (R119)
 - The 'fastsatt merverdiavgift' (total declared VAT amount) should not be kr 0 (R118)
 - The sum of the VAT basis values must be more than kr 2 000 (R117)
+- There exists an active registration in the VAT register for at least part of the VAT period to which the reverse liability VAT return applies (R123)
+- The specification line for this code must be declared with the specification 'Kjøp med kompensasjonsrett' (purchases with right to compensation) (R124)
 
 The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
 
@@ -387,6 +389,32 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSINNHOLD }
             regelnummer { R117 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_AKTIV_MVA_PLIKT_FOR_DELER_AV_PERIODEN(
+        "Det finnes en aktiv plikt i mva-registeret for deler av perioden mva-meldingen for omvendt avgiftsplikt gjelder for."
+        {
+            valideringsregel {
+                meldingskategori er omvendtAvgiftsplikt såSkal { virksomhetenErIkkeRegistrertMedEnPliktForDelerAvPerioden }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R123 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJON_MANGLER(
+        "Koden må inneholde spesifikasjon 'Kjøp med kompensasjonsrett."
+        {
+            valideringsregel {
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje -> linje.mvaKode væreMedI mvaKodene(86, 88, 91) }
+                        .skal { linje -> linje.spesifikasjon ha innhold og (linje.spesifikasjon er KOMPENSASJONSRETT.spesifikasjon.kode) }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R124 }
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_SPESIFIKASJONSLINJE(
