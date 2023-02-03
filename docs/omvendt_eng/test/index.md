@@ -4,15 +4,13 @@ title: "Test & Production"
 description: "Test and production information"
 ---
 
-[Norwegian](https://skatteetaten.github.io/mva-meldingen/kompensasjon/test/)
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/omvendt/test/)
 
 ## Changelog
 
 | Date       | Changes                                                             |
 | :--------- | :------------------------------------------------------------------ |
-| 2022.06.30 | New page for tax return for VAT compensation                        |
-| 2022.15.11 | Removed Jupyter notebook demo, added reference to Python script     |
-| 2022.16.11 | Added information about testing the VAT-report for VAT compensation |
+| 2023.01.30 | New page for VAT return for reverse tax liability    |
 
 ## Testing requirements
 
@@ -30,40 +28,37 @@ Connection to the test environment occurs through ID-porten and for the purpose 
 
 The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test the tax return for VAT compensation. Ordinary Digdir test users will not work for this purpose.[Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen_eng/test/User_Guide_Tenor_testdata.pdf).
 
-Skatteetaten's test environment will be available as long as it is needed, after the new tax return for VAT compensation is launched.
+Skatteetaten's test environment will be available as long as it is needed, after the VAT return for reverse tax liability is launched.
 
 ## Test planning
 
-From november 15th you can test:
+From February 15th you can test:
 
-- Validation of a VAT-report in the "merverdiavgift kompensasjon" category, a VAT-report for VAT compensation.
-- Submit a VAT-report for VAT compensation directly from the ERP accounting system.
-- Make a auditors attestation of the VAT-report for VAT compensation in the portal "Min Merverdiavgift"
+- Validation of a VAT-report in the "omvendt_avgiftsplikt" category, a VAT return for reverse tax liability.
+- Submit a VAT return for reverse tax liability directly from the ERP accounting system.
 
-After the VAT-report for VAT compensation is submitted from the ERP accounting system the submitting business will get a notification in Altinn (https://tt02.altinn.no/ in test). The notification will contain a link to the portal "Min Merverdiavgift". Click on the link and log in with a user that has the correct role to carry out an auditors attestation of the VAT-report for VAT compensation.
+After the VAT return for reverse tax liability is submitted from the ERP accounting system the submitting business will get a receipt in Altinn (https://tt02.altinn.no/ in test). 
+
+It will also possible to carry out a manual submission of the VAT return for reverse tax liability in the portal "Min merverdiavgift" on Skatteetaten.no. 
 
 ## Test planning - Roles
 
-To add the right to carry out an auditors attestation of the VAT-report for VAT compensation, please use this guide:
-[User Guide - give attestation rights](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon_eng/test/User%20Guide%20-%20give%20attestation%20rights.pdf).
+
 
 Altinn roles for the VAT-report for VAT compensation:
 
-- You can fill out and submit the the VAT-report for VAT compensation with these roles:
+- You can fill out and submit the VAT return for reverse tax liabilitywith these roles:
 
   - Limited signing rights/Begrenset signeringsrettighet
   - Accountant with signing rights/Regnskapsfører med signeringsrettighet.
 
-- You can fill out the VAT-report for VAT compensation:
+- You can fill out the VAT return for reverse tax liability with these roles:
 
   - Responsible auditor/Ansvarlig revisor
   - Accounting employee/Regnskapsmedarbeider
   - Accountant without signing rights/Regnskapsfører uten signeringsrettighet
   - Assistant auditor/Revisormedarbeider
 
-- You can carry out an auditors attestation of the VAT-report for VAT compensation in the portal "Min Merverdiavgift" with these roles
-  - Responsible auditor/Ansvarlig revisor
-  - Auditor certifies validity of VAT compensation/Revisorattesterer - MVA Kompensasjon.
 
 ## Summary of tests and moving into production
 
