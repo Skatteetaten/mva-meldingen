@@ -33,10 +33,11 @@ Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny mva-meldi
 ## Testplanlegging
 
 Fra 10. februar kan dere i test:
-Validere en mva-melding med meldingskategori "omvendt_avgiftsplikt" - mva-melding for omvendt avgiftsplikt.
-Sende inn en mva-melding for omvendt avgiftsplikt fra regnskapssystemet.
-Fullføre innsending i portalen.
+- Validere en mva-melding med meldingskategori "omvendt_avgiftsplikt" - mva-melding for omvendt avgiftsplikt.
+- Sende inn en mva-melding for omvendt avgiftsplikt fra regnskapssystemet.
 Etter at mva-melding for omvendt avgiftsplikt er sendt inn fra regnskapssystemet vil virksomheten motta en kvittering i Altinn (https://tt02.altinn.no/ i test).
+
+Man kan også fullføre en innsending i portalen Min merverdiavgift.
 
 ## Testplanlegging - Roller
 
