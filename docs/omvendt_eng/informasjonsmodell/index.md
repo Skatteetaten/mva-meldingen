@@ -1,12 +1,12 @@
 ---
 icon: "cloud"
 title: "Information models, XSD and encoding"
-description: "XSD for tax return for VAT compensation (kompensasjonsmelding for merverdiavgift)
+description: "XSD for VAT return for reverse tax liability (mva-melding for omvendt avgiftsplikt)
 - XSD for submission of metadata information 
 - encoding in XML-format"
 ---
 
-[Norwegian](https://skatteetaten.github.io/mva-meldingen/kompensasjon/informasjonsmodell/)
+[Norwegian](https://skatteetaten.github.io/mva-meldingen/omvendt/informasjonsmodell/)
 
 # XSD for the tax return for VAT compensation
 
@@ -14,38 +14,36 @@ description: "XSD for tax return for VAT compensation (kompensasjonsmelding for 
 
 | Date       | What changed?                                                                     |
 | :--------- | :-------------------------------------------------------------------------------- |
-| 2022.06.30 | Initial version of documentation for compensation report for VAT                  |
-| 2022.28.10 | Code lists updated related to introduction of compensation and reverse liability. |
-| 2022.16.11 | Updated description for changes in code lists                                     |
+| 2023.01.30 | Initial version of documentation for VAT return for reverse tax liability         |
+
 
 ## Change in the code list for as a consequence of the VAT-report for VAT compensation
 
 In the code list for remarks (merknad.xml) and SAFT-T (mvaKodeSAFT.xml) the following has been added:
 
-    <kompensasjon>SANN</kompensasjon>
+    <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
 
-and
-<alminneligPrimær>SANN</alminneligPrimær>
 
-These additions shal be used to decide if the code pertains to ordinary/primary business or compensation.
+
+These additions shal be used to decide if the code pertains to reverse liability.
 
 Notice that when the ERP suppliers start using the new version of the code list they will have to adapt to these code list additions.
-Codes will then be chosen based on whether or not the code has the code addition (kodetillegg) kompensasjon=SANN or alminneligPrimær=SANN.
+Codes will then be chosen based on whether or not the code has the code addition (kodetillegg) omvendtAvgiftsplikt=SANN, kompensasjon=SANN or alminneligPrimær=SANN.
 
-## Version 1.0 of the XSD for the tax return for VAT compensation
+## Version 1.0 of the XSD for VAT return for reverse tax liability
 
-The tax return for VAT compensation must be submitted in XML-format. It must be in accordance with the structure outlined for the VAT-return. The same XSD applies for both returns.
+VAT return for reverse tax liability must be submitted in XML-format. It must be in accordance with the structure outlined for the VAT-return. The same XSD applies for all returns.
 Version 1.0 of this XSD is found here [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
 
 Graphical representation of the XSD and encoding for the [tax return for VAT compensation](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
 
-![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftKompensasjon.jpg)
+![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftOmvendt.jpg)
 
 Example files for tax return for VAT compensation in XML format can be downloaded [here](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
 
-## Description of the fields in the tax return for VAT compensation
+## Description of the fields in the VAT return for reverse tax liability
 
-### Kompensasjonsmelding for merverdiavgift (Tax return for VAT compensation)
+### Mva-melding for omvendt avgiftsplikt (VAT return for reverse tax liability)
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
@@ -53,7 +51,7 @@ Example files for tax return for VAT compensation in XML format can be downloade
 	Purpose: to ensure that the user can fulfill their VAT reporting obligations
 	</td>
   </tr>
-    <tr><td>merknad</td><td>Additional information about the content of the tax return for VAT compensation<br>
+    <tr><td>merknad</td><td>Additional information about the content of the  VAT return for reverse tax liability<br>
 	Purpose: to ensure that the taxpayer have the possibility to explain their application of law when necessary
 	</td>
   </tr>
@@ -97,10 +95,9 @@ Purpose: To be able to pay to the bank accounts that require KID
 
 <table align=center>
   <tr><th style="width:25%" align=left>Field</th><th align=left>Description</th></tr>
-  <tr><td>skattleggingsperiode</td><td>The taxation period for which the tax return for VAT compensation applies <br>
+  <tr><td>skattleggingsperiode</td><td>The taxation period for which the  VAT return for reverse tax liability applies <br>
   Period is stated in accordance with the code list for the Skattleggingsperiode. 
-For the tax return for VAT compensation bi-monthly period applies. Businesses mentioned in the 
-VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subparagraph letters b to e and housing associations and condominiums as mentioned in the second subparagraph may make claims that include an entire calendar year in the tax return for VAT compensation in the sixth term. <br>
+For the VAT return for reverse tax liability quarterly period applies. <br>
 Purpose: to ensure consistency between bookkeeping and VAT return period 
 	</td>
   </tr>
@@ -122,7 +119,7 @@ Purpose: dissemination of which VAT assessments have been carried out
 Purpose: dissemination of which VAT assessments have been carried out
 	</td>
   </tr> 
-  <tr><td>mvaKodeRegnskapssystem</td><td>Internal VAT code in the accounting system. There may be several internal VAT codes for a mvaKode and possibly a specification. In that case, there will be several lines in the tax return for VAT compensation per mvaKode and specification; one per combination of VAT code, specification and VAT CodeAccounting system. <br>
+  <tr><td>mvaKodeRegnskapssystem</td><td>Internal VAT code in the accounting system. There may be several internal VAT codes for a mvaKode and possibly a specification. In that case, there will be several lines in the VAT return for reverse tax liability per mvaKode and specification; one per combination of VAT code, specification and VAT CodeAccounting system. <br>
 Purpose: Two considerations <br>
 Users: recognizable in relation to what they see in the accounting system. <br>
 The system suppliers will not have to change VAT codes in the systems
@@ -146,7 +143,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 
 </table>
 
-## Description of the fields in the tax return for VAT compensation submission
+## Description of the fields in the VAT return for reverse tax liability submission
 
 ### MvaMeldingInnsending (VAT return submission)
 
@@ -160,7 +157,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
   </tr>
   <tr><td>innsendingstype</td>
     <td>
-        A VAT return with meldingskategori alminnelig og primær will always be <strong>komplett</strong>. An initial tax return for VAT compensation will be complete when signed by the auditor. A corrected tax return for VAT compensation will be completed upon submission. <br>
+        A VAT return with meldingskategori alminnelig, primær and omvendtAvgiftsplikt will always be <strong>komplett</strong>. <br>
         Purpose: The field is kept so at a later date it can be opened for auditors to comment/write notes on returns (e.g. VAT compensation) that should be approved by an auditor before submission.
 </td>
   </tr>
@@ -212,10 +209,9 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
   <tr>
     <td>periode</td>
     <td>
-        The taxation period for which the tax return for VAT compensation applies <br>
+        The taxation period for which the  VAT return for reverse tax liability applies <br>
   Period is stated in accordance with the code list for the Skattleggingsperiode. 
-For the tax return for VAT compensation bi-monthly period applies. Businesses mentioned in the 
-VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subparagraph letters b to e and housing associations and condominiums as mentioned in the second subparagraph may make claims that include an entire calendar year in the tax return for VAT compensation in the sixth term. <br>
+For the  VAT return for reverse tax liability quarterly period applies. <br>
         Purpose: to ensure consistency between book keeping and VAT return period.
 	</td>
   </tr>
@@ -236,7 +232,7 @@ VAT compensation legislation (merverdiavgiftskompensasjonsloven) §2, first subp
     <td>vedleggstype</td>
     <td>
         Type of attachments which is uploaded to the instance on Altinn.
-        Where you can either use <strong>mva-melding</strong> for the tax return for VAT compensation , or <strong>binaerVedlegg</strong> for general attachments.
+        Where you can either use <strong>mva-melding</strong> for the tax return for VAT return for reverse tax liability , or <strong>binaerVedlegg</strong> for general attachments.
 	</td>
   </tr>
   <tr><td>kildegruppe</td>
