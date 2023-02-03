@@ -43,9 +43,7 @@ It will also possible to carry out a manual submission of the VAT return for rev
 
 ## Test planning - Roles
 
-
-
-Altinn roles for the VAT-report for VAT compensation:
+Altinn roles for the VAT return for reverse tax liability:
 
 - You can fill out and submit the VAT return for reverse tax liabilitywith these roles:
 
