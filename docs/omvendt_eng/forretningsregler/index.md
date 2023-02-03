@@ -1,7 +1,7 @@
 ---
 icon: "cloud"
-title: "Validation rules - reverse tax liability return"
-description: "Validation rules for the reverse tax liability VAT return"
+title: "Validation rules - VAT return for reverse tax liability"
+description: "Validation rules for the VAT return for reverse tax liability"
 ---
 
 [Norwegian](https://skatteetaten.github.io/mva-meldingen/omvendt/forretningsregler/)
@@ -14,7 +14,7 @@ description: "Validation rules for the reverse tax liability VAT return"
       <td>2023.01.26</td>
       <td>
           <ul>
-            <li> Added page for validation rules for reverse tax liability tax returns</li>
+            <li> Added page for validation rules for VAT return for reverse tax liability</li>
           </ul>      
       </td>
     </tr>
@@ -27,7 +27,7 @@ The validation rules are under development an new validation rules will be added
 The following validation rules are defined for all VAT returns:
 - The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return (R018)
 - The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate (R019)
-- The tax return must be an ordinary (general or primary industry) VAT return, claim for compensation or reverse tax liability VAT return (R104)
+- The tax return must be an ordinary (general or primary industry) VAT return, claim for compensation or VAT return for reverse tax liability (R104)
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 require a remark (R078)
 - KID numbers must be valid (R079)
 - Values must not contain decimals (R082)
@@ -38,7 +38,7 @@ The following validation rules are defined for all VAT returns:
 - Specification lines that apply to purchases eligible for compensation must have basis and VAT rate (R116)
 - VAT values in code lines should have a lower value than the VAT-basis value (R122)
 
-The following validation rules are defined for reverse tax liability VAT returns:
+The following validation rules are defined for VAT returns for reverse tax liability:
 - The tax periode length must be 3 months (R106)
 - Additional information is lacking for output VAT amounts with opposite +/- sign (R108)
 - Specification lines must have valid VAT codes (R113)
