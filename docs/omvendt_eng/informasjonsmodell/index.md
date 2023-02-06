@@ -8,7 +8,7 @@ description: "XSD for VAT return for reverse tax liability (mva-melding for omve
 
 [Norwegian](https://skatteetaten.github.io/mva-meldingen/omvendt/informasjonsmodell/)
 
-# XSD for the tax return for VAT compensation
+# XSD for the VAT return for reverse tax liability
 
 ### Change log
 
@@ -17,12 +17,11 @@ description: "XSD for VAT return for reverse tax liability (mva-melding for omve
 | 2023.01.30 | Initial version of documentation for VAT return for reverse tax liability         |
 
 
-## Change in the code list for as a consequence of the VAT-report for VAT compensation
+## Change in the code list for as a consequence of the VAT return for reverse tax liability
 
 In the code list for remarks (merknad.xml) and SAFT-T (mvaKodeSAFT.xml) the following has been added:
 
     <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-
 
 
 These additions shal be used to decide if the code pertains to reverse liability.
@@ -35,11 +34,11 @@ Codes will then be chosen based on whether or not the code has the code addition
 VAT return for reverse tax liability must be submitted in XML-format. It must be in accordance with the structure outlined for the VAT-return. The same XSD applies for all returns.
 Version 1.0 of this XSD is found here [no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.skattemeldingformerverdiavgift.v1.0.xsd)
 
-Graphical representation of the XSD and encoding for the [tax return for VAT compensation](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
+Graphical representation of the XSD and encoding for the [VAT return for reverse tax liability](SkattemeldingForMerverdiavgiftKompensasjon.jpg):
 
 ![SkattemeldingForMerverdiavgift2020](SkattemeldingForMerverdiavgiftOmvendt.jpg)
 
-Example files for tax return for VAT compensation in XML format can be downloaded [here](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
+Example files for VAT return for reverse tax liability in XML format can be downloaded [here](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/example_files/melding)
 
 ## Description of the fields in the VAT return for reverse tax liability
 
@@ -129,8 +128,8 @@ The system suppliers will not have to change VAT codes in the systems
 Purpose: Basis for control from the Tax Administration
 	</td>
   </tr>
-  <tr><td>sats</td><td>The VAT rate used in calculating VAT compensation. <br>
-Purpose: To ensure that only valid rates are used for VAT compensation
+  <tr><td>sats</td><td>The VAT rate used in calculating VAT.<br>
+Purpose: To ensure that only valid rates are used for calculating VAT 
 	</td>
   </tr>
   <tr><td>merverdiavgift</td><td>Fixed VAT <br>
@@ -282,23 +281,15 @@ For the  VAT return for reverse tax liability quarterly period applies. <br>
 
 | Group and code                                                      | Description of code and specification                                               |
 | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Purchases of goods and services in Norway with compensation for VAT |                                                                                     |
-| 1                                                                   | Purchases of goods and services with compensation for VAT (standard rate)           |
-| Specification line for code 1                                       | Adjustment of VAT compensation for real property                                    |
-| 11                                                                  | Purchases of goods and services with compensation for VAT (middle rate)             |
-| 13                                                                  | Purchases of goods and services with compensation for VAT (low rate)                |
-| Purchases of goods from abroad with compensation for VAT (import)   |                                                                                     |
-| 14                                                                  | Compensation for value added tax paid upon import (standard rate)                   |
-| Specification line for code 14                                      | Adjustment of VAT compensation for real property                                    |
-| 15                                                                  | Compensation for value added tax paid upon import (middle rate)                     |
-| 81                                                                  | Purchases of goods from abroad with compensation for VAT (standard rate)            |
-| Specification line for code 81                                      | Adjustment of VAT compensation for real property                                    |
-| 83                                                                  | Purchases of goods from abroad with compensation for VAT (middle rate)              |
-| Purchases of services from abroad with compensation for VAT(import) |                                                                                     |
-| 86                                                                  | Purchases of services from abroad with compensation for VAT (standard rate)         |
+| Purchases without deductions					      |                                                                                     |
+| 87                                                                  | Purchases of goods from abroad without deduction (standard rate)	            |
+| 89								      | Purchases of goods from abroad without deduction (low rate)                         |
+| 92                                                                  | Purchases of emission allowances and gold without deduction		            |
+| Purchases without deductions					      |											    |
+| 86								      | Purchases of services from abroad with compensation for VAT (standard rate)	    |
 | 88                                                                  | Purchases of services from abroad with compensation for VAT (low rate)              |
-| Emission allowances and gold                                        |                                                                                     |
-| 91                                                                  | Purchases of emission allowances and gold with compensation for VAT (standard rate) |
+| 91								      | Purchases of emission allowances and gold with compensation for VAT (standard rate) |
+
 
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/kodelister/)
 
