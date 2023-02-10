@@ -303,7 +303,7 @@ For the  VAT return for reverse tax liability quarterly period applies. <br>
 
 The submission of the VAT return requires an XML file containg metadata. This file must be according to the XSD for submission.
 
-[no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mvamvameldinginnsending.v1.0.xsd)
+[no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/informasjonsmodell_filer/xsd/no.skatteetaten.fastsetting.avgift.mva.mvameldinginnsending.v1.0.xsd)
 
 # XSD for validation response
 
