@@ -11,7 +11,7 @@ description: "Api-beskrivelser"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                                             |
-|:-----------| :------------------------------------------------------------------------------------------ |
+| :--------- | :------------------------------------------------------------------------------------------ |
 | 2021.06.17 | Oppdatert dokumentasjon for [tilbakemeldinger](#hent-tilbakemelding).                       |
 | 2021.07.05 | Justerte til riktig datatype for opplastning av vedlegg.                                    |
 | 2021.08.03 | Endret URL til valideringstjenesten til riktig verdi.                                       |
@@ -617,3 +617,9 @@ hvor `selfLinks.apps` kan hentes fra listen med data-elementer på instansen som
     }
   ]
 ```
+
+## Prosess for innsending av kompensasjonsmeldingen
+
+Innsending av kompensasjosnmelding følger den samme prosessen som mva-meldingen. Unntaket er revisors atttestasjon som gjøres i portalen Min merverdiavgift. Diagrammet under illustrerer prosessen for å sende inn kompensasjonsmeldingen.
+
+![](Mva-Melding-Innsending-Sekvensdiagram-komp.png)

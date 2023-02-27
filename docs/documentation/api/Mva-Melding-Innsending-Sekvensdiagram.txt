@@ -1,10 +1,13 @@
 title Mva-Melding-Innsending-Sekvensdiagram
 
+bottomparticipants 
 participant SBS
 participant ID-Porten(SBS)
 participant Altinn3-Exchange
 participant Altinn3-App
 participant Skatteetaten API
+participant Min merverdiavgift
+participant Revisor
 
 ==Autentisering==
 activate SBS
@@ -57,6 +60,29 @@ space
 ==Hent betalingsinformasjon==
 SBS->Altinn3-App:Hent tilbakemelding\nBearer: Altinn-Token\nGET: /instances/<partyId>/<instanceGuid>/feedback
 Altinn3-App-->SBS:Oppdatert instans
+
+space
+==Revisors attestasjon==
+
+Skatteetaten API->Altinn3-App:Hent innsending til attestering
+activate Skatteetaten API
+
+
+note over Skatteetaten API, Min merverdiavgift:Intern behandling \nog visning av \nkompensasjonsmelding
+activate Min merverdiavgift
+Revisor->Min merverdiavgift:Attestere kompensasjonsmeldingen
+deactivate Min merverdiavgift
+Skatteetaten API->Altinn3-App:Oppdatere instans 
+deactivate Skatteetaten API
+
+space 
+==Skatteetatens behandling==
+
+Skatteetaten API->Altinn3-App:Hent innsending til behandling
+activate Skatteetaten API
+note over Skatteetaten API, Min merverdiavgift: Intern behandling
+Skatteetaten API->Altinn3-App:Oppdatere instans\nbekreftelse og tilbakemelding 
+deactivate Skatteetaten API
 
 space
 ==Hent tilbakemelding synkron mot Altinn3-App==
