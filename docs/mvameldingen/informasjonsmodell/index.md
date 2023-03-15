@@ -303,11 +303,11 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | Spesifikasjonslinje til kode 31                   | Uttak                                                                                     |
 | 33                                                | Salg og uttak av varer og tjenester (lav sats)                                            |
 | Spesifikasjonslinje til kode 33                   | Uttak                                                                                     |
-| 5                                                 | Salg og uttak av varer og tjenester som er fritatt for merverdiavgift                     |
+| 5                                                 | Salg og uttak av varer og tjenester som er fritatt for merverdiavgift (nullsats)          |
 | Spesifikasjonslinje til kode 5                    | Uttak                                                                                     |
 | 6                                                 | Salg og uttak av varer og tjenester som er unntatt merverdiavgiftsloven                   |
 | Salg av varer og tjenester til utlandet (eksport) |                                                                                           |
-| 52                                                | Salg av varer og tjenester til utlandet som er fritatt for merverdiavgift                 |
+| 52                                                | Salg av varer og tjenester til utlandet som er fritatt for merverdiavgift (nullsats)      |
 | Kjøp av varer og tjenester i Norge (fradrag)      |                                                                                           |
 | 1                                                 | Kjøp av varer og tjenester med fradragsrett (høy sats)                                    |
 | Spesifikasjonslinje til kode 1                    | Tap på krav                                                                               |
@@ -342,14 +342,14 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | 89                                                | Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)                               |
 | Fisk m.m.                                         |                                                                                           |
 | 32                                                | Salg av fisk og andre marine viltlevende ressurser                                        |
-| 12                                                | Kjøp av fisk og andre marine viltlevende ressurser                                        |
+| 12                                                | Kjøp av fisk og andre marine viltlevende ressurser (11,11%)                               |
 | Spesifikasjonslinje til kode 12                   | Tap på krav                                                                               |
 | Klimakvoter og gull                               |                                                                                           |
 | 51                                                | Salg av klimakvoter og gull til næringsdrivende                                           |
-| 91                                                | Kjøp av klimakvoter og gull med fradragsrett                                              |
-| 91                                                | Fradrag på kjøp av klimakvoter og gull                                                    |
+| 91                                                | Kjøp av klimakvoter og gull med fradragsrett (høy sats)                                   |
+| 91                                                | Fradrag på kjøp av klimakvoter og gull (høy sats)                                         |
 | Spesifikasjonslinje til kode 91                   | Kjøp med kompensasjonsrett				                                |
-| 92                                                | Kjøp av klimakvoter og gull uten fradragsrett                                             |
+| 92                                                | Kjøp av klimakvoter og gull uten fradragsrett (høy sats)                                  |
 
 
 
