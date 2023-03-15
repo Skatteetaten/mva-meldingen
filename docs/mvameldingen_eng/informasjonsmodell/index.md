@@ -298,11 +298,11 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | Specification line for code 31                           | Withdrawal                                                                                 |
 | 33                                                       | Sales and withdrawals of goods and services (low rate)                                     |
 | Specification line for code 33                           | Withdrawal                                                                                 |
-| 5                                                        | Sales and withdrawals of goods and services exempt from value added tax                    |
+| 5                                                        | Sales and withdrawals of goods and services exempt from value added tax (zero-rate)        |
 | Specification line for code 5                            | Withdrawal                                                                                 |
 | 6                                                        | Sales and withdrawals of goods and services outside the scope of the Value Added Tax Act   |
 | Sales of goods and services to other countries (exports) |                                                                                            |
-| 52                                                       | Sales of goods and services exempt from value added tax to other countries                 |
+| 52                                                       | Sales of goods and services exempt from value added tax to other countries (zero-rate)     |
 | Purchases of goods and services in Norway (deduction)   |                                                                                             |
 | 1                                                        | Purchases of goods and services with deduction (standard rate)                             |
 | Specification line for code 1                            | Losses on outstanding claims and cancellations                                             |
@@ -310,7 +310,7 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | Specification line for code 1                            | Reversal of input VAT on passenger vehicles or Sale etc of real property before completion |
 | 11                                                       | Purchases of goods and services with deduction (middle rate)                               |
 | Specification line for code 11                           | Losses on outstanding claims and cancellations                                             |
-| 13                                                       | Purchases of goods and services with deduction (low rate)                  	        |
+| 13                                                       | Purchases of goods and services with deduction entitlement (low rate)        	        |
 | Specification line for code 13                           | Losses on outstanding claims and cancellations                                             |
 | Purchases of goods from abroad (import)                  |                                                                                            |
 | 81                                                       | Purchases of goods from abroad with deduction (standard rate)                              |
@@ -334,17 +334,17 @@ Purpose: to ensure that the taxpayer can explain his own application of the law 
 | 88                                                       | Purchases of services from abroad with deduction (low rate)                                |
 | 88                                                       | Deductions on purchases of services from abroad (low rate)					|
 | Specification line for code 88                           | Purchases with compensation for VAT	                                      		|
-| 89                                                       | Purchases of services from abroad without deduction (low rate)	    			|
+| 89                                                       | Purchases of services from abroad without deduction entitlement (low rate)			|
 | Fish etc.                                                |                                                                                            |
-| 32                                                       | Sales of fish and other marine wildlife resources                                          |
-| 12                                                       | Purchase of fish and other marine wildlife resources                                       |
+| 32                                                       | Sales of fish and other marine wildlife resources (11,11%)                                 |
+| 12                                                       | Purchase of fish and other marine wildlife resources (11,11%)                              |
 | Specification line for code 12                           | Losses on outstanding claims and cancellations                                             |
 | Emission allowances and gold                             |                                                                                            |
 | 51                                                       | Sales of emission allowances and gold to businesses/self-employed persons                  |
-| 91                                                       | Purchases of emission allowances and gold with deduction                                   |
-| 91                                                       | Deductions on purchases of emission allowances and gold                                    |
+| 91                                                       | Purchases of emission allowances and gold with deduction (standard rate)                   |
+| 91                                                       | Deductions on purchases of emission allowances and gold (standard rate)                    |
 | Specification line for code 81                           | Purchases with compensation for VAT                                                  	|
-| 92                                                       | Purchases of emission allowances and gold without deduction	      			|
+| 92                                                       | Purchases of emission allowances and gold without deduction entitlement (standard rate)	|
 
 
 [Overview of encoding/ code list:](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/informasjonsmodell_filer/kodelister/)
