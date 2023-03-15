@@ -341,7 +341,7 @@ Feltet skal ikke fylles ut for inngående mva. <br>
 | Spesifikasjonslinje til kode 88                   | Kjøp med kompensasjonsrett		                                                |
 | 89                                                | Kjøp av tjenester fra utlandet uten fradragsrett (lav sats)                               |
 | Fisk m.m.                                         |                                                                                           |
-| 32                                                | Salg av fisk og andre marine viltlevende ressurser                                        |
+| 32                                                | Salg av fisk og andre marine viltlevende ressurser (11,11%)                               |
 | 12                                                | Kjøp av fisk og andre marine viltlevende ressurser (11,11%)                               |
 | Spesifikasjonslinje til kode 12                   | Tap på krav                                                                               |
 | Klimakvoter og gull                               |                                                                                           |
