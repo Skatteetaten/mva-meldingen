@@ -4373,6 +4373,17 @@
             <alminneligprimær>SANN</alminneligprimær>
             <merknad>fritekstfelt</merknad>
             <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <fradrag>Fradrag på kjøp av klimakvoter og gull</fradrag>
+            <alminneligprimær>SANN</alminneligprimær>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
         </kodetillegg>
     </kode>
@@ -4380,42 +4391,21 @@
         <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
         <kodetillegg>
             <mvaKode>91</mvaKode>
+            <alminneligprimær>SANN</alminneligprimær>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <fradrag>Fradrag på kjøp av klimakvoter og gull</fradrag>
             <alminneligprimær>SANN</alminneligprimær>
             <merknad>fritekstfelt</merknad>
             <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>91</mvaKode>
-            <fradrag>Fradrag på kjøp av klimakvoter og gull</fradrag>
-            <alminneligprimær>SANN</alminneligprimær>
-            <merknad>fritekstfelt</merknad>
-            <levertFortegn>+</levertFortegn>
             <forventetFortegn>-</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>91</mvaKode>
-            <alminneligprimær>SANN</alminneligprimær>
-            <merknad>fritekstfelt</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>91</mvaKode>
-            <fradrag>Fradrag på kjøp av klimakvoter og gull</fradrag>
-            <alminneligprimær>SANN</alminneligprimær>
-            <merknad>fritekstfelt</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
         </kodetillegg>
     </kode>
     <kode>
@@ -5264,96 +5254,6 @@
         </kodetillegg>
     </kode>
     <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil i regnskapsprogram</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>kreditnota</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>periodisering</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil i regnskapsprogram</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>kreditnota</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>periodisering</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>86</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>store anskaffelser</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
         <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
         <kodetillegg>
             <mvaKode>87</mvaKode>
@@ -5437,96 +5337,6 @@
         <tekniskNavn>gyldig merknad for mva kode 87</tekniskNavn>
         <kodetillegg>
             <mvaKode>87</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>store anskaffelser</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil i regnskapsprogram</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>kreditnota</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>periodisering</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil i regnskapsprogram</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>kreditnota</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>periodisering</merknad>
-            <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>88</mvaKode>
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <merknad>store anskaffelser</merknad>
             <levertFortegn>+</levertFortegn>
@@ -5620,46 +5430,6 @@
             <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <merknad>store anskaffelser</merknad>
             <levertFortegn>+</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>91</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil i regnskapsprogram</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>91</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>feil mva-kode brukt tidligere</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>91</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>kreditnota</merknad>
-            <levertFortegn>-</levertFortegn>
-            <forventetFortegn>+</forventetFortegn>
-        </kodetillegg>
-    </kode>
-    <kode>
-        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
-        <kodetillegg>
-            <mvaKode>91</mvaKode>
-            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
-            <merknad>periodisering</merknad>
-            <levertFortegn>-</levertFortegn>
             <forventetFortegn>+</forventetFortegn>
         </kodetillegg>
     </kode>
@@ -6984,6 +6754,91 @@
             <forventetFortegn>-</forventetFortegn>
         </kodetillegg>
     </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 86</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>86</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 88</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>88</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 91</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>91</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+            <mvaSpesifikasjon>kompensasjonsrett</mvaSpesifikasjon>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 92</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>92</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>-</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+        </kodetillegg>
+    </kode>
+    <kode>
+        <tekniskNavn>gyldig merknad for mva kode 92</tekniskNavn>
+        <kodetillegg>
+            <mvaKode>92</mvaKode>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
+            <merknad>fritekstfelt</merknad>
+            <levertFortegn>+</levertFortegn>
+            <forventetFortegn>+</forventetFortegn>
+        </kodetillegg>
+    </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>
-

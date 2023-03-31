@@ -797,7 +797,9 @@
             <fradato>2020-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Previously used VAT code for compensation is incorrect</kortbeskrivelse_en>
+            <alminneligPrimær>SANN</alminneligPrimær>
             <merknadGjelder>mva kode</merknadGjelder>
             <kompensasjon>SANN</kompensasjon>
             <kortbeskrivelse_no>Feil mva-kode for kompensasjon brukt tidligere</kortbeskrivelse_no>
@@ -1067,6 +1069,7 @@
             <fradato>2020-01-01</fradato>
         </gyldigForBehandling>
         <kodetillegg>
+            <omvendtAvgiftsplikt>SANN</omvendtAvgiftsplikt>
             <kortbeskrivelse_en>Deductions will be entered  in the tax return for VAT compensation</kortbeskrivelse_en>
             <alminneligPrimær>SANN</alminneligPrimær>
             <merknadGjelder>mva kode</merknadGjelder>

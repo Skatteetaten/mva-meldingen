@@ -87,15 +87,15 @@
         <tekniskNavn>5</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Salg og uttak av varer og tjenester som er fritatt for merverdiavgift</tekst>
+                <tekst>Salg og uttak av varer og tjenester som er fritatt for merverdiavgift (nullsats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sales and withdrawals of goods and services exempt from value added tax</tekst>
+                <tekst>Sales and withdrawals of goods and services exempt from value added tax (zero-rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sal og uttak av varer og tenester som er fritatte for meirverdiavgift</tekst>
+                <tekst>Sal og uttak av varer og tenester som er fritatte for meirverdiavgift (nullsats)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -182,7 +182,7 @@
             <kompensasjonBeskrivelse_no>Kjøp av varer og tjenester med kompensasjonsrett (middel sats)</kompensasjonBeskrivelse_no>
             <kompensasjon>SANN</kompensasjon>
             <tema_en>Purchases of goods and services in Norway</tema_en>
-            <beskrivelseIStandard>Fradragsberettiget innenlands inngående merverdiavgift, redusert sats,  mellomsats</beskrivelseIStandard>
+            <beskrivelseIStandard>Fradragsberettiget innenlands inngående merverdiavgift, redusert sats, mellomsats</beskrivelseIStandard>
             <kompensasjonBeskrivelse_en>Purchases of goods and services eligible for compensation (medium rate)</kompensasjonBeskrivelse_en>
             <kodeBrukesTilSpesifiseringAv>Inngående merverdiavgift</kodeBrukesTilSpesifiseringAv>
         </kodetillegg>
@@ -191,15 +191,15 @@
         <tekniskNavn>12</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av fisk og andre marine viltlevende ressurser</tekst>
+                <tekst>Kjøp av fisk og andre marine viltlevende ressurser (11,11 %)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchase of fish and other marine wildlife resources</tekst>
+                <tekst>Purchase of fish and other marine wildlife resources (11,11 %)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Kjøp av fisk og andre marine viltlevande ressursar</tekst>
+                <tekst>Kjøp av fisk og andre marine viltlevande ressursar (11,11 %)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -373,15 +373,15 @@
         <tekniskNavn>32</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Salg av fisk og andre marine viltlevende ressurser</tekst>
+                <tekst>Salg av fisk og andre marine viltlevende ressurser (11,11 %)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sales of fish and other marine wildlife resources</tekst>
+                <tekst>Sales of fish and other marine wildlife resources (11,11 %)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sal av fisk og andre marine viltlevande ressursar</tekst>
+                <tekst>Sal av fisk og andre marine viltlevande ressursar (11,11 %)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -470,15 +470,15 @@
         <tekniskNavn>52</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Salg av varer og tjenester til utlandet som er fritatt for merverdiavgift</tekst>
+                <tekst>Salg av varer og tjenester til utlandet som er fritatt for merverdiavgift (nullsats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sales of goods and services exempt from value added tax to other countries</tekst>
+                <tekst>Sales of goods and services exempt from value added tax to other countries (zero-rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Sal av varer og tenester til utlandet som er fritatte for meirverdiavgift</tekst>
+                <tekst>Sal av varer og tenester til utlandet som er fritatte for meirverdiavgift (nullsats)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -623,7 +623,7 @@
         <tekniskNavn>84</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av varer fra utlandet som er uten fradragsrett (middels sats)</tekst>
+                <tekst>Kjøp av varer fra utlandet uten fradragsrett (middels sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
@@ -873,15 +873,15 @@
         <tekniskNavn>91</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av klimakvoter og gull med fradragsrett</tekst>
+                <tekst>Kjøp av klimakvoter og gull med fradragsrett (høy sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of emission allowances and gold with deductions</tekst>
+                <tekst>Purchases of emission allowances and gold with deductions (standard rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Kjøp av klimakvoter og gull med frådragsrett</tekst>
+                <tekst>Kjøp av klimakvoter og gull med frådragsrett (høg sats)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -925,15 +925,15 @@
         <tekniskNavn>92</tekniskNavn>
         <beskrivelse>
             <spraakTekst>
-                <tekst>Kjøp av klimakvoter og gull uten fradragsrett</tekst>
+                <tekst>Kjøp av klimakvoter og gull uten fradragsrett (høy sats)</tekst>
                 <spraak>no</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Purchases of emission allowances and gold without deductions</tekst>
+                <tekst>Purchases of emission allowances and gold without deduction entitlement (standard rate)</tekst>
                 <spraak>en</spraak>
             </spraakTekst>
             <spraakTekst>
-                <tekst>Kjøp av klimakvoter og gull som er utan frådragsrett</tekst>
+                <tekst>Kjøp av klimakvoter og gull som er utan frådragsrett (høg sats)</tekst>
                 <spraak>nn</spraak>
             </spraakTekst>
         </beskrivelse>
@@ -964,4 +964,3 @@
     </kode>
     <lokaltForvaltet>true</lokaltForvaltet>
 </kodeliste>
-
