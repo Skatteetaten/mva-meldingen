@@ -623,3 +623,24 @@ hvor `selfLinks.apps` kan hentes fra listen med data-elementer på instansen som
 Innsending av kompensasjosnmelding følger den samme prosessen som mva-meldingen. Unntaket er revisors atttestasjon som gjøres i portalen Min merverdiavgift. Diagrammet under illustrerer prosessen for å sende inn kompensasjonsmeldingen.
 
 ![](Mva-Melding-Innsending-Sekvensdiagram-komp.png)
+
+
+### Lenke til attesteringssiden for en melding
+
+Det blir lastet opp en fil til instansen med `dataType=portalLenker`.
+Dette er en .json fil som inneholder lenker til portalen, 
+slik at regnskapssystemene ikke behøver å hardkode disse i systemene.
+
+Den kan hentes ved å først finne ID'en til dataElementet som har dataType=portalLenker.
+Deretter gjøre et GET kall mot: <br>
+Test: `https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances/<partyId>/<InstanceGUID>/data/<dataElementID>` <br>
+
+Prod: `https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/instances/<partyId>/<InstanceGUID>/data/<dataElementID>`
+
+Foreløpelig inneholder den bare lenke til siden for attestering, 
+men kan bli utvidet i fremtiden med lenker til godkjenningssiden og for innlevert meldinger.
+
+Eksempel på en slik fil:
+```JSON
+{"attestering":"https://skatt-sbstest.sits.no/web/mva-melding/attester/213043102/51486565/afc8d91e-0b5e-4513-a785-b493189bf6b8"}
+```
