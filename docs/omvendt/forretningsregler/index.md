@@ -131,7 +131,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT(
-        "Det skal ikke føres beløp både for koden og tilhørende spesifikasjon."
+        "Det skal ikke føres beløp for koden i tillegg til spesifikasjon."
         {
             valideringsregel {
                 (meldingskategori er omvendtAvgiftsplikt) såSkal {
@@ -144,7 +144,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_TERMINKATEGORI(
-        "Mva-meldinger for omvendt avgiftsplikt kan kun sendes inn med terminlengde 3-månedlig."
+        "Mva-meldinger for omvendt avgiftsplikt kan kun sendes inn med terminlengde tre-månedlig."
         {
             valideringsregel {
                 meldingskategori er omvendtAvgiftsplikt såSkal {
@@ -154,6 +154,17 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
             regelnummer { R106 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_AKTIV_MVA_PLIKT_FOR_SAMME_PERIODE(
+        "Merverdiavgiftsregisteret viser at dere skal levere ordinær mva-melding for denne perioden. Kjøp av tjenester fra utlandet, klimakvoter og gull skal rapporteres på ordinær mva-melding."
+        {
+            valideringsregel {
+                meldingskategori er omvendtAvgiftsplikt såSkal { virksomhetenErIkkeRegistrertMedEnPliktForHelePerioden }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R121 }
         }
     ),
     MVA_MELDINGSINNHOLD_GRUNNLAG_ER_LAVERE_ENN_BEREGNET_AVGIFT(
@@ -172,7 +183,32 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R122 }
         }
     ),
-    
+    MVA_OMVENDT_AVGIFTSPLIKT_AKTIV_MVA_PLIKT_FOR_DELER_AV_PERIODEN(
+        "Merverdiavgiftsregisteret viser at dere skal levere ordinær mva-melding for deler av denne perioden. Er dere sikre på at dere også skal levere mva-melding for omvendt avgiftsplikt?."
+        {
+            valideringsregel {
+                meldingskategori er omvendtAvgiftsplikt såSkal { virksomhetenErIkkeRegistrertMedEnPliktForDelerAvPerioden }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R123 }
+        }
+    ),
+    MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJON_MANGLER(
+        "Koden må inneholde spesifikasjon 'kjøp med kompensasjonsrett'."
+        {
+            valideringsregel {
+                (meldingskategori er omvendtAvgiftsplikt) såSkal {
+                    mvaSpesifikasjonslinje
+                            .hvor { linje -> linje.mvaKode væreMedI mvaKodene(86, 88, 91) }
+                            .skal { linje -> linje.spesifikasjon ha innhold og (linje.spesifikasjon er KOMPENSASJONSRETT.spesifikasjon.kode) }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R124 }
+        }
+    ),
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
@@ -198,7 +234,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_KODER_FINNES_FASTSATT_MERVERDIAVGIFT_KR_0(
-        "Innsendte koder stemmer ikke med beløpet oppgitt i 'Fastsatt merverdiavgift'." {
+        "Innsendte koder stemmer ikke med beløpet oppgitt i 'fastsatt merverdiavgift'." {
             valideringsregel {
                 (meldingskategori er omvendtAvgiftsplikt) såSkal {
                     mvaSpesifikasjonslinje
@@ -213,7 +249,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     ),
 
     MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UTGÅENDE_MOTSATT_FORTEGN_MERKNAD_TIL_MVA_KODEN_MANGLER(
-        "Merknad må legges ved som forklaring på hvorfor det er benyttet motsatt fortegn for grunnlag og utgående merverdiavgift."
+        "Det må fylles ut gyldig merknad på kode med motsatt fortegn."
         {
             valideringsregel {
                 (meldingskategori er omvendtAvgiftsplikt) såSkal {
@@ -358,7 +394,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_FASTSATT_MERVERDIAVGIFT_KR_0(
-        "Det skal ikke sendes inn mva-melding for omvendt avgiftsplikt når beløpet i 'Fastsatt merverdiavgift' er kr 0."
+        "Dere skal ikke sende inn mva-melding for omvendt avgiftsplikt når beløpet i 'fastsatt merverdiavgift' er 0 kroner."
         {
             valideringsregel {
                 (meldingskategori er omvendtAvgiftsplikt) og erFørsteMvaMeldingForTerminOmvendtAvgiftsplikt såSkal {
@@ -371,7 +407,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_SUM_OMSETNING_UNDER_MINSTEBELØP(
-        "Summert grunnlag er under minstegrensen på kr 2 000 og skal ikke innberettes." {
+        "Grunnlaget er under 2000 kroner. Merverdiavgift skal beregnes hvis samlet kjøp for terminen overstiger denne minstegrensen." {
             valideringsregel {
                 (meldingskategori er omvendtAvgiftsplikt) og detFinnesIkkeEnMvaMeldingTidligereIÅretUnderBeløpsgrenseOmvendtAvgiftsplikt såSkal {
                     mvaSpesifikasjonslinje.summenAv { linje ->
@@ -386,7 +422,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_MELDINGSINNHOLD_UGYLDIG_SPESIFIKASJONSLINJE(
-        "Spesifikasjonen som er brukt kan ikke brukes i mva-meldingen for omvendt avgiftsplikt."
+        "Dere kan ikke bruke denne spesifikasjonen i mva-meldingen for omvendt avgiftsplikt."
         {
             valideringsregel {
                 (meldingskategori er omvendtAvgiftsplikt) såSkal {
@@ -404,7 +440,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_OMVENDT_AVGIFTSPLIKT_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ_FEIL_KODE(
-        "Spesifikasjonen som gjelder kjøp med kompensasjonsrett kan kun sendes inn på kode 86, 88 og 91."
+        "Spesifikasjonen 'Kjøp av tjenester fra utlandet med kompensasjonsrett' kan kun sendes inn på kode 86 og 88. Spesifikasjonen 'Kjøp av klimakvoter og gull med kompensasjonsrett' kan kun sendes inn på kode 91."
         {
             valideringsregel {
                 (meldingskategori er omvendtAvgiftsplikt) såSkal {

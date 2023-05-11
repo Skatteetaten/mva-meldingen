@@ -944,7 +944,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT(
-        "Beløpet på koden og spesifikasjonen Kjøp med kompensasjonsrett er like."
+        "Beløpet på koden og spesifikasjonen 'Kjøp med kompensasjonsrett' er like"
         {
             valideringsregel {                
                   (
@@ -1022,7 +1022,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),    
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ_FEIL_MVA_KODE(
-        "Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett kan kun sendes inn på kode 81, 83, 86, 88 eller 91."
+        "Dere kan ikke bruke denne spesifikasjonslinjen på denne koden."
         {
             valideringsregel {
                 ((meldingskategori er alminnelig) eller (meldingskategori er primærnæring)) såSkal {
@@ -1204,22 +1204,22 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         }
     ),
 
-    MVA_MELDINGSINNHOLD_KONTONUMMER_FINNES_IKKE(
-        "Kontonummer mangler for utbetaling av merverdiavgift."
-        {
-            valideringsregel {
-                (
-                    ((meldingskategori er alminnelig) eller (meldingskategori er primærnæring)) og
-                        (skattegrunnlagOgBeregnetSkatt.fastsattMerverdiavgift kunne føreTilEnUtbetaling)
-                    ) såSkal {
-                    registrertKontonummer har innhold
-                }
-            }
-            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
-            kategori { KONTONUMMER }
-            regelnummer { R080 }
-        }
-    ),
+   MVA_MELDINGSINNHOLD_KONTONUMMER_FINNES_IKKE(
+       "Kontonummer mangler for utbetaling av merverdiavgift."
+       {
+           valideringsregel {
+               (
+                   (skattegrunnlagOgBeregnetSkatt.fastsattMerverdiavgift kunne føreTilEnUtbetaling)
+                   ) såSkal {
+                   registrertKontonummer har innhold
+               }
+           }
+           alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+           kategori { KONTONUMMER }
+           regelnummer { R080 }
+       }
+   ),
+
     MVA_KODE_MERKNAD_FORTEGN_GYLDIG_VANLIG_FORTEGN(
         "Det må fylles ut gyldig merknad på kode med vanlig fortegn." {
             valideringsregel {

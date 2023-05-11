@@ -585,6 +585,22 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
             regelnummer { R071 }
         }
+    ),
+    MVA_KOMPENSASJON_MANGLENDE_REGISTRERING_I_ENHETSREGISTERET(
+        "Virksomheten er ikke registrert i Enhetsregisteret og kan ikke sende inn krav om kompensasjon."
+        {
+            valideringsregel {
+                meldingskategori er kompensasjon såSkal {
+                    (
+                            slettetDatIERStørreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
+
+                            )
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R125 }
+        }
     )
 
 ```
