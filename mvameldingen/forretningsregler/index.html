@@ -973,7 +973,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØ<span class="token function">P_MED_KOMPENSASJONSRETT</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Beløpet på koden og spesifikasjonen Kjøp med kompensasjonsrett er like.&quot;</span>
+        <span class="token string">&quot;Beløpet på koden og spesifikasjonen &#x27;Kjøp med kompensasjonsrett&#x27; er like&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>                
                   <span class="token punctuation">(</span>
@@ -1051,7 +1051,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>    
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ<span class="token function">_FEIL_MVA_KODE</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Spesifikasjonslinje som gjelder kjøp med kompensasjonsrett kan kun sendes inn på kode 81, 83, 86, 88 eller 91.&quot;</span>
+        <span class="token string">&quot;Dere kan ikke bruke denne spesifikasjonslinjen på denne koden.&quot;</span>
         <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
                 <span class="token punctuation">(</span><span class="token punctuation">(</span>meldingskategori er alminnelig<span class="token punctuation">)</span> <span class="token function">eller</span> <span class="token punctuation">(</span>meldingskategori er primærnæring<span class="token punctuation">)</span><span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
@@ -1233,22 +1233,22 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE<em>SKATTEMELDING, UGYLDIG</
         <span class="token punctuation">}</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-    <span class="token function">MVA_MELDINGSINNHOLD_KONTONUMMER_FINNES_IKKE</span><span class="token punctuation">(</span>
-        <span class="token string">&quot;Kontonummer mangler for utbetaling av merverdiavgift.&quot;</span>
-        <span class="token punctuation">{</span>
-            valideringsregel <span class="token punctuation">{</span>
-                <span class="token punctuation">(</span>
-                    <span class="token punctuation">(</span><span class="token punctuation">(</span>meldingskategori er alminnelig<span class="token punctuation">)</span> <span class="token function">eller</span> <span class="token punctuation">(</span>meldingskategori er primærnæring<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">og</span>
-                        <span class="token punctuation">(</span>skattegrunnlagOgBeregnetSkatt<span class="token punctuation">.</span>fastsattMerverdiavgift kunne føreTilEnUtbetaling<span class="token punctuation">)</span>
-                    <span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
-                    registrertKontonummer har innhold
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
-            kategori <span class="token punctuation">{</span> KONTONUMMER <span class="token punctuation">}</span>
-            regelnummer <span class="token punctuation">{</span> R080 <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+   <span class="token function">MVA_MELDINGSINNHOLD_KONTONUMMER_FINNES_IKKE</span><span class="token punctuation">(</span>
+       <span class="token string">&quot;Kontonummer mangler for utbetaling av merverdiavgift.&quot;</span>
+       <span class="token punctuation">{</span>
+           valideringsregel <span class="token punctuation">{</span>
+               <span class="token punctuation">(</span>
+                   <span class="token punctuation">(</span>skattegrunnlagOgBeregnetSkatt<span class="token punctuation">.</span>fastsattMerverdiavgift kunne føreTilEnUtbetaling<span class="token punctuation">)</span>
+                   <span class="token punctuation">)</span> såSkal <span class="token punctuation">{</span>
+                   registrertKontonummer har innhold
+               <span class="token punctuation">}</span>
+           <span class="token punctuation">}</span>
+           alvorlighetsgrad <span class="token punctuation">{</span> AVVIKENDE_SKATTEMELDING <span class="token punctuation">}</span>
+           kategori <span class="token punctuation">{</span> KONTONUMMER <span class="token punctuation">}</span>
+           regelnummer <span class="token punctuation">{</span> R080 <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">)</span><span class="token punctuation">,</span>
+
     <span class="token function">MVA_KODE_MERKNAD_FORTEGN_GYLDIG_VANLIG_FORTEGN</span><span class="token punctuation">(</span>
         <span class="token string">&quot;Det må fylles ut gyldig merknad på kode med vanlig fortegn.&quot;</span> <span class="token punctuation">{</span>
             valideringsregel <span class="token punctuation">{</span>
