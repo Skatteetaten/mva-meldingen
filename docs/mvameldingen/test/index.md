@@ -21,7 +21,6 @@ Systemleverandørene har ansvar for egen testgjennomføring. Det må fokuseres p
 
 Prosjektet bistår med feilsøk, evt. feilretting, samt oppfølging av saker som er sendt inn i testmiljøet.
 
-Prosjektet er tilgjengelig via Slack for tekniske avklaringer og direkte kontakt med utviklere og testleder. Prosjektet kan også nås via mva-modernisering@skatteetaten.no. Ta kontakt via mailadressen for å få tilgang til Slack.
 
 ## Testmiljø og testdata
 
@@ -32,10 +31,6 @@ Oppkobling mot testmiljøet skjer via ID-porten og i forbindelse med test kan Sk
 Systemutviklere skal bruke testbrukere fra Tenor Testdatasøk. Dette er syntetisk testbruker som også skal brukes for pålogging i ID-porten og Altinn. Det vil kun være disse testbrukeren som kan benyttes for å få testet. Testbrukere som ligger tilgjengelig på Digdir sine sider vil ikke kunne brukes. [Her finnes en bruksveiledning for Tenor Testdatasøk](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/test/Bruksveiledning_Tenor.pdf).
 
 Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny mva-melding er lansert, så lenge det er behov for det.
-
-## Testplanlegging
-
-Prosjektet vil tilby egne møter med fokus på testplanlegging og gjennomføring av test. Her vil tema blant annet være testgjennomføringen, hvilke scenarier som bør testes og testdata.
 
 ## Oppsummering av test og oppstart i produksjon
 
