@@ -15,45 +15,6 @@ description: "Beskrivelser av innsynstjenester tilgjengelig som API"
 | 2022.10.04 | Side for innsynstjenester opprettet                |
 | 2022.12.02 | La til beskrivelse av tjeneste innsendte meldinger |
 
-# Maskinporten og autentisering
-
-## Introduksjon
-
-For å autentisere med Maskinporten må det gjøres noen forberedelser av virksomheten som skal gjøre spørringer mot Skatteetatens tjenester.
-
-## Fremgangsmåte forå ta i bruk maskinporten
-
-1\. Ta kontakt med Digitaliseringsdirektoratet for å få tilgang til Maskinporten.
-Dette kan gjøres via Digdirs samarbeidsportal (https://samarbeid.digdir.no/maskinporten/konsument/119).
-
-2\. Opprette bruker i Samarbeidsportalen
-Når avtale med Digdir er opprettet og tilgang er på plass i Altinn, kan du logge på Samarbeidsportalen. Hvis det er første gang du som konsument logger inn på Samarbeidsportalen, må du opprette en bruker i Samarbeidsportalen.
-
-- Gå til samarbeid.digdir.no
-- Trykk på “Min profil” oppe i høyre hjørne.
-- Trykk på “Registrer deg” i påloggingsvinduet
-- Registrer bruker med din jobbadresse
-- Bekreft brukeren ved å trykke på lenken som kommer på epost. (NB! Sjekk søppelpost om ikke eposten kommer frem).
-
-NB! Digdir har egne sider som kan benyttes ved feilsøking der man ikke får generert token, feks feilsøking. Hvis man fortsatt har problemer skal Digdirs Servicedesk servicedesk@digdir.no kontaktes.
-
-3\. Få tilgang til rettighetspakke (scope)
-Tilgang til rettighetspakke (scope på Maskinporten) opprettes av Skatteetaten, og må søkes av konsument ved å sende en e-post til mva-modernisering@skatteetaten.no og oppgi organisasjonsnummer.
-Følgende scope er opprettet for innsynstjenstene:
-
-- skatteetaten:mvameldinginnsendingsstatus
-
-Når Skatteetaten godkjenner søknaden om tilgang til tjenestene gis virksomheten tilgang til å opprette tokens fra maskinporten for de angitte scopene
-
-4\. Bruke Skatteetatens api med token fra Maskinporten.
-For å gjøre kall til api med gyldig token gjøres følgende:
-
-1. Gjøre et kall til Maskinporten for å få et token som kan brukes mot Skatteetatens tjeneste. Fremgangsmåten er beskrevet på Digdir sine sider for hvordan bruke maskinporten som konsument:
-2. Tokenet legges i Authorization-header på alle kall til Skatteetatens tjeneste på formatet:
-   ‘Authorization: Bearer <token>’
-3. Skatteetaten verifiserer tokenet mot Maskinporten som garanterer at tilbyder har tilgang til å opptre på vegne av angitt konsument på det angitte scopet.
-4. Data returneres for angitt konsument
-
 # MVA Innsyn API
 
 ##Introduksjon
@@ -61,12 +22,10 @@ API-ene for innsyn kan brukes av sluttbrukersystemer (SBS) for å innhente tilsv
 
 ## Forespørsel om innsyn
 
-Bruk av innsyn API-ene forutsetter at SBS-en er autentisert via Maskinporten og at delegering mellom skatteyter og SBS er konfigurert i Altinn.
-
 Forespørsler om innsyn gjøres som HTTP GET kall til Skatteetatens API-er og svar returneres på XML eller JSON format. Hvilket format som er ønsket angis i «Accept» header i HTTP forespørselen.
 Sekvens for forespørsler om innsyn:
 
-1. Autentisering mot maskinporten.
+1. Autentisering med ID-porten.
 2. Kall mot Skatteetaten
 
 ![](Sekvensdiagram innsyn SBS.png)
