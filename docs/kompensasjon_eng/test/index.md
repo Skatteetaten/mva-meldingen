@@ -18,10 +18,6 @@ description: "Test and production information"
 
 System providers are responsible for carrying out tests themselves. Focus should be to verify that the validation and submission services work as expected. The implementation guide is the essential guide for getting the solution in place for system providers.
 
-The project team will contribute with debugging, bug fixing, and following up of cases that are sent into the test environment.
-
-The project team is available via Slack for technical clarifications and for direct contact with developers and test managers. The project team can also be reached via mva-modernisering@skatteetaten.no. Contact us here to receive access to Slack.
-
 ## The test environment and test data
 
 System providers must have test environments which can make use of synthetic data
@@ -34,7 +30,7 @@ Skatteetaten's test environment will be available as long as it is needed, after
 
 ## Test planning
 
-From november 15th you can test:
+In the test environment you can test:
 
 * Validation of a VAT-report in the "merverdiavgift kompensasjon" category, a VAT-report for VAT compensation. 
 * Submit a VAT-report for VAT compensation directly from the ERP accounting system. 
