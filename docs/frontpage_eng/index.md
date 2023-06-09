@@ -2,9 +2,9 @@
 
 ## Background
 
-The MEMO-project is developing a new tax return for VAT compensation (VAT return). The goal of the MEMO-project is to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system.
+The MEMO-project has developed a new tax return for VAT compensation (VAT return). The goal of the MEMO-project was to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system.
 Some simplification is a result of changes in the VAT return; fever sources of errors, easier returns, and making it easier to fulfil the duty to provide information.
-A new VAT return will also provide new opportunities for guidance and dialog through validation before submission, and reminders for tasks. In addition, it will be possible to offer an increased degree of access to information to achieve effectiveness and safety through digital reconciliation of the VAT return. There is also a desire for better interaction between accounting/ERP systems and Altinn/Tax Authority systems, for example automatic receipt for submitted VAT returns.
+The VAT return also provides new opportunities for guidance and dialog through validation before submission, and reminders for tasks. In addition, it is possible to offer an increased degree of access to information to achieve effectiveness and safety through digital reconciliation of the VAT return. The new VAT-report provides better interaction between accounting/ERP systems and Altinn/Tax Authority systems, for example automatic receipt for submitted VAT returns.
 
 If you want more information about the project go to [skatteetaten.no/nymva](http://www.skatteetaten.no/nymva).
 I f you want information or news for ERPs go to our pages at [Altinn Digitalisering](https://www.altinndigital.no/produkter/altinn-api-for-datasystem/tjenesteoversikt/skatteetaten---modernisering-av-mva/)
@@ -14,8 +14,8 @@ I f you want information or news for ERPs go to our pages at [Altinn Digitaliser
 - Common information structure and rules for all types of VAT returns
 - Flexibility; code based rather than fixed fields
   - From electronic forms to digital interaction
-  - No longer numbered fields, these will be replaced by a dynamic list of specifications
-  - The new VAT-return re-uses the Standard Tax Codes from the SAF-T standard. (Note: the new VAT-return must not be confused with the SAF-T Financial file. Only the codes will be re-used - The VAT-return will still be at a very aggregated level).
+  - No longer numbered fields, these are replaced by a dynamic list of specifications
+  - The new VAT-return re-uses the Standard Tax Codes from the SAF-T standard. (Note: the new VAT-return must not be confused with the SAF-T Financial file. Only the codes are re-used - The VAT-return is still at a very aggregated level).
 - Easier to provide the correct information; remarks for VAT returns per line and in total:
   - Removes the need for remarks as the new return covers more cases
   - Structured remarks for common cases
@@ -36,7 +36,7 @@ Frontpage in English
 - An end-user system creates a VAT return through a user interface.
 - The end-user system can execute operations on VAT returns through an API between the system and Altinn 3. These API's are new, and not the same as the ones currently being used in Altinn 2.
 - API's for validation, signing and submitting VAT returns will be available
-- Existing functionality in Altinn 2, such as inbox, roles and rights will also be available in the new service.
+- Functionality in Altinn 2, such as inbox, roles and rights will also be available in the new service.
 - Reporting business, accountants and advisors can access submitted information, sign VAT returns and submit returns to the tax authority.
-- The tax authority will offer a portal solution where taxable persons can access submitted information, make changes and submit VAT returns.
+- The tax authority offers a portal solution where taxable persons can access submitted information, make changes and submit VAT returns.
 - Login and authentication of the end user or system is carried out using ID-porten. The project will consider support for Maskinporten at a later stage.
