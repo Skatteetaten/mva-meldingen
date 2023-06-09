@@ -16,29 +16,21 @@ The Tax Administration has launched a new registration solution for the Value Ad
 
 #### New VAT-return
 
-The goal of the project is to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system. The new VAT-return will be launched on 1 January 2022.
-
-#### New sales and purchases report
-
-A proposal for a new solution for reporting on sales and purchases is currently in a mandatory public consultation. The proposed solution will help both businesses and the Tax Administration to ensure equal treatment and prevent unlawful distortion of competition for businesses. The deadline for the consultation is november 26, 2021. [The proposal can be found here](https://www.skatteetaten.no/rettskilder/type/horinger/opplysningsplikt-salgs-og-kjopstransaksjoner/)
+The goal of the project was to achieve increased compliance, equal competitive conditions, simplification for reporting businesses, and a more effective administration of the VAT system. The new VAT-return was launched on 1 January 2022.
 
 ### Will there be a transition period from the old to the new services?
 
-Coordinated Register Notification part 2 is no longer available for changing or deleting an application until the second quarter of 2021.
-For the VAT-return, no transition period is planned.
+Coordinated Register Notification part 2 is no longer available for changing or deleting an application after the second quarter of 2021.
+For the VAT-return, there is no transition period.
 
 ### Will there be an "emergency" solution in case of technical difficulties?
 
-For the registration solution, it will be possible to submit an incomplete application after the first stages of the service.
-For the VAT-return it will be possible to file and submit the VAT-return in the online portal at skatteetaten.no.
+For the registration solution, it is possible to submit an incomplete application after the first stages of the service.
+For the VAT-return it is possible to file and submit the VAT-return in the online portal at skatteetaten.no.
 
 ## Who can fill out an application for registration, and who can submit?
 
-### Why has the Tax Administration chosen to limit filling out registrations or VAT-returns by using Altinn-roles?
-
-Until now, there has been no limit to who can fill out returns for a business, and if the business has poor routines for signing, unintended returns can be submittet and give serious consequences. The new use of roles is safer, and in line with all other modernised services in the Tax Administration. Roles are required for both registration and vat-report submission.
-
-### More information about roles in Altinn
+### Information about roles in Altinn
 
 [Read more about Altinn-roles here.](https://www.altinn.no/en/help/profile/roles-and-rights/)
 
@@ -46,7 +38,7 @@ Until now, there has been no limit to who can fill out returns for a business, a
 
 To fill out a registration application, the following roles are needed:
 The business itself can fill out the VAT-registration, or someone with the Altinn role Auditor in charge/Ansvarlig revisor, Accounting employee/Regnskapsmedarbeider, Accountant with signing rights/Regnskapsfører med signeringsrettighet, Accountant without signing rights/Regnskapsfører uten signeringsrettighet, or Assistant auditor/Revisormedarbeider.
-If you are going to sign on behalf of others, you must have the Altinn role “Limited signing rights/Begrenset signeringsrettighet", alternatively "Contact person NUF/Kontaktperson NUF”, if you are registering a Norwegian registered foreign enterprise (NUF).
+If you are going to sign the registration application on behalf of others, you must have the Altinn role “Limited signing rights/Begrenset signeringsrettighet", alternatively "Contact person NUF/Kontaktperson NUF”, if you are registering a Norwegian registered foreign enterprise (NUF).
 
 ### Delegated access to registration service
 
@@ -56,11 +48,11 @@ It is also possible for legal councel to acquire Altinn-roles in reporting busin
 
 ### VAT-return roles
 
-To fill out and submit VAT-returns, the same Altinn-roles as today are needed:
+To fill out and submit VAT-returns, these Altinn-roles are needed:
 
 The business itself can fill out the VAT-return, or someone with the Altinn role Auditor in charge/Ansvarlig revisor, Accounting employee/Regnskapsmedarbeider, Accountant without signing rights/Regnskapsfører uten signeringsrettighet or Assistant auditor/Revisormedarbeider.
 
-If you are going to sign on behalf of others, you must have the Altinn role “Limited signing rights/Begrenset signeringsrettighet", "Contact person NUF/Kontaktperson NUF”, if you are registering a Norwegian registered foreign enterprise (NUF) and Accountant with signing rights/Regnskapsfører med signeringsrettighet .
+If you are going to sign VAT-returns on behalf of others, you must have the Altinn role “Limited signing rights/Begrenset signeringsrettighet", "Contact person NUF/Kontaktperson NUF”, if you are registering a Norwegian registered foreign enterprise (NUF) and Accountant with signing rights/Regnskapsfører med signeringsrettighet .
 
 ### Addititional functionality
 
@@ -70,33 +62,27 @@ The Tax Administration have plans to develop functionality for delegating power 
 
 ### When will the new VAT-return be launched?
 
-The new VAT-return will be launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. VAT-returns and corrections for terms up till and including December 31st 2021 must be submitted in the old format through Altinn, as before.
+The new VAT-return was launched on January 1st 2022. This means that you must submit VAT-returns for periods after January 1st 2022 in the new format, according to the deadlines in your VAT-term. VAT-returns and corrections for terms up till and including December 31st 2021 must be submitted in the old format through Altinn, as before.
 
 ### How will the new VAT-return be submitted?
 
-Businesses and advisors are encouraged to deliver directly from their ERP. The Tax Administration is working with ERP-suppliers to enable this. For those who do not have an ERP, or if the ERP is not suited to deliver VAT-returns, the Tax administration is developing a web-based portal for submitting VAT-returns. Altinn will still be used for identification and information exchange.
+Businesses and advisors are encouraged to deliver directly from their ERP. For those who do not have an ERP, or if the ERP is not suited to deliver VAT-returns, the Tax administration has a web-based portal for submitting VAT-returns. Altinn is still used for identification and information exchange.
 
 ### Is delivery from the web-based portal a permanent solution that is open to everyone (if you can not or do not want to use system-system)?
 
 Yes, the portal is a permanent solution that is open to everyone.
 
-### Is it possible to see what the logged in solution for manual entry of VAT-report will look like?
+### Is it possible to see the logged in solution for manual entry of VAT-report before submitting?
 
 You can log in to [the test environment here](https://skatt-sbstest.sits.no/web/mva/) to test the logged in solution. To use the testenvironment you must have Tenor testdata, user guide for obtaining these can be found [here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/#the-test-environment-and-test-data).
 
-### Will it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
+### Is it be possible to upload the VAT-return in XML-format in the logged in solution at Skatteetaten.no?
 
-Yes, it will be possible. It will not be possible to change numbers or notes in the uploaded XML-file, but it will be possible to upload attachements
+Yes, it is possible. It is not possible to change numbers or remarks in the uploaded XML-file, but it will be possible to upload attachements. If there are errors or you want to change a submitted VAT-report, upload a new XML-file. 
 
-### At what aggregation level will amounts be entered in the new VAT-return?
+### At what aggregation level are amounts to be entered in the new VAT-return?
 
-Same level as before. For more information regarding the suggested reporting on transaction levels, see "Sales and purchase report".
-
-### Has a draft been made visually of what the new report should look like in the ERP?
-
-The tax authorities do not set requirements for what the report should look like in the accounting system. The goal is for users to keep accounts as normal, and for the system to compile the information from the accounts to the VAT-return, so that the user can submit the return.
-The new reporting will be code-based and will facilitate digital collaboration. Today's numbered fields will be replaced by a dynamic list of specification lines. It will also be possible to provide comments both for the entire report and per line.
-The code list for the new VAT-report can be found [here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/informasjonsmodell/#encoding).
+Same level as before. 
 
 ### Is it possible to attach files with documentation in the new VAT-return?
 
@@ -110,13 +96,13 @@ We will support the following file formats:
 
 ### What authentication methods will be used for VAT-return submissions?
 
-Authentication will be carried out with personal login in ID-porten for both system-to-system and portal submissions, not by password and username like today. ERPs must offer ID-porten login window for their users, so they can log in using electronic ID from ID-porten. To avoid unnecessary logins user will stay logged in for 8 hours.
+Authentication is carried out with personal login in ID-porten for both system-to-system and portal submissions, not by password and username. ERPs must offer ID-porten login window for their users, so they can log in using electronic ID from ID-porten. To avoid unnecessary logins user will stay logged in for 8 hours.
 
-We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. If Maskinporten is offered for VAT-returns, it will be later than January 1st 2022. ID-porten will be used until further notice.
+We want to offer Maskinporten support for system-to-system VAT-returns and we are currently looking into the legal and practical issues concerning Maskinporten. ID-porten will be used until further notice.
 
 ### Will it still be possible to submit a "Supplementary return"?
 
-Supplementary returns will no longer be in use. If there are changes in the ERP that makes it necessary to correct a VAT-return, this can be done by submitting a replacement VAT-return, after correcting the accounts in the ERP. The last VAT-return for a term will be valid.
+Supplementary returns are no longer in use. If there are changes in the ERP that makes it necessary to correct a VAT-return, this can be done by submitting a replacement VAT-return, after correcting the accounts in the ERP. The last VAT-return submitted for a term will be valid.
 
 ### How can we report VAT from a closed accounting period when we cannot use a supplementary return?
 
@@ -136,7 +122,7 @@ The reporting entity must deliver the VAT-report from the accounting system or i
 
 Yes, we consider this in the validation, and have added a tolerance of +/-1kr x then umber of lines in the VAT-report. A VAT-report with three lines will have a tolerance of +/- 10kr, while a VAT-report with fourteen lines will have a tolerance of +/- 14kr.
 
-### Will there be a code list of descriptions for the various codes?
+### Is there a code list of descriptions for the various codes?
 
 This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/informasjonsmodell/#encoding).
 
@@ -144,32 +130,8 @@ This can be found on [Github](https://skatteetaten.github.io/mva-meldingen/mvame
 
 Yes, it can be found [here](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/mvameldingen/faq/Speiling_poster_mva-melding_SAF-T_koder.pdf).
 
-## Sales and purchase report
-
-### What does the sales and purchase report entail, and when will it be launched?
-
-The proposition for a new solution for reporting on sales and purchases has been throuhg a mandatory public consultation. There are currently no plans for starting development of the sales and purchase report. If the report is developed in the future, the need for time to develop the sales and purchase report for businesses, ERPs and the Tax Administration will be taken into account. The proposal that has been through mandatory public consultation includes a reporting duty for sales and purchase transactions for private and public organisations. The reporting duty will apply for single transactions, and include information regarding invoice number, documentation date, name of parties in the transaction, organisational number and information on VAT and remuneration.
-
-The proposed reporting duty will make it possible to see transactions in context, which is not possible today. There will be no requirement to report information on the purpose of the transaction. A large number of businesses are using ERPs with requirements to provide accounting information in standardised formats (SAF-T). This enables direct reporting from the ERP to the tax administration.
-
-The purpose of the proposed reporting duty is to increase compliance, help both businesses and the Tax Administration to ensure equal treatment and prevent unlawful distortion of competition for businesses. An important goal is to limit extra work for businesses, by offering reporting directly from ERPs.
-
-### Will the new reporting duty apply to all businesses, or will there be exceptions for small businesses?
-
-The proposal opens for exceptions in some cases.
-
-### Is it relevant to extend the current SAF-T Financial Norway XML file to include a sales / purchase invoice, or will a new sales purchase report be completely outside the SAF-T Financial Norway XML file?
-
-The sales and purchase report will be something other than SAF-T Financial, but it might be relevant to reuse some of the structure.
-
 ## Test
 
 ### Will testing of the new VAT-report be open for everyone?
 
 Information regarding testing is open to everyone on [Github](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/).
-If you are interested in participating in testing, please contact the Tax Administration at mva-modernisering@skatteetaten.no.
-
-### Will there be a test version of the portal so you can test completion and the new validations before submission?
-
-The portal will be user-tested by a selct group of users, but it will not be possible to log in to test for everyone.
-[A test version of the portal can be found here](https://skatt-sbstest.sits.no/web/mva/). It requires Tenor test data to be used, [user guide can be found here](https://skatteetaten.github.io/mva-meldingen/mvameldingen_eng/test/#the-test-environment-and-test-data).
