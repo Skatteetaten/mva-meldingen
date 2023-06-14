@@ -19,10 +19,6 @@ description: "Test and production information"
 
 System providers are responsible for carrying out tests themselves. Focus should be to verify that the validation and submission services work as expected. The implementation guide is the essential guide for getting the solution in place for system providers.
 
-The project team will contribute with debugging, bug fixing, and following up of cases that are sent into the test environment.
-
-The project team is available via Slack for technical clarifications and for direct contact with developers and test managers. The project team can also be reached via mva-modernisering@skatteetaten.no. Contact us here to receive access to Slack.
-
 ## The test environment and test data
 
 System providers must have test environments which can make use of synthetic data
@@ -32,10 +28,6 @@ Connection to the test environment occurs through ID-porten and for the purpose 
 The ERP system providers must find test users in Tenor test data search. The testdata are synthetic test users that should also be used to log into ID-porten and Altinn. These are the only test users that can be used to test VAT-return. Ordinary Digdir test users will not work for this purpose. [Here is a guide to how to use Tenor test data search](https://github.com/Skatteetaten/mva-meldingen/tree/master/docs/mvameldingen_eng/test/User_Guide_Tenor_testdata.pdf).
 
 Skatteetaten's test environment will be available as long as it is needed, after the new VAT-return is launched in January 2022.
-
-## Test planning
-
-The project team will offer meetings with a focus on test planning and carrying out the tests. Here the agendae will cover, amongst other things, carrying out the tests, which scenarios should be tested and the test data.
 
 ## Summary of tests and moving into production
 
