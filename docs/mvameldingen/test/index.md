@@ -9,18 +9,18 @@ description: "Informasjon om testing og produksjon"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                                              |
-| :--------- |:---------------------------------------------------------------------------------------------|
+| :--------- | :------------------------------------------------------------------------------------------- |
 | 2022.03.09 | La til miljøinformasjon for [produksjon](#produksjonsmilj%C3%B8) og [test](#testmilj%C3%B8). |
 | 2022.03.31 | Rettet en skrivefeil på Altinn instans API for testmiljøet                                   |
 | 2022.05.11 | La til ny informasjon om testbrukere fra Tenor                                               |
 | 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Python script og dokumentasjon på egen side |
+| 2023.09.05 | Oppdatert informasjon om testbrukere fra Tenor                                               |
 
 ## Krav til testgjennomføring
 
 Systemleverandørene har ansvar for egen testgjennomføring. Det må fokuseres på at validerings- og innsendingstjenestene fungerer som forventet. Implementasjonsguiden må være avgjørende for å få løsningen på plass for systemleverandørene.
 
 Prosjektet bistår med feilsøk, evt. feilretting, samt oppfølging av saker som er sendt inn i testmiljøet.
-
 
 ## Testmiljø og testdata
 
@@ -38,6 +38,7 @@ Systemleverandørene skal etter avsluttet testperiode og i forkant av produksjon
 testet.
 
 ## Test av applikasjon ved hjelp av Python script
+
 Det er laget et Python script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
 [Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script/).
 
