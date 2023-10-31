@@ -33,6 +33,7 @@ description: "Validation rules for the VAT tax return"
 The validation rules are under development an new validation rules will be added.
 
 The following validation rules are defined for all VAT returns:
+
 - The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return (R018)
 - The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate (R019)
 - The tax return must be an ordinary (general or primary industry) VAT return, claim for compensation or reverse tax liability VAT return (R104)
@@ -45,6 +46,7 @@ The following validation rules are defined for all VAT returns:
 - Remarks must be valid for the given VAT code (lines with a specification) (R076)
 
 The following validation rules are defined for claim for compensation VAT returns:
+
 - VAT returns must not be sent in before the related tax period has ended (R089)
 - The tax periode length must be 2 months (R095)
 - Additional information is required to explain why opposite prefixes are used (R086)
@@ -59,6 +61,8 @@ The following validation rules are defined for claim for compensation VAT return
 - VAT codes 81 and 83 can only be used by businesses registered in the VAT register (R101)
 - Specification lines that apply to the reversal of input VAT given in VAT §9-6 and §9-7 can only be submitted on VAT code 1, 14 or 81 (R087)
 - Specification lines that apply to losses on outstanding claims, withdrawals or reversal of input VAT are not valid (R091)
+- Businesses registered as municipal undertakings cannot submit claims for compensastion (R128)
+- Businesses registered as an organisational entity cannot submit claims for compensastion (R129)
 
 The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
 
@@ -107,6 +111,7 @@ If this rule is not met, the validation will fail.
 The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous VAT return), UGYLDIG_SKATTEMELDING (invalid vat return)
 
 ##Detailed Specification of the rules
+
 ```kotlin
     MVA_MELDINGSKATEGORI_UGYLDIG(
         "Innsending og validering av melding for oppgitt meldingskategori er ikke tilgjengelig enda." {
@@ -168,7 +173,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R095 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
@@ -358,7 +363,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
+            kategori { MELDINGSKATEGORI }
             regelnummer { R094 }
         }
     ),
@@ -449,7 +454,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 (meldingskategori er kompensasjon) såSkal {
                     mvaSpesifikasjonslinje
-                        .inneholderIkke { linje -> 
+                        .inneholderIkke { linje ->
                             (linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode) eller
                                 (linje.spesifikasjon er TAPPÅKRAV.spesifikasjon.kode) eller
                                 (linje.spesifikasjon er UTTAK.spesifikasjon.kode)
@@ -600,6 +605,32 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
             regelnummer { R125 }
+        }
+    ),
+    MVA_KOMPENSASJON_ORG_FORM_FKF(
+        "Virksomheter som er registrert som et fylkeskommunalt foretak kan ikke selv sende inn krav om kompensasjon, dette må gjøres av fylkeskommunen."
+        {
+            valideringsregel {
+                meldingskategori er kompensasjon såSkal {
+                    virksomhetIkkeVæreFylkeskommunaltForetak
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R128 }
+        }
+    ),
+    MVA_KOMPENSASJON_ORG_FORM_ORGL(
+        "Virksomheter som er registrert som et organisasjonsledd kan ikke selv sende inn krav om kompensasjon, dette må gjøres av kommunen eller fylkeskommunen."
+        {
+            valideringsregel {
+                meldingskategori er kompensasjon såSkal {
+                    virksomhetIkkeVæreOrganisasjonsledd
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R129 }
         }
     )
 

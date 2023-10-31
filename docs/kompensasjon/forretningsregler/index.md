@@ -29,6 +29,7 @@ description: "Regler for utfylling av kompensasjonsmeldingmelding "
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.
 
 Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
+
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift (R018)
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats (R019)
 - Meldingen må være en ordinær (aliminnelig eller primærnæring) melding, krav om kompensasjon eller omvendt avgiftsplikt mva-melding (R104)
@@ -40,8 +41,8 @@ Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
 - Merknader må være gyldig for brukt mva-kode (motsatt fortegn) (R075)
 - Merknader må være gyldig for brukt mva-kode (linje med spesifikasjon) (R076)
 
-
 Følgende valideringsregler er foreløpig definert for krav om kompensasjon mva-meldinger:
+
 - Mva-meldingen kan ikke sendes inn før terminen har utløpt (R089)
 - Terminlengde må være 2-månedlig (R095)
 - Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler (R086)
@@ -56,6 +57,8 @@ Følgende valideringsregler er foreløpig definert for krav om kompensasjon mva-
 - Koder 81 og 83 kan kun brukes av registrerte virksomheter (R101)
 - Spesifikasjonslinje som gjelder justering kan kun sendes inn på mva-kode 1, 14 eller 81 (R087)
 - Spesifikasjonslinje som gjelder tap på krav, uttak eller tilbakeføring av inngående mva. er ugyldig (R091)
+- Virksomheter som er registrert som et fylkeskommunalt foretak kan ikke sende inn mva-meldingen (R128)
+- Virksomheter som er registrert som et organisasjonsledd kan ikke sende inn mva-meldingen (R129)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -70,7 +73,6 @@ Følgende praktiske regler er også definert for å hindre feilaktige innsending
 
 - Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2023 for krav om kompensasjon mva-meldinger (R090)
 - Innsending og validering av krav om kompensasjon mva-meldinger fra før 2023 er ikke tilgjengelig (R092)
-
 
 ## Detaljspesifikasjon av reglene:
 
@@ -331,7 +333,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
+            kategori { MELDINGSKATEGORI }
             regelnummer { R094 }
         }
     ),
@@ -422,7 +424,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             valideringsregel {
                 (meldingskategori er kompensasjon) såSkal {
                     mvaSpesifikasjonslinje
-                        .inneholderIkke { linje -> 
+                        .inneholderIkke { linje ->
                             (linje.spesifikasjon er TILBAKEFØRING.spesifikasjon.kode) eller
                                 (linje.spesifikasjon er TAPPÅKRAV.spesifikasjon.kode) eller
                                 (linje.spesifikasjon er UTTAK.spesifikasjon.kode)
@@ -573,6 +575,32 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
             regelnummer { R125 }
+        }
+    ),
+    MVA_KOMPENSASJON_ORG_FORM_FKF(
+        "Virksomheter som er registrert som et fylkeskommunalt foretak kan ikke selv sende inn krav om kompensasjon, dette må gjøres av fylkeskommunen."
+        {
+            valideringsregel {
+                meldingskategori er kompensasjon såSkal {
+                    virksomhetIkkeVæreFylkeskommunaltForetak
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R128 }
+        }
+    ),
+    MVA_KOMPENSASJON_ORG_FORM_ORGL(
+        "Virksomheter som er registrert som et organisasjonsledd kan ikke selv sende inn krav om kompensasjon, dette må gjøres av kommunen eller fylkeskommunen."
+        {
+            valideringsregel {
+                meldingskategori er kompensasjon såSkal {
+                    virksomhetIkkeVæreOrganisasjonsledd
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R129 }
         }
     )
 
