@@ -59,6 +59,7 @@ Følgende valideringsregler er foreløpig definert for krav om kompensasjon mva-
 - Spesifikasjonslinje som gjelder tap på krav, uttak eller tilbakeføring av inngående mva. er ugyldig (R091)
 - Virksomheter som er registrert som et fylkeskommunalt foretak kan ikke sende inn mva-meldingen (R128)
 - Virksomheter som er registrert som et organisasjonsledd kan ikke sende inn mva-meldingen (R129)
+- Virksomheter som er registrert som en underenhet får avvikende skattemelding (R130)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -601,6 +602,19 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
             regelnummer { R129 }
+        }
+    ),
+    MVA_KOMPENSASJON_ORG_FORM_BEDR(
+        "Dette organisasjonsnummeret tilhører en underenhet. Vil du fortsatt sende inn?."
+        {
+            valideringsregel {
+                meldingskategori er kompensasjon såSkal {
+                    virksomhetIkkeVæreUnderenhet
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R130 }
         }
     )
 

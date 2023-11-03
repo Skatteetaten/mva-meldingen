@@ -63,6 +63,7 @@ The following validation rules are defined for claim for compensation VAT return
 - Specification lines that apply to losses on outstanding claims, withdrawals or reversal of input VAT are not valid (R091)
 - Businesses registered as municipal undertakings cannot submit claims for compensastion (R128)
 - Businesses registered as an organisational entity cannot submit claims for compensastion (R129)
+- Businesses registered as a sub-entity cannot submit claims for compensastion without a warning (R130)
 
 The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
 
@@ -631,6 +632,19 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
             regelnummer { R129 }
+        }
+    ),
+    MVA_KOMPENSASJON_ORG_FORM_BEDR(
+        "Dette organisasjonsnummeret tilhører en underenhet. Vil du fortsatt sende inn?."
+        {
+            valideringsregel {
+                meldingskategori er kompensasjon såSkal {
+                    virksomhetIkkeVæreUnderenhet
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R130 }
         }
     )
 
