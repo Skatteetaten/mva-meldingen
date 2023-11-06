@@ -21,9 +21,10 @@ description: "Regler for utfylling av mva-melding for omvendt avgiftsplikt"
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.
 
 Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
+
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift (R018)
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats (R019)
-- Meldingen må være en ordinær (aliminnelig eller primærnæring) melding, krav om kompensasjon eller mva-melding for omvendt avgiftsplikt  (R104)
+- Meldingen må være en ordinær (aliminnelig eller primærnæring) melding, krav om kompensasjon eller mva-melding for omvendt avgiftsplikt (R104)
 - Spesifikasjonslinje som gjelder tilbakeføring av inngående mva. gitt i mva §9-6 og §9-7 må sendes med en merknad (R078)
 - KID-nummeret må være gyldig (R079)
 - Innsendte beløp skal ikke inneholde desimaler (R082)
@@ -35,6 +36,7 @@ Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
 - Merverdiavgift i kodelinjer skal ha lavere beløp enn grunnlaget (R122)
 
 Følgende valideringsregler er foreløpig definert for mva-meldinger for omvendt avgiftsplikt:
+
 - Terminlengde må være 3-månedlig (R106)
 - Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler (R108)
 - Spesifikasjonslinjer skal ha en gyldig mva-kode i mva-meldinger for omvendt avgiftsplikt (R113)
@@ -48,6 +50,7 @@ Følgende valideringsregler er foreløpig definert for mva-meldinger for omvendt
 - Summert grunnlag må være over kr 2 000 (R117)
 - Det finnes en aktiv plikt i mva-registeret for deler av perioden mva-meldingen for omvendt avgiftsplikt gjelder for (R123)
 - Koden må inneholde spesifikasjon 'Kjøp med kompensasjonsrett (R124)
+- Meldingen kan ikke sendes inn før terminen har utløpt. (R120)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -62,7 +65,6 @@ Følgende praktiske regler er også definert for å hindre feilaktige innsending
 
 - Innsending og validering tjeneste er ikke tilgjengelig før 01.02.2023 for mva-meldinger for omvendt avgiftsplikt (R105)
 - Innsending og validering av mva-melding for omvendt avgiftsplikt fra før 2023 er ikke tilgjengelig (R103)
-
 
 ## Detaljspesifikasjon av reglene:
 
@@ -605,6 +607,23 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
             regelnummer { R071 }
+        }
+    ),
+    MVA_SKATTLEGGINGSPERIODEN_FOR_OPPGITT_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_MÅ_VÆRE_FERDIG(
+        "Meldingen kan ikke sendes inn før terminen har utløpt."
+        {
+            valideringsregel {
+                meldingskategori er omvendtAvgiftsplikt såSkal {
+                    (innsendingstidspunkt væreEtter skatteleggingsperiodeSluttdato) medmindre
+                            (
+                                    (innsendingstidspunkt erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                            (skattePliktigErSlettetFraER eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller ENKharDødsbo)
+                                    )
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R120 }
         }
     )
 
