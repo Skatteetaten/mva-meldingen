@@ -152,6 +152,15 @@ description: "Regler for utfylling av mva-melding "
     </ul>
     </td>
   </tr>
+  <tr>
+    <td>2023.11.06</td>
+    <td>
+    <ul>
+      <li> Merverdiavgiften kan ikke være beregnet til 0 når det er oppgitt grunnlag for avgift. (R127) </li>
+      <li> Virksomheten har organisasjonsform UDEF (R126) </li>
+    </ul>
+    </td>
+  </tr>
 </table>
 
 ## Valideringsregler
@@ -159,6 +168,7 @@ description: "Regler for utfylling av mva-melding "
 Valideringsreglene er under utvikling og nye valideringsregler vil bli lagt til fortløpende.
 
 Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
+
 - Summen av merverdiavgift for hver avgiftslinje er ikke lik feltet fastsattMerverdiavgift (R018)
 - Beregnet avgift i avgiftslinje er ulik produktet av grunnlag og sats (R019)
 - Meldingen må være en ordinær (aliminnelig eller primærnæring) melding, krav om kompensasjon eller omvendt avgiftsplikt mva-melding (R104)
@@ -173,6 +183,7 @@ Følgende valideringsregler er foreløpig definert for alle mva-meldinger:
 - Merverdiavgift i kodelinjer skal ha lavere beløp enn grunnlaget (R122)
 
 Følgende valideringsregler er foreløpig definert for ordinær (alminnelig og primærnæring) mva-meldinger:
+
 - Merknad til beløp med motsatt fortegn som gjelder grunnlag og utgående avgift mangler (R020)
 - Merknad til beløp med motsatt fortegn som gjelder fradragsført inngående avgift mangler (R021)
 - Fradragsført inngående avgift som gjelder varer kjøpt fra utlandet med fradragsrett, skal være mindre enn eller lik utgående avgift (kode 81) (R023)
@@ -215,6 +226,11 @@ Følgende valideringsregler er foreløpig definert for ordinær (alminnelig og p
 - Mva-meldinger for tidligere terminer skulle vært levert og derfor vil avgift til gode for denne terminen ikke bli utbetalt (R062)
 - Kontonummer må være registrert for meldinger som kunne føre til en utbetaling (R080)
 - Beløpet på koden og spesifikasjonslinje som gjelder kjøp med kompensasjonsrett skal ikke være like (R115)
+- Merverdiavgiften kan ikke være beregnet til 0 når det er oppgitt grunnlag for avgift. (R127)
+
+Følgende regler gjelder for alle meldingskategorier som ikke er eHandel:
+
+- Virksomheten har organisasjonsform UDEF (R126)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -229,7 +245,6 @@ Følgende praktiske regler er også definert for å hindre feilaktige innsending
 
 - Innsending og validering tjeneste er ikke tilgjengelig før 01.01.2022 for ordinær (aliminnelig eller primærnæring) mva-meldinger (R000)
 - Innsending og validering av ordinær (alminnelig eller primærnæring) mva-meldinger fra før 2022 er ikke tilgjengelig (R077)
-
 
 ## Detaljspesifikasjon av reglene:
 
@@ -313,7 +328,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             regelnummer { R122 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
@@ -929,7 +944,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             kategori { MELDINGSINNHOLD }
             regelnummer { R084 }
         }
-    ),    
+    ),
     MVA_MELDINGSINNHOLD_GRUNNLAG_OVERSTIGER_MAKS_VERDI(
         "Beløpet på grunnlaget overstiger maks verdi."
         {
@@ -946,7 +961,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT(
         "Beløpet på koden og spesifikasjonen 'Kjøp med kompensasjonsrett' er like"
         {
-            valideringsregel {                
+            valideringsregel {
                   (
                     (meldingskategori er alminnelig) eller (meldingskategori er primærnæring)
                         og (mvaSpesifikasjonslinje.skal { linje -> linje.mvaKode væreMedI mvaKodene(81, 83, 86, 88, 91) })
@@ -1020,7 +1035,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
             regelnummer { R041 }
         }
-    ),    
+    ),
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ_FEIL_MVA_KODE(
         "Dere kan ikke bruke denne spesifikasjonslinjen på denne koden."
         {
@@ -1343,6 +1358,40 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
             regelnummer { R071 }
+        }
+    ),
+    MVA_MELDINGSINNHOLD_AVGIFT_BEREGNET_TIL_0_VED_OPPGITT_GRUNNLAG_MED_BELØP(
+        "Merverdiavgiften kan ikke være beregnet til 0 når det er oppgitt grunnlag for avgift."
+        {
+            valideringsregel {
+                meldingskategori ikkeEr kompensasjon såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje ->
+                            linje.erUtgåendeMerverdiavgiftSomHarGrunnlagOgSats() og
+                                    linje.harIkkeMotsattFortegn() og
+                                    (linje.grunnlag * linje.sats erLikEllerStørreEnn 100.toDouble())
+                        }
+                        .skal { linje ->
+                            linje.merverdiavgift ikkeEr 0.toDouble()
+                        }
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R127 }
+        }
+    ),
+    MVA_PLIKT_ORG_FORM_UDEF(
+        "Virksomheten har organisasjonsform UDEF."
+        {
+            valideringsregel {
+                registerDataHentetOk er OK og (meldingskategori erIkkeLik eHandel) såSkal {
+                    registrertOrganisasjonsform ikkeVære Organisasjonsform.UDEF.toString()
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R126 }
         }
     )
 

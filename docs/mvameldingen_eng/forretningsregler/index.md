@@ -152,6 +152,15 @@ description: "Validation rules for the VAT tax return"
 		</ul>
 	</td>
     </tr>
+    <tr>
+	<td>2023.11.06</td>
+	<td>
+		<ul>
+			<li> R127 rule related to reported tax base added</li>
+            <li> R126 rule related to businesses that are registered with the type of organisation UDEF added</li>
+		</ul>
+	</td>
+    </tr>
 </table>
 
 ## Validation rules
@@ -159,6 +168,7 @@ description: "Validation rules for the VAT tax return"
 The validation rules are under development an new validation rules will be added.
 
 The following validation rules are defined for all VAT returns:
+
 - The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return (R018)
 - The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate (R019)
 - The tax return must be an ordinary (general or primary industry) VAT return, claim for compensation or reverse tax liability VAT return (R104)
@@ -173,6 +183,7 @@ The following validation rules are defined for all VAT returns:
 - VAT values in code lines should have a lower value than the VAT-basis value (R122)
 
 The following validation rules are defined for ordinary (general and primary industry) VAT returns:
+
 - Additional information is lacking for output VAT amounts with opposite +/- sign (R020)
 - Additional information is lacking for input VAT amounts that have been claimed deductable with opposite +/- sign (R021)
 - Input VAT that has been claimed deductable on goods purchased from abroad must be less than or equal to output VAT (code 81) (R023)
@@ -215,6 +226,11 @@ The following validation rules are defined for ordinary (general and primary ind
 - VAT returns for earlier tax periods should have been submitted and therefore repayments for this tax period will not be paid (R062)
 - Account number must be registered for VAT returns that require a repayment (R080)
 - Values on code lines and specification lines relating to purchases eligible for compensation should not be the same (R115)
+- Since a tax base has been reported, value added tax cannot be set to 0. (R127)
+
+The following rules are defined for all VAT returns except businesses that are registered with the type of organisation UDEF:
+
+- Businesses that are registered with the type of organisation UDEF cannot submit VAT returns. (R126)
 
 The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
 
@@ -263,6 +279,7 @@ If this rule is not met, the validation will fail.
 The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous VAT return), UGYLDIG_SKATTEMELDING (invalid vat return)
 
 ##Detailed Specification of the rules
+
 ```kotlin
     MVA_MELDINGSKATEGORI_UGYLDIG(
         "Innsending og validering av melding for oppgitt meldingskategori er ikke tilgjengelig enda." {
@@ -296,7 +313,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R077 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_GRUNNLAG_ER_LAVERE_ENN_BEREGNET_AVGIFT(
         "Beregnet merverdiavgift i kodelinjen har høyere beløp enn oppgitt grunnlag." {
             valideringsregel {
@@ -843,7 +860,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R116 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_MERKNAD_MANGLER(
         "Det må fylles ut gyldig merknad for denne spesifikasjonslinjen."
         {
@@ -930,7 +947,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             kategori { MELDINGSINNHOLD }
             regelnummer { R084 }
         }
-    ),    
+    ),
     MVA_MELDINGSINNHOLD_GRUNNLAG_OVERSTIGER_MAKS_VERDI(
         "Beløpet på grunnlaget overstiger maks verdi."
         {
@@ -947,7 +964,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT(
         "Beløpet på koden og spesifikasjonen 'Kjøp med kompensasjonsrett' er like"
         {
-            valideringsregel {                
+            valideringsregel {
                   (
                     (meldingskategori er alminnelig) eller (meldingskategori er primærnæring)
                         og (mvaSpesifikasjonslinje.skal { linje -> linje.mvaKode væreMedI mvaKodene(81, 83, 86, 88, 91) })
@@ -1021,7 +1038,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
             regelnummer { R041 }
         }
-    ),  
+    ),
     MVA_MELDINGSINNHOLD_SPESIFIKASJONSLINJE_KJØP_MED_KOMPENSASJONSRETT_FØRT_PÅ_FEIL_MVA_KODE(
         "Dere kan ikke bruke denne spesifikasjonslinjen på denne koden."
         {
@@ -1343,6 +1360,40 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
             regelnummer { R071 }
+        }
+    ),
+    MVA_MELDINGSINNHOLD_AVGIFT_BEREGNET_TIL_0_VED_OPPGITT_GRUNNLAG_MED_BELØP(
+        "Merverdiavgiften kan ikke være beregnet til 0 når det er oppgitt grunnlag for avgift."
+        {
+            valideringsregel {
+                meldingskategori ikkeEr kompensasjon såSkal {
+                    mvaSpesifikasjonslinje
+                        .hvor { linje ->
+                            linje.erUtgåendeMerverdiavgiftSomHarGrunnlagOgSats() og
+                                    linje.harIkkeMotsattFortegn() og
+                                    (linje.grunnlag * linje.sats erLikEllerStørreEnn 100.toDouble())
+                        }
+                        .skal { linje ->
+                            linje.merverdiavgift ikkeEr 0.toDouble()
+                        }
+                 }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R127 }
+        }
+    ),
+    MVA_PLIKT_ORG_FORM_UDEF(
+        "Virksomheten har organisasjonsform UDEF."
+        {
+            valideringsregel {
+                registerDataHentetOk er OK og (meldingskategori erIkkeLik eHandel) såSkal {
+                    registrertOrganisasjonsform ikkeVære Organisasjonsform.UDEF.toString()
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R126 }
         }
     )
 

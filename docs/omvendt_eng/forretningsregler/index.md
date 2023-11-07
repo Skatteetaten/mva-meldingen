@@ -25,6 +25,7 @@ description: "Validation rules for the VAT return for reverse tax liability"
 The validation rules are under development an new validation rules will be added.
 
 The following validation rules are defined for all VAT returns:
+
 - The sum of the calculated VAT from each VAT line shall be equal to the total VAT in the VAT return (R018)
 - The calculated VAT must be in accordance with the stated VAT-basis multiplied by the current VAT-rate (R019)
 - The tax return must be an ordinary (general or primary industry) VAT return, claim for compensation or VAT return for reverse tax liability (R104)
@@ -37,8 +38,10 @@ The following validation rules are defined for all VAT returns:
 - Remarks must be valid for the given VAT code (lines with a specification) (R076)
 - Specification lines that apply to purchases eligible for compensation must have basis and VAT rate (R116)
 - VAT values in code lines should have a lower value than the VAT-basis value (R122)
+- The VAT return cannot be submitted before the period has ended (R120)
 
 The following validation rules are defined for VAT returns for reverse tax liability:
+
 - The tax periode length must be 3 months (R106)
 - Additional information is lacking for output VAT amounts with opposite +/- sign (R108)
 - Specification lines must have valid VAT codes (R113)
@@ -323,7 +326,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R116 }
         }
     ),
-    
+
     MVA_MELDINGSINNHOLD_MERKNAD_MANGLER(
         "Det må fylles ut gyldig merknad for denne spesifikasjonslinjen."
         {
@@ -609,6 +612,23 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { XSD_FORMAT_OG_LOVLIGE_VERDIER }
             regelnummer { R071 }
+        }
+    ),
+    MVA_SKATTLEGGINGSPERIODEN_FOR_OPPGITT_MELDINGSKATEGORI_OMVENDT_AVGIFTSPLIKT_MÅ_VÆRE_FERDIG(
+        "Meldingen kan ikke sendes inn før terminen har utløpt."
+        {
+            valideringsregel {
+                meldingskategori er omvendtAvgiftsplikt såSkal {
+                    (innsendingstidspunkt væreEtter skatteleggingsperiodeSluttdato) medmindre
+                            (
+                                    (innsendingstidspunkt erEtterEllerLik skatteleggingsperiodeStartdato) og
+                                            (skattePliktigErSlettetFraER eller skattepliktigHarRegistrertKonkurs eller skattepliktigErKonkursbo eller ENKharDødsbo)
+                                    )
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R120 }
         }
     )
 
