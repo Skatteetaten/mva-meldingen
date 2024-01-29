@@ -9,7 +9,7 @@ description: "Informasjon om testing og produksjon"
 ## Endringslogg
 
 | Dato       | Hva ble endret?                                                      |
-|:-----------|:---------------------------------------------------------------------|
+| :--------- | :------------------------------------------------------------------- |
 | 2022.06.11 | Opprettet side for test kompensasjonsmelding                         |
 | 2022.15.11 | Fjernet Jupyter notebook demo og la i stedet inn Python script       |
 | 2022.15.11 | Informasjon angående test av kompensasjonsmelding etter 15. november |
@@ -18,9 +18,7 @@ description: "Informasjon om testing og produksjon"
 
 Systemleverandørene har ansvar for egen testgjennomføring. Det må fokuseres på at validerings- og innsendingstjenestene fungerer som forventet. Implementasjonsguiden må være avgjørende for å få løsningen på plass for systemleverandørene.
 
-Prosjektet bistår med feilsøk, evt. feilretting, samt oppfølging av saker som er sendt inn i testmiljøet.
-
-Prosjektet er tilgjengelig via Slack for tekniske avklaringer og direkte kontakt med utviklere og testleder. Prosjektet kan også nås via mva-modernisering@skatteetaten.no. Ta kontakt via mailadressen for å få tilgang til Slack.
+Spørsmål angående test og testmiljø kan sendes til Skatteetaten via <a href="https://www.skatteetaten.no/kontakt/skriv/" target="_blank">Skriv til oss - Skatteetaten</a>
 
 ## Testmiljø og testdata
 
@@ -34,32 +32,35 @@ Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny kompensas
 
 ## Testplanlegging
 
-I test er det mulig å: 
+I test er det mulig å:
 
-* Validere en mva-melding med meldingskategori "merverdiavgift kompensasjon" - kompensasjonsmelding.
-* Sende inn en kompensasjonsmelding fra regnskapssystemet
-* Attestere en kompensasjonsmelding i portalen "Min Merverdiavgift" 
+- Validere en mva-melding med meldingskategori "merverdiavgift kompensasjon" - kompensasjonsmelding.
+- Sende inn en kompensasjonsmelding fra regnskapssystemet
+- Attestere en kompensasjonsmelding i portalen "Min Merverdiavgift"
 
-Etter at kompensasjonsmeldingen er sendt inn fra regnskapssystemet vil virksomheten som sender inn motta et varsel i Altinn (https://tt02.altinn.no/ i test). 
-I varselet er det en lenke til "Min Merverdiavgift". Velg denne lenken og logg på med en bruker som har riktig rolle i virksomheten for å attestere kompensasjonsmeldingen. Det er også mulig å logge rett inn på virksomheten uten lenke, og attestere med en bruker som har riktig rolle. 
+Etter at kompensasjonsmeldingen er sendt inn fra regnskapssystemet vil virksomheten som sender inn motta et varsel i Altinn (https://tt02.altinn.no/ i test).
+I varselet er det en lenke til "Min Merverdiavgift". Velg denne lenken og logg på med en bruker som har riktig rolle i virksomheten for å attestere kompensasjonsmeldingen. Det er også mulig å logge rett inn på virksomheten uten lenke, og attestere med en bruker som har riktig rolle.
 
 ## Testplanlegging - Roller
+
 For å legge til rettigheter for attestering, vennligst se
 [Brukerveiledning - Gi rettighet til attestering](https://github.com/Skatteetaten/mva-meldingen/blob/master/docs/kompensasjon/test/Bruksveiledning_rettighet_til_attestering_i_komp.pdf).
 
 Roller i Altinn for kompensasjonsmelding:
 
-* Du kan fylle ut og sende inn kompensasjonsmeldingen med en av disse rollene (Godkjenne):
-    - Regnskapsfører med signeringsrettighet
-    - Begrenset signeringsrettighet
+- Du kan fylle ut og sende inn kompensasjonsmeldingen med en av disse rollene (Godkjenne):
 
-* Dersom du har en av disse rollene kan du fylle ut kompensasjonsmeldingen, men ikke sende inn (Utfyller)
+  - Regnskapsfører med signeringsrettighet
+  - Begrenset signeringsrettighet
+
+- Dersom du har en av disse rollene kan du fylle ut kompensasjonsmeldingen, men ikke sende inn (Utfyller)
+
   - Ansvarlig revisor
-  - Regnskapsmedarbeider 
-  - Regnskapsfører uten signeringsrettighet 
+  - Regnskapsmedarbeider
+  - Regnskapsfører uten signeringsrettighet
   - Revisormedarbeider
 
-* Attestere i portalen "Min Merverdiavgift" (Attestant):
+- Attestere i portalen "Min Merverdiavgift" (Attestant):
   - Revisorattesterer - MVA Kompensasjon
   - Ansvarlig revisor (NB! Denne rollen fungerer ikke i test foreløpig)
 
@@ -69,6 +70,7 @@ Systemleverandørene skal etter avsluttet testperiode og i forkant av produksjon
 testet.
 
 # Test av applikasjon ved hjelp av Python script
+
 Det er laget et Python script for manuelt å teste en innsending. Mer informasjon og filer finner du her:
 [Test av applikasjon ved hjelp av Python script](https://skatteetaten.github.io/mva-meldingen/test_with_python_script/).
 

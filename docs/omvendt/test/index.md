@@ -8,17 +8,15 @@ description: "Informasjon om testing og produksjon"
 
 ## Endringslogg
 
-| Dato       | Hva ble endret?                                                      |
-| :--------- | :------------------------------------------------------------------- |
-| 2023.01.26 | Opprettet side for test av mva-melding for omvendt avgiftsplikt         |
+| Dato       | Hva ble endret?                                                 |
+| :--------- | :-------------------------------------------------------------- |
+| 2023.01.26 | Opprettet side for test av mva-melding for omvendt avgiftsplikt |
 
 ## Krav til testgjennomføring
 
 Systemleverandørene har ansvar for egen testgjennomføring. Det må fokuseres på at validerings- og innsendingstjenestene fungerer som forventet. Implementasjonsguiden må være avgjørende for å få løsningen på plass for systemleverandørene.
 
-Prosjektet bistår med feilsøk, evt. feilretting, samt oppfølging av saker som er sendt inn i testmiljøet.
-
-Prosjektet er tilgjengelig via Slack for tekniske avklaringer og direkte kontakt med utviklere og testleder. Prosjektet kan også nås via mva-modernisering@skatteetaten.no. Ta kontakt via mailadressen for å få tilgang til Slack.
+Spørsmål angående test og testmiljø kan sendes til Skatteetaten via <a href="https://www.skatteetaten.no/kontakt/skriv/" target="_blank">Skriv til oss - Skatteetaten</a>
 
 ## Testmiljø og testdata
 
@@ -33,9 +31,10 @@ Testmiljøet til Skatteetaten vil være tilgjengelig også etter at ny mva-meldi
 ## Testplanlegging
 
 I test er det mulig å:
+
 - Validere en mva-melding med meldingskategori "omvendt_avgiftsplikt" - mva-melding for omvendt avgiftsplikt.
 - Sende inn en mva-melding for omvendt avgiftsplikt fra regnskapssystemet.
-Etter at mva-melding for omvendt avgiftsplikt er sendt inn fra regnskapssystemet vil virksomheten motta en kvittering i Altinn (https://tt02.altinn.no/ i test).
+  Etter at mva-melding for omvendt avgiftsplikt er sendt inn fra regnskapssystemet vil virksomheten motta en kvittering i Altinn (https://tt02.altinn.no/ i test).
 
 Man kan også fullføre en innsending i portalen Min merverdiavgift.
 

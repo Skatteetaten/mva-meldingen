@@ -93,7 +93,7 @@ If the Skatteetaten scopes are not found in the search, it is because Skatteetat
 
 #### Requesting the scopes
 
-The scopes must be ordered by your organization by sending an e-mail to [mva-modernisering@skatteetaten.no](mailto:mva-modernisering@skatteetaten.no) and provide the **organization number** for the organization that manages the integration.
+The scopes must be ordered by your organization by contacting us via <a href="https://www.skatteetaten.no/en/contact/write/" target="_blank">Write to us - The Norwegian Tax Administration (skatteetaten.no)</a> and provide the **organization number** for the organization that manages the integration.
 
 The tax authorities will provide access to the scopes and they can then be added to the integration. The scopes must also be added to the code that integrates with ID-Porten so that the scopes are included in the access token from ID-Porten.
 

@@ -93,7 +93,7 @@ Dersom skatteeten-scopene ikke finnes i søket er det fordi Skatteetaten ikke ha
 
 #### Bestilling av scopes
 
-Scopene må bestilles av din organisasjon ved å sende en e-post til [mva-modernisering@skatteetaten.no](mailto:mva-modernisering@skatteetaten.no) og oppgi **organisasjonsnummer** for organisasjonen som administrerer integrasjonen.
+Scopene må bestilles av din organisasjon ved å kontakte Skatteetaten via <a href="https://www.skatteetaten.no/kontakt/skriv/" target="_blank">Skriv til oss - Skatteetaten</a> og oppgi **organisasjonsnummer** for organisasjonen som administrerer integrasjonen.
 
 Skatteetaten vil gi tilgang til scopene og de kan deretter legges til i integrasjonen. Scopene må også legges til i koden som integrerer med ID-Porten slik at scopene inkluderes i aksess-tokenet til ID-Porten.
 
