@@ -1,5 +1,8 @@
 # Mva-meldingen
 
+**_Please note:_** Before updating the documentation, ensure that you have committed the changes to the master branch and executed the deployment commands.
+Be aware that deployment may take a few minutes, during which time you may encounter a 404 error when accessing the pages.
+
 If you are visiting this github project in order to manually test a submission of the VAT-report with the Python script,
 please visit http://skatteetaten.github.io/mva-meldingen/test_with_python_script/
 
