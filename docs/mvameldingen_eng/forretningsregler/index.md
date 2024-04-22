@@ -161,6 +161,14 @@ description: "Validation rules for the VAT tax return"
 		</ul>
 	</td>
     </tr>
+    <tr>
+	<td>2024.04.12</td>
+	<td>
+		<ul>
+			<li> The enterprise is not registered in the Central Coordinating Register for Legal Entities and cannotsubmit a claim for VAT return. (R131)</li>
+		</ul>
+	</td>
+    </tr>
 </table>
 
 ## Validation rules
@@ -227,6 +235,7 @@ The following validation rules are defined for ordinary (general and primary ind
 - Account number must be registered for VAT returns that require a repayment (R080)
 - Values on code lines and specification lines relating to purchases eligible for compensation should not be the same (R115)
 - Since a tax base has been reported, value added tax cannot be set to 0. (R127)
+- The enterprise is not registered in the Central Coordinating Register for Legal Entities and cannot submit a claim for VAT return. (R131)
 
 The following rules are defined for all VAT returns except businesses that are registered with the type of organisation UDEF:
 
@@ -1394,6 +1403,22 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
             regelnummer { R126 }
+        }
+    ),
+    MVA_MANGLENDE_REGISTRERING_I_ENHETSREGISTERET(
+        "Virksomheten er ikke registrert i Enhetsregisteret og kan ikke sende inn mva-melding."
+        {
+            valideringsregel {
+                ((meldingskategori er alminnelig) eller (meldingskategori er primærnæring)) såSkal {
+                    (
+                        slettetDatoIEnhetsregStørreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
+
+                        )
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R131 }
         }
     )
 

@@ -161,6 +161,14 @@ description: "Regler for utfylling av mva-melding "
     </ul>
     </td>
   </tr>
+  <tr>
+    <td>2024.04.12</td>
+    <td>
+    <ul>
+      <li> Virksomheten er ikke registrert i Enhetsregisteret og kan ikke sende inn mva-melding. (R131) </li>
+    </ul>
+    </td>
+  </tr>
 </table>
 
 ## Valideringsregler
@@ -227,6 +235,7 @@ Følgende valideringsregler er foreløpig definert for ordinær (alminnelig og p
 - Kontonummer må være registrert for meldinger som kunne føre til en utbetaling (R080)
 - Beløpet på koden og spesifikasjonslinje som gjelder kjøp med kompensasjonsrett skal ikke være like (R115)
 - Merverdiavgiften kan ikke være beregnet til 0 når det er oppgitt grunnlag for avgift. (R127)
+- Virksomheten er ikke registrert i Enhetsregisteret og kan ikke sende inn mva-melding. (R131)
 
 Følgende regler gjelder for alle meldingskategorier som ikke er eHandel:
 
@@ -1392,6 +1401,22 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
             regelnummer { R126 }
+        }
+    ),
+    MVA_MANGLENDE_REGISTRERING_I_ENHETSREGISTERET(
+        "Virksomheten er ikke registrert i Enhetsregisteret og kan ikke sende inn mva-melding."
+        {
+            valideringsregel {
+                ((meldingskategori er alminnelig) eller (meldingskategori er primærnæring)) såSkal {
+                    (
+                        slettetDatoIEnhetsregStørreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
+
+                        )
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { PLIKT }
+            regelnummer { R131 }
         }
     )
 
