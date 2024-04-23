@@ -7,7 +7,7 @@ Some simplification is a result of changes in the VAT return; fever sources of e
 The VAT return also provides new opportunities for guidance and dialog through validation before submission, and reminders for tasks. In addition, it is possible to offer an increased degree of access to information to achieve effectiveness and safety through digital reconciliation of the VAT return. The new VAT-report provides better interaction between accounting/ERP systems and Altinn/Tax Authority systems, for example automatic receipt for submitted VAT returns.
 
 If you want more information about the project go to [skatteetaten.no/nymva](http://www.skatteetaten.no/nymva).
-I f you want information or news for ERPs go to our pages at [Altinn Digitalisering](https://www.altinndigital.no/produkter/altinn-api-for-datasystem/tjenesteoversikt/skatteetaten---modernisering-av-mva/)
+If you want information or news for ERPs go to our pages at [Nyheter og driftsvarsler](https://skatteetaten.github.io/api-dokumentasjon/nyheter-og-driftsvarsler).
 
 ## What's new
 
