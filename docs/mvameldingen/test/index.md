@@ -51,7 +51,7 @@ Det er laget et Python script for manuelt å teste en innsending. Mer informasjo
 | Validering            | https://idporten-api-sbstest.sits.no/api/mva/grensesnittstoette/mva-melding/valider |
 | Innsending            | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/                    |
 | Instans API           | https://skd.apps.tt02.altinn.no/skd/mva-melding-innsending-etm2/instances           |
-| ID-porten integrasjon | https://oidc-ver2.difi.no/idporten-oidc-provider/.well-known/openid-configuration   |
+| ID-porten integrasjon | https://test.idporten.no/.well-known/openid-configuration                           |
 | Altinn tokenveksling  | https://platform.tt02.altinn.no/authentication/api/v1/exchange/id-porten            |
 
 ## Produksjonsmiljø
@@ -65,5 +65,5 @@ Produksjonsmiljøet er funksjonelt likt med testmiljøet.
 | Validering            | https://idporten.api.skatteetaten.no/api/mva/grensesnittstoette/mva-melding/valider |
 | Innsending            | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/                           |
 | Instans API           | https://skd.apps.altinn.no/skd/mva-melding-innsending-v1/instances                  |
-| ID-porten integrasjon | https://oidc.difi.no/idporten-oidc-provider/.well-known/openid-configuration        |
+| ID-porten integrasjon | https://idporten.no/.well-known/openid-configuration                                |
 | Altinn tokenveksling  | https://platform.altinn.no/authentication/api/v1/exchange/id-porten                 |
