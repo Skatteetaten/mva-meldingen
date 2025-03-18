@@ -169,6 +169,22 @@ description: "Validation rules for the VAT tax return"
 		</ul>
 	</td>
     </tr>
+    <tr>
+	<td>2025.03.18</td>
+	<td>
+		<ul>
+			<li> The deadline for submitting the VAT return for this period expired more than three years ago. We will therefore treat the VAT return as a request for change. (R132)</li>
+		</ul>
+	</td>
+    </tr>
+    <tr>
+	<td>2025.03.18</td>
+	<td>
+		<ul>
+			<li> This period expired more than five years ago. We will therefore treat the VAT return as a request for change. (R133)</li>
+		</ul>
+	</td>
+    </tr>
 </table>
 
 ## Validation rules
@@ -236,6 +252,8 @@ The following validation rules are defined for ordinary (general and primary ind
 - Values on code lines and specification lines relating to purchases eligible for compensation should not be the same (R115)
 - Since a tax base has been reported, value added tax cannot be set to 0. (R127)
 - The enterprise is not registered in the Central Coordinating Register for Legal Entities and cannot submit a claim for VAT return. (R131)
+- The deadline for submitting the VAT return for this period expired more than three years ago. We will therefore treat the VAT return as a request for change. (R132)
+- This period expired more than five years ago. We will therefore treat the VAT return as a request for change. (R133)
 
 The following rules are defined for all VAT returns except businesses that are registered with the type of organisation UDEF:
 
@@ -1419,6 +1437,31 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
             kategori { PLIKT }
             regelnummer { R131 }
+        }
+    ),
+    MVA_MELDING_LEVERINGSFRIST_TERMIN_MER_ENN_TRE_ÅR_TILBAKE(
+        "Leveringsfristen for denne terminen utløp for mer enn tre år siden. Vi vil derfor behandle mva-meldingen som en anmodning om endring." {
+            valideringsregel {
+                erEndringsmelding og (meldingskategori måVæreEnAv ordinærMeldingskategorier) såSkal {
+                    (innsendingstidspunkt væreFørEllerLik skatteleggingsperiodeInnleveringsfristPlusTreÅr) eller
+                        (innsendingstidspunkt væreEtter skatteleggingsperiodeSluttdatoPlusFemÅr)
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R132 }
+        }
+    ),
+    MVA_MELDING_UTLØPSDATO_TERMIN_MER_ENN_FEM_ÅR_TILBAKE(
+        "Utløpsdatoen for terminen er mer enn fem år tilbake og må behandles som søknad om anmodning om endring i henhold til sktfvl § 9-4 annet ledd." {
+            valideringsregel {
+                erEndringsmelding og (meldingskategori måVæreEnAv ordinærMeldingskategorier) såSkal {
+                    innsendingstidspunkt væreFørEllerLik skatteleggingsperiodeSluttdatoPlusFemÅr
+                }
+            }
+            alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R133 }
         }
     )
 
