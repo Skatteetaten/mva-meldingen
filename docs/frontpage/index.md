@@ -1,4 +1,10 @@
+| :exclamation:  Siden er utdatert   |
+|-----------------------------------------|
+Den er flyttet til [Ny GitHub side](https://skatteetaten.github.io/api-dokumentasjon/anvendelsesomraader/mvamelding).
+
 [English](https://skatteetaten.github.io/mva-meldingen/frontpage_eng)
+
+https://skatteetaten.github.io/api-dokumentasjon/anvendelsesomraader/mvamelding
 
 # Introduksjon til systeminnsending av mva-meldingen
 
