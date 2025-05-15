@@ -1,8 +1,3 @@
-| :exclamation:  This page is outdated    |
-|-----------------------------------------|
-Some information has been moved to [New GitHub page](https://skatteetaten.github.io/api-dokumentasjon/anvendelsesomraader/mvamelding)
-
-
 # Introduction to system submission of VAT-report
 
 ## Background
