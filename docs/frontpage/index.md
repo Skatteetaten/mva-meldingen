@@ -1,7 +1,7 @@
 <table border="1" cellpadding="10">
   <thead>
     <tr>
-      <th>&#9888;&#65039; Siden er utdatert</th>
+      <th>&#9888;&#65039; SIDEN ER UTDATERT</th>
     </tr>
   </thead>
   <tbody>
