@@ -1,3 +1,21 @@
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>&#9888;&#65039; THIS PAGE IS OUTDATED</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        It has been moved to
+        <a href="https://skatteetaten.github.io/api-dokumentasjon/anvendelsesomraader/mvamelding">
+          the new GitHub-page
+        </a>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 # Introduction to system submission of VAT-report
 
 ## Background
