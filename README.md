@@ -41,6 +41,21 @@ will start a local web server and continuously build the documentation as you ma
     npm run build
     npm run deploy
 
+In order to log into GitHub, you need to have a **Personal Access Token** with the `repo` scope.  
+You can create a personal access token by following these steps:
+
+1. Go to: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+2. Choose **"Classic token"**
+3. Click **Generate new token**
+4. Give it a name and set how long it should be valid (e.g., 30 or 90 days)
+5. Select the **`repo`** scope
+6. Click **Generate token**
+7. **Copy the token immediately** – it will only be shown once
+
+When you run the command "npm run deploy":
+1. Username: Your GitHub username 
+2. Password: Paste the token
+
 ### Q&A
 
 If you get the following error,
