@@ -22,6 +22,22 @@ description: "Regler for utfylling av kompensasjonsmeldingmelding "
           </ul>      
       </td>
     </tr>
+  <tr>
+    <td>2025.10.27</td>
+    <td>
+        <ul>
+          <li> Første krav om kompensasjon til utbetaling for {år} må være på minst 20 000 kroner. (R134) </li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>2025.10.27</td>
+    <td>
+        <ul>
+          <li> Krav om kompensasjon kan ikke sendes inn før terminen har utløpt. (R135) </li>
+        </ul>
+    </td>
+  </tr>
 </table>
 
 ## Valideringsregler
@@ -60,6 +76,8 @@ Følgende valideringsregler er foreløpig definert for krav om kompensasjon mva-
 - Virksomheter som er registrert som et fylkeskommunalt foretak kan ikke sende inn mva-meldingen (R128)
 - Virksomheter som er registrert som et organisasjonsledd kan ikke sende inn mva-meldingen (R129)
 - Virksomheter som er registrert som en underenhet får avvikende skattemelding (R130)
+- Første krav om kompensasjon til utbetaling for {år} må være på minst 20 000 kroner. (R134)
+- Krav om kompensasjon kan ikke sendes inn før terminen har utløpt. (R135)
 
 Følgende tekniske regler er også spesifisert som validerer xsd format og kodelister verdier:
 
@@ -147,7 +165,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         "Krav om kompensasjon kan ikke sendes inn før terminen har utløpt."
         {
             valideringsregel {
-                meldingskategori er kompensasjon såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) såSkal {
                     (nå væreEtter skatteleggingsperiodeSluttdato)
                 }
             }
@@ -342,7 +360,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         "Krav om kompensasjon er sendt inn etter innleveringsfristen for terminen."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) og erFørsteKompensasjonsmeldingForTermin såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) og erFørsteKompensasjonsmeldingForTermin såSkal {
                     nå væreFørEllerLik innleveringsfrist
                 }
             }
@@ -355,7 +373,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         "Endring av krav om kompensasjon sendt inn etter innleveringsfristen for terminen, kan ikke være mer til gode enn det som allerede er sendt inn."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) og erIkkeFørsteKompensasjonsmeldingForTermin såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) og erIkkeFørsteKompensasjonsmeldingForTermin såSkal {
                     (nå væreFørEllerLik innleveringsfrist) eller (fastsattmerverdiavgift væreStørreEllerLik tidligereFastsattBeløpForTermin)
                 }
             }
@@ -381,8 +399,8 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
         "Første krav om kompensasjon til utbetaling for året må være på minst 20 000 kroner."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) og
-                    detFinnesIkkeEnKompensasjonsmeldingTidligereIÅretOver20000krTilgode såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) og (fastsattmerverdiavgift erMindreEnn 0.toDouble()) og
+                    (innsendingstidspunkt væreFørEllerLik innleveringsfrist) og detFinnesIkkeEnKompensasjonsmeldingTidligereIÅretOver20000krTilgode såSkal {
                     fastsattmerverdiavgift væreLikEllerMindreEnn -20000.0
                 }
             }
@@ -568,7 +586,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             valideringsregel {
                 meldingskategori er kompensasjon såSkal {
                     (
-                            slettetDatIERStørreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
+                        slettetDatoIEnhetsregMindreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
 
                             )
                 }
@@ -615,6 +633,37 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
             regelnummer { R130 }
+        }
+    ),
+    MVA_KOMPENSASJON_MELDINGSINNHOLD_KRAV_UNDER_MINSTEBELØP_GJELDER_FRA_2026(
+        "Første krav om kompensasjon til utbetaling for året må være på minst 20 000 kroner."
+        {
+            valideringsregel {
+                (meldingskategori er kompensasjon) og
+                    erLevertEtterKompensasjonLovendring2026 og
+                    detFinnesIkkeEnKompensasjonsmeldingTidligereIÅretOver20000krTilgode og erFørsteKompensasjonsmeldingForTermin såSkal {
+                    fastsattmerverdiavgift væreLikEllerMindreEnn -20000.0 medmindre nesteSkattleggingsperiodeErÅpnetForInnsending
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R134 }
+        }
+    ),
+    MVA_KOMPENSASJON_SKATTLEGGINGSPERIODEN_FOR_MELDINGSKATEGORI_KOMPENSASJON_MÅ_VÆRE_FERDIG_GJELDER_FRA_2026(
+        "Krav om kompensasjon kan ikke sendes inn før terminen har utløpt."
+        {
+            valideringsregel {
+                (meldingskategori er kompensasjon) og
+                    erLevertEtterKompensasjonLovendring2026 og
+                    skattePliktigErSlettetFraER og
+                    (slettetDatoIEnhetsregMindreEnnSkattleggingsperiodeFradato eller slettetDatoIEnhetsregStørreEnnSkattleggingsperiodeTildato) såSkal {
+                    innsendingstidspunkt væreEtter skatteleggingsperiodeSluttdato
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R135 }
         }
     )
 

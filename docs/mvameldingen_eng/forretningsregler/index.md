@@ -1429,7 +1429,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 ((meldingskategori er alminnelig) eller (meldingskategori er primærnæring)) såSkal {
                     (
-                        slettetDatoIEnhetsregStørreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
+                        slettetDatoIEnhetsregMindreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
 
                         )
                 }

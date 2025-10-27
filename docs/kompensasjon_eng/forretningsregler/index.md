@@ -26,6 +26,22 @@ description: "Validation rules for the VAT tax return"
           </ul>      
       </td>
     </tr>
+  <tr>
+    <td>2025.10.27</td>
+    <td>
+        <ul>
+          <li> The first claim for compensation to be paid for {år} must be at least NOK 20,000. (R134) </li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>2025.10.27</td>
+    <td>
+        <ul>
+          <li> Claims for compensation cannot be submitted before the period has ended. (R135) </li>
+        </ul>
+    </td>
+  </tr>
 </table>
 
 ## Validation rules
@@ -64,6 +80,8 @@ The following validation rules are defined for claim for compensation VAT return
 - Businesses registered as municipal undertakings cannot submit claims for compensastion (R128)
 - Businesses registered as an organisational entity cannot submit claims for compensastion (R129)
 - Businesses registered as a sub-entity cannot submit claims for compensastion without a warning (R130)
+- The first claim for compensation to be paid for {år} must be at least NOK 20,000. (R134)
+- Claims for compensation cannot be submitted before the period has ended. (R135)
 
 The following technical rules are defined for the purpose of validating the format and code lists in the tax return:
 
@@ -115,14 +133,14 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
 
 ```kotlin
     MVA_MELDINGSKATEGORI_UGYLDIG(
-        "Innsending og validering av melding for oppgitt meldingskategori er ikke tilgjengelig enda." {
-            valideringsregel {
-                meldingskategori måVæreEnAv alminnelig_primær_kompensasjon_eller_omvendtAvgiftsplikt
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSKATEGORI }
-            regelnummer { R104 }
+    "Innsending og validering av melding for oppgitt meldingskategori er ikke tilgjengelig enda." {
+        valideringsregel {
+            meldingskategori måVæreEnAv alminnelig_primær_kompensasjon_eller_omvendtAvgiftsplikt
         }
+        alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+        kategori { MELDINGSKATEGORI }
+        regelnummer { R104 }
+    }
     ),
     MVA_KOMPENSASJON_INNLEVERING_FØR_1_1_2023(
         "Innsending og validering av krav om kompensasjon er ikke tilgjengelig enda." {
@@ -152,7 +170,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Krav om kompensasjon kan ikke sendes inn før terminen har utløpt."
         {
             valideringsregel {
-                meldingskategori er kompensasjon såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) såSkal {
                     (nå væreEtter skatteleggingsperiodeSluttdato)
                 }
             }
@@ -174,7 +192,6 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R095 }
         }
     ),
-
     MVA_MELDINGSINNHOLD_SUM_MVA_FEIL_SUMMERING_AV_AVGIFTLINJER(
         "Summen av merverdiavgift for alle kodelinjene er ikke lik beløpet som er oppgitt som fastsatt merverdiavgift." {
             valideringsregel {
@@ -239,31 +256,6 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R088 }
         }
     ),
-
-    MVA_KODE_FOR_UTGÅENDE_AVGIFT_MANGLER_GRUNNLAG_OG_SATS(
-        "Beløp som gjelder utgående avgift skal ha med grunnlag og sats."
-        {
-            valideringsregel {
-                mvaSpesifikasjonslinje.hvor { linje ->
-                    linje.mvaKode væreMedI mvaKodene(3, 5, 6, 31, 32, 33, 51, 52, 82, 84, 85, 87, 89, 92) eller (
-                        linje.spesifikasjon er UTTAK.spesifikasjon.kode og (
-                            linje.mvaKode væreMedI mvaKodene(
-                                3,
-                                5,
-                                31,
-                                32,
-                                33
-                            )
-                            )
-                        )
-                }
-                    .skal { linje -> linje.sats ha innhold og (linje.grunnlag ha innhold) }
-            }
-            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
-            kategori { MELDINGSINNHOLD }
-            regelnummer { R066 }
-        }
-    ),
     MVA_KOMPENSASJON_KODE_INNGÅENDE_AVGIFT_MANGLER_GRUNNLAG_OG_SATS(
         "Kodelinjen må ha grunnlag og sats."
         {
@@ -279,7 +271,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R093 }
         }
     ),
-
+    
     MVA_MELDINGSINNHOLD_MERKNAD_MANGLER(
         "Det må fylles ut gyldig merknad for denne spesifikasjonslinjen."
         {
@@ -297,7 +289,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R078 }
         }
     ),
-
+    
     MVA_MELDINGSINNHOLD_KID_NUMMER_GYLDIG(
         "KID-nummeret må være gyldig."
         {
@@ -314,7 +306,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R079 }
         }
     ),
-
+    
     MVA_MELDINGSINNHOLD_BELØP_INNEHOLDER_DESIMALER(
         "Innsendte beløp skal ikke inneholde desimaler."
         {
@@ -328,6 +320,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R082 }
         }
     ),
+    
     MVA_KOMPENSASJON_MELDINGSINNHOLD_BELØP_I_FASTSATT_MERVERDIAVGIFT_MANGLER_MVA_KODER(
         "Kompensasjonsmeldingen må inneholde kodelinjer når det er oppgitt beløp i 'fastsatt merverdiavgift'."
         {
@@ -372,7 +365,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Krav om kompensasjon er sendt inn etter innleveringsfristen for terminen."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) og erFørsteKompensasjonsmeldingForTermin såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) og erFørsteKompensasjonsmeldingForTermin såSkal {
                     nå væreFørEllerLik innleveringsfrist
                 }
             }
@@ -385,7 +378,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Endring av krav om kompensasjon sendt inn etter innleveringsfristen for terminen, kan ikke være mer til gode enn det som allerede er sendt inn."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) og erIkkeFørsteKompensasjonsmeldingForTermin såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) og erIkkeFørsteKompensasjonsmeldingForTermin såSkal {
                     (nå væreFørEllerLik innleveringsfrist) eller (fastsattmerverdiavgift væreStørreEllerLik tidligereFastsattBeløpForTermin)
                 }
             }
@@ -411,8 +404,8 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
         "Første krav om kompensasjon til utbetaling for året må være på minst 20 000 kroner."
         {
             valideringsregel {
-                (meldingskategori er kompensasjon) og
-                    detFinnesIkkeEnKompensasjonsmeldingTidligereIÅretOver20000krTilgode såSkal {
+                (meldingskategori er kompensasjon) og (erLevertEtterKompensasjonLovendring2026 er false) og (fastsattmerverdiavgift erMindreEnn 0.toDouble()) og
+                    (innsendingstidspunkt væreFørEllerLik innleveringsfrist) og detFinnesIkkeEnKompensasjonsmeldingTidligereIÅretOver20000krTilgode såSkal {
                     fastsattmerverdiavgift væreLikEllerMindreEnn -20000.0
                 }
             }
@@ -484,7 +477,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R074 }
         }
     ),
-
+    
     MVA_KODE_MERKNAD_FORTEGN_GYLDIG_MOTSATT_FORTEGN(
         "Det må fylles ut gyldig merknad på kode med motsatt fortegn." {
             valideringsregel {
@@ -502,7 +495,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R075 }
         }
     ),
-
+    
     MVA_KODE_MERKNAD_FORTEGN_GYLDIG_FOR_SPESIFIKASJON(
         "Det må fylles ut gyldig merknad på kode med oppgitt spesifikasjon og fortegn." {
             valideringsregel {
@@ -519,7 +512,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R076 }
         }
     ),
-
+    
     MvaMeldingsinnhold_Xml_SkjemaValideringsfeil(
         "Mva-meldingen må være på gyldig format og passere XML skjema valideringen." {
             valideringsregel { xmlInput skalXmlValideres OK }
@@ -528,7 +521,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R001 }
         }
     ),
-
+    
     MvaMeldingsinnhold_MvaKode_UkjentMvaKode(
         "Kodelinjene i mva-meldingen må inneholde gyldige koder." {
             valideringsregel {
@@ -540,7 +533,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R002 }
         }
     ),
-
+    
     MvaMeldingsinnhold_MvaSats_UkjentSats(
         "Satsene i mva-meldingen må være gyldige." {
             valideringsregel {
@@ -553,7 +546,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R003 }
         }
     ),
-
+    
     MvaMeldingsinnhold_MvaSpesifikasjoner_UkjentSpesifikasjon(
         "Spesifikasjonslinjene i mva-meldingen skal være gyldige." {
             valideringsregel {
@@ -566,7 +559,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R069 }
         }
     ),
-
+    
     MvaMeldingsinnhold_SpesifikasjonslinjeMerknad_UkjentMerknad(
         "Utvalgte merknader i mva-spesifikasjonslinjer skal være gyldige." {
             valideringsregel {
@@ -579,7 +572,7 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             regelnummer { R070 }
         }
     ),
-
+    
     MvaMeldingsinnhold_MvaMeldingMerknad_UkjentMerknad(
         "Utvalgte merknader i mva-meldingen skal være gyldige." {
             valideringsregel {
@@ -598,9 +591,9 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             valideringsregel {
                 meldingskategori er kompensasjon såSkal {
                     (
-                            slettetDatIERStørreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
-
-                            )
+                        slettetDatoIEnhetsregMindreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
+    
+                        )
                 }
             }
             alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
@@ -645,6 +638,37 @@ The following severity levels are defined : AVVIKENDE_SKATTEMELDING (anomalous V
             alvorlighetsgrad { AVVIKENDE_SKATTEMELDING }
             kategori { MELDINGSKATEGORI }
             regelnummer { R130 }
+        }
+    ),
+    MVA_KOMPENSASJON_MELDINGSINNHOLD_KRAV_UNDER_MINSTEBELØP_GJELDER_FRA_2026(
+        "Første krav om kompensasjon til utbetaling for året må være på minst 20 000 kroner."
+        {
+            valideringsregel {
+                (meldingskategori er kompensasjon) og
+                    erLevertEtterKompensasjonLovendring2026 og
+                    detFinnesIkkeEnKompensasjonsmeldingTidligereIÅretOver20000krTilgode og erFørsteKompensasjonsmeldingForTermin såSkal {
+                    fastsattmerverdiavgift væreLikEllerMindreEnn -20000.0 medmindre nesteSkattleggingsperiodeErÅpnetForInnsending
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSINNHOLD }
+            regelnummer { R134 }
+        }
+    ),
+    MVA_KOMPENSASJON_SKATTLEGGINGSPERIODEN_FOR_MELDINGSKATEGORI_KOMPENSASJON_MÅ_VÆRE_FERDIG_GJELDER_FRA_2026(
+        "Krav om kompensasjon kan ikke sendes inn før terminen har utløpt."
+        {
+            valideringsregel {
+                (meldingskategori er kompensasjon) og
+                    erLevertEtterKompensasjonLovendring2026 og
+                    skattePliktigErSlettetFraER og
+                    (slettetDatoIEnhetsregMindreEnnSkattleggingsperiodeFradato eller slettetDatoIEnhetsregStørreEnnSkattleggingsperiodeTildato) såSkal {
+                    innsendingstidspunkt væreEtter skatteleggingsperiodeSluttdato
+                }
+            }
+            alvorlighetsgrad { UGYLDIG_SKATTEMELDING }
+            kategori { MELDINGSKATEGORI }
+            regelnummer { R135 }
         }
     )
 
