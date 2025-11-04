@@ -1427,7 +1427,7 @@ Følgende alvorlighetsgrader er definert : AVVIKENDE_SKATTEMELDING, UGYLDIG_SKAT
             valideringsregel {
                 ((meldingskategori er alminnelig) eller (meldingskategori er primærnæring)) såSkal {
                     (
-                        slettetDatoIEnhetsregStørreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
+                        slettetDatoIEnhetsregMindreEnnSkattleggingsperiodeFradato og skattePliktigErSlettetFraER er false
 
                         )
                 }
