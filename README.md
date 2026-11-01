@@ -1,17 +1,22 @@
 # Mva-meldingen
 
-**_Please note:_** Before updating the documentation, ensure that you have committed the changes to the master branch and executed the deployment commands.
-Be aware that deployment may take a few minutes, during which time you may encounter a 404 error when accessing the pages.
+This repository contains the former Gatsby documentation for "System submission of VAT-report".
 
-If you are visiting this github project in order to manually test a submission of the VAT-report with the Python script,
-please visit http://skatteetaten.github.io/mva-meldingen/test_with_python_script/
+## Documentation status
 
-This is the github project for the documentation "System submission of VAT-report".
-Please visit the documentation at http://skatteetaten.github.io/mva-meldingen/
+The documentation is no longer published from this repository. Requests to the GitHub Pages site are redirected to the [VAT return documentation](https://skatteetaten.github.io/api-dokumentasjon/anvendelsesomraader/mvamelding).
 
-## How to update the "System submission of VAT-report" documentation
+To publish the redirect, run:
 
-This documentation is generated using the Gatsby framework (https://www.gatsbyjs.com/)
+    npm run deploy
+
+The deploy command publishes the minimal files in `redirect-site/` instead of Gatsby's generated `public/` directory. The root page redirects visitors, and `404.html` redirects requests to previously published subpages. GitHub Pages does not support wildcard HTTP redirects, so requests to old subpages may briefly receive a 404 response before the browser redirects.
+
+The old Gatsby source and documentation remain in this repository but are not included in the published site.
+
+## Gatsby development
+
+The original documentation was generated using the Gatsby framework (https://www.gatsbyjs.com/).
 
 ### Initial setup
 
@@ -38,8 +43,9 @@ will start a local web server and continuously build the documentation as you ma
 
 ### Deploy
 
-    npm run build
     npm run deploy
+
+This publishes the redirect site; do not run `npm run build` for deployment.
 
 In order to log into GitHub, you need to have a **Personal Access Token** with the `repo` scope.  
 You can create a personal access token by following these steps:
