@@ -8,7 +8,7 @@
     "start": "gatsby develop --verbose",
     "prebuild": "npm run clean",
     "build": "gatsby build --prefix-paths",
-    "deploy": "gh-pages -d public -p 0",
+    "deploy": "gh-pages -d redirect-site -p 0",
     "prettier:fix": "prettier --write '{src,docs}/**/*.{js,jsx,css,md}'",
     "test": "echo \"Error: no test specified\"",
     "clean": "rimraf public .cache"
